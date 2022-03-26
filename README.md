@@ -2,8 +2,8 @@
 
 Mission file for Arma 3 Dedicated Server
 
-"v1.51_2022MAR26_MoltenTungsten_GitHub"
-Doesn't include any AI/Mission but ready to work with WMS_InfantryProgram
+"v1.51_2022MAR26_MoltenTungsten_GitHub"<br/>
+Doesn't include any AI/Mission but ready to work with WMS_InfantryProgram<br/>
 This version of the Framework include:
 
     CHVD - for viewDistance setup
@@ -13,5 +13,5 @@ This version of the Framework include:
     WMS_InfantryProgram mpmission files
     And some old Crap which need to be cleaned...
 
-you will need at least CBA, ACE3, RHS AFRF/USAF/GREF
+you will need at least CBA, ACE3, RHS AFRF/USAF/GREF<br/>
 CfgSounds and custom\ogg will certainly change
