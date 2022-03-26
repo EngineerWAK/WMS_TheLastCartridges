@@ -1,0 +1,615 @@
+
+class CfgRespawnInventory
+{
+	class IND_Bambi
+	{
+		displayName = "Bambi";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "Bambi";										// Optional, see CfgRoles
+
+		//weapons[] = {};
+		magazines[] = {
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_Banana",
+			"ACE_Can_Spirit",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_MRE_CreamTomatoSoup",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_WaterBottle"
+		};
+		linkedItems[] = {
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_C_Scientist";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Assault
+	{
+		displayName = "Assault 1";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_hk416d10_LMT",
+			"Binocular"
+		};
+		magazines[] = {
+			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
+			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
+			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
+			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
+			"rhs_mag_an_m14_th3",
+			"rhs_mag_m67",
+			"rhs_mag_m67",
+			"rhs_mag_m67",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"rhsusf_acc_anpeq15_wmx_light",
+			"rhsusf_acc_compm4",
+			"DualTex_Vest_2",
+			"DualTex_Helmet2",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "DualTex_Camo_Cyre";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Assault2
+	{
+		displayName = "Assault 2";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_mk17_CQC",
+			"hgun_Pistol_heavy_01_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
+			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
+			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
+			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
+			"rhs_mag_an_m14_th3",
+			"11Rnd_45ACP_Mag",
+			"rhs_mag_m67",
+			"rhs_mag_m67",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"acc_flashlight",
+			"acc_flashlight_pistol",
+			"Scorpion_Vest_2",
+			"Scorpion_Helmet2",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "Scorpion_Camo_Cyre";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_GI
+	{
+		displayName = "GI";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_m1garand_sa43",
+			"Binocular"
+		};
+		magazines[] = {
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhsgref_8Rnd_762x63_Tracer_M1T_M1rifle",
+			"rhs_mag_f1",
+			"rhs_mag_f1",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"rhsgref_otv_khaki",
+			"rhsgref_helmet_M1_bare_alt01",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "rhsgref_uniform_woodland";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Frantz
+	{
+		displayName = "Frantz";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_MP44",
+			"rhs_weap_pb_6p9",
+			"Binocular"
+		};
+		magazines[] = {
+			"rhsgref_30Rnd_792x33_SmE_StG",
+			"rhsgref_30Rnd_792x33_SmE_StG",
+			"rhsgref_30Rnd_792x33_SmE_StG",
+			"rhs_mag_9x18_8_57N181S",
+			"rhs_mag_9x18_8_57N181S",
+			"rhs_grenade_sthgr24_x7bundle_mag",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"rhsgref_otv_digi",
+			"rhsgref_helmet_m1940",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "rhsgref_uniform_flecktarn";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Marksman
+	{
+		displayName = "Marksman 1";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_m14_rail",
+			"rhs_weap_type94_new",
+			"Rangefinder"
+		};
+		magazines[] = {
+			"rhsusf_20Rnd_762x51_m80_Mag",
+			"rhsusf_20Rnd_762x51_m80_Mag",
+			"rhsusf_20Rnd_762x51_m80_Mag",
+			"rhs_mag_6x8mm_mhp",
+			"rhs_mag_6x8mm_mhp",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_Flashlight_MX991",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			"ACE_SpottingScope",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"Scorpion_Vest_2",
+			"Scorpion_Helmet2",
+			"rhsusf_acc_ACOG",
+			//"hlc_muzzle_Evo9",
+			"acc_flashlight_pistol",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "rhsgref_uniform_gorka_1_f";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Marksman2
+	{
+		displayName = "Marksman 2";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_m76",
+			"rhs_weap_type94_new",
+			"Rangefinder"
+		};
+		magazines[] = {
+			"rhsgref_10Rnd_792x57_m76",
+			"rhsgref_10Rnd_792x57_m76",
+			"rhsgref_10Rnd_792x57_m76",
+			"rhsgref_10Rnd_792x57_m76",
+			"rhsgref_10Rnd_792x57_m76",
+			"rhsgref_10Rnd_792x57_m76",
+			"rhsgref_10Rnd_792x57_m76",
+			"rhs_mag_6x8mm_mhp",
+			"rhs_mag_6x8mm_mhp",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_Flashlight_MX991",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			"ACE_SpottingScope",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"rhsusf_shemagh2_grn",
+			"Project_Honor_Vest_2",
+			"Project_Honor_Helmet2",
+			"rhs_acc_pso1m21",
+			//"hlc_muzzle_Evo9",
+			"acc_flashlight_pistol",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "Project_Honor_Camo_Cyre";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Sniper
+	{
+		displayName = "Sniper";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_m40a5",
+			"rhs_weap_type94_new",
+			"Rangefinder"
+		};
+		magazines[] = {
+			"rhsusf_10Rnd_762x51_m118_special_Mag",
+			"rhsusf_10Rnd_762x51_m118_special_Mag",
+			"rhsusf_10Rnd_762x51_m118_special_Mag",
+			"rhsusf_10Rnd_762x51_m118_special_Mag",
+			"rhs_mag_6x8mm_mhp",
+			"rhs_mag_6x8mm_mhp",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_Flashlight_MX991",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			"ACE_SpottingScope",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"rhs_acc_harris_swivel",
+			"Tiger_Vest_2",
+			"rhsusf_ach_helmet_camo_ocp",
+			"rhsusf_shemagh2_od",
+			"rhsusf_acc_nxs_3515x50f1_h58",
+			//"hlc_muzzle_Evo9",
+			"acc_flashlight_pistol",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "Tiger_Camo_Cyre";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_MG
+	{
+		displayName = "MachineGunner";									// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";											// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_fnmag",
+			"hgun_Pistol_heavy_01_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"rhsusf_100Rnd_762x51_m62_tracer",
+			"rhsusf_100Rnd_762x51_m62_tracer",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"rhs_mag_m67",
+			"rhs_mag_m67",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_MRE_BeefStew",
+			"ACE_plasmaIV_250",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"V_PlateCarrier2_rgr_noflag_F",
+			"M81_Helmet1",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "M81_Camo_crye";
+		//backpack = "B_AssaultPack_mcamo";
+	};
+	class IND_Medic
+	{
+		displayName = "Medic";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_ak74m_camo",
+			"Binocular"
+		};
+		magazines[] = {
+			"rhs_30Rnd_545x39_7N22_camo_AK",
+			"rhs_30Rnd_545x39_7N22_camo_AK",
+			"rhs_30Rnd_545x39_7N22_camo_AK",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_personalAidKit",
+			"ACE_surgicalKit",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_adenosine",
+			"ACE_adenosine",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_plasmaIV_250",
+			"ACE_plasmaIV_250",
+			"ACE_plasmaIV_250",
+			"ACE_plasmaIV_250",
+			"ACE_bodyBag",
+			"ACE_EarPlugs",
+			"ACE_MRE_BeefStew",
+			"ACE_Canteen"
+		};
+		linkedItems[] = {
+			"V_PlateCarrier2_rgr_noflag_F",
+			"AOR2_Boonie",
+			"rhs_acc_2dpZenit_ris",
+			"rhs_acc_pkas",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "AOR2_Camo_Cyre";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Engineer
+	{
+		displayName = "Engineer";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"arifle_MXC_Black_F",
+			"Binocular"
+		};
+		magazines[] = {
+			"30Rnd_65x39_caseless_black_mag",
+			"30Rnd_65x39_caseless_black_mag",
+			"30Rnd_65x39_caseless_black_mag",
+			"rhs_mag_an_m14_th3",
+			"rhs_charge_tnt_x2_mag",
+			"rhs_charge_tnt_x2_mag",
+			"rhs_charge_tnt_x2_mag",
+			"rhs_charge_tnt_x2_mag",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"DemoCharge_Remote_Mag",
+			"ToolKit",
+			"ACE_DefusalKit",
+			"ACE_Clacker",
+			"ACE_Flashlight_MX991",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_Can_Spirit",
+			"ACE_MRE_ChickenTikkaMasala",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_plasmaIV_250"
+		};
+		linkedItems[] = {
+			"rhs_6sh117_mg",
+			"rhs_altyn_visordown",
+			"rhs_acc_1p87",
+			"acc_flashlight",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "U_BG_Guerrilla_6_1";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Pilot
+	{
+		displayName = "Pilot";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhsusf_weap_MP7A2_folded",
+			"rhsusf_bino_lrf_Vector21"
+		};
+		magazines[] = {
+			"rhsusf_mag_40Rnd_46x30_FMJ",
+			"rhsusf_mag_40Rnd_46x30_FMJ",
+			"rhs_mag_an_m14_th3",
+			"SmokeShellGreen",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"UH60_jvmf_tablet",
+			"rhsusf_ANPVS_14", //remove the helmet if "linkedItems"
+			"ACE_microDAGR",
+			"ACE_Flashlight_MX991",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_Can_Spirit",
+			"ACE_MRE_ChickenTikkaMasala",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_plasmaIV_250"
+		};
+		linkedItems[] = {
+			"ACE_Altimeter",
+			"rhsusf_acc_wmx_bk",
+			"rhsusf_ihadss",
+			"rhsusf_acc_eotech_xps3",
+			"OGA_G_Vest_3",
+			"ItemMap",
+			"ItemCompass",
+			"rhs_radio_R187P1" //Infantry program Radio
+		};
+		uniformClass = "OGA_Camo_Cyre_Green";
+		//backpack = "B_AssaultPack_rgr";
+	};
+};

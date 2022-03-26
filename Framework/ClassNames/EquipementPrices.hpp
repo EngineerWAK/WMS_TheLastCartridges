@@ -1,0 +1,119 @@
+//UNIFORMS
+class BWA3_Uniform2_Fleck					{ quality = 1; price = 301; };
+class rhs_uniform_acu_ocp					{ quality = 1; price = 301; };
+class rhs_uniform_acu_oefcp					{ quality = 1; price = 301; };
+class U_B_CBRN_Suit_01_Wdl_F				{ quality = 2; price = 301; };
+class U_B_CombatUniform_mcam				{ quality = 0; price = 301; };
+class U_B_CombatUniform_mcam_wdl_f			{ quality = 0; price = 301; };
+class rhs_uniform_cossack					{ quality = 1; price = 301; };
+class rhs_uniform_vdv_emr					{ quality = 1; price = 301; };
+class U_C_Uniform_Farmer_01_F				{ quality = 0; price = 301; };
+class rhs_uniform_vdv_flora					{ quality = 1; price = 301; };
+class rhs_uniform_FROG01_wd					{ quality = 1; price = 301; };
+class rhs_uniform_g3_blk					{ quality = 1; price = 301; };
+class rhs_uniform_g3_m81					{ quality = 1; price = 301; };
+class rhs_uniform_g3_rgr					{ quality = 1; price = 301; };
+class rhs_uniform_gorka_r_g					{ quality = 1; price = 301; };
+class U_C_HunterBody_grn					{ quality = 0; price = 301; };
+class rhsgref_uniform_altis_lizard			{ quality = 1; price = 301; };
+class rhsgref_uniform_woodland				{ quality = 1; price = 301; };
+class rhs_uniform_vdv_mflora				{ quality = 1; price = 301; };
+class U_O_PilotCoveralls					{ quality = 2; price = 301; };
+class U_C_IDAP_Man_cargo_F					{ quality = 0; price = 301; };
+class U_C_ConstructionCoverall_Black_F		{ quality = 0; price = 301; };
+class U_C_ConstructionCoverall_Red_F		{ quality = 0; price = 301; };
+
+//VESTS
+class rhsgref_alice_webbing		{ quality = 0; price = 102; };
+class rhsgref_chicom			{ quality = 0; price = 102; };
+class V_Chestrig_rgr			{ quality = 0; price = 102; };
+class V_SmershVest_01_F			{ quality = 0; price = 102; };
+class V_HarnessOGL_brn			{ quality = 0; price = 102; };
+class V_HarnessO_brn			{ quality = 0; price = 102; };
+class V_TacChestrig_grn_F		{ quality = 0; price = 102; };
+class rhs_6sh117_mg				{ quality = 0; price = 102; };
+class rhs_6sh117_grn			{ quality = 0; price = 102; };
+
+class R3F_veste_CQB							{ quality = 3; price = 902; };
+class rhs_6b13_Flora_6sh92_vog				{ quality = 1; price = 402; };
+class rhs_6b13_EMR_6sh92_vog				{ quality = 1; price = 402; };
+class rhs_6b23_6sh116_vog_od				{ quality = 1; price = 402; };
+class rhs_6b23_6sh92_vog					{ quality = 1; price = 402; };
+class rhsgref_6b23_ttsko_mountain_rifleman	{ quality = 1; price = 402; };
+class rhs_6b3_VOG_2							{ quality = 1; price = 402; };
+class V_PlateCarrierGL_rgr					{ quality = 1; price = 402; };
+class V_PlateCarrier1_rgr_noflag_F			{ quality = 1; price = 402; };
+class V_PlateCarrier2_rgr_noflag_F			{ quality = 1; price = 402; };
+class V_PlateCarrierSpec_rgr				{ quality = 1; price = 402; };
+class V_EOD_olive_F							{ quality = 1; price = 402; };
+class V_PlateCarrierIAGL_oli				{ quality = 1; price = 402; };
+class V_PlateCarrierIA1_dgtl				{ quality = 1; price = 402; };
+class BWA3_Vest_Leader_Fleck				{ quality = 1; price = 402; };
+class BWA3_Vest_JPC_Radioman_Fleck			{ quality = 1; price = 402; };
+class rhsusf_mbav_rifleman					{ quality = 1; price = 402; };
+class rhsusf_iotv_ucp_Rifleman				{ quality = 1; price = 402; };
+class rhsusf_iotv_ocp_Rifleman				{ quality = 1; price = 402; };
+class rhsusf_plateframe_rifleman			{ quality = 1; price = 402; };
+class rhsusf_spc_patchless_radio			{ quality = 1; price = 402; };
+class rhsusf_spcs_ocp_teamleader			{ quality = 1; price = 402; };
+class rhsusf_spcs_ucp_teamleader			{ quality = 1; price = 402; };
+
+//HELMETS
+class R3F_casque_CQB					{ quality = 3; price = 603; };
+class rhs_6b26_green					{ quality = 1; price = 203; };
+class rhs_6b26							{ quality = 1; price = 203; };
+class rhs_6b28_green					{ quality = 1; price = 203; };
+class rhs_6b48							{ quality = 1; price = 203; };
+class rhsusf_ach_bare					{ quality = 1; price = 203; };
+class rhsusf_ach_bare_wood				{ quality = 1; price = 203; };
+class rhsusf_ach_helmet_M81				{ quality = 1; price = 203; };
+class rhsusf_cvc_green_helmet			{ quality = 1; price = 203; };
+class H_HelmetB_camo					{ quality = 0; price = 203; };
+class H_HelmetB_snakeskin				{ quality = 0; price = 203; };
+class H_HelmetSpecB						{ quality = 0; price = 203; };
+class H_HelmetSpecB_paint1				{ quality = 0; price = 203; };
+class rhsusf_opscore_fg					{ quality = 1; price = 203; };
+class rhsusf_opscore_mc_cover_pelt_cam	{ quality = 1; price = 203; };
+class H_PilotHelmetHeli_B				{ quality = 0; price = 203; };
+class H_PilotHelmetHeli_O				{ quality = 0; price = 203; };
+class rhsgref_helmet_M1_bare			{ quality = 1; price = 203; };
+class rhsgref_helmet_m1940				{ quality = 1; price = 203; };
+class H_PilotHelmetFighter_O			{ quality = 2; price = 2003; };
+class H_PilotHelmetFighter_B			{ quality = 2; price = 2003; };
+class rhs_zsh7a_alt						{ quality = 1; price = 203; };
+class rhs_altyn_visordown				{ quality = 1; price = 203; };
+class H_HelmetSpecB_wdl					{ quality = 0; price = 203; };
+class H_HelmetHBK_F						{ quality = 0; price = 203; };
+class rhsusf_ihadss						{ quality = 2; price = 1503; };
+
+//BACKPACK
+class ACE_TacticalLadder_Pack			{ quality = 3; price = 504; };
+class B_RadioBag_01_wdl_F				{ quality = 3; price = 504; };
+
+class AOR2_Backpack_Kitbag				{ quality = 1; price = 404; };
+class CADPAT_Backpack_Kitbag			{ quality = 1; price = 404; };
+class DualTex_Backpack_Kitbag			{ quality = 1; price = 404; };
+class M81_Backpack_Kitbag				{ quality = 1; price = 404; };
+class M90_Backpack_Kitbag				{ quality = 1; price = 404; };
+class MarPat_Backpack_Kitbag			{ quality = 1; price = 404; };
+class MC_Backpack_Kitbag				{ quality = 1; price = 404; };
+class Tiger_Backpack_Kitbag				{ quality = 1; price = 404; };
+class SURPAT_Backpack_Kitbag			{ quality = 1; price = 404; };
+class BWA3_Kitbag_Fleck					{ quality = 1; price = 404; };
+class B_Kitbag_rgr						{ quality = 1; price = 404; };
+class B_ViperHarness_oli_F				{ quality = 1; price = 404; };
+class B_ViperHarness_ghex_F				{ quality = 1; price = 404; };
+
+class rhsgref_wdl_alicepack				{ quality = 2; price = 804; };
+class BWA3_Carryall_Fleck				{ quality = 2; price = 804; };
+class B_Carryall_khk					{ quality = 2; price = 804; };
+class B_Carryall_oli					{ quality = 2; price = 804; };
+class B_Carryall_wdl_F					{ quality = 2; price = 804; };
+class UK3CB_BAF_B_Carryall_DPMT			{ quality = 2; price = 804; };
+
+class BWA3_AssaultPack_Fleck			{ quality = 0; price = 304; };
+class B_AssaultPack_eaf_F				{ quality = 0; price = 304; };
+class B_AssaultPack_rgr					{ quality = 0; price = 304; };
+class B_AssaultPack_wdl_F				{ quality = 0; price = 304; };
+class B_AssaultPack_mcamo				{ quality = 0; price = 304; };
+class rhs_sidor							{ quality = 0; price = 304; };

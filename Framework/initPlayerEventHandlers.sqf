@@ -1,0 +1,52 @@
+
+/**
+ * WMS_fnc_initPlayerEventHandlers
+ *
+ * TNA-Community
+ * https://discord.gg/Zs23URtjwF
+ * © 2021 {|||TNA|||}WAKeupneo
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+player addEventHandler ["Respawn",
+	{
+		// delete dead corpse - remove or comment the line out if you don't want to
+		//if (((_this select 0) distance2D (_this select 1)) < 250) then {deleteVehicle (_this select 1)};
+		[(_this select 0)] spawn {
+			waitUntil {alive player};
+			[(_this select 0)] remoteExec ["WMS_fnc_setVarOnPlayerRespawn"];
+			(_this select 0) execVM "randomizeSpawnPos.sqf";
+			(_this select 0) execVM "spawnLoot.sqf";
+			(_this select 0) execVM "InitPlayerSetTrait.sqf";
+			[(_this select 0)] execVM "infantryProgram\infantryProgram.sqf";
+			(_this select 0) addrating 100000; //to prevent players to get shot by fucking territory weapon system
+			_mkr = createmarkerLocal ["MKR_"+(name player), position player];
+			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
+			_mkr setMarkerColorLocal "ColorGUER";
+		};
+	}
+];
+
+player addEventHandler ["GetOutMan", {
+		//params ["_unit", "_role", "_vehicle", "_turret"];
+		(_this select 0) setVariable ["PlayerLastVehicle", (_this select 2), true]; //try to use this for wasteDump trader
+		if ((_this select 2) getVariable ["permanentVHL", false] && {(((_this select 2) getVariable ["BuyerOwner", 0]) == (getPlayerUID (_this select 0)))}) then {
+			nul = [(_this select 2),"getout"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+		};
+	}
+];
+
+player addMPEventHandler ["mpkilled", {
+		deleteMarkerLocal "MKR_"+(name player);
+		_actualPlayer = (_this select 0) getVariable ["_spawnedPlayerReadyToFight", true];
+		//if (_actualPlayer) then {
+		//	_this remoteExec ["WMS_fnc_playerKilled", 2]; //[killed, killer]
+		if (_actualPlayer && isServer) then {
+			_this call WMS_fnc_playerKilled; //[killed, killer]
+			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+		}else {
+			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Client Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+		};
+	}
+];
