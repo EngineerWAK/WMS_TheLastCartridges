@@ -10,7 +10,7 @@
  */
 class CfgSystemVersion
 {
-	name = "v1.51_2022MAR26_MoltenTungsten_GitHub";
+	name = "v1.512_2022MAR29_MoltenTungsten_GitHub";
 	serial[] = 
 	{};
 };

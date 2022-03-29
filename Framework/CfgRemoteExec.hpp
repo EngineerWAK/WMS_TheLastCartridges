@@ -61,6 +61,15 @@ class CfgRemoteExec
 		class aur_enable_rappelling_animation { allowedTargets=0; };
 		class rhs_fnc_flashbang_effect { allowedTargets=0; };
 		
+		class WMS_fnc_HideObjectGlobal	{ allowedTargets=2; };//InfantryProgram crates //EXILE
+		class WMS_fnc_InfantryProgram_loadouts { allowedTargets=2; }; //EXILE
+		class WMS_fnc_InfantryProgram_INFbyChopper { allowedTargets=2; }; //EXILE
+		class WMS_fnc_InfantryProgram_buy { allowedTargets=2; }; //EXILE
+		class WMS_fnc_Compo_BunkerCamp { allowedTargets=2; }; //EXILE
+		class WMS_fnc_InfantryProgram_Weapons { allowedTargets=2; }; //EXILE
+		class WMS_fnc_Pull_BUY_Push	{ allowedTargets=2; }; //EXILE
+		class WMS_fnc_getuid_remote	{ allowedTargets=2; }; //EXILE //DELETED!!!
+
 		class WMS_fnc_setVarOnPlayerRespawn	{ allowedTargets=2; };
 		class WMS_fnc_spawnLootManager { allowedTargets=2; };
 		class WMS_fnc_processCargoDump { allowedTargets=2; };
