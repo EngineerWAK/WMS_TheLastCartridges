@@ -109,7 +109,7 @@ inGameUISetEventHandler ["Action", "
 "];
 };
 
-
+//////////NOTE FOR LATER//////////
 private [];
 params[
 	["_timer", 300],

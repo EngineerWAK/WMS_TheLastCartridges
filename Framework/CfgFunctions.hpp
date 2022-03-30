@@ -74,19 +74,5 @@ class CfgFunctions
 
 		};
 	};
-	/*class WMS_IP
-	{
-		class myCategory
-		{
-			file = "infantryProgram";
-			class ArtySupport {};
-			class BlackFishSupport {};
-			class C130_request {};
-			class ExtractionRequest {};
-			class GNDextractionRequest {};
-			class OpforVHL_radar {};
-
-		};
-	};*/
 	#include "CHVD\CfgFunctions.hpp"
 };

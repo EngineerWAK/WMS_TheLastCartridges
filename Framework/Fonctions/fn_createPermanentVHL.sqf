@@ -15,7 +15,7 @@ params[
 	"_buyer",
 	["_pos",[]]
 ];
-if (true) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 
 _playerArray = [];
 _helipadList = [];
@@ -38,7 +38,7 @@ if (count _pos == 0) then {
 	} else {
 		_pos = position _buyer findEmptyPosition [20,100,_vehicleClassName];
 	};
-	if (true) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: Looking for empty position: %1", _pos]};
+	if (WMS_MissionDebug) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: Looking for empty position: %1", _pos]};
 	if !(count _pos == 0) then {
 		_veh = createVehicle [_vehicleClassName, _pos, [], 0, "NONE"];
 	} else {
@@ -80,9 +80,9 @@ _veh setVariable ["WMS_vehicleID_inventory", _vehicleID_inventory, true];
 					[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
 					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
 					if (true) then {
-						diag_log "|WAK|TNA|WMS|";
-						diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];
-						diag_log "|WAK|TNA|WMS|";
+						if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};
+						if (WMS_MissionDebug) then {diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];};
+						if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};
 						};
 				}
 			];//params ["_unit", "_killer", "_instigator", "_useEffects"];
@@ -120,7 +120,7 @@ if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew 
 //"ToolKit"
 _forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
 if ((typeOf _veh) in _forceAmmoFacilities) then {
-	diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];
+	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];};
 	_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
 	_veh addItemCargoGlobal ["rhs_mag_an_m14_th3",10];
 	_veh addItemCargoGlobal ["rhs_charge_tnt_x2_mag",10];
@@ -134,7 +134,7 @@ if ((typeOf _veh) in _forceAmmoFacilities) then {
 
 _forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
 if ((typeOf _veh) in _forceRepairFacilities) then {
-	diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];
+	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];};
 	_veh setVariable ["ACE_isRepairVehicle", true, true];
 	_veh addItemCargoGlobal ["ToolKit",1];
 	_veh addItemCargoGlobal ["ACE_EntrenchingTool",5];
@@ -147,7 +147,7 @@ if ((typeOf _veh) in _forceRepairFacilities) then {
 
 _forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 if ((typeOf _veh) in _forceMedicalFacilities) then {
-	diag_log format ["|WAK|TNA|WMS| Creating %1 as Medical Facility", _veh];
+	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Medical Facility", _veh];};
 	_veh addItemCargoGlobal ["ACE_personalAidKit",1];
 	_veh addItemCargoGlobal ["ACE_bloodIV_500",5];
 	_veh addItemCargoGlobal ["ACE_bloodIV_250",10];

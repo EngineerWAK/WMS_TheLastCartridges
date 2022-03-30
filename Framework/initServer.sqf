@@ -11,6 +11,7 @@
 
 WMS_lootHolderList = []; //[_house,_lootHolder,(serverTime+_timeToDelete)];
 WMS_HeadlessOwnerID = 2;
+WMS_MissionDebug = false;
 
 WMS_lootToSpawnList = [
 	(getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items")), 		//_weapList

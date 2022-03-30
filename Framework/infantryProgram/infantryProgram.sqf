@@ -99,7 +99,7 @@ WMS_IP_buildComputer = {
 			WMS_IP_Active_list pushBack (getplayerUID player);
 			publicVariable 'WMS_IP_Active_list'; 
 			systemchat 'Welcome Back Soldier, remember to not get in vehicles'
-		", 
+		", //client modifying server variable, thats a weird solution
 		[_IPantenna],
 		1,
 		true,
@@ -116,6 +116,53 @@ WMS_IP_buildComputer = {
 		5
 	];
 	_allActionsID pushBack _IDnumber;
+//LOADOUT	
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#068604'>Equipement Scorpion 2.5k$</t>",
+		"
+			_target = _this select 0; _caller = _this select 1;
+			[_caller, [], (position _caller), WMS_Loadout_Scorpion, 2500] remoteExec ['WMS_fnc_InfantryProgram_loadouts'];
+		", 
+		[],
+		1,
+		true,
+		true,
+		"",
+		"	
+			(alive _target) &&
+			{('rhs_radio_R187P1' in (assigneditems _this))} &&
+			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
+			{((getPlayerUID _this) in WMS_IP_Active_list)} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#068604'>Equipement AOR2 3.5k$</t>",
+		"
+			_target = _this select 0; _caller = _this select 1;
+			[_caller, [], (position _caller), WMS_Loadout_AOR2, 3500] remoteExec ['WMS_fnc_InfantryProgram_loadouts'];
+		", 
+		[],
+		1,
+		true,
+		true,
+		"",
+		"	
+			(alive _target) &&
+			{('rhs_radio_R187P1' in (assigneditems _this))} &&
+			{((getplayerUID player) in WMS_InfantryProgram_list)} &&
+			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
+			{!((getPlayerUID _this) in WMS_IP_Active_list)} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
+
 //SOUND TEST //playSound3D ['A3\Sounds_F\sfx\blip1.wss', _caller]
 	_IDnumber = _IPcomputer addAction
 	[
@@ -140,9 +187,9 @@ WMS_IP_buildComputer = {
 //REQUEST C130	
 	_IDnumber = _IPcomputer addAction
 	[
-		"<t size='0.9' color='#068604'>Request C130</t>",
+		"<t size='0.9' color='#068604'>Request C130, Need Parachute</t>",
 		"
-			[] call WMS_IP_fnc_c130_Request;
+			[] call WMS_fnc_IP_c130_Request;
 		", 
 		[],
 		1,
@@ -166,7 +213,7 @@ WMS_IP_buildComputer = {
 	[
 		"<t size='0.9' color='#068604'>Request Extraction Chopper</t>",
 		"
-			[] call WMS_IP_fnc_ExtractionRequest;
+			[] call WMS_fnc_IP_ExtractionRequest;
 		", 
 		[],
 		1,
@@ -190,7 +237,7 @@ WMS_IP_buildComputer = {
 	[
 		"<t size='0.9' color='#068604'>Request Ground Extraction</t>",
 		"
-			[] call WMS_IP_fnc_GNDextractionRequest;
+			[] call WMS_fnc_IP_GNDextractionRequest;
 		", 
 		[],
 		1,
@@ -214,7 +261,7 @@ WMS_IP_buildComputer = {
 	[
 		"<t size='0.9' color='#068604'>Artillery HE, 10k$ </t>",
 		"
-			[_this select 1,'HE',10000] spawn WMS_IP_fnc_ArtySupport;
+			[_this select 1,'HE',10000] spawn WMS_fnc_IP_ArtySupport;
 		", 
 		[],
 		1,
@@ -237,7 +284,7 @@ WMS_IP_buildComputer = {
 	[
 		"<t size='0.9' color='#068604'>BlackFish Support 30k$ </t>",
 		"
-			[(_this select 1)] spawn WMS_IP_fnc_BlackFishSupport;
+			[(_this select 1)] spawn WMS_fnc_IP_BlackFishSupport;
 		", 
 		[],
 		1,
@@ -334,7 +381,7 @@ WMS_IP_buildComputer = {
 		"
 			_target = _this select 0; _caller = _this select 1;
 			systemChat 'calling';
-			[300, 'chest', _caller] spawn WMS_IP_fnc_OpforVHL_Radar; 
+			[300, 'chest', _caller] spawn WMS_fnc_IP_OpforVHL_Radar; 
 			_caller removeMagazine 'FilesSecret'; 
 			_caller removeMagazine 'FileNetworkStructure'; 
 			_caller removeMagazine 'FileTopSecret';
@@ -365,7 +412,7 @@ WMS_IP_buildComputer = {
 		"
 			_target = _this select 0; _caller = _this select 1;
 			systemChat 'calling';
-			[300, 'chest', _caller] spawn WMS_IP_fnc_OpforVHL_Radar; 
+			[300, 'chest', _caller] spawn WMS_fnc_IP_OpforVHL_Radar; 
 			_caller removeMagazine 'FlashDisk';
 			systemChat 'Action called';
 		", 

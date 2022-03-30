@@ -14,7 +14,7 @@ params[
 	["_targetOwner", 0],
 	["_jip", false]
 ];
-if (true) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 
 [
 	_veh,

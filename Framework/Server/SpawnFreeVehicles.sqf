@@ -97,7 +97,7 @@ if (_postExile_Spawn_Zones) then {
 			if ((count _pos) == 3) then { //successful findSafePos result is [x,y], not [x,y,z]
 				_pos = [[[(_x select 0), (_x select 1)]],[]] call BIS_fnc_randomPos;
 				_vhl = createVehicle [(selectRandom _postExile_Vehicles_List), _pos, [], 50, "NONE"]; 
-				if (true) then {diag_log format ["[VHL RANDOM SPAWN BUSTED]|WAK|TNA|WMS| Vehicle = %1 @ %2", _vhl, _pos]};
+				if (WMS_MissionDebug) then {diag_log format ["[VHL RANDOM SPAWN BUSTED]|WAK|TNA|WMS| Vehicle = %1 @ %2", _vhl, _pos]};
 			} else {
 				_vhl = (selectRandom _postExile_Vehicles_List) createVehicle _pos;
 			};
@@ -110,7 +110,7 @@ if (_postExile_Spawn_Zones) then {
 			clearWeaponCargoGlobal _vhl; 
 			clearItemCargoGlobal _vhl; 
 			clearBackpackCargoGlobal _vhl;  
-			if (false) then {diag_log format ["[VHL RANDOM SPAWN]|WAK|TNA|WMS| Vehicle spawned = %1 @ %2", _vhl, _pos]};
+			if (WMS_MissionDebug) then {diag_log format ["[VHL RANDOM SPAWN]|WAK|TNA|WMS| Vehicle spawned = %1 @ %2", _vhl, _pos]};
 			
 			[
 				_vhl,
@@ -143,18 +143,18 @@ if (_postExile_Spawn_Zones) then {
 			
 _forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
 if ((typeOf _vhl) in _forceAmmoFacilities) then {
-	diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _vhl];
+	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _vhl];};
 	_vhl setVariable ["ace_rearm_isSupplyVehicle", true, true];
 };
 
 _forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
 if ((typeOf _vhl) in _forceRepairFacilities) then {
-	diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _vhl];
+	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _vhl];};
 	_vhl setVariable ["ACE_isRepairVehicle", true, true];
 };
 			_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 			if ((typeOf _vhl) in _forceMedicalFacilities) then {	
-				diag_log format ["|WAK|TNA|WMS| Creating %1 as Medical Facility", _vhl];
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Medical Facility", _vhl];};
 				_vhl setVariable ["ace_medical_isMedicalFacility", true, true];
 				_vhl setVariable ["WMS_resetFatigueTimer", time, true];
 				//[player, nil] call ace_advanced_fatigue_fnc_handlePlayerChanged; //addAction "Reset Fatigue" for owner;

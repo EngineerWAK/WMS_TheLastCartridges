@@ -16,7 +16,7 @@ params [
 	["_fonction", "office"], //'notyet','weapons','equipement','office','accessories','vehiclesarmed','vehiclesunarmed','airarmed','airunarmed'
 	["_itemsCount", 10]
 ];
-if (false) then {diag_log format ["[INIT_TRADERS_BEHAVIOR]|WAK|TNA|WMS|_this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[INIT_TRADERS_BEHAVIOR]|WAK|TNA|WMS|_this %1", _this]};
 
     [_traderObject, _fonction, _itemsCount] call WMS_fnc_initTraderActions; //WAK
     _traderObject allowDamage false;

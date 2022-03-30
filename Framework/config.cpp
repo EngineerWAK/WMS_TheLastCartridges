@@ -8,11 +8,10 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
+//getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.512_2022MAR29_MoltenTungsten_GitHub";
-	serial[] = 
-	{};
+	name = "v1.516_2022MAR30_MoltenTungsten_GitHub";
 };
 
 class CfgBuildingsCategories

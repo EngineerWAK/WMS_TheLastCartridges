@@ -53,7 +53,7 @@ if !(count _TerritoriesArray == 0) then {
 		[_flag, _flagPos, _flagDir, _layout] call WMS_fnc_SpawnCamps;
 		
 		_houses = _flagPos nearObjects ["Building", 150];
-		if (true) then {diag_log format ["[TERRITORYZONENOLOOT]|WAK|TNA|WMS| Territory found @ %1, %2 buildings lootspawn deactivated", _flagPos, (count _houses)]};
+		if (WMS_MissionDebug) then {diag_log format ["[TERRITORYZONENOLOOT]|WAK|TNA|WMS| Territory found @ %1, %2 buildings lootspawn deactivated", _flagPos, (count _houses)]};
 		{
 			_x setVariable ["_lootAllowed",false,true];
 		}foreach _houses
@@ -116,7 +116,9 @@ _howmanyrestarts = 0;
 					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
 					if (true) then {
 						diag_log "|WAK|TNA|WMS|";
+						diag_log "|WAK|TNA|WMS|";
 						diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];
+						diag_log "|WAK|TNA|WMS|";
 						diag_log "|WAK|TNA|WMS|";
 						};
 				}
@@ -157,19 +159,19 @@ _howmanyrestarts = 0;
 			
 			_forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
 			if ((typeOf _veh) in _forceAmmoFacilities) then {
-				diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];};
 				_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
 			};
 
 			_forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
 			if ((typeOf _veh) in _forceRepairFacilities) then {
-				diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];};
 				_veh setVariable ["ACE_isRepairVehicle", true, true];
 			};
 			//Force Medical Facility
 			_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 			if ((typeOf _veh) in _forceMedicalFacilities) then {
-				diag_log format ["|WAK|TNA|WMS| Respawning %1 as Medical Facility", _veh];
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Respawning %1 as Medical Facility", _veh];};
 				_veh setVariable ["ace_medical_isMedicalFacility", true, true];
 				_veh setVariable ["WMS_resetFatigueTimer", time, true];
 				//[player, nil] call ace_advanced_fatigue_fnc_handlePlayerChanged; //addAction "Reset Fatigue" for owner;
@@ -198,11 +200,11 @@ _howmanyrestarts = 0;
 					true //JIP
 				];
 			};
-			diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1), %2/%3 restarts", _vehicleID, _howmanyrestarts,(_vehiclesManagement select 0)];
+			if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1), %2/%3 restarts", _vehicleID, _howmanyrestarts,(_vehiclesManagement select 0)];};
 			if (_howmanyrestarts >= (_vehiclesManagement select 0)) then {
-				diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old %2 restarts, looking for a territory around", _vehicleID, _howmanyrestarts];
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old %2 restarts, looking for a territory around", _vehicleID, _howmanyrestarts];};
 				if ((count (nearestObjects [_veh, ["rhsgref_serhat_radar"], 100])) == 0) then {
-				diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old, no territory around", _vehicleID];
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old, no territory around", _vehicleID];};
 					_veh allowDamage true;
 					_veh setDamage 1;
 				};

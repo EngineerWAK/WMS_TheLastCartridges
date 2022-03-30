@@ -19,7 +19,7 @@ params [
 	"_layout"
 ];
 
-diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _this = %1", _this];
+if (WMS_MissionDebug) then {diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _this = %1", _this];};
 
 _objList = [];
 _objects = [];
@@ -1456,7 +1456,7 @@ switch (tolower _layout) do
 		_objects = [["FirePlace_burning_F",[-2.66703,-5.399602,0],46.8]];
 		};
 };
-diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _layout = %1", _layout];
+if (WMS_MissionDebug) then {diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _layout = %1", _layout];};
 _fastTravelers = _flagObject getVariable ["WMS_BaseFriends", []];
 _weaponSystemList = ["B_AAA_System_01_F","B_SAM_System_01_F","B_SAM_System_02_F","B_SAM_System_03_F","B_Radar_System_01_F"];
 _weaponSystemObjects = [];
