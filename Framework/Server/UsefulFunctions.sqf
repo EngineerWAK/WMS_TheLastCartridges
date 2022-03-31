@@ -109,6 +109,129 @@ inGameUISetEventHandler ["Action", "
 "];
 };
 
+//modify player money server side
+_targetUID = "76561197965501020";
+_moneyToAdd = 10000;
+_playerUID_ExileMoney = "ExileMoney_"+_targetUID;
+_playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
+profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney+_moneyToAdd)];
+//modify player money local
+_moneyToAdd = 10000;
+_playerMoney = player getVariable ["ExileMoney",0];
+player setVariable ["ExileMoney",(_playerMoney+_playerMoney), true];
+
+//get players owners from server side
+_result = [];
+{_result pushBack [name _x, owner _x]}forEach allPlayers;
+_result;
+///////////////////////////////////////////////
+//Export and save data for later custom respawn
+	//ACE customAction "save loadout and disconnect"
+WMS_fnc_client_saveRespawnData = {
+	player setVariable["WMS_saveAndDisconnect",true,true]; //this to filter the difference between just dying or dying after this action
+	_inventory = [player, [missionNamespace, (getPlayerUID player)], [], true ] call BIS_fnc_saveInventory;
+	[player,position player,_inventory]remoteExec "WMS_fnc_saveRespawnData";
+	//missionNamespace setVariable["WMS_client_canCustomRespawn",true];
+};
+WMS_fnc_saveRespawnData = {
+	params [
+		"_playerObject",
+		"_pos",
+		"_inventory"
+	];
+	private _playerUID = getPlayerUID _playerObject;
+	profileNameSpace setvariable[(_playerUID+"_RespawnData"),["playerUID",_pos,_inventory]];
+	private _customRespawnList = serverNameSpace getvariable["WMS_customRespawnList",[]];
+	if !(_playerUID in _customRespawnList) then {
+		_customRespawnList pushBack _playerUID;
+		serverNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
+	};
+	removeAllItems _playerObject;
+	{_playerObject unassignItem _x; _playerObject removeItem _x}forEach (assignedItems _playerObject)
+	removeBackpackGlobal _playerObject;
+	removeAllWeapons _playerObject;
+	removeVest _playerObject;
+	removeUniform _playerObject;;
+	"password" serverCommand format ["#kick %1",_playerUID];
+};
+WMS_fnc_deleteRespawnData = {
+	params [
+		"_playerObject"
+	];
+	private _playerUID = getPlayerUID _playerObject;
+	profileNameSpace setvariable[(_playerUID+"_RespawnData"),nil];
+	private _customRespawnList = serverNameSpace getvariable["WMS_customRespawnList",[]];
+	_customRespawnList deleteAt (_customRespawnList find _playerUID);
+	serverNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
+};
+WMS_fnc_client_retrieveRespawnData = {
+	if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {(getPlayerUID player) in WMS_customRespawnList}) then {
+		_customRespawnData = [ProfileNameSpace, ((getPlayerUID player)+"_RespawnData"), []] call BIS_fnc_getServerVariable;
+		if ((count _customRespawnData) == 3) then {
+			missionNamespace setVariable["WMS_client_customRespawnPos",(_customRespawnData select 1)];
+			missionNamespace setVariable["WMS_client_customRespawnInv",(_customRespawnData select 2)];
+			_customRespawn = [player,(_customRespawnData select 1),'Last Known Position'] call BIS_fnc_addRespawnPosition;
+			missionNamespace setVariable["WMS_client_customRespawnToDelete",_customRespawn];
+		}else {systemChat "No custom Spawn Data Not Available"};
+	}else {systemChat "No custom Spawn Data on the server"};
+};
+	//this in randomizeSpawnPos.sqf //DONE
+private _customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[-999,-999,-999]];	
+if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position player) distance _customRespawnPos) <= 25})then {
+	removeAllItems player;
+	{player unassignItem _x; player removeItem _x}forEach (assignedItems player);
+	removeBackpackGlobal player;
+	removeAllWeapons player;
+	removeVest player;
+	removeUniform player;
+	[player, [missionNamespace, "WMS_client_customRespawnInv"]] call BIS_fnc_loadInventory;
+	missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
+	missionNamespace setVariable["WMS_client_canCustomRespawn",false];
+	[player] remoteExec "WMS_fnc_deleteRespawnData";
+}else{
+	"randomiseSpawnPos"
+};
+	//at server start, server need to retrieve WMS_customRespawnList from profileNamespace and store it in missionNameSpace
+WMS_customRespawnList = profileNameSpace getvariable["WMS_customRespawnList",[]];
+publicVariable "WMS_customRespawnList";
+serverNameSpace setvariable["WMS_customRespawnList",WMS_customRespawnList]; //so the server can modify the list without modifying the public one
+	//before shutdown, server must save WMS_customRespawnList from serverNameSpace to profileNameSpace
+private _dataToSave = serverNameSpace getvariable["WMS_customRespawnList",[]];
+profileNamespace setVariable ["WMS_customRespawnList",_dataToSave];
+_loadoutData = [
+	["U_C_Scientist",["ACE_Banana","ACE_Can_Spirit","ACE_fieldDressing","ACE_fieldDressing","ACE_bloodIV_250","ACE_EarPlugs","ACE_MRE_CreamTomatoSoup","ACE_tourniquet","SmokeShellGreen"]],
+	["rhs_6b23_6sh116",[]],
+	["B_Carryall_cbr",["ACE_Can_RedGull"]],
+	"H_HelmetB_camo",
+	"G_Balaclava_oli",
+	"Rangefinder",
+	["rhs_weap_ak105_zenitco01_b33",["rhs_acc_pgs64","","rhsusf_acc_ACOG_USMC",""],"rhs_30Rnd_545x39_7N10_AK"],
+	["rhs_weap_M136",["","","",""],"rhs_m136_mag"],
+	["rhsusf_weap_MP7A2_folded",["","ACE_acc_pointer_red","",""],"rhsusf_mag_40Rnd_46x30_FMJ"],
+	["ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","O_NVGoggles_ghex_F"],
+	[]
+];
+player forceaddUniform ((_loadoutData select 0) select 0);
+{player addItemToUniform _x}forEach  ((_loadoutData select 0) select 1);
+player addVest ((_loadoutData select 1) select 0);
+{player addItemToVest _x}forEach  ((_loadoutData select 1) select 1);
+player addBackpackGlobal ((_loadoutData select 2) select 0);
+{player addItemToBackpack _x}forEach  ((_loadoutData select 2) select 1);
+player addHeadgear (_loadoutData select 3);
+player addGoggles (_loadoutData select 4);
+player addWeapon (_loadoutData select 5);
+player addMagazine ((_loadoutData select 6) select 2);
+player addWeapon ((_loadoutData select 6) select 0);
+{player addPrimaryWeaponItem _x}forEach  ((_loadoutData select 6) select 1);
+player addMagazine ((_loadoutData select 7) select 2);
+player addWeapon ((_loadoutData select 7) select 0);
+{player addSecondaryWeaponItem _x}forEach  ((_loadoutData select 7) select 1);
+player addMagazine ((_loadoutData select 8) select 2);
+player addWeapon ((_loadoutData select 8) select 0);
+{player addHandgunItem _x}forEach  ((_loadoutData select 8) select 1);
+{player additem _x; player assignItem _x}forEach  (_loadoutData select 9);
+
+//////////////////////////////////
 //////////NOTE FOR LATER//////////
 private [];
 params[

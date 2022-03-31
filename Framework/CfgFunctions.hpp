@@ -52,6 +52,8 @@ class CfgFunctions
 			class weaponStationInitiate {};
 			class vehicleCustomize {};
 			class BaseSafetyPerimeter {};
+			class saveRespawnData {};
+			class deleteRespawnData {};
 
 			class haloJump {};
 
@@ -61,6 +63,9 @@ class CfgFunctions
 			class client_deathmarker {};
 			class client_createBaseMarkers {};
 			class client_markerOnPersonalVhls {};
+			class client_saveRespawnData {};
+			class client_retrieveRespawnData {};
+			class client_restoreLoadoutFromVar {};
 		};
 		class myCategory_IP
 		{

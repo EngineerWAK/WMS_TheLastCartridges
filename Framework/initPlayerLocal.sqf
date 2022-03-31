@@ -8,6 +8,8 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
+//////////CustomRespawn
+[]call WMS_fnc_client_retrieveRespawnData;
 _playerRole = roleDescription player;
 switch (tolower _playerRole) do {
         case "lonewolf":
@@ -48,6 +50,9 @@ if (hasinterface) then {
 
     _action1 = ["vhlInvSize","Inventory Size","",{hint format ["cargo size is %1",(getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad"))]},{(vehicle player) != player}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action1] call ace_interact_menu_fnc_addActionToObject;
+
+    _action2 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action2] call ace_interact_menu_fnc_addActionToObject;
     //////////Mission File version on the map//////////
     _markerSystem = createMarkerLocal ["MissionVersion", [(worldsize /2),-500]];
     _markerSystem setMarkerTypeLocal "mil_dot";

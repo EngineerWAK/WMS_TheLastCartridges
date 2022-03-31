@@ -13,6 +13,18 @@ WMS_lootHolderList = []; //[_house,_lootHolder,(serverTime+_timeToDelete)];
 WMS_HeadlessOwnerID = 2;
 WMS_MissionDebug = false;
 
+WMS_customRespawnList = profileNameSpace getvariable["WMS_customRespawnList",[]]; //saved by WMS_infantryProgram, after last players kick before restart
+publicVariable "WMS_customRespawnList";
+serverNameSpace setvariable["WMS_customRespawnList",WMS_customRespawnList]; //so the server can modify the list without modifying the public one
+if ((count WMS_customRespawnList) != 0) then {
+	{
+		private _dataVariable = (_x +"_RespawnData");
+		if (true) then {diag_log format ["[CUSTOMRESPAWNDATA_INIT]|WAK|TNA|WMS|Transfering data from profilenamespace to missionnamespace for  %1", _dataVariable]};
+		private _respawndata = profileNameSpace getVariable[_dataVariable, []];
+		missionNamespace setVariable[_dataVariable, _respawndata];
+	}forEach WMS_customRespawnList;
+};
+
 WMS_lootToSpawnList = [
 	(getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items")), 		//_weapList
 	(getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons_SPE" >> "items")),	//_weapList_spe

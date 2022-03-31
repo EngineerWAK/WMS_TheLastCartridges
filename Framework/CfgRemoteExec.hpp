@@ -92,11 +92,13 @@ class CfgRemoteExec
 		class WMS_fnc_HatchetUnCover { allowedTargets=0; };
 		class WMS_fnc_weaponStationInitiate { allowedTargets=2; };
 		class WMS_fnc_BaseSafetyPerimeter { allowedTargets=2; };
+		class WMS_fnc_saveRespawnData { allowedTargets=2; };
+		class WMS_fnc_deleteRespawnData { allowedTargets=2; };
 		
 		class WMS_fnc_HideObjectGlobal				{ allowedTargets=2; };//InfantryProgram crates //EXILE
 		class WMS_fnc_Compo_BunkerCamp 				{ allowedTargets=2; }; //EXILE
 		class WMS_fnc_Pull_BUY_Push					{ allowedTargets=2; }; //EXILE
-		class WMS_fnc_getuid_remote					{ allowedTargets=2; }; //EXILE //DELETED!!!
+		class WMS_fnc_getuid_remote					{ allowedTargets=2; }; //EXILE
 		class WMS_fnc_InfantryProgram_loadouts 		{ allowedTargets=2; }; //EXILE
 		class WMS_fnc_InfantryProgram_INFbyChopper 	{ allowedTargets=2; }; //EXILE
 		class WMS_fnc_InfantryProgram_Weapons 		{ allowedTargets=2; }; //EXILE

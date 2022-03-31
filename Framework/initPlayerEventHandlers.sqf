@@ -24,6 +24,7 @@ player addEventHandler ["Respawn",
 			_mkr = createmarkerLocal ["MKR_"+(name player), position player];
 			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
 			_mkr setMarkerColorLocal "ColorGUER";
+			//player setVariable["WMS_saveAndDisconnect",false,true];
 		};
 	}
 ];
@@ -43,8 +44,13 @@ player addMPEventHandler ["mpkilled", {
 		//if (_actualPlayer) then {
 		//	_this remoteExec ["WMS_fnc_playerKilled", 2]; //[killed, killer]
 		if (_actualPlayer && isServer) then {
-			_this call WMS_fnc_playerKilled; //[killed, killer]
-			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+			if ((_this select 0) getVariable["WMS_saveAndDisconnect",false]) then {
+				//do nothing if the player save and disconnect
+				if (true) then {diag_log format ["[PLAYERSAVEANDISCONNECT_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+			} else {
+				_this call WMS_fnc_playerKilled; //[killed, killer]
+				if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+			};
 		}else {
 			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Client Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
 		};
