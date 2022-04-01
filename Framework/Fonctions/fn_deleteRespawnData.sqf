@@ -19,3 +19,5 @@ missionNamespace setvariable[(_playerUID+"_RespawnData"),nil];
 private _customRespawnList = serverNameSpace getvariable["WMS_customRespawnList",[]];
 _customRespawnList deleteAt (_customRespawnList find _playerUID);
 serverNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
+missionNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
+publicVariable "WMS_customRespawnList";

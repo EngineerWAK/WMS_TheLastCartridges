@@ -41,8 +41,13 @@ player addEventHandler ["GetOutMan", {
 player addMPEventHandler ["mpkilled", {
 		deleteMarkerLocal "MKR_"+(name player);
 		_actualPlayer = (_this select 0) getVariable ["_spawnedPlayerReadyToFight", true];
-		//if (_actualPlayer) then {
-		//	_this remoteExec ["WMS_fnc_playerKilled", 2]; //[killed, killer]
+		if (_actualPlayer && hasInterface) then {
+			if ((getPlayerUID player) in WMS_customRespawnList) then {
+				missionNamespace setVariable["WMS_client_canCustomRespawn",true];
+				[]call WMS_fnc_client_retrieveRespawnData;
+			};
+			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Client Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+		};
 		if (_actualPlayer && isServer) then {
 			if ((_this select 0) getVariable["WMS_saveAndDisconnect",false]) then {
 				//do nothing if the player save and disconnect
@@ -51,8 +56,6 @@ player addMPEventHandler ["mpkilled", {
 				_this call WMS_fnc_playerKilled; //[killed, killer]
 				if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
 			};
-		}else {
-			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Client Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
 		};
 	}
 ];

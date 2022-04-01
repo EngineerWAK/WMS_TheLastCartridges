@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.523_2022MAR31_MoltenTungsten_GitHub";
+	name = "v1.526_2022APR01_MoltenTungsten_GitHub";
 };
 
 class CfgBuildingsCategories

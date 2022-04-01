@@ -13,16 +13,66 @@ if (true) then {diag_log format ["[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|_this %1
 params [
 	"_playerObject",
 	"_pos",
-	"_inventory"
+	["_aceMedical",[]] //not used anymore, maybe use the slot for ACE medical variables
 ];
 private _playerUID = getPlayerUID _playerObject;
-profileNameSpace setvariable[(_playerUID+"_RespawnData"),[_playerUID,_pos,_inventory]];
+private _inventoryVarName = (_playerUID+"_RespawnData");
+/////////////////////////////////////////
+//--- Get magazines loaded to weapons //from BIS_fnc_saveInventory, mofified to get ammo count in each mags
+private ["_primaryWeaponMagazine","_secondaryWeaponMagazine","_handgunMagazine"];
+_primaryWeaponMagazine = [];
+_secondaryWeaponMagazine = [];
+_handgunMagazine = [];
+{
+	if (count _x > 4 && {typename (_x select 4) == typename []}) then {
+		private ["_weapon","_magazine"];
+		_weapon = _x select 0;
+		_magazine = _x select 4 select 0;
+		if !(isnil "_magazine") then {
+			switch _weapon do {
+				case (primaryweapon _playerObject): {_primaryWeaponMagazine = _magazine;};
+				case (secondaryweapon _playerObject): {_secondaryWeaponMagazine = _magazine;};
+				case (handgunweapon _playerObject): {_handgunMagazine = _magazine;};
+			};
+		};
+	};
+} foreach weaponsitems _playerObject;
+
+//--- Get current values
+private ["_export","_uniformItems","_vestItems","_backpackItems"];
+_uniformItems = [];
+_vestItems = [];
+_backpackItems = [];
+{if !(_x isKindOf ["CA_Magazine", configFile >> "CfgMagazines"]) then {_uniformItems pushBack _x}}forEach (uniformitems _playerObject);
+{if !(_x isKindOf ["CA_Magazine", configFile >> "CfgMagazines"]) then {_vestItems pushBack _x}}forEach (vestitems _playerObject);
+{if !(_x isKindOf ["CA_Magazine", configFile >> "CfgMagazines"]) then {_backpackItems pushBack _x}}forEach (backpackitems _playerObject);
+
+_export = [
+	/* 00 */	[uniform _playerObject,_uniformItems],
+	/* 01 */	[vest _playerObject,_vestItems],
+	/* 02 */	[backpack _playerObject,_backpackItems],
+	/* 03 */	headgear _playerObject,
+	/* 04 */	goggles _playerObject,
+	/* 05 */	binocular _playerObject,
+	/* 06 */	[primaryweapon _playerObject call bis_fnc_baseWeapon,_playerObject weaponaccessories primaryweapon _playerObject,_primaryWeaponMagazine],
+	/* 07 */	[secondaryweapon _playerObject call bis_fnc_baseWeapon,_playerObject weaponaccessories secondaryweapon _playerObject,_secondaryWeaponMagazine],
+	/* 08 */	[handgunweapon _playerObject call bis_fnc_baseWeapon,_playerObject weaponaccessories handgunweapon _playerObject,_handgunMagazine],
+	/* 09 */	assigneditems _playerObject - [binocular _playerObject],
+	/* 10 */	magazinesAmmo _playerObject
+];
+//from BIS_fnc_saveInventory, mofified to get ammo count in each mags
+/////////////////////////////////////////
+
+profileNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export]];
+missionNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export]];
 private _customRespawnList = serverNameSpace getvariable["WMS_customRespawnList",[]];
 if !(_playerUID in _customRespawnList) then {
 	_customRespawnList pushBack _playerUID;
 	serverNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
+	missionNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
 };
-_playerObject removeWeapon (primaryWeapon _playerObject);
+publicVariable "WMS_customRespawnList";
+/*_playerObject removeWeapon (primaryWeapon _playerObject);
 _playerObject removeWeapon (secondaryWeapon _playerObject);
 _playerObject removeWeapon (handgunWeapon _playerObject);
 removeAllItems _playerObject;
@@ -30,10 +80,24 @@ removeAllItems _playerObject;
 removeBackpackGlobal _playerObject;
 //removeAllWeapons _playerObject; //do not work
 removeVest _playerObject;
-removeUniform _playerObject;
-_playerObject setDamage 1;
+removeUniform _playerObject;*/
+removeuniform _playerObject;
+removevest _playerObject;
+removeheadgear _playerObject;
+removegoggles _playerObject;
+removebackpack _playerObject;
+removeallitems _playerObject;
+removeallassigneditems _playerObject;
+removeallweapons _playerObject;
+if (count (getmagazinecargo _playerObject select 0) > 0) then {clearmagazinecargoglobal _playerObject;};
+if (count (getweaponcargo _playerObject select 0) > 0) then {clearweaponcargoglobal _playerObject;};
+if (count (getitemcargo _playerObject select 0) > 0) then {clearitemcargoglobal _playerObject;};
 [{(findDisplay 46)closeDisplay 0;}] remoteExecCall ['call',(owner _playerObject),false];
+//_playerObject setDamage 1;
 //WMS_serverCMDpwd serverCommand format ["#kick %1",_playerUID]; //thats pretty hardcore xD
-deleteVehicle _playerObject;
-//[_playerUID,{(findDisplay 46)closeDisplay 0;};] remoteExecCall ['call',owner _playerObject,false];
-//(findDisplay 46)closeDisplay 0;
+[_playerObject] spawn {
+	uisleep 2;
+	hideBody  (_this select 0);
+	uisleep 3;
+	deleteVehicle (_this select 0);
+};

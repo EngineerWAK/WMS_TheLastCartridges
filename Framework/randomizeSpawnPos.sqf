@@ -1,26 +1,29 @@
-private ["_pos","_customRespawnPos","_hight","_spawnAllowed"];
+private ["_pos","_customRespawnPos","_hight","_spawnAllowed","_customRespawnToDelete"];
 params["_target"];
 _pos = position _target;
 _hight = 1000;
 _spawnAllowed = true;
-_customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[-999,-999,-999]];	
+_customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
+_customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];	
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
-	removeAllItems _target;
+	/*removeAllItems _target;
 	{_target unassignItem _x; _target removeItem _x}forEach (assignedItems _target);
 	removeBackpackGlobal _target;
 	removeAllWeapons _target;
 	removeVest _target;
-	removeUniform _target;
+	removeUniform _target;*/
 	//[_target, [missionNamespace, "WMS_client_customRespawnInv"]] call BIS_fnc_loadInventory;
 	[player,WMS_client_customRespawnInv]call WMS_fnc_client_restoreLoadoutFromVar;
 	missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
+	missionNamespace setVariable["WMS_client_customRespawnAce",[]];
 	missionNamespace setVariable["WMS_client_canCustomRespawn",false];
 	[_target] remoteExec ["WMS_fnc_deleteRespawnData",2];
-	private _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];
-	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 }else{
 	//"randomiseSpawnPos"
+	if ((getPlayerUID player) in WMS_customRespawnList) then {	
+		[_target] remoteExec ["WMS_fnc_deleteRespawnData",2];
+	};
 	//////////CUSTOM SPAWN POSITION FILTER//////////
 	_markersToCheck = getArray(missionConfigFile >> "CfgOfficeTrader" >> "MarkersToCheck");
 	_markerTraders = [(_markersToCheck select 0)];
@@ -58,5 +61,6 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 	_target setposATL [(_pos select 0), (_pos select 1), _hight];
 };
 
+_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test

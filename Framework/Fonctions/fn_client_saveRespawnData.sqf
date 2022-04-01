@@ -11,6 +11,10 @@
 
 if (true) then {diag_log format ["[WMS_fnc_client_saveRespawnData]|WAK|TNA|WMS|_time %1, player %2", time, name player]};
 player setVariable["WMS_saveAndDisconnect",true,true]; //this to filter the difference between just dying or dying after this action
-_inventory = [player, [missionNamespace, (getPlayerUID player)], [], true ] call BIS_fnc_saveInventory;
-[player,position player,_inventory]remoteExec ["WMS_fnc_saveRespawnData",2];
+//_inventory = [player, [missionNamespace, (getPlayerUID player)], [], true ] call BIS_fnc_saveInventory;
+//_inventory = [player, [missionNamespace, (getPlayerUID player)], [], true ] call WMS_fnc_saveInventory; //probably just let the server do the inventory export and storage with WMS_fnc_saveRespawnData
+private _aceMedical = [];
+[player,position player,_aceMedical]remoteExec ["WMS_fnc_saveRespawnData",2];
 //missionNamespace setVariable["WMS_client_canCustomRespawn",true]; //this should make the custom Respawn available during the same run and not only after restart
+
+//////////////////////////////////////////////////////////////////////////////////

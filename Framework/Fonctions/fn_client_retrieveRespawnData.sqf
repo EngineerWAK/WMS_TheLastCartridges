@@ -13,10 +13,11 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {(getPla
 	//_customRespawnData = [ProfileNameSpace, ((getPlayerUID player)+"_RespawnData"), []] call BIS_fnc_getServerVariable;
 	private _customRespawnData = [missionNameSpace, ((getPlayerUID player)+"_RespawnData"), []] call BIS_fnc_getServerVariable;
 	if (true) then {diag_log format ["[WMS_client_canCustomRespawn]|WAK|TNA|WMS|_customRespawnData %1", _customRespawnData]};
-	if ((count _customRespawnData) == 3) then {
+	if ((count _customRespawnData) == 4) then {
 		_customRespawn = [player,(_customRespawnData select 1),'1-Last Known Position'] call BIS_fnc_addRespawnPosition;
 		missionNamespace setVariable["WMS_client_customRespawnPos",(_customRespawnData select 1)];
-		missionNamespace setVariable["WMS_client_customRespawnInv",(_customRespawnData select 2)];
+		missionNamespace setVariable["WMS_client_customRespawnAce",(_customRespawnData select 2)]; //empty, not exported yet
+		missionNamespace setVariable["WMS_client_customRespawnInv",(_customRespawnData select 3)];
 		missionNamespace setVariable["WMS_client_customRespawnToDelete",_customRespawn];
 	}else {systemChat "No custom Spawn Data Not Available"};
 }else {systemChat "No custom Spawn Data on the server"};
