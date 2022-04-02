@@ -13,7 +13,7 @@ if (true) then {diag_log format ["[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|_this %1
 params [
 	"_playerObject",
 	"_pos",
-	["_aceMedical",[]] //not used anymore, maybe use the slot for ACE medical variables
+	["_aceMedical",[]] //got it's own function, not used here
 ];
 private _playerUID = getPlayerUID _playerObject;
 private _inventoryVarName = (_playerUID+"_RespawnData");
@@ -72,15 +72,6 @@ if !(_playerUID in _customRespawnList) then {
 	missionNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
 };
 publicVariable "WMS_customRespawnList";
-/*_playerObject removeWeapon (primaryWeapon _playerObject);
-_playerObject removeWeapon (secondaryWeapon _playerObject);
-_playerObject removeWeapon (handgunWeapon _playerObject);
-removeAllItems _playerObject;
-{_playerObject unassignItem _x; _playerObject removeItem _x}forEach (assignedItems _playerObject);
-removeBackpackGlobal _playerObject;
-//removeAllWeapons _playerObject; //do not work
-removeVest _playerObject;
-removeUniform _playerObject;*/
 removeuniform _playerObject;
 removevest _playerObject;
 removeheadgear _playerObject;

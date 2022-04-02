@@ -144,19 +144,6 @@ if !("item" isKindOf "CA_Magazine") then {};
 ]
 */
 _loadoutData = [
-	["U_C_Scientist",["ACE_Banana","ACE_Can_Spirit","ACE_fieldDressing","ACE_fieldDressing","ACE_bloodIV_250","ACE_EarPlugs","ACE_MRE_CreamTomatoSoup","ACE_tourniquet","SmokeShellGreen"]],
-	["rhs_6b23_6sh116",[]],
-	["B_Carryall_cbr",["ACE_Can_RedGull"]],
-	"H_HelmetB_camo",
-	"G_Balaclava_oli",
-	"Rangefinder",
-	["rhs_weap_ak105_zenitco01_b33",["rhs_acc_pgs64","","rhsusf_acc_ACOG_USMC",""],"rhs_30Rnd_545x39_7N10_AK"],
-	["rhs_weap_M136",["","","",""],"rhs_m136_mag"],
-	["rhsusf_weap_MP7A2_folded",["","ACE_acc_pointer_red","",""],"rhsusf_mag_40Rnd_46x30_FMJ"],
-	["ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","O_NVGoggles_ghex_F"],
-	[]
-];
-_loadoutData = [
 	["",[]], //uniform //_loadoutData select 0 select 0
 	["",[]], //vest
 	["",[]], //backpack
@@ -169,26 +156,43 @@ _loadoutData = [
 	[],//linkItem
 	[] //magazinesAmmo
 ];
-player forceaddUniform ((_loadoutData select 0) select 0);
-{player addItemToUniform _x}forEach  ((_loadoutData select 0) select 1);
-player addVest ((_loadoutData select 1) select 0);
-{player addItemToVest _x}forEach  ((_loadoutData select 1) select 1);
-player addBackpackGlobal ((_loadoutData select 2) select 0);
-{player addItemToBackpack _x}forEach  ((_loadoutData select 2) select 1);
-player addHeadgear (_loadoutData select 3);
-player addGoggles (_loadoutData select 4);
-player addWeapon (_loadoutData select 5);
-player addMagazine ((_loadoutData select 6) select 2);
-player addWeapon ((_loadoutData select 6) select 0);
-{player addPrimaryWeaponItem _x}forEach  ((_loadoutData select 6) select 1);
-player addMagazine ((_loadoutData select 7) select 2);
-player addWeapon ((_loadoutData select 7) select 0);
-{player addSecondaryWeaponItem _x}forEach  ((_loadoutData select 7) select 1);
-player addMagazine ((_loadoutData select 8) select 2);
-player addWeapon ((_loadoutData select 8) select 0);
-{player addHandgunItem _x}forEach  ((_loadoutData select 8) select 1);
-{player additem _x; player assignItem _x}forEach  (_loadoutData select 9);
+//////////////////////////////////
+//get some ACE variable on player   
+private _aceStuff = [
+    "ace_medical_openwounds",
+    "ace_medical_bloodpressure",
+    "ace_advanced_fatigue_ae2reserve",
+    "ace_medical_incardiacarrest",
+    "ace_medical_woundbleeding",
+    "ace_medical_inpain",
+    "ace_medical_medications",
+    "ace_eyesdamaged",
+    "ace_medical_heartrate",
+    "ace_medical_status_killed",
+    "ace_medical_pain",
+    "ace_advanced_fatigue_anreserve",
+    "ace_advanced_fatigue_muscledamage",
+    "ace_medical_bloodvolume",
+    "ace_advanced_fatigue_anfatigue",
+    "ace_medical_fractures",
+    "ace_medical_bodypartdamage",
+    "ace_medical_hemorrhage",
+    "ace_advanced_fatigue_aimfatigue",
+    "ace_isdead",
+    "ace_medical_islimping",
+    "ace_medical_bandagedwounds",
+    "ace_medical_engine_aimfracture",
+    "ace_medical_painsuppress",
+    "ace_medical_peripheralresistance",
+    "ace_advanced_fatigue_ae1reserve",
+    "ace_isunconscious"
+    ];
 
+    _result = [];
+    {
+        _aceStuff pushBack (player getVariable [_x, [-999]]);
+    }forEach _aceStuff;
+	_result;
 //////////////////////////////////
 //////////NOTE FOR LATER//////////
 private [];

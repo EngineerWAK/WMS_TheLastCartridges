@@ -66,6 +66,7 @@ class CfgFunctions
 			class client_saveRespawnData {};
 			class client_retrieveRespawnData {};
 			class client_restoreLoadoutFromVar {};
+			class client_restoreAceFromVar {};
 		};
 		class myCategory_IP
 		{

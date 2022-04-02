@@ -1,5 +1,5 @@
 /**
- * WMS_fnc_client_saveRespawnData
+ * WMS_fnc_client_restoreAceFromVar
  *
  * TNA-Community
  * https://discord.gg/Zs23URtjwF
@@ -8,10 +8,11 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-
-if (true) then {diag_log format ["[WMS_fnc_client_saveRespawnData]|WAK|TNA|WMS|_time %1, player %2", time, name player]};
-player setVariable["WMS_saveAndDisconnect",true,true]; //this to filter the difference between just dying or dying after this action
-private _aceMedical = [];
+params [
+	"_playerObject",
+	"_aceData"
+];
+diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS| _playerObject %1, _aceStuff %2", _playerObject, _aceData];
 private _aceStuff = [
     "ace_isdead",
     "ace_isunconscious",
@@ -41,11 +42,13 @@ private _aceStuff = [
     "ace_advanced_fatigue_anfatigue",
     "ace_advanced_fatigue_ae1reserve"
 ];
+if (count _aceData != count _aceStuff) exitWith {
+	diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS|ERROR _aceData %1, _aceStuff %2", (count _aceData), (count _aceStuff)];
+};
 {
-    _aceMedical pushBack (player getVariable [_x, [-999]]);
+	private _arrayNumber = (_aceStuff find _x);
+	private _savedData = (_aceData select _arrayNumber);
+	if (_savedData != [-999]) then {
+		_playerObject setVariable [_x,_savedData,true];
+	};
 }forEach _aceStuff;
-
-[player,position player,_aceMedical]remoteExec ["WMS_fnc_saveRespawnData",2];
-//missionNamespace setVariable["WMS_client_canCustomRespawn",true]; //this should make the custom Respawn available during the same run and not only after restart
-
-//////////////////////////////////////////////////////////////////////////////////

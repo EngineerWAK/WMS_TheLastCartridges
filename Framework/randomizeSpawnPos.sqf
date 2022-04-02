@@ -1,3 +1,14 @@
+/**
+ * randomizeSpawnPos.sqf
+ *
+ * TNA-Community
+ * https://discord.gg/Zs23URtjwF
+ * © 2021 {|||TNA|||}WAKeupneo
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+
 private ["_pos","_customRespawnPos","_hight","_spawnAllowed","_customRespawnToDelete"];
 params["_target"];
 _pos = position _target;
@@ -7,14 +18,9 @@ _customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[
 _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];	
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
-	/*removeAllItems _target;
-	{_target unassignItem _x; _target removeItem _x}forEach (assignedItems _target);
-	removeBackpackGlobal _target;
-	removeAllWeapons _target;
-	removeVest _target;
-	removeUniform _target;*/
-	//[_target, [missionNamespace, "WMS_client_customRespawnInv"]] call BIS_fnc_loadInventory;
+	//"CustomRespawn"
 	[player,WMS_client_customRespawnInv]call WMS_fnc_client_restoreLoadoutFromVar;
+	if ((missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != []) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreLoadoutFromVar;};
 	missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
 	missionNamespace setVariable["WMS_client_customRespawnAce",[]];
 	missionNamespace setVariable["WMS_client_canCustomRespawn",false];
@@ -36,7 +42,6 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		if (markertype _x in _markerTraders) then {
 			if((position _target distance2D (getMarkerPos _x)) <= _zoneTrader)ExitWith{
 				_spawnAllowed = false;
-				//hint parseText "<t color='#ff0000'>CustomSpawn Too Close To Traders</t>";
 				["EventWarning", ["Custom Spawn", "Too Close To Traders"]] call BIS_fnc_showNotification;
 			};
 		};

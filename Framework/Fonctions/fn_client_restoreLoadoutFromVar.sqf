@@ -69,11 +69,6 @@ if (_backpack != "") then {
 	clearAllItemsFromBackpack _playerObject
 };
 {player addItemToBackpack _x}forEach  ((_loadoutData select 2) select 1);
-/*{
-	if (_x != "") then {
-		_playerObject addmagazine _x;
-	};
-}foreach _magazines;*/
 {
 	_playerObject addmagazine _x; //player addMagazine ["magazineName", "ammoCount"];
 }foreach _magazines;
@@ -105,9 +100,3 @@ player addMagazine ((_loadoutData select 8) select 2); //handGun
 		_playerObject linkitem _x;
 	};
 }foreach _linkedItemsMisc;
-/*
-{
-	if ((_x select 0) != "") then {
-		_playerObject addweaponcargoglobal _x;
-	};
-} foreach _transportWeapons;*/
