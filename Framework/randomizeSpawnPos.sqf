@@ -20,11 +20,11 @@ _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnT
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
 	//"CustomRespawn"
 	[player,WMS_client_customRespawnInv]call WMS_fnc_client_restoreLoadoutFromVar;
-	if ((missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != []) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreLoadoutFromVar;};
+	if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 	missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
 	missionNamespace setVariable["WMS_client_customRespawnAce",[]];
 	missionNamespace setVariable["WMS_client_canCustomRespawn",false];
-	[_target] remoteExec ["WMS_fnc_deleteRespawnData",2];
+	if(((player getVariable ['playerInRestrictionZone',-1]) == -1)) then {player setVariable ['playerInRestrictionZone',0]};
 }else{
 	//"randomiseSpawnPos"
 	if ((getPlayerUID player) in WMS_customRespawnList) then {	
@@ -65,7 +65,11 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 	_target addBackpackGlobal "B_Parachute";
 	_target setposATL [(_pos select 0), (_pos select 1), _hight];
 };
-
-_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
+if ((getPlayerUID player) in WMS_customRespawnList) then {
+	if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
+	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
+	[player] remoteExec ["WMS_fnc_deleteRespawnData",2];
+};
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test
+if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|player respawned and ready to fight %1", time]};

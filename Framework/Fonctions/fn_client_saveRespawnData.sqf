@@ -23,7 +23,7 @@ private _aceStuff = [
     "ace_medical_inpain",
     "ace_medical_medications",
     "ace_medical_heartrate",
-    "ace_medical_status_killed",
+    //"ace_medical_status_killed",
     "ace_medical_pain",
     "ace_medical_bloodvolume",
     "ace_medical_fractures",

@@ -43,8 +43,10 @@ player addMPEventHandler ["mpkilled", {
 		_actualPlayer = (_this select 0) getVariable ["_spawnedPlayerReadyToFight", true];
 		if (_actualPlayer && hasInterface) then {
 			if ((getPlayerUID player) in WMS_customRespawnList) then {
-				missionNamespace setVariable["WMS_client_canCustomRespawn",true];
-				[]call WMS_fnc_client_retrieveRespawnData;
+				private _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];	
+				_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
+				[player] remoteExec ["WMS_fnc_deleteRespawnData",2];
+				if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
 			};
 			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Client Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
 		};

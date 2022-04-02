@@ -26,6 +26,7 @@ params [
 	"_playerObject",
 	"_loadoutData"
 ];
+diag_log format ["[WMS_fnc_client_restoreLoadoutFromVar]|WAK|TNA|WMS| _playerObject %1, _loadoutData %2", _playerObject, _loadoutData];
 _uniform = _loadoutData select 0 select 0;
 _vest = _loadoutData select 1 select 0;
 _headgear = _loadoutData select 3;
