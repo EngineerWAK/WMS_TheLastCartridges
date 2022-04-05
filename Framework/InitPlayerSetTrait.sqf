@@ -54,6 +54,5 @@ if ("ACE_Banana" in _items) then {
 		};
 	};
 };
-if (worldName == "xcam_taunus") then {_caller setUnitTrait ["camouflageCoef",0.5]};
 
 systemChat format ["You are now Medic level %1 and Engineer level %2", (_caller getVariable  ["ace_medical_medicclass", 0]), (_caller getVariable  ["ace_IsEngineer", 0])];

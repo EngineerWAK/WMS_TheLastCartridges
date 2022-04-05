@@ -39,7 +39,9 @@ private _aceStuff = [
     "ace_advanced_fatigue_anreserve",
     "ace_advanced_fatigue_muscledamage",
     "ace_advanced_fatigue_anfatigue",
-    "ace_advanced_fatigue_ae1reserve"
+    "ace_advanced_fatigue_ae1reserve",
+    "acex_field_rations_hunger",
+    "acex_field_rations_thirst"
 ];
 {
     _aceMedical pushBack (player getVariable [_x, [-999]]);

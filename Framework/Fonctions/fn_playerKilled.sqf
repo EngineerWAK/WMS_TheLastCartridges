@@ -112,4 +112,4 @@ if (true) then {diag_log format ["[PLAYERKILLED]|WAK|TNA|WMS| player: %1, UID: %
 //_msgHint = format ["K: %1, D: %2, Poptabs: %3, Score: %4", _playerKills,(profileNamespace getVariable [_playerUID_ExileDeath,0]),_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0])];
 //_msgHint remoteExec ["hint", _targetOwner];
 //[_msgHint] remoteExecCall ['SystemChat',_targetOwner];
-saveProfileNamespace;
+//saveProfileNamespace;

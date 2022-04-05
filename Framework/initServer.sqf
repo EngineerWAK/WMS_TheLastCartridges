@@ -68,6 +68,7 @@ while {true} do
 		private _TerritoriesArray = profileNameSpace GetVariable ["territoriesArray", []];
 
 		saveProfilenameSpace;
+		if (true) then {diag_log "[InitServer.sqf]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 
 		{
 			_permanentVehiclesCount = _permanentVehiclesCount + (count _x)-1;

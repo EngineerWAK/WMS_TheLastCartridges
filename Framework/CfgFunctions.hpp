@@ -5,7 +5,6 @@ class CfgFunctions
 		class myCategory
 		{
 			file = "Fonctions";
-			class buyAction {};
 			class buyAmmoOnBox {};
 			class buyFromTrader {};
 			class buyFromOffice {};

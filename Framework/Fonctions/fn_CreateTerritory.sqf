@@ -93,6 +93,7 @@ if (_playerMoney > _price) then {
 	_caller setVariable ["ExileMoney", _playerMoney-_price, true];
 
 	saveProfileNamespace;
+if (true) then {diag_log "[WMS_fnc_createTerritory]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 } else {
 	"Dude, make some money first !" remoteExec ["hint", (owner _caller)];
 };

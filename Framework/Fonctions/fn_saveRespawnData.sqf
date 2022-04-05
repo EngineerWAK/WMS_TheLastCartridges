@@ -23,6 +23,7 @@ private ["_primaryWeaponMagazine","_secondaryWeaponMagazine","_handgunMagazine"]
 _primaryWeaponMagazine = [];
 _secondaryWeaponMagazine = [];
 _handgunMagazine = [];
+
 {
 	if (count _x > 4 && {typename (_x select 4) == typename []}) then {
 		private ["_weapon","_magazine"];
@@ -68,7 +69,8 @@ missionNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_exp
 private _customRespawnList = serverNameSpace getvariable["WMS_customRespawnList",[]];
 if !(_playerUID in _customRespawnList) then {
 	_customRespawnList pushBack _playerUID;
-	serverNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
+	//serverNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
+	profilenameSpace setvariable["WMS_customRespawnList",_customRespawnList];
 	missionNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
 };
 publicVariable "WMS_customRespawnList";
@@ -86,6 +88,8 @@ if (count (getitemcargo _playerObject select 0) > 0) then {clearitemcargoglobal 
 [{(findDisplay 46)closeDisplay 0;}] remoteExecCall ['call',(owner _playerObject),false];
 //_playerObject setDamage 1;
 //WMS_serverCMDpwd serverCommand format ["#kick %1",_playerUID]; //thats pretty hardcore xD
+saveprofileNameSpace;
+if (true) then {diag_log "[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 [_playerObject] spawn {
 	uisleep 2;
 	hideBody  (_this select 0);
