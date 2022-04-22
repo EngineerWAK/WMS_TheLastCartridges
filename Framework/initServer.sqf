@@ -66,9 +66,10 @@ while {true} do
 		private _permanentVehiclesCount = 0;
 		private _permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []];
 		private _TerritoriesArray = profileNameSpace GetVariable ["territoriesArray", []];
-
-		saveProfilenameSpace;
-		if (true) then {diag_log "[InitServer.sqf]|WAK|TNA|WMS|ProfileNameSpace Saved"};
+		if ((count allPlayers) != 0) then {
+			saveProfilenameSpace;
+			if (true) then {diag_log "[InitServer.sqf]|WAK|TNA|WMS|ProfileNameSpace Saved"};
+		};
 
 		{
 			_permanentVehiclesCount = _permanentVehiclesCount + (count _x)-1;

@@ -51,6 +51,8 @@ _mkrNameArray = [];
   _mkr1 setMarkerColorLocal "colorOPFOR";
   _mkrNameArray pushBack _mkr1;
 }forEach _Pos_Array;
+uisleep 60;
+{deleteMarker _x}forEach _mkrNameArray;
 
 WMS_fnc_GetOwnedPermanentVhl = {
 	params [
@@ -133,16 +135,6 @@ _magazinesAmmo = magazinesAmmo player; //need something like this to export exac
 player setAmmo [primaryWeapon player, 19];
 player addMagazine ["magazineName", "ammoCount"];
 if !("item" isKindOf "CA_Magazine") then {};
-/*
-[
-	["30Rnd_65x39_caseless_mag",30],
-	["30Rnd_65x39_caseless_mag",30],
-	["16Rnd_9x21_Mag",16],
-	["SmokeShellGreen",1],
-	["Chemlight_green",1],
-	["HandGrenade",1]
-]
-*/
 _loadoutData = [
 	["",[]], //uniform //_loadoutData select 0 select 0
 	["",[]], //vest
@@ -156,43 +148,6 @@ _loadoutData = [
 	[],//linkItem
 	[] //magazinesAmmo
 ];
-//////////////////////////////////
-//get some ACE variable on player   
-private _aceStuff = [
-    "ace_medical_openwounds",
-    "ace_medical_bloodpressure",
-    "ace_advanced_fatigue_ae2reserve",
-    "ace_medical_incardiacarrest",
-    "ace_medical_woundbleeding",
-    "ace_medical_inpain",
-    "ace_medical_medications",
-    "ace_eyesdamaged",
-    "ace_medical_heartrate",
-    "ace_medical_status_killed",
-    "ace_medical_pain",
-    "ace_advanced_fatigue_anreserve",
-    "ace_advanced_fatigue_muscledamage",
-    "ace_medical_bloodvolume",
-    "ace_advanced_fatigue_anfatigue",
-    "ace_medical_fractures",
-    "ace_medical_bodypartdamage",
-    "ace_medical_hemorrhage",
-    "ace_advanced_fatigue_aimfatigue",
-    "ace_isdead",
-    "ace_medical_islimping",
-    "ace_medical_bandagedwounds",
-    "ace_medical_engine_aimfracture",
-    "ace_medical_painsuppress",
-    "ace_medical_peripheralresistance",
-    "ace_advanced_fatigue_ae1reserve",
-    "ace_isunconscious"
-    ];
-
-    _result = [];
-    {
-        _aceStuff pushBack (player getVariable [_x, [-999]]);
-    }forEach _aceStuff;
-	_result;
 //////////////////////////////////
 //////////NOTE FOR LATER//////////
 private [];
