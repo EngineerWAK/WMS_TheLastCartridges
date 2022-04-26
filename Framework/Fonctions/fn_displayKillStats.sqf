@@ -4,10 +4,10 @@
 '#e57234' orange 
 '#d60000' red
 */
-private["_totalBonus", "_payload", "_scoreName", "_scoreNumber", "_spaceToAdd", "_i"]; 
+private["_totalBonus", "_payload", "_scoreName", "_scoreNumber"]; 
 params[
 	["_messages", [["ERROR",00]]],
-	["_Type", "AMS"] //"AMS"
+	["_Type", "AMS"] //"AMS" //"DFO" not set yet
 ]; 
 _totalBonus = 0;
 _payload = "<t align='left' size='1.2'>"; 
@@ -20,7 +20,7 @@ if (false) then {diag_log format ["[DISPLAYKILLSTAT]|WAK|TNA|WMS|UPDATE: _messag
 		_totalBonus = _totalBonus + (_x select 1); 
 		_payload = _payload + format ["<t font='EtelkaMonospacePro'>%1</t>%2<br/>", toUpper _scoreName, _scoreNumber]; 
 	}else{
-		_payload = _payload + format ["<t color='#e57234' font='EtelkaMonospacePro'>%1</t><br/>", toUpper _scoreName]; //orange
+		_payload = _payload + format ["<t color='#e57234' font='EtelkaMonospacePro'>%1</t><br/>", toUpper _scoreName]; //orange //DFO should fit here
 	};
 }forEach _messages; 
 _payload = _payload + "</t>"; 
