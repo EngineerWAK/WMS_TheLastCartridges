@@ -110,6 +110,7 @@ class CfgRemoteExec
 		class WMS_fnc_InfantryProgram_buy			{ allowedTargets=2; }; //EXILE
 
 		class WMS_fnc_Event_HVT		   				{ allowedTargets=2; }; //not finished
+		class WMS_fnc_Event_DFO		   				{ allowedTargets=2; }; //server side only
 
 		//class WMS_fnc_DynAI_RwdMsgOnKill			{ allowedTargets=2; }; //filter for HC1 remoteExec EHrewards
 		//class WMS_fnc_AMS_EHonKilled				{ allowedTargets=2; }; //filter for HC1 remoteExec EHrewards

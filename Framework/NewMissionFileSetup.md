@@ -33,3 +33,8 @@ equipement storage: empty!
 is medical facility
 is repair facility
 Init: [this] call WMS_fnc_initContainerCargoDump;
+
+billboards:
+"Land_Billboard_F"
+"Custom\Billboards\Billboard_Spawn.paa"
+"Custom\Billboards\Billboard_Traders.paa"
