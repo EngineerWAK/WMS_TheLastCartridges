@@ -192,3 +192,26 @@ getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad
 [[0,0,0], 0, "B_UAV_02_F", west] call BIS_fnc_spawnVehicle;
 _uav = "uavobject";
 createVehicleCrew _uav;
+
+/////////////
+	//["Land_Destroyer_01_base_F",[0,0,0],180],
+	//["Land_HelipadEmpty_F",[0,-79.4,8.76],180],
+	//["ShipFlag_US_F",[0,-91.8,8.76],180]
+private _shipParts = [
+	["Land_Destroyer_01_hull_01_F",[0,-85,-2.65],180],
+	["Land_Destroyer_01_hull_02_F",[0,-45,-2.65],180],
+	["Land_Destroyer_01_hull_03_F",[-0,-0,-2.65],180],
+	["Land_Destroyer_01_hull_04_F",[-0,45,-2.65],180],
+	["Land_Destroyer_01_hull_05_F",[-0,80,-2.65],180],
+	["Land_Destroyer_01_interior_02_F",[0,-45,-2.65],180],
+	["Land_Destroyer_01_interior_03_F",[-0,0,-2.65],180],
+	["Land_Destroyer_01_interior_04_F",[-0,45,-2.65],180]
+];
+private _pos = position player;
+private _boat = "I_Boat_Armed_01_minigun_F" createVehicle _pos;
+_boat allowDamage false;
+{
+	_part = _x select 0 createVehicle [0,0,500];
+	_part setDir (_x select 2);
+	_part attachTo [_boat,[_x select 1 select 0,_x select 1 select 1,_x select 1 select 2]];
+}forEach _shipParts;

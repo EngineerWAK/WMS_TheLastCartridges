@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.539_2022APR25_GitHub";
+	name = "v1.54_2022MAY05_GitHub";
 };
 
 class CfgBuildingsCategories
