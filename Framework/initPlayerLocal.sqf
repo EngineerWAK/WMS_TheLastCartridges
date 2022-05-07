@@ -54,8 +54,7 @@ if (hasinterface) then {
     _action2 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action2] call ace_interact_menu_fnc_addActionToObject;
     
-    //DFO Self Action:
-    /*
+    /*//DFO Self Action:
 	private _actionDFO = ["RequestDFOmission","Request DFO Mission","",{
 		if (WMS_DFO_UsePilotsList)then{
 			if((getPlayerUID player) in WMS_DFO_PilotsList)then{
@@ -77,8 +76,8 @@ if (hasinterface) then {
 		{time > (WMS_DFO_LastCall+WMS_DFO_CoolDown)}
 		}
 	] call ace_interact_menu_fnc_createAction;
-	[player, 1, ["ACE_SelfActions"], _actionDFO] call ace_interact_menu_fnc_addActionToObject;
-*/
+	[player, 1, ["ACE_SelfActions"], _actionDFO] call ace_interact_menu_fnc_addActionToObject;*/
+
     //////////Mission File version on the map//////////
     _markerSystem = createMarkerLocal ["MissionVersion", [(worldsize /2),-500]];
     _markerSystem setMarkerTypeLocal "mil_dot";
