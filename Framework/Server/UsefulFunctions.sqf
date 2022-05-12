@@ -178,7 +178,13 @@ params[
 
 ["<t color='#ff0000' size='.8'>Warning!<br />Stop doing what you are doing</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
 
-[parseText "<t font='PuristaMedium' size='1.6'>The Last Cartridges</t><br />by {|||TNA|||} WAKeupneo", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+[parseText "<t font='PuristaMedium' size='1.6'>The Last Cartridges</t><br />by {|||TNA|||} WAKeupneo", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;[parseText "<t font='PuristaMedium' size='1.4'>Hold position for FastRoping</t>",
+[
+(0.3 - pixelW * pixelGrid),
+(0.05 - pixelH * pixelGrid),
+(pixelW * pixelGrid * 60),
+(pixelH * pixelGrid * 15)
+],nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
 
 getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad");
 
