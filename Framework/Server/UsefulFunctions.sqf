@@ -27,7 +27,6 @@ WMS_exportMissionObjects = {
 	copyToClipBoard format ["%1", _missionObjects]; 
 	systemChat format ["%1 Objects Exported", (count _missionObjects)];
 };
-
 //Modify array in players permanent vehicle array
 -arrayModification = {
 	_UIDplayer = "76561197965501020";
@@ -178,7 +177,8 @@ params[
 
 ["<t color='#ff0000' size='.8'>Warning!<br />Stop doing what you are doing</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
 
-[parseText "<t font='PuristaMedium' size='1.6'>The Last Cartridges</t><br />by {|||TNA|||} WAKeupneo", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;[parseText "<t font='PuristaMedium' size='1.4'>Hold position for FastRoping</t>",
+[parseText "<t font='PuristaMedium' size='1.6'>The Last Cartridges</t><br />by {|||TNA|||} WAKeupneo", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+[parseText "<t font='PuristaMedium' size='1.4'>Hold position for FastRoping</t>",
 [
 (0.3 - pixelW * pixelGrid),
 (0.05 - pixelH * pixelGrid),
@@ -187,6 +187,15 @@ params[
 ],nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
 
 getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad");
+
+this switchMove "HubFixingVehicleProne_idle1";
+this addEventHandler [ "AnimDone", {
+	params[ "_unit", "_anim" ];
+	
+	if ( _anim == "HubFixingVehicleProne_idle1" ) then {
+		_unit switchMove "HubFixingVehicleProne_idle1";
+	};
+}];
 
 [this,"WATCH"] call BIS_fnc_ambientAnim;
 [123.4567, 2] call BIS_fnc_cutDecimals; //123.45
@@ -221,3 +230,4 @@ _boat allowDamage false;
 	_part setDir (_x select 2);
 	_part attachTo [_boat,[_x select 1 select 0,_x select 1 select 1,_x select 1 select 2]];
 }forEach _shipParts;
+

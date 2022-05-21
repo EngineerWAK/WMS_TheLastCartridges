@@ -44,6 +44,8 @@ class CfgRemoteExec
 		class bis_fnc_effectKilledSecondaries	{ allowedTargets=2; };
 		class bis_fnc_curatorrespawn	{ allowedTargets=2; };
 		class bis_fnc_showNotification	{ allowedTargets=2; };
+		class bis_fnc_effectkilledairdestruction	{ allowedTargets=2; };
+		class bis_fnc_effectkilledairdestructionStage2	{ allowedTargets=2; };
 		
 		class SA_Simulate_Towing { allowedTargets=0; };
 		class SA_Attach_Tow_Ropes { allowedTargets=0; };
