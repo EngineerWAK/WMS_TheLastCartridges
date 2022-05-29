@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.55_2022MAY21_GitHub";
+	name = "v1.56_2022MAY29_GitHub"; //PAA billboards and logo
 };
 
 class CfgBuildingsCategories
