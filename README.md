@@ -1,6 +1,22 @@
-# WMS_theLastCartridges
+# WMS_TheLastCartridges
 
-Mission file for Arma 3 Dedicated Server<br/>
+Mission file for Arma 3 Dedicated Server, but it can run in the mission Editor/MP even if I dont recommend it on the long term<br/>
+I used to play/setUp Exile Mod servers for years but with the end of developpement from the Exile Mod Team, well,<br/>
+things started to get "broken", more and more, a lot of patch/fix/overrides, Exile Mod is great, it just doesn't fit what I want anymore.<br/>
+In parallel, I built (still building?) my own AI/Missions system with a lot of CBA/ACE stuff in it, more and more ACE stuff.<br/>
+Then came TheLastCartridges, a "survival" mission file with:<br/>
+a vanilla Arma3 spawn system,<br/>
+a basic loot system,<br/>
+a very basic trader/economy/respect system,<br/>
+a basic permanent base/territory system,<br/>
+permanent vehicles,<br/>
+Ace food/drink,<br/>
+custom Respawns,<br/>
+no Database (yeah, it's not made for hundreds of players running everywhere 24h/day, but for few friends, it does the job),<br/>
+Etc...<br/>
+all very basic but easy to fix and update when bohemia break something.<br/>
+To keep the AI/mission system compatible with Exile Mod, the money/respect/kill/death variables are the same than Exile.
+The money still show up as "poptabs" in some functions I think, the curency didn't really get any name (yet).
 
 "v1.58_2022MAY31_GitHub" modify serverProfile Variables, you need to convert them if you update from previous versions:
 ```
