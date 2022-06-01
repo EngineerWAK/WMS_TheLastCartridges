@@ -17,11 +17,11 @@ params [
 	"_caller"
 ];
 _ownerUID = getPlayerUID _caller;
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 _playerUID_ExileMoney = "ExileMoney_"+_ownerUID;
 _playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
-_vehicleID = _flag getVariable ["vehicleID", 0]; //select 0
-_BuyerOwner = _flag getVariable ["BuyerOwner", 0]; //select 3
+_vehicleID = _flag getVariable ["WMS_vehicleid", 0]; //select 0
+_BuyerOwner = _flag getVariable ["WMS_buyerowner", 0]; //select 3
 _layout = _flag getVariable ["layout", "bunkercamp"]; //select 6
 
 if (true) then {diag_log format ["[UPGRADETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
@@ -37,7 +37,7 @@ if (_result == -1) exitWith {};
 
 _territoryLvL = ((_territoriesArray select _result) select 2);
 (_territoriesArray select _result) set [2, _territoryLvL+1];
-profileNameSpace setVariable ["territoriesArray", _territoriesArray];
+profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
 
 _flag setvariable ["exileterritorylevel",_territoryLvL+1, true];
 _caller setVariable ["ExileMoney", _playerMoney-20000, true];

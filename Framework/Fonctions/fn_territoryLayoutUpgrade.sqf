@@ -26,13 +26,13 @@ params [
 		_layout = (_x select 6);
 */
 _ownerUID = getPlayerUID _caller;
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 _playerUID_ExileMoney = "ExileMoney_"+_ownerUID;
 _playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
 
 if (_playerMoney < _price) exitWith {};
 
-_vehicleID = _flag getVariable ["vehicleID", 0];
+_vehicleID = _flag getVariable ["WMS_vehicleid", 0];
 _buildingsToDelete = [];
 if (true) then {diag_log format ["[UPDATELAYOUT]|WAK|TNA|WMS| _this %1", _this]};
 
@@ -45,7 +45,7 @@ _result = _results find 0;
 
 (_territoriesArray select _result) set [6, _layout];
 _flag setVariable ["layout", _layout, true];
-profileNameSpace setVariable ["territoriesArray", _territoriesArray];
+profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
 
 if (_when == 'rightnow') then {
 	[_flag, _caller,(getDir _flag), "free"] call WMS_fnc_rotateBaseObjects;

@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.56_2022MAY29_GitHub"; //PAA billboards and logo
+	name = "v1.58_2022MAY31_GitHub"; //Permanent vehicles restart counter
 };
 
 class CfgBuildingsCategories

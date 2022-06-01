@@ -10,7 +10,7 @@
  */
  
 // Start DynamicFlightOps
-if (true)then {execVM "DFO\WMS_DFO_functions.sqf"};
+//if (true)then {execVM "DFO\WMS_DFO_functions.sqf"};
 
 WMS_lootHolderList = []; //[_house,_lootHolder,(serverTime+_timeToDelete)];
 WMS_HeadlessOwnerID = 2;
@@ -67,8 +67,8 @@ if (worldName == "Enoch") then {
 while {true} do
 	{
 		private _permanentVehiclesCount = 0;
-		private _permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []];
-		private _TerritoriesArray = profileNameSpace GetVariable ["territoriesArray", []];
+		private _permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
+		private _TerritoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 		if ((count allPlayers) != 0) then {
 			saveProfilenameSpace;
 			if (true) then {diag_log "[InitServer.sqf]|WAK|TNA|WMS|ProfileNameSpace Saved"};

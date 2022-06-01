@@ -40,8 +40,8 @@ _msgHint remoteExec ["hint", _targetOwner];
 //add the fast travel addAction to territory owner:
 //if ("banana" in (Items Player) && {vehicle player isKindOf "Steerable_Parachute_F"} && {getPlayerUID player in _territoryFastTravel}) then {"fastTravelToBase"};
 
-_territoryFastTravel = profileNameSpace getVariable ["territoryfasttravel", []];
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+_territoryFastTravel = profileNameSpace getVariable ["WMS_territoryfasttravel", []];
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 _territoryPos = []; //Owner
 _territoryPos2 = []; //FastTraveler
 _territoryLVLs = []; //Owner

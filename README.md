@@ -1,8 +1,17 @@
 # WMS_theLastCartridges
 
-Mission file for Arma 3 Dedicated Server
+Mission file for Arma 3 Dedicated Server<br/>
 
-"v1.51_2022MAR26_MoltenTungsten_GitHub"<br/>
+"v1.58_2022MAY31_GitHub" modify serverProfile Variables, you need to convert them if you update from previous versions:
+```
+private _permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []]; 
+private _TerritoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray]; 
+profileNameSpace setVariable ["WMS_territoriesArray", _TerritoriesArray];
+profileNameSpace setVariable ["permanentVhlArray", nil]; 
+profileNameSpace setVariable ["territoriesArray", nil]
+```
+
 Doesn't include any AI/Mission but ready to work with WMS_InfantryProgram<br/>
 This version of the Framework include:
 

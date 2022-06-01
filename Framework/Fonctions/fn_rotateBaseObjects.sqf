@@ -16,11 +16,11 @@ params [
 	["_price", "notFree"]
 ];
 _ownerUID = getPlayerUID _caller;
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 //_playerUID_ExileMoney = "ExileMoney_"+_ownerUID;
 //_playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
-_vehicleID = _flag getVariable ["vehicleID", 0];
-_BuyerOwner = _flag getVariable ["BuyerOwner", 0];
+_vehicleID = _flag getVariable ["WMS_vehicleid", 0];
+_BuyerOwner = _flag getVariable ["WMS_buyerowner", 0];
 _layout = _flag getVariable ["layout", "bunkercamp"];
 _buildingsToDelete = [];
 if (true) then {diag_log format ["[ROTATEBASE]|WAK|TNA|WMS| _this %1", _this]};
@@ -34,7 +34,7 @@ _result = _results find 0;
 
 _flag setDir _newHading;
 (_territoriesArray select _result) set [5, _newHading];
-profileNameSpace setVariable ["territoriesArray", _territoriesArray];
+profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
 
 {
 	_territoryObject = _x getVariable ["_territoryObject",false];

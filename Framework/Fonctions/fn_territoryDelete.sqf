@@ -25,8 +25,8 @@ params [
 		_layout = (_x select 6);
 */
 _ownerUID = getPlayerUID _caller;
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
-_vehicleID = _flag getVariable ["vehicleID", "broken"];
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
+_vehicleID = _flag getVariable ["WMS_vehicleid", "broken"];
 if (true) then {diag_log format ["[DELETETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
 if (_vehicleID == "broken") exitWith {};
 
@@ -41,7 +41,7 @@ if (_result == -1) exitWith {};
 _territoriesArray deleteAt _result;
 deleteVehicle _flag;
 //then remove player UID from the FastTravel array if no other territory
-_territoryFastTravel = profileNameSpace getVariable ["territoryfasttravel", []];
+_territoryFastTravel = profileNameSpace getVariable ["WMS_territoryfasttravel", []];
 _territoryFastTravel deleteAt (_territoryFastTravel find _ownerUID); //if multiUID, find will return only the first one
-profileNameSpace setVariable ["territoryfasttravel", _territoryFastTravel];
-profileNameSpace setVariable ["territoriesArray", _territoriesArray];
+profileNameSpace setVariable ["WMS_territoryfasttravel", _territoryFastTravel];
+profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];

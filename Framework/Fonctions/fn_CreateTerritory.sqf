@@ -36,7 +36,7 @@ _territoryLevel = 1;
 */
 /////How many flag the player already own:
 _territoryBuiltCount = 0;
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 if !(count _territoriesArray == 0) then {
 	{
 		if ((_x select 3) == (getPlayerUID _caller)) then {
@@ -51,7 +51,7 @@ if !(count _territoriesArray == 0) then {
 //if (_targetUID == "76561197965501020") then {
 if (_playerMoney > _price) then {
 	//////////
-	//_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+	//_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 	//////////
 	_flagID = call WMS_fnc_generateHexaID;
 
@@ -67,8 +67,8 @@ if (_playerMoney > _price) then {
 	[_flag, _pos, _flagDir, "bunkercamp"] call WMS_fnc_SpawnCamps;
 	_flag setVariable ["ace_rearm_isSupplyVehicle", true, true];
 	_flag setVariable ["ACE_isRepairFacility", true, true];
-	_flag setVariable ["vehicleID", _flagID, true];
-	_flag setVariable ["BuyerOwner", _targetUID, true];
+	_flag setVariable ["WMS_vehicleid", _flagID, true];
+	_flag setVariable ["WMS_buyerowner", _targetUID, true];
 	_flag setVariable ["WMS_BaseFriends", [_targetUID], true];
 	_flag setVariable ["layout", _layout, true]; //not sure about this one yet
 	//from Exile used in the mission system:
@@ -81,14 +81,14 @@ if (_playerMoney > _price) then {
 	_marker setMarkerType "mil_flag";
 	_marker setMarkerAlpha 0; //keep it invisible
 
-	_territoryFastTravel = profileNameSpace getVariable ["territoryfasttravel", []]; //if ("banana" in (Items Player) && {vehicle player isKindOf "Steerable_Parachute_F"} && {getPlayerUID player in _territoryFastTravel}) then {"fastTravelToBase"};
+	_territoryFastTravel = profileNameSpace getVariable ["WMS_territoryfasttravel", []]; //if ("banana" in (Items Player) && {vehicle player isKindOf "Steerable_Parachute_F"} && {getPlayerUID player in _territoryFastTravel}) then {"fastTravelToBase"};
 	//if !(_targetUID in _territoryFastTravel) then {
 		_territoryFastTravel pushBack _targetUID;
-		profileNameSpace setVariable ["territoryfasttravel", _territoryFastTravel];
+		profileNameSpace setVariable ["WMS_territoryfasttravel", _territoryFastTravel];
 	//};
 
 	_territoriesArray pushBack [_flagID,_pos,_territoryLevel,_targetUID,[_targetUID],_flagDir,_layout];
-	profileNameSpace setVariable ["territoriesArray", _territoriesArray];
+	profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
 	profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney-_price)];
 	_caller setVariable ["ExileMoney", _playerMoney-_price, true];
 

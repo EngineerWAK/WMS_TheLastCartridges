@@ -94,7 +94,7 @@ WMS_IP_buildComputer = {
 //JOIN THE PROGRAM
 	_IDnumber = _IPcomputer addAction
 	[
-		"<t size='0.9' color='#068604'>Join the Program</t>",
+		"<t size='0.9' color='#d60000'>Join the Program</t>",
 		"
 			WMS_IP_Active_list pushBack (getplayerUID player);
 			publicVariable 'WMS_IP_Active_list'; 
@@ -107,6 +107,7 @@ WMS_IP_buildComputer = {
 		"",
 		"
 			(alive _target) &&
+			{stance player == 'CROUCH'} &&
 			{('rhs_radio_R187P1' in (assigneditems _this))} && 
 			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
 			{!((getplayerUID player) in WMS_IP_Active_list)} &&

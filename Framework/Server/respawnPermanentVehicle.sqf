@@ -14,7 +14,7 @@ private ["_permanentVhlArray","_playerArray","_targetUID","_vehicleID","_vehicle
 		];
 
 //Respawn Territories first:
-_TerritoriesArray = profileNameSpace GetVariable ["territoriesArray", []];
+_TerritoriesArray = profileNameSpace GetVariable ["WMS_territoriesArray", []];
 if !(count _TerritoriesArray == 0) then {
 	{
 		_flagID = (_x select 0);
@@ -34,8 +34,8 @@ if !(count _TerritoriesArray == 0) then {
 		[_flag]call WMS_fnc_initFlagAddActions;
 		//_flag setVariable ["ace_rearm_isSupplyVehicle", true, true]; //do not work
 		//_flag setVariable ["ACE_isRepairFacility", true, true]; //do not work
-		_flag setVariable ["vehicleID", _flagID, true];
-		_flag setVariable ["BuyerOwner", _ownerUID, true];
+		_flag setVariable ["WMS_vehicleid", _flagID, true];
+		_flag setVariable ["WMS_buyerowner", _ownerUID, true];
 		_flag setVariable ["WMS_BaseFriends", _buildingRightUID, true];
 		_flag setVariable ["layout", _layout, true]; //not sure about this one yet
 		_flag setVariable ['_layoutUpgradable', true, true];
@@ -62,7 +62,7 @@ if !(count _TerritoriesArray == 0) then {
 
 //Then respawn vehicles
 WMS_permanentVehicleObjects = []; //will be used for the last update off all permanent vehicle before restart
-_permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []];
+_permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 _playerArray = [];
 _vehicleClassName = "";
 _noRespawnItems = getArray(missionConfigFile >> "CfgBlackListedItems" >> "items");
@@ -104,13 +104,13 @@ _howmanyrestarts = 0;
 			//_veh setDamage _damage;
 			_veh setVariable ["WMS_startDamage", _damage, true];
 			_veh setfuel _fuel;
-			_veh setVariable ["BuyerOwner", _targetUID, true];
+			_veh setVariable ["WMS_buyerowner", _targetUID, true];
 			_veh setVariable ["WMS_friends", _friends, true];
-			_veh setVariable ["vehicleID", _vehicleID, true];
+			_veh setVariable ["WMS_vehicleid", _vehicleID, true];
 			_veh setVariable ["WMS_howmanyrestarts", _howmanyrestarts, true];
 			_vehicleID_inventory = _vehicleID + "_inventory";
 			_veh setVariable ["WMS_vehicleID_inventory", _vehicleID_inventory, true];
-			_veh setVariable ["permanentVHL", true, true];
+			_veh setVariable ["WMS_permanentvhl", true, true];
 			_veh addMPEventHandler ["MPkilled", {
 					[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
 					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;

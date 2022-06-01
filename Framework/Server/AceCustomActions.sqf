@@ -109,7 +109,7 @@ private _action7 = ["activateWeaponStation", "Activate Weapon for 2500", "", {
 	},{
 		((_this select 0) getVariable ["WMS_WeaponStationActivate", true]) &&
 		{((_this select 1) getVariable ["ExileMoney", 0]) >= 2500}
-		//{(_this select 0) getVariable ["BuyerOwner", "00000000000000000"] == (getPlayerUID (_this select 1))} && 
+		//{(_this select 0) getVariable ["WMS_buyerowner", "00000000000000000"] == (getPlayerUID (_this select 1))} && 
 		//{alive (_this select 0)}
 	}
 	] call ace_interact_menu_fnc_createAction;

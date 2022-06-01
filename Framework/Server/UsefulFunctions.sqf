@@ -1,5 +1,5 @@
 WMS_countPermanentVehicles = {
-	private _permamentVehicle = profileNameSpace getVariable ["permanentVhlArray", []];
+	private _permamentVehicle = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 	private _count = [];
 	{
 		_count pushBack (_x select 0);
@@ -31,7 +31,7 @@ WMS_exportMissionObjects = {
 -arrayModification = {
 	_UIDplayer = "76561197965501020";
 	_UIDplayerArrayPos = [_UIDplayer] call WMS_fnc_findUIDinVhlArray;
-	_permamentVehicle = profileNameSpace getVariable ["permanentVhlArray", []];
+	_permamentVehicle = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 	_result = [];
 	{
 		if !(typeName _x == "STRING") then {
@@ -60,7 +60,7 @@ WMS_fnc_GetOwnedPermanentVhl = {
 	_result = [];
 	_UIDplayerArrayPos = [_ownerUID] call WMS_fnc_findUIDinVhlArray; //return -1 if no result
 	if !(_UIDplayerArrayPos == -1) then {
-		_permamentVehicles = profileNameSpace getVariable ["permanentVhlArray", []];
+		_permamentVehicles = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 		{
 			if !(typeName _x == "STRING") then {
 				_result pushback [_x select 1,_x select 2]; //[Type,position]
@@ -100,11 +100,11 @@ _result = [];
 }forEach allMapMarkers;
 _result
 
-//prevent autoLanding, maybe
+//prevent autoLanding
 if (!isServer) then {
 inGameUISetEventHandler ["Action", " 
  if (_this select 3 == 'Land') then { 
-  hint 'TEXT IF NEEDED';  
+  hint 'Nope, No autoLanding xD';  
   true 
  } 
 "];
@@ -147,6 +147,16 @@ _loadoutData = [
 	[],//linkItem
 	[] //magazinesAmmo
 ];
+
+////////////////////////
+//Convert ServerProfile Variables
+private _permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []]; 
+private _TerritoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray]; 
+profileNameSpace setVariable ["WMS_territoriesArray", _TerritoriesArray];
+profileNameSpace setVariable ["permanentVhlArray", nil]; 
+profileNameSpace setVariable ["territoriesArray", nil];
+
 //////////////////////////////////
 //////////NOTE FOR LATER//////////
 private [];

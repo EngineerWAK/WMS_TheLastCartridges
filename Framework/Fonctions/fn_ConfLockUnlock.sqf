@@ -9,6 +9,9 @@ params [
 ];
 if (true) then {diag_log format ["[VEHICLES_LOCKUNLOCK]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 private _inventoryAcces = true;
-if (_status == "UNLOCKED") then {_inventoryAcces = false};
+if (_status == "UNLOCKED") then {
+	_inventoryAcces = false;
+	_vehicleObject setVariable ['WMS_howmanyrestarts', 0, true];
+	};
 _vehicleObject setVehicleLock _status;
 [_vehicleObject,_inventoryAcces] remoteExec ["lockInventory", 0];

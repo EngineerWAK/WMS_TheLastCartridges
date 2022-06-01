@@ -32,7 +32,7 @@ player addEventHandler ["Respawn",
 player addEventHandler ["GetOutMan", {
 		//params ["_unit", "_role", "_vehicle", "_turret"];
 		(_this select 0) setVariable ["PlayerLastVehicle", (_this select 2), true]; //try to use this for wasteDump trader
-		if ((_this select 2) getVariable ["permanentVHL", false] && {(((_this select 2) getVariable ["BuyerOwner", 0]) == (getPlayerUID (_this select 0)))}) then {
+		if ((_this select 2) getVariable ["WMS_permanentvhl", false] && {(((_this select 2) getVariable ["WMS_buyerowner", 0]) == (getPlayerUID (_this select 0)))}) then {
 			nul = [(_this select 2),"getout"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
 		};
 	}

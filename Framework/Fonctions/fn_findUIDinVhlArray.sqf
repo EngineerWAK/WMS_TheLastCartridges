@@ -15,7 +15,7 @@ _result = [];
 { 
 	_found = _x find _targetUID;
 	_result pushback _found;
-}forEach (profileNameSpace getVariable ["permanentVhlArray", []]);
+}forEach (profileNameSpace getVariable ["WMS_permanentVhlArray", []]);
 _result = _result find 0;
 /*
 _msgHint = format ["FindUIDInArray _result: %1", _result];

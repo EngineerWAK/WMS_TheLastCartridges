@@ -19,8 +19,8 @@ params [
 	"_type" //"friends"
 ];
 _ownerUID = getPlayerUID _caller;
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
-_vehicleID = _flag getVariable ["vehicleID", 0]; //select 0
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
+_vehicleID = _flag getVariable ["WMS_vehicleid", 0]; //select 0
 
 if (true) then {diag_log format ["[UPDATETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
 
@@ -44,6 +44,6 @@ if (_type == 'friends') then {
 	_territoryFastTravel = profileNameSpace getVariable ['territoryfasttravel', []];
 	_territoryFastTravel = _territoryFastTravel + _update; //will probably add some already existing UID since the owner is includ in "friends" but should work
 };
-profileNameSpace setVariable ["territoriesArray", _territoriesArray];
+profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
 profileNameSpace setVariable ['territoryfasttravel', _territoryFastTravel, true];
 

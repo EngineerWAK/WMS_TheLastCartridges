@@ -35,8 +35,8 @@ if (true) then {diag_log format ["[PLAYERJOINING]|WAK|TNA|WMS| player: %1, UID: 
 //saveProfileNamespace;
 
 
-_territoryFastTravel = profileNameSpace getVariable ["territoryfasttravel", []];
-_territoriesArray = profileNameSpace getVariable ["territoriesArray", []];
+_territoryFastTravel = profileNameSpace getVariable ["WMS_territoryfasttravel", []];
+_territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 _territoryOwner = [];
 _fastTraveler = [];
 if ((count _territoryFastTravel != 0) && {_targetUID in _territoryFastTravel}) then {

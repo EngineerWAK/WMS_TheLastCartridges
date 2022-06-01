@@ -45,15 +45,15 @@ _TotalScoreBonus = round (_totalPriceDump*_scoreDumpCoef);
 _totalScoreDump = _totalScoreDump+_TotalScoreBonus;
 
 //////RESELL PERMANENT VEHICLES
-_isPermanent 	= _cargo getVariable ["permanentVHL", false];
+_isPermanent 	= _cargo getVariable ["WMS_permanentvhl", false];
 _isAMS 			= _cargo getVariable ["AMS_MissionReward", false]; //not used yet
 _isRoaming 		= _cargo getVariable ["roamingAIVehicle", false];
 
 if (_isPermanent) then {
 	//Vehicles destroyed/sold, removing from player array
-	_vehicleID = _cargo getVariable ["vehicleID", -1];
-	_ownerUID = _cargo getVariable ["BuyerOwner", -1];
-	_permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []];
+	_vehicleID = _cargo getVariable ["WMS_vehicleid", -1];
+	_ownerUID = _cargo getVariable ["WMS_buyerowner", -1];
+	_permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 	_playerArrayNumber = _ownerUID call WMS_fnc_findUIDinVhlArray; //fiind the owner Array in the _permanentVhlArray
 	_vehicleArrayNumber = [_playerArrayNumber,_vehicleID]  call WMS_fnc_findVhlIDinVhlArray; //return -1 if fuckedup
 	_vehicleArray = ((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber);

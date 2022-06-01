@@ -13,7 +13,7 @@ params [
 ];
 _ownerUID = getPlayerUID _target;
 private _UIDplayerArrayPos = [_ownerUID] call WMS_fnc_findUIDinVhlArray; //return -1 if no result
-private _permamentVehicles = profileNameSpace getVariable ["permanentVhlArray", []];
+private _permamentVehicles = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 private _result = [];
 if !(_UIDplayerArrayPos == -1) then {
 	{

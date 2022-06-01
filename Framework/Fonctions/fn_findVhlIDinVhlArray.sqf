@@ -14,7 +14,7 @@ params[
 	"_arrayPosition",
 	"_vehicleID"
 ];
-_permanentVhlArray = (profileNameSpace getVariable ["permanentVhlArray", []]);
+_permanentVhlArray = (profileNameSpace getVariable ["WMS_permanentVhlArray", []]);
 _playerArray = _permanentVhlArray select _arrayPosition; //that should give ["76561197965501020",["5ce9f13f","rhsusf_m998_w_s_4dr",[[1762.26,7335.67,0.00136757]],213.934,0,[[],[],[],[]]]]
 /*
 _msgHint = format ["FindVehicleInArray _playerArray: %1", _playerArray];

@@ -23,7 +23,7 @@ _helipad = "";
 _veh = ObjNull;
 _targetUID = getPlayerUID _buyer;
 _targetOwner = (owner _buyer);
-_permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []];
+_permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 _arrayPosition = _targetUID call WMS_fnc_findUIDinVhlArray;//if (_result == -1) exitWith {"not in the array"}
 if (count _pos == 0) then {
 	_helipadList =  nearestObjects [_buyer, ["Land_HelipadEmpty_F"], 150];
@@ -50,7 +50,7 @@ if !(_arrayPosition == -1) then {
 		_playerArray = (_permanentVhlArray select _arrayPosition); //[_targetUID,["0a0a0a0a",_vehicleClassName,[0,0,0],359,0,[[],[],[],[]]]]
 	} else {
 		_permanentVhlArray pushback [_targetUID];
-		profileNameSpace setVariable ["permanentVhlArray", _permanentVhlArray];
+		profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
 		//saveProfileNameSpace;
 		_arrayPosition = _targetUID call WMS_fnc_findUIDinVhlArray;
 		_playerArray = (_permanentVhlArray select _arrayPosition);
@@ -69,10 +69,10 @@ _veh setDir (random 359);
 WMS_permanentVehicleObjects pushBack _veh;
 //_veh setOwner _buyer;
 _vehicleID = call WMS_fnc_generateHexaID;
-_veh setVariable ["BuyerOwner", _targetUID, true];
+_veh setVariable ["WMS_buyerowner", _targetUID, true];
 _veh setVariable ["WMS_friends", [_targetUID], true];
-_veh setVariable ["vehicleID", _vehicleID, true];
-_veh setVariable ["permanentVHL", true, true];
+_veh setVariable ["WMS_vehicleid", _vehicleID, true];
+_veh setVariable ["WMS_permanentvhl", true, true];
 _veh setVariable ["WMS_howmanyrestarts", 0];
 _vehicleID_inventory = _vehicleID + "_inventory";
 _veh setVariable ["WMS_vehicleID_inventory", _vehicleID_inventory, true];
@@ -110,7 +110,7 @@ playSound3D [getMissionPath "Custom\Ogg\magicBus.ogg", _veh, false, position _ve
 //_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],[[],[],[],[]]]; //NEW [vID,classename,position,direction,damage,fuel,[friends],inventory]
 _playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],_vehicleID_inventory,0]; //NEW [vID,classename,position,direction,damage,fuel,[friends],inventory,_howmanyrestarts]
 _permanentVhlArray set [_arrayPosition, _playerArray];
-profileNameSpace setVariable ["permanentVhlArray", _permanentVhlArray];
+profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
 profileNameSpace setVariable [_vehicleID_inventory, [[],[],[],[]]];
 //saveProfileNameSpace;
 

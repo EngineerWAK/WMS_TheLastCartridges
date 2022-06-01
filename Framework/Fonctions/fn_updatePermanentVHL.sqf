@@ -21,13 +21,13 @@ params [
 //_updateType = _this select 1; //"lastUpdate", 'lockunlock', 'vehiclecrew', "destroyed"
 if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 
-_vehicleID = _vehicleObject getVariable ["vehicleID", -1];
-_ownerUID = _vehicleObject getVariable ["BuyerOwner", -1];
+_vehicleID 			= _vehicleObject getVariable ["WMS_vehicleid", -1];
+_ownerUID 			= _vehicleObject getVariable ["WMS_buyerowner", -1];
+_friends 			= _vehicleObject getVariable ["WMS_friends", []];
+_isPermanent 		= _vehicleObject getVariable ["WMS_permanentvhl", false];
+_howmanyrestarts 	= _vehicleObject getVariable ["WMS_howmanyrestarts", 0];
 _vehicleID_inventory = _vehicleObject getVariable ["WMS_vehicleID_inventory", ""];
-_friends = _vehicleObject getVariable ["WMS_friends", []];
-_isPermanent = _vehicleObject getVariable ["permanentVHL", false];
-_howmanyrestarts = _vehicleObject getVariable ["WMS_howmanyrestarts", 0];
-_vehicleInventory = profileNameSpace getVariable [_vehicleID_inventory, [[],[],[],[]]];
+_vehicleInventory 	= profileNameSpace getVariable [_vehicleID_inventory, [[],[],[],[]]];
 
 if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: _this: %1, Owner: %2, _vehicleID %3, %4",_vehicleObject,  _ownerUID, _vehicleID,_isPermanent]};
 /*
@@ -39,7 +39,7 @@ if !(_isPermanent) exitWith {
 	//Diag_log error message blablabla
 	_vehicleObject setDamage 1; //that would be funny
 };
-_permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []];
+_permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 _playerArrayNumber = _ownerUID call WMS_fnc_findUIDinVhlArray; //find the owner Array in the _permanentVhlArray
 _vehicleArrayNumber = [_playerArrayNumber,_vehicleID]  call WMS_fnc_findVhlIDinVhlArray; //return -1 if fuckedup
 
@@ -122,5 +122,5 @@ if (_updateType == 'lockunlock' || _updateType == 'vehiclecrew' || _updateType =
 profileNameSpace setVariable [_vehicleID_inventory,[_newWeap,_newAmmo,_newPack,_newItem]];
 
 };
-profileNameSpace setVariable ["permanentVhlArray", _permanentVhlArray];
+profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
 //saveProfileNamespace;
