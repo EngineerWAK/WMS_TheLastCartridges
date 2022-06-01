@@ -82,7 +82,7 @@ player createDiarySubject ["Main","TNA Briefing"];
 	
 	player createDiaryRecord ["Main",
 		[
-			"Usefull Items",
+			"Useful Items",
 			"
 			<br/>
 			'CSAT ID card' v1 + v2 + v3 + v4 + v5 (in your inventory)<br/>
@@ -155,7 +155,7 @@ player createDiarySubject ["Main","TNA Briefing"];
 			Welcome!<br/>
 			The community is running differents Arma servers, usualy 3 of them,<br/>
 			Most of TNA servers are PVE and we try to help each other.<br/>
-			You can FastTravel from the spawn point if you have a teritorry and you spawn as 'Bambi', the accuracy of the FastTravel will depend of level of the Territory, 100 to 800m radius.<br/>
+			You can FastTravel from the spawn point if you have a territory and you spawn as 'Bambi', the accuracy of the FastTravel will depend of level of the Territory, 100 to 800m radius.<br/>
 			Choppers are flying with ADVANCED FLIGHT MODEL, there is nothing you can do to change that, training is the best option (NDLR: I can help. WAKeupneo) or, join the Infantry Program*.<br/>
 			<br/>
 			AI:<br/>
