@@ -44,15 +44,24 @@ if (hasinterface) then {
     ///////////Artillery computer
     enableEngineArtillery false;
     //setCurrentChannel 3; //Group Channel DO NOT WORK HERE
-    //Fix The Disapearing Chat//
-    _action0 = ["FixMyChat","Fix My Chat","",{showChat true},{true}] call ace_interact_menu_fnc_createAction;
+
+    ["WMS 3Dmarker", "UserAction17", "Place 3D Marker", {[]call WMS_fnc_client_3Dmarkers}, {}, [0x10A, [false, false, false]]] call CBA_fnc_addKeybind;//Custom user action 17
+    ["WMS 3Dmarker", "UserAction18", "Place Group 3D Marker", {[[],true,true]call WMS_fnc_client_3Dmarkers}, {}, [0x10B, [false, false, false]]] call CBA_fnc_addKeybind;//Custom user action 18
+    
+    /*_action0 = ["3DMarker","3D Marker","",{[]call WMS_fnc_client_3Dmarkers},{true}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action0] call ace_interact_menu_fnc_addActionToObject;
-
-    _action1 = ["vhlInvSize","Inventory Size","",{hint format ["cargo size is %1",(getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad"))]},{(vehicle player) != player}] call ace_interact_menu_fnc_createAction;
-    [player, 1, ["ACE_SelfActions"], _action1] call ace_interact_menu_fnc_addActionToObject;
-
-    _action2 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
+	
+    _action1 = ["Group3DMarker","Group 3D Marker","",{[[],true,true]call WMS_fnc_client_3Dmarkers},{true}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action1] call ace_interact_menu_fnc_addActionToObject;*/
+    
+    _action2 = ["FixMyChat","Fix My Chat","",{showChat true},{true}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action2] call ace_interact_menu_fnc_addActionToObject;
+
+    _action3 = ["vhlInvSize","Inventory Size","",{hint format ["cargo size is %1",(getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad"))]},{(vehicle player) != player}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action3] call ace_interact_menu_fnc_addActionToObject;
+
+    _action4 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action4] call ace_interact_menu_fnc_addActionToObject;
     
     /*//DFO Self Action:
 	private _actionDFO = ["RequestDFOmission","Request DFO Mission","",{

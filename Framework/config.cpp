@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.58_2022MAY31_GitHub"; //Permanent vehicles restart counter
+	name = "v1.62_2022JUN03_GitHub"; //3D Markers
 };
 
 class CfgBuildingsCategories

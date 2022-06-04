@@ -141,7 +141,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_veh,
 	[
-		"<t size='1' color='#4b48f9'>Process Cargo Dump</t>",// #035c10"
+		"<t size='1' color='#4b48f9'>Sell Inventory</t>",// #035c10"
 		"
 			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
 			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump'];

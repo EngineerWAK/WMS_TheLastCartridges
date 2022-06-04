@@ -50,7 +50,7 @@ _container addAction [
 ];
 
 _container addAction [
-	"<t size='0.95' color='#3d74ff'>Process Cargo Dump</t>", { 
+	"<t size='1' color='#3d74ff'>Sell Inventory</t>", { 
 		if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
 			[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_processCargoDump"]; 
 		} else { 
@@ -68,7 +68,7 @@ _container addAction [
 ];
  
 _container addAction [
-	"<t size='0.9' color='#528ffa'>Buy Ammo</t>", {  
+	"<t size='1' color='#26e600'>Buy Ammo</t>", {  
 		[(_this select 1), (_this select 0), "random"] call WMS_fnc_buyAmmoOnBox;  
 	}, 
 	nil, 
