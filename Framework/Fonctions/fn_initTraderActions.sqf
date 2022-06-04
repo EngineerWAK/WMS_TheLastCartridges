@@ -77,7 +77,7 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 			true,
 			true,
 			"",
-			//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+			//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 			"",
 			5
 		]

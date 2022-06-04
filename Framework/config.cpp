@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.62_2022JUN03_GitHub"; //3D Markers
+	name = "v1.621_2022JUN04_GitHub"; //3D Markers
 };
 
 class CfgBuildingsCategories

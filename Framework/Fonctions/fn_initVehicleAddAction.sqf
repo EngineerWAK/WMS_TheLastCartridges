@@ -46,7 +46,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		true,
 		true,
 		"",
-		//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"((alive _target) && (speed _this <= 10) && {(getplayerUID _this) in (_target getVariable ['WMS_friends', [0]])})",
 		10
 	]
@@ -100,7 +100,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		true,
 		true,
 		"",
-		"(alive _target) && (stance player == 'CROUCH') && {(vehicle _this == _this)} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))};",
+		"(alive _target) && (stance player == 'CROUCH') && {(vehicle _this == _this)} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))};",
 		5
 	]
 ] remoteExec [
@@ -130,7 +130,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		true,
 		true,
 		"",
-		"(alive _target) && {(vehicle _this == _this)} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))};",
+		"(alive _target) && {(vehicle _this == _this)} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))};",
 		5
 	]
 ] remoteExec [
@@ -154,7 +154,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		true,
 		true,
 		"",
-		"(alive _target) && {(vehicle _this == _this)} && {(stance player == 'CROUCH')} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))};",
+		"(alive _target) && {(vehicle _this == _this)} && {(stance player == 'CROUCH')} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))};",
 		5
 	]
 ] remoteExec [

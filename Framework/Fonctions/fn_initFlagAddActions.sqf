@@ -36,7 +36,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		"",
 		"
 		(alive _target) &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",
 		5
@@ -74,7 +74,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		true,
 		true,
 		"",
-		"(alive _target) && {(vehicle _this == _this)} && {((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} && {((_target getVariable ['exileterritorylevel', 0]) > 1)};",
+		"(alive _target) && {(vehicle _this == _this)} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} && {((_target getVariable ['exileterritorylevel', 0]) > 1)};",
 		5
 	]
 ] remoteExec [
@@ -101,7 +101,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",//condition: _target = object, _this = caller
 		5
@@ -131,7 +131,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		"
 		(alive _target) &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 6)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 20000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -160,7 +160,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		"
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",//condition: _target = object, _this = caller
 		5
@@ -187,7 +187,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		"",
 		"
 		(alive _target) &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",//condition: _target = object, _this = caller
 		2

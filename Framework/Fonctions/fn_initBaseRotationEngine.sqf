@@ -38,7 +38,7 @@ private _dir = getDir _flag;
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",
 		5
@@ -70,7 +70,7 @@ private _dir = getDir _flag;
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",
 		5
@@ -102,7 +102,7 @@ private _dir = getDir _flag;
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",
 		5
@@ -134,7 +134,7 @@ private _dir = getDir _flag;
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",
 		5
@@ -166,7 +166,7 @@ private _dir = getDir _flag;
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",
 		5
@@ -198,7 +198,7 @@ private _dir = getDir _flag;
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{(vehicle _this == _this)};
 		",
 		5
@@ -230,7 +230,7 @@ private _dir = getDir _flag;
 		"
 		(alive _target) &&
 		{(_target getVariable ['_allowRotation', false])} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 2500)} &&
 		{(vehicle _this == _this)};
 		",

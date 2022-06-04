@@ -1504,7 +1504,7 @@ _compoRefPoint setDir _dirFlag;
 				true,
 				true,
 				"",
-				//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+				//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 				"('ACE_personalAidKit' in (items _this)) &&
 				{(time >= (3600 + (_target getVariable ['WMS_resetFatigueTimer', time])))} && 
 				{(vehicle _this == _this)}",
@@ -1533,7 +1533,7 @@ _compoRefPoint setDir _dirFlag;
 				true,
 				true,
 				"",
-				//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+				//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 				"(_this getVariable ['playerInTerritory', false])",
 				5
 			]

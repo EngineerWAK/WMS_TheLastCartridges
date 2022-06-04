@@ -53,7 +53,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 0)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 3000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -85,7 +85,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 0)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 5000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -118,7 +118,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 5000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -150,7 +150,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 8000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -182,7 +182,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 5000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -214,7 +214,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 8000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -246,7 +246,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 5000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -278,7 +278,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 8000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -311,7 +311,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 10000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -343,7 +343,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -376,7 +376,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 10000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -408,7 +408,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -441,7 +441,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 10000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -473,7 +473,7 @@ switch (tolower _layout) do
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -505,7 +505,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -536,7 +536,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 20000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -568,7 +568,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -599,7 +599,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 20000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -631,7 +631,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -662,7 +662,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 20000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -694,7 +694,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -725,7 +725,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 20000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -757,7 +757,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 20000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -788,7 +788,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 25000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -820,7 +820,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 25000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -851,7 +851,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -883,7 +883,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 25000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -914,7 +914,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -946,7 +946,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -977,7 +977,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 35000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1009,7 +1009,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1040,7 +1040,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 35000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1072,7 +1072,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1103,7 +1103,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 35000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1136,7 +1136,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1167,7 +1167,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 35000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1200,7 +1200,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 100000)} &&
 		{(vehicle _this == _this)};
 		",
@@ -1231,7 +1231,7 @@ switch (tolower _layout) do
 		(alive _target) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
-		{((_target getVariable ['BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
 		{((_this getVariable ['exileMoney', 0]) > 125000)} &&
 		{(vehicle _this == _this)};
 		",

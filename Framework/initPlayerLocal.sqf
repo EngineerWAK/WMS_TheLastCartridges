@@ -93,16 +93,9 @@ if (hasinterface) then {
     _markerSystem setMarkerColorLocal "ColorKhaki";
     _markerSystem setMarkerTextLocal (format ["The Last Cartridges %1 ", getText(missionConfigFile >> "CfgSystemVersion" >> "name")]);
     ////////// temporary markers on permanent vehicles
-    //[] execVM "Custom\MarkerOnPersonalVhls.sqf";
     [player] remoteExec ["WMS_fnc_getOwnedPermanentVhls", 2]; //to the server
     //////////Bypass the "faction only" bulshit //////////
     [] execVM "Custom\AllUniforms.sqf";
-
-    ////////// Parachute / Halo //////////
-    //[] execVM "Custom\HaloParachute\init.sqf";
-
-    /////////// Max TerrainGrid //////////
-    //[] execVM "Custom\TerrainGrid\TerrainGrid.sqf";
 
     //////////Briefing//////////
     _null = [] execVM "Custom\Briefing\briefing.sqf"; // Briefing and Rules

@@ -27,7 +27,7 @@ _priceBig	 	= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money" >> "price
 */
 
 _container addAction [
-	"<t size='0.9' color='#4bff1a'>Claim Reward</t>", {
+	"<t size='1' color='#4bff1a'>Claim Reward</t>", {
 		[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_claimReward"];
 		{player removeitem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
 	}, 
@@ -104,7 +104,7 @@ _container addAction [
 		true,
 		true,
 		"",
-		//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"(_this getVariable ['playerInTraderZone', false])",
 		5
 	]
@@ -136,7 +136,7 @@ _container addAction [
 		true,
 		true,
 		"",
-		//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"(_this getVariable ['playerInTraderZone', false])",
 		5
 	]
@@ -168,7 +168,7 @@ _container addAction [
 		true,
 		true,
 		"",
-		//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"(_this getVariable ['playerInTraderZone', false])",
 		5
 	]
@@ -200,7 +200,7 @@ _container addAction [
 		true,
 		true,
 		"",
-		//"((getplayerUID _this) == (_target getVariable ['BuyerOwner', 0]) && (vehicle _this == _this))",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"(_this getVariable ['playerInTraderZone', false])",
 		5
 	]
