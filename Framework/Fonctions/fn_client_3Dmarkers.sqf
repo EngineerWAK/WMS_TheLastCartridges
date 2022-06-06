@@ -21,7 +21,8 @@ params [
 	["_pos", []],
 	["_grp", false],
 	["_remoteEx",false],
-	["_PlayerName",(name player)]
+	["_PlayerName",(name player)],
+	["_color", "orange"]
 ];
 if (true) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_3Dmarkers _this = %1",_this]};
 if (_grp) then {
@@ -46,12 +47,41 @@ if (_grp) then {
 	};
 	if (count WMS_3Dmkr_pos_grp == 0) exitWith {};
 	WMS_3Dmkr_name = _PlayerName;
-	WMS_3Dmkr_ID_grp = addMissionEventHandler ["Draw3D", {
-		drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [[0.85,0.4,0,1],[0.85,0.4,0,1]], ASLToAGL WMS_3Dmkr_pos_grp, 1, 1, 0,WMS_3Dmkr_name]; //Orange
-	}];
+	switch (toLower _color) do {
+		case "orange": {
+			WMS_3Dmkr_ID_grp = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [[0.85,0.4,0,1],[0.85,0.4,0,1]], ASLToAGL WMS_3Dmkr_pos_grp, 1, 1, 0,WMS_3Dmkr_name, 1, 0.05, "TahomaB"];
+			}];
+		};
+		case "blue": {
+			WMS_3Dmkr_ID_grp = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [[0,0.3,0.6,1],[0,0.3,0.6,1]], ASLToAGL WMS_3Dmkr_pos_grp, 1, 1, 0,WMS_3Dmkr_name, 1, 0.05, "TahomaB"];
+			}];
+		};
+		case "green": {
+			WMS_3Dmkr_ID_grp = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [[0,0.5,0,1],[0,0.5,0,1]], ASLToAGL WMS_3Dmkr_pos_grp, 1, 1, 0,WMS_3Dmkr_name, 1, 0.05, "TahomaB"];
+			}];
+		};
+		case "red": {
+			WMS_3Dmkr_ID_grp = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [[0.5,0,0,1],[0.5,0,0,1]], ASLToAGL WMS_3Dmkr_pos_grp, 1, 1, 0,WMS_3Dmkr_name, 1, 0.05, "TahomaB"];
+			}];
+		};
+		case "yellow": {
+			WMS_3Dmkr_ID_grp = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [[0.85,0.85,0,1],[0.85,0.85,0,1]], ASLToAGL WMS_3Dmkr_pos_grp, 1, 1, 0,WMS_3Dmkr_name, 1, 0.05, "TahomaB"];
+			}];
+		};
+		case "khaki": {
+			WMS_3Dmkr_ID_grp = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [[0.5,0.6,0.4,1],[0.5,0.6,0.4,1]], ASLToAGL WMS_3Dmkr_pos_grp, 1, 1, 0,WMS_3Dmkr_name, 1, 0.05, "TahomaB"];
+			}];
+		};
+	};
 	if (_remoteEx) then {
 		{
-			if (_x != player) then {[WMS_3Dmkr_pos_grp,true,false,_PlayerName]remoteExec ["WMS_fnc_client_3Dmarkers",owner _x];};
+			if (_x != player) then {[WMS_3Dmkr_pos_grp,true,false,_PlayerName,_color]remoteExec ["WMS_fnc_client_3Dmarkers",owner _x];};
 		}forEach Units (group player);
 	};
 } else {
@@ -75,7 +105,36 @@ if (_grp) then {
 		WMS_3Dmkr_pos = _pos;
 	};
 	if (count WMS_3Dmkr_pos == 0) exitWith {};
-	WMS_3Dmkr_ID = addMissionEventHandler ["Draw3D", {
-		drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [0,0,1,1], ASLToAGL WMS_3Dmkr_pos, 1, 1, 0]; //Blue
-	}];
+	switch (toLower _color) do {
+		case "orange": {
+			WMS_3Dmkr_ID = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [0.85,0.4,0,1], ASLToAGL WMS_3Dmkr_pos, 1, 1, 0];
+			}];
+		};
+		case "blue": {
+			WMS_3Dmkr_ID = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [0,0.3,0.6,1], ASLToAGL WMS_3Dmkr_pos, 1, 1, 0];
+			}];
+		};
+		case "green": {
+			WMS_3Dmkr_ID = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [0,0.5,0,1], ASLToAGL WMS_3Dmkr_pos, 1, 1, 0];
+			}];
+		};
+		case "red": {
+			WMS_3Dmkr_ID = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [0.5,0,0,1], ASLToAGL WMS_3Dmkr_pos, 1, 1, 0];
+			}];
+		};
+		case "yellow": {
+			WMS_3Dmkr_ID = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [0.85,0.85,0,1], ASLToAGL WMS_3Dmkr_pos, 1, 1, 0];
+			}];
+		};
+		case "khaki": {
+			WMS_3Dmkr_ID = addMissionEventHandler ["Draw3D", {
+				drawIcon3D [getMissionPath "Custom\3Dmarkers\WMS_3Dmarker.paa", [0.5,0.6,0.4,1], ASLToAGL WMS_3Dmkr_pos, 1, 1, 0];
+			}];
+		};
+	};
 };

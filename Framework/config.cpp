@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.621_2022JUN04_GitHub"; //3D Markers
+	name = "v1.623_2022JUN06_GitHub"; //CIVILIAN count rpt
 };
 
 class CfgBuildingsCategories

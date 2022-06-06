@@ -241,3 +241,15 @@ _boat allowDamage false;
 	_part attachTo [_boat,[_x select 1 select 0,_x select 1 select 1,_x select 1 select 2]];
 }forEach _shipParts;
 
+////////////////////////////////
+//3DMarker from the map
+openMap true;
+_this spawn {
+	uisleep 2;
+	onMapSingleClick { 
+		onMapSingleClick {};
+		[(AGLtoASL _pos)]call WMS_fnc_client_3Dmarkers;
+		openMap false;
+		true
+	};
+};

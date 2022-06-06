@@ -78,6 +78,6 @@ while {true} do
 			_permanentVehiclesCount = _permanentVehiclesCount + (count _x)-1;
 		}forEach _permanentVhlArray;
 
-		if (true) then {diag_log format ["[240SEC_SERVER_LOOP]|WAK|TNA|WMS|UPDATE: FPS: %1, Players: %2, NPC: %3, Permanent Vehicles: %4, Territories: %5", (diag_fps), (count allplayers), (EAST countSide allUnits), _permanentVehiclesCount, (count _TerritoriesArray)];};
+		if (true) then {diag_log format ["[240SEC_SERVER_LOOP]|WAK|TNA|WMS|UPDATE: FPS: %1, Players: %2, OPFOR: %3, CIV: %4, Permanent Vehicles: %5, Territories: %6", (diag_fps), (count allplayers), (EAST countSide allUnits), (CIVILIAN countSide allUnits), _permanentVehiclesCount, (count _TerritoriesArray)];};
 		uisleep 240;
     };
