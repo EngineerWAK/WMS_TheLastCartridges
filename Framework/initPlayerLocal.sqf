@@ -44,33 +44,6 @@ if (hasinterface) then {
     ///////////Artillery computer
     enableEngineArtillery false;
     //setCurrentChannel 3; //Group Channel DO NOT WORK HERE
-
-    ["WMS 3Dmarker", "UserAction15", "3D Marker", {[nil,false,false,nil,"blue"]call WMS_fnc_client_3Dmarkers}, {}, [0x108, [false, false, false]]] call CBA_fnc_addKeybind;//Custom user action 15
-    ["WMS 3Dmarker", "UserAction16", "Group 3D Marker", {[[],true,true,nil,"green"]call WMS_fnc_client_3Dmarkers}, {}, [0x109, [false, false, false]]] call CBA_fnc_addKeybind;//Custom user action 16
-    ["WMS 3Dmarker", "UserAction17", "Map 3D Marker", {
-        openMap true;
-        _this spawn {
-	        uisleep 2;
-	        onMapSingleClick { 
-		        onMapSingleClick {};
-		        [(AGLtoASL _pos),false,false,nil,"orange"]call WMS_fnc_client_3Dmarkers;
-		        openMap false;
-		        true
-	        };
-        };
-    }, {}, [0x10A, [false, false, false]]] call CBA_fnc_addKeybind;//Custom user action 17
-    ["WMS 3Dmarker", "UserAction18", "Map Group 3D Marker", {
-        openMap true;
-        _this spawn {
-	        uisleep 2;
-	        onMapSingleClick { 
-		        onMapSingleClick {};
-		        [(AGLtoASL _pos),true,true,nil,"khaki"]call WMS_fnc_client_3Dmarkers;
-		        openMap false;
-		        true
-	        };
-        };
-    }, {}, [0x10B, [false, false, false]]] call CBA_fnc_addKeybind;//Custom user action 18
         
     _action2 = ["FixMyChat","Fix My Chat","",{showChat true},{true}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action2] call ace_interact_menu_fnc_addActionToObject;

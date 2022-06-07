@@ -11,7 +11,13 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.623_2022JUN06_GitHub"; //CIVILIAN count rpt
+	name = "v1.624_2022JUN07_GitHub"; //CBA stuff for 3Dmarkers
+};
+
+class Extended_PreInit_EventHandlers {
+    class My_pre_init_event {
+        init = "call compile preprocessFileLineNumbers 'XEH_preInit.sqf'";
+    };
 };
 
 class CfgBuildingsCategories
