@@ -43,6 +43,11 @@ if (hasinterface) then {
     "];
     ///////////Artillery computer
     enableEngineArtillery false;
+
+    //Dynamic camo
+    //[]spawn WMS_fnc_client_dynamicCamo;
+    [] execVM "Fonctions\WMS_client_dynamicCamo.sqf";
+
     //setCurrentChannel 3; //Group Channel DO NOT WORK HERE
         
     _action2 = ["FixMyChat","Fix My Chat","",{showChat true},{true}] call ace_interact_menu_fnc_createAction;

@@ -34,7 +34,29 @@ private _action2 = ["UnCoverHatchet", "UnCover", "", {
 ["vtx_H60_base", 0, ["ACE_MainActions"], _action2, true] call ace_interact_menu_fnc_addActionToClass;
 
 //_vehicleObject isKindOf "rhs_a3t72tank_base" ||_vehicleObject isKindOf "MBT_01_base_F" ||_vehicleObject isKindOf "RHS_M2A2_Base"
-//Cover T-xx tanks with camonet
+//Cover T-80 tanks with camonet
+private _action3 = ["CoverHatchet", "Cover Tank", "", {
+		[(_this select 0)]remoteExec ["WMS_fnc_HatchetCover", 2]
+	},{
+		(_this select 0)getVariable ["WMS_HatchetCover", true] && 
+		{!(isEngineOn (_this select 0))} && 
+		{(speed (_this select 0)) == 0} &&
+		{(owner (_this select 0)) == (owner (_this select 1))} &&
+		{locked (_this select 0) == 0}
+	}
+	] call ace_interact_menu_fnc_createAction;
+["rhs_t80b", 0, ["ACE_MainActions"], _action3, true] call ace_interact_menu_fnc_addActionToClass;
+//UnCover T-80 tanks
+private _action4 = ["UnCoverHatchet", "UnCover", "", {
+		[(_this select 0)]remoteExec ["WMS_fnc_HatchetUnCover", 2]
+	},{
+		!((_this select 0)getVariable ["WMS_HatchetCover", true]) &&
+		{(owner (_this select 0)) == (owner (_this select 1))} &&
+		{locked (_this select 0) == 0}
+	}
+	] call ace_interact_menu_fnc_createAction;
+["rhs_t80b", 0, ["ACE_MainActions"], _action4, true] call ace_interact_menu_fnc_addActionToClass;
+//Cover T-72/90 tanks with camonet
 private _action3 = ["CoverHatchet", "Cover Tank", "", {
 		[(_this select 0)]remoteExec ["WMS_fnc_HatchetCover", 2]
 	},{
@@ -46,7 +68,7 @@ private _action3 = ["CoverHatchet", "Cover Tank", "", {
 	}
 	] call ace_interact_menu_fnc_createAction;
 ["rhs_a3t72tank_base", 0, ["ACE_MainActions"], _action3, true] call ace_interact_menu_fnc_addActionToClass;
-//UnCover T-xx tanks
+//UnCover T-72/90 tanks
 private _action4 = ["UnCoverHatchet", "UnCover", "", {
 		[(_this select 0)]remoteExec ["WMS_fnc_HatchetUnCover", 2]
 	},{

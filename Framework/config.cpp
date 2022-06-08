@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.624_2022JUN07_GitHub"; //CBA stuff for 3Dmarkers
+	name = "v1.626_2022JUN08_GitHub"; //Dynamic Camouflage
 };
 
 class Extended_PreInit_EventHandlers {
