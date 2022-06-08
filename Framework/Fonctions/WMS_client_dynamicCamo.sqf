@@ -21,8 +21,12 @@ later:
 -fire a weapon, suppressed or not
 */
 WMS_DynamicCamoDebug = false;
+WMS_MissionDebug = missionNameSpace getVariable ["WMS_MissionDebug",false];
+if (true) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo launched client side %1", time];};
 []spawn {
-while {alive player} do {
+while {true} do {
+	private _timer = 15;
+	if (WMS_DynamicCamoDebug) then {_timer = 3}else {_timer = 15};
 	if (vehicle player == player) then {
     	_sounds = player getVariable ["WMS_CamoCoef",[1,0.25]];
     	_camos = player getVariable ["WMS_AudiCoef",[1,0.25]];
@@ -86,15 +90,16 @@ while {alive player} do {
 		if (_camo < _camoMin) then {_camo = _camoMin};
 		player setUnitTrait ["audibleCoef",_sound];
 		player setUnitTrait ["camouflageCoef",_camo];
-		if(WMS_DynamicCamoDebug) then {hintSilent format ["Sound %1, Camo %2", _sound, _camo]};
+		if(WMS_DynamicCamoDebug) then {
+			hintSilent format ["Sound %1, Camo %2", _sound, _camo];
+			diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo Debug= %5, timer= %1, player= %2, sound= %3, camo= %4",_timer,player, _sound, _camo, WMS_DynamicCamoDebug];
+			}else{
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo Debug= %5, timer= %1, player= %2, sound= %3, camo= %4",_timer,player, _sound, _camo, WMS_DynamicCamoDebug]};
+			};
 	}else {
 		player setUnitTrait ["audibleCoef",1];
 		player setUnitTrait ["camouflageCoef",1];
 	};
-	if(WMS_DynamicCamoDebug) then {
-		uisleep 3;
-	}else{
-		uisleep 15;
-	};
+	uisleep _timer;
 };
 };
