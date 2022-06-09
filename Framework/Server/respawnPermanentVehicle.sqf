@@ -219,5 +219,161 @@ _howmanyrestarts = 0;
 }forEach _permanentVhlArray; //Each array is a playerUID array with vehicle(s) array(s) inside
 
 /*
-getNumber (configfile >> "CfgVehicles" >> typeOf(vehicle player) >> "maximumLoad");
+//Then respawn player Stash
+WMS_StashObjects = []; //will be used for the last update off all permanent vehicle before restart
+_stashArray = profileNameSpace getVariable ["WMS_stashArray", []];
+_stashplayerArray = [];
+_stashClassName = "";
+//_noRespawnItems = getArray(missionConfigFile >> "CfgBlackListedItems" >> "items");
+//_vehiclesManagement = getArray(missionConfigFile >> "CfgOfficeTrader" >> "vehiclesManagement"); //select 0
+_howmanyrestarts = 0;
+{
+	_stashplayerArray = _x;
+	_targetUID = 0;
+	{ 
+		if ((count _x) == 17) then { //playerUID is a 17 digit number, the vehicles array are 6
+			_targetUID = _x;
+		} else {
+			//_vehiclesArray pushBack _x; //as test
+			//here goes the spawn and init of the vehicle
+			_vehicleID = _x select 0;
+			_vehicleClassName = _x select 1;
+			_lastPos = _x select 2; //need to change this to _x select 2 (array in the array at vehicle first creation)
+			if (_lastPos select 2 < 0.25 || _lastPos select 2 > 50) then {_lastPos set [2,0.25]};
+			_direction = _x select 3;
+			_damage = _x select 4;
+			_fuel = _x select 5;
+			_friends = _x select 6;
+			//_vehicleID_inventory = _x select 7;
+			_howmanyrestarts = _x select 8; //need to be converted before
+			_vehicleID_inventory = _vehicleID + "_inventory";
+			//if (typeName (_x select 7) == "SCALAR") then {_x set [7, _vehicleID_inventory]}; //convert the Old inventory system to the new one
+			_vehicleInventory = profileNameSpace getVariable [_vehicleID_inventory, [[],[],[],[]]];
+			//NEW System
+			_weap = _vehicleInventory select 0;
+			_ammo = _vehicleInventory select 1;
+			_backpack = _vehicleInventory select 2;
+			_item = _vehicleInventory select 3;
+			//NEW System END
+			_veh = createVehicle [_vehicleClassName, [0,0,6000], [], 0, "CAN_COLLIDE"];
+			WMS_permanentVehicleObjects pushBack _veh;
+			_veh allowDamage false;
+			_veh setDir _direction;
+			_veh setpos _lastPos;
+			//_veh setDamage _damage;
+			_veh setVariable ["WMS_startDamage", _damage, true];
+			_veh setfuel _fuel;
+			_veh setVariable ["WMS_buyerowner", _targetUID, true];
+			_veh setVariable ["WMS_friends", _friends, true];
+			_veh setVariable ["WMS_vehicleid", _vehicleID, true];
+			_veh setVariable ["WMS_howmanyrestarts", _howmanyrestarts, true];
+			_vehicleID_inventory = _vehicleID + "_inventory";
+			_veh setVariable ["WMS_vehicleID_inventory", _vehicleID_inventory, true];
+			_veh setVariable ["WMS_permanentvhl", true, true];
+			_veh addMPEventHandler ["MPkilled", {
+					[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
+					if (true) then {
+						diag_log "|WAK|TNA|WMS|";
+						diag_log "|WAK|TNA|WMS|";
+						diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];
+						diag_log "|WAK|TNA|WMS|";
+						diag_log "|WAK|TNA|WMS|";
+						};
+				}
+			];//params ["_unit", "_killer", "_instigator", "_useEffects"];
+
+			clearMagazineCargoGlobal _veh; 
+			clearWeaponCargoGlobal _veh; 
+			clearItemCargoGlobal _veh; 
+			clearBackpackCargoGlobal _veh;
+
+			{
+				if !(_x in _noRespawnItems) then {
+					_veh addWeaponCargoGlobal [_x, 1];
+				};
+			}foreach _weap;
+			{
+				if !(_x in _noRespawnItems) then {
+					_veh addMagazineCargoGlobal [_x, 1];
+				};
+			}foreach _ammo;
+			{
+				if !(_x in _noRespawnItems) then {
+					_veh addBackpackCargoGlobal [_x, 1];
+				};
+			}foreach _backpack;
+			{
+				if !(_x in _noRespawnItems) then {
+					_veh addItemCargoGlobal [_x, 1];
+				};
+			}foreach _item;
+
+			[_veh,0, true]call WMS_fnc_initVehicleAddAction;
+
+			_veh setVehicleLock "LOCKED";
+			_veh lockInventory true; //that fucking lock "localy" on the server, not client side
+			[_veh, true] remoteExec ["lockInventory", 0, true]; //should execute the lock localy on every players connecting after the vehicle creation //YES!
+			//_veh allowDamage true; //at the unlock so the vehicle is protected from the retarded AI shooting at empty vehicles
+			
+			_forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
+			if ((typeOf _veh) in _forceAmmoFacilities) then {
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];};
+				_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
+			};
+
+			_forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
+			if ((typeOf _veh) in _forceRepairFacilities) then {
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];};
+				_veh setVariable ["ACE_isRepairVehicle", true, true];
+			};
+			//Force Medical Facility
+			_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
+			if ((typeOf _veh) in _forceMedicalFacilities) then {
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Respawning %1 as Medical Facility", _veh];};
+				_veh setVariable ["ace_medical_isMedicalFacility", true, true];
+				_veh setVariable ["WMS_resetFatigueTimer", time, true];
+				//[player, nil] call ace_advanced_fatigue_fnc_handlePlayerChanged; //addAction "Reset Fatigue" for owner;
+				[ //params ["_target", "_caller", "_actionId", "_arguments"];
+					_veh,
+					[
+						"<t size='1' color='#528ffa'>Reset ACE Fatigue</t>",
+						"
+						[(_this select 1), nil] call ace_advanced_fatigue_fnc_handlePlayerChanged;
+						(_this select 0) setVariable ['WMS_resetFatigueTimer', time, true];
+						",
+						[], //argument accessible in the script (_this select 3)
+						1,
+						true,
+						true,
+						"",
+						//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
+						"('ACE_personalAidKit' in (items _this)) &&
+						{(time >= (3600 + (_target getVariable ['WMS_resetFatigueTimer', time])))} && 
+						{(vehicle _this == _this)}",
+						5
+					]
+				] remoteExec [
+					"addAction",
+					0, //0 for all players //2 server only //-2 everyone but the server
+					true //JIP
+				];
+			};
+			if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1), %2/%3 restarts", _vehicleID, _howmanyrestarts,(_vehiclesManagement select 0)];};
+			if (_howmanyrestarts >= (_vehiclesManagement select 0)) then {
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old %2 restarts, looking for a territory around", _vehicleID, _howmanyrestarts];};
+				if ((count (nearestObjects [_veh, ["rhsgref_serhat_radar"], 100])) == 0) then {
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old, no territory around", _vehicleID];};
+					_veh allowDamage true;
+					_veh setDamage 1;
+				};
+			}else{
+				//////////CUSTOM VEHICLES//////////
+				[_veh] call WMS_fnc_vehicleCustomize;
+				//////////CUSTOM VEHICLES END//////////
+			};//destruction of the vehicle will start the cleaning process
+			//if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
+		};
+	}forEach _stashplayerArray; 
+}forEach _permanentVhlArray; //Each array is a playerUID array with vehicle(s) array(s) inside
 */
