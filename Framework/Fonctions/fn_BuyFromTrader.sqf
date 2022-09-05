@@ -27,7 +27,10 @@ _itemSlotFreeOrNot = [];
 
 if (_playerMoney >= _price) then {
 	/////VEHICLES
-	if (_type == 'vehicle') then {
+	if (_type == 'vehicle') then { 
+		[_item,_caller] call WMS_fnc_createPermanentVHL;
+	};
+	if (_type == 'sea') then { //Including the Boats
 		[_item,_caller] call WMS_fnc_createPermanentVHL;
 	};
 	/////VEHICLES END

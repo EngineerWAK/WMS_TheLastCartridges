@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.628_2022JUN09_GitHub"; //Crew 3D marker
+	name = "v1.633_2022SEP04_GitHub"; //Boat Trader
 };
 
 class Extended_PreInit_EventHandlers {
@@ -72,6 +72,16 @@ class CfgPVP
 class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recognized as Medical facilities
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 	vehicles[] = {
+		//GM
+		"gm_dk_army_m113a1dk_medic",
+		"gm_ge_army_m113a1g_medic",
+		"gm_ge_army_u1300l_medic",
+		"gm_ge_airforce_do28d2_medevac",
+		"gm_gc_army_ural375d_medic",
+		"gm_gc_bgs_ural375d_medic",
+		"gm_pl_army_ural375d_medic",
+		"gm_ge_ff_u1300l_firefighter",
+		//
 		"vtx_UH60M_MEDEVAC",
 		"RHS_UH60M_MEV2",
 		"RHS_UH60M_MEV2_d",
@@ -113,6 +123,15 @@ class CfgForceRepairFacilities //some Repair vehicles/buildings are not recogniz
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
 	vehicles[] = 
 	{
+		//GM
+		"gm_dk_army_m113a1dk_engineer",
+		"gm_dk_army_bpz2a0",
+		"gm_ge_army_fuchsa0_engineer",
+		"gm_ge_army_u1300l_repair",
+		"gm_gc_army_ural4320_repair",
+		"gm_gc_bgs_ural4320_repair",
+		"gm_pl_army_ural4320_repair",
+		//
 		"B_APC_Tracked_01_CRV_F",
 		"O_Heli_Transport_04_repair_black_F",
 		"rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom",
@@ -125,6 +144,13 @@ class CfgForceAmmoFacilities //some Ammo vehicles/buildings are not recognized a
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
 	vehicles[] = 
 	{
+		//GM
+		"gm_ge_army_kat1_454_reammo",
+		"gm_ge_army_kat1_451_reammo",
+		"gm_gc_army_ural4320_reammo",
+		"gm_gc_bgs_ural4320_reammo",
+		"gm_pl_army_ural4320_reammo",
+		//
 		"B_APC_Tracked_01_CRV_F",
 		"O_Heli_Transport_04_ammo_black_F",
 		"O_T_Truck_03_ammo_ghex_F",
@@ -430,7 +456,7 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 		0.2,    //gustsR = 
 		0.2,    //windFor = 
 		0.2,    //windForR = 
-		0.2,   //overcast = 
+		0.3,   //overcast = 
 		0.2,   //overcastR = 
 		0,      //rain = 
 		0     //rainR = 
@@ -469,8 +495,8 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 		0,    //gustsR = 
 		0,    //windFor = 
 		0,    //windForR = 
-		0.3,   //overcast = 
-		0.6,   //overcastR = 
+		0.6,   //overcast = 
+		0.35,   //overcastR = 
 		0,      //rain = 
 		0      //rainR = 
 	};

@@ -42,6 +42,10 @@ class BuildingClass_Mil
 "land_gm_euro_barracks_02_win",
 "gm_gc_tent_5x5m",
 
+		"Land_Cargo_Patrol_V4_F",
+		"Land_Cargo_House_V4_F",
+		"Land_Cargo_HQ_V4_F",
+		"Land_Cargo_Tower_V4_F",
 		"Land_MobileRadar_01_radar_F",
 		"Land_Radar_01_HQ_F",
 		"Land_Barracks_06_F",
@@ -60,6 +64,7 @@ class BuildingClass_Mil
 		"Land_Hangar_F",
 		"Land_Airport_Tower_F",
 		"Land_Cargo_House_V1_F",
+		"Land_Cargo_House_V2_F",
 		"Land_Cargo_House_V3_F",
 		"Land_Cargo_HQ_V1_F",
 		"Land_Cargo_HQ_V2_F",

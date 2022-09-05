@@ -242,14 +242,11 @@ _boat allowDamage false;
 }forEach _shipParts;
 
 ////////////////////////////////
-//3DMarker from the map
-openMap true;
-_this spawn {
-	uisleep 2;
-	onMapSingleClick { 
-		onMapSingleClick {};
-		[(AGLtoASL _pos)]call WMS_fnc_client_3Dmarkers;
-		openMap false;
-		true
-	};
-};
+//FastRope ACE action
+private _actionFr = ["Fast Rope", "Fast Rope", "", {
+		[(_this select 0),false,false] call ace_fastroping_fnc_deployAI;
+	},{
+		(speed (_this select 0) < 10)
+	}
+	] call ace_interact_menu_fnc_createAction;
+["vtx_H60_base", 0, ["ACE_MainActions"], _actionFr, true] call ace_interact_menu_fnc_addActionToClass;

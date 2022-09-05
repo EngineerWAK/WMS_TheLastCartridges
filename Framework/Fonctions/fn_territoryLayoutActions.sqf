@@ -1178,16 +1178,15 @@ switch (tolower _layout) do
 	_caller,
 	_jip
 ];
-
 /////
 [ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
 	_flag,
 	[
-		"<t size='0.9' color='#80c606'>Armed Logistic Pod, (100k), after restart</t>",//_display,
+		"<t size='0.9' color='#80c606'>Armed Round FOB, (85k), after restart</t>",//_display,
 		"	
 			_target = _this select 0; _caller = _this select 1;
 			_target setVariable ['_layoutUpgradable', false, true];
-			[_target, _caller, 100000, 'logisticpod', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			[_target, _caller, 85000, 'circularfob', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
 			hint 'Congratulation!';
 
 		",
@@ -1214,11 +1213,75 @@ switch (tolower _layout) do
 [ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
 	_flag,
 	[
-		"<t size='0.9' color='#80c606'>Armed Logistic Pod, (125k) right now</t>",//_display,
+		"<t size='0.9' color='#80c606'>Armed Round FOB, (100k) right now</t>",//_display,
 		"	
 			_target = _this select 0; _caller = _this select 1;
 			_target setVariable ['_layoutUpgradable', false, true];
-			[_target, _caller, 125000, 'logisticpod', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			[_target, _caller, 100000, 'circularfob', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(alive _target) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 125000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+
+/////
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>Armed Logistic Pod, (95k), after restart</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 95000, 'logisticpod', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(alive _target) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 100000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>Armed Logistic Pod, (115k) right now</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 115000, 'logisticpod', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
 			hint 'Congratulation!';
 
 		",

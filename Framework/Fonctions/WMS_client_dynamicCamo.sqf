@@ -18,9 +18,9 @@ Modify "on the fly" the camouflage coefficient depending of:
 - uniform
 - day/night
 later:
--fire a weapon, suppressed or not
+- fire a weapon, suppressed or not
 */
-WMS_DynamicCamoDebug = false;
+WMS_DynamicCamoDebug = missionNameSpace getVariable ["WMS_DynamicCamoDebug",false];
 WMS_MissionDebug = missionNameSpace getVariable ["WMS_MissionDebug",false];
 if (true) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo launched client side %1", time];};
 []spawn {

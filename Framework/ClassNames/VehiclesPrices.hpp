@@ -163,7 +163,7 @@
 		//GLOBAL MOBILISATION
 		class gm_ge_army_k125 						{ quality = 0; price = 1500; };
 		class gm_ge_army_iltis_cargo 				{ quality = 0; price = 4500; };
-		class gm_ge_civ_u1300l						{ quality = 1; price = 1700; };
+		class gm_ge_civ_u1300l						{ quality = 1; price = 17000; };
 		class gm_ge_army_u1300l_firefighter			{ quality = 2; price = 16000; };
 		class gm_ge_army_u1300l_medic				{ quality = 2; price = 16000; };
 		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 9500; };
@@ -322,3 +322,15 @@
 	class vtx_MH60S_GAU21L  			{ quality = 3; price = 43555; };
 	class vtx_MH60M_DAP  				{ quality = 4; price = 64555; };
 	class vtx_MH60S_Pylons  			{ quality = 4; price = 64555; };
+
+		//freakingBoats
+	class rhs_pontoon_float  			{ quality = 1; price = 999; };//TEST!!!!!!! this is not a vehicle
+
+	class rhsgref_hidf_canoe  			{ quality = 1; price = 2500; };
+	class B_Lifeboat  					{ quality = 1; price = 6000; };
+	class I_Boat_Transport_01_F  		{ quality = 2; price = 4500; };
+	class B_Boat_Transport_01_F  		{ quality = 3; price = 3000; };
+	class I_C_Boat_Transport_02_F  		{ quality = 3; price = 4500; };//RHIB
+	class B_Boat_Armed_01_minigun_F  	{ quality = 4; price = 12000; };
+	class rhsusf_mkvsoc  				{ quality = 5; price = 19000; };
+	

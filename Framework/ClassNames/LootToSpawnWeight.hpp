@@ -39,7 +39,7 @@ class Special
     {
 		0, //_weapList, 
 		1, //_weapList_spe, 
-		0.4, //_weapList_mil, 
+		0.3, //_weapList_mil, 
 		0, //_scopList, 
 		0.5, //_scopList_spe, 
 		0.1, //_scopList_mil, 
@@ -49,7 +49,7 @@ class Special
 		0, //_itemList_ind, 
 		0.3, //_medList, 
 		0, //_bagList, 
-		0.4, //_bagList_spe, 
+		0.6, //_bagList_spe, 
 		0.1, //_bagList_mil, 
 		0, //_vestList, 
 		0.5, //_vestList_spe, 

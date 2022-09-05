@@ -1263,6 +1263,112 @@ _FOB_70x70 = [
 	["Land_WoodenLog_F",[-6.2,-29.5,0],167.7],
 	["Land_WoodenLog_F",[-4,-30.8,0],261.8]
 	];
+_circularFOB = [
+	["B_AAA_System_01_F",[-1.1,2.4,0],45],
+	["BlockConcrete_F",[29.8,5.6,-0.43],260.2,"flat"],
+	["Box_IND_AmmoVeh_F",[3.1,1.9,0],255.2],
+	["Campfire_burning_F",[-14.2,-23,0],35.7],
+	["Land_ClothShelter_02_F",[-15.7,-25.9,0],215.7],
+	["Land_ControlTower_01_F",[-19.5,-19,0],135,"flat"],
+	["Land_fs_feed_F",[2,-3.4,0],307.2,"flat"],
+	["Land_HBarrier_5_F",[11.7,31.9,2.16],20.3,"flat"],
+	["Land_HBarrier_5_F",[16.7,29.7,2.16],29,"flat"],
+	["Land_HBarrier_5_F",[21.3,26.7,2.16],38.2,"flat"],
+	["Land_HBarrier_5_F",[25.3,22.9,2.16],47.5,"flat"],
+	["Land_HBarrier_5_F",[28.7,18.8,2.16],56.7,"flat"],
+	["Land_HBarrier_5_F",[31.3,14.1,2.21],65.9,"flat"],
+	["Land_HBarrier_5_F",[33,8.8,2.16],75.2,"flat"],
+	["Land_HBarrier_5_F",[34,3.2,2.16],84.8,"flat"],
+	["Land_HBarrier_5_F",[34,-2.4,2.16],94.3,"flat"],
+	["Land_HBarrier_5_F",[33.2,-8,2.16],103.6,"flat"],
+	["Land_HBarrier_5_F",[31.5,-13.2,2.21],112.8,"flat"],
+	["Land_HBarrier_5_F",[28.8,-18.1,2.16],122.1,"flat"],
+	["Land_HBarrier_5_F",[25.4,-22.6,2.16],131.7,"flat"],
+	["Land_HBarrier_5_F",[3.9,-3.4,0],133.9,"flat"],
+	["Land_HBarrier_5_F",[-3.5,3.8,0],133.9,"flat"],
+	["Land_HBarrier_5_F",[21.3,-26.5,2.16],141.2,"flat"],
+	["Land_HBarrier_5_F",[11.6,-31.9,2.16],160,"flat"],
+	["Land_HBarrier_5_F",[-5.3,24.8,2.11],168.1,"flat"],
+	["Land_HBarrier_5_F",[6.3,-33.4,2.16],169.4,"flat"],
+	["Land_HBarrier_5_F",[0.8,-34,2.16],178.8,"flat"],
+	["Land_HBarrier_5_F",[0,25.3,2.1],180,"flat"],
+	["Land_HBarrier_5_F",[-4.8,-33.7,2.16],188.2,"flat"],
+	["Land_HBarrier_5_F",[1.4,5.1,0],193.9,"flat"],
+	["Land_HBarrier_5_F",[-10.2,-32.4,2.16],197.5,"flat"],
+	["Land_HBarrier_5_F",[-15.4,-30.3,2.16],206.9,"flat"],
+	["Land_HBarrier_5_F",[-20.1,-27.5,2.16],216.2,"flat"],
+	["Land_HBarrier_5_F",[-24.3,-23.8,2.16],225.6,"flat"],
+	["Land_HBarrier_5_F",[-27.8,-19.6,2.16],234.9,"flat"],
+	["Land_HBarrier_5_F",[-30.6,-14.7,2.16],244.3,"flat"],
+	["Land_HBarrier_5_F",[-32.7,-9.5,2.16],253.9,"flat"],
+	["Land_HBarrier_5_F",[5,1.7,0],254,"flat"],
+	["Land_HBarrier_5_F",[-4.5,-1.2,0],254,"flat"],
+	["Land_HBarrier_5_F",[-33.8,-4,2.16],263.3,"flat"],
+	["Land_HBarrier_5_F",[-34,1.6,2.16],272.6,"flat"],
+	["Land_HBarrier_5_F",[-33.3,7,2.16],282,"flat"],
+	["Land_HBarrier_5_F",[-31.7,12.3,2.16],291.2,"flat"],
+	["Land_HBarrier_5_F",[-29.3,17.2,2.16],300.5,"flat"],
+	["Land_HBarrier_5_F",[-26.1,21.8,2.16],309.9,"flat"],
+	["Land_HBarrier_5_F",[-22.2,25.8,2.16],319.3,"flat"],
+	["Land_HBarrier_5_F",[-17.7,29.1,2.16],328.7,"flat"],
+	["Land_HBarrier_5_F",[-12.8,31.5,2.16],338,"flat"],
+	["Land_HBarrier_5_F",[-7.5,33.1,2.16],347.3,"flat"],
+	["Land_HBarrier_Big_F",[-2.2,-33.9,-0],3.7],
+	["Land_HBarrier_Big_F",[-9.3,-32.7,-0],15.9],
+	["Land_HBarrier_Big_F",[-16,-30,-0],28.1],
+	["Land_HBarrier_Big_F",[-22,-25.9,-0],40.3],
+	["Land_HBarrier_Big_F",[-27,-20.6,-0],52.7],
+	["Land_HBarrier_Big_F",[-30.8,-14.3,0],65.1],
+	["Land_HBarrier_Big_F",[-33.2,-7.4,0],77.6],
+	["Land_HBarrier_Big_F",[-34,0,0],90.1],
+	["Land_HBarrier_Big_F",[-33.2,7.4,-0],102.6],
+	["Land_HBarrier_Big_F",[-30.8,14.4,0],115],
+	["Land_HBarrier_Big_F",[-27,20.7,0],127.5],
+	["Land_HBarrier_Big_F",[-21.9,26,0],139.9],
+	["Land_HBarrier_Big_F",[-15.8,30.1,-0],152.4],
+	["Land_HBarrier_Big_F",[-8.3,23.8,0],160.9],
+	["Land_HBarrier_Big_F",[-9,32.8,-0],164.7],
+	["Land_HBarrier_Big_F",[-1.5,25.5,0],176.7],
+	["Land_HBarrier_Big_F",[12.6,31.6,0],201.8],
+	["Land_HBarrier_Big_F",[19.2,28.1,-0],214.4],
+	["Land_HBarrier_Big_F",[25,23.1,-0],227.3],
+	["Land_HBarrier_Big_F",[29.5,17,-0],240.2],
+	["Land_HBarrier_Big_F",[32.6,9.7,-0],253.5],
+	["Land_HBarrier_Big_F",[33.9,2.5,-0],265.8],
+	["Land_HBarrier_Big_F",[1.9,30.8,0],273.6],
+	["Land_HBarrier_Big_F",[33.6,-5,0],278.4],
+	["Land_HBarrier_Big_F",[31.7,-12.5,0],291.6],
+	["Land_HBarrier_Big_F",[28,-19.4,0],304.8],
+	["Land_HBarrier_Big_F",[22.8,-25.2,-0],317.9],
+	["Land_HBarrier_Big_F",[12.2,-31.8,0],339.1],
+	["Land_HBarrier_Big_F",[5.2,-33.6,0],351.3],
+	["Land_HBarrierTower_F",[5.6,30,0],190.6,"flat"],
+	["Land_HBarrierTower_F",[15.1,-26.6,0],329.2,"flat"],
+	["Land_HelipadCircle_F",[12.8,16,0],90],
+	["Land_HelipadCircle_F",[18,-6.1,0],90],
+	["Land_LampIndustrial_01_F",[-4.8,33.7,0],180,"flat"],
+	["Land_Net_Fence_Gate_F",[-1.9,34.8,0],176.8,"flat"],
+	["Land_RampConcrete_F",[20.8,6.2,0],260.4,"flat"],
+	["Land_Research_house_V1_F",[-8.9,-25.9,0],180,"flat"],
+	["Land_SM_01_shelter_wide_F",[-25.2,-0.1,-2.1],180,"flat"],
+	["Land_SM_01_shelter_wide_F",[-0.1,-25.3,-2.1],270,"flat"],
+	["Land_TinWall_02_l_4m_F",[-19.1,11.9,0],180,"flat"],
+	["Land_TinWall_02_l_8m_F",[-0.2,-17.1,0],180,"flat"],
+	["Land_TinWall_02_l_8m_F",[7.9,-17.1,0],180,"flat"],
+	["Land_TinWall_02_l_8m_F",[-17.1,7.9,0],270,"flat"],
+	["Land_TinWall_02_l_8m_F",[-17.1,-0.1,0],270,"flat"],
+	["Land_WaterTank_03_F",[-7.4,-24.7,0],350.4],
+	["Land_WoodenLog_F",[-16.2,-24.6,0],51.8],
+	["Land_WoodenLog_F",[-13.8,-25.7,0],350.6],
+	["Land_WoodenTable_small_F",[-16,-27.8,0],125.6],
+	["Land_Flush_Light_green_F",[10.7,19.7,0],0],
+	["Land_Flush_Light_green_F",[22.3,-6,-0],0],
+	["Land_Flush_Light_green_F",[10.7,12.2,0],0],
+	["Land_Flush_Light_green_F",[16,-9.7,0],0],
+	["Land_Flush_Light_green_F",[17.2,16,0],0],
+	["Land_Flush_Light_green_F",[15.9,-2.4,0],0],
+	["Windsock_01_F",[3.2,3.5,0],45,"flat"]
+	];
 _logisticpod = [
 	["B_AAA_System_01_F",[-2.5,-0.8,0],180],
 	["B_Radar_System_01_F",[26.4,15.7,0.29],328.9,"flat"],
@@ -1449,6 +1555,9 @@ switch (tolower _layout) do
 	case "fob_70x70": {
 		_objects = _FOB_70x70;
 		};
+	case "circularfob": {
+		_objects = _circularFOB;
+		};
 	case "logisticpod": {
 		_objects = _logisticpod;
 		};
@@ -1471,22 +1580,18 @@ _compoRefPoint setDir _dirFlag;
 	_objectVectoriel = (_compoRefPoint modeltoworld  [(_x select 1 select 0),(_x select 1 select 1),0]);
 	_object setposATL [(_objectVectoriel select 0),(_objectVectoriel select 1),((_x select 1) select 2)];
 	_gradient = surfaceNormal position _object; 
-
 	if ((count _x) > 3 && {(_x select 3) == "flat"}) then {
 		_object setVectorUp [0,0,1];
 	}else {
 		_object setvectorup _gradient;
 	};
-
 	if ((count _x) > 4) then {
 		_objPos = position _object;
 		_object setpos [(_objPos select 0), (_objPos select 1), (_x select 4)];
 	};
-
 	if ((_x select 0) in _waterSources) then {
 		[_object, 150] call acex_field_rations_fnc_setRemainingWater;
 	};
-
 	if ((_x select 0) in _forceMedicalFacilities) then {
 		_object setVariable ["ace_medical_isMedicalFacility", true, true];
 		_object setVariable ["WMS_resetFatigueTimer", time, true];

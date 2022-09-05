@@ -10,6 +10,10 @@
  */
 
 // [_this]call WMS_fnc_updatePermanentVHL
+/*
+NEED TO TAKE A LOOK AT THIS:
+_yourArray = _yourArray call BIS_fnc_consolidatearray;
+*/
 private ["_permanentVhlArray","_ownerUID","_vehicleID_inventory_list","_vehicleInventory","_startDamage"];
 //(_this select 0) call WMS_fnc_updatePermanentVHL; //from respawnPermanentVehicle
 //nul = (_this select 0) remoteExec ['WMS_fnc_updatePermanentVHL', 2]; //from initVehicleAddAction, player side

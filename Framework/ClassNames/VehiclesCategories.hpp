@@ -115,20 +115,26 @@
 			"gm_ge_army_u1300l_medic",
 			"gm_pl_army_ural4320_cargo",
 			//regular non-GM:
+			"rhs_kamaz5350_flatbed_cover_vdv", //flatbed cover
+			"RHS_Ural_Flat_VDV_01", //flatbed cover
+			"rhs_gaz66_flat_vdv", //flatbed cover
+			"O_T_Truck_03_ammo_ghex_F", //ammo
+			"rhs_kamaz5350_ammo_vdv", ///ammo
+			"B_Quadbike_01_F",
+			"rhsusf_m113_usarmy_medical",
 	        "B_Truck_01_mover_F",
 	        "B_Truck_01_cargo_F",
 	        "B_Truck_01_transport_F",
-	        "UK3CB_BAF_LandRover_Soft_Green_A",
-	        "UK3CB_BAF_MAN_HX60_Cargo_Green_A",
 	        "B_T_LSV_01_unarmed_F",
-			"B_LSV_01_unarmed_black_F", //custom loadable
-	        "R3F_FENNEC_CE",
-	        "R3F_MATV_CE",
+			"B_LSV_01_unarmed_black_F", //custom loadable 
+			"rhsusf_m1152_usarmy_wd", //armored humvee 2dr
 	        "rhsusf_m1025_w",
 	        "rhsusf_m998_w_4dr",
 			"rhsusf_m998_w_2dr_halftop",
 	        "rhsusf_m1151_usarmy_wd",
 	        "rhsusf_M1232_usarmy_wd",
+	        //"rhsusf_M1078A1P2_WD_fmtv_usarmy",
+	        //"rhsusf_M1083A1P2_WD_fmtv_usarmy",
 			"rhsusf_M1078A1P2_WD_open_fmtv_usarmy", //igiload
 			"rhsusf_M1083A1P2_WD_open_fmtv_usarmy", //igiload
 			"rhsusf_M1084A1P2_WD_fmtv_usarmy", //igiload
@@ -139,8 +145,8 @@
 	        "rhsgref_un_uaz",
 	        "rhsgref_un_zil131",
 	        "I_G_Offroad_01_F",
-			"C_Van_01_box_F",
 	        "I_G_Van_01_transport_F",
+			"C_Van_01_box_F",
 	        "I_E_Truck_02_transport_F",
 	        "rhsgref_nat_ural",
 	        "rhsgref_nat_ural_open",
@@ -154,7 +160,8 @@
 	        "rhs_tigr_vdv",
 	        "rhs_tigr_m_vdv",
 	        "rhsgref_BRDM2UM_vdv",
-			"rhsgref_cdf_b_zsu234"
+			"O_APC_Wheeled_02_rcws_v2_F",//FORCED UNARMED
+			"B_APC_Tracked_01_CRV_F" //FORCED UNARMED
 	        
 		};
 	};
@@ -288,6 +295,7 @@
 	        "gm_ge_army_Leopard1a1a1",
 	        "gm_dk_army_Leopard1a3",
 			//regular non-GM: //modified
+			"rhsusf_m113_usarmy_supply", //ammo
 	        "rhsgref_cdf_b_reg_uaz_dshkm",
 	        "rhsgref_cdf_b_reg_uaz_spg9",
 	        "rhsgref_cdf_b_bmd1k",
@@ -297,11 +305,10 @@
 	        "B_G_Offroad_01_AT_F",
 	        "rhsgref_hidf_m113a3_m2",
 	        "rhsgref_hidf_m1025_m2",
-	        "UK3CB_BAF_Coyote_Passenger_L111A1_W",
-	        "UK3CB_BAF_Jackal2_L111A1_W",
-	        "UK3CB_BAF_LandRover_WMIK_HMG_Green_B",
-	        "B_T_APC_Wheeled_01_cannon_F",
-	        "R3F_PANDUR_CE",
+	        "B_APC_Wheeled_01_cannon_F",
+			"I_APC_Wheeled_03_cannon_F",
+			"B_AFV_Wheeled_01_cannon_F",
+			"I_LT_01_cannon_F",
 	        "rhsusf_stryker_m1127_m2_wd",
 	        "rhsusf_m113_usarmy",
 	        "rhsusf_m1025_w_m2",
@@ -318,13 +325,16 @@
 	        "rhsusf_M1078A1P2_B_M2_WD_open_fmtv_usarmy",
 	        "rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy",
 	        "rhsusf_CGRCAT1A2_M2_usmc_wd",
-	        "rhsgref_cdf_t80bv_tv",
 	        "I_C_Offroad_02_LMG_F",
 	        "I_C_Offroad_02_AT_F",
 	        "O_T_LSV_02_armed_F",
 	        "rhs_btr80a_vdv",
 	        "rhs_brm1k_vdv",
 	        "rhs_sprut_vdv",
+			"rhs_t90sm_tv", //faster turret
+			"rhs_t90saa_tv",
+			"rhs_t80u45m",
+	        "rhs_t80bv",
 	        "rhs_t72ba_tv",
 	        "rhs_t72be_tv",
 	        "rhs_t72bb_tv"
@@ -424,9 +434,15 @@
 			//"gm_ge_airforce_do28d2" //plane
 			
 			//regular non-GM: //modified
+			"vtx_UH60M_MEDEVAC",
+			"vtx_UH60M_SLICK",
+			"O_Heli_Transport_04_medevac_black_F",
+			"O_Heli_Transport_04_repair_black_F",
+			"O_Heli_Transport_04_ammo_black_F",
+			"O_Heli_Transport_04_fuel_black_F",
+			"rhsgred_hidf_cessna_o3a",
+			"B_T_VTOL_01_vehicle_F",
 	        "rhs_uh1h_hidf_unarmed",
-	        "UK3CB_BAF_Merlin_HC3_Cargo",
-	        "UK3CB_BAF_Merlin_HM2_18",
 	        "RHS_UH60M2",
 	        "RHS_MELB_MH6M",
 	        "RHS_UH1Y_UNARMED",
@@ -438,6 +454,7 @@
 	        "RHS_Mi8t_civilian",
 	        "O_Heli_Transport_04_F",
 	        "O_Heli_Transport_04_bench_F",
+	        "O_Heli_Transport_04_box_F",
 	        "RHS_Mi8mt_Cargo_vvs",
 	        "O_Heli_Light_02_unarmed_F"
 		};
@@ -525,17 +542,26 @@
 			"gm_gc_bgs_mi2us",
 			"gm_gc_airforce_mi2urn",
 			//regular non-GM: //modified
+			"vtx_HH60",
+			"vtx_UH60M",
+			"vtx_MH60M",
+			"vtx_MH60S",
+			"vtx_MH60S_GAU21L",
+			"vtx_MH60M_DAP",
+			"vtx_MH60S_Pylons",
+
+			"RHSGREF_A29B_HIDF", //super Tucano
+			"RHS_A10",
+			"rhs_l159_cdf_b_CDF",
+			"rhs_l39_cdf_b_cdf",
+
 			"RHS_MELB_AH6M_M",
-	        "BWA3_Tiger_RMK_Universal",
-			"rhs_uh1h_hidf_gunship",
 	        "rhsgref_b_mi24g_CAS",
+			"rhs_uh1h_hidf_gunship",
 	        "rhsgref_cdf_b_reg_Mi17Sh",
 	        "rhs_uh1h_hidf",
+	        "B_Heli_Light_01_dynamicLoadout_F",
 	        "B_Heli_Transport_03_F",
-	        "UK3CB_BAF_Merlin_HC4_18_GPMG",
-	        "UK3CB_BAF_Wildcat_AH1_HEL_8A",
-	        "UK3CB_BAF_Wildcat_AH1_CAS_8D",
-	        "R3F_AH6_CE_ARMED",
 	        "RHS_CH_47F",
 	        "RHS_CH_47F_cargo",
 	        "RHS_UH60M",
@@ -543,10 +569,13 @@
 	        "RHS_AH1Z_wd",
 	        "RHS_UH1Y",
 	        "rhsgref_cdf_Mi35",
+	        "I_E_Heli_light_03_dynamicLoadout_F",
 	        "RHS_Ka52_vvsc",
 	        "rhs_mi28n_vvs",
+			"rhs_mi28n_s13_vvsc",
 	        "RHS_Mi24P_vvsc",
-			"RHS_AH64D_wd"
+			"RHS_AH64D_wd",
+	        "B_Heli_Attack_01_dynamicLoadout_F"
 		};
 	};
 
@@ -590,5 +619,36 @@
 	        "RHS_Mi24P_vvsc",
 			"RHS_AH64D_wd",
 	        "B_Heli_Attack_01_dynamicLoadout_F"
+		};
+	};
+
+	class freakingBoats
+	{
+		name = "Boats";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"B_Boat_Transport_01_F",
+			"B_Lifeboat",
+			"B_Boat_Armed_01_minigun_F",
+			"I_Boat_Transport_01_F",
+			"I_C_Boat_Transport_02_F"
+		};
+	};
+
+	class freakingBoats_RHS
+	{
+		name = "Boats";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] = 
+		{
+			"B_Boat_Transport_01_F",
+			"B_Lifeboat",
+			"B_Boat_Armed_01_minigun_F",
+			"rhsgref_hidf_canoe",
+			"rhsusf_mkvsoc",
+			"I_Boat_Transport_01_F",
+			"I_C_Boat_Transport_02_F",
+			"rhs_pontoon_float"
 		};
 	};

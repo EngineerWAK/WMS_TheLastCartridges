@@ -112,7 +112,7 @@ class CfgRemoteExec
 		class WMS_fnc_InfantryProgram_buy			{ allowedTargets=2; }; //EXILE
 
 		class WMS_fnc_Event_HVT		   				{ allowedTargets=2; }; //not finished
-		class WMS_fnc_Event_DFO		   				{ allowedTargets=2; }; //server side only
+		class WMS_fnc_DFO_Event		   				{ allowedTargets=2; }; //server side only
 
 		class WMS_fnc_client_3Dmarkers		   		{ allowedTargets=0; };
 
