@@ -226,6 +226,11 @@
 		class rhs_t72ba_tv 							{ quality = 5; price = 115000; }; //1984
 		class rhsgref_cdf_b_zsu234 					{ quality = 5; price = 195000; };
 
+		//ARTI
+		class rhsgref_cdf_2s1 						{ quality = 6; price = 160000; }; //Old Arti Tank
+		class rhsgref_cdf_reg_d30 					{ quality = 5; price = 140000; }; //Old Arti Canon
+		class RHS_M119_WD							{ quality = 5; price = 140000; }; //Old Arti Canon
+
 		//GLOBAL MOBILISATION
 		class gm_ge_army_iltis_mg3 					{ quality = 3; price = 38000; };
 		class gm_dk_army_u1300l_container 			{ quality = 3; price = 48000; };

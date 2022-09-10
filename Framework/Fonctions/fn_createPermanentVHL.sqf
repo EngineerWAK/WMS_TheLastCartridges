@@ -87,6 +87,7 @@ _veh setVariable ["WMS_permanentvhl", true, true];
 _veh setVariable ["WMS_howmanyrestarts", 0];
 _vehicleID_inventory = _vehicleID + "_inventory";
 _veh setVariable ["WMS_vehicleID_inventory", _vehicleID_inventory, true];
+if (_veh isKindOf "tank"||_veh isKindOf "Wheeled_Apc_F") then {_veh setVariable ["ace_cookoff_enable", true, true];};
 			_veh addMPEventHandler ["MPkilled", {
 					[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
 					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
@@ -188,7 +189,8 @@ if ((typeOf _veh) in _forceMedicalFacilities) then {
 			"",
 			//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 			"('ACE_personalAidKit' in (items _this)) &&
-			{(time >= (3600 + (_target getVariable ['WMS_resetFatigueTimer', time])))} && 
+			{(getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0])} &&
+			{(time >= (1800 + (_target getVariable ['WMS_resetFatigueTimer', time])))} && 
 			{(vehicle _this == _this)}",
 			5
 		]

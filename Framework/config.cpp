@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.633_2022SEP04_GitHub"; //Boat Trader
+	name = "v1.638_2022SEP08_GitHub"; //Doctor & Engineer Skills to buy
 };
 
 class Extended_PreInit_EventHandlers {
@@ -82,6 +82,8 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 		"gm_pl_army_ural375d_medic",
 		"gm_ge_ff_u1300l_firefighter",
 		//
+		"rhsusf_mkvsoc",
+		//
 		"vtx_UH60M_MEDEVAC",
 		"RHS_UH60M_MEV2",
 		"RHS_UH60M_MEV2_d",
@@ -132,6 +134,8 @@ class CfgForceRepairFacilities //some Repair vehicles/buildings are not recogniz
 		"gm_gc_bgs_ural4320_repair",
 		"gm_pl_army_ural4320_repair",
 		//
+		"rhsusf_mkvsoc",
+		//
 		"B_APC_Tracked_01_CRV_F",
 		"O_Heli_Transport_04_repair_black_F",
 		"rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom",
@@ -150,6 +154,8 @@ class CfgForceAmmoFacilities //some Ammo vehicles/buildings are not recognized a
 		"gm_gc_army_ural4320_reammo",
 		"gm_gc_bgs_ural4320_reammo",
 		"gm_pl_army_ural4320_reammo",
+		//
+		"rhsusf_mkvsoc",
 		//
 		"B_APC_Tracked_01_CRV_F",
 		"O_Heli_Transport_04_ammo_black_F",
@@ -208,6 +214,7 @@ class CfgClaimReward
 		},
 		{
 			"static",
+			"ACE_fortify",
 			"B_Patrol_Respawn_bag_F",
 			"B_Respawn_Sleeping_bag_brown_F",
 			"I_UAV_01_backpack_F",
@@ -274,7 +281,9 @@ class CfgOfficeTrader
 		TradeRespect5k,
 		TradeRespect10k,
 		EmergencySupplyMeds,
-		HaloJump
+		HaloJump,
+		CompDoc,
+		CompEng
 	};
 
 	Territory[] = 
@@ -329,6 +338,14 @@ class CfgOfficeTrader
 		[12000, 500],	//500~750
 		[18000, 250],	//250~500
 		[25000, 50] 	//50~250
+	};
+	CompDoc[] = 
+	{
+		7500; //Price to get Doctor Competence
+	};
+	CompEng[] = 
+	{
+		7500; //Price to get Adv Engineer Competence
 	};
 	vehiclesManagement[] = 
 	{

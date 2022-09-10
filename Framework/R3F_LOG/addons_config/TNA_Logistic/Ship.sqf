@@ -18,7 +18,8 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
-	["boat_armed_01_base_f", 15]
+	["boat_armed_01_base_f", 15],
+	["rhsusf_mkvsoc", 30]
 ];
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +

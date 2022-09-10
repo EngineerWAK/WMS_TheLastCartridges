@@ -229,7 +229,7 @@ class items
 			"Money_roll",
 			"Money_stack",
 			"Antimalaricum",
-			"AntimalaricumVaccine",
+			//"AntimalaricumVaccine",
 			"Antibiotic"
 		};
 	};
@@ -300,6 +300,7 @@ class items_IND
 		{
 			//"ACE_Wheel",
 			//"ACE_Track",
+			"ACE_fortify",
 			"ACE_Cellphone",
 			"ACE_DefusalKit",
 			"ACE_DeadManSwitch",
@@ -315,7 +316,7 @@ class items_IND
 			"ACE_UAVBattery",
 			"ACE_wirecutter",
 			"ACE_microDAGR",
-			"ACE_Sandbag_empty",
+			//"ACE_Sandbag_empty",
 			"ACE_TacticalLadder_Pack",
 			"ACE_EntrenchingTool",
 			"ACE_key_east"

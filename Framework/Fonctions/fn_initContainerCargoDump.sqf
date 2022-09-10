@@ -209,3 +209,75 @@ _container addAction [
 	0, //0 for all players //2 server only //-2 everyone but the server
 	true //JIP
 ];
+
+
+[ //params ["_target", "_caller", "_actionId", "_arguments"];
+	_container,
+	[
+		"<t size='0.9' color='#1fd507'>Buy *10 40mm 750$ </t>",
+		"
+			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
+				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					(_this select 0) addMagazineCargoGlobal [(selectRandom ((_this select 3) select 0)), 10];
+					hint '40mm in the container';
+				} else {
+					hint 'Bro! your respect is too low';
+					execVM 'addons\intro\levels.sqf';
+				};
+			} else {
+				hint 'You are too poor Dude';
+			};
+		",
+		[["rhs_mag_M441_HE", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET", "1Rnd_HE_Grenade_shell"],750,2500], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
+		"
+			(_this getVariable ['playerInTraderZone', false]) &&
+			{(_this getVariable ['ExileScore', 0] >= 2500)}
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"];
+	_container,
+	[
+		"<t size='0.9' color='#1fd507'>Buy *10 VOG25 750$ </t>",
+		"
+			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
+				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					(_this select 0) addMagazineCargoGlobal [(selectRandom ((_this select 3) select 0)), 10];
+					hint 'VOG25 in the container';
+				} else {
+					hint 'Bro! your respect is too low';
+					execVM 'addons\intro\levels.sqf';
+				};
+			} else {
+				hint 'You are too poor Dude';
+			};
+		",
+		[["rhs_VOG25", "rhs_VOG25p", "rhs_vg40tb"],750,2500], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
+		"
+			(_this getVariable ['playerInTraderZone', false]) &&
+			{(_this getVariable ['ExileScore', 0] >= 2500)}
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];

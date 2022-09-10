@@ -35,7 +35,24 @@ if (_playerMoney >= _price) then {
 	};	
 	if (_item == 'HaloJump' || _item == 'HaloJumpComputer') then {
 		[_item] remoteExecCall ["WMS_fnc_chooseHaloPos", (owner _caller)];
-	};			
+	};		
+	if (_item == 'CompDoc') then {
+    	_caller setVariable ["WMS_Specialist","medic",true];
+    	_caller setVariable ["ace_medical_medicclass", 2, true];
+		_caller setUnitTrait ["Medic",true];
+		
+		[_caller, _price] call WMS_fnc_smallTransactions;
+		'You are now Medic Level 2' remoteExec ["hint", (owner _caller)];
+	};		
+	if (_item == 'CompEng') then {
+    	_caller setVariable ["WMS_Specialist","engineer",true];
+    	_caller setVariable ["ace_IsEngineer",2,true];
+		_caller setUnitTrait ["Engineer",true];
+		//_caller setUnitTrait ["explosiveSpecialist",true]; //Will move to "Breacher" loadout
+		
+		[_caller, _price] call WMS_fnc_smallTransactions;
+		'You are now Engineer Level 2' remoteExec ["hint", (owner _caller)];
+	};		
 
 };
 

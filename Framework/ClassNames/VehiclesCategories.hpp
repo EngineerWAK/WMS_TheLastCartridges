@@ -346,6 +346,9 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			"RHS_M119_WD", //Old Arti canon, need to ad to R3f Log
+			"rhsgref_cdf_reg_d30", //Old Arti canon, need to ad to R3f Log
+			"rhsgref_cdf_2s1", //Old Arti Tank
 			"rhsusf_m113_usarmy_supply", //ammo
 	        "rhsgref_cdf_b_reg_uaz_dshkm",
 	        "rhsgref_cdf_b_reg_uaz_spg9",
@@ -642,13 +645,13 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			//"rhs_pontoon_float"
 			"B_Boat_Transport_01_F",
 			"B_Lifeboat",
 			"B_Boat_Armed_01_minigun_F",
 			"rhsgref_hidf_canoe",
 			"rhsusf_mkvsoc",
 			"I_Boat_Transport_01_F",
-			"I_C_Boat_Transport_02_F",
-			"rhs_pontoon_float"
+			"I_C_Boat_Transport_02_F"
 		};
 	};

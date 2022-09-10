@@ -20,13 +20,19 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
-	//["staticweapon", 5],
-	//["staticmortar", 6]
+	["RHS_M119_WD", 20],
+	["rhsgref_cdf_reg_d30", 20],
+	["rhsgref_tla_g_ZU23", 15],
+	["RHS_Stinger_AA_pod_WD", 15], //stingers station
+	["rhs_Igla_AA_pod_vdv", 15], //Igla station
+	["rhsgref_nat_d30_at", 20] //AT cannon
 ];
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
 	//"staticweapon"
+	"RHS_M119_WD",
+	"rhsgref_cdf_reg_d30",
 	"rhsgref_tla_g_ZU23",
 	"rhs_Metis_9k115_2_msv",
 	"rhs_Kornet_9M133_2_msv",

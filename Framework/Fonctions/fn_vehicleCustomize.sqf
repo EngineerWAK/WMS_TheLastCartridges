@@ -3,6 +3,15 @@ params [
 ];
 private _vehicleClassName = (typeOf _veh);
 
+
+if (_vehicleClassName == "rhsusf_mkvsoc") then {
+	_veh setRepairCargo 1;
+	_veh setAmmoCargo 1;
+	_veh setFuelCargo 1;
+	_veh setVariable ["ACE_isRepairVehicle", true, true];
+	_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
+	[_veh, 1000] call ace_refuel_fnc_setFuel;
+};
 if(_vehicleClassName == "rhsgref_cdf_b_bmd1k" || _vehicleClassName == "rhs_bmd1pk") then
 {
 	_veh setObjectTextureGlobal [0, "rhsafrf\addons\rhs_bmd_camo\data\sa_bmd2_01_rus3_co.paa"]; 

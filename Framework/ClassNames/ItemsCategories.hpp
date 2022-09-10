@@ -167,6 +167,8 @@ class SpecOps_RHS
 	    };
 	    grenades[]= //ammo specops  //CfgMagazines
 	    {	
+			"rhs_mag_M441_HE", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET", "1Rnd_HE_Grenade_shell",
+			"rhs_VOG25", "rhs_VOG25p", "rhs_vg40tb",
 	    	"rhs_charge_tnt_x2_mag",
 			"rhs_charge_sb3kg_mag",
 			"rhs_grenade_sthgr24_x7bundle_mag"

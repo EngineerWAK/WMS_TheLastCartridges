@@ -66,3 +66,11 @@
     class rhs_charge_tnt_x2_mag 			{ quality = 0; price = 150; };
     class rhs_charge_sb3kg_mag 				{ quality = 1; price = 950; };
     class rhs_grenade_sthgr24_x7bundle_mag 	{ quality = 2; price = 350; };
+
+    class rhs_mag_M441_HE 	    { quality = 2; price = 70; };
+    class rhs_mag_M433_HEDP 	{ quality = 2; price = 70; };
+    class rhs_mag_M397_HET 	    { quality = 2; price = 70; };
+    class 1Rnd_HE_Grenade_shell { quality = 1; price = 90; };
+    class rhs_VOG25 	        { quality = 2; price = 70; };
+    class rhs_VOG25p 	        { quality = 2; price = 70; };
+    class rhs_vg40tb 	        { quality = 2; price = 70; };

@@ -51,6 +51,14 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 		_itemName = "Halo Jump";
 		_quality = 2;
 	};
+	if (_item == 'CompDoc') then {
+		_itemName = "Buy Doctor skill";
+		_quality = 1;
+	};
+	if (_item == 'CompEng') then {
+		_itemName = "Buy Advanced Engineer skill";
+		_quality = 1;
+	};
 
 	_levelArray = getArray(missionConfigFile >> "CfgRespectLevels" >> "Respect");
 	_respectLevel = (_levelArray select _quality);
