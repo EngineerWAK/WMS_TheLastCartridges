@@ -83,7 +83,7 @@ _howmanyrestarts = 0;
 			_vehicleID = _x select 0;
 			_vehicleClassName = _x select 1;
 			_lastPos = _x select 2; //need to change this to _x select 2 (array in the array at vehicle first creation)
-			_lastPosAGL = ASLtoAGL (_x select 2);
+			_lastPosAGL = (ASLtoAGL (_x select 2));
 			//if (_lastPos select 2 < 0.25 || _lastPos select 2 > 50) then {_lastPos set [2,0.25]}; //this to prevent vehicles stuck in the sky or under the ground
 			_direction = _x select 3;
 			_damage = _x select 4;
@@ -105,7 +105,7 @@ _howmanyrestarts = 0;
 			_veh allowDamage false;
 			_veh setDir _direction;
 			//_veh setpos _lastPos;
-			if (_lastPosAGL select 2 < 0.25 || _lastPos select 2 > 50) then {
+			if ((_lastPosAGL select 2) < -0.2 || (_lastPos select 2) > 1000) then {
 					_lastPosAGL set [2,0.25];
 					_veh setpos _lastPosAGL;
 				}else{
