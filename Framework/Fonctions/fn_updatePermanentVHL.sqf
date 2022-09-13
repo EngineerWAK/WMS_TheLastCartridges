@@ -75,7 +75,7 @@ if !(_classname == TypeOf _vehicleObject) exitwith {
 	_vehicleObject setDamage 1; //that would be funny
 };
 
-_newPos = getPos _vehicleObject;
+_newPos = getPosASL _vehicleObject;
 _newDir = getDir _vehicleObject;
 _startDamage = _vehicleObject getVariable ['WMS_startDamage', 999]; //999 means the vehicle has been unloched and is now allowDamage true
 _newDam = 0;

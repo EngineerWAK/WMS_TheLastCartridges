@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private ["_permanentVhlArray","_playerArray","_targetUID","_vehicleID","_vehicleClassName","_lastPos","_direction","_damage","_weap","_ammo","_backpack","_item","_veh",
+private ["_permanentVhlArray","_playerArray","_targetUID","_vehicleID","_vehicleClassName","_lastPos","_lastPosAGL","_direction","_damage","_weap","_ammo","_backpack","_item","_veh",
 			"_TerritoriesArray","_flagID","_flagPos","_territoryLevel","_ownerUID","_buildingRightUID","_flagDir","_flag","_marker","_noRespawnItems","_forceMedicalFacilities"
 		];
 
@@ -30,6 +30,9 @@ if !(count _TerritoriesArray == 0) then {
 		{hideObjectGlobal _x} foreach _terrainobjects;
 
 		_flag = createVehicle ["rhsgref_serhat_radar", _flagPos, [], 1, "NONE"];//rhsgref_serhat_radar
+		if (surfaceIsWater _flagPos)then{
+			_flag setPosASL [_flagPos select 0, _flagPos select 1, 2.413];
+		};
 		_flag setDir _flagDir;
 		[_flag]call WMS_fnc_initFlagAddActions;
 		//_flag setVariable ["ace_rearm_isSupplyVehicle", true, true]; //do not work
@@ -80,7 +83,8 @@ _howmanyrestarts = 0;
 			_vehicleID = _x select 0;
 			_vehicleClassName = _x select 1;
 			_lastPos = _x select 2; //need to change this to _x select 2 (array in the array at vehicle first creation)
-			if (_lastPos select 2 < 0.25 || _lastPos select 2 > 50) then {_lastPos set [2,0.25]};
+			_lastPosAGL = ASLtoAGL (_x select 2);
+			//if (_lastPos select 2 < 0.25 || _lastPos select 2 > 50) then {_lastPos set [2,0.25]}; //this to prevent vehicles stuck in the sky or under the ground
 			_direction = _x select 3;
 			_damage = _x select 4;
 			_fuel = _x select 5;
@@ -100,7 +104,14 @@ _howmanyrestarts = 0;
 			WMS_permanentVehicleObjects pushBack _veh;
 			_veh allowDamage false;
 			_veh setDir _direction;
-			_veh setpos _lastPos;
+			//_veh setpos _lastPos;
+			if (_lastPosAGL select 2 < 0.25 || _lastPos select 2 > 50) then {
+					_lastPosAGL set [2,0.25];
+					_veh setpos _lastPosAGL;
+				}else{
+					_veh setposASL _lastPos; //WARNING!!! MOVING TO ASL POSITION
+				}; //this to prevent vehicles stuck in the sky or under the ground
+			
 			//_veh setDamage _damage;
 			_veh setVariable ["WMS_startDamage", _damage, true];
 			_veh setfuel _fuel;

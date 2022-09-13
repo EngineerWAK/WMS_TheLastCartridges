@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.638_2022SEP08_GitHub"; //Doctor & Engineer Skills to buy
+	name = "v1.642_2022SEP12_GitHub"; //AGL positions to ASL positions
 };
 
 class Extended_PreInit_EventHandlers {
@@ -341,11 +341,11 @@ class CfgOfficeTrader
 	};
 	CompDoc[] = 
 	{
-		7500; //Price to get Doctor Competence
+		7500 //Price to get Doctor Competence
 	};
 	CompEng[] = 
 	{
-		7500; //Price to get Adv Engineer Competence
+		7500 //Price to get Adv Engineer Competence
 	};
 	vehiclesManagement[] = 
 	{

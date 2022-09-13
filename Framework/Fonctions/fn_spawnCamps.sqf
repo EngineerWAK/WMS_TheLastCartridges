@@ -11,7 +11,7 @@
 //////////////////////////////////////////////////////////////////
 // [_flag, _posFlag, _dirFlag, _layout] call WMS_fnc_SpawnCamps;
 //////////////////////////////////////////////////////////////////
-private ["_objList","_objects","_bunkercamp","_compoRefPoint","_waterSources","_weaponSystemObjects"];
+private ["_objList","_objects","_bunkercamp","_compoRefPoint","_waterSources","_weaponSystemObjects","_waterWorldObjectASL"];
 params [
 	"_flagObject",
 	"_posFlag",
@@ -24,6 +24,11 @@ if (WMS_MissionDebug) then {diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _this = %
 _objList = [];
 _objects = [];
 
+_waterWorld = [
+	//["rhsgref_serhat_radar",[0,0,2.41],0]
+	["Land_PierWooden_01_ladder_F",[0.2,-4.8,0],180],
+	["Land_PierWooden_01_platform_F",[0.3,-1.2,0],0]
+	];
 _bunkercamp = [ 
 	["CamoNet_wdl_open_F",[0,0,0],46.8031],
 	["Land_BagBunker_Small_F",[-1.8912,3.94984,-0.1],178.3],
@@ -1235,8 +1240,8 @@ _FOB_70x70 = [
 	["Land_HelipadCircle_F",[20.5,-1.2,0],90],
 	["Land_HelipadCircle_F",[20.5,-21.2,0],90],
 	["Land_HelipadCircle_F",[20.3,19.2,0],90],
-	["Land_IRMaskingCover_01_F",[-22.8,25.3,0],90],
-	["Land_IRMaskingCover_01_F",[-8.9,27.1,0],270.6],
+	["Land_IRMaskingCover_01_F",[-22.8,25.3,0],90,"flat"],
+	["Land_IRMaskingCover_01_F",[-8.9,27.1,0],270.6,"flat"],
 	["Land_LampIndustrial_01_F",[4.5,35.2,0],0,"flat"],
 	//["Land_LampIndustrial_01_F",[-15.4,5,2.25],270,"flat"],
 	["Land_LampShabby_F",[-34.2,-1.1,0],90,"flat"],
@@ -1488,8 +1493,116 @@ _logisticpod = [
 	["Land_Flush_Light_red_F",[-0,10.9,0],0],
 	["Windsock_01_F",[-0.1,4.4,0],0,"flat"]
 	];
+_waterWorldLVL6 = [
+	["Box_IND_AmmoVeh_F",[7.1,6.3,2.42],180],
+	["Campfire_burning_F",[8.3,17.5,2.42],27.8],
+	["Land_BagBunker_Tower_F",[14.6,17.3,2.42],180],
+	["Land_ClothShelter_02_F",[7.2,18.9,2.42],180],
+	["Land_CncBarrier_stripes_F",[-1,42.2,2.41],0],
+	["Land_CncBarrier_stripes_F",[1.1,42.2,2.41],0],
+	["Land_CncBarrier_stripes_F",[29.4,-27.2,2.43],0],
+	["Land_CncBarrier_stripes_F",[26.8,-27.2,2.43],0],
+	["Land_CncBarrier_stripes_F",[12.5,2.4,2.42],0],
+	["Land_CncBarrier_stripes_F",[-0.7,5.3,2.42],0],
+	["Land_CncBarrier_stripes_F",[32,-27.2,2.43],0],
+	["Land_CncBarrier_stripes_F",[31.6,-7.8,2.43],0],
+	["Land_CncBarrier_stripes_F",[-27.2,-26.2,2.44],0],
+	["Land_CncBarrier_stripes_F",[-14,-6.9,2.44],0],
+	["Land_CncBarrier_stripes_F",[24.1,-27.2,2.43],0],
+	["Land_CncBarrier_stripes_F",[-24.5,-26.2,2.44],0],
+	["Land_CncBarrier_stripes_F",[18.4,-7.8,2.43],0],
+	["Land_CncBarrier_stripes_F",[21.5,-27.2,2.43],0],
+	["Land_CncBarrier_stripes_F",[-21.9,-26.2,2.44],0],
+	["Land_CncBarrier_stripes_F",[-16.6,-6.9,2.44],0],
+	["Land_CncBarrier_stripes_F",[18.9,-27.2,2.43],0],
+	["Land_CncBarrier_stripes_F",[-24.5,-6.9,2.44],0],
+	["Land_CncBarrier_stripes_F",[23.7,-7.9,2.43],0],
+	["Land_CncBarrier_stripes_F",[-14,-26.2,2.44],0],
+	["Land_CncBarrier_stripes_F",[-16.6,-26.2,2.44],0],
+	["Land_CncBarrier_stripes_F",[21.1,-7.9,2.43],0],
+	["Land_CncBarrier_stripes_F",[-19.2,-26.2,2.44],0],
+	["Land_CncBarrier_stripes_F",[5.5,21.8,2.42],0],
+	["Land_CncBarrier_stripes_F",[16.2,-27.2,2.43],0],
+	["Land_CncBarrier_stripes_F",[-21.9,-6.9,2.44],0],
+	["Land_CncBarrier_stripes_F",[26.3,-7.9,2.43],0],
+	["Land_CncBarrier_stripes_F",[-11.4,-26.2,2.44],0],
+	["Land_CncBarrier_stripes_F",[-27.2,-6.9,2.44],0],
+	["Land_CncBarrier_stripes_F",[14.5,-14.9,2.43],90],
+	["Land_CncBarrier_stripes_F",[-9.8,-18.6,2.44],90],
+	["Land_CncBarrier_stripes_F",[-2.1,20.7,2.42],90],
+	["Land_CncBarrier_stripes_F",[17.3,9,2.42],90],
+	["Land_CncBarrier_stripes_F",[-9.8,-10.8,2.44],90],
+	["Land_CncBarrier_stripes_F",[14.5,-12.3,2.43],90],
+	["Land_CncBarrier_stripes_F",[14.5,-9.7,2.43],90],
+	["Land_CncBarrier_stripes_F",[14.5,-17.5,2.43],90],
+	["Land_CncBarrier_stripes_F",[-2.1,6.4,2.42],90],
+	["Land_CncBarrier_stripes_F",[13.9,3.6,2.42],90],
+	["Land_CncBarrier_stripes_F",[-9.8,-16,2.44],90],
+	["Land_CncBarrier_stripes_F",[-9.8,-21.2,2.44],90],
+	["Land_CncBarrier_stripes_F",[-9.8,-23.8,2.44],90],
+	["Land_CncBarrier_stripes_F",[33.6,-16.9,2.43],90],
+	["Land_CncBarrier_stripes_F",[33.6,-24.8,2.43],90],
+	["Land_CncBarrier_stripes_F",[-2.2,40.9,2.41],90],
+	["Land_CncBarrier_stripes_F",[2.2,40.9,2.41],90],
+	["Land_CncBarrier_stripes_F",[33.6,-22.1,2.43],90],
+	["Land_CncBarrier_stripes_F",[33.6,-19.5,2.43],90],
+	["Land_CncBarrier_stripes_F",[14.5,-22.7,2.43],90],
+	["Land_CncBarrier_stripes_F",[-28.9,-24.3,2.44],90],
+	["Land_CncBarrier_stripes_F",[14.5,-25.3,2.43],90],
+	["Land_CncBarrier_stripes_F",[-28.9,-13.9,2.44],90],
+	["Land_CncBarrier_stripes_F",[33.6,-14.3,2.43],90],
+	["Land_CncBarrier_stripes_F",[-28.9,-21.7,2.44],90],
+	["Land_CncBarrier_stripes_F",[33.6,-11.8,2.43],90],
+	["Land_CncBarrier_stripes_F",[-28.9,-19.1,2.44],90],
+	["Land_CncBarrier_stripes_F",[-28.9,-16.5,2.44],90],
+	["Land_CncBarrier_stripes_F",[-28.9,-8.7,2.44],90],
+	["Land_CncBarrier_stripes_F",[-28.9,-11.3,2.44],90],
+	["Land_fs_feed_F",[17.7,-8.4,2.43],180],
+	["Land_fs_feed_F",[-13.4,-7.5,2.44],180],
+	["Land_GH_Stairs_F",[32.6,10.7,-1.78],90],
+	["Land_GH_Stairs_F",[-16.3,7.3,-1.68],270],
+	["Land_HBarrier_3_F",[10.4,3,2.42],0],
+	["Land_HBarrier_3_F",[3.1,21.3,2.42],0],
+	["Land_HBarrier_3_F",[-1.6,17.4,2.42],90],
+	["Land_HBarrier_3_F",[16.7,6.7,2.42],270],
+	["Land_HBarrier_3_F",[16.7,11.3,2.42],270],
+	["Land_HBarrier_5_F",[8.9,21.3,2.42],0],
+	["Land_HBarrier_5_F",[-1.6,10,2.42],90],
+	["Land_Medevac_house_V1_F",[5.5,5.1,2.42],180],
+	["Land_Pier_Box_F",[7.1,12.2,2.42],90],
+	["Land_Pier_Box_F",[24.6,-17.5,2.42],270],
+	["Land_Pier_Box_F",[-18.9,-16.5,2.43],270],
+	["Land_PierWooden_01_10m_noRails_F",[22.5,3.7,0],90],
+	["Land_PierWooden_01_10m_noRails_F",[15.6,-2.4,0],180],
+	["Land_PierWooden_01_10m_noRails_F",[-10.9,-1.4,0],180],
+	["Land_PierWooden_01_10m_noRails_F",[-6.1,14.3,0],270],
+	["Land_PierWooden_01_16m_F",[0,30.1,0],0],
+	["Land_PierWooden_01_dock_F",[33.2,8.4,0],90],
+	["Land_PierWooden_01_dock_F",[-16.9,9.6,0],270],
+	["Land_PierWooden_01_ladder_F",[43.7,3.7,0],90],
+	["Land_PierWooden_01_ladder_F",[-27.4,14.3,0],270],
+	["Land_PierWooden_01_platform_F",[0,39.1,0],0],
+	["Land_PierWooden_01_platform_F",[0,1.3,0],180],
+	["Land_PierWooden_02_16m_F",[24.7,-6.3,-2.38],90],
+	["Land_PierWooden_02_16m_F",[-19.9,-5.3,-2.38],90],
+	["Land_PierWooden_02_16m_F",[12.8,-17.8,-2.38],180],
+	["Land_PierWooden_02_16m_F",[-8,-17.1,-2.38],180],
+	["Land_PortableLight_single_F",[33.5,-26.6,2.43],136.5],
+	["Land_PortableLight_single_F",[-28.4,-25.8,2.44],223.2],
+	["Land_Sawmill_01_illuminati_tower_F",[9.8,4.7,2.42],0],
+	["Land_WaterTank_03_F",[3.2,6.4,2.42],180],
+	["Land_WoodenLog_F",[6.5,17.4,2.42],63.5],
+	["Land_WoodenLog_F",[7.6,19.3,2.42],150.7],
+	["Land_WoodenLog_F",[9.7,19,2.42],227.1],
+	["Land_WoodenShelter_01_F",[-0.1,20.7,2.42],0],
+	["Land_WoodenShelter_01_F",[0,0.1,2.92],180]
+];
+
 switch (tolower _layout) do
 {	//lvl 1
+	case "waterworld": {
+		_objects = _waterWorld;
+		};
 	case "bunkercamp": {
 		_objects = _bunkercamp;
 		};
@@ -1561,6 +1674,9 @@ switch (tolower _layout) do
 	case "logisticpod": {
 		_objects = _logisticpod;
 		};
+	case "waterworldlvl6": {
+		_objects = _waterWorldLVL6;
+		};
 	default { 
 		_objects = [["FirePlace_burning_F",[-2.66703,-5.399602,0],46.8]];
 		};
@@ -1569,6 +1685,7 @@ if (WMS_MissionDebug) then {diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _layout =
 _fastTravelers = _flagObject getVariable ["WMS_BaseFriends", []];
 _weaponSystemList = ["B_AAA_System_01_F","B_SAM_System_01_F","B_SAM_System_02_F","B_SAM_System_03_F","B_Radar_System_01_F"];
 _weaponSystemObjects = [];
+_waterWorldObjectASL = ["Land_QuayConcrete_01_20m_F","Land_QuayConcrete_01_20m_wall_F","Land_QuayConcrete_01_5m_ladder_F","Land_QuayConcrete_01_innerCorner_F","Land_QuayConcrete_01_outterCorner_F","Land_QuayConcrete_01_pier_F"];
 _waterSources = ["Land_ConcreteWell_02_F"];
 _ammoSources = ["Box_IND_AmmoVeh_F"];
 _forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
@@ -1578,14 +1695,18 @@ _compoRefPoint setDir _dirFlag;
 	_object = createVehicle [(_x select 0), [0,0,5000], [], 0, "CAN_COLLIDE"];
 	_object setdir _dirFlag + (_x select 2); 
 	_objectVectoriel = (_compoRefPoint modeltoworld  [(_x select 1 select 0),(_x select 1 select 1),0]);
-	_object setposATL [(_objectVectoriel select 0),(_objectVectoriel select 1),((_x select 1) select 2)];
-	_gradient = surfaceNormal position _object; 
-	if ((count _x) > 3 && {(_x select 3) == "flat"}) then {
-		_object setVectorUp [0,0,1];
-	}else {
-		_object setvectorup _gradient;
+	if(surfaceIsWater _objectVectoriel || (_x select 0) in _waterWorldObjectASL)then{
+		_object setposASL [(_objectVectoriel select 0),(_objectVectoriel select 1),((_x select 1) select 2)];
+	}else{
+		_object setposATL [(_objectVectoriel select 0),(_objectVectoriel select 1),((_x select 1) select 2)];
+		_gradient = surfaceNormal position _object; 
+		if ((count _x) > 3 && {(_x select 3) == "flat"}) then {
+			_object setVectorUp [0,0,1];
+		}else {
+			_object setvectorup _gradient;
+		};
 	};
-	if ((count _x) > 4) then {
+	if ((count _x) > 4) then { //useless
 		_objPos = position _object;
 		_object setpos [(_objPos select 0), (_objPos select 1), (_x select 4)];
 	};

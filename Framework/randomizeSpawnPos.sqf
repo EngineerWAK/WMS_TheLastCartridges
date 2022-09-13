@@ -19,6 +19,9 @@ _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnT
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
 	//"CustomRespawn"
+	if(((ASLtoATL _customRespawnPos) select 2) >= 0)then{
+		player setPosASL _customRespawnPos;
+	};
 	[player,WMS_client_customRespawnInv]call WMS_fnc_client_restoreLoadoutFromVar;
 	if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 	missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
@@ -72,4 +75,5 @@ if ((getPlayerUID player) in WMS_customRespawnList) then {
 };
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test
+_target execVM "InitPlayerSetTrait.sqf";
 if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|player respawned and ready to fight %1", time]};

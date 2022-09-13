@@ -9,6 +9,18 @@
 	] call ace_interact_menu_fnc_createAction; //(_this select 0) say3d 'GetToTheChoppa';
 ["rhsgref_serhat_radar", 0, ["ACE_MainActions"], _action0, true] call ace_interact_menu_fnc_addActionToClass;*/ //DO NOT WORK
 
+//full food&drink on fridges
+private _action0 = ["FridgeFoodAndDrink", "Eat And Drink", "", {
+		(_this select 1)setVariable ["acex_field_rations_hunger", 0, true];
+		(_this select 1)setVariable ["acex_field_rations_thirst", 0, true];
+		(_this select 1)setVariable ["WMS_hungryDude", false, true];
+	},{
+		(_this select 1)getVariable ["WMS_hungryDude", true]
+	}
+	] call ace_interact_menu_fnc_createAction;
+["Fridge_01_closed_F", 0, ["ACE_MainActions"], _action0, true] call ace_interact_menu_fnc_addActionToClass;
+//[this, 0, ["ACE_MainActions"], _action0, true] call ace_interact_menu_fnc_addActionToObject;
+
 //Cover H-60 with camonet
 private _action1 = ["CoverHatchet", "Cover H-60", "", {
 		[(_this select 0)]remoteExec ["WMS_fnc_HatchetCover", 2]

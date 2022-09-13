@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2555;
+		nextID=2563;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=128;
+		nextID=159;
 	};
 	class Camera
 	{
-		pos[]={8830.2051,509.69745,6515.0439};
-		dir[]={-0.029303461,-0.80015844,-0.59928596};
-		up[]={-0.039075464,0.59980422,-0.79915994};
-		aside[]={-0.99890763,-1.7355378e-006,0.048840057};
+		pos[]={11739.182,31.525358,3115.7817};
+		dir[]={0.77979016,-0.2248674,-0.58430171};
+		up[]={0.17996502,0.97438419,-0.13484953};
+		aside[]={-0.5996576,2.6241469e-007,-0.80028468};
 	};
 };
 binarizationWanted=0;
@@ -774,7 +774,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=522;
+		items=492;
 		class Item0
 		{
 			dataType="Marker";
@@ -2071,7 +2071,7 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=1;
+				items=31;
 				class Item0
 				{
 					dataType="Object";
@@ -2100,6 +2100,2896 @@ class Mission
 					id=84;
 					type="I_Survivor_F";
 					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7125.8369,3.6661277,8052.2207};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=461;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7127.292,3.6704233,8052.3765};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=463;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7128.8086,3.6714389,8052.5303};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=465;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7130.356,3.6714389,8052.7168};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=467;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7132.2441,3.6747813,8052.8086};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=469;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7133.8853,3.6721849,8052.9644};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=471;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7135.4941,3.6681383,8053.0566};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=473;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7125.9917,3.6481869,8048.8149};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=484;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7127.6631,3.6496592,8048.9395};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=485;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7129.1182,3.6538022,8049.0952};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=486;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7130.6348,3.6550326,8049.249};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=487;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7132.1821,3.656527,8049.4355};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=488;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7134.0703,3.6614475,8049.5273};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=489;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7135.7114,3.6585655,8049.6831};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=490;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7137.3203,3.6573741,8049.7754};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=491;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7140.0293,3.6614389,8053.4341};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=475;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7141.6987,3.6614392,8053.5845};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=476;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item18
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7143.1509,3.6614392,8053.7637};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=477;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7144.665,3.6614392,8053.9414};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=478;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7146.209,3.6656055,8054.1523};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=479;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7148.0957,3.6693738,8054.2744};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=480;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7149.7344,3.6698568,8054.4561};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=481;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7151.3418,3.6701694,8054.5737};
+						angles[]={0,6.1513352,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=482;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7139.2085,3.6592736,8050.4873};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=493;
+					type="I_Survivor_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item25
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7140.8799,3.6614389,8050.6118};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=494;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item26
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7142.335,3.6614389,8050.7676};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=495;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item27
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7143.8516,3.6614389,8050.9214};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=496;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item28
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7145.3989,3.6614389,8051.1079};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=497;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item29
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7147.2871,3.6614389,8051.1997};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=498;
+					type="I_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item30
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7148.9282,3.661588,8051.3555};
+						angles[]={0,6.1671906,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
+						presence=0;
+						presenceCondition="false";
+						description="LoneWolf";
+						isPlayable=1;
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+						class Inventory
+						{
+							map="ItemMap";
+						};
+					};
+					id=499;
+					type="I_Survivor_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6729,3404 +9619,6 @@ class Mission
 		};
 		class Item251
 		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7125.8369,3.6661277,8052.2207};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=461;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=591;
-			atlOffset=2.3841858e-007;
-		};
-		class Item252
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7127.292,3.6704233,8052.3765};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=463;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=592;
-		};
-		class Item253
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7128.8086,3.6714389,8052.5303};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=465;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=593;
-		};
-		class Item254
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7130.356,3.6714389,8052.7168};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=467;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=594;
-		};
-		class Item255
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7132.2441,3.6747813,8052.8086};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=469;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=595;
-		};
-		class Item256
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7133.8853,3.6721849,8052.9644};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=471;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=596;
-		};
-		class Item257
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7135.4941,3.6681383,8053.0566};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=473;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=597;
-		};
-		class Item258
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7140.0293,3.6614389,8053.4341};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=475;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=598;
-		};
-		class Item259
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7141.6987,3.6614392,8053.5845};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=476;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=789;
-			atlOffset=2.3841858e-007;
-		};
-		class Item260
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7143.1509,3.6614392,8053.7637};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=477;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=790;
-			atlOffset=2.3841858e-007;
-		};
-		class Item261
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7144.665,3.6614392,8053.9414};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=478;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=791;
-			atlOffset=2.3841858e-007;
-		};
-		class Item262
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7146.209,3.6656055,8054.1523};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=479;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=792;
-			atlOffset=2.3841858e-007;
-		};
-		class Item263
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7148.0957,3.6693738,8054.2744};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=480;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=793;
-			atlOffset=2.3841858e-007;
-		};
-		class Item264
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7149.7344,3.6698568,8054.4561};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=481;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=794;
-		};
-		class Item265
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7151.3418,3.6701694,8054.5737};
-						angles[]={0,6.1513352,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=482;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=795;
-		};
-		class Item266
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7125.9917,3.6481869,8048.8149};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=484;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=796;
-		};
-		class Item267
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7127.6631,3.6496592,8048.9395};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=485;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=797;
-		};
-		class Item268
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7129.1182,3.6538022,8049.0952};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=486;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=798;
-		};
-		class Item269
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7130.6348,3.6550326,8049.249};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=487;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=799;
-		};
-		class Item270
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7132.1821,3.656527,8049.4355};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=488;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=800;
-			atlOffset=2.3841858e-007;
-		};
-		class Item271
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7134.0703,3.6614475,8049.5273};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=489;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=801;
-		};
-		class Item272
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7135.7114,3.6585655,8049.6831};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=490;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=802;
-			atlOffset=2.3841858e-007;
-		};
-		class Item273
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7137.3203,3.6573741,8049.7754};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=491;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=803;
-			atlOffset=2.3841858e-007;
-		};
-		class Item274
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7139.2085,3.6592736,8050.4873};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=493;
-					type="I_Survivor_F";
-					atlOffset=2.3841858e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=804;
-			atlOffset=2.3841858e-007;
-		};
-		class Item275
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7140.8799,3.6614389,8050.6118};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=494;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=805;
-		};
-		class Item276
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7142.335,3.6614389,8050.7676};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=495;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=806;
-		};
-		class Item277
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7143.8516,3.6614389,8050.9214};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=496;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=807;
-		};
-		class Item278
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7145.3989,3.6614389,8051.1079};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=497;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=808;
-		};
-		class Item279
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7147.2871,3.6614389,8051.1997};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=498;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=810;
-		};
-		class Item280
-		{
-			dataType="Group";
-			side="Independent";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7148.9282,3.661588,8051.3555};
-						angles[]={0,6.1671906,0};
-					};
-					side="Independent";
-					flags=7;
-					class Attributes
-					{
-						init="this setVariable [""_spawnedPlayerReadyToFight"", false,false];";
-						presence=0;
-						presenceCondition="false";
-						description="LoneWolf";
-						isPlayable=1;
-						disableSimulation=1;
-						ignoreByDynSimulGrid=1;
-						class Inventory
-						{
-							map="ItemMap";
-						};
-					};
-					id=499;
-					type="I_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04GRE";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=811;
-		};
-		class Item281
-		{
-			dataType="Marker";
-			position[]={14266.086,-0.026371956,807.9939};
-			name="MKR_EXCLUSION_Legend";
-			text="Exclusion Zones";
-			markerType="ELLIPSE";
-			type="ellipse";
-			colorName="ColorRed";
-			fillName="Border";
-			a=250;
-			b=250;
-			drawBorder=1;
-			id=812;
-			atlOffset=57.671143;
-		};
-		class Item282
-		{
-			dataType="Marker";
-			position[]={14264.133,46.680126,1347.8186};
-			name="MKR_SPN_Legend";
-			text="Spawn Zones";
-			markerType="ELLIPSE";
-			type="ellipse";
-			colorName="ColorWEST";
-			fillName="Border";
-			a=250;
-			b=250;
-			drawBorder=1;
-			id=813;
-			atlOffset=96.042145;
-		};
-		class Item283
-		{
-			dataType="Marker";
-			position[]={14264.07,32.784283,1890.1848};
-			name="MKR_Traders_Legend";
-			text="Traders  Zones";
-			markerType="ELLIPSE";
-			type="ellipse";
-			colorName="ColorGreen";
-			fillName="Border";
-			a=250;
-			b=250;
-			drawBorder=1;
-			id=814;
-			atlOffset=78.428452;
-		};
-		class Item284
-		{
-			dataType="Marker";
-			position[]={14264.021,32.882504,1888.9641};
-			name="marker_24";
-			text="Traders Zone";
-			type="mil_dot";
-			colorName="ColorGreen";
-			id=815;
-			atlOffset=78.686752;
-		};
-		class Item285
-		{
-			dataType="Marker";
-			position[]={14264.277,46.693508,1346.0071};
-			name="marker_25";
-			text="Spawn Zone";
-			type="mil_dot";
-			colorName="ColorWEST";
-			id=816;
-			atlOffset=96.229576;
-		};
-		class Item286
-		{
-			dataType="Marker";
-			position[]={14265.654,-0.099431038,809.2951};
-			name="marker_26";
-			text="Exclusion Zone";
-			type="mil_dot";
-			colorName="ColorRed";
-			id=817;
-			atlOffset=57.442078;
-		};
-		class Item287
-		{
-			dataType="Marker";
-			position[]={14265.247,18.412317,267.52081};
-			name="MKR_Traders_Legend_1";
-			text="Radiations  Zone";
-			markerType="ELLIPSE";
-			type="ellipse";
-			colorName="ColorBlack";
-			fillName="Border";
-			a=250;
-			b=250;
-			drawBorder=1;
-			id=818;
-			atlOffset=77.902412;
-		};
-		class Item288
-		{
-			dataType="Marker";
-			position[]={14265.197,13.366313,266.29987};
-			name="marker_27";
-			text="Radiations Zone";
-			type="mil_dot";
-			colorName="ColorBlack";
-			id=819;
-			atlOffset=72.844627;
-		};
-		class Item289
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -10159,7 +9651,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item290
+		class Item252
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10193,7 +9685,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item291
+		class Item253
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10227,7 +9719,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item292
+		class Item254
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10261,7 +9753,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item293
+		class Item255
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10295,7 +9787,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item294
+		class Item256
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10329,7 +9821,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item295
+		class Item257
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10363,7 +9855,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item296
+		class Item258
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10397,7 +9889,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item297
+		class Item259
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10431,7 +9923,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item298
+		class Item260
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10465,7 +9957,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item299
+		class Item261
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10480,7 +9972,7 @@ class Mission
 			id=833;
 			type="Land_CncBarrier_stripes_F";
 		};
-		class Item300
+		class Item262
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10529,7 +10021,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item301
+		class Item263
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10563,7 +10055,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item302
+		class Item264
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10597,7 +10089,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item303
+		class Item265
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10631,7 +10123,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item304
+		class Item266
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10665,7 +10157,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item305
+		class Item267
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10699,7 +10191,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item306
+		class Item268
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10733,7 +10225,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item307
+		class Item269
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10767,7 +10259,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item308
+		class Item270
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10802,7 +10294,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item309
+		class Item271
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10837,7 +10329,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item310
+		class Item272
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10872,7 +10364,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item311
+		class Item273
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10908,7 +10400,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item312
+		class Item274
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10943,7 +10435,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item313
+		class Item275
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10978,7 +10470,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item314
+		class Item276
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11013,7 +10505,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item315
+		class Item277
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11048,7 +10540,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item316
+		class Item278
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11083,7 +10575,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item317
+		class Item279
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11118,7 +10610,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item318
+		class Item280
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11152,7 +10644,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item319
+		class Item281
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11186,7 +10678,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item320
+		class Item282
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11222,7 +10714,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item321
+		class Item283
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11257,7 +10749,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item322
+		class Item284
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11292,7 +10784,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item323
+		class Item285
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11328,7 +10820,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item324
+		class Item286
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11364,7 +10856,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item325
+		class Item287
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11399,7 +10891,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item326
+		class Item288
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11434,7 +10926,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item327
+		class Item289
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11469,7 +10961,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item328
+		class Item290
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11484,8 +10976,25 @@ class Mission
 			};
 			id=870;
 			type="Land_TinWall_02_l_8m_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item329
+		class Item291
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11501,8 +11010,25 @@ class Mission
 			id=871;
 			type="Land_TinWall_02_l_8m_F";
 			atlOffset=4.7683716e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item330
+		class Item292
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11517,8 +11043,25 @@ class Mission
 			};
 			id=872;
 			type="Land_TinWall_02_l_8m_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item331
+		class Item293
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11534,8 +11077,25 @@ class Mission
 			id=873;
 			type="Land_TinWall_02_l_8m_F";
 			atlOffset=4.7683716e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item332
+		class Item294
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11550,8 +11110,25 @@ class Mission
 			};
 			id=874;
 			type="Land_TinWall_02_l_8m_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item333
+		class Item295
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11566,8 +11143,25 @@ class Mission
 			};
 			id=875;
 			type="Land_TinWall_02_l_8m_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item334
+		class Item296
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11584,7 +11178,7 @@ class Mission
 			type="MapBoard_altis_F";
 			atlOffset=0.050707817;
 		};
-		class Item335
+		class Item297
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11601,7 +11195,7 @@ class Mission
 			type="Land_MapBoard_Enoch_F";
 			atlOffset=0.2173233;
 		};
-		class Item336
+		class Item298
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11618,7 +11212,7 @@ class Mission
 			type="MapBoard_Tanoa_F";
 			atlOffset=0.2173233;
 		};
-		class Item337
+		class Item299
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11633,14 +11227,31 @@ class Mission
 			};
 			id=879;
 			type="Land_TinWall_02_l_8m_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item338
+		class Item300
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11777.445,5.4742551,3122.0991};
-				angles[]={0,0.63582599,0};
+				position[]={11777.445,5.4746728,3122.0991};
+				angles[]={0,0.63582343,0};
 			};
 			side="Empty";
 			flags=4;
@@ -11649,14 +11260,32 @@ class Mission
 			};
 			id=880;
 			type="Land_CncBarrier_stripes_F";
+			atlOffset=0.00041770935;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item339
+		class Item301
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11778.704,5.4742479,3125.6941};
-				angles[]={0,0.63582599,0};
+				position[]={11778.704,5.4746728,3125.6941};
+				angles[]={0,0.63582343,0};
 			};
 			side="Empty";
 			flags=4;
@@ -11665,8 +11294,26 @@ class Mission
 			};
 			id=881;
 			type="Land_CncBarrier_stripes_F";
+			atlOffset=0.00042486191;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item340
+		class Item302
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11682,7 +11329,7 @@ class Mission
 			id=883;
 			type="Land_CampingTable_F";
 		};
-		class Item341
+		class Item303
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11698,7 +11345,7 @@ class Mission
 			id=884;
 			type="Land_CampingTable_small_F";
 		};
-		class Item342
+		class Item304
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11714,7 +11361,7 @@ class Mission
 			id=885;
 			type="Land_WoodenTable_large_F";
 		};
-		class Item343
+		class Item305
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11730,7 +11377,7 @@ class Mission
 			id=886;
 			type="Land_WoodenTable_small_F";
 		};
-		class Item344
+		class Item306
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11747,7 +11394,7 @@ class Mission
 			type="Land_EngineCrane_01_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item345
+		class Item307
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11763,7 +11410,7 @@ class Mission
 			type="Land_Portable_generator_F";
 			atlOffset=0.21858025;
 		};
-		class Item346
+		class Item308
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11779,7 +11426,7 @@ class Mission
 			id=889;
 			type="Land_TentLamp_01_standing_F";
 		};
-		class Item347
+		class Item309
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11795,7 +11442,7 @@ class Mission
 			id=890;
 			type="Land_PortableLight_02_double_yellow_F";
 		};
-		class Item348
+		class Item310
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11811,7 +11458,7 @@ class Mission
 			id=891;
 			type="Land_PortableLight_02_double_yellow_F";
 		};
-		class Item349
+		class Item311
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11827,7 +11474,7 @@ class Mission
 			type="Land_Camping_Light_F";
 			atlOffset=4.7683716e-007;
 		};
-		class Item350
+		class Item312
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11861,7 +11508,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item351
+		class Item313
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11894,7 +11541,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item352
+		class Item314
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11911,7 +11558,7 @@ class Mission
 			type="Land_PortableLight_02_double_yellow_F";
 			atlOffset=2.3841858e-007;
 		};
-		class Item353
+		class Item315
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11944,7 +11591,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item354
+		class Item316
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11977,7 +11624,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item355
+		class Item317
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12011,7 +11658,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item356
+		class Item318
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12044,7 +11691,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item357
+		class Item319
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12077,7 +11724,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item358
+		class Item320
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12110,7 +11757,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item359
+		class Item321
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12143,7 +11790,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item360
+		class Item322
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12158,20 +11805,18 @@ class Mission
 			id=903;
 			type="FirePlace_burning_F";
 		};
-		class Item361
+		class Item323
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6956.2437,3.1784866,7152.584};
-				angles[]={0,3.1072247,0};
+				position[]={6956.2441,3.1784866,7152.584};
+				angles[]={0,3.1072271,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
-				disableSimulation=1;
 			};
 			id=906;
 			type="Fridge_01_closed_F";
@@ -12193,7 +11838,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item362
+		class Item324
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12228,7 +11873,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item363
+		class Item325
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12262,7 +11907,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item364
+		class Item326
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12297,7 +11942,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item365
+		class Item327
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12331,7 +11976,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item366
+		class Item328
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12343,8 +11988,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
-				disableSimulation=1;
 			};
 			id=913;
 			type="Fridge_01_closed_F";
@@ -12366,7 +12009,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item367
+		class Item329
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12401,7 +12044,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item368
+		class Item330
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12437,7 +12080,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item369
+		class Item331
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12473,7 +12116,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item370
+		class Item332
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12509,7 +12152,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item371
+		class Item333
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12521,8 +12164,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
-				disableSimulation=1;
 			};
 			id=920;
 			type="Fridge_01_closed_F";
@@ -12545,7 +12186,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item372
+		class Item334
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12580,7 +12221,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item373
+		class Item335
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12616,7 +12257,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item374
+		class Item336
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12652,7 +12293,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item375
+		class Item337
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12687,7 +12328,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item376
+		class Item338
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12699,8 +12340,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
-				disableSimulation=1;
 			};
 			id=927;
 			type="Fridge_01_closed_F";
@@ -12722,7 +12361,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item377
+		class Item339
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12757,7 +12396,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item378
+		class Item340
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12792,7 +12431,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item379
+		class Item341
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12827,7 +12466,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item380
+		class Item342
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12862,7 +12501,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item381
+		class Item343
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12874,8 +12513,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
-				disableSimulation=1;
 			};
 			id=934;
 			type="Fridge_01_closed_F";
@@ -12897,7 +12534,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item382
+		class Item344
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12933,7 +12570,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item383
+		class Item345
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12968,7 +12605,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item384
+		class Item346
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13003,7 +12640,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item385
+		class Item347
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13038,7 +12675,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item386
+		class Item348
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13049,8 +12686,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
-				disableSimulation=1;
 			};
 			id=941;
 			type="Fridge_01_closed_F";
@@ -13073,7 +12708,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item387
+		class Item349
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13109,7 +12744,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item388
+		class Item350
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13145,7 +12780,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item389
+		class Item351
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13181,7 +12816,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item390
+		class Item352
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13217,7 +12852,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item391
+		class Item353
 		{
 			dataType="Layer";
 			name="DFO_Start";
@@ -13717,7 +13352,7 @@ class Mission
 			id=995;
 			atlOffset=1.6993098;
 		};
-		class Item392
+		class Item354
 		{
 			dataType="Layer";
 			name="TheLastCartridges_traders_assets";
@@ -17920,14 +17555,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_05";
 														};
 													};
 												};
@@ -17972,14 +17607,14 @@ class Mission
 												};
 												class Attribute5
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_05";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -18100,14 +17735,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_05";
 														};
 													};
 												};
@@ -18152,14 +17787,14 @@ class Mission
 												};
 												class Attribute5
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_05";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -19279,7 +18914,7 @@ class Mission
 			id=1030;
 			atlOffset=84.532692;
 		};
-		class Item393
+		class Item355
 		{
 			dataType="Layer";
 			name="DFO_Start";
@@ -19786,7 +19421,7 @@ class Mission
 			id=1099;
 			atlOffset=1.5739269;
 		};
-		class Item394
+		class Item356
 		{
 			dataType="Layer";
 			name="DFO_Start";
@@ -20311,7 +19946,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={7626.9717,24.545061,3116.2195};
-								angles[]={-0,5.6614156,0};
+								angles[]={0,5.6614156,0};
 							};
 							side="Empty";
 							flags=4;
@@ -20321,6 +19956,7 @@ class Mission
 							};
 							id=2510;
 							type="Land_TripodScreen_01_large_F";
+							atlOffset=0.0031929016;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -20345,7 +19981,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={7626.2314,24.847816,3113.2627};
-								angles[]={-0,4.4285383,0};
+								angles[]={0,4.4285383,0};
 							};
 							side="Empty";
 							class Attributes
@@ -20353,7 +19989,7 @@ class Mission
 							};
 							id=2511;
 							type="B_Slingload_01_Ammo_F";
-							atlOffset=55.147125;
+							atlOffset=55.145702;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -20378,7 +20014,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={7619.7231,23.501894,3127.5046};
-								angles[]={-0,4.441504,0};
+								angles[]={0,4.441504,0};
 							};
 							side="Empty";
 							flags=4;
@@ -20405,7 +20041,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={7604.332,24.585707,3138.0874};
-								angles[]={0,5.279881,-0};
+								angles[]={0,5.279881,0};
 							};
 							side="Empty";
 							flags=5;
@@ -20421,7 +20057,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={7624.6665,25.228104,3143.8804};
-								angles[]={0,0.46266472,-0};
+								angles[]={0,0.46266472,0};
 							};
 							side="Empty";
 							flags=1;
@@ -20532,7 +20168,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={12043.872,3.3800001,2556.2712};
-								angles[]={-0,2.6369481,0};
+								angles[]={0,2.6369481,0};
 							};
 							side="Empty";
 							flags=4;
@@ -20579,7 +20215,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={12099.243,7.3765087,2503.9678};
-								angles[]={-0,4.8027115,0.02666023};
+								angles[]={0,4.8027115,0.02666023};
 							};
 							side="Empty";
 							flags=4;
@@ -21096,7 +20732,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={1907.2917,4.2800002,6519.3784};
-								angles[]={-0,0.0064820498,0};
+								angles[]={0,0.0064820498,0};
 							};
 							side="Empty";
 							flags=4;
@@ -21895,7 +21531,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={12278.96,10.64,13974.196};
-								angles[]={-0,2.6589661,0};
+								angles[]={0,2.6589661,0};
 							};
 							side="Empty";
 							flags=4;
@@ -21989,7 +21625,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={13732.167,2.55,11838.344};
-								angles[]={-0,3.4935677,0};
+								angles[]={0,3.4935677,0};
 							};
 							side="Empty";
 							flags=4;
@@ -22036,7 +21672,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={13296.939,2.55,11995.545};
-								angles[]={-0,5.0869884,0};
+								angles[]={0,5.0869884,0};
 							};
 							side="Empty";
 							flags=4;
@@ -22083,7 +21719,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={12272.75,181.19,10370.481};
-								angles[]={-0,2.6369481,0};
+								angles[]={0,2.6369481,0};
 							};
 							side="Empty";
 							flags=4;
@@ -22130,7 +21766,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={11880.169,147.9382,10244.777};
-								angles[]={-0,6.2417035,6.272521};
+								angles[]={0,6.2417035,6.272521};
 							};
 							side="Empty";
 							flags=4;
@@ -22234,6 +21870,7 @@ class Mission
 							};
 							id=2554;
 							type="Land_HelipadCircle_F";
+							atlOffset=7.6293945e-006;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -22273,7 +21910,7 @@ class Mission
 			id=1168;
 			atlOffset=-101.81381;
 		};
-		class Item395
+		class Item357
 		{
 			dataType="Layer";
 			name="DFO_Start";
@@ -22774,7 +22411,7 @@ class Mission
 			id=1214;
 			atlOffset=1.5588236;
 		};
-		class Item396
+		class Item358
 		{
 			dataType="Layer";
 			name="OffshorePlatform";
@@ -29151,7 +28788,7 @@ class Mission
 			id=1894;
 			atlOffset=70.681839;
 		};
-		class Item397
+		class Item359
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -29217,14 +28854,14 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item398
+		class Item360
 		{
 			dataType="Layer";
 			name="TheLastCartridges_Spawn_Objects";
 			id=1899;
 			atlOffset=60.779999;
 		};
-		class Item399
+		class Item361
 		{
 			dataType="Layer";
 			name="TheLastCartridges_Spawn_Objects";
@@ -29332,7 +28969,7 @@ class Mission
 			id=1903;
 			atlOffset=0.56030035;
 		};
-		class Item400
+		class Item362
 		{
 			dataType="Layer";
 			name="TheLastCartridges_Spawn_Objects";
@@ -29440,7 +29077,7 @@ class Mission
 			id=1907;
 			atlOffset=0.53179169;
 		};
-		class Item401
+		class Item363
 		{
 			dataType="Layer";
 			name="TheLastCartridges_Spawn_Objects";
@@ -29548,7 +29185,7 @@ class Mission
 			id=1911;
 			atlOffset=0.14301491;
 		};
-		class Item402
+		class Item364
 		{
 			dataType="Layer";
 			name="TheLastCartridges_Spawn_Objects";
@@ -30174,7 +29811,7 @@ class Mission
 			id=1915;
 			atlOffset=26.555737;
 		};
-		class Item403
+		class Item365
 		{
 			dataType="Layer";
 			name="TheLastCartridges_OldBunkers";
@@ -30718,7 +30355,7 @@ class Mission
 			id=1960;
 			atlOffset=-0.015909433;
 		};
-		class Item404
+		class Item366
 		{
 			dataType="Layer";
 			name="TheLastCartridges_OldBunkers2";
@@ -31060,7 +30697,7 @@ class Mission
 			id=1979;
 			atlOffset=26.284763;
 		};
-		class Item405
+		class Item367
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31094,7 +30731,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item406
+		class Item368
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31127,7 +30764,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item407
+		class Item369
 		{
 			dataType="Object";
 			class PositionInfo
@@ -31144,7 +30781,7 @@ class Mission
 			type="Land_PillboxBunker_01_hex_F";
 			atlOffset=-0.40428925;
 		};
-		class Item408
+		class Item370
 		{
 			dataType="Layer";
 			name="TheLastCartridges_CheckPoint";
@@ -31778,7 +31415,7 @@ class Mission
 			id=2022;
 			atlOffset=0.098166466;
 		};
-		class Item409
+		class Item371
 		{
 			dataType="Layer";
 			name="TheLastCartridges_CheckPoint";
@@ -32409,7 +32046,7 @@ class Mission
 			id=2064;
 			atlOffset=0.12821198;
 		};
-		class Item410
+		class Item372
 		{
 			dataType="Layer";
 			name="TheLastCartridges_OldBunkers2";
@@ -32706,7 +32343,7 @@ class Mission
 			id=2083;
 			atlOffset=0.070672631;
 		};
-		class Item411
+		class Item373
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32722,7 +32359,7 @@ class Mission
 			id=2084;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item412
+		class Item374
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32738,7 +32375,7 @@ class Mission
 			id=2085;
 			type="Land_HBarrier_01_line_3_green_F";
 		};
-		class Item413
+		class Item375
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32754,7 +32391,7 @@ class Mission
 			id=2086;
 			type="Land_Cargo_HQ_V4_F";
 		};
-		class Item414
+		class Item376
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32770,7 +32407,7 @@ class Mission
 			id=2087;
 			type="Land_Cargo_House_V4_F";
 		};
-		class Item415
+		class Item377
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32786,7 +32423,7 @@ class Mission
 			id=2088;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item416
+		class Item378
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32803,7 +32440,7 @@ class Mission
 			type="Land_Cargo_Tower_V4_F";
 			atlOffset=3.8146973e-006;
 		};
-		class Item417
+		class Item379
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32819,7 +32456,7 @@ class Mission
 			id=2090;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item418
+		class Item380
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32835,7 +32472,7 @@ class Mission
 			id=2092;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item419
+		class Item381
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32851,7 +32488,7 @@ class Mission
 			id=2093;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item420
+		class Item382
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32867,7 +32504,7 @@ class Mission
 			id=2094;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item421
+		class Item383
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32883,7 +32520,7 @@ class Mission
 			id=2095;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item422
+		class Item384
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32899,7 +32536,7 @@ class Mission
 			id=2096;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item423
+		class Item385
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32915,7 +32552,7 @@ class Mission
 			id=2097;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item424
+		class Item386
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32931,7 +32568,7 @@ class Mission
 			id=2098;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item425
+		class Item387
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32947,7 +32584,7 @@ class Mission
 			id=2099;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item426
+		class Item388
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32963,7 +32600,7 @@ class Mission
 			id=2100;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item427
+		class Item389
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32979,7 +32616,7 @@ class Mission
 			id=2101;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item428
+		class Item390
 		{
 			dataType="Object";
 			class PositionInfo
@@ -32995,7 +32632,7 @@ class Mission
 			id=2103;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item429
+		class Item391
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33011,7 +32648,7 @@ class Mission
 			id=2104;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item430
+		class Item392
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33027,7 +32664,7 @@ class Mission
 			id=2105;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item431
+		class Item393
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33043,7 +32680,7 @@ class Mission
 			id=2106;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item432
+		class Item394
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33059,7 +32696,7 @@ class Mission
 			id=2107;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item433
+		class Item395
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33075,7 +32712,7 @@ class Mission
 			id=2108;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item434
+		class Item396
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33091,7 +32728,7 @@ class Mission
 			id=2109;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item435
+		class Item397
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33107,7 +32744,7 @@ class Mission
 			id=2112;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item436
+		class Item398
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33123,7 +32760,7 @@ class Mission
 			id=2113;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item437
+		class Item399
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33139,7 +32776,7 @@ class Mission
 			id=2114;
 			type="Land_Cargo_House_V4_F";
 		};
-		class Item438
+		class Item400
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33155,7 +32792,7 @@ class Mission
 			id=2115;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item439
+		class Item401
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33171,7 +32808,7 @@ class Mission
 			id=2116;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item440
+		class Item402
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33187,7 +32824,7 @@ class Mission
 			id=2117;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item441
+		class Item403
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33203,7 +32840,7 @@ class Mission
 			id=2118;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item442
+		class Item404
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33219,7 +32856,7 @@ class Mission
 			id=2119;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item443
+		class Item405
 		{
 			dataType="Object";
 			class PositionInfo
@@ -33235,7 +32872,7 @@ class Mission
 			id=2120;
 			type="Land_Cargo_House_V4_F";
 		};
-		class Item444
+		class Item406
 		{
 			dataType="Layer";
 			name="TheLastCartridges_OldBunkers";
@@ -33782,7 +33419,7 @@ class Mission
 			id=2153;
 			atlOffset=0.064009666;
 		};
-		class Item445
+		class Item407
 		{
 			dataType="Marker";
 			position[]={1308.7194,7.9810357,8119.3413};
@@ -33790,7 +33427,7 @@ class Mission
 			type="loc_Bunker";
 			id=2154;
 		};
-		class Item446
+		class Item408
 		{
 			dataType="Layer";
 			name="TheLastCartridges_CheckPoint";
@@ -34419,14 +34056,14 @@ class Mission
 			id=2193;
 			atlOffset=0.017269135;
 		};
-		class Item447
+		class Item409
 		{
 			dataType="Layer";
 			name="TheLastCartridges_OldBunkers2";
 			id=2212;
 			atlOffset=60.779999;
 		};
-		class Item448
+		class Item410
 		{
 			dataType="Layer";
 			name="TheLastCartridges_OldBunkers2";
@@ -34726,7 +34363,7 @@ class Mission
 			id=2231;
 			atlOffset=0.31669998;
 		};
-		class Item449
+		class Item411
 		{
 			dataType="Layer";
 			name="TheLastCartridges_CheckPoint";
@@ -35359,7 +34996,7 @@ class Mission
 			id=2270;
 			atlOffset=0.20688057;
 		};
-		class Item450
+		class Item412
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35374,7 +35011,7 @@ class Mission
 			id=2271;
 			type="Land_Cargo_HQ_V4_F";
 		};
-		class Item451
+		class Item413
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35390,7 +35027,7 @@ class Mission
 			id=2272;
 			type="Land_Cargo_House_V4_F";
 		};
-		class Item452
+		class Item414
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35406,7 +35043,7 @@ class Mission
 			id=2273;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item453
+		class Item415
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35422,7 +35059,7 @@ class Mission
 			id=2274;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item454
+		class Item416
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35438,7 +35075,7 @@ class Mission
 			id=2276;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item455
+		class Item417
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35454,7 +35091,7 @@ class Mission
 			id=2277;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item456
+		class Item418
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35470,7 +35107,7 @@ class Mission
 			id=2278;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item457
+		class Item419
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35486,7 +35123,7 @@ class Mission
 			id=2279;
 			type="Land_Cargo_House_V4_F";
 		};
-		class Item458
+		class Item420
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35502,7 +35139,7 @@ class Mission
 			id=2280;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item459
+		class Item421
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35518,7 +35155,7 @@ class Mission
 			id=2281;
 			type="Land_Cargo_HQ_V4_F";
 		};
-		class Item460
+		class Item422
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35535,7 +35172,7 @@ class Mission
 			type="Land_Cargo_House_V4_F";
 			atlOffset=-3.0517578e-005;
 		};
-		class Item461
+		class Item423
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35551,7 +35188,7 @@ class Mission
 			id=2283;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item462
+		class Item424
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35567,7 +35204,7 @@ class Mission
 			id=2284;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item463
+		class Item425
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35583,7 +35220,7 @@ class Mission
 			id=2285;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item464
+		class Item426
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35600,7 +35237,7 @@ class Mission
 			type="Land_Cargo_Patrol_V4_F";
 			atlOffset=-3.0517578e-005;
 		};
-		class Item465
+		class Item427
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35616,7 +35253,7 @@ class Mission
 			id=2287;
 			type="Land_Cargo_Patrol_V4_F";
 		};
-		class Item466
+		class Item428
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35632,7 +35269,7 @@ class Mission
 			id=2288;
 			type="Land_Cargo_House_V4_F";
 		};
-		class Item467
+		class Item429
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35648,7 +35285,7 @@ class Mission
 			id=2289;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item468
+		class Item430
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35664,7 +35301,7 @@ class Mission
 			id=2290;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item469
+		class Item431
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35680,7 +35317,7 @@ class Mission
 			id=2291;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item470
+		class Item432
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35696,7 +35333,7 @@ class Mission
 			id=2292;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item471
+		class Item433
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35712,7 +35349,7 @@ class Mission
 			id=2293;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item472
+		class Item434
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35728,7 +35365,7 @@ class Mission
 			id=2294;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item473
+		class Item435
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35744,7 +35381,7 @@ class Mission
 			id=2295;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item474
+		class Item436
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35760,7 +35397,7 @@ class Mission
 			id=2296;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item475
+		class Item437
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35776,7 +35413,7 @@ class Mission
 			id=2297;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item476
+		class Item438
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35792,7 +35429,7 @@ class Mission
 			id=2298;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item477
+		class Item439
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35808,7 +35445,7 @@ class Mission
 			id=2299;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item478
+		class Item440
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35824,7 +35461,7 @@ class Mission
 			id=2300;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item479
+		class Item441
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35840,7 +35477,7 @@ class Mission
 			id=2301;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item480
+		class Item442
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35856,7 +35493,7 @@ class Mission
 			id=2302;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item481
+		class Item443
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35872,7 +35509,7 @@ class Mission
 			id=2303;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item482
+		class Item444
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35888,7 +35525,7 @@ class Mission
 			id=2304;
 			type="Land_HBarrier_01_big_4_green_F";
 		};
-		class Item483
+		class Item445
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35904,7 +35541,7 @@ class Mission
 			id=2305;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item484
+		class Item446
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35921,7 +35558,7 @@ class Mission
 			type="Land_HBarrier_01_line_5_green_F";
 			atlOffset=-1.0272522;
 		};
-		class Item485
+		class Item447
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35937,7 +35574,7 @@ class Mission
 			id=2307;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item486
+		class Item448
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35953,7 +35590,7 @@ class Mission
 			id=2308;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item487
+		class Item449
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35969,7 +35606,7 @@ class Mission
 			id=2309;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item488
+		class Item450
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35985,7 +35622,7 @@ class Mission
 			id=2310;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item489
+		class Item451
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36001,7 +35638,7 @@ class Mission
 			id=2311;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item490
+		class Item452
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36017,7 +35654,7 @@ class Mission
 			id=2312;
 			type="Land_HBarrier_01_line_5_green_F";
 		};
-		class Item491
+		class Item453
 		{
 			dataType="Layer";
 			name="TheLastCartridges_CheckPoint";
@@ -36647,7 +36284,7 @@ class Mission
 			id=2351;
 			atlOffset=-0.014377594;
 		};
-		class Item492
+		class Item454
 		{
 			dataType="Layer";
 			name="TheLastCartridges_OldBunkers";
@@ -37185,7 +36822,7 @@ class Mission
 			id=2383;
 			atlOffset=0.20564461;
 		};
-		class Item493
+		class Item455
 		{
 			dataType="Marker";
 			position[]={3123.6897,17.628141,11706.462};
@@ -37193,7 +36830,7 @@ class Mission
 			type="loc_Bunker";
 			id=2384;
 		};
-		class Item494
+		class Item456
 		{
 			dataType="Layer";
 			name="TheLastCartridges_CheckPoint";
@@ -37827,7 +37464,7 @@ class Mission
 			id=2423;
 			atlOffset=0.10824966;
 		};
-		class Item495
+		class Item457
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37844,7 +37481,7 @@ class Mission
 			type="Land_PierWooden_02_hut_F";
 			atlOffset=4.1844082;
 		};
-		class Item496
+		class Item458
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37861,7 +37498,7 @@ class Mission
 			type="Land_CncBarrier_stripes_F";
 			atlOffset=1.4305115e-006;
 		};
-		class Item497
+		class Item459
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37878,7 +37515,7 @@ class Mission
 			type="Land_CncBarrier_stripes_F";
 			atlOffset=1.4305115e-006;
 		};
-		class Item498
+		class Item460
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37895,7 +37532,7 @@ class Mission
 			type="Land_PierWooden_02_hut_F";
 			atlOffset=2.0104299;
 		};
-		class Item499
+		class Item461
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37912,7 +37549,7 @@ class Mission
 			type="Land_PierWooden_02_16m_F";
 			atlOffset=0.065356016;
 		};
-		class Item500
+		class Item462
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37929,7 +37566,7 @@ class Mission
 			type="Land_PierWooden_02_16m_F";
 			atlOffset=-0.44263497;
 		};
-		class Item501
+		class Item463
 		{
 			dataType="Object";
 			class PositionInfo
@@ -37946,7 +37583,7 @@ class Mission
 			type="Land_PierWooden_02_16m_F";
 			atlOffset=1.9312611;
 		};
-		class Item502
+		class Item464
 		{
 			dataType="Group";
 			side="Civilian";
@@ -38076,7 +37713,7 @@ class Mission
 			};
 			id=2485;
 		};
-		class Item503
+		class Item465
 		{
 			dataType="Group";
 			side="Civilian";
@@ -38206,7 +37843,7 @@ class Mission
 			};
 			id=2488;
 		};
-		class Item504
+		class Item466
 		{
 			dataType="Group";
 			side="Civilian";
@@ -38336,7 +37973,7 @@ class Mission
 			};
 			id=2490;
 		};
-		class Item505
+		class Item467
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38351,7 +37988,7 @@ class Mission
 			};
 			id=2492;
 			type="Land_PierWooden_02_hut_F";
-			atlOffset=2.2629995;
+			atlOffset=2.2630005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38370,7 +38007,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item506
+		class Item468
 		{
 			dataType="Group";
 			side="Civilian";
@@ -38502,7 +38139,7 @@ class Mission
 			id=2493;
 			atlOffset=4.697763;
 		};
-		class Item507
+		class Item469
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38516,7 +38153,7 @@ class Mission
 			};
 			id=2495;
 			type="Land_LampShabby_F";
-			atlOffset=4.756;
+			atlOffset=4.7559996;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38535,13 +38172,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item508
+		class Item470
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={3257.9346,5.4474235,11006.49};
-				angles[]={0,1.1598488,-0};
+				angles[]={0,1.1598488,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38569,13 +38206,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item509
+		class Item471
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={7047.3105,5.5645523,6971.6387};
-				angles[]={0,0.23548386,-0};
+				angles[]={0,0.23548386,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38603,7 +38240,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item510
+		class Item472
 		{
 			dataType="Object";
 			class PositionInfo
@@ -38617,6 +38254,7 @@ class Mission
 			};
 			id=2498;
 			type="Land_LampAirport_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38635,13 +38273,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item511
+		class Item473
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={2092.5869,25.369053,3445.2373};
-				angles[]={0,6.0270343,-0};
+				angles[]={0,6.0270343,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38650,6 +38288,7 @@ class Mission
 			};
 			id=2499;
 			type="Land_LampAirport_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38668,13 +38307,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item512
+		class Item474
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={11765.407,17.285248,3126.0732};
-				angles[]={0,3.7477586,-0};
+				angles[]={0,3.7477586,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38701,13 +38340,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item513
+		class Item475
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={12196.149,61.391792,8141.4927};
-				angles[]={0,2.9597912,-0};
+				angles[]={0,2.9597912,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38735,13 +38374,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item514
+		class Item476
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={12183.672,63.132324,8175.3887};
-				angles[]={0,1.5686549,-0};
+				angles[]={0,1.5686549,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38769,13 +38408,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item515
+		class Item477
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={2280.2996,13.623438,8600.4678};
-				angles[]={0,0.047588807,-0};
+				angles[]={0,0.047588807,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38784,6 +38423,7 @@ class Mission
 			};
 			id=2503;
 			type="Land_LampAirport_F";
+			atlOffset=-1.1920929e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38802,13 +38442,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item516
+		class Item478
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={8012.4019,136.88452,12420.377};
-				angles[]={0,4.3834257,-0};
+				angles[]={0,4.3834257,0};
 			};
 			side="Empty";
 			flags=5;
@@ -38817,6 +38457,7 @@ class Mission
 			};
 			id=2504;
 			type="Land_LampAirport_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38835,7 +38476,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item517
+		class Item479
 		{
 			dataType="Marker";
 			position[]={7045.7729,-0.063224651,6975.1045};
@@ -38844,16 +38485,16 @@ class Mission
 			id=2505;
 			atlOffset=2.6409063;
 		};
-		class Item518
+		class Item480
 		{
 			dataType="Marker";
 			position[]={3260.6113,1.1206141,11003.854};
 			name="marker_34";
 			type="loc_Quay";
 			id=2506;
-			atlOffset=4.244513;
+			atlOffset=4.2446518;
 		};
-		class Item519
+		class Item481
 		{
 			dataType="Marker";
 			position[]={2271.5398,-0.59130859,8618.1094};
@@ -38862,7 +38503,7 @@ class Mission
 			id=2507;
 			atlOffset=4.711412;
 		};
-		class Item520
+		class Item482
 		{
 			dataType="Marker";
 			position[]={8839.166,0.77166402,3559.75};
@@ -38871,13 +38512,13 @@ class Mission
 			id=2508;
 			atlOffset=0.2414974;
 		};
-		class Item521
+		class Item483
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={7582.415,-0.026550293,3172.8259};
-				angles[]={0,2.9397058,-0};
+				angles[]={0,2.9397058,0};
 			};
 			side="Empty";
 			class Attributes
@@ -38886,6 +38527,110 @@ class Mission
 			id=2509;
 			type="Land_Carrier_01_base_F";
 			atlOffset=33.550766;
+		};
+		class Item484
+		{
+			dataType="Marker";
+			position[]={15636.347,-58.936638,1861.5875};
+			name="marker_54";
+			markerType="ELLIPSE";
+			type="";
+			colorName="ColorRed";
+			fillName="Border";
+			a=250;
+			b=250;
+			drawBorder=1;
+			id=2555;
+			atlOffset=6.3057022;
+		};
+		class Item485
+		{
+			dataType="Marker";
+			position[]={15637.702,-61.316734,1338.8198};
+			name="marker_55";
+			markerType="ELLIPSE";
+			type="";
+			colorName="ColorBlue";
+			fillName="Border";
+			a=250;
+			b=250;
+			drawBorder=1;
+			id=2556;
+			atlOffset=6.3056946;
+		};
+		class Item486
+		{
+			dataType="Marker";
+			position[]={15635.476,-55.134014,816.15833};
+			name="marker_56";
+			markerType="ELLIPSE";
+			type="";
+			colorName="ColorGreen";
+			fillName="Border";
+			a=250;
+			b=250;
+			drawBorder=1;
+			id=2557;
+			atlOffset=6.3056946;
+		};
+		class Item487
+		{
+			dataType="Marker";
+			position[]={15636.399,-56.08931,285.84363};
+			name="marker_57";
+			markerType="ELLIPSE";
+			type="";
+			colorName="ColorOrange";
+			fillName="Border";
+			a=250;
+			b=250;
+			drawBorder=1;
+			id=2558;
+			atlOffset=6.3056946;
+		};
+		class Item488
+		{
+			dataType="Marker";
+			position[]={15633.98,-58.919998,1860.955};
+			name="marker_58";
+			text="Exclusion Zone, no base, no computer, restricted respawn if traders, no PVP";
+			type="mil_dot";
+			colorName="ColorRed";
+			id=2559;
+			atlOffset=6.3054657;
+		};
+		class Item489
+		{
+			dataType="Marker";
+			position[]={15635.679,-61.270996,1337.278};
+			name="marker_59";
+			text="Spawn Zone, Bambies Fast Travel above 300m, free vehicles";
+			type="mil_dot";
+			colorName="ColorBlue";
+			id=2560;
+			atlOffset=6.3058319;
+		};
+		class Item490
+		{
+			dataType="Marker";
+			position[]={15635.327,-55.119835,816.23767};
+			name="marker_60";
+			text="Trader Zone, sell/buy, add friends to vehicles, not a safe zone";
+			type="mil_dot";
+			colorName="ColorGreen";
+			id=2561;
+			atlOffset=6.3056946;
+		};
+		class Item491
+		{
+			dataType="Marker";
+			position[]={15636.491,-56.078945,286.03796};
+			name="marker_61";
+			text="300m mission Zone, no reinforcement for NPCs unless Capture Zone";
+			type="mil_dot";
+			colorName="ColorOrange";
+			id=2562;
+			atlOffset=6.3056946;
 		};
 	};
 };

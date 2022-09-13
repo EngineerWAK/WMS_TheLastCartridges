@@ -12,7 +12,7 @@
 {
 	//_x remoteExec ['WMS_fnc_updatePermanentVHL', 2];
 	[_x,"lastUpdate"] call WMS_fnc_updatePermanentVHL; //??? why not
-	diag_log format ["[PERMANENT VHL LAST UPDATE]|WAK|TNA|WMS| updating %1 @ %2, serverTime %3", _x, position _x, (round serverTime)]
+	diag_log format ["[PERMANENT VHL LAST UPDATE]|WAK|TNA|WMS| updating %1 @ %2ASL, serverTime %3", _x, getPosASL _x, (round serverTime)]
 }forEach WMS_permanentVehicleObjects;
 saveProfileNamespace;
 if (true) then {diag_log "[WMS_fnc_permanentVehicleLastUpdate]|WAK|TNA|WMS|ProfileNameSpace Saved"};

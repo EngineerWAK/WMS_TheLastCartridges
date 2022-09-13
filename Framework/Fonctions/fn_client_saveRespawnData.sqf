@@ -47,7 +47,7 @@ private _aceStuff = [
     _aceMedical pushBack (player getVariable [_x, [-999]]);
 }forEach _aceStuff;
 
-[player,position player,_aceMedical]remoteExec ["WMS_fnc_saveRespawnData",2];
+[player,getPosASL player,_aceMedical]remoteExec ["WMS_fnc_saveRespawnData",2];
 //missionNamespace setVariable["WMS_client_canCustomRespawn",true]; //this should make the custom Respawn available during the same run and not only after restart
 
 //////////////////////////////////////////////////////////////////////////////////

@@ -18,7 +18,7 @@ player addEventHandler ["Respawn",
 			[(_this select 0)] remoteExec ["WMS_fnc_setVarOnPlayerRespawn"];
 			(_this select 0) execVM "randomizeSpawnPos.sqf";
 			(_this select 0) execVM "spawnLoot.sqf";
-			(_this select 0) execVM "InitPlayerSetTrait.sqf";
+			//(_this select 0) execVM "InitPlayerSetTrait.sqf"; //moved at the end of randomizeSpawnPos.sqf
 			[(_this select 0)] execVM "infantryProgram\infantryProgram.sqf";
 			(_this select 0) addrating 100000; //to prevent players to get shot by fucking territory weapon system
 			_mkr = createmarkerLocal ["MKR_"+(name player), position player];

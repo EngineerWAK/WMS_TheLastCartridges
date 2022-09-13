@@ -23,6 +23,7 @@ _playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
 _territoryOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "territory");
 _price = (_territoryOfficeData select 0);
 _territoryLevel = 1;
+_layout = "bunkercamp"; //will depend of the level I guess
 /*
 	Territory[] = 
 	{
@@ -60,11 +61,14 @@ if (_playerMoney > _price) then {
 	{hideObjectGlobal _x} foreach _terrainobjects;
 
 	_flag = createVehicle ["rhsgref_serhat_radar", _Pos, [], 1, "NONE"];//rhsgref_serhat_radar //Flag_Redburger_F
+	if (surfaceIsWater _Pos)then{
+		_flag setPosASL [_Pos select 0, _Pos select 1, 2.413];
+		_layout = "waterworld";
+	};
 	_flagDir = (random 360);
 	_flag setDir _flagDir;
-	_layout = "bunkercamp"; //will depend of the level I guess
 	[_flag]call WMS_fnc_initFlagAddActions;
-	[_flag, _pos, _flagDir, "bunkercamp"] call WMS_fnc_SpawnCamps;
+	[_flag, _pos, _flagDir, _layout] call WMS_fnc_SpawnCamps;
 	_flag setVariable ["ace_rearm_isSupplyVehicle", true, true];
 	_flag setVariable ["ACE_isRepairFacility", true, true];
 	_flag setVariable ["WMS_vehicleid", _flagID, true];
