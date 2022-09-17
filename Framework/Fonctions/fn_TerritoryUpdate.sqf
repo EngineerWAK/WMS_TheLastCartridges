@@ -11,7 +11,7 @@
 //	[
 //		["327cbc1e",[5534.31,9379.95,0],4,"76561197965501020",["76561197965501020","76561198040890495"],103.731,"helipadbig"]
 //	]
-private ["_ownerUID","_territoriesArray","_playerUID_ExileMoney","_playerMoney","_territoryLvL","_results","_found","_vehicleID","_BuyerOwner","_layout"];
+private ["_ownerUID","_territoriesArray","_results","_result","_found","_vehicleID"];
 params [
 	"_flag",
 	"_caller",
@@ -33,17 +33,12 @@ _result = _results find 0;
 
 if (_result == -1) exitWith {};
 if (_type == 'friends') then {
-	/*
-	_territoryFastTravel = profileNameSpace getVariable ['territoryfasttravel', []];
-	_territoryFastTravel pushBack getPlayerUID _x;
-	profileNameSpace setVariable ['territoryfasttravel', _territoryFastTravel, true];
-	*/
 	_buildingRightUID = ((_territoriesArray select _result) select 4);
 	(_territoriesArray select _result) set [4, _update];
 
-	_territoryFastTravel = profileNameSpace getVariable ['territoryfasttravel', []];
+	_territoryFastTravel = profileNameSpace getVariable ['WMS_territoryfasttravel', []];
 	_territoryFastTravel = _territoryFastTravel + _update; //will probably add some already existing UID since the owner is includ in "friends" but should work
 };
 profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
-profileNameSpace setVariable ['territoryfasttravel', _territoryFastTravel, true];
+profileNameSpace setVariable ['WMS_territoryfasttravel', _territoryFastTravel, true];
 

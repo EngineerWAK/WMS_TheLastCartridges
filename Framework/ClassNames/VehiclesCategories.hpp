@@ -469,12 +469,15 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			//"O_Heli_Transport_04_medevac_black_F", //Taru is broken
+			//"O_Heli_Transport_04_repair_black_F",
+			//"O_Heli_Transport_04_ammo_black_F",
+			//"O_Heli_Transport_04_fuel_black_F",
+	       	//"O_Heli_Transport_04_F",
+	       	//"O_Heli_Transport_04_bench_F",
+	        //"O_Heli_Transport_04_box_F",
 			"vtx_UH60M_MEDEVAC",
 			"vtx_UH60M_SLICK",
-			"O_Heli_Transport_04_medevac_black_F",
-			"O_Heli_Transport_04_repair_black_F",
-			"O_Heli_Transport_04_ammo_black_F",
-			"O_Heli_Transport_04_fuel_black_F",
 			"rhsgred_hidf_cessna_o3a",
 			"B_T_VTOL_01_vehicle_F",
 	        "rhs_uh1h_hidf_unarmed",
@@ -487,9 +490,6 @@
 	        "C_Heli_Light_01_civil_F",
 	        "C_IDAP_Heli_Transport_02_F",
 	        "RHS_Mi8t_civilian",
-	        "O_Heli_Transport_04_F",
-	        "O_Heli_Transport_04_bench_F",
-	        "O_Heli_Transport_04_box_F",
 	        "RHS_Mi8mt_Cargo_vvs",
 	        "O_Heli_Light_02_unarmed_F"
 		};
@@ -600,7 +600,8 @@
 			"RHS_A10",
 			"rhs_l159_cdf_b_CDF",
 			"rhs_l39_cdf_b_cdf",
-
+			"B_Heli_Transport_01_F",
+			"B_CTRG_Heli_Transport_01_tropic_F",
 			"RHS_MELB_AH6M_M",
 	        "rhsgref_b_mi24g_CAS",
 			"rhs_uh1h_hidf_gunship",

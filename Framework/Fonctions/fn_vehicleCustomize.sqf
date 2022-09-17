@@ -3,7 +3,11 @@ params [
 ];
 private _vehicleClassName = (typeOf _veh);
 
-
+if(_vehicleClassName == "RHS_UH1Y") then
+{
+	_veh animate				["hide_FrontDoors", 1];
+	_veh animate				["hide_CargoDoors", 1];
+};
 if (_vehicleClassName == "rhsusf_mkvsoc") then {
 	_veh setRepairCargo 1;
 	_veh setAmmoCargo 1;

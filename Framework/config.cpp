@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.643_2022SEP14_GitHub"; //AGL positions to ASL positions
+	name = "v1.646_2022SEP17_GitHub"; //AGL positions to ASL positions
 };
 
 class Extended_PreInit_EventHandlers {

@@ -25,7 +25,7 @@ _priceBig	 	= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money" >> "price
     class Money_stack_quest			    { quality = 1; price = 2400; }; //1200
     class Money						    { quality = 1; price = 16000; }; //8000 //craft only Money_stack_quest x7
 */
-
+_container enableRopeAttach false;
 _container addAction [
 	"<t size='1' color='#4bff1a'>Claim Reward</t>", {
 		[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_claimReward"];

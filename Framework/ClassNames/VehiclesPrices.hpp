@@ -286,6 +286,8 @@
 	class B_T_VTOL_01_vehicle_F  				{ quality = 2; price = 25777; }; //BlackFish VHL
 
 //Air Armed
+	class B_Heli_Transport_01_F  				{ quality = 2; price = 35000; };
+	class B_CTRG_Heli_Transport_01_tropic_F  	{ quality = 2; price = 35000; };
 	class RHS_MELB_AH6M_M  						{ quality = 3; price = 36000; };
 	class rhsgref_cdf_b_reg_Mi17Sh  			{ quality = 3; price = 55000; };
 	class rhs_uh1h_hidf  						{ quality = 3; price = 65055; };
