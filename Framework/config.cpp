@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.648_2022SEP19_GitHub"; //WaterWorld Bases Layouts
+	name = "v1.649_2022SEP20_GitHub"; //new radio for new actions, new loadout
 };
 
 class Extended_PreInit_EventHandlers {

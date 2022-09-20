@@ -22,6 +22,7 @@ switch (tolower _playerRole) do {
         [INDEPENDENT, "IND_MG"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_Medic"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_Engineer"] call BIS_fnc_addRespawnInventory;
+        [INDEPENDENT, "IND_Breacher"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_GI"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_Frantz"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_Sniper"] call BIS_fnc_addRespawnInventory;

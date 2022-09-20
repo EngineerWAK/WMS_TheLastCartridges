@@ -35,7 +35,7 @@ WMS_IP_addActionRadio = {
 		"
 			(alive _target) &&
 			{stance player == 'CROUCH'} &&
-			{('rhs_radio_R187P1' in (assigneditems _this))} &&
+			{('rhs_radio_R187P1' in (assigneditems _this)) || ('rhsusf_radio_anprc152' in (assigneditems _this))} &&
 			{localNamespace getVariable ['WMS_Loc_CanBuildComputer',true]} &&
 			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
 			{(vehicle _this == _this)};
@@ -84,7 +84,7 @@ WMS_IP_buildComputer = {
 		"
 			(alive _target) &&
 			{stance player == 'CROUCH'} &&
-			{('rhs_radio_R187P1' in (assigneditems _this))} &&
+			{('rhs_radio_R187P1' in (assigneditems _this)) || ('rhsusf_radio_anprc152' in (assigneditems _this))} &&
 			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
 			{(vehicle _this == _this)};
 		",
@@ -185,6 +185,26 @@ WMS_IP_buildComputer = {
 		5
 	];
 	_allActionsID pushBack _IDnumber;
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#068604'>Rolling</t>",
+		"
+			_target = _this select 0; _caller = _this select 1;
+			playSound3D [getMissionPath 'Custom\Ogg\Vietnam.ogg', _caller, false, position _caller, 5]
+		", 
+		[_IPantenna],
+		1,
+		true,
+		true,
+		"",
+		"
+			(alive _target) &&
+			{('rhsusf_radio_anprc152' in (assigneditems _this))} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
 //REQUEST C130	
 	_IDnumber = _IPcomputer addAction
 	[
@@ -228,6 +248,29 @@ WMS_IP_buildComputer = {
 			{(time > (WMS_IP_ExtractChop_LastT + WMS_IP_ExtractChop_CoolD))} && 
 			{(time > (WMS_Loc_InfProg_Extraction_Last + WMS_Loc_InfProg_Extraction_CoolDown))} &&
 			{((getPlayerUID _this) in WMS_IP_Active_list)} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
+//EXTRACTION CHOPPER optional radio, no IP
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#068604'>Request Extraction Chopper</t>",
+		"
+			[] call WMS_fnc_IP_ExtractionRequest;
+		", 
+		[],
+		1,
+		true,
+		true,
+		"",
+		"	
+			(alive _target) &&
+			{('rhsusf_radio_anprc152' in (assigneditems _this))} &&
+			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
+			{(time > (WMS_IP_ExtractChop_LastT + WMS_IP_ExtractChop_CoolD))} && 
+			{(time > (WMS_Loc_InfProg_Extraction_Last + WMS_Loc_InfProg_Extraction_CoolDown))} &&
 			{(vehicle _this == _this)};
 		",
 		5

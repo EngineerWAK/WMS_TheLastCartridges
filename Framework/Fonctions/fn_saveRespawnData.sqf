@@ -91,8 +91,11 @@ if (count (getitemcargo _playerObject select 0) > 0) then {clearitemcargoglobal 
 saveprofileNameSpace;
 if (true) then {diag_log "[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 [_playerObject] spawn {
-	uisleep 2;
 	hideBody  (_this select 0);
 	uisleep 3;
-	deleteVehicle (_this select 0);
+	if ((_this select 0) isKindOf "man" ) then {
+		deleteVehicle (_this select 0); //Suspicious destruction of some personal vehicles at the same time
+	}else{
+		diag_log "[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|WTF DUDE!?!? THIS IS NOT A DEAD BODY!!!"
+	};
 };

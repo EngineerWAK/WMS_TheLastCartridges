@@ -526,16 +526,12 @@ class CfgRespawnInventory
 			"30Rnd_65x39_caseless_black_mag",
 			"30Rnd_65x39_caseless_black_mag",
 			"rhs_mag_an_m14_th3",
-			"rhs_charge_tnt_x2_mag",
-			"rhs_charge_tnt_x2_mag",
-			"rhs_charge_tnt_x2_mag",
+			"rhs_mag_an_m14_th3",
 			"rhs_charge_tnt_x2_mag",
 			"SmokeShellGreen"
 		};
 		items[] = {
-			"DemoCharge_Remote_Mag",
 			"ToolKit",
-			"ACE_DefusalKit",
 			"ACE_Clacker",
 			"ACE_Flashlight_MX991",
 			"ACE_fieldDressing",
@@ -562,6 +558,63 @@ class CfgRespawnInventory
 			"ItemRadio"
 		};
 		uniformClass = "U_BG_Guerrilla_6_1";
+		//backpack = "B_AssaultPack_rgr";
+	};
+	class IND_Breacher
+	{
+		displayName = "Breacher";								// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+
+		weapons[] = {
+			"rhs_weap_M590_5RD",
+			"rhsusf_weap_glock17g4",
+			"rhsusf_bino_m24"
+		};
+		magazines[] = {
+			"rhsusf_5Rnd_00Buck",
+			"rhsusf_5Rnd_00Buck",
+			"rhsusf_5Rnd_00Buck",
+			"rhsusf_5Rnd_Slug",
+			"rhsusf_5Rnd_Slug",
+			"rhsusf_5Rnd_Slug",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"rhs_mag_an_m14_th3",
+			//"rhs_charge_tnt_x2_mag",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			//"DemoCharge_Remote_Mag",
+			"rhs_charge_M2tet_x2_mag",
+			"ACE_DefusalKit",
+			"ACE_DeadManSwitch",
+			"ACE_M26_Clacker",
+			"ACE_Clacker",
+			"ACE_Flashlight_MX991",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_bloodIV_250",
+			"ACE_EarPlugs",
+			"ACE_morphine",
+			"ACE_Can_Spirit",
+			"ACE_MRE_ChickenTikkaMasala",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_plasmaIV_250"
+		};
+		linkedItems[] = {
+			"Marpat_MBSS_PACA",
+			"MarPat_Helmet2",
+			"rhsusf_ANPVS_14",
+			"ItemMap",
+			"ItemCompass",
+			"ChemicalDetector_01_watch_F",
+			"ItemRadio"
+		};
+		uniformClass = "MarPat_Camo_Cyre_GS";
 		//backpack = "B_AssaultPack_rgr";
 	};
 	class IND_Pilot
@@ -607,7 +660,8 @@ class CfgRespawnInventory
 			"OGA_G_Vest_3",
 			"ItemMap",
 			"ItemCompass",
-			"rhs_radio_R187P1" //Infantry program Radio
+			//"rhs_radio_R187P1" //Infantry program Radio //too easy
+			"rhsusf_radio_anprc152" //will be used for some advanced functions like "call for extraction"
 		};
 		uniformClass = "OGA_Camo_Cyre_Green";
 		//backpack = "B_AssaultPack_rgr";

@@ -26,13 +26,18 @@ if ("ACE_Banana" in _items) then {
 	//_caller setUnitTrait ["UAVHacker",true]; //messing up with the new Base Weapon system
 	_caller setUnitTrait ["explosiveSpecialist",true];
 } else {
+	//BREACHER
+	if ("ACE_DefusalKit" in _items && {"ACE_DeadManSwitch" in _items} && {"ACE_M26_Clacker" in _items} && {"ACE_Clacker" in _items}) then {
+		_caller setUnitTrait ["explosiveSpecialist",true];
+    	_caller setVariable ["WMS_Specialist","breacher",true];
+    	_caller setVariable ["ace_IsEngineer",1,true];
+	};
 	//ENGINEER LEVEL
 	//ToolKit Item only for Engineer Loadout
 	if ("ToolKit" in _items) then {
     	_caller setVariable ["WMS_Specialist","engineer",true];
     	_caller setVariable ["ace_IsEngineer",2,true];
 		_caller setUnitTrait ["Engineer",true];
-		_caller setUnitTrait ["explosiveSpecialist",true];
 	} else {
 		if ("ACE_RangeCard" in _items) then {
 			//snipers not engineer
