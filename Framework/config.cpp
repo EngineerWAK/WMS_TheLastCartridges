@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.646_2022SEP17_GitHub"; //AGL positions to ASL positions
+	name = "v1.648_2022SEP19_GitHub"; //WaterWorld Bases Layouts
 };
 
 class Extended_PreInit_EventHandlers {
@@ -531,6 +531,9 @@ class CfgBlackListedItems {
 		"ACRE_SEM52SL",
 		"ACRE_SEM70",
 
+		"ACE_rope6", //One of the rope duplicate
+		"ACE_rope15",
+		"ACE_rope36",
 		"ACE_tourniquet",
 		"ItemMap",
 		"ItemCompass",

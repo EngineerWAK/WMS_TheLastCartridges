@@ -24,6 +24,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 			if (locked (_this select 0) == 0) then {
 				(_this select 0) setVehicleLock 'LOCKED';
 				(_this select 0) lockInventory true;
+				if(count Crew (_this select 0) == 0)then{(_this select 0) setVelocity [0,0,0]};
 				nul = [(_this select 0),'LOCKED'] remoteExec ['WMS_fnc_ConfLockUnlock', 2];
 				playSound3D [getMissionPath'\custom\ogg\caralarm.ogg', (_this select 0), false, position (_this select 0), 4, 1, 0];
 				if ((_this select 0) getVariable ['permanentVHL', false])then {

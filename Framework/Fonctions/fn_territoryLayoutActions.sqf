@@ -100,6 +100,70 @@ switch (tolower _layout) do
 [ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
 	_flag,
 	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL1, (3k), after restart</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 3000, 'waterworldlvl1', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 0)} &&
+		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 3000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL1, (5k) right now</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 5000, 'waterworldlvl1', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 0)} &&
+		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 5000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
 		"<t size='0.9' color='#80c606'>Bunkers Camp LvL2, (5k), after restart</t>",//_display,
 		"	
 			_target = _this select 0; _caller = _this select 1;
@@ -293,6 +357,70 @@ switch (tolower _layout) do
 [ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
 	_flag,
 	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL2, (5k), after restart</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 5000, 'waterworldlvl2', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
+		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 5000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>Helipad Camp LvL2, (8k) right now</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 8000, 'waterworldlvl2', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
+		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 8000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
 		"<t size='0.9' color='#80c606'>Cargo Post Camp LvL3, (10k), after restart</t>",//_display,
 		"	
 			_target = _this select 0; _caller = _this select 1;
@@ -470,6 +598,71 @@ switch (tolower _layout) do
 		"",
 		"
 		(alive _target) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
+		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+/////
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL3, (10k), after restart</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 10000, 'waterworldlvl3', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
+		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 10000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL3, (15k) right now</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 15000, 'waterworldlvl3', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
@@ -740,6 +933,69 @@ switch (tolower _layout) do
 [ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
 	_flag,
 	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL4, (15k), after restart</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 15000, 'waterworldlvl4', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 15000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL4, (20k) right now</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 20000, 'waterworldlvl4', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 20000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+/////
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
 		"<t size='0.9' color='#80c606'>HeliPadosorusRex LvL5, (20k), after restart</t>",//_display,
 		"	
 			_target = _this select 0; _caller = _this select 1;
@@ -912,6 +1168,69 @@ switch (tolower _layout) do
 		"",
 		"
 		(alive _target) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+/////
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL5, (25k), after restart</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 25000, 'waterworldlvl5', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 25000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL5, (30k) right now</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 30000, 'waterworldlvl5', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
@@ -1165,6 +1484,69 @@ switch (tolower _layout) do
 		"",
 		"
 		(alive _target) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 35000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+/////
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL6, (30k), after restart</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 30000, 'waterworldlvl6', 'restart'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
+		{(_target getVariable ['_layoutUpgradable', true])} &&
+		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{((_this getVariable ['exileMoney', 0]) > 30000)} &&
+		{(vehicle _this == _this)};
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller
+	_flag,
+	[
+		"<t size='0.9' color='#80c606'>WaterWorld LvL6, (35k) right now</t>",//_display,
+		"	
+			_target = _this select 0; _caller = _this select 1;
+			_target setVariable ['_layoutUpgradable', false, true];
+			[_target, _caller, 35000, 'waterworldlvl6', 'rightnow'] remoteExec ['WMS_fnc_territoryLayoutUpgrade', 2];
+			hint 'Congratulation!';
+
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"
+		(surfaceIsWater (postition _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
