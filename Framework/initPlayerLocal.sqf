@@ -48,8 +48,8 @@ if (hasinterface) then {
     //Dynamic camo
     //[]spawn WMS_fnc_client_dynamicCamo;
     [] execVM "Fonctions\WMS_client_dynamicCamo.sqf";
-
-    //setCurrentChannel 3; //Group Channel DO NOT WORK HERE
+    //DFO Choppers Actions
+    [] execVM "DFO\DFO_playerLocal.sqf";
         
     _action2 = ["FixMyChat","Fix My Chat","",{showChat true},{true}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action2] call ace_interact_menu_fnc_addActionToObject;

@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.649_2022SEP20_GitHub"; //new radio for new actions, new loadout
+	name = "v1.652_2022SEP21_GitHub"; //50BW available at the trader container
 };
 
 class Extended_PreInit_EventHandlers {
@@ -531,9 +531,10 @@ class CfgBlackListedItems {
 		"ACRE_SEM52SL",
 		"ACRE_SEM70",
 
-		"ACE_rope6", //One of the rope duplicate
-		"ACE_rope15",
-		"ACE_rope36",
+		"ACE_rope12", //One rope change className and duplicate
+		//"ACE_rope6",
+		//"ACE_rope15",
+		//"ACE_rope36",
 		"ACE_tourniquet",
 		"ItemMap",
 		"ItemCompass",

@@ -281,3 +281,40 @@ _container addAction [
 	0, //0 for all players //2 server only //-2 everyone but the server
 	true //JIP
 ];
+//"10Rnd_50BW_Mag_F"
+[ //params ["_target", "_caller", "_actionId", "_arguments"];
+	_container,
+	[
+		"<t size='0.9' color='#1fd507'>Buy *3 10Rnd 50BW 150$ </t>",
+		"
+			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
+				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					(_this select 0) addMagazineCargoGlobal [(selectRandom ((_this select 3) select 0)), 3];
+					hint '50BW in the container';
+				} else {
+					hint 'Bro! your respect is too low';
+					execVM 'addons\intro\levels.sqf';
+				};
+			} else {
+				hint 'You are too poor Dude';
+			};
+		",
+		[["10Rnd_50BW_Mag_F"],150,2500], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
+		"
+			(_this getVariable ['playerInTraderZone', false]) &&
+			{('ARX' in primaryWeapon player)} &&
+			{(_this getVariable ['ExileScore', 0] >= 2500)}
+		",
+		5
+	]
+] remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];
