@@ -192,7 +192,7 @@ _howmanyrestarts = 0;
 					[
 						"<t size='1' color='#528ffa'>Reset ACE Fatigue</t>",
 						"
-						[(_this select 1), nil] call ace_advanced_fatigue_fnc_handlePlayerChanged;
+						[(_this select 1), (_this select 1)] call ace_advanced_fatigue_fnc_handlePlayerChanged;
 						(_this select 0) setVariable ['WMS_resetFatigueTimer', time, true];
 						",
 						[], //argument accessible in the script (_this select 3)
@@ -352,7 +352,7 @@ _howmanyrestarts = 0;
 					[
 						"<t size='1' color='#528ffa'>Reset ACE Fatigue</t>",
 						"
-						[(_this select 1), nil] call ace_advanced_fatigue_fnc_handlePlayerChanged;
+						[(_this select 1), (_this select 1)] call ace_advanced_fatigue_fnc_handlePlayerChanged;
 						(_this select 0) setVariable ['WMS_resetFatigueTimer', time, true];
 						",
 						[], //argument accessible in the script (_this select 3)

@@ -11,20 +11,19 @@
  */
 player addEventHandler ["Respawn",
 	{
-		// delete dead corpse - remove or comment the line out if you don't want to
-		//if (((_this select 0) distance2D (_this select 1)) < 250) then {deleteVehicle (_this select 1)};
+		player setVariable ["WMS_respawnTime",time];
+		if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, respawning at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		[(_this select 0)] spawn {
 			waitUntil {alive player};
 			[(_this select 0)] remoteExec ["WMS_fnc_setVarOnPlayerRespawn"];
 			(_this select 0) execVM "randomizeSpawnPos.sqf";
 			(_this select 0) execVM "spawnLoot.sqf";
-			//(_this select 0) execVM "InitPlayerSetTrait.sqf"; //moved at the end of randomizeSpawnPos.sqf
 			[(_this select 0)] execVM "infantryProgram\infantryProgram.sqf";
 			(_this select 0) addrating 100000; //to prevent players to get shot by fucking territory weapon system
 			_mkr = createmarkerLocal ["MKR_"+(name player), position player];
 			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
 			_mkr setMarkerColorLocal "ColorGUER";
-			//player setVariable["WMS_saveAndDisconnect",false,true];
+			if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		};
 	}
 ];

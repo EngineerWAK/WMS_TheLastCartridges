@@ -19,15 +19,21 @@ _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnT
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
 	//"CustomRespawn"
+	player allowDamage false;
 	if(((ASLtoATL _customRespawnPos) select 2) >= 0)then{
 		player setPosASL _customRespawnPos;
 	};
 	[player,WMS_client_customRespawnInv]call WMS_fnc_client_restoreLoadoutFromVar;
-	if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
-	missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
-	missionNamespace setVariable["WMS_client_customRespawnAce",[]];
-	missionNamespace setVariable["WMS_client_canCustomRespawn",false];
-	if(((player getVariable ['playerInRestrictionZone',-1]) == -1)) then {player setVariable ['playerInRestrictionZone',0]};
+	[]spawn {
+		uisleep 3;
+		if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
+		uisleep 1;
+		missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
+		missionNamespace setVariable["WMS_client_customRespawnAce",[]];
+		missionNamespace setVariable["WMS_client_canCustomRespawn",false];
+		if(((player getVariable ['playerInRestrictionZone',-1]) == -1)) then {player setVariable ['playerInRestrictionZone',0]};
+		player allowDamage true;
+	};
 }else{
 	//"randomiseSpawnPos"
 	if ((getPlayerUID player) in WMS_customRespawnList) then {	

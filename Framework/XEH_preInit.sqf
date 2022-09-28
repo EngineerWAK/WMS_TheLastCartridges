@@ -21,6 +21,7 @@
 */
 
 ["WMS_DynamicCamoDebug", "CHECKBOX", ["DynamicCamo Debug", "Activate Hint Debug for Dynamic Camo, may reduce performances"], ["WMS", "DynamicCamo", "Local"], false] call cba_settings_fnc_init;
+["WMS_LBIS", "CHECKBOX", ["Help Messages", "Local Brodcast Information System give you 'Tips and Tricks' and information about the server"], ["WMS", "LBIS", "Local"], true] call cba_settings_fnc_init;
 
 ["WMS 3Dmarker", "Number1+ctrl", "3D Marker", {[nil,false,false,nil,"local1"]call WMS_fnc_client_3Dmarkers}, {}, [0x02, [false, true, false]]] call CBA_fnc_addKeybind;//[DIK, [shift, ctrl, alt]]//number 1
 ["WMS 3Dmarker", "Number1+ctrl+shift", "Map 3D Marker", {

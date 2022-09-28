@@ -20,9 +20,10 @@
 waitUntil { time > 0 };
 IL_Script_Inst = time;
 //	VARIABLES
+
 _obj_main = _this select 0;
 _obj_main_type = (typeOf _obj_main);
-
+_useExile = false; //so I don't get client side error with TheLastCartridges
 if (isnil "IL_Variables") then
 {
 	IL_Variables = true;
@@ -1796,19 +1797,19 @@ if (isnil "IL_Procedures") then
 						};
 
 						_IL_noti = getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
-						_x call ExileServer_object_vehicle_database_update;
-                        ["Success", format ["%1 successfully loaded!",_IL_noti]] call ExileClient_gui_notification_event_addNotification;
+						if (_useExile) then {_x call ExileServer_object_vehicle_database_update;
+                        ["Success", format ["%1 successfully loaded!",_IL_noti]] call ExileClient_gui_notification_event_addNotification;};
 						[Player, IL_Load_Score] call IL_Score;
 						};
 					}
                     else
                     {
-                    ["Whoops", ["Locked vehicles can't be loaded!"]] call ExileClient_gui_notification_event_addNotification;
+                    if (_useExile) then {["Whoops", ["Locked vehicles can't be loaded!"]] call ExileClient_gui_notification_event_addNotification;};
                     };
 				}
                 else
 				{
-                ["Whoops", ["Locked vehicles can't load Cargo!"]] call ExileClient_gui_notification_event_addNotification;
+                if (_useExile) then {["Whoops", ["Locked vehicles can't load Cargo!"]] call ExileClient_gui_notification_event_addNotification;};
 				};
 				
 				if (_done) exitWith {};
@@ -2033,7 +2034,7 @@ if (isnil "IL_Procedures") then
 					};
 				};
 				_IL_noti = getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
-                ["Success", format ["%1 successfully unloaded!",_IL_noti]] call ExileClient_gui_notification_event_addNotification;
+                if (_useExile) then {["Success", format ["%1 successfully unloaded!",_IL_noti]] call ExileClient_gui_notification_event_addNotification;};
 						
 				if (_done) exitWith {};
 			} forEach (_obj_lst);

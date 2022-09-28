@@ -52,7 +52,11 @@ WMS_IP_buildComputer = {
 	];
 	private _IPantenna = "SatelliteAntenna_01_Small_Black_F" createvehicle [0,0,0];
 	private _IPcomputer = "Land_MultiScreenComputer_01_black_F" createvehicle [0,0,0];
-	_IPcomputer setPos (_IPplayer modeltoworld [0,1,0.2]);
+	if (surfaceIsWater (position _IPplayer))then{
+		_IPcomputer setPos (_IPplayer modeltoworldworld [0,2,0]); //FUCK YOU ARMA!!!!!!!!!!!
+	}else{
+		_IPcomputer setPos (_IPplayer modeltoworld [0,1,0.2]);
+	};
 	_IPcomputer setdir (direction _IPplayer);
 	_IPantenna attachTo [_IPcomputer, [0,0.4,0.27]];
 	_IPcomputer setVariable ['IPcomputerAllActionsID',[]];
@@ -86,6 +90,48 @@ WMS_IP_buildComputer = {
 			{stance player == 'CROUCH'} &&
 			{('rhs_radio_R187P1' in (assigneditems _this)) || ('rhsusf_radio_anprc152' in (assigneditems _this))} &&
 			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
+
+//SOUND TEST //playSound3D ['A3\Sounds_F\sfx\blip1.wss', _caller]
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#068604'>GetToTheChoppa</t>",
+		"
+			_target = _this select 0; _caller = _this select 1;
+			playSound3D [getMissionPath 'Custom\Ogg\GetToTheChoppa.ogg', _caller, false, position _caller, 5]
+		", 
+		[_IPantenna],
+		1,
+		true,
+		true,
+		"",
+		"
+			(alive _target) &&
+			{('rhs_radio_R187P1' in (assigneditems _this))} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#068604'>Rolling</t>",
+		"
+			_target = _this select 0; _caller = _this select 1;
+			playSound3D [getMissionPath 'Custom\Ogg\Vietnam.ogg', _caller, false, position _caller, 5]
+		", 
+		[_IPantenna],
+		1,
+		true,
+		true,
+		"",
+		"
+			(alive _target) &&
+			{('rhsusf_radio_anprc152' in (assigneditems _this))} &&
 			{(vehicle _this == _this)};
 		",
 		5
@@ -158,48 +204,6 @@ WMS_IP_buildComputer = {
 			{((getplayerUID player) in WMS_InfantryProgram_list)} &&
 			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
 			{!((getPlayerUID _this) in WMS_IP_Active_list)} &&
-			{(vehicle _this == _this)};
-		",
-		5
-	];
-	_allActionsID pushBack _IDnumber;
-
-//SOUND TEST //playSound3D ['A3\Sounds_F\sfx\blip1.wss', _caller]
-	_IDnumber = _IPcomputer addAction
-	[
-		"<t size='0.9' color='#068604'>GetToTheChoppa</t>",
-		"
-			_target = _this select 0; _caller = _this select 1;
-			playSound3D [getMissionPath 'Custom\Ogg\GetToTheChoppa.ogg', _caller, false, position _caller, 5]
-		", 
-		[_IPantenna],
-		1,
-		true,
-		true,
-		"",
-		"
-			(alive _target) &&
-			{('rhs_radio_R187P1' in (assigneditems _this))} &&
-			{(vehicle _this == _this)};
-		",
-		5
-	];
-	_allActionsID pushBack _IDnumber;
-	_IDnumber = _IPcomputer addAction
-	[
-		"<t size='0.9' color='#068604'>Rolling</t>",
-		"
-			_target = _this select 0; _caller = _this select 1;
-			playSound3D [getMissionPath 'Custom\Ogg\Vietnam.ogg', _caller, false, position _caller, 5]
-		", 
-		[_IPantenna],
-		1,
-		true,
-		true,
-		"",
-		"
-			(alive _target) &&
-			{('rhsusf_radio_anprc152' in (assigneditems _this))} &&
 			{(vehicle _this == _this)};
 		",
 		5

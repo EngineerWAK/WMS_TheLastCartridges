@@ -67,6 +67,7 @@ class CfgFunctions
 			class client_restoreLoadoutFromVar {};
 			class client_restoreAceFromVar {};
 			class client_3Dmarkers {};
+			class client_LBIS {};
 		};
 		class myCategory_IP
 		{

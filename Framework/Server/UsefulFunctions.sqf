@@ -126,28 +126,6 @@ _result = [];
 {_result pushBack [name _x, owner _x]}forEach allPlayers;
 _result;
 //////////
-
-///////////////////////////////////////////////
-//Export and save data for later custom respawn
-//////////
-_magazinesAmmo = magazinesAmmo player; //need something like this to export exact count of bullets in mags
-player setAmmo [primaryWeapon player, 19];
-player addMagazine ["magazineName", "ammoCount"];
-if !("item" isKindOf "CA_Magazine") then {};
-_loadoutData = [
-	["",[]], //uniform //_loadoutData select 0 select 0
-	["",[]], //vest
-	["",[]], //backpack
-	"", //helmet
-	"", //goggles/facewear
-	"", //binocular
-	["",["","","",""],""], //primaryWeapon
-	["",["","","",""],""], //secondaryWeapon
-	["",["","","",""],""], //handgunWeapon
-	[],//linkItem
-	[] //magazinesAmmo
-];
-
 ////////////////////////
 //Convert ServerProfile Variables
 private _permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []]; 

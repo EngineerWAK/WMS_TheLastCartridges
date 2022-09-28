@@ -18,6 +18,7 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	["RHS_UH1_Base",10],
 	["RHS_UH60_Base", 10],
 	["B_Heli_Transport_03_base_F", 41], //huron
 	["Heli_Transport_02_base_F", 20], //Mohawk/Merlin //chinook

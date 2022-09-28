@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.652_2022SEP21_GitHub"; //50BW available at the trader container
+	name = "v1.656_2022SEP28_GitHub"; //ace fatigue reset fix
 };
 
 class Extended_PreInit_EventHandlers {
