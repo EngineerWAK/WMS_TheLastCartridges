@@ -28,7 +28,7 @@ _priceBig	 	= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money" >> "price
 _container enableRopeAttach false;
 _container addAction [
 	"<t size='1' color='#4bff1a'>Claim Reward</t>", {
-		[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_claimReward"];
+		[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_claimReward",2];
 		{player removeitem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
 	}, 
 	nil, 
@@ -52,7 +52,7 @@ _container addAction [
 _container addAction [
 	"<t size='1' color='#3d74ff'>Sell Inventory</t>", { 
 		if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
-			[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_processCargoDump"]; 
+			[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_processCargoDump",2]; 
 		} else { 
 			"Cargo Dump Container is empty, you punk" remoteExec ["hint", (owner (_this select 1))]; 
 		}; 
@@ -88,7 +88,7 @@ _container addAction [
 		"
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
 					(_this select 0) addItemCargoGlobal [((_this select 3) select 0), 1];
 					hint 'Money in the container';
 				} else {
@@ -120,7 +120,7 @@ _container addAction [
 		"
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
 					(_this select 0) addItemCargoGlobal [((_this select 3) select 0), 1];
 					hint 'Money in the container';
 				} else {
@@ -152,7 +152,7 @@ _container addAction [
 		"
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
 					(_this select 0) addItemCargoGlobal [((_this select 3) select 0), 1];
 					hint 'Money in the container';
 				} else {
@@ -184,7 +184,7 @@ _container addAction [
 		"
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
 					(_this select 0) addItemCargoGlobal [((_this select 3) select 0), 1];
 					hint 'Money in the container';
 				} else {
@@ -218,7 +218,7 @@ _container addAction [
 		"
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
 					(_this select 0) addMagazineCargoGlobal [(selectRandom ((_this select 3) select 0)), 10];
 					hint '40mm in the container';
 				} else {
@@ -253,7 +253,7 @@ _container addAction [
 		"
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
 					(_this select 0) addMagazineCargoGlobal [(selectRandom ((_this select 3) select 0)), 10];
 					hint 'VOG25 in the container';
 				} else {
@@ -289,7 +289,7 @@ _container addAction [
 		"
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions'];
+					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
 					(_this select 0) addMagazineCargoGlobal [(selectRandom ((_this select 3) select 0)), 3];
 					hint '50BW in the container';
 				} else {

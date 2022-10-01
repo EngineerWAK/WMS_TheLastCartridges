@@ -20,7 +20,7 @@ if (alive (player)) then
     { 
       _TargetAction removeaction (_this select 2); 
       _TargetAction removeaction (actionIDs _TargetAction select 17);
-      [_TargetAction,_amount,_mission] remoteexec ["WMS_fnc_Pull_BUY_Push"];
+      [_TargetAction,_amount,_mission] remoteexec ["WMS_fnc_Pull_BUY_Push",2];
       systemChat "Lockers poptabs Updated";
     } else {
      systemChat "Nope! you are too poor!";

@@ -18,6 +18,9 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	["RHS_C130J_Cargo",80],
+	["Heli_Light_02_base_F",10],
+
 	["RHS_UH1_Base",10],
 	["RHS_UH60_Base", 10],
 	["B_Heli_Transport_03_base_F", 41], //huron

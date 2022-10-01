@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.656_2022SEP28_GitHub"; //ace fatigue reset fix
+	name = "v1.661_2022OCT01_GitHub"; //trying to clean eventHandlers and remoteExec
 };
 
 class Extended_PreInit_EventHandlers {
@@ -519,8 +519,9 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 	};
 
 };
+//////////////////////BLACKLISTED STUFF/////////////////////
 //_noRespawnItems = getArray(missionConfigFile >> "CfgBlackListedItems" >> "items"); //those items wont be transfered at vehicleRespawn but can still be used
-class CfgBlackListedItems {     
+class CfgBlackListedItems {//from respawn vehicle inventory
 	items[] =
 	{
 		"ACRE_PRC77",
@@ -531,14 +532,135 @@ class CfgBlackListedItems {
 		"ACRE_SEM52SL",
 		"ACRE_SEM70",
 
-		"ACE_rope12", //One rope change className and duplicate
-		//"ACE_rope6",
-		//"ACE_rope15",
-		//"ACE_rope36",
+		"rhs_rpg18_mag",//RPG-18
+		"rhs_rpg26_mag",//RPG-26
+		"rhs_rpg75_mag",//RPG-75
+		"rhs_m72a7_mag",//M72 HEDP
+		"rhs_rshg2_mag",//RShG-2
+		"rhs_dummy_mag",//M136 HEAT
+		"rhs_m136_hedp_mag",//M136 HEDP
+		"rhs_m136_hp_mag",//M136 HP
+		"rhs_m136_mag",//M136 HEAT
+
+		"ACE_rope12", //One rope change className and duplicate //that was the new ACE "add rope to vehicle" function
 		"ACE_tourniquet",
 		"ItemMap",
 		"ItemCompass",
 		"ItemWatch",
 		"ItemRadio"
 	};
- };
+};
+class CfgBlackListedInv {//from player inventory at custom respawn
+	items[] =
+	{
+		"ACRE_PRC77",
+		"ACRE_PRC117F",
+		"ACRE_PRC148",
+		"ACRE_PRC152",
+		"ACRE_PRC343",
+		"ACRE_SEM52SL",
+		"ACRE_SEM70",
+
+		"rhs_rpg18_mag",//RPG-18
+		"rhs_rpg26_mag",//RPG-26
+		"rhs_rpg75_mag",//RPG-75
+		"rhs_m72a7_mag",//M72 HEDP
+		"rhs_rshg2_mag",//RShG-2
+		"rhs_dummy_mag",//M136 HEAT
+		"rhs_m136_hedp_mag",//M136 HEDP
+		"rhs_m136_hp_mag",//M136 HP
+		"rhs_m136_mag"//M136 HEAT
+	};
+};
+class CfgArtyVhl { //allow the vehicle but tag it for CfgBlackListedShell blacklist
+	vhl[] =
+	{
+
+	};
+};
+class CfgBlackListedShell {
+	mags[] =
+	{
+		"12Rnd_230mm_rockets_cluster",//230 mm Cluster Rocket
+		"2Rnd_155mm_Mo_Cluster",//Cluster Shells
+		"2Rnd_155mm_Mo_Cluster_O",//Cluster Shells
+		"6Rnd_155mm_Mo_AT_mine",//AT Mine Cluster
+		"6Rnd_155mm_Mo_AT_mine_O",//AT Mine Cluster
+		"6Rnd_155mm_Mo_mine",//Mine Cluster
+		"6Rnd_155mm_Mo_mine_O",//Mine Cluster
+		"magazine_ShipCannon_120mm_AT_mine_shells_x6",//AT Mine Cluster
+		"magazine_ShipCannon_120mm_HE_cluster_shells_x2",//Cluster Shells
+		"magazine_ShipCannon_120mm_mine_shells_x6",//Mine Cluster
+		"magazine_Missiles_Cruise_01_Cluster_x18",//Cruise Missile Cluster
+		"rhs_mag_155mm_m731_1",//Mine Cluster
+		"rhs_mag_155mm_m864_3",//Cluster Shells
+		"rhs_mag_155mm_raams_1"//AT Mine Cluster
+
+	};
+};
+//_clusterVhl = getArray(missionConfigFile >> "CfgPylonVhl" >> "vhl");
+//_clusterMags = getArray(missionConfigFile >> "CfgBlackListedBomb" >> "mags");
+//this setVariable ["ace_pylons_magazineBlacklist", ["PylonRack_7Rnd_Rocket_04_HE_F","PylonRack_7Rnd_Rocket_04_AP_F"]];
+class CfgPylonVhl { //allow the vehicle but tag it for CfgBlackListedBomb blacklist
+	vhl[] =
+	{	//classname, not isKindOf
+		"O_Heli_Light_02_dynamicLoadout_F",
+	    "I_E_Heli_light_03_dynamicLoadout_F",
+	    "B_Heli_Attack_01_dynamicLoadout_F",
+		"vtx_MH60M_DAP",
+		"vtx_MH60M_DAP_MLASS",
+		"RHSGREF_A29B_HIDF", //super Tucano
+		"RHS_A10",
+		"rhs_l159_cdf_b_CDF",
+		"rhs_l39_cdf_b_cdf",
+		"RHS_MELB_AH6M_M",
+	    "rhsgref_b_mi24g_CAS",
+		"rhs_uh1h_hidf_gunship",
+	    "rhsgref_cdf_b_reg_Mi17Sh",
+	    "RHS_MELB_AH6M",
+	    "RHS_AH1Z_wd",
+	    "rhsgref_cdf_Mi35",
+		"RHS_Su25SM_CAS_vvs",
+	    "RHS_Ka52_vvsc",
+	    "rhs_mi28n_vvs",
+		"rhs_mi28n_s13_vvsc",
+	    "RHS_Mi24P_vvsc",
+		"RHS_AH64D_wd"
+	};
+};
+class CfgBlackListedBomb {
+	mags[] =
+	{
+		//LongBow hellfires are just flying around looking for ANY target
+		"6Rnd_ACE_Hellfire_AGM114L",//AGM-114L [ACE]
+		"ace_compat_rhs_usf3_pylon_mag_2rnd_hellfire_l",//2x AGM-114L [ACE]
+		"PylonMissile_1Rnd_ACE_Hellfire_AGM114L",//1x AGM-114L [ACE]
+		"PylonRack_1Rnd_ACE_Hellfire_AGM114L",//1x AGM-114L [ACE]
+		"PylonRack_3Rnd_ACE_Hellfire_AGM114L",//3x AGM-114L [ACE]
+		"PylonRack_4Rnd_ACE_Hellfire_AGM114L",//4x AGM-114L [ACE]
+		"rhs_mag_AGM114L",//AGM-114L
+		"rhs_mag_AGM114L_2",//AGM-114L (M310)
+		"rhs_mag_AGM114L_2_plane",//AGM-114L (M310)
+		"rhs_mag_AGM114L_4",//AGM-114L (M299)
+		"rhs_mag_AGM114L_plane",//AGM-114L
+		"rhs_mag_Hellfire_base",//AGM-114L Hellfire II
+		"UK3CB_BAF_PylonRack_4Rnd_Hellfire_L",//AGM-114L x4
+		//clusters/mines
+		"4Rnd_BombCluster_01_F",//CBU-85
+		"PylonMissile_1Rnd_BombCluster_01_F",//CBU-85 Cluster x1
+		"PylonRack_2Rnd_BombCluster_01_F",//CBU-85 Cluster x2
+		"PylonMissile_1Rnd_BombCluster_02_cap_F",//RBK-500F Cluster x1
+		"PylonMissile_1Rnd_BombCluster_02_F",//RBK-500F Cluster x1
+		"PylonMissile_1Rnd_BombCluster_03_F",//BL778 Cluster x1
+		"PylonRack_2Rnd_BombCluster_03_F",//BL778 Cluster x2
+		"rhs_mag_cbu100",//CBU-100
+		"rhs_mag_cbu100_3",//CBU-100 (BRU-42)
+		"rhs_mag_cbu87",//CBU-87
+		"rhs_mag_cbu87_3",//CBU-87 (BRU-42)
+		"rhs_mag_cbu89",//CBU-89
+		"rhs_mag_cbu89_3",//CBU-89 (BRU-42)
+		"4Rnd_BombCluster_02_F",//RBK-500F
+		"4Rnd_BombCluster_03_F"//BL778
+
+	};
+};

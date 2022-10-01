@@ -95,7 +95,7 @@ if (_playerMoney >= (_price*_magsCount)) then {
 				_target removeAction _actionId;
 				(_arguments select 0) addMagazineCargoGlobal [(_arguments select 1), (_arguments select 2)];
 				//[(_arguments select 1),(_arguments select 3),_caller, "ammoOnBox"] remoteExec ['WMS_fnc_BuyFromTrader']; //SMALL TRANSACTION, not buyfromtrader
-				[_caller, (_arguments select 3)] remoteExec ['WMS_fnc_smallTransactions'];
+				[_caller, (_arguments select 3)] remoteExec ['WMS_fnc_smallTransactions',2];
 			},
 			[_boxObject,_ammoTypeRandom,_magsCount,(_price*_magsCount)],		// arguments
 			1,		// priority
@@ -127,7 +127,7 @@ if (_playerMoney >= (_price*_magsCount)) then {
 				_target removeAction _actionId;
 				(_arguments select 0) addMagazineCargoGlobal [(_arguments select 1), (_arguments select 2)];
 				//[(_arguments select 1),(_arguments select 3),_caller, "ammoOnBox"] remoteExec ['WMS_fnc_BuyFromTrader']; //SMALL TRANSACTION, not buyfromtrader
-				[_caller, (_arguments select 3)] remoteExec ['WMS_fnc_smallTransactions'];
+				[_caller, (_arguments select 3)] remoteExec ['WMS_fnc_smallTransactions',2];
 			},
 			[_boxObject,_ammoTypeRandom,1,_price],		// arguments
 			1,		// priority

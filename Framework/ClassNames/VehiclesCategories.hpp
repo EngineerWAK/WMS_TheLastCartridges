@@ -171,6 +171,7 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{	
+			"rhsgref_tla_g_kraz255b1_cargo_open",
 			"rhs_kamaz5350_flatbed_cover_vdv", //flatbed cover
 			"RHS_Ural_Flat_VDV_01", //flatbed cover
 			"rhs_gaz66_flat_vdv", //flatbed cover
@@ -491,7 +492,8 @@
 	        "C_IDAP_Heli_Transport_02_F",
 	        "RHS_Mi8t_civilian",
 	        "RHS_Mi8mt_Cargo_vvs",
-	        "O_Heli_Light_02_unarmed_F"
+	        "O_Heli_Light_02_unarmed_F",
+			"RHS_C130J_Cargo"
 		};
 	};
 
@@ -594,35 +596,38 @@
 			"vtx_MH60S",
 			"vtx_MH60S_GAU21L",
 			"vtx_MH60M_DAP",
-			"vtx_MH60S_Pylons",
-
+			"vtx_MH60M_DAP_MLASS",
+			//"vtx_MH60S_Pylons", //REMOVED
+			"O_Heli_Light_02_dynamicLoadout_F",
 			"RHSGREF_A29B_HIDF", //super Tucano
 			"RHS_A10",
 			"rhs_l159_cdf_b_CDF",
 			"rhs_l39_cdf_b_cdf",
-			"B_Heli_Transport_01_F",
-			"B_CTRG_Heli_Transport_01_tropic_F",
 			"RHS_MELB_AH6M_M",
 	        "rhsgref_b_mi24g_CAS",
 			"rhs_uh1h_hidf_gunship",
 	        "rhsgref_cdf_b_reg_Mi17Sh",
+	        "RHS_MELB_AH6M",
+	        "RHS_AH1Z_wd",
+	        "rhsgref_cdf_Mi35",
+	        "I_E_Heli_light_03_dynamicLoadout_F",
+			"RHS_Su25SM_CAS_vvs",
+	        "RHS_Ka52_vvsc",
+	        "rhs_mi28n_vvs",
+			"rhs_mi28n_s13_vvsc",
+	        "RHS_Mi24P_vvsc",
+			"RHS_AH64D_wd",
+	        "B_Heli_Attack_01_dynamicLoadout_F",
+
+			"B_Heli_Transport_01_F",
+			"B_CTRG_Heli_Transport_01_tropic_F",
 	        "rhs_uh1h_hidf",
 	        "B_Heli_Light_01_dynamicLoadout_F",
 	        "B_Heli_Transport_03_F",
 	        "RHS_CH_47F",
 	        "RHS_CH_47F_cargo",
 	        "RHS_UH60M",
-	        "RHS_MELB_AH6M",
-	        "RHS_AH1Z_wd",
-	        "RHS_UH1Y",
-	        "rhsgref_cdf_Mi35",
-	        "I_E_Heli_light_03_dynamicLoadout_F",
-	        "RHS_Ka52_vvsc",
-	        "rhs_mi28n_vvs",
-			"rhs_mi28n_s13_vvsc",
-	        "RHS_Mi24P_vvsc",
-			"RHS_AH64D_wd",
-	        "B_Heli_Attack_01_dynamicLoadout_F"
+	        "RHS_UH1Y"
 		};
 	};
 

@@ -54,12 +54,15 @@ _veh setVariable ["WMS_howmanyrestarts", 0];
 _vehicleID_inventory = _vehicleID + "_inventory";
 _veh setVariable ["WMS_vehicleID_inventory", _vehicleID_inventory, true];
 _veh addMPEventHandler ["MPkilled", {
-		[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+	if (isDedicated) then {
+		//[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];//remoteExec doesnt make sens
+		[(_this select 0),"destroyed"] call WMS_fnc_updatePermanentVHL; //remoteExec doesnt make sens
 		if (true) then {
 			if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};
 			if (WMS_MissionDebug) then {diag_log format ["a stash (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];};
 			if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};
 		};
+	};
 	}
 ];//params ["_unit", "_killer", "_instigator", "_useEffects"];
 

@@ -50,7 +50,7 @@ _this spawn {
 				_lootType = "default";
 		    }forEach _houses;
 			if !(count _BuildingList == 0) then {
-      			_BuildingList remoteExec ["WMS_fnc_spawnLootManager"];
+      			_BuildingList remoteExec ["WMS_fnc_spawnLootManager",2];
 	    		//systemChat format ["Calling for lootSpawn, %1 pos", (count _BuildingList)];
 			};
 			_BuildingList = [];

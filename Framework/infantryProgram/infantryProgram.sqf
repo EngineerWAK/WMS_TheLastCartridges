@@ -169,7 +169,7 @@ WMS_IP_buildComputer = {
 		"<t size='0.9' color='#068604'>Equipement Scorpion 2.5k$</t>",
 		"
 			_target = _this select 0; _caller = _this select 1;
-			[_caller, [], (position _caller), WMS_Loadout_Scorpion, 2500] remoteExec ['WMS_fnc_InfantryProgram_loadouts'];
+			[_caller, [], (position _caller), WMS_Loadout_Scorpion, 2500] remoteExec ['WMS_fnc_InfantryProgram_loadouts',2];
 		", 
 		[],
 		1,
@@ -191,7 +191,7 @@ WMS_IP_buildComputer = {
 		"<t size='0.9' color='#068604'>Equipement AOR2 3.5k$</t>",
 		"
 			_target = _this select 0; _caller = _this select 1;
-			[_caller, [], (position _caller), WMS_Loadout_AOR2, 3500] remoteExec ['WMS_fnc_InfantryProgram_loadouts'];
+			[_caller, [], (position _caller), WMS_Loadout_AOR2, 3500] remoteExec ['WMS_fnc_InfantryProgram_loadouts',2];
 		", 
 		[],
 		1,
@@ -355,7 +355,7 @@ WMS_IP_buildComputer = {
 	[
 		"<t size='0.9' color='#068604'>Ammo SupplyDrop 3500$ </t>",
 		"
-			[(position (_this select 1)), (_this select 1), 3500, 0, 'IP_ammo'] remoteexec ['WMS_fnc_InfantryProgram_buy'];
+			[(position (_this select 1)), (_this select 1), 3500, 0, 'IP_ammo'] remoteexec ['WMS_fnc_InfantryProgram_buy',2];
 			WMS_Loc_InfProg_Supply_Last = time;
 		", 
 		[],
@@ -379,7 +379,7 @@ WMS_IP_buildComputer = {
 	[
 		"<t size='0.9' color='#068604'>Tool Kit 12k$ </t>",
 		"
-			[(position (_this select 1)), (_this select 1), 12000, 0, 'IP_toolKit'] remoteexec ['WMS_fnc_InfantryProgram_buy'];
+			[(position (_this select 1)), (_this select 1), 12000, 0, 'IP_toolKit'] remoteexec ['WMS_fnc_InfantryProgram_buy',2];
 			WMS_Loc_InfProg_Supply_Last = time;
 		", 
 		[],
@@ -403,7 +403,7 @@ WMS_IP_buildComputer = {
 	[
 		"<t size='0.9' color='#068604'>RPG7 Crate 10k$ </t>",
 		"
-			[(position (_this select 1)), (_this select 1), 10000, 0, 'IP_launcher'] remoteexec ['WMS_fnc_InfantryProgram_buy'];
+			[(position (_this select 1)), (_this select 1), 10000, 0, 'IP_launcher'] remoteexec ['WMS_fnc_InfantryProgram_buy',2];
 			WMS_Loc_InfProg_Supply_Last = time;
 		", 
 		[],

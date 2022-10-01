@@ -14,7 +14,8 @@ params [
 ];
 diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS| _playerObject %1, _aceData %2", _playerObject, _aceData];
 private _aceStuff = [
-    "ace_isdead",
+    //"ace_isdead", //changing this one since at best, it's useless, but can't totally remove it
+    "WMS_isdead",
     "ace_isunconscious",
     "ace_eyesdamaged",
     "ace_medical_openwounds",

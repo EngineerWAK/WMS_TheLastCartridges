@@ -29,5 +29,5 @@ execVM "R3F_LOG\init.sqf";
 [] execVM "Server\ACEcustomActions.sqf";
 
 CHVD_allowNoGrass = false;
-CHVD_maxView = 6000;
-CHVD_maxObj = 4500;
+CHVD_maxView = 12000;
+CHVD_maxObj = 12000;

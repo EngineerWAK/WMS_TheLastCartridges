@@ -90,7 +90,7 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 			"
 				if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 					if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-						[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromTrader'];
+						[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromTrader',2];
 					} else {
 						hint 'Bro! your respect is too low';
 						execVM 'addons\intro\levels.sqf';

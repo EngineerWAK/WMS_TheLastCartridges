@@ -25,6 +25,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 	};
 	[player,WMS_client_customRespawnInv]call WMS_fnc_client_restoreLoadoutFromVar;
 	[]spawn {
+		diag_log "[WMS_ANTI_ACE_BULSHIT]Launched";
 		uisleep 3;
 		if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 		uisleep 1;
@@ -33,6 +34,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		missionNamespace setVariable["WMS_client_canCustomRespawn",false];
 		if(((player getVariable ['playerInRestrictionZone',-1]) == -1)) then {player setVariable ['playerInRestrictionZone',0]};
 		player allowDamage true;
+		diag_log "[WMS_ANTI_ACE_BULSHIT]player ready to die again";
 	};
 }else{
 	//"randomiseSpawnPos"

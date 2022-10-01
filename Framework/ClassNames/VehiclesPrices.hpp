@@ -98,6 +98,7 @@
 ////////////////////
 ////////////////////
 //Ground unarmed
+		class rhsgref_tla_g_kraz255b1_cargo_open 	{ quality = 1; price = 9500; };
 		class rhs_kamaz5350_flatbed_cover_vdv 		{ quality = 2; price = 15000; };
 		class RHS_Ural_Flat_VDV_01 					{ quality = 1; price = 15000; };
 		class rhs_gaz66_flat_vdv 					{ quality = 0; price = 15000; };
@@ -243,18 +244,18 @@
 		class gm_dk_army_Leopard1a3 				{ quality = 5; price = 145000; };
 
 //Air unarmed
-	class rhs_uh1h_hidf_unarmed  				{ quality = 2; price = 45055; };
+	class rhs_uh1h_hidf_unarmed  				{ quality = 2; price = 45888; };
 	class UK3CB_BAF_Merlin_HC3_Cargo  			{ quality = 2; price = 20000; };
 	class UK3CB_BAF_Merlin_HM2_18  				{ quality = 2; price = 25000; };
-	class RHS_UH60M2  							{ quality = 2; price = 15000; };
-	class RHS_MELB_MH6M  						{ quality = 1; price = 10000; };
-	class RHS_UH1Y_UNARMED 						{ quality = 2; price = 10000; };
+	class RHS_UH60M2  							{ quality = 2; price = 15004; };
+	class RHS_MELB_MH6M  						{ quality = 1; price = 10004; };
+	class RHS_UH1Y_UNARMED 						{ quality = 2; price = 10004; };
 	class B_Heli_Transport_03_unarmed_F  		{ quality = 2; price = 20000; };
 	class I_Heli_light_03_unarmed_F  			{ quality = 1; price = 10000; };
-	class rhsgref_cdf_reg_Mi8amt 				{ quality = 1; price = 10000; };
+	class rhsgref_cdf_reg_Mi8amt 				{ quality = 1; price = 10004; };
 	class C_Heli_Light_01_civil_F  				{ quality = 0; price = 10000; };
 	class C_IDAP_Heli_Transport_02_F  			{ quality = 2; price = 10000; };
-	class RHS_Mi8t_civilian 					{ quality = 1; price = 15000; };
+	class RHS_Mi8t_civilian 					{ quality = 1; price = 15004; };
 	class O_Heli_Transport_04_F  				{ quality = 2; price = 10000; };
 	class O_Heli_Transport_04_bench_F  			{ quality = 2; price = 10000; };
 	class O_Heli_Transport_04_box_F  			{ quality = 2; price = 10000; };
@@ -262,7 +263,7 @@
 	class O_Heli_Transport_04_repair_black_F	{ quality = 4; price = 25000; };
 	class O_Heli_Transport_04_ammo_black_F		{ quality = 4; price = 25000; };
 	class O_Heli_Transport_04_fuel_black_F		{ quality = 4; price = 21000; };
-	class RHS_Mi8mt_Cargo_vvs  					{ quality = 1; price = 20000; };
+	class RHS_Mi8mt_Cargo_vvs  					{ quality = 1; price = 20004; };
 	class O_Heli_Light_02_unarmed_F  			{ quality = 0; price = 10000; };
 
 		//GLOBAL MOBILISATION
@@ -284,13 +285,16 @@
 	class rhs_l159_cdf_b_CDF  					{ quality = 4; price = 85777; }; //L-159 Alca
 	class RHS_A10  								{ quality = 4; price = 115777; }; //A10
 	class B_T_VTOL_01_vehicle_F  				{ quality = 2; price = 25777; }; //BlackFish VHL
+	class RHS_Su25SM_CAS_vvs  					{ quality = 4; price = 115777; }; //SU25
+	class RHS_C130J_Cargo  						{ quality = 3; price = 25777; };
 
 //Air Armed
+	class O_Heli_Light_02_dynamicLoadout_F  	{ quality = 3; price = 35000; }; //ka-60
 	class B_Heli_Transport_01_F  				{ quality = 2; price = 35000; };
 	class B_CTRG_Heli_Transport_01_tropic_F  	{ quality = 2; price = 35000; };
-	class RHS_MELB_AH6M_M  						{ quality = 3; price = 36000; };
-	class rhsgref_cdf_b_reg_Mi17Sh  			{ quality = 3; price = 55000; };
-	class rhs_uh1h_hidf  						{ quality = 3; price = 65055; };
+	class RHS_MELB_AH6M_M  						{ quality = 3; price = 36004; };
+	class rhsgref_cdf_b_reg_Mi17Sh  			{ quality = 3; price = 55004; };
+	class rhs_uh1h_hidf  						{ quality = 3; price = 65888; };
 	class B_Heli_Light_01_dynamicLoadout_F  	{ quality = 3; price = 35000; };
 	class B_Heli_Transport_03_F  				{ quality = 2; price = 35000; };
 	class UK3CB_BAF_Merlin_HC4_18_GPMG  		{ quality = 2; price = 35000; };
@@ -305,16 +309,16 @@
 	class I_E_Heli_light_03_dynamicLoadout_F  	{ quality = 3; price = 35000; };
 	class B_Heli_Attack_01_dynamicLoadout_F  	{ quality = 3; price = 35000; };
 
-	class rhs_uh1h_hidf_gunship  				{ quality = 4; price = 125000; };
-	class rhsgref_cdf_Mi35  					{ quality = 3; price = 90000; };
-	class RHS_AH1Z_wd  							{ quality = 3; price = 85000; };
+	class rhs_uh1h_hidf_gunship  				{ quality = 4; price = 125888; };
+	class rhsgref_cdf_Mi35  					{ quality = 5; price = 90004; };
+	class RHS_AH1Z_wd  							{ quality = 3; price = 85004; };
 	class BWA3_Tiger_RMK_Universal  			{ quality = 4; price = 95000; };
 	class RHS_Ka52_vvsc  						{ quality = 4; price = 95000; };
-	class rhs_mi28n_vvs  						{ quality = 5; price = 95001; };
-	class rhs_mi28n_s13_vvsc  					{ quality = 5; price = 95002; };
-	class RHS_Mi24P_vvsc  						{ quality = 4; price = 95000; };
-	class rhsgref_b_mi24g_CAS  					{ quality = 5; price = 95000; };
-	class RHS_AH64D_wd  						{ quality = 5; price = 95000; };
+	class rhs_mi28n_vvs  						{ quality = 5; price = 95004; };
+	class rhs_mi28n_s13_vvsc  					{ quality = 5; price = 95004; };
+	class RHS_Mi24P_vvsc  						{ quality = 4; price = 95004; };
+	class rhsgref_b_mi24g_CAS  					{ quality = 5; price = 95004; };
+	class RHS_AH64D_wd  						{ quality = 5; price = 95004; };
 
 		//GLOBAL MOBILISATION
 	class gm_ge_army_bo105p_pah1a1  	{ quality = 5; price = 35000; };
@@ -329,15 +333,16 @@
 	class vtx_MH60S_GAU21L  			{ quality = 3; price = 43555; };
 	class vtx_MH60M_DAP  				{ quality = 4; price = 64555; };
 	class vtx_MH60S_Pylons  			{ quality = 4; price = 64555; };
+	class vtx_MH60M_DAP_MLASS  			{ quality = 5; price = 84555; };
 
 		//freakingBoats
 	class rhs_pontoon_float  			{ quality = 1; price = 999; };//TEST!!!!!!! this is not a vehicle
 
-	class rhsgref_hidf_canoe  			{ quality = 1; price = 2500; };
+	class rhsgref_hidf_canoe  			{ quality = 1; price = 2504; };
 	class B_Lifeboat  					{ quality = 1; price = 6000; };
 	class I_Boat_Transport_01_F  		{ quality = 2; price = 4500; };
 	class B_Boat_Transport_01_F  		{ quality = 3; price = 3000; };
 	class I_C_Boat_Transport_02_F  		{ quality = 3; price = 4500; };//RHIB
 	class B_Boat_Armed_01_minigun_F  	{ quality = 4; price = 12000; };
-	class rhsusf_mkvsoc  				{ quality = 5; price = 19000; };
+	class rhsusf_mkvsoc  				{ quality = 5; price = 19004; };
 	

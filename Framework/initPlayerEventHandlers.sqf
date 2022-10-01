@@ -15,7 +15,7 @@ player addEventHandler ["Respawn",
 		if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, respawning at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		[(_this select 0)] spawn {
 			waitUntil {alive player};
-			[(_this select 0)] remoteExec ["WMS_fnc_setVarOnPlayerRespawn"];
+			[(_this select 0)] remoteExec ["WMS_fnc_setVarOnPlayerRespawn",2];
 			(_this select 0) execVM "randomizeSpawnPos.sqf";
 			(_this select 0) execVM "spawnLoot.sqf";
 			[(_this select 0)] execVM "infantryProgram\infantryProgram.sqf";
@@ -32,13 +32,13 @@ player addEventHandler ["GetOutMan", {
 		//params ["_unit", "_role", "_vehicle", "_turret"];
 		(_this select 0) setVariable ["PlayerLastVehicle", (_this select 2), true]; //try to use this for wasteDump trader
 		if ((_this select 2) getVariable ["WMS_permanentvhl", false] && {(((_this select 2) getVariable ["WMS_buyerowner", 0]) == (getPlayerUID (_this select 0)))}) then {
-			nul = [(_this select 2),"getout"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+			[(_this select 2),"getout"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
 		};
 	}
 ];
 
 player addMPEventHandler ["mpkilled", {
-		deleteMarkerLocal "MKR_"+(name player);
+		deleteMarkerLocal "MKR_"+(name (_this select 0));
 		_actualPlayer = (_this select 0) getVariable ["_spawnedPlayerReadyToFight", true];
 		if (_actualPlayer && hasInterface) then {
 			if ((getPlayerUID player) in WMS_customRespawnList) then {

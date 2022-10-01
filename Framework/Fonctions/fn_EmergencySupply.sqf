@@ -43,4 +43,4 @@ if (true) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK|  
 //Paradrop the crate and fil it
 playSound3D ["A3\Sounds_F\ambient\battlefield\battlefield_heli1.wss", _cargo, false, _pos, 3, 1, 0];
 
-[_caller, _itemPrice] remoteExec ['WMS_fnc_smallTransactions'];
+[_caller, _itemPrice] remoteExec ['WMS_fnc_smallTransactions',2];

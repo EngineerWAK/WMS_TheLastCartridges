@@ -124,7 +124,9 @@ _howmanyrestarts = 0;
 			_veh setVariable ["WMS_permanentvhl", true, true];
 			if (_veh isKindOf "tank"||_veh isKindOf "Wheeled_Apc_F") then {_veh setVariable ["ace_cookoff_enable", true, true];};
 			_veh addMPEventHandler ["MPkilled", {
-					[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+				if (isDedicated) then {
+					//[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2]; //remoteExec doesnt make sens
+					[(_this select 0),"destroyed"] call WMS_fnc_updatePermanentVHL; //remoteExec doesnt make sens
 					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
 					if (true) then {
 						diag_log "|WAK|TNA|WMS|";
@@ -133,6 +135,7 @@ _howmanyrestarts = 0;
 						diag_log "|WAK|TNA|WMS|";
 						diag_log "|WAK|TNA|WMS|";
 						};
+				};
 				}
 			];//params ["_unit", "_killer", "_instigator", "_useEffects"];
 
@@ -192,7 +195,7 @@ _howmanyrestarts = 0;
 					[
 						"<t size='1' color='#528ffa'>Reset ACE Fatigue</t>",
 						"
-						[(_this select 1), (_this select 1)] call ace_advanced_fatigue_fnc_handlePlayerChanged;
+						[(_this select 1), objNull] call ace_advanced_fatigue_fnc_handlePlayerChanged;
 						(_this select 0) setVariable ['WMS_resetFatigueTimer', time, true];
 						",
 						[], //argument accessible in the script (_this select 3)
@@ -212,6 +215,11 @@ _howmanyrestarts = 0;
 					0, //0 for all players //2 server only //-2 everyone but the server
 					true //JIP
 				];
+			};
+			private _clusterVhl = getArray(missionConfigFile >> "CfgPylonVhl" >> "vhl");
+			private _clusterMags = getArray(missionConfigFile >> "CfgBlackListedBomb" >> "mags");
+			if (_vehicleClassName in _clusterVhl) then {	
+				_veh setVariable ["ace_pylons_magazineBlacklist", _clusterMags];
 			};
 			if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1), %2/%3 restarts", _vehicleID, _howmanyrestarts,(_vehiclesManagement select 0)];};
 			if (_howmanyrestarts >= (_vehiclesManagement select 0)) then {

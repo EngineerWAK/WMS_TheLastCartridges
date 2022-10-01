@@ -18,6 +18,12 @@ if !(_itemClassName == "") then {
 	_cfgPriceDump = getNumber(missionConfigFile >> "CfgAllPrices" >> _itemClassName >> "price"); //What if the vehicle/crate is not in the CfgAllPrices? // With an not existing entry, getNumber returns 0. 
 	if !(_cfgPriceDump == 0) then {
 		_totalPriceDump = round (_cfgPriceDump*_reSellCoef);
+		if (_cargo isKindOf "tank" && {_cfgPriceDump >= _tankPriceDump}) then {
+			_totalPriceDump = round (_tankPriceDump*_reSellCoef);
+		};
+		if (_cargo isKindOf "Wheeled_Apc_F" && {_cfgPriceDump >= _APCPriceDump}) then {
+			_totalPriceDump = round (_APCPriceDump*_reSellCoef);
+		};
 	}else{
 		if (_cargo isKindOf "tank") then {
 			_totalPriceDump = round (_tankPriceDump*_reSellCoef);

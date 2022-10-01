@@ -20,6 +20,8 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	["rhsgref_un_zil131",20],
+	["rhsgref_tla_g_kraz255b1_cargo_open",40],
 	["rhsusf_M1078A1P2_WD_flatbed_fmtv_usarmy", 25],
 	["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy", 15],
 	["rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy", 35],

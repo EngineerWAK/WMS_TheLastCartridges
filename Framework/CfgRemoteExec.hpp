@@ -34,18 +34,28 @@ class CfgRemoteExec
 		class vtx_uh60_mfd_fnc_switchpage				{ allowedTargets=0; };
 		class vtx_uh60_engine_fnc_engineEH				{ allowedTargets=0; };
 
-		class bis_fnc_debugconsoleexec					{ allowedTargets=2; };
-		class bis_fnc_execvm							{ allowedTargets=2; };
-		class bis_fnc_sharedobjectives					{ allowedTargets=2; };
-		class bis_fnc_arsenal							{ allowedTargets=2; };
-		class bis_fnc_objectvar							{ allowedTargets=2; };
-		class bis_fnc_unflipVehicle						{ allowedTargets=2; };
-		class bis_fnc_reviveinitaddplayer				{ allowedTargets=2; };
-		class bis_fnc_effectKilledSecondaries			{ allowedTargets=2; };
-		class bis_fnc_curatorrespawn					{ allowedTargets=2; };
-		class bis_fnc_showNotification					{ allowedTargets=2; };
-		class bis_fnc_effectkilledairdestruction		{ allowedTargets=2; };
-		class bis_fnc_effectkilledairdestructionStage2	{ allowedTargets=2; };
+		class vtx_uh60_mfd_fnc_setpylonvalue			{ allowedTargets=0; };
+		class vtx_uh60_flir_fnc_syncpilotcamera			{ allowedTargets=0; };
+		class vtx_uh60_flir_fnc_setVisionMode			{ allowedTargets=0; };
+		class vtx_uh60_flir_fnc_setFOV					{ allowedTargets=0; };
+		class vtx_uh60_weapons_fnc_updatePylonAssignment{ allowedTargets=0; };
+		class vtx_uh60_mfd_fnc_tac_sync					{ allowedTargets=0; };
+		class vtx_uh60_weapons_fnc_interaction			{ allowedTargets=0; };
+
+		class bis_fnc_debugconsoleexec					{ allowedTargets=0; };
+		class bis_fnc_execvm							{ allowedTargets=0; };
+		class bis_fnc_sharedobjectives					{ allowedTargets=0; };
+		class bis_fnc_arsenal							{ allowedTargets=0; };
+		class bis_fnc_objectvar							{ allowedTargets=0; };
+		class bis_fnc_unflipVehicle						{ allowedTargets=0; };
+		class bis_fnc_reviveinitaddplayer				{ allowedTargets=0; };
+		class bis_fnc_effectKilledSecondaries			{ allowedTargets=0; };
+		class bis_fnc_curatorrespawn					{ allowedTargets=0; };
+		class bis_fnc_showNotification					{ allowedTargets=0; };
+		class bis_fnc_effectkilledairdestruction		{ allowedTargets=0; };
+		class bis_fnc_effectkilledairdestructionStage2	{ allowedTargets=0; };
+		class BIS_fnc_setCustomSoundController 			{ allowedTargets=0; };
+		class BIS_fnc_typeText 							{ allowedTargets=0; };
 		
 		class SA_Simulate_Towing 					{ allowedTargets=0; };
 		class SA_Attach_Tow_Ropes 					{ allowedTargets=0; };
@@ -111,12 +121,13 @@ class CfgRemoteExec
 		class WMS_fnc_infantryProgram_BlackFish		{ allowedTargets=2; }; //EXILE
 		class WMS_fnc_InfantryProgram_buy			{ allowedTargets=2; }; //EXILE
 
-		class WMS_fnc_Event_HVT		   				{ allowedTargets=2; }; //not finished
 		class WMS_fnc_DFO_Event		   				{ allowedTargets=2; }; //server side only
 
+		class WMS_fnc_client_createBaseMarkers		{ allowedTargets=0; }; //thats a weird one but trying
 		class WMS_fnc_client_3Dmarkers		   		{ allowedTargets=0; };
 		class WMS_fnc_client_LBIS			   		{ allowedTargets=0; };
 
+		//class WMS_fnc_Event_HVT		   				{ allowedTargets=2; }; //not finished
 		//class WMS_fnc_DynAI_RwdMsgOnKill			{ allowedTargets=2; }; //filter for HC1 remoteExec EHrewards
 		//class WMS_fnc_AMS_EHonKilled				{ allowedTargets=2; }; //filter for HC1 remoteExec EHrewards
 		//class WMS_fnc_AI_rewardOnVHLdestroy		{ allowedTargets=2; }; //Deactivated to prevent double EH, client AND server side

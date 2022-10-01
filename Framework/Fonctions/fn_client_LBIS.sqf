@@ -33,7 +33,7 @@ _safer 		= ["Respawning as Bambi and Fast traver to a territory is MUCH safer th
 _DFO 		= ["DFO, DynamicFlightOperations, is a mission system for helicopters, acces locked to registered players'","#1fd507",70];
 _civilians 	= ["Do not kill CIVILIANS, you will be punished and anyway you can not use their vehicles","#1fd507",70];
 
-while {_run} do {
+while {_run && WMS_LBIS} do {
 	uisleep 900+random 900;
 	_selected = selectRandom _msgs;
 	diag_log format ["LBIS %1",_selected];
@@ -60,7 +60,7 @@ while {_run} do {
 		};
 	[
 		[
-			[(_msg select 0), "<t align = 'center' shadow = '1' size = '0.7' font='PuristaLight'>%1</t>", (_msg select 0)]
+			[(_msg select 0), "<t align = 'center' shadow = '1' size = '0.7' font='PuristaLight'>%1</t>", (_msg select 2)]
 		],
 		0, safeZoneY + safeZoneH * 0.05
 	] spawn BIS_fnc_typeText;

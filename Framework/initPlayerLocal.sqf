@@ -42,6 +42,13 @@ if (hasinterface) then {
         true 
     } 
     "];
+    inGameUISetEventHandler ["Action", " 
+    if (_this select 3 == 'QuickStart') then 
+    { 
+        hint 'NOPE! No QuickStart';  
+        true 
+    } 
+    "];
     ///////////Artillery computer
     enableEngineArtillery false;
 
@@ -50,6 +57,8 @@ if (hasinterface) then {
     [] execVM "Fonctions\WMS_client_dynamicCamo.sqf";
     //DFO Choppers Actions
     [] execVM "DFO\DFO_playerLocal.sqf";
+    //LBIS tips and tricks
+    []spawn WMS_fnc_client_LBIS;
         
     _action2 = ["FixMyChat","Fix My Chat","",{showChat true},{true}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action2] call ace_interact_menu_fnc_addActionToObject;
@@ -91,7 +100,7 @@ if (hasinterface) then {
     };
 };
 
-if !(hasInterface) then {
+/*if !(hasInterface) then {
 	WMS_HeadlessOwnerID = (owner player);
 	publicVariable "WMS_HeadlessOwnerID";
 	_targetUID = getPlayerUID player;
@@ -116,4 +125,4 @@ if !(hasInterface) then {
         };
     };
     [] call HC1_60secLoop;
-};
+};*/
