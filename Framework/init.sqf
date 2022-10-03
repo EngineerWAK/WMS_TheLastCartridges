@@ -1,6 +1,13 @@
 ///////////Artillery computer
 //enableEngineArtillery false; //here also block AI to use artillery
-
+if (hasInterface) then
+{
+	[] spawn
+	{
+		waitUntil {!isNull player};
+		[player, didJIP] remoteExec ["WMS_fnc_initPlayerServer", 2];
+	};
+};
 /////////////////// Welcome Credits by Gr8 /////////////
 //execVM "addons\intro\introPVP.sqf";
 execVM "addons\intro\intro.sqf";

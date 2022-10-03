@@ -41,6 +41,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["car", 5],
 	["truck_f", 5],
 	["bus", 30],
+	["B_Truck_01_cargo_F",30],
+	["B_Truck_01_transport_F",20],
 	["b_truck_01_mover_f", 10],
 	["b_truck_01_repair_f", 10],
 	["b_truck_01_covered_f", 10],

@@ -235,6 +235,7 @@ _howmanyrestarts = 0;
 				//////////CUSTOM VEHICLES END//////////
 			};//destruction of the vehicle will start the cleaning process
 			//if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
+			_veh enableSimulationGlobal false;
 		};
 	}forEach _playerArray; 
 }forEach _permanentVhlArray; //Each array is a playerUID array with vehicle(s) array(s) inside

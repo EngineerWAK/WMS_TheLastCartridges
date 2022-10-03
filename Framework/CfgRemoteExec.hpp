@@ -4,6 +4,8 @@ class CfgRemoteExec
 	{
 		mode = 1; //0: no remoteExec, 1: white liste, 2: all autorized
 		jip = 0;
+		class WMS_fnc_initPlayerServer 					{ allowedTargets=2; }; //How about, FUCK YOU BOHEMIA?
+
 		class vxf_interaction_fnc_pointNetReceive		{ allowedTargets=0; };
 		class vxf_interaction_fnc_pointNetSend			{ allowedTargets=0; };
 		class vxf_interaction_fnc_pointCalculate		{ allowedTargets=0; };
@@ -43,7 +45,7 @@ class CfgRemoteExec
 		class vtx_uh60_weapons_fnc_interaction			{ allowedTargets=0; };
 
 		class bis_fnc_debugconsoleexec					{ allowedTargets=0; };
-		class bis_fnc_execvm							{ allowedTargets=0; };
+		//class bis_fnc_execvm							{ allowedTargets=0; };
 		class bis_fnc_sharedobjectives					{ allowedTargets=0; };
 		class bis_fnc_arsenal							{ allowedTargets=0; };
 		class bis_fnc_objectvar							{ allowedTargets=0; };
@@ -77,7 +79,6 @@ class CfgRemoteExec
 		class WMS_fnc_spawnLootManager 				{ allowedTargets=2; };
 		class WMS_fnc_processCargoDump 				{ allowedTargets=2; };
 		class WMS_fnc_buyAction 					{ allowedTargets=2; };
-		class WMS_fnc_getCompatWeaponItems 			{ allowedTargets=2; };
 		class WMS_fnc_createPermanentVHL 			{ allowedTargets=2; };
 		class WMS_fnc_updatePermanentVHL		 	{ allowedTargets=2; };
 		class WMS_fnc_initVehicleAddAction 			{ allowedTargets=2; };

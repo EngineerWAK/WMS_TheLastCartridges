@@ -12,6 +12,9 @@ private _inventoryAcces = true;
 if (_status == "UNLOCKED") then {
 	_inventoryAcces = false;
 	_vehicleObject setVariable ['WMS_howmanyrestarts', 0, true];
+	if !(simulationEnabled _vehicleObject) then {
+		_vehicleObject enableSimulationGlobal true;
+	};
 	}else{
 		if ((count (crew _vehicleObject)) == 0)then{
 			_vehicleObject setOwner 2;

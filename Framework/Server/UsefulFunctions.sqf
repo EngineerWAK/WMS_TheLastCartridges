@@ -135,6 +135,12 @@ profileNameSpace setVariable ["WMS_territoriesArray", _TerritoriesArray];
 profileNameSpace setVariable ["permanentVhlArray", nil]; 
 profileNameSpace setVariable ["territoriesArray", nil];
 
+//TP players with their name
+_pos = [12217.8,13874.1,0.00117031];
+{
+if ("Tank" in (name _x))then{_x setPos _pos};
+}forEach allPlayers;
+
 //////////////////////////////////
 //////////NOTE FOR LATER//////////
 private [];

@@ -114,7 +114,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 0)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
@@ -146,7 +146,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 0)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
@@ -371,7 +371,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
@@ -403,7 +403,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 1)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
@@ -630,7 +630,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
@@ -662,7 +662,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 2)} &&
 		{((_target getVariable ['exileterritorylevel', -1]) < 4)} &&
@@ -947,7 +947,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
@@ -978,7 +978,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 3)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
@@ -1199,7 +1199,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
@@ -1230,7 +1230,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 4)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
@@ -1515,7 +1515,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
@@ -1546,7 +1546,7 @@ switch (tolower _layout) do
 		true,
 		"",
 		"
-		(surfaceIsWater (postition _target)) &&
+		(surfaceIsWater (position _target)) &&
 		{(_target getVariable ['_layoutUpgradable', true])} &&
 		{((_target getVariable ['exileterritorylevel', -1]) > 5)} &&
 		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&

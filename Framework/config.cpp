@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.661_2022OCT01_GitHub"; //trying to clean eventHandlers and remoteExec
+	name = "v1.663_2022OCT03_GitHub"; //trying to clean eventHandlers and remoteExec
 };
 
 class Extended_PreInit_EventHandlers {

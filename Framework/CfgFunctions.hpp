@@ -13,7 +13,6 @@ class CfgFunctions
 			class findUIDinVhlArray {};
 			class findVhlIDinVhlArray {};
 			class generateHexaID {};
-			class getCompatWeaponItems {};
 			class displayKillStats {};
 			class initTraderActions {};
 			class initTraderActions_Weapons {};
@@ -79,6 +78,10 @@ class CfgFunctions
 			class IP_GNDextractionRequest {};
 			class IP_OpforVHL_radar {};
 
+		};
+		class This_wouldnt_be_needed_if_Bohemia_had_done_it_properly_in_the_first_place
+		{
+			class initPlayerServer { file = "initPlayerServer.sqf"; };
 		};
 	};
 	#include "CHVD\CfgFunctions.hpp"
