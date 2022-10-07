@@ -550,10 +550,10 @@
 			"vtx_HH60",
 			"vtx_UH60M",
 			"vtx_MH60M",
-			"vtx_MH60S",
-			"vtx_MH60S_GAU21L",
 			"vtx_MH60M_DAP",
-			"vtx_MH60S_Pylons",
+			//"vtx_MH60S", //REMOVED BY HATCHET
+			//"vtx_MH60S_GAU21L", //REMOVED BY HATCHET
+			//"vtx_MH60S_Pylons", //REMOVED BY HATCHET
 
 			"RHSGREF_A29B_HIDF", //super Tucano
 			"RHS_A10",
@@ -593,11 +593,11 @@
 			"vtx_HH60",
 			"vtx_UH60M",
 			"vtx_MH60M",
-			"vtx_MH60S",
-			"vtx_MH60S_GAU21L",
 			"vtx_MH60M_DAP",
 			"vtx_MH60M_DAP_MLASS",
-			//"vtx_MH60S_Pylons", //REMOVED
+			//"vtx_MH60S", //REMOVED BY HATCHET
+			//"vtx_MH60S_GAU21L", //REMOVED BY HATCHET
+			//"vtx_MH60S_Pylons", //REMOVED BY HATCHET
 			"O_Heli_Light_02_dynamicLoadout_F",
 			"RHSGREF_A29B_HIDF", //super Tucano
 			"RHS_A10",

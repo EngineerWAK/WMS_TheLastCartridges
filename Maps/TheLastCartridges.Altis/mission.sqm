@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=286;
+		nextID=301;
 	};
 	class Camera
 	{
 		pos[]={22136.609,108.19176,22030.77};
-		dir[]={0.70299625,-0.70810306,-0.0665626};
-		up[]={0.7049545,0.70610106,-0.066748351};
-		aside[]={-0.094265185,3.4974073e-007,-0.99556571};
+		dir[]={0.45977533,-0.79910612,-0.38741553};
+		up[]={0.61109126,0.60118449,-0.51491773};
+		aside[]={-0.64438188,5.1320239e-007,-0.7647354};
 	};
 };
 binarizationWanted=0;
@@ -11612,18 +11612,18 @@ class Mission
 		class Item522
 		{
 			dataType="Marker";
-			position[]={22298.811,4.0599999,22026.227};
+			position[]={22260.492,4.0597558,22024.609};
 			name="marker_6";
 			text="East Traders";
 			type="Select";
 			colorName="ColorGUER";
 			id=686;
-			atlOffset=0.00043678284;
+			atlOffset=0.96098161;
 		};
 		class Item523
 		{
 			dataType="Marker";
-			position[]={22298.986,4.0579443,22025.992};
+			position[]={22260.668,4.0577002,22024.375};
 			name="marker_7";
 			markerType="ELLIPSE";
 			type="ellipse";
@@ -11633,11 +11633,12 @@ class Mission
 			b=80;
 			drawBorder=1;
 			id=687;
+			atlOffset=0.95830083;
 		};
 		class Item524
 		{
 			dataType="Marker";
-			position[]={22298.736,2.8068848,22026.379};
+			position[]={22260.418,2.8066406,22024.762};
 			name="marker_8";
 			markerType="ELLIPSE";
 			type="ellipse";
@@ -11647,7 +11648,7 @@ class Mission
 			b=750;
 			drawBorder=1;
 			id=688;
-			atlOffset=-1.2533693;
+			atlOffset=-0.2919457;
 		};
 		class Item525
 		{
@@ -28251,14 +28252,14 @@ class Mission
 										};
 										class Attribute1
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
+											property="face";
+											expression="_this setface _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="BOOL";
-													value=0;
+													singleType="STRING";
+													value="WhiteHead_05";
 												};
 											};
 										};
@@ -28303,14 +28304,14 @@ class Mission
 										};
 										class Attribute5
 										{
-											property="face";
-											expression="_this setface _value;";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="STRING";
-													value="WhiteHead_05";
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};
@@ -28433,14 +28434,14 @@ class Mission
 										};
 										class Attribute1
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
+											property="face";
+											expression="_this setface _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="BOOL";
-													value=0;
+													singleType="STRING";
+													value="WhiteHead_05";
 												};
 											};
 										};
@@ -28485,14 +28486,14 @@ class Mission
 										};
 										class Attribute5
 										{
-											property="face";
-											expression="_this setface _value;";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="STRING";
-													value="WhiteHead_05";
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};

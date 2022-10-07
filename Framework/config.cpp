@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.663_2022OCT03_GitHub"; //trying to clean eventHandlers and remoteExec
+	name = "v1.664_2022OCT04_GitHub"; //cleaning remoteExec and hatchet stuff
 };
 
 class Extended_PreInit_EventHandlers {
@@ -244,7 +244,6 @@ class CfgClaimReward
 			"RHS_Stinger_AA_pod_WD", //stingers station
 			"rhs_Igla_AA_pod_vdv", //Igla station
 			"rhsgref_nat_d30_at", //AT cannon
-			//"rhs_KORD_high_MSV",
 
 			"I_UAV_02_CAS_F",
 			

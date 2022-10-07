@@ -329,11 +329,11 @@
 	class vtx_HH60  					{ quality = 2; price = 32555; };
 	class vtx_UH60M  					{ quality = 2; price = 32555; };
 	class vtx_MH60M  					{ quality = 2; price = 32555; };
-	class vtx_MH60S  					{ quality = 2; price = 32555; };
-	class vtx_MH60S_GAU21L  			{ quality = 3; price = 43555; };
 	class vtx_MH60M_DAP  				{ quality = 4; price = 64555; };
-	class vtx_MH60S_Pylons  			{ quality = 4; price = 64555; };
 	class vtx_MH60M_DAP_MLASS  			{ quality = 5; price = 84555; };
+	class vtx_MH60S  					{ quality = 2; price = 32555; }; //REMOVED BY HATCHET
+	class vtx_MH60S_GAU21L  			{ quality = 3; price = 43555; }; //REMOVED BY HATCHET
+	class vtx_MH60S_Pylons  			{ quality = 4; price = 64555; }; //REMOVED BY HATCHET
 
 		//freakingBoats
 	class rhs_pontoon_float  			{ quality = 1; price = 999; };//TEST!!!!!!! this is not a vehicle

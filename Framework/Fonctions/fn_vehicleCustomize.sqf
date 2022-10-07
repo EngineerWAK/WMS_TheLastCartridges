@@ -29,11 +29,11 @@ if(_vehicleClassName == "rhs_bmd2k" || _vehicleClassName == "rhsgref_cdf_b_bmd2"
 	_veh setObjectTextureGlobal [2, "rhsafrf\addons\rhs_bmd_camo\data\sa_bmd2_03_rus4_co.paa"];
 };
 
-if (_vehicleClassName == "vtx_MH60S_GAU21L") then {
+/*if (_vehicleClassName == "vtx_MH60S_GAU21L") then { //REMOVED BY HATCHET
 	_veh setObjectTextureGlobal [16, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\main_co.paa"]; 
 	_veh setObjectTextureGlobal [17, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\misc_co.paa"]; 
 	_veh setObjectTextureGlobal [18, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\tail_co.paa"];
-};
+};*/
 
 if (_vehicleClassName == "rhsusf_m1152_rsv_usarmy_wd") then {
 	_veh setRepairCargo 0; //use the ACE3 one
