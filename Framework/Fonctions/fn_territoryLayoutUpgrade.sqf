@@ -14,7 +14,7 @@ params [
 	"_caller",
 	"_price", //25000
 	"_layout", //'bunkercampbigger'
-	"_when" //'rightnow' //'restart'
+	"_when" //'rightnow' //'restart' //true/false
 ];
 /*
 		_flagID = (_x select 0);
@@ -47,7 +47,8 @@ _result = _results find 0;
 _flag setVariable ["layout", _layout, true];
 profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
 
-if (_when == 'rightnow') then {
+//if (_when == 'rightnow') then {
+if (_when) then {
 	[_flag, _caller,(getDir _flag), "free"] call WMS_fnc_rotateBaseObjects;
 };
 
