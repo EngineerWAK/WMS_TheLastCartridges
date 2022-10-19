@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.666_2022OCT18_GitHub"; //cleaning WMS_fnc_territoryLayoutActions, way easier to add new layouts
+	name = "v1.667_2022OCT19_GitHub"; //fix respect trade filters
 };
 
 class Extended_PreInit_EventHandlers {

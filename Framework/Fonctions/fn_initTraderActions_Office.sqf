@@ -87,21 +87,35 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	[ //params ["_target", "_caller", "_actionId", "_arguments"];
 		_traderObject,
 		[
-						//[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromTrader']; //_item, _price, player
-						//[(_this select 3) select 0,(_this select 1)] remoteExec ['WMS_fnc_createPermanentVHL'];
+			//[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromTrader']; //_item, _price, player
+			//[(_this select 3) select 0,(_this select 1)] remoteExec ['WMS_fnc_createPermanentVHL'];
 			//"<t color='#035c10'>Lock/Unlock</t>",
 			_display,
 			"
-				if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
-					if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
-						hint ((_this select 3) select 4);
-						[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromOffice'];
+				if ((_this select 3) select 0 == 'TradeRespect5k'||(_this select 3) select 0 == 'TradeRespect10k') then {
+					if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 1) then {
+						if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
+							hint ((_this select 3) select 4);
+							[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromOffice'];
+						} else {
+							hint 'Bro! your respect is too low';
+							execVM 'addons\intro\levels.sqf';
+						};
 					} else {
-						hint 'Bro! your respect is too low';
-						execVM 'addons\intro\levels.sqf';
-					};
+						hint 'Not enough respect Dude';
+					};	
 				} else {
-					hint 'You are too poor Dude';
+					if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
+						if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
+							hint ((_this select 3) select 4);
+							[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromOffice'];
+						} else {
+							hint 'Bro! your respect is too low';
+							execVM 'addons\intro\levels.sqf';
+						};
+					} else {
+						hint 'You are too poor Dude';
+					};
 				};
 			",
 			[_item,_price,_respectLevel,_item,_hintMessage], //argument accessible in the script (_this select 3)
