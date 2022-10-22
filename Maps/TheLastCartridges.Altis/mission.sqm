@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=301;
+		nextID=316;
 	};
 	class Camera
 	{
-		pos[]={22136.609,108.19176,22030.77};
-		dir[]={0.45977533,-0.79910612,-0.38741553};
-		up[]={0.61109126,0.60118449,-0.51491773};
-		aside[]={-0.64438188,5.1320239e-007,-0.7647354};
+		pos[]={22254.553,22.262829,22016.936};
+		dir[]={0.75468999,-0.62242615,-0.20758763};
+		up[]={0.60015392,0.7826643,-0.16508047};
+		aside[]={-0.2652227,1.1455268e-007,-0.96422052};
 	};
 };
 binarizationWanted=0;
@@ -11351,7 +11351,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=646;
 			type="B_Slingload_01_Cargo_F";
@@ -11438,7 +11438,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=648;
 			type="B_Slingload_01_Cargo_F";
@@ -11743,7 +11743,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=695;
 			type="B_Slingload_01_Cargo_F";
@@ -11823,18 +11823,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22280.873,5.1238637,22008.465};
-				angles[]={0.0013372133,4.4249468,0.058599081};
+				position[]={22280.873,5.1244149,22008.465};
+				angles[]={0.0013439035,4.4249506,0.058590703};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=696;
 			type="B_Slingload_01_Cargo_F";
-			atlOffset=-0.00055122375;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11917,7 +11916,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=697;
 			type="B_Slingload_01_Cargo_F";
@@ -12004,7 +12003,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=698;
 			type="B_Slingload_01_Cargo_F";
@@ -24884,7 +24883,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=1322;
 			type="B_Slingload_01_Cargo_F";
@@ -28252,14 +28251,14 @@ class Mission
 										};
 										class Attribute1
 										{
-											property="face";
-											expression="_this setface _value;";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="STRING";
-													value="WhiteHead_05";
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};
@@ -28304,14 +28303,14 @@ class Mission
 										};
 										class Attribute5
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
+											property="face";
+											expression="_this setface _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="BOOL";
-													value=0;
+													singleType="STRING";
+													value="WhiteHead_05";
 												};
 											};
 										};
@@ -28434,14 +28433,14 @@ class Mission
 										};
 										class Attribute1
 										{
-											property="face";
-											expression="_this setface _value;";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="STRING";
-													value="WhiteHead_05";
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};
@@ -28486,14 +28485,14 @@ class Mission
 										};
 										class Attribute5
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
+											property="face";
+											expression="_this setface _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="BOOL";
-													value=0;
+													singleType="STRING";
+													value="WhiteHead_05";
 												};
 											};
 										};
@@ -36263,7 +36262,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this enableRopeAttach false;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=1820;
 			type="B_Slingload_01_Ammo_F";
@@ -36387,7 +36386,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this enableRopeAttach false;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=1827;
 			type="B_Slingload_01_Ammo_F";
@@ -36497,7 +36496,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this enableRopeAttach false;";
+				init="this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
 			};
 			id=1831;
 			type="B_Slingload_01_Ammo_F";

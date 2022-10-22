@@ -12,73 +12,79 @@ private [];
 params [
 	"_container"
 ];
-/*
-_priceBunch 	= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money_bunch" >> "price"); //"priceBunch"
-_priceRoll 		= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money_Roll" >> "price"); //"priceRoll"
-_priceStack 	= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money_Stack" >> "price"); //"priceStack"
-_priceQuest 	= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money_Quest" >> "price"); //"priceQuest"
-_priceBig	 	= getNumber(missionConfigFile >> "CfgAllPrices" >> "Money" >> "price"); //"priceQuest"
-
-	class Money_bunch				    { quality = 1; price = 60; }; //30
-    class Money_roll				    { quality = 1; price = 300; }; //150
-    class Money_stack				    { quality = 1; price = 1200; }; //600
-    class Money_stack_quest			    { quality = 1; price = 2400; }; //1200
-    class Money						    { quality = 1; price = 16000; }; //8000 //craft only Money_stack_quest x7
-*/
 _container enableRopeAttach false;
-_container addAction [
-	"<t size='1' color='#4bff1a'>Claim Reward</t>", {
-		[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_claimReward",2];
-		{player removeitem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
-	}, 
-	nil, 
-	1, 
-	true, 
-	true, 
-	"", 
-	"
-	(_this getVariable ['playerInTraderZone', false]) &&
-	(vehicle _this == _this) &&
-	{(magazines player find 'Csat_Id_01' >= 0)} &&
-	{(magazines player find 'Csat_Id_02' >= 0)} &&
-	{(magazines player find 'Csat_Id_03' >= 0)} &&
-	{(magazines player find 'Csat_Id_04' >= 0)} &&
-	{(magazines player find 'Csat_Id_05' >= 0)}
-	",  
-	5, 
-	false 
+[
+	_container, [
+		"<t size='1' color='#4bff1a'>Claim Reward</t>", 
+		"
+			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_claimReward',2];
+			{player removeitem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
+		", 
+		nil, 
+		1, 
+		true, 
+		true, 
+		"", 
+		"
+		(_this getVariable ['playerInTraderZone', false]) &&
+		(vehicle _this == _this) &&
+		{(magazines player find 'Csat_Id_01' >= 0)} &&
+		{(magazines player find 'Csat_Id_02' >= 0)} &&
+		{(magazines player find 'Csat_Id_03' >= 0)} &&
+		{(magazines player find 'Csat_Id_04' >= 0)} &&
+		{(magazines player find 'Csat_Id_05' >= 0)}
+		",  
+		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
 ];
-
-_container addAction [
-	"<t size='1' color='#3d74ff'>Sell Inventory</t>", { 
-		if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
-			[(_this select 1), (_this select 0)] remoteExec ["WMS_fnc_processCargoDump",2]; 
-		} else { 
-			"Cargo Dump Container is empty, you punk" remoteExec ["hint", (owner (_this select 1))]; 
-		}; 
-	}, 
-	nil, 
-	1, 
-	true, 
-	true, 
-	"", 
-	"(_this getVariable ['playerInTraderZone', false])",  
-	5, 
-	false 
+[
+	_container, [
+		"<t size='1' color='#3d74ff'>Sell Inventory</t>", 
+		" 
+			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
+				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump',2]; 
+			} else { 
+				'Cargo Dump Container is empty, you punk' remoteExec ['hint', (owner (_this select 1))]; 
+			}; 
+		", 
+		nil, 
+		1, 
+		true, 
+		true, 
+		"", 
+		"(_this getVariable ['playerInTraderZone', false])",  
+		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
 ];
- 
-_container addAction [
-	"<t size='1' color='#26e600'>Buy Ammo</t>", {  
-		[(_this select 1), (_this select 0), "random"] call WMS_fnc_buyAmmoOnBox;  
-	}, 
-	nil, 
-	1, 
-	true, 
-	true, 
-	"", 
-	"(_this getVariable ['playerInTraderZone', false])",  
- 	5, 
-	false 
+[
+	_container, [
+		"<t size='1' color='#26e600'>Buy Ammo</t>",
+		"   
+			[(_this select 1), (_this select 0), 'random'] call WMS_fnc_buyAmmoOnBox;  
+		", 
+		nil, 
+		1, 
+		true, 
+		true, 
+		"", 
+		"(_this getVariable ['playerInTraderZone', false])",  
+ 		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
 ];
 
 [ //params ["_target", "_caller", "_actionId", "_arguments"];

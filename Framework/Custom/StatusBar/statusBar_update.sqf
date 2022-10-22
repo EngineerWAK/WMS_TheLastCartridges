@@ -5,6 +5,7 @@
 
 // Accurate Restarts
 //_restartTimes	= [0,3,6,9,12,15,18,21,24]; // Military Time
+//_serverRunTime = [missionNameSpace, WMS_ServRestartSeconds, (5*3600)] call BIS_fnc_getServerVariable; //NOPE
 _serverRunTime 	= 5*3600; //hours running
 /*_startHour		= ExileServerStartTime select 3;
 _startMinute	= ExileServerStartTime select 4;
