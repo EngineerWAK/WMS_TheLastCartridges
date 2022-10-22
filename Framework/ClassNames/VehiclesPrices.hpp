@@ -170,6 +170,18 @@
 		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 9500; };
 
 //Ground Armed
+		//RCWS
+		class O_MRAP_02_gmg_F 			{ quality = 4; price = 45000; }; //ifrit
+		class O_MRAP_02_hmg_F 			{ quality = 4; price = 45000; };
+		class O_T_MRAP_02_gmg_ghex_F 	{ quality = 4; price = 45000; };
+		class O_T_MRAP_02_hmg_ghex_F 	{ quality = 4; price = 45000; };
+		class B_MRAP_01_gmg_F 			{ quality = 4; price = 55000; }; //hunter
+		class B_MRAP_01_hmg_F 			{ quality = 4; price = 55000; };
+		class B_T_MRAP_01_gmg_F 		{ quality = 4; price = 55000; };
+		class B_T_MRAP_01_hmg_F 		{ quality = 4; price = 55000; };
+		class I_MRAP_03_gmg_F 			{ quality = 4; price = 65000; }; //strider
+		class I_MRAP_03_hmg_F 			{ quality = 4; price = 65000; };
+
 		class I_C_Offroad_02_LMG_F 					{ quality = 3; price = 38000; };
 		class I_C_Offroad_02_AT_F 					{ quality = 3; price = 55000; };
 		class O_T_LSV_02_armed_F 					{ quality = 3; price = 43000; };

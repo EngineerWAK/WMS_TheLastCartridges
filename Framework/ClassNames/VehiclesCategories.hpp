@@ -229,6 +229,18 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			//RCWS
+			"B_MRAP_01_gmg_F",
+			"B_MRAP_01_hmg_F",
+			//"B_T_MRAP_01_gmg_F",
+			//"B_T_MRAP_01_hmg_F",
+			//"O_MRAP_02_gmg_F",
+			//"O_MRAP_02_hmg_F",
+			"O_T_MRAP_02_gmg_ghex_F",
+			"O_T_MRAP_02_hmg_ghex_F",
+			"I_MRAP_03_gmg_F",
+			"I_MRAP_03_hmg_F",
+			//
 	        "BWA3_Puma_Fleck",
 	        "BWA3_Eagle_FLW100_Fleck",
 	        "BWA3_Dingo2_FLW100_MG3_CG13_Fleck",
@@ -347,6 +359,18 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			//RCWS
+			"B_MRAP_01_gmg_F",
+			"B_MRAP_01_hmg_F",
+			//"B_T_MRAP_01_gmg_F",
+			//"B_T_MRAP_01_hmg_F",
+			//"O_MRAP_02_gmg_F",
+			//"O_MRAP_02_hmg_F",
+			"O_T_MRAP_02_gmg_ghex_F",
+			"O_T_MRAP_02_hmg_ghex_F",
+			"I_MRAP_03_gmg_F",
+			"I_MRAP_03_hmg_F",
+			//
 			"RHS_M119_WD", //Old Arti canon, need to ad to R3f Log
 			"rhsgref_cdf_reg_d30", //Old Arti canon, need to ad to R3f Log
 			"rhsgref_cdf_2s1", //Old Arti Tank

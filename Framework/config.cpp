@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.667_2022OCT19_GitHub"; //fix respect trade filters
+	name = "v1.669_2022OCT22_GitHub"; //RCWS Vehicles for players!
 };
 
 class Extended_PreInit_EventHandlers {

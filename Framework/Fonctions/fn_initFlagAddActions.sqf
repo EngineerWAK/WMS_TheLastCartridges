@@ -14,7 +14,7 @@ params[
 	["_caller", -2],
 	["_jip", true]
 ];
-if (true) then {diag_log format ["[INIT_FLAG_ACTIONS]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
+if (true) then {diag_log format ["[INIT_FLAG_ACTIONS]|WAK|TNA|WMS|UPDATE: _this %1 @ %2 ASL", _this, (getPosASL (_this select 0))]};
 _flag setVariable ['_allowRotation', true, true];
 _flag setVariable ['_setRotationAngle', 0, true];
 _flag setVariable ['_origininalHeading', (getDir _flag), true];
