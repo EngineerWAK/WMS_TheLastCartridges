@@ -8,18 +8,25 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-//Test on RadarObject as buying station
-	class rhsgref_hidf_m113a3_unarmed       	{ quality = 3; price = 4500; };
-	class BWA3_Eagle_Fleck                 	 	{ quality = 3; price = 5000; };
-	class rhsgref_hidf_M998_2dr             	{ quality = 2; price = 1000; };
-	class rhsusf_m998_w_s_4dr               	{ quality = 2; price = 1000; };
-	class UK3CB_BAF_LandRover_Soft_FFR_Green_B  { quality = 1; price = 1000; };
-//Test on RadarObject as buying station
-	class RHS_MELB_H6M  						{ quality = 1; price = 1000; };
-	class rhsgref_un_Mi8amt  					{ quality = 1; price = 1000; };
-	class UK3CB_BAF_Wildcat_HMA2_TRN_8A  		{ quality = 1; price = 1000; };
 //////////////////////////////
-//AMS
+//AMS REWARDS NOT IN TRADERS
+//////////////////////////////
+//WMS_AMS_COMMSRwds = [
+	//class I_E_Offroad_01_comms_F  				{ quality = 1; price = 8000; };
+	//class O_Truck_03_device_F  					{ quality = 1; price = 18000; };
+	//class O_T_Truck_03_device_ghex_F  			{ quality = 1; price = 18000; };
+	//class rhsusf_CGRCAT1A2_M2_usmc_wd  			{ quality = 1; price = 49000; };
+	class B_GEN_Offroad_01_comms_F  			{ quality = 1; price = 8000; };
+	class C_Offroad_01_comms_F  				{ quality = 1; price = 8000; };
+	class I_LT_01_scout_F  						{ quality = 1; price = 25000; };
+	class rhsusf_m1152_sicps_usarmy_wd  		{ quality = 1; price = 14000; };
+	class rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy  { quality = 1; price = 18000; };
+	class rhsusf_M1230_M2_usarmy_wd  			{ quality = 1; price = 22000; };
+	class rhs_tigr_sts_msv  					{ quality = 1; price = 16000; };
+	class rhs_gaz66_r142_msv  					{ quality = 1; price = 14000; };
+	class rhsgref_BRDM2UM_msv  					{ quality = 1; price = 15000; };
+	class rhs_prp3_msv  						{ quality = 1; price = 28000; };
+
 //WMS_AMS_LightRwds = [
 	class B_LSV_01_unarmed_olive_F  			{ quality = 1; price = 8000; };
 	class B_CTRG_LSV_01_light_F  				{ quality = 1; price = 8000; };
@@ -32,10 +39,11 @@
 	class C_Offroad_02_unarmed_blue_F  			{ quality = 1; price = 8000; };
 
 //WMS_AMS_TruckRwds = [
-	class O_T_Truck_03_transport_ghex_F  		{ quality = 1; price = 15000; };
-	class O_T_Truck_03_covered_ghex_F  			{ quality = 1; price = 15000; };
 	//class O_T_Truck_03_device_ghex_F  		{ quality = 1; price = 1000; };
 	//class O_T_Truck_03_fuel_ghex_F  			{ quality = 1; price = 1000; };
+	//class I_E_Truck_02_transport_F  			{ quality = 1; price = 1000; };
+	class O_T_Truck_03_transport_ghex_F  		{ quality = 1; price = 15000; };
+	class O_T_Truck_03_covered_ghex_F  			{ quality = 1; price = 15000; };
 	class B_T_Truck_01_transport_F  			{ quality = 1; price = 15000; };
 	class B_T_Truck_01_covered_F  				{ quality = 1; price = 15000; };
 	class B_T_Truck_01_mover_F  				{ quality = 1; price = 15000; };
@@ -43,14 +51,13 @@
 	class O_T_Truck_02_F  						{ quality = 1; price = 15000; };
 	class B_T_Truck_01_flatbed_F  				{ quality = 1; price = 15000; };
 	class I_E_Truck_02_F  						{ quality = 1; price = 15000; };
-	//class I_E_Truck_02_transport_F  			{ quality = 1; price = 1000; };
 
 //WMS_AMS_SpclRwds = [
+	//class O_T_Truck_03_ammo_ghex_F  			{ quality = 1; price = 18000; };
 	class B_Truck_01_ammo_F  					{ quality = 1; price = 18000; };
 	class B_T_Truck_01_ammo_F  					{ quality = 1; price = 18000; };
 	class O_Truck_03_ammo_F  					{ quality = 1; price = 18000; };
 	class O_Truck_02_Ammo_F  					{ quality = 1; price = 18000; };
-	//class O_T_Truck_03_ammo_ghex_F  			{ quality = 1; price = 18000; };
 	class O_Truck_03_device_F  					{ quality = 1; price = 18000; };
 	class O_T_Truck_03_device_ghex_F  			{ quality = 1; price = 18000; };
 	class O_T_Truck_03_repair_ghex_F  			{ quality = 1; price = 25000; }; //repair
@@ -63,36 +70,36 @@
 	class O_T_Truck_02_Ammo_F  					{ quality = 1; price = 18000; };
 
 //WMS_AMS_ArmoredLightRwds = [
+	//class R3F_FENNEC_CE  						{ quality = 1; price = 10001; };
+	//class R3F_MATV_CE  						{ quality = 1; price = 10001; };
 	class O_T_MRAP_02_ghex_F  					{ quality = 1; price = 12000; };
 	class B_T_MRAP_01_F  						{ quality = 1; price = 12000; };
 	class I_MRAP_03_F  							{ quality = 1; price = 12000; };
-	//class R3F_FENNEC_CE  						{ quality = 1; price = 10001; };
-	//class R3F_MATV_CE  						{ quality = 1; price = 10001; };
 
-//WMS_AMS_LightArmedRwds = [ //I_LT_01_cannon_F
-	class B_LSV_01_armed_olive_F  				{ quality = 1; price = 16000; };
-	class O_LSV_02_armed_ghex_F  				{ quality = 1; price = 16000; };
+//WMS_AMS_LightArmedRwds = [
 	//class B_G_Offroad_01_armed_F  			{ quality = 1; price = 1000; };
 	//class I_C_Offroad_02_LMG_F  				{ quality = 1; price = 1000; };
+	class B_LSV_01_armed_olive_F  				{ quality = 1; price = 16000; };
+	class O_LSV_02_armed_ghex_F  				{ quality = 1; price = 16000; };
 
 //WMS_AMS_ChopperRwds = [
-	class B_Heli_Light_01_F  					{ quality = 1; price = 10000; };
 	//class O_Heli_Light_02_unarmed_F  			{ quality = 1; price = 1000; };
-	class I_Heli_Transport_02_F  				{ quality = 1; price = 10000; };
 	//class I_Heli_light_03_unarmed_F  			{ quality = 1; price = 1000; };
 	//class O_Heli_Transport_04_F  				{ quality = 1; price = 1000; };
 	//class O_Heli_Transport_04_bench_F  		{ quality = 1; price = 1000; };
+	//class R3F_AH6_CE  						{ quality = 1; price = 10001; };
+	//class UK3CB_BAF_Merlin_HC3_Cargo  		{ quality = 1; price = 1000; };
+	//class UK3CB_BAF_Merlin_HM2_18  			{ quality = 1; price = 1000; };
+	//class RHS_Mi8mt_Cargo_vvs  				{ quality = 1; price = 1000; };
+	class B_Heli_Light_01_F  					{ quality = 1; price = 10000; };
+	class I_Heli_Transport_02_F  				{ quality = 1; price = 10000; };
 	class I_C_Heli_Light_01_civil_F  			{ quality = 1; price = 10000; };
 	class I_E_Heli_light_03_unarmed_F  			{ quality = 1; price = 10000; };
 	class R3F_MERLIN_CE  						{ quality = 1; price = 14001; };
 	class R3F_LYNX_CE  							{ quality = 1; price = 14001; };
-	//class R3F_AH6_CE  						{ quality = 1; price = 10001; };
 	class UK3CB_BAF_Vehicles_Merlin_RAF_ZJ124  	{ quality = 1; price = 14000; };
 	class UK3CB_BAF_Wildcat_Transport_RN_ZZ396  { quality = 1; price = 14000; };
-	//class UK3CB_BAF_Merlin_HC3_Cargo  		{ quality = 1; price = 1000; };
-	//class UK3CB_BAF_Merlin_HM2_18  			{ quality = 1; price = 1000; };
 	class RHS_Mi24Vt_vvs  						{ quality = 1; price = 20000; };
-	//class RHS_Mi8mt_Cargo_vvs  				{ quality = 1; price = 1000; };
 	class RHS_Mi8amt_civilian  					{ quality = 1; price = 14000; };
 ////////////////////
 ////////////////////

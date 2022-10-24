@@ -76,7 +76,7 @@ class rhs_weap_hk416d145			{ quality = 1; price = 450; };
 class UK3CB_BAF_L85A2_RIS			{ quality = 1; price = 450; };
 class rhs_weap_m4a1_blockII_M203_bk	{ quality = 1; price = 550; };
 class arifle_MSBS65_Mark_black_F	{ quality = 1; price = 450; };
-class arifle_ARX_blk_F				{ quality = 1; price = 450; };
+class arifle_ARX_blk_F				{ quality = 1; price = 750; };
 class hlc_rifle_ACR68_Carb_black	{ quality = 1; price = 450; };
 class hlc_rifle_ACR68_full_black	{ quality = 1; price = 450; };
 class rhs_weap_hk416d10_LMT			{ quality = 1; price = 450; };

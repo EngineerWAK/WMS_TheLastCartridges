@@ -8,40 +8,6 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-    class CarsToBuy
-	{//Test on RadarObject as buying station
-		name = "Cars";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-	        "rhsgref_hidf_m113a3_unarmed",
-	        "BWA3_Eagle_Fleck",
-	        "rhsgref_cdf_b_gaz66",
-	        "B_CTRG_LSV_01_light_F",
-	        "B_G_Van_01_transport_F",
-	        "rhsgref_hidf_M998_2dr",
-	        "UK3CB_BAF_LandRover_Soft_FFR_Green_B",
-	        "R3F_MATV_CE",
-	        "RHS_M2A2_wd",
-	        "rhsusf_M1078A1P2_WD_fmtv_usarmy",
-	        "rhsusf_m998_w_s_4dr"
-		};
-	};
-	class ChoppersToBuy
-	{//Test on RadarObject as buying station
-		name = "Chopper";
-		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-		items[] = 
-		{
-	        "UK3CB_BAF_Merlin_HM2_18",
-	        "B_Heli_Light_01_F",
-	        "RHS_UH60M2",
-	        "RHS_MELB_H6M",
-	        "O_Heli_Transport_04_F",
-	        "rhsgref_un_Mi8amt",
-			"UK3CB_BAF_Wildcat_HMA2_TRN_8A"
-		};
-	};
 	//'notyet','weapons','equipement','office','accessories','vehiclesarmed','vehiclesunarmed','airarmed','airunarmed'
 	class VehiclesUnarmed
 	{
