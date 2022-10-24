@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.67_2022OCT22_GitHub"; //Trader Container fix
+	name = "v1.673_2022OCT24_GitHub"; //trying to link the statBar to WMS_InfantryProgram Timer to allow "live" update on the restart counter
 };
 
 class Extended_PreInit_EventHandlers {

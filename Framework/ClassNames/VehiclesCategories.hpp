@@ -370,6 +370,16 @@
 			"O_T_MRAP_02_hmg_ghex_F",
 			"I_MRAP_03_gmg_F",
 			"I_MRAP_03_hmg_F",
+			//CROWS
+			"rhsusf_M1239_M2_Deploy_socom_d",
+			"rhsusf_M1239_MK19_Deploy_socom_d",
+			"rhsusf_M1239_M2_socom_d",
+			"rhsusf_M1239_MK19_socom_d",
+			"rhsusf_M1238A1_M2_socom_d",
+			"rhsusf_M1238A1_Mk19_socom_d",
+			"rhsusf_m1165a1_gmv_m134d_m240_socom_d",
+			//"rhsusf_m1165a1_gmv_m2_m240_socom_d",
+			//"rhsusf_m1165a1_gmv_mk19_m240_socom_d",
 			//
 			"RHS_M119_WD", //Old Arti canon, need to ad to R3f Log
 			"rhsgref_cdf_reg_d30", //Old Arti canon, need to ad to R3f Log

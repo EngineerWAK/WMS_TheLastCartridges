@@ -32,8 +32,12 @@ This version of the Framework include:
     WMS_InfantryProgram mpmission files
     And some old Crap which need to be cleaned...
 
-you will need at least CBA, ACE3, RHS AFRF/USAF/GREF<br/>
+You will need at least CBA, ACE3, RHS AFRF/USAF/GREF<br/>
 CfgSounds and custom\ogg will certainly change<br/>
+
+## Custom Maps
+
+Look at NewMissionsFileSetup.md to create your own server config/map and then export a mission.sqm<br/>
 
 ## License
 

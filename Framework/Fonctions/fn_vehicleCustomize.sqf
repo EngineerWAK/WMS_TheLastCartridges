@@ -3,6 +3,36 @@ params [
 ];
 private _vehicleClassName = (typeOf _veh);
 
+if (_vehicleClassName == "rhsusf_M1239_M2_Deploy_socom_d" || _vehicleClassName == "rhsusf_M1239_MK19_Deploy_socom_d" || _vehicleClassName ==  "rhsusf_M1239_M2_socom_d" || _vehicleClassName == "rhsusf_M1239_MK19_socom_d") then {
+	_veh setObjectTextureGlobal [0, "rhsusf\addons\rhsusf_socomauv\data\m1239_main_wd_co.paa"]; 
+	_veh setObjectTextureGlobal [1, "rhsusf\addons\rhsusf_socomauv\data\m1239_wheels_wd_co.paa"]; 
+	_veh setObjectTextureGlobal [2, "rhsusf\addons\rhsusf_socomauv\decals\auv_socom_decal_ca.paa"]; 
+	_veh setObjectTextureGlobal [3, "rhsusf\addons\rhsusf_caiman\data\m153_wd_co.paa"]; 
+	_veh setObjectTextureGlobal [4, "rhsusf\addons\rhsusf_rg33l\data\rhsusf_camonet_wdl_co.paa"];
+};
+if (_vehicleClassName == "rhsusf_M1238A1_M2_socom_d" || _vehicleClassName == "rhsusf_M1238A1_Mk19_socom_d") then {
+	_veh setObjectTextureGlobal [0, "rhsusf\addons\rhsusf_rg33\data\m1238a1_main_wd_co.paa"]; 
+	_veh setObjectTextureGlobal [1, "rhsusf\addons\rhsusf_rg33\data\m1238a1_wheels_wd_co.paa"]; 
+	_veh setObjectTextureGlobal [2, "rhsusf\addons\rhsusf_rg33\data\m1238a1_markings_ca.paa"]; 
+	_veh setObjectTextureGlobal [3, "rhsusf\addons\rhsusf_caiman\data\m153_wd_co.paa"]; 
+};
+if (_vehicleClassName == "rhsusf_m1165a1_gmv_m134d_m240_socom_d" || _vehicleClassName == "rhsusf_m1165a1_gmv_m2_m240_socom_d" || _vehicleClassName == "rhsusf_m1165a1_gmv_mk19_m240_socom_d") then {
+	_veh setObjectTextureGlobal [0, "rhsusf\addons\rhsusf_m1165\data\rhsusf_m1165a1_gmv_ext_wd_co.paa"];
+	_veh setObjectTextureGlobal [1, "rhsusf\addons\rhsusf_m11xx\data\rhsusf_m1151_tire_wd_co.paa"];
+	_veh setObjectTextureGlobal [2, "rhsusf\addons\rhsusf_m11xx\data\rhsusf_m1151_int_co.paa"];
+	_veh setObjectTextureGlobal [3, "rhsusf\addons\rhsusf_hmmwv\textures\mk64mount_w_co.paa"];
+	_veh setObjectTextureGlobal [4, "rhsusf\addons\rhsusf_m1165\data\rhsusf_m1165a1_gmv_wd_co.paa"];
+	_veh setObjectTextureGlobal [5, "rhsusf\addons\rhsusf_m1165\data\rhsusf_m1165a1_gmv_sag_wd_co.paa"];
+	_veh setObjectTextureGlobal [6, "rhsusf\addons\rhsusf_m1165\data\rhsusf_m11165a1_gmv_h246mount_wd_co.paa"]; 
+};
+if (_vehicleClassName == "rhsusf_mrzr4_w_mud") then {
+	_veh setObjectTextureGlobal [0, "rhsusf\addons\rhsusf_mrzr\data\blue_grn_mud_co.paa"];
+	_veh setObjectTextureGlobal [1, "rhsusf\addons\rhsusf_mrzr\data\yel_grn_mud_co.paa"];
+	_veh setObjectTextureGlobal [2, "rhsusf\addons\rhsusf_mrzr\data\red_grn_mud_co.paa"];
+	_veh setObjectTextureGlobal [3, "rhsusf\addons\rhsusf_mrzr\data\grn_grn_mud_co.paa"];
+	_veh setObjectTextureGlobal [4, "rhsusf\addons\rhsusf_mrzr\data\merged\orng_grn_mud_co.paa"]; 
+};
+
 if(_vehicleClassName == "RHS_UH1Y") then
 {
 	_veh animate				["hide_FrontDoors", 1];

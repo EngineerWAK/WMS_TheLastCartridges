@@ -114,7 +114,7 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 						[(_this select 3) select 0,(_this select 3) select 1,(_this select 1),(_this select 3) select 3] remoteExec ['WMS_fnc_BuyFromTrader'];
 					} else {
 						hint 'Bro! your respect is too low';
-						execVM 'addons\intro\levels.sqf';
+						execVM 'Custom\Intro\levels.sqf';
 					};
 				} else {
 					hint 'You are too poor Dude';

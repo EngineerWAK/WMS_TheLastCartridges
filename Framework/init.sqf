@@ -9,10 +9,10 @@ if (hasInterface) then
 	};
 };
 /////////////////// Welcome Credits by Gr8 /////////////
-//execVM "addons\intro\introPVP.sqf";
-execVM "addons\intro\intro.sqf";
-//execVM "addons\intro\intro_planes.sqf";
-//execVM "addons\intro\introAirAssist.sqf";
+//execVM "Custom\Intro\introPVP.sqf";
+execVM "Custom\Intro\intro.sqf";
+//execVM "Custom\Intro\intro_planes.sqf";
+//execVM "Custom\Intro\introAirAssist.sqf";
 
 ///////////Watermark////////////
 execVM "Custom\Watermark\init.sqf";

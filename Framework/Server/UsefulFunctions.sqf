@@ -70,28 +70,12 @@ WMS_fnc_GetOwnedPermanentVhl = {
 	_result
 };
 
-WMS_fnc_markerOnPersonalVhls = { //spawn from client
-	_Pos_Array = [];
-	_mkrNameArray = [];
-	_vehicleArray = [(getPlayerUID player)] remoteExec ["WMS_GetOwnedPermanentVhl", 2] //to the server
-	uisleep 1;
-	if !((count _vehicleArray) == 0) then {
-		{ 
-			_displayName = getText (configFile >> "CfgVehicles" >> (_x select 0) >> "displayName");
-			_mkr1 = createMarkerLocal [format ["MKR1_%1_%2",(_x select 1), time], _x]; 
-			_mkr1 setMarkerTypeLocal "loc_car"; 
-			_mkr1 setMarkerText _displayName;
-			_mkr1 setMarkerColorLocal "ColorGUER";
-			_mkrNameArray pushBack _mkr1;
-		}forEach _vehicleArray; //type, position]
-		uisleep 300;
-		{
-			deleteMarkerLocal _x;
-		}forEach _mkrNameArray;
-	}else {
-		systemChat "No Personal Vehicle found";
-	};
-};
+//spawn a mission server side ONLY (WMS_AMS/InfantryProgram)
+["commsrelay"] call WMS_fnc_AMS_SpawnMission; //missions from WMS_AMS_MissionList
+
+//change server running time server side compatible with statusBar
+WMS_ServRestartSeconds = serverTime+3600; //restart in one hour
+publicVariable "WMS_ServRestartSeconds";
 
 //GetMarkers position 
 _result = [];
@@ -116,6 +100,7 @@ _moneyToAdd = 10000;
 _playerUID_ExileMoney = "ExileMoney_"+_targetUID;
 _playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
 profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney+_moneyToAdd)];
+
 //modify player money local
 _moneyToAdd = 10000;
 _playerMoney = player getVariable ["ExileMoney",0];
@@ -125,15 +110,6 @@ player setVariable ["ExileMoney",(_playerMoney+_playerMoney), true];
 _result = [];
 {_result pushBack [name _x, owner _x]}forEach allPlayers;
 _result;
-//////////
-////////////////////////
-//Convert ServerProfile Variables
-private _permanentVhlArray = profileNameSpace getVariable ["permanentVhlArray", []]; 
-private _TerritoriesArray = profileNameSpace getVariable ["territoriesArray", []];
-profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray]; 
-profileNameSpace setVariable ["WMS_territoriesArray", _TerritoriesArray];
-profileNameSpace setVariable ["permanentVhlArray", nil]; 
-profileNameSpace setVariable ["territoriesArray", nil];
 
 //TP players with their name
 _pos = [12217.8,13874.1,0.00117031];

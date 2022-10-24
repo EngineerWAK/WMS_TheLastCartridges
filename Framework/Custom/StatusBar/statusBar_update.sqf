@@ -3,29 +3,14 @@
 	Modify by {|||TNA|||}WAKeupneo to fit the missionFile, do not work with Exile anymore
 */
 
-// Accurate Restarts
-//_restartTimes	= [0,3,6,9,12,15,18,21,24]; // Military Time
-//_serverRunTime = [missionNameSpace, WMS_ServRestartSeconds, (5*3600)] call BIS_fnc_getServerVariable; //NOPE
-_serverRunTime 	= 5*3600; //hours running
-/*_startHour		= ExileServerStartTime select 3;
-_startMinute	= ExileServerStartTime select 4;
-_startSecond	= ExileServerStartTime select 5;*/
+_serverRunTime 	= missionNamespace getVariable ["WMS_ServRestartSeconds", 18000];//WMS_ServRestartSeconds is not publicVariable
+//_serverRunTime 	= 5*3600; //hours running
 
 _startHour		= 0;
 _startMinute	= 0;
 _startSecond	= 0;
-/*
-_correcTime		= [];
-{
-	if (_startHour < _x and _startHour != 24) then
-	{
-		_correcTime pushBack _x;
-	};
-} forEach _restartTimes;*/
 
 disableSerialization;
-
-//systemChat format["StatusBar Initialized", _rscLayer];
 
 // Check if Status Bar is showing and restart if not..
 if (isNull ((uiNamespace getVariable "StatusBar")displayCtrl 55554)) then
@@ -67,16 +52,9 @@ _colour12k 		= parseText (_traderColors select 3);
 _colour18k 		= parseText (_traderColors select 4);
 _colour25k 		= parseText (_traderColors select 5);
 _colour50k 		= parseText (_traderColors select 6);
-/*
-_colour1k 		= parseText "#8dfb7e";
-_colour6k 		= parseText "#1fd507";
-_colour12k 		= parseText "#07d593";
-_colour18k 		= parseText "#0797d5";
-_colour25k 		= parseText "#8d07d5";
-_colour50k 		= parseText "#d5074b";
-*/
+
 // Initialize variables and set values
-_damage = (round (player getvariable ["ace_medical_heartrate", 0])); //80 by default
+_damage 		= (round (player getvariable ["ace_medical_heartrate", 0])); //80 by default
 _hunger			= 100 - (round (player getvariable ["acex_field_rations_hunger", 0]));
 _thirst			= 100 - (round (player getvariable ["acex_field_rations_thirst", 0]));
 _kills			= (player getVariable ["ExileKills", 0]);
@@ -92,12 +70,10 @@ if (_locker > 999) then
 {
 	_locker = format ["%1k", floor (_locker / 1000)];
 };
-_wallet = _locker;
+_wallet 		= _locker;
 _energyPercent	= 100;
 _playerFPS		= round diag_fps;
 _dir			= round (getDir (vehicle player));
-//_rightTime		= (((_correcTime select 0) - _startHour) - _startMinute/60) * 60;
-//_time			= (round(_rightTime - (serverTime)/60));
 _time			= _serverRunTime-time; //18000-600 (5h - 10 minutes) = 17400
 _hours			= (floor(_time/3600)); //17400/3600 = 4 (4.833333)
 _minutes		= round((_time - (_hours * 3600))/60); //((17400 - (4 *3600)) /60) = 50
@@ -194,17 +170,12 @@ switch (true) do
 	case (_respect < 1000) : {_colourRespect =  _colourDefault;};
 	default {_colourRespect = _colourDefault;};
 };
-//_respect		= ExileClientPlayerScore;
 if (_respect > 999) then
 {
 	_respect = format ["%1k", floor (_respect / 1000)];
 };
 
 // Display the information 
-
-//<t shadow='1' shadowColor='#000000' size='1.1' color='%10'><img size='1.1'  shadowColor='#000000' image='Custom\StatusBar\Icons\wallet.paa' color='%10'/> %4  </t>
-//<t shadow='1' shadowColor='#000000' size='1' color='%11'><img size='1'  shadowColor='#000000' image='Custom\StatusBar\Icons\health.paa' color='%11'/> %3%1  </t>
-
 ((uiNamespace getVariable "StatusBar")displayCtrl 55554)ctrlSetStructuredText parseText 
 format[
 "

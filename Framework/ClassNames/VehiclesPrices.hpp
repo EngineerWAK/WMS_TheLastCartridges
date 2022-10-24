@@ -181,6 +181,16 @@
 		class B_T_MRAP_01_hmg_F 		{ quality = 4; price = 55000; };
 		class I_MRAP_03_gmg_F 			{ quality = 4; price = 65000; }; //strider
 		class I_MRAP_03_hmg_F 			{ quality = 4; price = 65000; };
+		//CROWS
+		class rhsusf_M1239_M2_Deploy_socom_d 		{ quality = 6; price = 65000; };
+		class rhsusf_M1239_MK19_Deploy_socom_d 		{ quality = 6; price = 65000; };
+		class rhsusf_M1239_M2_socom_d 				{ quality = 4; price = 60000; };
+		class rhsusf_M1239_MK19_socom_d 			{ quality = 4; price = 60000; };
+		class rhsusf_M1238A1_M2_socom_d 			{ quality = 4; price = 55000; };
+		class rhsusf_M1238A1_Mk19_socom_d 			{ quality = 4; price = 55000; };
+		class rhsusf_m1165a1_gmv_m134d_m240_socom_d { quality = 4; price = 52000; };
+		class rhsusf_m1165a1_gmv_m2_m240_socom_d 	{ quality = 4; price = 52000; };
+		class rhsusf_m1165a1_gmv_mk19_m240_socom_d 	{ quality = 4; price = 52000; };
 
 		class I_C_Offroad_02_LMG_F 					{ quality = 3; price = 38000; };
 		class I_C_Offroad_02_AT_F 					{ quality = 3; price = 55000; };
