@@ -137,6 +137,16 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{	
+			//MEDICAL FACILITIES
+			//"C_IDAP_UGV_01_F",
+			"C_IDAP_Van_02_medevac_F",
+			"C_IDAP_Offroad_02_unarmed_F",
+			"C_IDAP_Offroad_01_F",
+			"C_IDAP_Van_02_vehicle_F",
+			"C_IDAP_Van_02_transport_F",
+			"C_IDAP_Truck_02_transport_F",
+			"C_IDAP_Truck_02_F",
+			//
 			"rhsgref_tla_g_kraz255b1_cargo_open",
 			"rhs_kamaz5350_flatbed_cover_vdv", //flatbed cover
 			"RHS_Ural_Flat_VDV_01", //flatbed cover

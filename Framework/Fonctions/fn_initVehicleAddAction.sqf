@@ -15,20 +15,39 @@ params[
 	["_jip", false]
 ];
 if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
-
+//_OpenVhl = getArray(missionConfigFile>>"CfgOpenVhl">>"vhl");
 [
+//					if ((_this select 1) getVariable ['playerInTraderZone', true])then{
 	_veh,
 	[
 		"<t color='#035c10'>Lock/Unlock</t>",
 		"	
 			if (locked (_this select 0) == 0) then {
-				(_this select 0) setVehicleLock 'LOCKED';
-				(_this select 0) lockInventory true;
-				if(count Crew (_this select 0) == 0)then{(_this select 0) setVelocity [0,0,0]};
-				nul = [(_this select 0),'LOCKED'] remoteExec ['WMS_fnc_ConfLockUnlock', 2];
-				playSound3D [getMissionPath'\custom\ogg\caralarm.ogg', (_this select 0), false, position (_this select 0), 4, 1, 0];
-				if ((_this select 0) getVariable ['permanentVHL', false])then {
-					nul = [(_this select 0),'lockunlock'] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+				if (typeOf (_this select 0) in (getArray(missionConfigFile>>'CfgOpenVhl'>>'vhl'))) then {
+					_territoryOfficeData = getArray(missionConfigFile >> 'CfgOfficeTrader' >> 'ZoneSizes');
+					_nearestTrader = [WMS_tradersMkrPos, (_this select 0)] call BIS_fnc_nearestPosition;
+					if ((_nearestTrader distance2D (_this select 0)) < ((_territoryOfficeData select 0)+(_territoryOfficeData select 3))) then {
+						hint 'Restricted Action in Traders';
+						[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle Can Not Be Locked In Traders Zone +50m'; 
+					}else{
+						(_this select 0) setVehicleLock 'LOCKED';
+						(_this select 0) lockInventory true;
+						if(count Crew (_this select 0) == 0)then{(_this select 0) setVelocity [0,0,0]};
+						[(_this select 0),'LOCKED'] remoteExec ['WMS_fnc_ConfLockUnlock', 2];
+						playSound3D [getMissionPath'\custom\ogg\caralarm.ogg', (_this select 0), false, position (_this select 0), 4, 1, 0];
+						if ((_this select 0) getVariable ['permanentVHL', false])then {
+							[(_this select 0),'lockunlock'] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+						};
+					};
+				}else{
+					(_this select 0) setVehicleLock 'LOCKED';
+					(_this select 0) lockInventory true;
+					if(count Crew (_this select 0) == 0)then{(_this select 0) setVelocity [0,0,0]};
+					[(_this select 0),'LOCKED'] remoteExec ['WMS_fnc_ConfLockUnlock', 2];
+					playSound3D [getMissionPath'\custom\ogg\caralarm.ogg', (_this select 0), false, position (_this select 0), 4, 1, 0];
+					if ((_this select 0) getVariable ['permanentVHL', false])then {
+						[(_this select 0),'lockunlock'] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+					};
 				};
 			} else {
 				(_this select 0) allowDamage true;
@@ -39,7 +58,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 					};
 				(_this select 0) setVehicleLock 'UNLOCKED';
 				(_this select 0) lockInventory false;
-				nul = [(_this select 0),'UNLOCKED'] remoteExec ['WMS_fnc_ConfLockUnlock', 2];
+				[(_this select 0),'UNLOCKED'] remoteExec ['WMS_fnc_ConfLockUnlock', 2];
 			};
 		",
 		nil, //argument accessible in the script (_this select 3)
@@ -147,7 +166,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
 			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump'];
 			} else { 
-			'Cargo Dump Container is empty, you punk' remoteExec ['hint', (owner (_this select 1))]; 
+			hint 'Cargo Dump Container is empty, you punk';
 		};
 		",
 		[], //argument accessible in the script (_this select 3)

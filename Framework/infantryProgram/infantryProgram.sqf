@@ -22,10 +22,15 @@ WMS_IP_addActionRadio = {
 	[
 		"<t size='0.9' color='#068604'>Build InfantryProgram computer</t>",
 		"
-			_target = _this select 0; _caller = _this select 1;
-			[_caller] call WMS_IP_buildComputer;
-			(_this select 0) removeaction (_this select 2);
-
+			_target = _this select 0; _caller = _this select 1; _theAction = _this select 2;
+			['Building Computer', 5, {true}, 
+				{
+					[(_this select 0 select 1)] call WMS_IP_buildComputer;
+					(_this select 0 select 0) removeaction (_this select 0 select 2);
+				}, 
+				{hint 'aborted'},
+				[_target,_caller,_theAction]
+			] call CBA_fnc_progressBar;
 		", 
 		[],
 		1,
@@ -132,32 +137,6 @@ WMS_IP_buildComputer = {
 		"
 			(alive _target) &&
 			{('rhsusf_radio_anprc152' in (assigneditems _this))} &&
-			{(vehicle _this == _this)};
-		",
-		5
-	];
-	_allActionsID pushBack _IDnumber;
-//JOIN THE PROGRAM
-	_IDnumber = _IPcomputer addAction
-	[
-		"<t size='0.9' color='#d60000'>Join the Program</t>",
-		"
-			WMS_IP_Active_list pushBack (getplayerUID player);
-			publicVariable 'WMS_IP_Active_list'; 
-			systemchat 'Welcome Back Soldier, remember to not get in vehicles'
-		", //client modifying server variable, thats a weird solution
-		[_IPantenna],
-		1,
-		true,
-		true,
-		"",
-		"
-			(alive _target) &&
-			{stance player == 'CROUCH'} &&
-			{('rhs_radio_R187P1' in (assigneditems _this))} && 
-			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
-			{!((getplayerUID player) in WMS_IP_Active_list)} &&
-			{((getPlayerUID _this) in WMS_InfantryProgram_list)} &&
 			{(vehicle _this == _this)};
 		",
 		5
@@ -582,7 +561,78 @@ WMS_IP_buildComputer = {
 	];
 	_allActionsID pushBack _IDnumber;
 
-	//////////
+	///////////////////TEST//////////////////////
+	//['Spawn Beacon Timed', 5, {true}, {hint 'done'}, {hint 'aborted'}] call CBA_fnc_progressBar;
+	
+//Spawn Beacon timed test
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#ff5324'>Spawn Beacon Timed</t>",
+		"
+			_target = (_this select 0); 
+			_caller = (_this select 1);
+			_theHint = ((_this select 3) select 4);
+			if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
+				
+				['Spawn Beacon Timed', 3, {true}, 
+					{
+						diag_log format ['[WMS|TNA|WAK] _this = %1', _this];
+						_myRespawn = [(_this select 0 select 1),(position (_this select 0 select 0)),'Spawn Beacon'] call BIS_fnc_addRespawnPosition;
+						(_this select 0 select 0) setVariable ['WMS_Loc_canSpawnBeacon',false,true];
+						(_this select 0 select 0) setVariable ['WMS_Loc_SpawnBeacon',_myRespawn,true];
+						hint (_this select 0 select 2);
+					}, 
+					{hint 'aborted'},
+					[_target,_caller,_theHint]
+				] call CBA_fnc_progressBar;
+
+			} else {
+				hint 'Bro! your respect is too low';
+				execVM 'Custom\Intro\levels.sqf';
+			};
+		", 
+		['SpawnBeacon',2500,6000,'SpawnBeacon','Spawn Beacon Activated'],
+		1,
+		true,
+		true,
+		"",
+		"	
+			(getPlayerUID _this == '76561197965501020') &&
+			{_target getVariable ['WMS_Loc_canSpawnBeacon',true]} &&
+			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
+
+////////////////////////////////////////
+//JOIN THE PROGRAM //KEEP AT THE BOTTOM
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#d60000'>Join the Program</t>",
+		"
+			WMS_IP_Active_list pushBack (getplayerUID player);
+			publicVariable 'WMS_IP_Active_list'; 
+			systemchat 'Welcome Back Soldier, remember to not get in vehicles'
+		", //client modifying server variable, thats a weird solution
+		[_IPantenna],
+		1,
+		true,
+		true,
+		"",
+		"
+			(alive _target) &&
+			{stance player == 'CROUCH'} &&
+			{('rhs_radio_R187P1' in (assigneditems _this))} && 
+			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
+			{!((getplayerUID player) in WMS_IP_Active_list)} &&
+			{((getPlayerUID _this) in WMS_InfantryProgram_list)} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
 	_IPcomputer setVariable ['IPcomputerAllActionsID',_allActionsID]; //after the last "AddAction"
 };
 				//_myRespawn = [_caller,(position _caller),'Spawn Beacon'] remoteExec ['BIS_fnc_addRespawnPosition'];

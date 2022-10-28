@@ -105,6 +105,16 @@
 ////////////////////
 ////////////////////
 //Ground unarmed
+		//IDAP Vehicles are all ACE medical
+		class C_IDAP_UGV_01_F 				{ quality = 2; price = 3111; };
+		class C_IDAP_Van_02_medevac_F 		{ quality = 2; price = 17111; };
+		class C_IDAP_Offroad_02_unarmed_F 	{ quality = 2; price = 16111; };
+		class C_IDAP_Offroad_01_F 			{ quality = 2; price = 16111; };
+		class C_IDAP_Van_02_vehicle_F 		{ quality = 2; price = 17111; };
+		class C_IDAP_Van_02_transport_F 	{ quality = 2; price = 17111; };
+		class C_IDAP_Truck_02_transport_F 	{ quality = 2; price = 18111; };
+		class C_IDAP_Truck_02_F 			{ quality = 2; price = 18111; };
+
 		class rhsgref_tla_g_kraz255b1_cargo_open 	{ quality = 1; price = 9500; };
 		class rhs_kamaz5350_flatbed_cover_vdv 		{ quality = 2; price = 15000; };
 		class RHS_Ural_Flat_VDV_01 					{ quality = 1; price = 15000; };

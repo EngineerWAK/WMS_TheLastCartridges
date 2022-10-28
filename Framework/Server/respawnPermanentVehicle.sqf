@@ -10,7 +10,8 @@
  */
 
 private ["_permanentVhlArray","_playerArray","_targetUID","_vehicleID","_vehicleClassName","_lastPos","_lastPosAGL","_direction","_damage","_weap","_ammo","_backpack","_item","_veh",
-			"_TerritoriesArray","_flagID","_flagPos","_territoryLevel","_ownerUID","_buildingRightUID","_flagDir","_flag","_marker","_noRespawnItems","_forceMedicalFacilities"
+			"_TerritoriesArray","_flagID","_flagPos","_territoryLevel","_ownerUID","_buildingRightUID","_flagDir","_flag","_marker","_noRespawnItems","_forceMedicalFacilities",
+			"_openVhl","_clusterVhl","_clusterMags","_tradersMkrs","_vehicleProtect"
 		];
 
 //Respawn Territories first:
@@ -65,12 +66,28 @@ if !(count _TerritoriesArray == 0) then {
 
 //Then respawn vehicles
 WMS_permanentVehicleObjects = []; //will be used for the last update off all permanent vehicle before restart
+WMS_tradersMkrPos = [];
 _permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 _playerArray = [];
 _vehicleClassName = "";
 _noRespawnItems = getArray(missionConfigFile >> "CfgBlackListedItems" >> "items");
 _vehiclesManagement = getArray(missionConfigFile >> "CfgOfficeTrader" >> "vehiclesManagement"); //select 0
+_forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
+_forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
+_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
+_clusterVhl = getArray(missionConfigFile >> "CfgPylonVhl" >> "vhl");
+_clusterMags = getArray(missionConfigFile >> "CfgBlackListedBomb" >> "mags");
+_tradersMkrs = getArray(missionConfigFile>>"CfgOfficeTrader">>"MarkersToCheck");
 _howmanyrestarts = 0;
+_vehicleProtect = true; //toggle simulation/allowdamage if traderzone or not
+_openVhl = getArray(missionConfigFile>>"CfgOpenVhl">>"vhl");
+_territoryOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "ZoneSizes");
+{
+	if (markertype _x == (_tradersMkrs select 0)) then {
+		WMS_tradersMkrPos pushBack (getMarkerPos _x);
+	};
+}forEach allMapMarkers;
+publicVariable "WMS_tradersMkrPos";
 {
 	_playerArray = _x;
 	_targetUID = 0;
@@ -167,24 +184,35 @@ _howmanyrestarts = 0;
 
 			[_veh,0, true]call WMS_fnc_initVehicleAddAction;
 
-			_veh setVehicleLock "LOCKED";
-			_veh lockInventory true; //that fucking lock "localy" on the server, not client side
-			[_veh, true] remoteExec ["lockInventory", 0, true]; //should execute the lock localy on every players connecting after the vehicle creation //YES!
-			//_veh allowDamage true; //at the unlock so the vehicle is protected from the retarded AI shooting at empty vehicles
+			if (typeOf _veh in _openVhl) then {
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, %2, checking for trader zone", _veh, typeOf _veh];};
+				_nearestTrader = [WMS_tradersMkrPos, _veh] call BIS_fnc_nearestPosition;
+				if ((_nearestTrader distance2D _veh) > ((_territoryOfficeData select 0)+(_territoryOfficeData select 3))) then {
+					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle is protected", _veh,(_nearestTrader distance2D _veh)];};
+					_veh setVehicleLock "LOCKED";
+					_veh lockInventory true;
+					[_veh, true] remoteExec ["lockInventory", 0, true];
+				}else {
+					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle UNLOCKED", _veh,(_nearestTrader distance2D _veh)];};
+					_vehicleProtect = false;
+				};
+			}else{ 
+				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 NOT blacklisted, %2", _veh, typeOf _veh];};
+				_veh setVehicleLock "LOCKED";
+				_veh lockInventory true; //that fucking lock "localy" on the server, not client side
+				[_veh, true] remoteExec ["lockInventory", 0, true]; //should execute the lock localy on every players connecting after the vehicle creation //YES!
+			};
 			
-			_forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
 			if ((typeOf _veh) in _forceAmmoFacilities) then {
 				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];};
 				_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
 			};
 
-			_forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
 			if ((typeOf _veh) in _forceRepairFacilities) then {
 				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];};
 				_veh setVariable ["ACE_isRepairVehicle", true, true];
 			};
 			//Force Medical Facility
-			_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 			if ((typeOf _veh) in _forceMedicalFacilities) then {
 				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Respawning %1 as Medical Facility", _veh];};
 				_veh setVariable ["ace_medical_isMedicalFacility", true, true];
@@ -216,8 +244,6 @@ _howmanyrestarts = 0;
 					true //JIP
 				];
 			};
-			private _clusterVhl = getArray(missionConfigFile >> "CfgPylonVhl" >> "vhl");
-			private _clusterMags = getArray(missionConfigFile >> "CfgBlackListedBomb" >> "mags");
 			if (_vehicleClassName in _clusterVhl) then {	
 				_veh setVariable ["ace_pylons_magazineBlacklist", _clusterMags];
 			};
@@ -235,7 +261,15 @@ _howmanyrestarts = 0;
 				//////////CUSTOM VEHICLES END//////////
 			};//destruction of the vehicle will start the cleaning process
 			//if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
-			_veh enableSimulationGlobal false;
+			if (_vehicleProtect) then {
+				_veh enableSimulationGlobal false;
+			}else {
+				_veh allowDamage true;
+				if !(_damage == 999) then {
+					_veh setDamage _damage;
+					_veh setVariable ['WMS_startDamage', 999, true]; //prevent reset damage at every lock/unlock
+				};
+			};
 		};
 	}forEach _playerArray; 
 }forEach _permanentVhlArray; //Each array is a playerUID array with vehicle(s) array(s) inside

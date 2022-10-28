@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.675_2022OCT24_GitHub"; //trying to link the statBar to WMS_InfantryProgram Timer to allow "live" update on the restart counter
+	name = "v1.681_2022OCT28_GitHub"; //adding vehicle list that can not stay locked in traders zones (very laggy HATCHET stuff)
 };
 
 class Extended_PreInit_EventHandlers {
@@ -105,7 +105,6 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 		"rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy",
 		"rhsusf_M1085A1P2_B_Medical_fmtv_usarmy",
 		"rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
-		"C_IDAP_Van_02_medevac_F",
 		"C_Van_02_medevac_F",
 		"I_E_Van_02_medevac_F",
 		"B_Truck_01_medical_F",
@@ -114,6 +113,18 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 		"O_Truck_03_medical_F",
 		"O_T_Truck_02_Medical_F",
 		"O_T_Truck_03_medical_ghex_F",
+		"C_UAV_06_medical_F",
+		"C_IDAP_UGV_01_F",
+		"C_IDAP_UAV_06_F",
+		"C_IDAP_Van_02_medevac_F",
+		"C_IDAP_Offroad_02_unarmed_F",
+		"C_IDAP_Offroad_01_F",
+		"C_IDAP_Van_02_vehicle_F",
+		"C_IDAP_Van_02_transport_F",
+		"C_IDAP_Truck_02_transport_F",
+		"C_IDAP_Truck_02_F",
+		"C_IDAP_UAV_06_medical_F",
+		"C_IDAP_Heli_Transport_02_F",
 
 		"GUE_WarfareBFieldhHospital", //CUP trader
 		"Land_Research_house_V1_F",
@@ -359,6 +370,13 @@ class CfgOfficeTrader
 		"respawn_para",	//_markerSpawns
 		"mil_flag"		//_markerTerritory
 	};
+	ZoneSizes[] =
+	{
+ 		80,		//_tradersZoneSize
+ 		300,	//_spawnZoneSize
+ 		100,	//_territorySize
+		50		//_vhlUnlockDist //blacklisted vehicles closer than _tradersZoneSize + this will be unlocked at server restart and can not be locked in this zone by players
+	};
 	
 };
 //_traderCategories = getArray(missionConfigFile >> "CfgRespectLevels" >> "Respect");
@@ -517,6 +535,20 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 		0      //rainR = 
 	};
 
+};
+///////////Unlocked Vehicles in traders to prevent players to harvest them in the trader zone. Made mostly to keep Hatchet chopper away from trader since they ruine everybody's FPS
+//_OpenVhl = getArray(missionConfigFile >> "CfgOpenVhl" >> "vhl");
+class CfgOpenVhl {
+	vhl[] =
+	{
+		"vtx_UH60M_MEDEVAC",
+		"vtx_UH60M_SLICK",
+		"vtx_HH60",
+		"vtx_UH60M",
+		"vtx_MH60M",
+		"vtx_MH60M_DAP",
+		"vtx_MH60M_DAP_MLASS"
+	};
 };
 //////////////////////BLACKLISTED STUFF/////////////////////
 //_noRespawnItems = getArray(missionConfigFile >> "CfgBlackListedItems" >> "items"); //those items wont be transfered at vehicleRespawn but can still be used

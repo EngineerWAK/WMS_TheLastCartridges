@@ -17,9 +17,10 @@ _territoryOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "terri
 _exclusionZoneSizeTrad 	= (_territoryOfficeData select 2);
 _exclusionZoneSizeSpaw 	= (_territoryOfficeData select 3);
 //_zoneTerritory 			= (_territoryOfficeData select 6);
-_tradersZoneSize 	= 80;
-_spawnZoneSize 		= 300;
-_territorySize 		= 100;
+_zonesOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "ZoneSizes");
+_tradersZoneSize 	= (_zonesOfficeData select 0);
+_spawnZoneSize 		= (_zonesOfficeData select 1);
+_territorySize 		= (_zonesOfficeData select 2);
 
 WMS_createTriggerLocal = { //[_pos, _size, _msgIN, _msgOUT]
 	private _trg = createTrigger ["EmptyDetector", _this select 0, false];
