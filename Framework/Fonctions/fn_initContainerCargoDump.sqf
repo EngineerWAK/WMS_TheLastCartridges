@@ -43,13 +43,14 @@ _container enableRopeAttach false;
 	true //JIP
 ];
 [
+				//hint 'Cargo Dump Container is empty, you punk'; for what ever reason this is general to all players
 	_container, [
 		"<t size='1' color='#3d74ff'>Sell Inventory</t>", 
 		" 
 			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
 				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump',2]; 
 			} else { 
-				hint 'Cargo Dump Container is empty, you punk';
+				[playerSide, 'PAPA_BEAR'] commandChat 'Container is empty, you punk';
 			}; 
 		", 
 		nil, 

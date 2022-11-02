@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.681_2022OCT28_GitHub"; //adding vehicle list that can not stay locked in traders zones (very laggy HATCHET stuff)
+	name = "v1.684_2022OCT31_GitHub"; //Local marker on spawn beacon - added some weapons to the traders
 };
 
 class Extended_PreInit_EventHandlers {
@@ -433,7 +433,7 @@ class cfgCargoDump //for General sell/unlisted objects
 
 	vhlDefaultPrice	= 5000; //if the vehicle is not in getNumber(missionConfigFile >> "CfgAllPrices" >> _itemClassName >> "price"); //that include mission crates
 	tanksPrice 		= 80000; //default dump price for 'isKindOf "tank"' vehicles before priceReSellCoef
-	APCPrice 		= 40000; //default dump price for 'isKindOf "Wheeled_Apc_F"' vehicles before priceReSellCoef
+	APCPrice 		= 50000; //default dump price for 'isKindOf "Wheeled_Apc_F"' vehicles before priceReSellCoef
     
 };
   //_interval = getNumber(missionConfigFile >> "CfgWeatherSetting" >> "interval");

@@ -57,6 +57,9 @@ WMS_IP_buildComputer = {
 	];
 	private _IPantenna = "SatelliteAntenna_01_Small_Black_F" createvehicle [0,0,0];
 	private _IPcomputer = "Land_MultiScreenComputer_01_black_F" createvehicle [0,0,0];
+	private _mkr = createMarkerLocal [format ['MKRSB_%1', (round time)], position _IPplayer]; 
+  	_mkr setMarkerTypeLocal 'respawn_unknown'; 
+  	_mkr setMarkerColorLocal 'colorIndependent';
 	if (surfaceIsWater (position _IPplayer))then{
 		_IPcomputer setPos (_IPplayer modeltoworldworld [0,2,0]); //FUCK YOU ARMA!!!!!!!!!!!
 	}else{
@@ -65,9 +68,10 @@ WMS_IP_buildComputer = {
 	_IPcomputer setdir (direction _IPplayer);
 	_IPantenna attachTo [_IPcomputer, [0,0.4,0.27]];
 	_IPcomputer setVariable ['IPcomputerAllActionsID',[]];
+	_IPcomputer setVariable ['WMS_Loc_SpawnBeacon_Mkr',_mkr,true];
 	localNamespace setVariable ['WMS_Loc_CanBuildComputer',false];
 	private _allActionsID = [];
-//PACK THE COMPUTER
+//PACK THE COMPUTER //respawn_unknown
 	private _IDnumber = _IPcomputer addAction
 	[
 		"<t size='0.9' color='#068604'>Pack the Computer</t>",
@@ -75,6 +79,8 @@ WMS_IP_buildComputer = {
 			_target = _this select 0; _caller = _this select 1;
 			_allActionsID = _target getVariable ['IPcomputerAllActionsID',[]];
 			_myRespawn = _target getVariable ['WMS_Loc_SpawnBeacon',[]];
+			_mkr = _target getVariable 'WMS_Loc_SpawnBeacon_Mkr';
+			deleteMarkerLocal _mkr;
 			diag_log format['[WMS_IP DEBUG] removeRespawnPosition variable %1',_myRespawn];
 			_myRespawn call BIS_fnc_removeRespawnPosition;
 			detach (_this select 3 select 0);
@@ -538,8 +544,11 @@ WMS_IP_buildComputer = {
 				hint ((_this select 3) select 4);
 				_myRespawn = [_caller,(position _target),'Spawn Beacon'] call BIS_fnc_addRespawnPosition;
 				diag_log format['[WMS_IP DEBUG] addRespawnPosition variable %1',_myRespawn];
+				_mkr = _target getVariable 'WMS_Loc_SpawnBeacon_Mkr';
 				_target setVariable ['WMS_Loc_canSpawnBeacon',false,true];
-				_target setVariable ['WMS_Loc_SpawnBeacon',_myRespawn,true];
+				_target setVariable ['WMS_Loc_SpawnBeacon',_myRespawn,true]; 
+  				_mkr setMarkerTypeLocal 'respawn_para'; 
+  				_mkr setMarkerColorLocal 'colorIndependent';
 			} else {
 				hint 'Bro! your respect is too low';
 				execVM 'Custom\Intro\levels.sqf';
@@ -565,7 +574,7 @@ WMS_IP_buildComputer = {
 	//['Spawn Beacon Timed', 5, {true}, {hint 'done'}, {hint 'aborted'}] call CBA_fnc_progressBar;
 	
 //Spawn Beacon timed test
-	_IDnumber = _IPcomputer addAction
+	/*_IDnumber = _IPcomputer addAction
 	[
 		"<t size='0.9' color='#ff5324'>Spawn Beacon Timed</t>",
 		"
@@ -605,7 +614,7 @@ WMS_IP_buildComputer = {
 		5
 	];
 	_allActionsID pushBack _IDnumber;
-
+*/
 ////////////////////////////////////////
 //JOIN THE PROGRAM //KEEP AT THE BOTTOM
 	_IDnumber = _IPcomputer addAction

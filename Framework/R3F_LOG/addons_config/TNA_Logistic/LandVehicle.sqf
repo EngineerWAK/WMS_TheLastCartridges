@@ -20,6 +20,10 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	
+	["rhs_kamaz5350_flatbed_cover_vdv", 25], //flatbed cover
+	["RHS_Ural_Flat_VDV_01", 25], //flatbed cover
+	["rhs_gaz66_flat_vdv", 25], //flatbed cover
 	["rhsgref_un_zil131",20],
 	["rhsgref_tla_g_kraz255b1_cargo_open",40],
 	["rhsusf_M1078A1P2_WD_flatbed_fmtv_usarmy", 25],
@@ -28,16 +32,6 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["rhsusf_M1083A1P2_B_WD_flatbed_fmtv_usarmy", 25],
 	["wheeled_apc_f", 10],
 	["tank", 5],
-	//["truck_02_base_f", 120],
-	//["motorcycle", 2],
-	//["kart_01_base_f", 2],
-	//["mrap_01_base_f", 12],
-	//["mrap_02_base_f", 12],
-	//["mrap_03_base_f", 12],
-	//["offroad_01_base_f", 10],
-	//["offroad_01_armed_base_f", 4],
-	//["quadbike_01_base_f", 3],
-	//["quadbike_base_f", 3],
 	["car", 5],
 	["truck_f", 5],
 	["bus", 30],

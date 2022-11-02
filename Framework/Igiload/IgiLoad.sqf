@@ -169,6 +169,7 @@ if (isnil "IL_Variables") then
 	IL_Supported_Vehicles_UGV = //Can be loaded WITH something else
 	[
 		"R3F_PUSHBACK",
+		"C_IDAP_UGV_01_F",
 		"B_UGV_01_F",
 		"O_UGV_01_F",
 		"I_UGV_01_F"

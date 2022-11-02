@@ -8,7 +8,7 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-_postExile_Vehicles = [
+private _vhls = [
 	[//_this select 0 = Military
 		"I_G_Quadbike_01_F",
 		"I_E_Quadbike_01_F",
@@ -55,57 +55,57 @@ _postExile_Vehicles = [
 	]
 ];
 
-_postExile_Zones = [];
-_markerVehicleCIV = ["respawn_motor"];
-_markerVehicleAIR = ["respawn_air"];
-_markerVehicleMIL = ["respawn_armor"];
+private _Zones = [];
+private _markerVehicleCIV = ["respawn_motor"];
+private _markerVehicleAIR = ["respawn_air"];
+private _markerVehicleMIL = ["respawn_armor"];
 {
 	if (markertype _x in _markerVehicleCIV) then {
-		_postExile_Zones pushback [getMarkerPos _x,600,"civ"];		
+		_Zones pushback [getMarkerPos _x,600,"civ"];		
 	};
 	if (markertype _x in _markerVehicleAIR) then {
-		_postExile_Zones pushback [getMarkerPos _x,300,"air"];		
+		_Zones pushback [getMarkerPos _x,300,"air"];		
 	};
 	if (markertype _x in _markerVehicleMIL) then {
-		_postExile_Zones pushback [getMarkerPos _x,300,"mil"];		
+		_Zones pushback [getMarkerPos _x,300,"mil"];		
 	};
 }forEach allMapMarkers;
 
-_postExile_Spawn_Zones 	= true;
-_postExile_Spawn_Rad 	= 6;
-_postExile_MilAmmo 		= 0; //0 = empty, 1 = full
-_postExile_Mil_count	= 2;
-_postExile_Civ_count	= 10;
-_postExile_Air_count	= 1;
-_postExile_setDamageMax = 0.6;
-_postExile_setGasMax	= 0.40;
-_price = 799;
-_display = "<t size='0.8' color='#44f708'>Full Repair for 799!</t>";
+private _Spawn_Zones 	= true;
+private _Spawn_Rad 		= 6;
+private _MilAmmo 		= 0; //0 = empty, 1 = full
+private _Mil_count		= 2;
+private _Civ_count		= 10;
+private _Air_count		= 1;
+private _setDamageMax 	= 0.6;
+private _setGasMax		= 0.40;
+private _price 			= 799;
+private _display 		= "<t size='0.8' color='#44f708'>Full Repair for 799!</t>";
 
-if (_postExile_Spawn_Zones) then {
-	_postExile_spawn_count = 0;
-	_postExile_Vehicles_List = [];
+if (_Spawn_Zones) then {
+	_spawn_count = 0;
+	_vhls_List = [];
 	{
 		switch (_x select 2) do {
-			case "mil" : {_postExile_spawn_count = _postExile_Mil_count; _postExile_Vehicles_List = (_postExile_Vehicles select 0);_price = 2499;_display = "<t size='0.8' color='#44f708'>Full Repair for 2499!</t>";};
-			case "civ" : {_postExile_spawn_count = _postExile_Civ_count; _postExile_Vehicles_List = (_postExile_Vehicles select 1);_price = 799;_display = "<t size='0.8' color='#44f708'>Full Repair for 799!</t>";};
-			case "air" : {_postExile_spawn_count = _postExile_Air_count; _postExile_Vehicles_List = (_postExile_Vehicles select 2); _postExile_Spawn_Rad = _postExile_Spawn_Rad*1.5;_price = 1899;_display = "<t size='0.8' color='#44f708'>Full Repair for 1899!</t>";};
+			case "mil" : {_spawn_count = _Mil_count; _vhls_List = (_vhls select 0);_price = 2499;_display = "<t size='0.8' color='#44f708'>Full Repair for 2499!</t>";};
+			case "civ" : {_spawn_count = _Civ_count; _vhls_List = (_vhls select 1);_price = 799;_display = "<t size='0.8' color='#44f708'>Full Repair for 799!</t>";};
+			case "air" : {_spawn_count = _Air_count; _vhls_List = (_vhls select 2); _Spawn_Rad = _Spawn_Rad*1.5;_price = 1899;_display = "<t size='0.8' color='#44f708'>Full Repair for 1899!</t>";};
 		};
 		_vhl = objNull;
-		for "_i" from 1 to _postExile_spawn_count do {
-			_pos = [(_x select 0), 1, (_x select 1), _postExile_Spawn_Rad, 0] call BIS_fnc_findSafePos; //[center, minDist, maxDist, objDist, waterMode, maxGrad, shoreMode, blacklistPos, defaultPos] call BIS_fnc_findSafePos
+		for "_i" from 1 to _spawn_count do {
+			_pos = [(_x select 0), 1, (_x select 1), _Spawn_Rad, 0] call BIS_fnc_findSafePos; //[center, minDist, maxDist, objDist, waterMode, maxGrad, shoreMode, blacklistPos, defaultPos] call BIS_fnc_findSafePos
 			if ((count _pos) == 3) then { //successful findSafePos result is [x,y], not [x,y,z]
 				_pos = [[[(_x select 0), (_x select 1)]],[]] call BIS_fnc_randomPos;
-				_vhl = createVehicle [(selectRandom _postExile_Vehicles_List), _pos, [], 50, "NONE"]; 
+				_vhl = createVehicle [(selectRandom _vhls_List), _pos, [], 50, "NONE"]; 
 				if (WMS_MissionDebug) then {diag_log format ["[VHL RANDOM SPAWN BUSTED]|WAK|TNA|WMS| Vehicle = %1 @ %2", _vhl, _pos]};
 			} else {
-				_vhl = (selectRandom _postExile_Vehicles_List) createVehicle _pos;
+				_vhl = (selectRandom _vhls_List) createVehicle _pos;
 			};
 			_vhl setVariable ['freeVehiclesrepairPrice', _price, true];
 			_vhl setDir (random 359);
-			_vhl setDamage (random _postExile_setDamageMax);
-			_vhl setFuel (random _postExile_setGasMax);
-			_vhl setVehicleAmmo _postExile_MilAmmo;
+			_vhl setDamage (random _setDamageMax);
+			_vhl setFuel (random _setGasMax);
+			_vhl setVehicleAmmo _MilAmmo;
 			clearMagazineCargoGlobal _vhl; 
 			clearWeaponCargoGlobal _vhl; 
 			clearItemCargoGlobal _vhl; 
@@ -141,13 +141,13 @@ if (_postExile_Spawn_Zones) then {
 				true
 			];
 			
-_forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
+private _forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
 if ((typeOf _vhl) in _forceAmmoFacilities) then {
 	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _vhl];};
 	_vhl setVariable ["ace_rearm_isSupplyVehicle", true, true];
 };
 
-_forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
+private _forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
 if ((typeOf _vhl) in _forceRepairFacilities) then {
 	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _vhl];};
 	_vhl setVariable ["ACE_isRepairVehicle", true, true];
@@ -184,5 +184,5 @@ if ((typeOf _vhl) in _forceRepairFacilities) then {
 				];
 			};
 		};
-	} forEach _postExile_Zones;
+	} forEach _Zones;
 };

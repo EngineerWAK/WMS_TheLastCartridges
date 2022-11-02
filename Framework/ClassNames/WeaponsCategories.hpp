@@ -30,6 +30,7 @@ class SniperRifles_RHS
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
 	{
+		"rhs_weap_dsr1",
 		//"hlc_rifle_awmagnum_BL",
 		"srifle_DMR_05_blk_F",
 		//"hlc_rifle_FN3011Modern_camo",
@@ -80,7 +81,9 @@ class DMR_RHS
 	name = "Pew Pew Pew";
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
-	{	
+	{	"rhs_weap_m14_socom_rail",
+		"rhs_weap_vss",
+		"rhs_weap_vss_npz",
 		"srifle_DMR_04_F", //ASP
 		"srifle_DMR_06_hunter_F",
 		"rhs_weap_l1a1",
@@ -121,6 +124,7 @@ class AssaultEAST_RHS
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
 	{	
+		"rhs_weap_savz58v_ris",
 		"rhs_weap_m38", //nosin no rail
 		"rhs_weap_aks74un",
 		"rhs_weap_ak103_zenitco01_b33",

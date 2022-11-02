@@ -1,4 +1,5 @@
 //SNIPERS
+class rhs_weap_dsr1					{ quality = 2; price = 2500; };
 class hlc_rifle_awmagnum_BL			{ quality = 2; price = 2500; };
 class srifle_DMR_05_blk_F			{ quality = 2; price = 2500; };
 class hlc_rifle_FN3011Modern_camo	{ quality = 2; price = 2500; };
@@ -20,27 +21,32 @@ class rhs_weap_t5000			    { quality = 2; price = 2500; };
 class rhs_weap_m24sws_wd			{ quality = 2; price = 2500; };
 
 //DMR
+class rhs_weap_m14_socom_rail		{ quality = 4; price = 2800; };
 class srifle_DMR_04_F				{ quality = 3; price = 7500; }; //ASP
-class hlc_rifle_FAL5061Rail			{ quality = 2; price = 1900; };
-class hlc_rifle_FAL5061			    { quality = 2; price = 1900; };
-class R3F_SCAR_H_PR_20pcs_TAN		{ quality = 2; price = 2000; };
-class R3F_SCAR_H_TPR_20pcs_blk		{ quality = 2; price = 2100; };
-class hlc_rifle_g3a3ris			    { quality = 2; price = 1900; };
-class hlc_rifle_g3a3			    { quality = 2; price = 1900; };
-class rhs_weap_l1a1			    	{ quality = 2; price = 1900; };
-class UK3CB_BAF_L129A1_FGrip		{ quality = 2; price = 2100; };
-class rhs_weap_m14_ris_wd			{ quality = 2; price = 1900; };
-class rhs_weap_mk17_LB			    { quality = 2; price = 1900; };
-class hlc_rifle_M14_Bipod			{ quality = 2; price = 1900; };
+class srifle_DMR_06_hunter_F		{ quality = 2; price = 1900; };
 class arifle_MXM_Black_F			{ quality = 2; price = 1900; };
 class arifle_SPAR_03_blk_F			{ quality = 2; price = 1900; };
-class BWA3_G28			    		{ quality = 2; price = 1900; };
+class rhs_weap_vss_npz				{ quality = 3; price = 2600; };
+class rhs_weap_vss					{ quality = 3; price = 2200; };
+class rhs_weap_l1a1			    	{ quality = 2; price = 1900; };
+class rhs_weap_m14_ris_wd			{ quality = 2; price = 1900; };
+class rhs_weap_mk17_LB			    { quality = 2; price = 1900; };
 class rhs_weap_sr25			    	{ quality = 2; price = 1900; };
-class rhs_weap_svdp			   	 	{ quality = 2; price = 1700; };
-class rhs_weap_svds_npz			    { quality = 2; price = 1700; };
-class srifle_DMR_06_hunter_F		{ quality = 2; price = 1900; };
+class rhs_weap_svdp			   	 	{ quality = 2; price = 1600; };
+class rhs_weap_svds_npz			    { quality = 2; price = 1800; };
+
+class hlc_rifle_FAL5061Rail			{ quality = 2; price = 1900; };
+class hlc_rifle_FAL5061			    { quality = 2; price = 1900; };
+class hlc_rifle_g3a3ris			    { quality = 2; price = 1900; };
+class hlc_rifle_g3a3			    { quality = 2; price = 1900; };
+class hlc_rifle_M14_Bipod			{ quality = 2; price = 1900; };
+class R3F_SCAR_H_PR_20pcs_TAN		{ quality = 2; price = 2000; };
+class R3F_SCAR_H_TPR_20pcs_blk		{ quality = 2; price = 2100; };
+class UK3CB_BAF_L129A1_FGrip		{ quality = 2; price = 2100; };
+class BWA3_G28			    		{ quality = 2; price = 1900; };
 
 //ASSAULT EAST
+class rhs_weap_savz58v_ris			{ quality = 2; price = 750; };
 class rhs_weap_m92					{ quality = 1; price = 400; };
 class rhs_weap_aks74un				{ quality = 1; price = 450; };
 class hlc_rifle_aek971_mtk			{ quality = 1; price = 450; };

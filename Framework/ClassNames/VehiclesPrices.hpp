@@ -106,7 +106,7 @@
 ////////////////////
 //Ground unarmed
 		//IDAP Vehicles are all ACE medical
-		class C_IDAP_UGV_01_F 				{ quality = 2; price = 3111; };
+		class C_IDAP_UGV_01_F 				{ quality = 3; price = 9111; };
 		class C_IDAP_Van_02_medevac_F 		{ quality = 2; price = 17111; };
 		class C_IDAP_Offroad_02_unarmed_F 	{ quality = 2; price = 16111; };
 		class C_IDAP_Offroad_01_F 			{ quality = 2; price = 16111; };
@@ -328,36 +328,36 @@
 	class RHS_C130J_Cargo  						{ quality = 3; price = 25777; };
 
 //Air Armed
-	class O_Heli_Light_02_dynamicLoadout_F  	{ quality = 3; price = 35000; }; //ka-60
-	class B_Heli_Transport_01_F  				{ quality = 2; price = 35000; };
-	class B_CTRG_Heli_Transport_01_tropic_F  	{ quality = 2; price = 35000; };
+	class rhs_uh1h_hidf_gunship  				{ quality = 4; price = 125888; }; //NO AFM
+	class rhs_uh1h_hidf  						{ quality = 3; price = 65888; }; //NO AFM
 	class RHS_MELB_AH6M_M  						{ quality = 3; price = 36004; };
-	class rhsgref_cdf_b_reg_Mi17Sh  			{ quality = 3; price = 55004; };
-	class rhs_uh1h_hidf  						{ quality = 3; price = 65888; };
-	class B_Heli_Light_01_dynamicLoadout_F  	{ quality = 3; price = 35000; };
-	class B_Heli_Transport_03_F  				{ quality = 2; price = 35000; };
-	class UK3CB_BAF_Merlin_HC4_18_GPMG  		{ quality = 2; price = 35000; };
-	class UK3CB_BAF_Wildcat_AH1_HEL_8A  		{ quality = 3; price = 35000; };
-	class UK3CB_BAF_Wildcat_AH1_CAS_8D  		{ quality = 3; price = 35000; };
-	class R3F_AH6_CE_ARMED  					{ quality = 3; price = 35001; };
-	class RHS_CH_47F  							{ quality = 2; price = 35000; };
-	class RHS_CH_47F_cargo  					{ quality = 2; price = 35000; };
-	class RHS_UH60M  							{ quality = 2; price = 35000; };
-	class RHS_MELB_AH6M  						{ quality = 3; price = 35000; };
-	class RHS_UH1Y  							{ quality = 3; price = 35000; };
-	class I_E_Heli_light_03_dynamicLoadout_F  	{ quality = 3; price = 35000; };
-	class B_Heli_Attack_01_dynamicLoadout_F  	{ quality = 3; price = 35000; };
-
-	class rhs_uh1h_hidf_gunship  				{ quality = 4; price = 125888; };
-	class rhsgref_cdf_Mi35  					{ quality = 5; price = 90004; };
+	class RHS_CH_47F  							{ quality = 2; price = 35004; };
+	class RHS_CH_47F_cargo  					{ quality = 2; price = 35004; };
+	class RHS_UH60M  							{ quality = 2; price = 35004; };
+	class RHS_MELB_AH6M  						{ quality = 3; price = 35004; };
+	class RHS_UH1Y  							{ quality = 3; price = 35004; };
 	class RHS_AH1Z_wd  							{ quality = 3; price = 85004; };
-	class BWA3_Tiger_RMK_Universal  			{ quality = 4; price = 95000; };
-	class RHS_Ka52_vvsc  						{ quality = 4; price = 95000; };
+	class RHS_Ka52_vvsc  						{ quality = 4; price = 95004; };
 	class rhs_mi28n_vvs  						{ quality = 5; price = 95004; };
 	class rhs_mi28n_s13_vvsc  					{ quality = 5; price = 95004; };
 	class RHS_Mi24P_vvsc  						{ quality = 4; price = 95004; };
-	class rhsgref_b_mi24g_CAS  					{ quality = 5; price = 95004; };
 	class RHS_AH64D_wd  						{ quality = 5; price = 95004; };
+	class rhsgref_b_mi24g_CAS  					{ quality = 5; price = 95004; };
+	class rhsgref_cdf_b_reg_Mi17Sh  			{ quality = 3; price = 55004; };
+	class rhsgref_cdf_Mi35  					{ quality = 5; price = 90004; };
+	class O_Heli_Light_02_dynamicLoadout_F  	{ quality = 3; price = 35000; }; //ka-60
+	class B_Heli_Transport_01_F  				{ quality = 2; price = 35000; };
+	class B_CTRG_Heli_Transport_01_tropic_F  	{ quality = 2; price = 35000; };
+	class B_Heli_Light_01_dynamicLoadout_F  	{ quality = 3; price = 35000; };
+	class B_Heli_Transport_03_F  				{ quality = 2; price = 35000; };
+	class I_E_Heli_light_03_dynamicLoadout_F  	{ quality = 3; price = 35000; };
+	class B_Heli_Attack_01_dynamicLoadout_F  	{ quality = 3; price = 35000; };
+
+	class BWA3_Tiger_RMK_Universal  			{ quality = 4; price = 95000; };
+	class R3F_AH6_CE_ARMED  					{ quality = 3; price = 35001; };
+	class UK3CB_BAF_Merlin_HC4_18_GPMG  		{ quality = 2; price = 35000; };
+	class UK3CB_BAF_Wildcat_AH1_HEL_8A  		{ quality = 3; price = 35000; };
+	class UK3CB_BAF_Wildcat_AH1_CAS_8D  		{ quality = 3; price = 35000; };
 
 		//GLOBAL MOBILISATION
 	class gm_ge_army_bo105p_pah1a1  	{ quality = 5; price = 35000; };

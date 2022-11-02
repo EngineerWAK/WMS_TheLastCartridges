@@ -15,7 +15,7 @@ params [
 	["_option",""]
 ];
 _run 		= WMS_LBIS; //CBA var
-_msgs 		= ["default","stuck","cash","r187p1","halo","fasttravel","acefatigue","save","roamingvhl","cargodump","fridge","lock","reward","safer","dfo"];
+_msgs 		= ["default","stuck","cash","r187p1","halo","fasttravel","acefatigue","save","roamingvhl","cargodump","fridge","lock","reward","safer","dfo","abandoned","notabandoned"];
 
 _stuck 		= ["If you are stuck after connecting to the server with no map to respawn, just hit 'esc' and click 'respawn'","#1fd507",80];
 _cash 		= ["Do not sell cash with other items, cash remove the respect bonus you can get","#1fd507",60];
@@ -32,6 +32,8 @@ _reward 	= ["Go claim a reward at the trader green container with all the CSAT c
 _safer 		= ["Respawning as Bambi and Fast travel to a territory is MUCH safer than 'Save And Disconnect'","#1fd507",60];
 _DFO 		= ["DFO, DynamicFlightOperations, is a mission system for helicopters, acces locked to registered players'","#1fd507",70];
 _civilians 	= ["Do not kill CIVILIANS, you will be punished and anyway you can not use their vehicles","#1fd507",70];
+_abandoned 	= ["Abandoned vehicles will be automatically destroyed after about a week, including around Traders","#1fd507",90];
+_notAbandoned 	= ["Vehicles parked inside territories won't be automatically destroyed, anywhere else they will be 'Abandoned'","#1fd507",90];
 
 while {_run && WMS_LBIS} do {
 	uisleep 900+random 900;
@@ -56,6 +58,8 @@ while {_run && WMS_LBIS} do {
 			case "safer": 		{ _msg  =  _safer; };
 			case "dfo": 		{ _msg  =  _DFO; };
 			case "civilians": 	{ _msg  =  _civilians; };
+			case "abandoned": 	{ _msg  =  _abandoned; };
+			case "notabandoned":{ _msg  =  _notAbandoned; };
 			default 			{ _msg  =  ["This is a Local Broadcast Information System Test, stay inside, lock your doors, they are coming, but not to help you",'#ff0000',100] };
 		};
 	[
