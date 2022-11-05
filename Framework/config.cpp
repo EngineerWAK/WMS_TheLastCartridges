@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.684_2022OCT31_GitHub"; //Local marker on spawn beacon - added some weapons to the traders
+	name = "v1.685_2022NOV02_GitHub"; //Trying to find out why there is a parachute in the sky when customSpawn
 };
 
 class Extended_PreInit_EventHandlers {

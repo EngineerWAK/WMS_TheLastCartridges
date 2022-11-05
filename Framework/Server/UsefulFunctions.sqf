@@ -100,6 +100,12 @@ _moneyToAdd = 10000;
 _playerUID_ExileMoney = "ExileMoney_"+_targetUID;
 _playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
 profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney+_moneyToAdd)];
+//modify player score server side
+_targetUID = "76561197965501020"; 
+_ScoreToAdd = 5000; 
+_playerUID_ExileScore = "ExileScore_"+_targetUID; 
+_playerScore = profileNamespace getVariable [_playerUID_ExileScore,0]; 
+profileNamespace setVariable [_playerUID_ExileScore,(_playerScore+_ScoreToAdd)];
 
 //modify player money local
 _moneyToAdd = 10000;

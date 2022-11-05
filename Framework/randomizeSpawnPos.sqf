@@ -15,7 +15,8 @@ _pos = position _target;
 _hight = 1000;
 _spawnAllowed = true;
 _customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
-_customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];	
+_customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];
+if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Randomazing Position: _customRespawnPos %1, _pos %2, _target %3", _customRespawnPos, _pos, (name _target)]};	
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
 	//"CustomRespawn"
@@ -76,6 +77,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 	_target addBackpackGlobal "B_Parachute";
 	_target setposATL [(_pos select 0), (_pos select 1), _hight];
 };
+
 if ((getPlayerUID player) in WMS_customRespawnList) then {
 	if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
 	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
