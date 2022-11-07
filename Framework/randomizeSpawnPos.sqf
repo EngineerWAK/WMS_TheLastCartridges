@@ -24,10 +24,19 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 	if(((ASLtoATL _customRespawnPos) select 2) >= 0)then{
 		player setPosASL _customRespawnPos;
 	};
-	[player,WMS_client_customRespawnInv]call WMS_fnc_client_restoreLoadoutFromVar;
 	[]spawn {
 		diag_log "[WMS_ANTI_ACE_BULSHIT]Launched";
-		uisleep 3;
+		removeallassigneditems player;
+		removeallweapons player;
+		removeallitems player;
+		removebackpack player;
+		removevest player;	
+		removeuniform player;
+		removeheadgear player;
+		removegoggles player;
+		uisleep 1;
+		[player,WMS_client_customRespawnInv]spawn WMS_fnc_client_restoreLoadoutFromVar;
+		uisleep 2;
 		if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 		uisleep 1;
 		missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
@@ -80,8 +89,8 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 
 if ((getPlayerUID player) in WMS_customRespawnList) then {
 	if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
-	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 	[player] remoteExec ["WMS_fnc_deleteRespawnData",2];
+	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 };
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test

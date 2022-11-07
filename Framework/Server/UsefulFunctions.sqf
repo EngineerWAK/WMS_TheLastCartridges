@@ -125,42 +125,12 @@ if ("Tank" in (name _x))then{_x setPos _pos};
 
 //////////////////////////////////
 //////////NOTE FOR LATER//////////
-private [];
-params[
-	["_timer", 300],
-	["_message", ["chest"]],
-	["_option", "option"]
-];
-[ 
- [ 
-  ["LOADING DATA...", "<t align = 'left' shadow = '1' size = '0.7' font='PuristaMedium'>%1</t><br/>", 30], 
-  ["Data loaded", "<t align = 'left' shadow = '1' size = '0.7' font='PuristaMedium'>%1</t><br/>"], 
-  ["Launching Infantry Radar", "<t align = 'left' shadow = '1' size = '0.7' font='PuristaMedium'>%1</t>", 30] 
- ] 
-] spawn BIS_fnc_typeText;
-
-[
-	[["LOADING DATA...", "<t align = 'left' shadow = '1' size = '0.7' font='PuristaMedium'>%1</t><br/>", 30], 
-	["Data loaded", "<t align = 'left' shadow = '1' size = '0.7' font='PuristaMedium'>%1</t><br/>"], 
-	["Launching Infantry Radar", "<t align = 'left' shadow = '1' size = '0.7' font='PuristaMedium'>%1</t>", 30]]	
-]remoteExec ["BIS_fnc_typeText"];
-
 [
 	"Somewhere on Altis", 
 	format ["Year %1", date select 0], 
 	mapGridPosition player
 ] spawn BIS_fnc_infoText;
 
-["<t color='#ff0000' size='.8'>Warning!<br />Stop doing what you are doing</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
-
-[parseText "<t font='PuristaMedium' size='1.6'>The Last Cartridges</t><br />by {|||TNA|||} WAKeupneo", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
-[parseText "<t font='PuristaMedium' size='1.4'>Hold position for FastRoping</t>",
-[
-(0.3 - pixelW * pixelGrid),
-(0.05 - pixelH * pixelGrid),
-(pixelW * pixelGrid * 60),
-(pixelH * pixelGrid * 15)
-],nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
 
 getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad");
 

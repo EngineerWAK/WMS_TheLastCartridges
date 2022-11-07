@@ -38,38 +38,47 @@ _secondaryWeaponItems = (_loadoutData select 7 select 1);
 _handgunWeaponItems = (_loadoutData select 8 select 1);
 _linkedItemsMisc = (_loadoutData select 9);
 _magazines = (_loadoutData select 10);
-//remove:
-removeuniform _playerObject;
+//remove: //done the step before the call
+/*removeuniform _playerObject;
 removevest _playerObject;
 removeheadgear _playerObject;
 removegoggles _playerObject;
 removebackpack _playerObject;
 removeallitems _playerObject;
 removeallassigneditems _playerObject;
-removeallweapons _playerObject;
+removeallweapons _playerObject;*/
 if (count (getmagazinecargo _playerObject select 0) > 0) then {clearmagazinecargoglobal _playerObject;};
 if (count (getweaponcargo _playerObject select 0) > 0) then {clearweaponcargoglobal _playerObject;};
 if (count (getitemcargo _playerObject select 0) > 0) then {clearitemcargoglobal _playerObject;};
+uisleep 0.5;
 //Add:
 if (_uniform != "") then {
 	_playerObject forceadduniform _uniform;
+	systemChat format ["%1 restored on %2",_uniform, name player];
 };
+uisleep 0.5;
 {player addItemToUniform _x}forEach  ((_loadoutData select 0) select 1);
 if (_vest != "") then {
 	_playerObject addvest _vest;
+	systemChat format ["%1 restored on %2",_vest, name player];
 };
+uisleep 0.5;
 {player addItemToVest _x}forEach  ((_loadoutData select 1) select 1);
 if (_headgear != "") then {
 	_playerObject addheadgear _headgear;
+	systemChat format ["%1 restored on %2",_headgear, name player];
 };
+uisleep 0.5;
+if (_backpack != "") then {
+	_playerObject addbackpack _backpack;
+	clearAllItemsFromBackpack _playerObject;
+	systemChat format ["%1 restored on %2",_backpack, name player];
+};
+{player addItemToBackpack _x}forEach  ((_loadoutData select 2) select 1);
+uisleep 0.5;
 if (_goggles != "") then {
 	_playerObject addgoggles _goggles;
 };
-if (_backpack != "") then {
-	_playerObject addbackpack _backpack;
-	clearAllItemsFromBackpack _playerObject
-};
-{player addItemToBackpack _x}forEach  ((_loadoutData select 2) select 1);
 {
 	_playerObject addmagazine _x; //player addMagazine ["magazineName", "ammoCount"];
 }foreach _magazines;
@@ -79,6 +88,8 @@ player addMagazine ((_loadoutData select 8) select 2); //handGun
 {
 	if (_x != "") then {
 		_playerObject addweapon _x;
+		systemChat format ["%1 restored on %2",_x, name player];
+		uisleep 0.25;
 	};
 }foreach _weapons;
 {
@@ -101,3 +112,4 @@ player addMagazine ((_loadoutData select 8) select 2); //handGun
 		_playerObject linkitem _x;
 	};
 }foreach _linkedItemsMisc;
+systemChat format ["Loadout Fully restored on %1, report any missing equipement to the Admin", name player];

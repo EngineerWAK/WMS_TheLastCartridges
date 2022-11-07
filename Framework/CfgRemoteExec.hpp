@@ -74,6 +74,7 @@ class CfgRemoteExec
 		class aur_enable_rappelling_animation 		{ allowedTargets=0; };
 		
 		class rhs_fnc_flashbang_effect 				{ allowedTargets=0; };
+		class rhs_fnc_usf_flashbang_effect 			{ allowedTargets=0; };
 
 		class WMS_fnc_setVarOnPlayerRespawn			{ allowedTargets=2; };
 		class WMS_fnc_spawnLootManager 				{ allowedTargets=2; };

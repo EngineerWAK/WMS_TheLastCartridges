@@ -53,5 +53,6 @@ if (count _aceData != count _aceStuff) exitWith {
 	private _savedData = (_aceData select _arrayNumber);
 	if !(_savedData isEqualTo [-999]) then {
 		_playerObject setVariable [_x,_savedData,true];
+		systemChat format ["Restoring ACE Medical %1 %2",_x, _savedData];
 	};
 }forEach _aceStuff;

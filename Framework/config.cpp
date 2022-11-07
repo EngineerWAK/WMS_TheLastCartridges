@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.685_2022NOV02_GitHub"; //Trying to find out why there is a parachute in the sky when customSpawn
+	name = "v1.687_2022NOV06_GitHub"; //permanent vehicle destroyed clean up is fucked-up
 };
 
 class Extended_PreInit_EventHandlers {

@@ -14,7 +14,7 @@
 NEED TO TAKE A LOOK AT THIS:
 _yourArray = _yourArray call BIS_fnc_consolidatearray;
 */
-private ["_permanentVhlArray","_ownerUID","_vehicleID_inventory_list","_vehicleInventory","_startDamage"];
+private ["_newDir","_newPos","_vehicleArray","_vehicleArrayNumber","_playerArrayNumber","_howmanyrestarts","_isPermanent","_friends","_permanentVhlArray","_ownerUID","_vehicleID_inventory_list","_vehicleInventory","_startDamage"];
 //(_this select 0) call WMS_fnc_updatePermanentVHL; //from respawnPermanentVehicle
 //nul = (_this select 0) remoteExec ['WMS_fnc_updatePermanentVHL', 2]; //from initVehicleAddAction, player side
 params [
@@ -41,7 +41,7 @@ _msgHint = format ["_this: %1m, Owner: %2, _vehicleID %3, %4",_vehicleObject,  _
 */
 if !(_isPermanent) exitWith {
 	//Diag_log error message blablabla
-	_vehicleObject setDamage 1; //that would be funny
+	//_vehicleObject setDamage 1; //that would be funny
 };
 _permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 _playerArrayNumber = _ownerUID call WMS_fnc_findUIDinVhlArray; //find the owner Array in the _permanentVhlArray
@@ -53,11 +53,12 @@ if (_vehicleArrayNumber == -1) exitWith {
 
 _vehicleArray = ((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber);
 
-if (damage _vehicleObject == 1) then { //call from _killed" eventHandler
+if (damage _vehicleObject == 1 || _updateType == "destroyed") then { //call from _killed" eventHandler
 	//Vehicles destroyed, removing from player array
 	(_permanentVhlArray select _playerArrayNumber) deleteAt _vehicleArrayNumber;
 	WMS_permanentVehicleObjects deleteAt (WMS_permanentVehicleObjects find _vehicleObject);
 	profileNamespace setVariable [_vehicleID_inventory, nil];
+	if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: Vehicle destroyed, Cleaning up %1, %2",_vehicleObject, _vehicleID_inventory]};
 } else {
 //_vehicleID = _vehicleArray select 0;
 _classname	= _vehicleArray select 1;
