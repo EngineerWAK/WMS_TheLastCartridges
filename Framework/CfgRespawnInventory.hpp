@@ -27,7 +27,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "U_C_Scientist";
 		//backpack = "B_AssaultPack_rgr";
@@ -75,7 +76,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "DualTex_Camo_Cyre";
 		//backpack = "B_AssaultPack_rgr";
@@ -124,7 +126,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "Scorpion_Camo_Cyre";
 		//backpack = "B_AssaultPack_rgr";
@@ -174,7 +177,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "rhsgref_uniform_woodland";
 		//backpack = "B_AssaultPack_rgr";
@@ -219,7 +223,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "rhsgref_uniform_flecktarn";
 		//backpack = "B_AssaultPack_rgr";
@@ -270,7 +275,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "rhsgref_uniform_gorka_1_f";
 		//backpack = "B_AssaultPack_rgr";
@@ -287,6 +293,8 @@ class CfgRespawnInventory
 			"Rangefinder"
 		};
 		magazines[] = {
+			"rhsgref_10Rnd_792x57_m76",
+			"rhsgref_10Rnd_792x57_m76",
 			"rhsgref_10Rnd_792x57_m76",
 			"rhsgref_10Rnd_792x57_m76",
 			"rhsgref_10Rnd_792x57_m76",
@@ -326,7 +334,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "Project_Honor_Camo_Cyre";
 		//backpack = "B_AssaultPack_rgr";
@@ -380,7 +389,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "Tiger_Camo_Cyre";
 		//backpack = "B_AssaultPack_rgr";
@@ -425,7 +435,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "M81_Camo_crye";
 		//backpack = "B_AssaultPack_mcamo";
@@ -437,13 +448,13 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhs_weap_ak74m_camo",
+			"SMG_02_F",
 			"Binocular"
 		};
 		magazines[] = {
-			"rhs_30Rnd_545x39_7N22_camo_AK",
-			"rhs_30Rnd_545x39_7N22_camo_AK",
-			"rhs_30Rnd_545x39_7N22_camo_AK",
+			"30Rnd_9x21_Mag",
+			"30Rnd_9x21_Mag",
+			"30Rnd_9x21_Mag",
 			"SmokeShellGreen",
 			"SmokeShellGreen",
 			"SmokeShellGreen"
@@ -499,18 +510,19 @@ class CfgRespawnInventory
 			"ACE_Canteen"
 		};
 		linkedItems[] = {
-			"V_PlateCarrier2_rgr_noflag_F",
-			"AOR2_Boonie",
+			"rhs_lifchik_vog",
+			"H_Booniehat_oli",
 			"rhs_acc_2dpZenit_ris",
 			"rhs_acc_pkas",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "AOR2_Camo_Cyre";
 		//backpack = "B_AssaultPack_rgr";
-	};
+		};
 	class IND_Engineer
 	{
 		displayName = "Engineer";							// Name visible in the menu
@@ -518,15 +530,16 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"arifle_MXC_Black_F",
+			"hgun_PDW2000_F",
 			"Binocular"
 		};
 		magazines[] = {
-			"30Rnd_65x39_caseless_black_mag",
-			"30Rnd_65x39_caseless_black_mag",
-			"30Rnd_65x39_caseless_black_mag",
+			"30Rnd_9x21_Mag",
+			"30Rnd_9x21_Mag",
+			"30Rnd_9x21_Mag",
 			"rhs_mag_an_m14_th3",
 			"rhs_mag_an_m14_th3",
+			"rhs_charge_tnt_x2_mag",
 			"rhs_charge_tnt_x2_mag",
 			"SmokeShellGreen"
 		};
@@ -549,13 +562,13 @@ class CfgRespawnInventory
 		};
 		linkedItems[] = {
 			"rhs_6sh117_mg",
-			"rhs_altyn_visordown",
-			"rhs_acc_1p87",
+			"H_Cap_blk_CMMG",
 			"acc_flashlight",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "U_BG_Guerrilla_6_1";
 		//backpack = "B_AssaultPack_rgr";
@@ -612,7 +625,8 @@ class CfgRespawnInventory
 			"ItemMap",
 			"ItemCompass",
 			"ChemicalDetector_01_watch_F",
-			"ItemRadio"
+			"ItemRadio",
+			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "MarPat_Camo_Cyre_GS";
 		//backpack = "B_AssaultPack_rgr";

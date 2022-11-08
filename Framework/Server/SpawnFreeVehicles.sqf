@@ -17,12 +17,13 @@ private _vhls = [
 		"rhsusf_mrzr4_w_mud",
 		"rhsusf_mrzr4_w_mud",
 		"rhsusf_mrzr4_w_mud",
+		"rhsgref_hidf_m998_4dr",
+		"rhsgref_hidf_m998_4dr",
 		"rhsgref_nat_uaz_open",
 		"rhsgref_nat_uaz_open",
 		"I_LT_01_scout_F",
 		"rhsgref_hidf_m113a3_unarmed",
 		"rhsusf_m113_usarmy_medical",
-		//"UK3CB_BAF_MAN_HX58_Repair_Green",
 		"rhsusf_m113_usarmy_supply"
 	],
 	[//_this select 1 = Civilian
@@ -35,7 +36,6 @@ private _vhls = [
 		"C_Van_01_fuel_F",
 		"C_Hatchback_01_F",
 		"C_Offroad_02_unarmed_F",
-		//"UK3CB_Civ_LandRover_Soft_Blue_A",
 		"C_Van_01_transport_F",
 		"C_Offroad_01_F",
 		"C_IDAP_Truck_02_water_F",

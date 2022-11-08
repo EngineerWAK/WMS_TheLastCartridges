@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.687_2022NOV06_GitHub"; //permanent vehicle destroyed clean up is fucked-up
+	name = "v1.690_2022NOV06_GitHub"; //no permanent vehicle update if damage vehicle = 1 | updated some respawn loadout
 };
 
 class Extended_PreInit_EventHandlers {
