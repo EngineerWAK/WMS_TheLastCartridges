@@ -33,6 +33,17 @@ if (_traderType == 'weapons_RHS') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol" >> "items");
 	//no launchers here
 };
+if (_traderType == 'weapons_RHS_NIA') then {
+	_traderType = 'weapons'; //' ' and not " "
+	_itemsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "SniperRifles_RHS_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "DMR_RHS_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "AssaultEAST_RHS_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "AssaultWEST_RHS_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "MachineGun_RHS_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "SubMachineGun_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol_NIA" >> "items");
+	//no launchers here
+};
 if (_traderType == 'accessories') then {
 	//_traderType = 'accessories'; //' ' and not " "
 	_hintMessage = 'Weapon Accessory spawned "somewhere" xD';
@@ -48,6 +59,15 @@ if (_traderType == 'accessories_RHS') then {
 	_itemsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Scopes");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "LaserLights");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Bipods");
+	//_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Suppressors");
+	//no launchers here
+};
+if (_traderType == 'accessories_RHS_NIA') then {
+	_traderType = 'accessories'; //' ' and not " "
+	_hintMessage = 'Weapon Accessory spawned "somewhere" xD';
+	_itemsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Scopes");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "LaserLights");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Bipods");
 	//_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Suppressors");
 	//no launchers here
 };
@@ -71,13 +91,25 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	if (_itemName == "H&K G3A3") then {_itemName = "HK-G3A3"};
 	if (_itemName == "H&K G3A3 (RIS)") then {_itemName = "HK-G3A3 (RIS)"};
 //////////
-	if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Scopes")) || _item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Scopes"))) then {
+	if (
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Scopes")) || 
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Scopes")) || 
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Scopes"))
+		) then {
 		_itemName = format ["SCP %1",_itemName];
 	};
-	if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "LaserLights")) || _item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "LaserLights"))) then {
+	if (
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "LaserLights")) || 
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "LaserLights")) || 
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "LaserLights"))
+		) then {
 		_itemName = format ["LZR %1",_itemName];
 	};
-	if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Bipods")) || _item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Bipods"))) then {
+	if (
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Bipods")) || 
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Bipods")) || 
+		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Bipods"))
+		) then {
 		_itemName = format ["GRP %1",_itemName];
 	};
 

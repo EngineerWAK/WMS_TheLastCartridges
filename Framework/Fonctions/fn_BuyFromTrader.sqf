@@ -116,7 +116,11 @@ if (_playerMoney >= _price) then {
 			_itemSlotFreeOrNot = primaryWeaponItems _caller;
 			_compatibleItems = [primaryWeapon _caller] call CBA_fnc_compatibleItems;
 			/////
-			if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Scopes")) ||_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Scopes"))) then {
+			if (
+				_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Scopes")) ||
+				_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Scopes")) ||
+				_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Scopes"))
+				) then {
 				if ((_itemSlotFreeOrNot select 2 == "") && (_item in _compatibleItems)) then {_caller addPrimaryWeaponItem _item} else {
 					if (_caller canAdd _item)then{
 						_caller addItem _item;
@@ -129,7 +133,11 @@ if (_playerMoney >= _price) then {
 				};
 			}else {
 			/////
-				if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "LaserLights")) || _item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "LaserLights"))) then {
+				if (
+					_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "LaserLights")) || 
+					_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "LaserLights")) || 
+					_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "LaserLights"))
+					) then {
 					if ((_itemSlotFreeOrNot select 1 == "") && (_item in _compatibleItems)) then {_caller addPrimaryWeaponItem _item} else {
 						if (_caller canAdd _item)then{
 							_caller addItem _item;
@@ -142,7 +150,11 @@ if (_playerMoney >= _price) then {
 					};
 				}else {
 			/////
-					if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Bipods")) || _item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Bipods"))) then {
+					if (
+						_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Bipods")) || 
+						_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Bipods")) || 
+						_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Bipods"))
+						) then {
 						if ((_itemSlotFreeOrNot select 3 == "") && (_item in _compatibleItems)) then {_caller addPrimaryWeaponItem _item} else {
 							if (_caller canAdd _item)then{
 								_caller addItem _item;
@@ -155,7 +167,11 @@ if (_playerMoney >= _price) then {
 						};
 					}else {
 			/////
-						if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Suppressors")) || _item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Suppressors"))) then {
+						if (
+							_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Suppressors")) || 
+							_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Suppressors")) || 
+							_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Suppressors"))
+							) then {
 							if ((_itemSlotFreeOrNot select 0 == "") && (_item in _compatibleItems)) then {_caller addPrimaryWeaponItem _item} else {
 								if (_caller canAdd _item)then{
 									_caller addItem _item;

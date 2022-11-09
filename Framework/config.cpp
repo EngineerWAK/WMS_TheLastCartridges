@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.690_2022NOV06_GitHub"; //no permanent vehicle update if damage vehicle = 1 | updated some respawn loadout
+	name = "v1.691_2022NOV09_GitHub"; //Added NIArsenal to Livonia Traders/NPCs. 2 different versions of enoch mission.sqm
 };
 
 class Extended_PreInit_EventHandlers {

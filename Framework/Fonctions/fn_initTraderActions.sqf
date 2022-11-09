@@ -20,7 +20,7 @@ _traderObject allowDamage false;
 
 if (false) then {diag_log format ["[INIT_TRADERS_ACTIONS]|WAK|TNA|WMS|_this %1", _this]};
 if (_traderType == 'notYet') exitWith {diag_log "[INIT_TRADERS]|WAK|TNA|WMS|Trader not setup yet, exiting the init"};
-if (_traderType == 'weapons' || _traderType == 'accessories' || _traderType == 'weapons_RHS' || _traderType == 'accessories_RHS') exitWith {[_traderObject, _traderType, _count] call WMS_fnc_initTraderActions_Weapons;};
+if (_traderType == 'weapons' || _traderType == 'accessories' || _traderType == 'weapons_RHS' || _traderType == 'weapons_RHS_NIA' || _traderType == 'accessories_RHS' || _traderType == 'accessories_RHS_NIA') exitWith {[_traderObject, _traderType, _count] call WMS_fnc_initTraderActions_Weapons;};
 if (_traderType == 'equipement' || _traderType == 'foodandhealth' || _traderType == 'equipement_RHS' || _traderType == 'foodandhealth_RHS') exitWith {[_traderObject, _traderType, _count] call WMS_fnc_initTraderActions_Equipement;};
 if (_traderType == 'office') exitWith {[_traderObject, _traderType, _count] call WMS_fnc_initTraderActions_Office;};
 if (_traderType == 'specopsItems' || _traderType == 'specopsExplo' || _traderType == 'specopsItems_RHS' || _traderType == 'specopsExplo_RHS') exitWith {[_traderObject, _traderType, _count] call WMS_fnc_initTraderActions_Specops;};
