@@ -103,6 +103,11 @@ class DMR_RHS_NIA
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
 	{	
+		"hlc_wp_SCARL_DMR_Blk",
+		"hlc_wp_SCARH_DMR_Blk",
+		"hlc_WP_SSR",
+		"hlc_wp_SSR_Blk",
+		"hlc_wp_SSR_camo",
 		"hlc_rifle_FAL5061Rail",
 		"hlc_rifle_FAL5061",
 		"hlc_rifle_g3a3ris",
@@ -265,6 +270,14 @@ class AssaultWEST_RHS_NIA
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
 	{
+		"hlc_wp_MK17IUR_300_camo",
+		"hlc_wp_MK17IUR_556_camo",
+		"hlc_wp_MK17IUR_762R_camo",
+		"hlc_wp_Mk17_camo",
+		"hlc_wp_SCARH_CQC_SRX_Blk",
+		"hlc_wp_SCARH_CQC_Blk",
+		"hlc_wp_SCARL_CQC_300AAC_Blk",
+		"hlc_wp_SCARL_CQC_Blk",
 		"hlc_rifle_honeybadger",
 		"hlc_rifle_vendimus",
 		"hlc_rifle_auga1carb_t",

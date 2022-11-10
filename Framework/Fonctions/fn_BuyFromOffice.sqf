@@ -36,6 +36,10 @@ if (_item == 'TradeRespect5k' || _item == 'TradeRespect10k') then {
 			_caller setVariable ["WMS_CurentEmergencySupply", _item, true];
 			[_item] remoteExecCall ["WMS_fnc_chooseSupplyPos", (owner _caller)]; //payment will be done in WMS_fnc_createTerritory
 		};	
+		if (_item == 'EmergencySupplyWeaps') then {
+			_caller setVariable ["WMS_CurentEmergencySupply", _item, true];
+			[_item] remoteExecCall ["WMS_fnc_chooseSupplyPos", (owner _caller)]; //payment will be done in WMS_fnc_createTerritory
+		};
 		if (_item == 'HaloJump' || _item == 'HaloJumpComputer') then {
 			[_item] remoteExecCall ["WMS_fnc_chooseHaloPos", (owner _caller)];
 		};		

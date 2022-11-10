@@ -43,11 +43,17 @@ class R3F_SCAR_H_TPR_20pcs_blk		{ quality = 2; price = 2100; };
 class UK3CB_BAF_L129A1_FGrip		{ quality = 2; price = 2100; };
 class BWA3_G28			    		{ quality = 2; price = 1900; };
 
+class hlc_wp_SCARH_DMR_Blk			{ quality = 2; price = 1905; };
+class hlc_wp_SCARL_DMR_Blk			{ quality = 3; price = 1505; };
+class hlc_WP_SSR					{ quality = 2; price = 1505; };
+class hlc_wp_SSR_Blk				{ quality = 2; price = 1505; };
+class hlc_wp_SSR_camo				{ quality = 2; price = 1505; };
 class hlc_rifle_FAL5061Rail			{ quality = 2; price = 1905; };
 class hlc_rifle_FAL5061			    { quality = 2; price = 1905; };
 class hlc_rifle_g3a3ris			    { quality = 2; price = 1905; };
 class hlc_rifle_g3a3			    { quality = 2; price = 1905; };
 class hlc_rifle_M14_Bipod			{ quality = 2; price = 1905; };
+class hlc_rifle_c1A1				{ quality = 2; price = 1905; };
 
 //ASSAULT EAST
 class arifle_AK12_F				    { quality = 1; price = 450; };
@@ -116,6 +122,15 @@ class rhs_weap_mk18_KAC				{ quality = 1; price = 450; };
 class BWA3_G38				    	{ quality = 1; price = 450; };
 class BWA3_G36A3				    { quality = 1; price = 450; };
 class BWA3_G36KA4				    { quality = 1; price = 450; };
+
+class hlc_wp_MK17IUR_300_camo		{ quality = 3; price = 1755; };
+class hlc_wp_MK17IUR_556_camo		{ quality = 1; price = 455; };
+class hlc_wp_MK17IUR_762R_camo		{ quality = 2; price = 555; };
+class hlc_wp_Mk17_camo				{ quality = 1; price = 455; };
+class hlc_wp_SCARH_CQC_SRX_Blk		{ quality = 2; price = 555; };
+class hlc_wp_SCARH_CQC_Blk			{ quality = 1; price = 455; };
+class hlc_wp_SCARL_CQC_300AAC_Blk	{ quality = 3; price = 1755; };
+class hlc_wp_SCARL_CQC_Blk			{ quality = 1; price = 755; };
 
 class hlc_rifle_M1903A1OMR			{ quality = 1; price = 855; };
 class hlc_rifle_auga1carb_t			{ quality = 1; price = 455; };

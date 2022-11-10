@@ -11,8 +11,24 @@ if (true) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK| _
 _officeTrader = getArray(missionConfigFile >> "CfgOfficeTrader" >> _item);
 _itemPrice = (_officeTrader select 0);
 _itemList = (_officeTrader select 1);
+_itemListM = [];
+_itemListI = [];
+_itemListB = [];
+//if () then {};
+switch (tolower _item) do {
+    case "emergencysupplymeds":	{
+		_itemPrice = (_officeTrader select 0);
+		_itemList = (_officeTrader select 1);
+	};
+     case "emergencysupplyweaps":		{
+		_itemPrice = (_officeTrader select 0);
+		_itemList = (_officeTrader select 1);
+		_itemListM = (_officeTrader select 2);
+		_itemListI = (_officeTrader select 3);
+		_itemListB = (_officeTrader select 4);
+	};
+};
 if (true) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK| _officeTrader = %1",_officeTrader]};
-
 
 _rad = 250;
 _altitude = 150;
@@ -35,7 +51,17 @@ clearMagazineCargoGlobal _cargo;
 clearWeaponCargoGlobal _cargo; 
 clearItemCargoGlobal _cargo; 
 clearBackpackCargoGlobal _cargo;
-{_cargo addItemCargoGlobal [_x,1]} forEach _itemList;
+if (_item == "EmergencySupplyMeds") then {{_cargo addItemCargoGlobal [_x,1]} forEach _itemList;};
+if (_item == "EmergencySupplyWeaps") then {
+	_weap = selectRandom _itemList;
+	_cargo addWeaponCargoGlobal [_weap,1];
+	_cargo addMagazineCargoGlobal [((getArray (configfile >> "CfgWeapons" >> _weap >> "magazines")) select 0), 3];
+	{_cargo addItemCargoGlobal [_x,1]} forEach _itemListI;
+	{_cargo addMagazineCargoGlobal [_x, 1]} forEach _itemListM;
+
+	//{_cargo addBackpackCargoGlobal [(_x select 0),((_x select 1)+(round (random (_x select 2))))]} forEach _bagList;
+};
+
 //{_cargo addMagazineCargoGlobal [_x,1]} forEach _ammoList;
 //{_cargo addBackpackCargoGlobal [_x,1]} forEach _bag;
 //{_cargo addWeaponCargoGlobal [_x,1]} forEach _weap;

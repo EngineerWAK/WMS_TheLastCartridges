@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.691_2022NOV09_GitHub"; //Added NIArsenal to Livonia Traders/NPCs. 2 different versions of enoch mission.sqm
+	name = "v1.696_2022NOV10_GitHub"; //Added NIArsenal to Livonia Traders/NPCs. 2 different versions of enoch mission.sqm | updated medicalCenter layout
 };
 
 class Extended_PreInit_EventHandlers {
@@ -336,6 +336,30 @@ class CfgOfficeTrader
 			"ACE_fieldDressing", //25
 			"ACE_fieldDressing", //25
 			"ACE_fieldDressing" //25
+		}
+	};
+	EmergencySupplyWeaps[] = 
+	{
+		3000,
+		{	//weap, random select 1 + default ammo x3
+			"rhs_weap_hk416d10_LMT",
+			"rhs_weap_mk17_CQC",
+			"rhs_weap_m1garand_sa43",
+			"rhs_weap_MP44",
+			"rhs_weap_m14_rail",
+			"rhs_weap_m76",
+			"SMG_02_F",
+			"hgun_PDW2000_F"
+		},
+		{//mags other than default ammo, all
+			"SmokeShellGreen"
+		},
+		{//items //all
+			"ACE_fieldDressing",
+			"ACE_splint"
+		},
+		{//backpack //not used yet
+			"B_AssaultPack_rgr"
 		}
 	};
 	HaloJump[] = 

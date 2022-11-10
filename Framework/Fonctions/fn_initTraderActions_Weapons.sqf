@@ -90,6 +90,16 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 //FIX THE FUCKING BROKEN NIArms Names	
 	if (_itemName == "H&K G3A3") then {_itemName = "HK-G3A3"};
 	if (_itemName == "H&K G3A3 (RIS)") then {_itemName = "HK-G3A3 (RIS)"};
+	if (_itemName == "H&K G3A3 (RIS)") then {_itemName = "HK-G3A3 (RIS)"};
+	if (_item == "hlc_rifle_psg1") then {_itemName = "HK-PSG1"};
+	if (_item == "hlc_rifle_PSG1A1_RIS") then {_itemName = "HK-PSG1 (RIS)"};
+	if (_item == "hlc_rifle_G36MLIC") then {_itemName = "HK-G36MLIC"};
+	if (_item == "hlc_rifle_G36CMLIC") then {_itemName = "HK-G36CMLIC"};
+	if (_item == "hlc_rifle_G36CV") then {_itemName = "HK-G36CV"};
+	if (_item == "hlc_rifle_G36KMLIC") then {_itemName = "HK-G36KMLIC"};
+	if (_item == "hlc_rifle_g36KTac") then {_itemName = "HK-g36KTac"};
+	if (_item == "hlc_rifle_MG36") then {_itemName = "HK-MG36"};
+	if ("H&K" in _itemName) then {_itemName = _item};
 //////////
 	if (
 		_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Scopes")) || 
