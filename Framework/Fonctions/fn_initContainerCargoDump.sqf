@@ -69,7 +69,27 @@ _container enableRopeAttach false;
 ];
 [
 	_container, [
-		"<t size='1' color='#26e600'>Buy Ammo</t>",
+		"<t size='0.9' color='#26e600'>Buy Default Ammo Primary Weap </t>",
+		"   
+			[(_this select 1), (_this select 0), 'default'] call WMS_fnc_buyAmmoOnBox;  
+		", 
+		nil, 
+		1, 
+		true, 
+		true, 
+		"", 
+		"(_this getVariable ['playerInTraderZone', false])",  
+ 		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];
+[
+	_container, [
+		"<t size='0.9' color='#26e600'>Buy Random Ammo Primary Weap </t>",
 		"   
 			[(_this select 1), (_this select 0), 'random'] call WMS_fnc_buyAmmoOnBox;  
 		", 

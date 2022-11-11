@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.696_2022NOV10_GitHub"; //Added NIArsenal to Livonia Traders/NPCs. 2 different versions of enoch mission.sqm | updated medicalCenter layout
+	name = "v1.700_2022NOV10_GitHub"; //Buy Ammo from Box | Inventory items blacklist, prevent player do duplicate rockets from launchers or other items
 };
 
 class Extended_PreInit_EventHandlers {
@@ -236,7 +236,6 @@ class CfgClaimReward
 			"rhs_weap_M107_w",
 			"MMG_02_black_F",
 			"MMG_01_hex_F",
-			//"LMG_03_F",
 			"rhs_weap_m32",
 			"rhs_weap_SCARH_USA_LB",
 			"rhs_weap_SCARH_USA_CQC",
@@ -291,9 +290,11 @@ class CfgOfficeTrader
 		TradeRespect5k,
 		TradeRespect10k,
 		EmergencySupplyMeds,
+		EmergencySupplyWeaps,
 		HaloJump,
 		CompDoc,
-		CompEng
+		CompEng,
+		CompExplo //Breatcher
 	};
 
 	Territory[] = 
@@ -328,8 +329,8 @@ class CfgOfficeTrader
 			"ACE_bloodIV_500", //250
 			"ACE_bloodIV", //500
 			"ACE_morphine", //250
+			"ACE_morphine", //250
 			"ACE_atropine", //250
-			"ACE_adenosine", //250
 			"ACE_tourniquet", //30
 			"ACE_fieldDressing", //25
 			"ACE_fieldDressing", //25
@@ -352,11 +353,13 @@ class CfgOfficeTrader
 			"hgun_PDW2000_F"
 		},
 		{//mags other than default ammo, all
+			"SmokeShellGreen",
 			"SmokeShellGreen"
 		},
 		{//items //all
 			"ACE_fieldDressing",
-			"ACE_splint"
+			"ACE_splint",
+			"ACE_tourniquet"
 		},
 		{//backpack //not used yet
 			"B_AssaultPack_rgr"
@@ -380,6 +383,10 @@ class CfgOfficeTrader
 	CompEng[] = 
 	{
 		7500 //Price to get Adv Engineer Competence
+	};
+	CompExplo[] = 
+	{
+		3500 //Price to get Explosive Competence
 	};
 	vehiclesManagement[] = 
 	{
@@ -478,12 +485,12 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 	//keyframesMiddleEast[] = {"clear","clear","clearwindy","cover"}; //not used yet
 
 	lowFogmaps[] = {"Tanoa"}; //not used yet
-	lowFogSetup[] = {0.05,0.05,40};
+	lowFogSetup[] = {0.04,0.04,40};
     
 	Clear[] =
 	{
 		0,    //fogValue = 
-		0.1,    //fogValueR =
+		0.06,    //fogValueR =
 		0,    //gusts = 
 		0,    //gustsR = 
 		0,    //windFor = 
@@ -509,7 +516,7 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 	Windy[] =
 	{
 		0,    //fogValue = 
-		0.1,    //fogValueR =
+		0.05,    //fogValueR =
 		0.2,    //gusts = 
 		0.2,    //gustsR = 
 		0.2,    //windFor = 
@@ -521,8 +528,8 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 	};
 	StillRain[] =
 	{
-		0.1,    //fogValue = 
-		0.1,    //fogValueR =
+		0.06,    //fogValue = 
+		0.06,    //fogValueR =
 		0,    //gusts = 
 		0,    //gustsR = 
 		0,    //windFor = 
@@ -534,8 +541,8 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 	};
 	storm[] =
 	{
-		0.2,    //fogValue = 
-		0.1,    //fogValueR =
+		0.1,    //fogValue = 
+		0.05,    //fogValueR =
 		0.4,    //gusts = 
 		0.4,    //gustsR = 
 		0.4,    //windFor = 
@@ -579,6 +586,7 @@ class CfgOpenVhl {
 class CfgBlackListedItems {//from respawn vehicle inventory
 	items[] =
 	{
+		//ACRE Radio
 		"ACRE_PRC77",
 		"ACRE_PRC117F",
 		"ACRE_PRC148",
@@ -586,6 +594,24 @@ class CfgBlackListedItems {//from respawn vehicle inventory
 		"ACRE_PRC343",
 		"ACRE_SEM52SL",
 		"ACRE_SEM70",
+
+		"rhs_acc_dtk",
+		"rhs_acc_dtk1",
+		"rhs_acc_dtk1983",
+		"rhs_acc_dtk1l",
+		"rhs_acc_dtk1p",
+		"rhs_acc_dtk2",
+		"rhs_acc_dtk3",
+		"rhs_acc_dtk4long",
+		"rhs_acc_dtk4screws",
+		"rhs_acc_dtk4short",
+		"rhs_acc_dtkakm",
+		"rhs_acc_dtkrpk",
+		"rhs_muzzleFlash_dtk",
+		"rhs_muzzleFlash_dtk1",
+		"rhs_muzzleFlash_dtk2",
+		"rhs_muzzleFlash_dtk3",
+		"rhs_muzzleflash_dtkakm",
 
 		"rhs_rpg18_mag",//RPG-18
 		"rhs_rpg26_mag",//RPG-26
@@ -607,7 +633,8 @@ class CfgBlackListedItems {//from respawn vehicle inventory
 };
 class CfgBlackListedInv {//from player inventory at custom respawn
 	items[] =
-	{
+	{	
+		//ACRE Radio
 		"ACRE_PRC77",
 		"ACRE_PRC117F",
 		"ACRE_PRC148",
@@ -615,6 +642,24 @@ class CfgBlackListedInv {//from player inventory at custom respawn
 		"ACRE_PRC343",
 		"ACRE_SEM52SL",
 		"ACRE_SEM70",
+
+		"rhs_acc_dtk",
+		"rhs_acc_dtk1",
+		"rhs_acc_dtk1983",
+		"rhs_acc_dtk1l",
+		"rhs_acc_dtk1p",
+		"rhs_acc_dtk2",
+		"rhs_acc_dtk3",
+		"rhs_acc_dtk4long",
+		"rhs_acc_dtk4screws",
+		"rhs_acc_dtk4short",
+		"rhs_acc_dtkakm",
+		"rhs_acc_dtkrpk",
+		"rhs_muzzleFlash_dtk",
+		"rhs_muzzleFlash_dtk1",
+		"rhs_muzzleFlash_dtk2",
+		"rhs_muzzleFlash_dtk3",
+		"rhs_muzzleflash_dtkakm",
 
 		"rhs_rpg18_mag",//RPG-18
 		"rhs_rpg26_mag",//RPG-26
@@ -629,13 +674,13 @@ class CfgBlackListedInv {//from player inventory at custom respawn
 };
 class CfgArtyVhl { //allow the vehicle but tag it for CfgBlackListedShell blacklist
 	vhl[] =
-	{
+	{//Not used yet
 
 	};
 };
 class CfgBlackListedShell {
 	mags[] =
-	{
+	{//Not used yet
 		"12Rnd_230mm_rockets_cluster",//230 mm Cluster Rocket
 		"2Rnd_155mm_Mo_Cluster",//Cluster Shells
 		"2Rnd_155mm_Mo_Cluster_O",//Cluster Shells
@@ -650,7 +695,6 @@ class CfgBlackListedShell {
 		"rhs_mag_155mm_m731_1",//Mine Cluster
 		"rhs_mag_155mm_m864_3",//Cluster Shells
 		"rhs_mag_155mm_raams_1"//AT Mine Cluster
-
 	};
 };
 //_clusterVhl = getArray(missionConfigFile >> "CfgPylonVhl" >> "vhl");

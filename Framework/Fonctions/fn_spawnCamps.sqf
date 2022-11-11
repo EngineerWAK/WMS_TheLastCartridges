@@ -2107,7 +2107,28 @@ _compoRefPoint setDir _dirFlag;
 		[ //params ["_target", "_caller", "_actionId", "_arguments"];
 			_object,
 			[
-				"<t size='1.5' color='#528ffa'>Buy Ammo</t>",
+				"<t size='1.5' color='#528ffa'>Buy Ammo Default</t>",
+				"
+				[(_this select 1), (_this select 0), 'default'] call WMS_fnc_buyAmmoOnBox;
+				",
+				[], //argument accessible in the script (_this select 3)
+				1,
+				true,
+				true,
+				"",
+				//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
+				"(_this getVariable ['playerInTerritory', false])",
+				5
+			]
+		] remoteExec [
+			"addAction",
+			0, //0 for all players //2 server only //-2 everyone but the server
+			true //JIP
+		];
+		[ //params ["_target", "_caller", "_actionId", "_arguments"];
+			_object,
+			[
+				"<t size='1.5' color='#528ffa'>Buy Ammo Random</t>",
 				"
 				[(_this select 1), (_this select 0), 'random'] call WMS_fnc_buyAmmoOnBox;
 				",

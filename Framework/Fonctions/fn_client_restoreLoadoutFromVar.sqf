@@ -21,7 +21,7 @@
  *	[] //magazinesAmmo //[["magazine","ammoCount"],["magazine","ammoCount"],["magazine","ammoCount"]] //not yet
  * ];
  */
-private ["_uniform","_vest","_headgear","_goggles","_backpack","_weapons","_primaryWeaponItems","_secondaryWeaponItems","_handgunWeaponItems","_linkedItemsMisc","_magazines"];
+private ["_noRespawnItems","_uniform","_vest","_headgear","_goggles","_backpack","_weapons","_primaryWeaponItems","_secondaryWeaponItems","_handgunWeaponItems","_linkedItemsMisc","_magazines"];
 params [
 	"_playerObject",
 	"_loadoutData"
@@ -47,6 +47,7 @@ removebackpack _playerObject;
 removeallitems _playerObject;
 removeallassigneditems _playerObject;
 removeallweapons _playerObject;*/
+_noRespawnItems = getArray(missionConfigFile >> "CfgBlackListedInv" >> "items");
 if (count (getmagazinecargo _playerObject select 0) > 0) then {clearmagazinecargoglobal _playerObject;};
 if (count (getweaponcargo _playerObject select 0) > 0) then {clearweaponcargoglobal _playerObject;};
 if (count (getitemcargo _playerObject select 0) > 0) then {clearitemcargoglobal _playerObject;};
@@ -57,13 +58,13 @@ if (_uniform != "") then {
 	systemChat format ["%1 restored on %2",_uniform, name player];
 };
 uisleep 0.5;
-{player addItemToUniform _x}forEach  ((_loadoutData select 0) select 1);
+{if !(_x in _noRespawnItems) then {player addItemToUniform _x};}forEach  ((_loadoutData select 0) select 1);
 if (_vest != "") then {
 	_playerObject addvest _vest;
 	systemChat format ["%1 restored on %2",_vest, name player];
 };
 uisleep 0.5;
-{player addItemToVest _x}forEach  ((_loadoutData select 1) select 1);
+{if !(_x in _noRespawnItems) then {player addItemToVest _x};}forEach  ((_loadoutData select 1) select 1);
 if (_headgear != "") then {
 	_playerObject addheadgear _headgear;
 	systemChat format ["%1 restored on %2",_headgear, name player];
@@ -74,7 +75,7 @@ if (_backpack != "") then {
 	clearAllItemsFromBackpack _playerObject;
 	systemChat format ["%1 restored on %2",_backpack, name player];
 };
-{player addItemToBackpack _x}forEach  ((_loadoutData select 2) select 1);
+{if !(_x in _noRespawnItems) then {player addItemToBackpack _x};}forEach  ((_loadoutData select 2) select 1);
 uisleep 0.5;
 if (_goggles != "") then {
 	_playerObject addgoggles _goggles;

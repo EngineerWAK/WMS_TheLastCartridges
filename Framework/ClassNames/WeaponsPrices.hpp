@@ -54,6 +54,13 @@ class hlc_rifle_g3a3ris			    { quality = 2; price = 1905; };
 class hlc_rifle_g3a3			    { quality = 2; price = 1905; };
 class hlc_rifle_M14_Bipod			{ quality = 2; price = 1905; };
 class hlc_rifle_c1A1				{ quality = 2; price = 1905; };
+class hlc_rifle_m14sopmod			{ quality = 2; price = 1905; };
+class hlc_rifle_M21					{ quality = 2; price = 1905; };
+class hlc_rifle_M21_Rail			{ quality = 2; price = 1905; };
+class hlc_rifle_psg1				{ quality = 2; price = 1905; };
+class hlc_rifle_PSG1A1_RIS			{ quality = 2; price = 1905; };
+class hlc_rifle_g3sg1				{ quality = 2; price = 1905; };
+class hlc_rifle_g3sg1ris			{ quality = 2; price = 1905; };
 
 //ASSAULT EAST
 class arifle_AK12_F				    { quality = 1; price = 450; };
@@ -150,8 +157,8 @@ class hlc_rifle_ACR68_mid_black		{ quality = 2; price = 455; };
 class hlc_rifle_ACR68_Carb_black	{ quality = 2; price = 455; };
 class hlc_rifle_ACR68_full_black	{ quality = 2; price = 455; };
 class hlc_rifle_bcmblackjack		{ quality = 3; price = 755; };
-class hlc_rifle_Bushmaster300		{ quality = 3; price = 755; };
-class hlc_rifle_vendimus			{ quality = 3; price = 755; };
+class hlc_rifle_Bushmaster300		{ quality = 3; price = 1755; };
+class hlc_rifle_vendimus			{ quality = 3; price = 1755; };
 class hlc_rifle_honeybadger			{ quality = 5; price = 8005; };
 
 //LMG
