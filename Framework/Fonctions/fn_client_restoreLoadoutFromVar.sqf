@@ -81,7 +81,7 @@ if (_goggles != "") then {
 	_playerObject addgoggles _goggles;
 };
 {
-	if !(_x in _noRespawnItems) then {_playerObject addmagazine _x;} //player addMagazine ["magazineName", "ammoCount"];
+	if !((_x select 0) in _noRespawnItems) then {_playerObject addmagazine _x;} //player addMagazine ["magazineName", "ammoCount"];
 }foreach _magazines;
 player addMagazine ((_loadoutData select 6) select 2); //primary
 player addMagazine ((_loadoutData select 7) select 2); //secondary/launcher

@@ -12,8 +12,9 @@
 if (true) then {diag_log format ["[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|_this %1", _this]};
 params [
 	"_playerObject",
-	"_pos",
-	["_aceMedical",[]] //got it's own function, not used here
+	"_pos", //ASL
+	["_aceMedical",[]], //got it's own function, but transit from here
+	["_playerTraits",[false,false,false,false,false]]
 ];
 private _playerUID = getPlayerUID _playerObject;
 private _inventoryVarName = (_playerUID+"_RespawnData");
@@ -64,8 +65,8 @@ _export = [
 //from BIS_fnc_saveInventory, mofified to get ammo count in each mags
 /////////////////////////////////////////
 
-profileNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export]];
-missionNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export]];
+profileNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export,_playerTraits]];
+missionNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export,_playerTraits]];
 private _customRespawnList = serverNameSpace getvariable["WMS_customRespawnList",[]];
 if !(_playerUID in _customRespawnList) then {
 	_customRespawnList pushBack _playerUID;

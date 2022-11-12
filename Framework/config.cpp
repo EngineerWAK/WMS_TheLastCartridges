@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.702_2022NOV12_GitHub"; //Inventory blacklist fix | some weapons trader respect level adjustments
+	name = "v1.704_2022NOV13_GitHub"; //Permanent skills for custom respawn test | fixed inventory blackList
 };
 
 class Extended_PreInit_EventHandlers {

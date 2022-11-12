@@ -32,7 +32,7 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	_item = _x;
 	_itemName = _item;
 	if (_item == 'Territory') then {
-		_itemName = "select territory Position on the map";
+		_itemName = "Select territory Position on the map";
 		_quality = 1;
 	};
 	if (_item == 'TradeRespect5k') then {
@@ -47,6 +47,10 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 		_itemName = "Medical Emergency Supply Drop";
 		_quality = 2;
 	};
+	if (_item == 'EmergencySupplyWeaps') then {
+		_itemName = "Weapon Emergency Supply Drop";
+		_quality = 2;
+	};
 	if (_item == 'HaloJump') then {
 		_itemName = "Halo Jump";
 		_quality = 2;
@@ -57,6 +61,10 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	};
 	if (_item == 'CompEng') then {
 		_itemName = "Buy Advanced Engineer skill";
+		_quality = 1;
+	};
+	if (_item == 'CompExplo') then {
+		_itemName = "Buy Breacher skill";
 		_quality = 1;
 	};
 
