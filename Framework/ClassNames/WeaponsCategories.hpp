@@ -113,7 +113,8 @@ class DMR_RHS_NIA
 		"hlc_rifle_g3a3ris",
 		"hlc_rifle_g3a3", //name is fuckedup "H&K G3A3", show H? //Unknown entity: 'K G3A3</t><t size="0.9"  color="#ffffff">, 1900 PopTabs</t>'
 		"hlc_rifle_M14_Bipod",
-		"rifle_stgw57ris",
+		//"rifle_stgw57ris", //fuckedup classname, thank you NIA
+		"hlc_rifle_stgw57_RIS",
 		"hlc_rifle_c1A1",
 		"hlc_rifle_m14sopmod",
 		"hlc_rifle_M21",

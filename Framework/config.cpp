@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.700_2022NOV10_GitHub"; //Buy Ammo from Box | Inventory items blacklist, prevent player do duplicate rockets from launchers or other items
+	name = "v1.702_2022NOV12_GitHub"; //Inventory blacklist fix | some weapons trader respect level adjustments
 };
 
 class Extended_PreInit_EventHandlers {

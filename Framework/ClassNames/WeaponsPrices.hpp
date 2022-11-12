@@ -53,6 +53,7 @@ class hlc_rifle_FAL5061			    { quality = 2; price = 1905; };
 class hlc_rifle_g3a3ris			    { quality = 2; price = 1905; };
 class hlc_rifle_g3a3			    { quality = 2; price = 1905; };
 class hlc_rifle_M14_Bipod			{ quality = 2; price = 1905; };
+class hlc_rifle_stgw57_RIS			{ quality = 2; price = 1905; };
 class hlc_rifle_c1A1				{ quality = 2; price = 1905; };
 class hlc_rifle_m14sopmod			{ quality = 2; price = 1905; };
 class hlc_rifle_M21					{ quality = 2; price = 1905; };
@@ -130,14 +131,14 @@ class BWA3_G38				    	{ quality = 1; price = 450; };
 class BWA3_G36A3				    { quality = 1; price = 450; };
 class BWA3_G36KA4				    { quality = 1; price = 450; };
 
-class hlc_wp_MK17IUR_300_camo		{ quality = 3; price = 1755; };
+class hlc_wp_MK17IUR_300_camo		{ quality = 4; price = 1755; };
 class hlc_wp_MK17IUR_556_camo		{ quality = 1; price = 455; };
-class hlc_wp_MK17IUR_762R_camo		{ quality = 2; price = 555; };
+class hlc_wp_MK17IUR_762R_camo		{ quality = 3; price = 555; };
 class hlc_wp_Mk17_camo				{ quality = 1; price = 455; };
 class hlc_wp_SCARH_CQC_SRX_Blk		{ quality = 2; price = 555; };
 class hlc_wp_SCARH_CQC_Blk			{ quality = 1; price = 455; };
-class hlc_wp_SCARL_CQC_300AAC_Blk	{ quality = 3; price = 1755; };
-class hlc_wp_SCARL_CQC_Blk			{ quality = 1; price = 755; };
+class hlc_wp_SCARL_CQC_300AAC_Blk	{ quality = 4; price = 1755; };
+class hlc_wp_SCARL_CQC_Blk			{ quality = 2; price = 755; };
 
 class hlc_rifle_M1903A1OMR			{ quality = 1; price = 855; };
 class hlc_rifle_auga1carb_t			{ quality = 1; price = 455; };
@@ -153,12 +154,12 @@ class hlc_rifle_G36CV				{ quality = 1; price = 455; };
 class hlc_rifle_G36KMLIC			{ quality = 1; price = 455; };
 class hlc_rifle_g36KTac				{ quality = 1; price = 455; };
 class hlc_rifle_hk51				{ quality = 2; price = 455; };
-class hlc_rifle_ACR68_mid_black		{ quality = 2; price = 455; };
-class hlc_rifle_ACR68_Carb_black	{ quality = 2; price = 455; };
-class hlc_rifle_ACR68_full_black	{ quality = 2; price = 455; };
+class hlc_rifle_ACR68_mid_black		{ quality = 3; price = 455; };
+class hlc_rifle_ACR68_Carb_black	{ quality = 3; price = 455; };
+class hlc_rifle_ACR68_full_black	{ quality = 3; price = 455; };
 class hlc_rifle_bcmblackjack		{ quality = 3; price = 755; };
-class hlc_rifle_Bushmaster300		{ quality = 3; price = 1755; };
-class hlc_rifle_vendimus			{ quality = 3; price = 1755; };
+class hlc_rifle_Bushmaster300		{ quality = 4; price = 1755; };
+class hlc_rifle_vendimus			{ quality = 4; price = 1755; };
 class hlc_rifle_honeybadger			{ quality = 5; price = 8005; };
 
 //LMG
@@ -168,8 +169,8 @@ class LMG_Mk200_black_F				{ quality = 2; price = 1500; };
 class arifle_MX_SW_Black_F			{ quality = 1; price = 1500; };
 class LMG_Zafir_F					{ quality = 3; price = 2500; };
 
-class arifle_RPK12_F				{ quality = 1; price = 1500; };
-class LMG_03_F				    	{ quality = 1; price = 1500; };
+class arifle_RPK12_F				{ quality = 2; price = 1500; };
+class LMG_03_F				    	{ quality = 3; price = 1500; };
 class rhs_weap_fnmag				{ quality = 1; price = 1500; };
 class rhs_weap_m240B				{ quality = 1; price = 1500; };
 class rhs_weap_m249				    { quality = 1; price = 1500; };
