@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.704_2022NOV13_GitHub"; //Permanent skills for custom respawn test | fixed inventory blackList
+	name = "v1.706_2022NOV13_GitHub"; //HelmetShot sound | Permanent skills for custom respawn test | fixed inventory blackList (maybe)
 };
 
 class Extended_PreInit_EventHandlers {

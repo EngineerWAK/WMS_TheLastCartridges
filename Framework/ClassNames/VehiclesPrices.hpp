@@ -175,7 +175,7 @@
 		class R3F_KAMAZ_CE_FUEL 					{ quality = 2; price = 21001; }; //zamak
 
 		class B_APC_Tracked_01_CRV_F	 			{ quality = 4; price = 80999; }; //forced Unarmed
-		class O_APC_Wheeled_02_rcws_v2_F 			{ quality = 4; price = 70999; }; //forced Unarmed
+		class O_APC_Wheeled_02_rcws_v2_F 			{ quality = 4; price = 70999; }; //forced Unarmed //"O_T_APC_Wheeled_02_rcws_v2_ghex_F" is ARMED
 		class R3F_PANDUR_CE 						{ quality = 4; price = 85999; }; //logistic forced Unarmed
 
 		//GLOBAL MOBILISATION
@@ -198,6 +198,7 @@
 		class B_T_MRAP_01_hmg_F 		{ quality = 4; price = 55000; };
 		class I_MRAP_03_gmg_F 			{ quality = 4; price = 65000; }; //strider
 		class I_MRAP_03_hmg_F 			{ quality = 4; price = 65000; };
+		class O_T_APC_Wheeled_02_rcws_v2_ghex_F 	{ quality = 5; price = 95000; }; //forced Unarmed //"O_APC_Wheeled_02_rcws_v2_F" is UNARMED
 		//CROWS
 		class rhsusf_M1239_M2_Deploy_socom_d 		{ quality = 6; price = 65000; };
 		class rhsusf_M1239_MK19_Deploy_socom_d 		{ quality = 6; price = 65000; };

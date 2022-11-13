@@ -346,6 +346,7 @@
 			"O_T_MRAP_02_hmg_ghex_F",
 			"I_MRAP_03_gmg_F",
 			"I_MRAP_03_hmg_F",
+			"O_T_APC_Wheeled_02_rcws_v2_ghex_F",
 			//CROWS
 			"rhsusf_M1239_M2_Deploy_socom_d",
 			"rhsusf_M1239_MK19_Deploy_socom_d",
