@@ -23,7 +23,7 @@ params [
 	];
 //_vehicleObject = _this select 0;
 //_updateType = _this select 1; //"lastUpdate", 'lockunlock', 'vehiclecrew', "destroyed"
-if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 
 _vehicleID 			= _vehicleObject getVariable ["WMS_vehicleid", -1];
 _ownerUID 			= _vehicleObject getVariable ["WMS_buyerowner", -1];
@@ -33,7 +33,7 @@ _howmanyrestarts 	= _vehicleObject getVariable ["WMS_howmanyrestarts", 0];
 _vehicleID_inventory = _vehicleObject getVariable ["WMS_vehicleID_inventory", ""];
 _vehicleInventory 	= profileNameSpace getVariable [_vehicleID_inventory, [[],[],[],[]]];
 
-if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: _this: %1, Owner: %2, _vehicleID %3, %4",_vehicleObject,  _ownerUID, _vehicleID,_isPermanent]};
+if (WMS_MissionDebug) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: _this: %1, Owner: %2, _vehicleID %3, %4",_vehicleObject,  _ownerUID, _vehicleID,_isPermanent]};
 /*
 _msgHint = format ["_this: %1m, Owner: %2, _vehicleID %3, %4",_vehicleObject,  _ownerUID, _vehicleID,_isPermanent];
 //_msgHint remoteExec ["hint", 0];
@@ -48,7 +48,7 @@ _playerArrayNumber = _ownerUID call WMS_fnc_findUIDinVhlArray; //find the owner 
 _vehicleArrayNumber = [_playerArrayNumber,_vehicleID]  call WMS_fnc_findVhlIDinVhlArray; //return -1 if fuckedup
 
 if (_vehicleArrayNumber == -1) exitWith {
-	if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|It's Fucked up bro: vehicle: %1, _vehicleArrayNumber: %2",_vehicleObject,_vehicleArrayNumber]};
+	if (WMS_MissionDebug) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|It's Fucked up bro: vehicle: %1, _vehicleArrayNumber: %2",_vehicleObject,_vehicleArrayNumber]};
 };
 
 _vehicleArray = ((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber);
@@ -58,7 +58,7 @@ if (damage _vehicleObject == 1 || _updateType == "destroyed") then { //call from
 	(_permanentVhlArray select _playerArrayNumber) deleteAt _vehicleArrayNumber;
 	WMS_permanentVehicleObjects deleteAt (WMS_permanentVehicleObjects find _vehicleObject);
 	profileNamespace setVariable [_vehicleID_inventory, nil];
-	if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: Vehicle destroyed, Cleaning up %1, %2",_vehicleObject, _vehicleID_inventory]};
+	if (WMS_MissionDebug) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: Vehicle destroyed, Cleaning up %1, %2",_vehicleObject, _vehicleID_inventory]};
 } else {
 //_vehicleID = _vehicleArray select 0;
 _classname	= _vehicleArray select 1;
@@ -112,7 +112,7 @@ if (_updateType == 'lockunlock' || _updateType == 'vehiclecrew' || _updateType =
 			((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber) set [8, (_howmanyrestarts + 1)];
 		}else {
 			((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber) set [8, 0];
-			if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: Territory flag detected, resseting restart count _this: %1, Owner: %2, _vehicleID %3",_vehicleObject,  _ownerUID, _vehicleID]};
+			if (WMS_MissionDebug) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: Territory flag detected, resseting restart count _this: %1, Owner: %2, _vehicleID %3",_vehicleObject,  _ownerUID, _vehicleID]};
 		};
 	};
 	

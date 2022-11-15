@@ -9,10 +9,10 @@ _scoreMalus = 0;
 _scoreMalusKILLER = 0;
 _killerScore = 0;
 if !(isServer) exitWith {
-	if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_FN_PLAYERKILLED]|WAK|TNA|WMS| WTF Is Going On Dude ??? _this: %1, time: %2", _this, time]};
+	if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED_LOG_FROM_FN_PLAYERKILLED]|WAK|TNA|WMS| WTF Is Going On Dude ??? _this: %1, time: %2", _this, time]};
 };
 [_target] remoteExecCall ['moveOut',_targetOwner];
-if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_FN_PLAYERKILLED]|WAK|TNA|WMS| _this: %1, time: %2", _this, time]};
+if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED_LOG_FROM_FN_PLAYERKILLED]|WAK|TNA|WMS| _this: %1, time: %2", _this, time]};
 
 _playerUID_ExileKills = "ExileKills_"+_targetUID;
 _playerUID_ExileMoney = "ExileMoney_"+_targetUID;
@@ -42,7 +42,7 @@ if !(isPlayer _killer) then {
 	[_target] remoteExec ["WMS_fnc_client_deathmarker", (owner _target)];
 	_msgx = format ['%2 killed %1, %3m away! %4 %5', (name _target), (name _killer),(_killer distance2d _target),_difficulty,_skills];
 	[_msgx] remoteexec ['SystemChat',0];
-	if (true) then {diag_log format ['|WAK|TNA|WMS| %2 killed %1, %3m away! %4 %5', (name _target), (name _killer),(_killer distance2d _target),_difficulty,_skills]};
+	if (WMS_MissionDebug) then {diag_log format ['|WAK|TNA|WMS| %2 killed %1, %3m away! %4 %5', (name _target), (name _killer),(_killer distance2d _target),_difficulty,_skills]};
 };
 if (isPlayer _killer && {_killer != _target} && {_target != _instigator}) then { //PLAYER Killer
 	_killerScore = profileNamespace getVariable ["ExileScore_"+(getPlayerUID _killer),0];
@@ -107,7 +107,7 @@ if (isPlayer _killer && {_killer != _target} && {_target != _instigator}) then {
 	};
 };
 
-if (true) then {diag_log format ["[PLAYERKILLED]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Poptabs: %4, Score: %5, Death: %6", _target, _targetUID, _playerKills,_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0]),(profileNamespace getVariable [_playerUID_ExileDeath,0])]};
+if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Poptabs: %4, Score: %5, Death: %6", _target, _targetUID, _playerKills,_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0]),(profileNamespace getVariable [_playerUID_ExileDeath,0])]};
 
 //_msgHint = format ["K: %1, D: %2, Poptabs: %3, Score: %4", _playerKills,(profileNamespace getVariable [_playerUID_ExileDeath,0]),_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0])];
 //_msgHint remoteExec ["hint", _targetOwner];

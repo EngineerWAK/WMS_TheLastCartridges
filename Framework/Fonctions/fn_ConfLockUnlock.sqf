@@ -7,7 +7,7 @@ params [
 	"_vehicleObject",
 	["_status", "LOCKED"]
 ];
-if (true) then {diag_log format ["[VEHICLES_LOCKUNLOCK]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[VEHICLES_LOCKUNLOCK]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 private _inventoryAcces = true;
 /*
 _openVhl = getArray(missionConfigFile>>"CfgOpenVhl">>"vhl");
@@ -35,7 +35,7 @@ if (_status == "UNLOCKED") then {
 	}else{
 		if ((count (crew _vehicleObject)) == 0)then{
 			_vehicleObject setOwner 2;
-			if (true) then {diag_log format ["[VEHICLES_LOCKUNLOCK]|WAK|TNA|WMS|UPDATE: %1 transfert ownership to server", _vehicleObject]};
+			if (WMS_MissionDebug) then {diag_log format ["[VEHICLES_LOCKUNLOCK]|WAK|TNA|WMS|UPDATE: %1 transfert ownership to server", _vehicleObject]};
 		};
 	};
 _vehicleObject setVehicleLock _status;

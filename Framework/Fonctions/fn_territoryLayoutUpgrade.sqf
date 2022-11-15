@@ -34,7 +34,7 @@ if (_playerMoney < _price) exitWith {};
 
 _vehicleID = _flag getVariable ["WMS_vehicleid", 0];
 _buildingsToDelete = [];
-if (true) then {diag_log format ["[UPDATELAYOUT]|WAK|TNA|WMS| _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[UPDATELAYOUT]|WAK|TNA|WMS| _this %1", _this]};
 
 _results = [];
 { 

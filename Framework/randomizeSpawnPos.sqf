@@ -23,7 +23,7 @@ _spawnAllowed = true;
 _customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
 _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];
 _customPlayerTraits = missionNamespace getVariable["WMS_client_customRespawnTra",[false,false,false,false,false]];
-if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Randomazing Position: _customRespawnPos %1, _pos %2, _target %3, Traits %4", _customRespawnPos, _pos, (name _target),_customPlayerTraits]};	
+if (WMS_MissionDebug) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Randomazing Position: _customRespawnPos %1, _pos %2, _target %3, Traits %4", _customRespawnPos, _pos, (name _target),_customPlayerTraits]};	
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
 	//"CustomRespawn"
@@ -130,11 +130,11 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 };
 
 if ((getPlayerUID player) in WMS_customRespawnList) then {
-	if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
+	if (WMS_MissionDebug) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
 	[player] remoteExec ["WMS_fnc_deleteRespawnData",2];
 	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 };
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test
 //_target execVM "InitPlayerSetTrait.sqf";
-if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|player respawned and ready to fight %1", time]};
+if (WMS_MissionDebug) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|player respawned and ready to fight %1", time]};

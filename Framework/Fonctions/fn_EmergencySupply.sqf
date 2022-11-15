@@ -6,7 +6,7 @@ params [
 	"_pos",
 	"_item"
 ];
-if (true) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK| _this = %1",_this]};
+if (WMS_MissionDebug) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK| _this = %1",_this]};
 
 _officeTrader = getArray(missionConfigFile >> "CfgOfficeTrader" >> _item);
 _itemPrice = (_officeTrader select 0);
@@ -28,7 +28,7 @@ switch (tolower _item) do {
 		_itemListB = (_officeTrader select 4);
 	};
 };
-if (true) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK| _officeTrader = %1",_officeTrader]};
+if (WMS_MissionDebug) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK| _officeTrader = %1",_officeTrader]};
 
 _rad = 250;
 _altitude = 150;
@@ -65,7 +65,7 @@ if (_item == "EmergencySupplyWeaps") then {
 //{_cargo addMagazineCargoGlobal [_x,1]} forEach _ammoList;
 //{_cargo addBackpackCargoGlobal [_x,1]} forEach _bag;
 //{_cargo addWeaponCargoGlobal [_x,1]} forEach _weap;
-if (true) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK|  Crate created and Filled, %1",_cargo]};
+if (WMS_MissionDebug) then {diag_log format ["|WAK|WAK|WAK| EMERGENCY_SUPPLY |WAK|WAK|WAK|  Crate created and Filled, %1",_cargo]};
 //Paradrop the crate and fil it
 playSound3D ["A3\Sounds_F\ambient\battlefield\battlefield_heli1.wss", _cargo, false, _pos, 3, 1, 0];
 

@@ -1,18 +1,18 @@
-//if (true) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_this %1", _this]}; //rpt client side
+//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_this %1", _this]}; //rpt client side
 openMap true;
 _this spawn {
 	uisleep 2;
 	onMapSingleClick { 
 		onMapSingleClick {};
-		if (true) then {diag_log format ["|WAK|WAK|WAK| HALO_JUMP_CHOOSE_POS |WAK|WAK|WAK| _this = %1",_this]};	
+		if (WMS_MissionDebug) then {diag_log format ["|WAK|WAK|WAK| HALO_JUMP_CHOOSE_POS |WAK|WAK|WAK| _this = %1",_this]};	
 		private _haloType = _this;	
 		//////////POSITION FILTER//////////
 		_markersToCheck = getArray(missionConfigFile >> "CfgOfficeTrader" >> "MarkersToCheck");
-		//if (true) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_markersToCheck %1", _markersToCheck]}; //rpt client side
+		//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_markersToCheck %1", _markersToCheck]}; //rpt client side
 		_markerTraders = [(_markersToCheck select 0)];
 		_markerSpawns = [(_markersToCheck select 1)];
 		_territoryOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "territory");
-		//if (true) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_territoryOfficeData %1", _territoryOfficeData]}; //rpt client side
+		//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_territoryOfficeData %1", _territoryOfficeData]}; //rpt client side
 		_zoneTrader = (_territoryOfficeData select 2);
 		_zoneSpawn = (_territoryOfficeData select 3);
 		_buildingAutorisation = true;

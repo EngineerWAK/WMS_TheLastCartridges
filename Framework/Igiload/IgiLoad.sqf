@@ -16,14 +16,13 @@
 //																											//
 //	Ways from points 1 and 2 can not be used simultaneously!!!												//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+//_igiload_UseExile = false; //so I don't get client side error with TheLastCartridges
 waitUntil { time > 0 };
 IL_Script_Inst = time;
 //	VARIABLES
 
 _obj_main = _this select 0;
 _obj_main_type = (typeOf _obj_main);
-_useExile = false; //so I don't get client side error with TheLastCartridges
 if (isnil "IL_Variables") then
 {
 	IL_Variables = true;
@@ -1403,7 +1402,7 @@ if (isnil "IL_Procedures") then
 
 		_cargo_pos = [0,0,-2.3];
 
-		_damage = getDammage _cargo;
+		_damage = damage _cargo;
 		detach _cargo;
 		_cargo setVelocity _player_velocity;
 		_dist = _v distance _cargo;
@@ -1482,7 +1481,7 @@ if (isnil "IL_Procedures") then
         if (IL_CDamage == 1) then
         {
             _cargo setDamage _damage;
-            if (_damage != (getDammage _cargo)) then
+            if (_damage != (damage _cargo)) then
             {
                 sleep 1;
                 _cargo setDamage _damage;
@@ -1675,7 +1674,7 @@ if (isnil "IL_Procedures") then
 						{
 							_x_cargo_offset = 0;
 						};
-						_damage = getDammage _x;
+						_damage = damage _x;
 
 						if ((typeOf _x) in IL_Supported_SDV) then
 						{
@@ -1790,7 +1789,7 @@ if (isnil "IL_Procedures") then
 						if (IL_CDamage == 1) then
 						{
 							_x setDamage _damage;
-							if (_damage != (getDammage _x)) then
+							if (_damage != (damage _x)) then
 							{
 								sleep 1;
 								_x setDamage _damage;
@@ -1798,19 +1797,19 @@ if (isnil "IL_Procedures") then
 						};
 
 						_IL_noti = getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
-						if (_useExile) then {_x call ExileServer_object_vehicle_database_update;
+						if (false) then {_x call ExileServer_object_vehicle_database_update;
                         ["Success", format ["%1 successfully loaded!",_IL_noti]] call ExileClient_gui_notification_event_addNotification;};
 						[Player, IL_Load_Score] call IL_Score;
 						};
 					}
                     else
                     {
-                    if (_useExile) then {["Whoops", ["Locked vehicles can't be loaded!"]] call ExileClient_gui_notification_event_addNotification;};
+                    if (false) then {["Whoops", ["Locked vehicles can't be loaded!"]] call ExileClient_gui_notification_event_addNotification;};
                     };
 				}
                 else
 				{
-                if (_useExile) then {["Whoops", ["Locked vehicles can't load Cargo!"]] call ExileClient_gui_notification_event_addNotification;};
+                if (false) then {["Whoops", ["Locked vehicles can't load Cargo!"]] call ExileClient_gui_notification_event_addNotification;};
 				};
 				
 				if (_done) exitWith {};
@@ -1876,7 +1875,7 @@ if (isnil "IL_Procedures") then
 						_skip = false;
 						_zload = (_v getVariable "zload") + (_x getVariable "zload_cargo");
 						_cargo_offset = (_v getVariable "load_offset") + (_x getVariable "cargo_offset");
-						_damage = getDammage _x;
+						_damage = damage _x;
 						if ((typeOf _x) in IL_Supported_UGV) then
 						{
 							_x_cargo_offset = -0.4;
@@ -2024,7 +2023,7 @@ if (isnil "IL_Procedures") then
 						if (IL_CDamage == 1) then
 						{
 							_x setDamage _damage;
-							if (_damage != (getDammage _x)) then
+							if (_damage != (damage _x)) then
 							{
 								sleep 1;
 								_x setDamage _damage;
@@ -2035,7 +2034,7 @@ if (isnil "IL_Procedures") then
 					};
 				};
 				_IL_noti = getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
-                if (_useExile) then {["Success", format ["%1 successfully unloaded!",_IL_noti]] call ExileClient_gui_notification_event_addNotification;};
+                if (false) then {["Success", format ["%1 successfully unloaded!",_IL_noti]] call ExileClient_gui_notification_event_addNotification;};
 						
 				if (_done) exitWith {};
 			} forEach (_obj_lst);

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-if (true) then {diag_log format ["[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|_this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|_this %1", _this]};
 params [
 	"_playerObject",
 	"_pos", //ASL
@@ -90,7 +90,7 @@ if (count (getitemcargo _playerObject select 0) > 0) then {clearitemcargoglobal 
 //_playerObject setDamage 1;
 //WMS_serverCMDpwd serverCommand format ["#kick %1",_playerUID]; //thats pretty hardcore xD
 saveprofileNameSpace;
-if (true) then {diag_log "[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|ProfileNameSpace Saved"};
+if (WMS_MissionDebug) then {diag_log "[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 [_playerObject] spawn {
 	hideBody  (_this select 0);
 	uisleep 3;

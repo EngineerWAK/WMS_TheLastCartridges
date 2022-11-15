@@ -1,4 +1,4 @@
-//if (true) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_this %1", _this]}; //rpt client side
+//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_this %1", _this]}; //rpt client side
 openMap true;
 [] spawn {
 	uisleep 2;
@@ -6,12 +6,12 @@ openMap true;
 		onMapSingleClick {};		
 		//////////POSITION FILTER//////////
 		_markersToCheck = getArray(missionConfigFile >> "CfgOfficeTrader" >> "MarkersToCheck");
-		//if (true) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_markersToCheck %1", _markersToCheck]}; //rpt client side
+		//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_markersToCheck %1", _markersToCheck]}; //rpt client side
 		_markerTraders = [(_markersToCheck select 0)];
 		_markerSpawns = [(_markersToCheck select 1)];
 		_markerTerritory = [(_markersToCheck select 2)];
 		_territoryOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "territory");
-		//if (true) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_territoryOfficeData %1", _territoryOfficeData]}; //rpt client side
+		//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_territoryOfficeData %1", _territoryOfficeData]}; //rpt client side
 		_zoneTrader = (_territoryOfficeData select 2);
 		_zoneSpawn = (_territoryOfficeData select 3);
 		_zoneTerritory = (_territoryOfficeData select 4);

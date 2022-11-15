@@ -12,7 +12,7 @@ params [
 	"_playerObject",
 	"_aceData"
 ];
-diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS| _playerObject %1, _aceData %2", _playerObject, _aceData];
+if (WMS_MissionDebug) then {diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS| _playerObject %1, _aceData %2", _playerObject, _aceData]};
 private _aceStuff = [
     //"ace_isdead", //changing this one since at best, it's useless, but can't totally remove it
     "WMS_isdead",
@@ -46,7 +46,7 @@ private _aceStuff = [
     "acex_field_rations_thirst"
 ];
 if (count _aceData != count _aceStuff) exitWith {
-	diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS|ERROR _aceData %1, _aceStuff %2", (count _aceData), (count _aceStuff)];
+	if (WMS_MissionDebug) then {diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS|ERROR _aceData %1, _aceStuff %2", (count _aceData), (count _aceStuff)]};
 };
 {
 	private _arrayNumber = (_aceStuff find _x);

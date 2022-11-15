@@ -38,9 +38,9 @@ _notAbandoned 	= ["Vehicles parked inside territories won't be automatically des
 while {_run && WMS_LBIS} do {
 	uisleep 900+random 900;
 	_selected = selectRandom _msgs;
-	diag_log format ["LBIS %1",_selected];
+	if (WMS_MissionDebug) then {diag_log format ["LBIS %1",_selected]};
 	_msgs deleteAt (_msgs find _selected);
-	diag_log format ["LBIS %1",_msgs];
+	if (WMS_MissionDebug) then {diag_log format ["LBIS %1",_msgs]};
 	switch (_selected) do
 		{
 			case "stuck": 		{ _msg  = _stuck; };

@@ -22,7 +22,7 @@ later:
 */
 WMS_DynamicCamoDebug = missionNameSpace getVariable ["WMS_DynamicCamoDebug",false];
 WMS_MissionDebug = missionNameSpace getVariable ["WMS_MissionDebug",false];
-if (true) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo launched client side %1", time];};
+if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo launched client side %1", time];};
 []spawn {
 while {true} do {
 	private _timer = 15;
@@ -92,7 +92,7 @@ while {true} do {
 		player setUnitTrait ["camouflageCoef",_camo];
 		if(WMS_DynamicCamoDebug) then {
 			hintSilent format ["Sound %1, Camo %2", _sound, _camo];
-			diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo Debug= %5, timer= %1, player= %2, sound= %3, camo= %4",_timer,player, _sound, _camo, WMS_DynamicCamoDebug];
+			if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo Debug= %5, timer= %1, player= %2, sound= %3, camo= %4",_timer,player, _sound, _camo, WMS_DynamicCamoDebug]};
 			}else{
 				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_dynamicCamo Debug= %5, timer= %1, player= %2, sound= %3, camo= %4",_timer,player, _sound, _camo, WMS_DynamicCamoDebug]};
 			};

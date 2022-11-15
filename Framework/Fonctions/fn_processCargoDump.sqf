@@ -150,7 +150,7 @@ profileNamespace setVariable [_playerUID_ExileScore,_playerScore+_totalScoreDump
 _target setVariable ["ExileMoney", _playerMoney+_totalPriceDump, true];
 _target setVariable ["ExileScore", _playerScore+_totalScoreDump, true];
 saveProfileNamespace;
-if (true) then {diag_log "[WMS_fnc_processCargoDump]|WAK|TNA|WMS|ProfileNameSpace Saved"};
+if (WMS_MissionDebug) then {diag_log "[WMS_fnc_processCargoDump]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 
 _msgHint = format ["Total: Poptabs: %1, Score: %2", (profileNamespace getVariable [_playerUID_Exilemoney,0]),(profileNamespace getVariable [_playerUID_ExileScore,0])];
 _msgHint remoteExec ["hint", _targetOwner];

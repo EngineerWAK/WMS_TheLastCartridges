@@ -13,7 +13,7 @@ params [
 	["_owner", []],
 	["_traveler", []]
 ];
-if (true) then {diag_log format ["[PLAYERBASEMARKERS]|WAK|TNA|WMS| _this: %1", _this]}; //local
+if (WMS_MissionDebug) then {diag_log format ["[PLAYERBASEMARKERS]|WAK|TNA|WMS| _this: %1", _this]}; //local
 _baseNamesList = ["ABLE","BAKER","CHARLIE"];
 _MkrCount = count _baseNamesList;
 {

@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.706_2022NOV13_GitHub"; //HelmetShot sound | Permanent skills for custom respawn test | fixed inventory blackList (maybe)
+	name = "v1.708_2022NOV15_GitHub"; //Fix the territory limit for players | "flag only" territory | WMS_MissionDebug for most Diag_log
 };
 
 class Extended_PreInit_EventHandlers {
@@ -398,7 +398,7 @@ class CfgOfficeTrader
 	MarkersToCheck[] = 
 	{
 		"Select",		//_markerTraders "n_installation" //TYPO ???
-		"respawn_para",	//_markerSpawns
+		"respawn_para",	//_markerSpawns //this is also used for respawn beacon (local to the owner) which cancel the halo jump posibility, migh thave to change
 		"mil_flag"		//_markerTerritory
 	};
 	ZoneSizes[] =

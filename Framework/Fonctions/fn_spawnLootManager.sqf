@@ -3,7 +3,7 @@ private ["_BuildingList","_lootToSpawn","_lootToSpawnList","_timeToDelete","_wei
 //params["_BuildingList"]; //[[_house,_lootPos,_lootType],[_house,_lootPos,_lootType]
 _BuildingList = _this;
 
-if (true) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| _BuildingList: %1", _BuildingList]};
+if (WMS_MissionDebug) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| _BuildingList: %1", _BuildingList]};
 
 _timeToDelete = 180;
 _lootToSpawn = objNull;
@@ -48,7 +48,7 @@ if !(count _BuildingList == 0) then {
 	};
 	(_x select 0) setVariable ["_lootSpawned", 1, true];
     (_x select 0) setVariable ["_lootTimer",(time+_SpawnLootLifeTime), true];
-	//if (true) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| %3 | _house,_lootPos,servertime: %1, WMS_lootHolderList count : %2", _x, (count WMS_lootHolderList), time]};
+	//if (WMS_MissionDebug) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| %3 | _house,_lootPos,servertime: %1, WMS_lootHolderList count : %2", _x, (count WMS_lootHolderList), time]};
 }forEach _buildingList;
 };
 
@@ -60,7 +60,7 @@ if !(count _BuildingList == 0) then {
 		(_x select 0) setVariable ["_lootSpawned", nil, true];
 		clearItemCargoGlobal(_x select 1);
 		deleteVehicle (_x select 1);
-		//if (true) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| Despawning: %1", _x]};
+		//if (WMS_MissionDebug) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| Despawning: %1", _x]};
 		WMS_lootHolderList deleteAt (WMS_lootHolderList find _x);
 	};
 }ForEach WMS_lootHolderList;

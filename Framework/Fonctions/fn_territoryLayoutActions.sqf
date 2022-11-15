@@ -14,7 +14,7 @@ params[
 	["_caller", -2],
 	["_jip", true]
 ];
-if (true) then {diag_log format ["[INIT_FLAG_ACTIONS]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[INIT_FLAG_ACTIONS]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 
 private _layoutsList = [
 	//["display name", "layout", price, level, display color,'rigntNow' or not, waterworld or not];
@@ -28,6 +28,7 @@ private _layoutsList = [
 		false, //right now
 		false //surface is water
 	],
+	['Flag Only',				'flagonly',5000,1,'#80c606',true,false], //this remove the buildings for "low profil" territory
 	['Farm Camp LvL1',			'farmcamp',5000,1,'#80c606',true,false],
 	['WaterWorld LvL1',			'waterworldlvl1',3000,1,'#80c606',false,true],
 	['WaterWorld LvL1',			'waterworldlvl1',5000,1,'#80c606',true,true],

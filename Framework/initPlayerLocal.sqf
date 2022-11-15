@@ -56,7 +56,7 @@ if (hasinterface) then {
     //[]spawn WMS_fnc_client_dynamicCamo;
     [] execVM "Fonctions\WMS_client_dynamicCamo.sqf";
     //DFO Choppers Actions
-    [] execVM "DFO\DFO_playerLocal.sqf";
+    //[] execVM "DFO\DFO_playerLocal.sqf"; //not with standalone
     //LBIS tips and tricks
     []spawn WMS_fnc_client_LBIS;
         
@@ -105,14 +105,14 @@ if (hasinterface) then {
 	publicVariable "WMS_HeadlessOwnerID";
 	_targetUID = getPlayerUID player;
 	_targetOwner = (owner player);
-	if (true) then {diag_log format ["[PLAYERJOINING_HC1]|WAK|TNA|WMS| player: %1, UID: %2", player, _targetUID]};
+	if (WMS_MissionDebug) then {diag_log format ["[PLAYERJOINING_HC1]|WAK|TNA|WMS| player: %1, UID: %2", player, _targetUID]};
 
 	addMissionEventHandler ["PlayerDisconnected", //DOESNT WORK
 		{
 			params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
 			WMS_HeadlessOwnerID = 2;
 			publicVariable "WMS_HeadlessOwnerID";
-			if (true) then {diag_log format ["[PLAYERLEAVING_HC1]|WAK|TNA|WMS| player: %1, UID: %2", _name, _uid]};
+			if (WMS_MissionDebug) then {diag_log format ["[PLAYERLEAVING_HC1]|WAK|TNA|WMS| player: %1, UID: %2", _name, _uid]};
 
 		}
 	];
@@ -120,7 +120,7 @@ if (hasinterface) then {
     HC1_60secLoop = {
         while {true} do
         {
-			if (true) then {diag_log format ["[HC1_60SecLoop]|WAK|TNA|WMS| player: %1, UID: %2, FPS: %3", name player, getPlayerUID player, diag_fps]};
+			if (WMS_MissionDebug) then {diag_log format ["[HC1_60SecLoop]|WAK|TNA|WMS| player: %1, UID: %2, FPS: %3", name player, getPlayerUID player, diag_fps]};
             uisleep 60;
         };
     };

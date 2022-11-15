@@ -27,7 +27,7 @@ params [
 _ownerUID = getPlayerUID _caller;
 _territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 _vehicleID = _flag getVariable ["WMS_vehicleid", "broken"];
-if (true) then {diag_log format ["[DELETETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[DELETETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
 if (_vehicleID == "broken") exitWith {};
 
 _results = [];

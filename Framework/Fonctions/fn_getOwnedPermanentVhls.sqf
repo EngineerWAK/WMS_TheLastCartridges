@@ -22,5 +22,5 @@ if !(_UIDplayerArrayPos == -1) then {
 		};
 	}forEach (_permamentVehicles select _UIDplayerArrayPos);
 };
-diag_log format ["Permanent Vehicles Markers _result = %1",_result];
+if (WMS_MissionDebug) then {diag_log format ["Permanent Vehicles Markers _result = %1",_result]};
 _result remoteExec ["WMS_fnc_client_markerOnPersonalVhls", (owner _target)];

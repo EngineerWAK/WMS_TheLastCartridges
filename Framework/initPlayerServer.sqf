@@ -30,7 +30,7 @@ if !(_targetUID in _playerAlreadyConnected) then {
 };
 //saveProfileNamespace;
 
-if (true) then {diag_log format ["[PLAYERJOINING]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Poptabs: %4, Score: %5, Death: %6", _playerUnit, _targetUID, _playerKills,_playerMoney,_playerScore,_playerDeath]};
+if (WMS_MissionDebug) then {diag_log format ["[PLAYERJOINING]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Poptabs: %4, Score: %5, Death: %6", _playerUnit, _targetUID, _playerKills,_playerMoney,_playerScore,_playerDeath]};
 
 //saveProfileNamespace;
 

@@ -24,7 +24,7 @@ _vehicleID = _flag getVariable ["WMS_vehicleid", 0]; //select 0
 _BuyerOwner = _flag getVariable ["WMS_buyerowner", 0]; //select 3
 _layout = _flag getVariable ["layout", "bunkercamp"]; //select 6
 
-if (true) then {diag_log format ["[UPGRADETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[UPGRADETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
 
 _results = [];
 { 

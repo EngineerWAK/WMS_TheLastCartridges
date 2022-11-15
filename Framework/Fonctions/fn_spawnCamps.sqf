@@ -24,6 +24,7 @@ if (WMS_MissionDebug) then {diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _this = %
 _objList = [];
 _objects = [];
 
+_flagOnly = [];
 _waterWorld = [
 	//["rhsgref_serhat_radar",[0,0,2.41],0]
 	["Land_PierWooden_01_ladder_F",[0.2,-4.8,0],180],
@@ -1942,6 +1943,9 @@ _waterWorldLVL6 = [
 	];
 switch (tolower _layout) do
 {	//lvl 1
+	case "flagonly": {
+		_objects = _flagOnly;
+	};
 	case "waterworld": { //default
 		_objects = _waterWorld;
 		};

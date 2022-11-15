@@ -17,7 +17,7 @@ params [
 	["_type", "orange"],
 	["_crew", false]
 ];
-if (true) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_3Dmarkers _this = %1",_this]};
+if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_3Dmarkers _this = %1",_this]};
 if (_grp) then {
 	_ID = missionNamespace getVariable ["WMS_3Dmkr_ID_grp", -1];
 	_ins = [];
@@ -60,7 +60,7 @@ if (_grp) then {
 	if (_remoteEx) then {
 		{
 			if (_x != player) then {[WMS_3Dmkr_pos_grp,true,false,_PlayerName,_type]remoteExec ["WMS_fnc_client_3Dmarkers",owner _x];};
-					if (true) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_3Dmarkers trying to execute Group3D marker on  %1",(name _x)]};
+					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_3Dmarkers trying to execute Group3D marker on  %1",(name _x)]};
 		}forEach Units (group player);
 	};
 } else {
@@ -107,7 +107,7 @@ if (_grp) then {
 			if (_remoteEx) then {
 				{
 					if (_x != player) then {[WMS_3Dmkr_pos_crew,false,false,_PlayerName,_type]remoteExec ["WMS_fnc_client_3Dmarkers",owner _x];};
-					if (true) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_3Dmarkers trying to execute crew3D marker on  %1",(name _x)]};
+					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| WMS_fnc_client_3Dmarkers trying to execute crew3D marker on  %1",(name _x)]};
 				}forEach crew (vehicle player);
 			};
 		

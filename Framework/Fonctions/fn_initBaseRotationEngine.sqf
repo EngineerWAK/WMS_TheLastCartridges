@@ -14,7 +14,7 @@ params[
 	["_caller", -2],
 	["_jip", true]
 ];
-if (true) then {diag_log format ["[INIT_FLAG_ACTIONS]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[INIT_FLAG_ACTIONS]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 private _dir = getDir _flag;
 
 [ //params ["_target", "_caller", "_actionId", "_arguments"]; //condition: _target = object, _this = caller

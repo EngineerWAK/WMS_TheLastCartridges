@@ -14,7 +14,7 @@ params [
 	"_boxObject",
 	["_option", "random"] //"random"
 ];
-if (true) then {diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|_this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|_this %1", _this]};
 
 _magsCount = 3;
 _ammoCount = 30;

@@ -93,7 +93,7 @@ if (_veh isKindOf "tank"||_veh isKindOf "Wheeled_Apc_F") then {_veh setVariable 
 					//[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];//remoteExec doesnt make sens
 					[(_this select 0),"destroyed"] call WMS_fnc_updatePermanentVHL; //remoteExec doesnt make sens
 					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
-					if (true) then {
+					if (WMS_MissionDebug) then {
 						if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};
 						if (WMS_MissionDebug) then {diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];};
 						if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};

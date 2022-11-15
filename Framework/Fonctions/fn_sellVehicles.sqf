@@ -5,7 +5,7 @@ params [
 	"_target", //player
 	"_cargo" //the crate, "_items" could be listed server side from the _cargo
 ]; 
-if (true) then {diag_log format ["[SELLVEHICLES]|WAK|TNA|WMS| _this = %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[SELLVEHICLES]|WAK|TNA|WMS| _this = %1", _this]};
 
 _itemClassName = TypeOf _cargo;
 _cfgPriceDump = 0;
@@ -33,7 +33,7 @@ if !(_itemClassName == "") then {
 		};
 	};
 }; 
-if (true) then {diag_log format ["[SELLVEHICLES]|WAK|TNA|WMS| _itemClassName = %3 _cfgPriceDump = %1 _totalPriceDump = %2", _cfgPriceDump, _totalPriceDump, _itemClassName]};
+if (WMS_MissionDebug) then {diag_log format ["[SELLVEHICLES]|WAK|TNA|WMS| _itemClassName = %3 _cfgPriceDump = %1 _totalPriceDump = %2", _cfgPriceDump, _totalPriceDump, _itemClassName]};
 
 _scoreDumpCoef 	= getNumber(missionConfigFile >> "cfgCargoDump" >> "scoreDumpCoef");
 _totalScoreDump = 0;

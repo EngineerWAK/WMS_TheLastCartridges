@@ -23,7 +23,7 @@ _vehicleID = _flag getVariable ["WMS_vehicleid", 0];
 _BuyerOwner = _flag getVariable ["WMS_buyerowner", 0];
 _layout = _flag getVariable ["layout", "bunkercamp"];
 _buildingsToDelete = [];
-if (true) then {diag_log format ["[ROTATEBASE]|WAK|TNA|WMS| _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[ROTATEBASE]|WAK|TNA|WMS| _this %1", _this]};
 
 _results = [];
 { 

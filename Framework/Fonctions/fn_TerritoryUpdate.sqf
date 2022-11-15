@@ -22,7 +22,7 @@ _ownerUID = getPlayerUID _caller;
 _territoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 _vehicleID = _flag getVariable ["WMS_vehicleid", 0]; //select 0
 _territoryFastTravel = [];
-if (true) then {diag_log format ["[UPDATETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[UPDATETERRITORY]|WAK|TNA|WMS| _this %1", _this]};
 
 _results = [];
 { 

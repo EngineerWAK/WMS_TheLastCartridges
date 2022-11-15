@@ -12,7 +12,7 @@ _this spawn {
 	_mkrNameArray = [];
 	//_vehicleArray = [(getPlayerUID player)] remoteExec ["WMS_fnc_getOwnedPermanentVhls", 2]; //to the server
 	_vehicleArray = _this;
-	diag_log format ["Permanent Vehicles Markers _this = %1",_vehicleArray];
+	if (WMS_MissionDebug) then {diag_log format ["Permanent Vehicles Markers _this = %1",_vehicleArray]};
 	//uisleep 1;
 	_vehCount = (count _vehicleArray);
 	_vehiclesManagement = getArray(missionConfigFile >> "CfgOfficeTrader" >> "vehiclesManagement"); //select 1

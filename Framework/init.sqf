@@ -38,3 +38,5 @@ execVM "R3F_LOG\init.sqf";
 CHVD_allowNoGrass = false;
 CHVD_maxView = 12000;
 CHVD_maxObj = 12000;
+
+WMS_MissionDebug = false;

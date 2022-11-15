@@ -6,7 +6,7 @@ params [
 	"_type" //'Territory', 'TradeRespect5k', 'TradeRespect10k'
 ];
 //[_item,_price,_caller, _type] remoteExec ['WMS_fnc_BuyFromTrader'];
-if (true) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_this %1", _this]};
 
 _targetUID = getPlayerUID _caller;
 _targetOwner = (owner _caller);

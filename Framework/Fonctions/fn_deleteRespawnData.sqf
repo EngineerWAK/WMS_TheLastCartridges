@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-if (true) then {diag_log format ["[WMS_fnc_deleteRespawnData]|WAK|TNA|WMS|_this %1", _this]};
+if (WMS_MissionDebug) then {diag_log format ["[WMS_fnc_deleteRespawnData]|WAK|TNA|WMS|_this %1", _this]};
 params [
 	"_playerObject"
 ];
@@ -23,4 +23,4 @@ profileNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
 missionNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
 publicVariable "WMS_customRespawnList";
 saveprofileNameSpace;
-if (true) then {diag_log "[WMS_fnc_deleteRespawnData]|WAK|TNA|WMS|ProfileNameSpace Saved"};
+if (WMS_MissionDebug) then {diag_log "[WMS_fnc_deleteRespawnData]|WAK|TNA|WMS|ProfileNameSpace Saved"};

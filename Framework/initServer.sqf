@@ -14,7 +14,7 @@
 
 WMS_lootHolderList = []; //[_house,_lootHolder,(serverTime+_timeToDelete)];
 WMS_HeadlessOwnerID = 2;
-WMS_MissionDebug = false;
+//WMS_MissionDebug = false; //move to init
 
 WMS_customRespawnList = profileNameSpace getvariable["WMS_customRespawnList",[]]; //saved by WMS_infantryProgram, after last players kick before restart
 publicVariable "WMS_customRespawnList";
@@ -71,7 +71,7 @@ while {true} do
 		private _TerritoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 		if ((count allPlayers) != 0) then {
 			saveProfilenameSpace;
-			if (true) then {diag_log "[InitServer.sqf]|WAK|TNA|WMS|ProfileNameSpace Saved"};
+			if (WMS_MissionDebug) then {diag_log "[InitServer.sqf]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 		};
 
 		{

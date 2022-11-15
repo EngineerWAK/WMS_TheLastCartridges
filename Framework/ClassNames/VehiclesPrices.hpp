@@ -294,7 +294,7 @@
 	class I_Heli_light_03_unarmed_F  			{ quality = 1; price = 10000; };
 	class rhsgref_cdf_reg_Mi8amt 				{ quality = 1; price = 10004; };
 	class C_Heli_Light_01_civil_F  				{ quality = 0; price = 10000; };
-	class C_IDAP_Heli_Transport_02_F  			{ quality = 2; price = 10000; };
+	class C_IDAP_Heli_Transport_02_F  			{ quality = 2; price = 25111; }; //Medical + cargo
 	class RHS_Mi8t_civilian 					{ quality = 1; price = 15004; };
 	class O_Heli_Transport_04_F  				{ quality = 2; price = 10000; };
 	class O_Heli_Transport_04_bench_F  			{ quality = 2; price = 10000; };

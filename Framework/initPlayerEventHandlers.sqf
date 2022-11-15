@@ -11,7 +11,7 @@
  */
 player addEventHandler ["Respawn",
 	{
-		if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, respawning at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
+		if (WMS_MissionDebug) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, respawning at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		[(_this select 0)] spawn {
 			waitUntil {alive player};
 			player setVariable ["WMS_respawnTime",time];
@@ -23,7 +23,7 @@ player addEventHandler ["Respawn",
 			_mkr = createmarkerLocal ["MKR_"+(name player), position player];
 			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
 			_mkr setMarkerColorLocal "ColorGUER";
-			if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
+			if (WMS_MissionDebug) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		};
 	}
 ];
@@ -46,17 +46,17 @@ player addMPEventHandler ["mpkilled", {
 				//[]spawn{};
 				private _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];
 				_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
-				if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
+				if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
 			};
-			if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Client Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+			if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Client Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
 		};
 		if (_actualPlayer && isServer) then {
 			if ((_this select 0) getVariable["WMS_saveAndDisconnect",false]) then {
 				//do nothing if the player save and disconnect
-				if (true) then {diag_log format ["[PLAYERSAVEANDISCONNECT_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+				if (WMS_MissionDebug) then {diag_log format ["[PLAYERSAVEANDISCONNECT_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
 			} else {
 				_this call WMS_fnc_playerKilled; //[killed, killer]
-				if (true) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
+				if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED_LOG_FROM_EH]|WAK|TNA|WMS|Server Side _this: %1, time: %2, _actualPlayer: %3", _this, time, _actualPlayer]};
 			};
 		};
 	}
