@@ -249,9 +249,9 @@ publicVariable "WMS_tradersMkrPos";
 			};
 			if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1), %2/%3 restarts", _vehicleID, _howmanyrestarts,(_vehiclesManagement select 0)];};
 			if (_howmanyrestarts >= (_vehiclesManagement select 0)) then {
-				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old %2 restarts, looking for a territory around", _vehicleID, _howmanyrestarts];};
+				if (true) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old %2 restarts, looking for a territory around", _vehicleID, _howmanyrestarts];};
 				if ((count (nearestObjects [_veh, ["rhsgref_serhat_radar"], 100])) == 0) then {
-				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old, no territory around", _vehicleID];};
+				if (true) then {diag_log format ["|WAK|TNA|WMS| permanent vehicle (%1) too old, no territory around", _vehicleID];};
 					_veh allowDamage true;
 					_veh setDamage 1;
 				};

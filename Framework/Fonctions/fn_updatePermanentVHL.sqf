@@ -108,11 +108,13 @@ if (_updateType == 'lockunlock' || _updateType == 'vehiclecrew' || _updateType =
 	((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber) set [2, _newPos]; //prevent updating vehicle position (even if not used) at every restart
 }else {
 	if (_updateType == "lastUpdate") then {
-		if ((count (nearestObjects [_newPos, ["rhsgref_serhat_radar"], 100])) == 0) then {
+		//if ((count (nearestObjects [(ASLToATL _newPos), ["rhsgref_serhat_radar"], 100])) == 0) then {
+		if ((count (nearestObjects [_vehicleObject, ["rhsgref_serhat_radar"], 100])) == 0) then {
 			((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber) set [8, (_howmanyrestarts + 1)];
 		}else {
 			((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber) set [8, 0];
-			if (WMS_MissionDebug) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: Territory flag detected, resseting restart count _this: %1, Owner: %2, _vehicleID %3",_vehicleObject,  _ownerUID, _vehicleID]};
+			_vehicleObject setVariable ["WMS_howmanyrestarts", 0];
+			if (true) then {diag_log format ["[PERMANENT_VEHICLES]|WAK|TNA|WMS|UPDATE: Territory flag detected, resseting restart count _this: %1, Owner: %2, _vehicleID %3",_vehicleObject,  _ownerUID, _vehicleID]};
 		};
 	};
 	

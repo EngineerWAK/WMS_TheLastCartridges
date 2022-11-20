@@ -2,7 +2,12 @@ params [
 	"_veh"
 ];
 private _vehicleClassName = (typeOf _veh);
-
+//UGV "\a3\Soft_F_Orange\UGV_01\Data\UGV_01_ext_IDAP_co.paa","\a3\Soft_F_Orange\UGV_01\Data\UGV_01_int_IDAP_co.paa","\a3\Soft_F_Orange\UGV_01\Data\Turret_IDAP_CO.paa"
+if (_vehicleClassName == "I_UGV_01_F") then {
+	_veh setObjectTextureGlobal [0, "a3\Soft_F_Orange\UGV_01\Data\UGV_01_ext_IDAP_co.paa"]; 
+	_veh setObjectTextureGlobal [1, "a3\Soft_F_Orange\UGV_01\Data\UGV_01_int_IDAP_co.paa"]; 
+	_veh setObjectTextureGlobal [2, "a3\Soft_F_Orange\UGV_01\Data\Turret_IDAP_CO.paa"];
+};
 if (_vehicleClassName == "rhsusf_M1239_M2_Deploy_socom_d" || _vehicleClassName == "rhsusf_M1239_MK19_Deploy_socom_d" || _vehicleClassName ==  "rhsusf_M1239_M2_socom_d" || _vehicleClassName == "rhsusf_M1239_MK19_socom_d") then {
 	_veh setObjectTextureGlobal [0, "rhsusf\addons\rhsusf_socomauv\data\m1239_main_wd_co.paa"]; 
 	_veh setObjectTextureGlobal [1, "rhsusf\addons\rhsusf_socomauv\data\m1239_wheels_wd_co.paa"]; 

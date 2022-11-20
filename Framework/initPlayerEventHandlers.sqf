@@ -28,6 +28,20 @@ player addEventHandler ["Respawn",
 	}
 ];
 
+player addEventHandler ["HandleDamage", { 
+		params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
+		if (alive player) then {
+			if !(isServer||isdedicated) then {
+				Diag_log format ["|WAK|TNA|WMS|Player eventHandler HandleDamage, _this = %1",_this];
+				if (_damage >= 2 && {(_selection == "head") || (_selection == "face_hub")}) then {
+					playSound3D [getMissionPath 'Custom\Ogg\HelmetShot.ogg', player, false, position player, 1, (0.6+random 1)];
+					[playerSide, 'PAPA_BEAR'] commandChat format ["%1 got shot strait in the face! With %2", name _unit, _projectile];
+				};
+			};
+		};
+	}
+];
+
 player addEventHandler ["GetOutMan", {
 		//params ["_unit", "_role", "_vehicle", "_turret"];
 		//(_this select 0) setVariable ["PlayerLastVehicle", (_this select 2), true]; //try to use this for wasteDump trader
@@ -36,7 +50,6 @@ player addEventHandler ["GetOutMan", {
 		};
 	}
 ];
-
 player addMPEventHandler ["mpkilled", {
 		deleteMarkerLocal "MKR_"+(name (_this select 0));
 		_actualPlayer = (_this select 0) getVariable ["_spawnedPlayerReadyToFight", true];

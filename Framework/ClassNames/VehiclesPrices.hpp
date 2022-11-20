@@ -106,6 +106,7 @@
 ////////////////////
 //Ground unarmed
 		//IDAP Vehicles are all ACE medical
+		class I_UGV_01_F					{ quality = 3; price = 9111; };
 		class C_IDAP_UGV_01_F 				{ quality = 3; price = 9111; };
 		class C_IDAP_Van_02_medevac_F 		{ quality = 2; price = 17111; };
 		class C_IDAP_Offroad_02_unarmed_F 	{ quality = 2; price = 16111; };

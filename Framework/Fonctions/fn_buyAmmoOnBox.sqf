@@ -21,17 +21,23 @@ _ammoCount = 30;
 _ammoType = "";
 _ammoCaliber = 1;
 _ammoArray = [];
+_ammoTypeDefaultAll = [];
 _ammoTypeDefault = "";
 _ammoTypeRandom = "";
 //_ammoTypeDefault = _ammoArray select 0; //That's definitly NOT the default ammo
 switch (tolower _option) do {
     case "default":	{
-		_ammoTypeDefault = ((getArray (configfile >> "CfgWeapons" >> (primaryWeapon _playerObject) >> "magazines")) select 0);
-		if ("hlc_" in (primaryweapon _playerObject) && !("hlc_" in _ammoTypeDefault)) then {_ammoTypeDefault = format["HLC_%1",_ammoTypeDefault]}; //FUCKYOU with your broken config NIA
-		_ammoCount = getNumber (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "count"); //ammo count in the mag
-		_ammoType = getText (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "ammo"); //will be used to defind the "caliber" and "extract a price per bullet
-		_ammoCaliber = getNumber (configfile >> "CfgAmmo" >> _ammoType >> "caliber"); //not the "real" Caliber but seems to follow some logic
-		_ammoArray = ["ammoClassName"];
+		_ammoTypeDefaultAll = (getArray (configfile >> "CfgWeapons" >> (primaryWeapon _playerObject) >> "magazines"));
+		if (count _ammoTypeDefaultAll != 0) then {
+			_ammoTypeDefault = _ammoTypeDefaultAll select 0;
+			if ("hlc_" in (primaryweapon _playerObject) && !("hlc_" in _ammoTypeDefault)) then {_ammoTypeDefault = format["HLC_%1",_ammoTypeDefault]}; //FUCKYOU with your broken config NIA
+			_ammoCount = getNumber (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "count"); //ammo count in the mag
+			_ammoType = getText (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "ammo"); //will be used to defind the "caliber" and "extract a price per bullet
+			_ammoCaliber = getNumber (configfile >> "CfgAmmo" >> _ammoType >> "caliber"); //not the "real" Caliber but seems to follow some logic
+			_ammoArray = ["ammoClassName"];
+		}else{
+			hint format ["%1 Doesn't have Default ammo because NIA config is crap, buy RANDOM",(primaryWeapon _playerObject)];
+		};
 	};
      case "random":		{
 		_ammoArray = [primaryWeapon _playerObject] call CBA_fnc_compatibleMagazines; //CBA

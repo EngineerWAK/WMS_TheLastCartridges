@@ -138,7 +138,8 @@
 		items[] = 
 		{	
 			//MEDICAL FACILITIES
-			"C_IDAP_UGV_01_F",
+			"I_UGV_01_F",
+			//"C_IDAP_UGV_01_F",
 			"C_IDAP_Van_02_medevac_F",
 			"C_IDAP_Offroad_02_unarmed_F",
 			"C_IDAP_Offroad_01_F",

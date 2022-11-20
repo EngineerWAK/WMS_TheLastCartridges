@@ -179,25 +179,25 @@ private _action9 = ["ActivateUAV", "Activate UAV", "", {
 
 
 //Init UGVs/UAVs //if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
-private _action10 = ["ActivateUGV", "Activate UGV", "", {
+private _action10 = ["DeActivateUGV", "DeActivate UGV", "", {
 		deleteVehicleCrew (_this select 0);
 		(_this select 0)setVariable ["WMS_UAVcanActivate", true, true];
 		(_this select 0)setVariable ["WMS_UAVcanDeActivate", false, true];
 	},{
 		(locked (_this select 0) == 0) &&
-		{(_this select 0)getVariable ["WMS_UAVcanDeActivate", true]}
+		{(_this select 0)getVariable ["WMS_UAVcanDeActivate", false]}
 	}
 	] call ace_interact_menu_fnc_createAction; //(_this select 0) say3d 'GetToTheChoppa';
 ["UGV_01_base_F", 0, ["ACE_MainActions"], _action10, true] call ace_interact_menu_fnc_addActionToClass;
 
 //Init UGVs/UAVs //if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
-private _action11 = ["ActivateUAV", "Activate UAV", "", {
+private _action11 = ["DeActivateUAV", "DeActivate UAV", "", {
 		deleteVehicleCrew (_this select 0);
 		(_this select 0)setVariable ["WMS_UAVcanActivate", true, true];
 		(_this select 0)setVariable ["WMS_UAVcanDeActivate", false, true];
 	},{
 		(locked (_this select 0) == 0) &&
-		{(_this select 0)getVariable ["WMS_UAVcanDeActivate", true]}
+		{(_this select 0)getVariable ["WMS_UAVcanDeActivate", false]}
 	}
 	] call ace_interact_menu_fnc_createAction; //(_this select 0) say3d 'GetToTheChoppa';
 ["UAV_02_base_F", 0, ["ACE_MainActions"], _action11, true] call ace_interact_menu_fnc_addActionToClass;

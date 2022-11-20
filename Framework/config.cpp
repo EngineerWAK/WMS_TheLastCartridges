@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.708_2022NOV15_GitHub"; //Fix the territory limit for players | "flag only" territory | WMS_MissionDebug for most Diag_log
+	name = "v1.710_2022NOV20_GitHub"; //WMS_howmanyrestarts fix for permanent vehicles | UAV/UGV crew action "fix" | One more code shit from NIA | Fix the territory limit for players | "flag only" territory | WMS_MissionDebug for most Diag_log
 };
 
 class Extended_PreInit_EventHandlers {
@@ -114,7 +114,8 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 		"O_T_Truck_02_Medical_F",
 		"O_T_Truck_03_medical_ghex_F",
 		"C_UAV_06_medical_F",
-		"C_IDAP_UGV_01_F",
+		"I_UGV_01_F",
+		"C_IDAP_UGV_01_F", //Can not be used by players so replaced by I_UGV_01_F with IDAP textures
 		"C_IDAP_UAV_06_F",
 		"C_IDAP_Van_02_medevac_F",
 		"C_IDAP_Offroad_02_unarmed_F",
