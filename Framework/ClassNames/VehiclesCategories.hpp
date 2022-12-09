@@ -366,6 +366,7 @@
 	        "rhsgref_cdf_b_reg_uaz_dshkm",
 	        "rhsgref_cdf_b_reg_uaz_spg9",
 	        "rhsgref_cdf_b_bmd1k",
+			"rhsgref_cdf_bmd1pk",
 	        "rhsgref_cdf_b_bmd2",
 	        "rhsgref_cdf_b_gaz66_zu23",
 	        "B_G_Offroad_01_armed_F",

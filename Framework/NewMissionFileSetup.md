@@ -37,10 +37,9 @@ CargoDump:
     equipement storage: empty!
     is medical facility
     is repair facility
-Init: 
-if (isServer) then {
-    [this] call WMS_fnc_initContainerCargoDump;
-};
+Init:
+    this enableRopeAttach false;
+    if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};
 
 Billboards object:
 "Land_Billboard_F"

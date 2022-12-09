@@ -242,20 +242,22 @@
 		class rhsgref_cdf_b_gaz66_zu23 				{ quality = 3; price = 75000; };
 
 		class I_LT_01_cannon_F 						{ quality = 4; price = 85000; };
-	
+
 		class BWA3_Puma_Fleck 						{ quality = 3; price = 145000; };
-		class RHS_M2A2_wd 							{ quality = 5; price = 125000; };
-		class RHS_M2A3_BUSKIII_wd 					{ quality = 6; price = 150000; };
+		class BWA3_Leopard2_Fleck 					{ quality = 6; price = 195000; };
+		//////////////////////////////NOT ARMORED SERVER//////////////////////////////
 		class B_APC_Wheeled_01_cannon_F 			{ quality = 5; price = 150000; }; //Badger
 		class I_APC_Wheeled_03_cannon_F				{ quality = 5; price = 170000; }; //Pandur 2
 		class B_AFV_Wheeled_01_cannon_F				{ quality = 6; price = 190000; };
+		class RHS_M2A2_wd 							{ quality = 5; price = 125000; };
+		class RHS_M2A3_BUSKIII_wd 					{ quality = 6; price = 150000; };
 		class rhsgref_cdf_b_bmd1k 					{ quality = 4; price = 115000; };
 		class rhsgref_cdf_b_bmd2 					{ quality = 5; price = 145000; };
 		class rhs_btr80a_vdv 						{ quality = 6; price = 165000; };
 
 		class rhsusf_m1a1aimwd_usarmy 				{ quality = 5; price = 155000; };
 		class rhsusf_m1a2sep1tuskiiwd_usarmy 		{ quality = 6; price = 175000; };
-		class BWA3_Leopard2_Fleck 					{ quality = 6; price = 195000; };
+		class rhsgref_cdf_bmd1pk					{ quality = 4; price = 85000; }; //76mm
 		class rhs_brm1k_vdv 						{ quality = 4; price = 95000; };
 		class rhs_sprut_vdv 						{ quality = 5; price = 105000; };
 
@@ -267,7 +269,33 @@
 		class rhs_t72bb_tv 							{ quality = 5; price = 125000; }; //1985 active armor
 		class rhs_t72ba_tv 							{ quality = 5; price = 115000; }; //1984
 		class rhsgref_cdf_b_zsu234 					{ quality = 5; price = 195000; };
+		//////////////////////////////ARMORED SERVER//////////////////////////////Lower levels and 30k cheaper
+		/*
+		class B_APC_Wheeled_01_cannon_F 			{ quality = 3; price = 120000; }; //Badger
+		class I_APC_Wheeled_03_cannon_F				{ quality = 4; price = 140000; }; //Pandur 2
+		class B_AFV_Wheeled_01_cannon_F				{ quality = 5; price = 160000; };
+		class RHS_M2A2_wd 							{ quality = 3; price = 95000; };
+		class RHS_M2A3_BUSKIII_wd 					{ quality = 4; price = 120000; };
+		class rhsgref_cdf_b_bmd1k 					{ quality = 3; price = 85000; }; //autocanon 23mm
+		class rhsgref_cdf_b_bmd2 					{ quality = 3; price = 115000; }; //autocanon 23mm
+		class rhs_btr80a_vdv 						{ quality = 3; price = 135000; };
 
+		class rhsusf_m1a1aimwd_usarmy 				{ quality = 4; price = 125000; };
+		class rhsusf_m1a2sep1tuskiiwd_usarmy 		{ quality = 5; price = 145000; };
+		class rhsgref_cdf_bmd1pk					{ quality = 2; price = 55000; }; //76mm
+		class rhs_brm1k_vdv 						{ quality = 2; price = 65000; }; //76mm
+		class rhs_sprut_vdv 						{ quality = 3; price = 75000; };
+
+		class rhs_t90sm_tv 							{ quality = 5; price = 125000; }; //faster turret, camera sight
+		class rhs_t90saa_tv 						{ quality = 4; price = 115000; }; //faster turret than t72, hybrid traditional + camera sight
+		class rhs_t80u45m 							{ quality = 4; price = 110000; };
+		class rhs_t80bv 							{ quality = 4; price = 105000; };
+		class rhs_t72be_tv 							{ quality = 3; price = 105000; }; //2016  //faster turret, camera sight
+		class rhs_t72bb_tv 							{ quality = 3; price = 95000; }; //1985 active armor
+		class rhs_t72ba_tv 							{ quality = 3; price = 85000; }; //1984
+		class rhsgref_cdf_b_zsu234 					{ quality = 3; price = 165000; };
+		*/
+		/////////////////////////////////////////////////////////////////////////////
 		//ARTI
 		class rhsgref_cdf_2s1 						{ quality = 6; price = 160000; }; //Old Arti Tank
 		class rhsgref_cdf_reg_d30 					{ quality = 5; price = 140000; }; //Old Arti Canon

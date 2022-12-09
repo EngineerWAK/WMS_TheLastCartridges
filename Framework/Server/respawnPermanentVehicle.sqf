@@ -25,11 +25,11 @@ if !(count _TerritoriesArray == 0) then {
 		_buildingRightUID = (_x select 4);
 		_flagDir = (_x select 5);
 		_layout = (_x select 6);
-
-		_objectsToDespawn=["TREE", "SMALL TREE", "BUSH", "BUILDING", "HOUSE", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE","BUNKER","FOUNTAIN", "FENCE", "WALL", "HIDE", "BUSSTOP", "FOREST", "STACK", "RUIN", "TOURISM", "ROCK", "ROCKS", "RAILWAY"];
-		_terrainobjects = nearestTerrainObjects [_flagPos,_objectsToDespawn,40];
-		{hideObjectGlobal _x} foreach _terrainobjects;
-
+		if (_layout != "flagonly") then {
+			_objectsToDespawn=["TREE", "SMALL TREE", "BUSH", "BUILDING", "HOUSE", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE","BUNKER","FOUNTAIN", "FENCE", "WALL", "HIDE", "BUSSTOP", "FOREST", "STACK", "RUIN", "TOURISM", "ROCK", "ROCKS", "RAILWAY"];
+			_terrainobjects = nearestTerrainObjects [_flagPos,_objectsToDespawn,40];
+			{hideObjectGlobal _x} foreach _terrainobjects;
+		};
 		_flag = createVehicle ["rhsgref_serhat_radar", _flagPos, [], 1, "NONE"];//rhsgref_serhat_radar
 		if (surfaceIsWater _flagPos)then{
 			_flag setPosASL [_flagPos select 0, _flagPos select 1, 2.413];

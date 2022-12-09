@@ -19,6 +19,8 @@ _items = (items _caller);
 //Banana only for Bambi Loadout will put the Bambi class to Engineer/Medic level 2
 if ("ACE_Banana" in _items) then {
     _caller setVariable ["WMS_Specialist_Bambi",true,true];
+    	_caller setVariable ["WMS_Specialist_Engineer",true,true];
+    	_caller setVariable ["WMS_Specialist_Medic",true,true];
     _caller setVariable ["ace_IsEngineer",2,true];
     _caller setVariable ["ace_medical_medicclass", 2, true];
 	_caller setUnitTrait ["Medic",true];

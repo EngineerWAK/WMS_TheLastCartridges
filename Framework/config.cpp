@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.710_2022NOV20_GitHub"; //WMS_howmanyrestarts fix for permanent vehicles | UAV/UGV crew action "fix" | One more code shit from NIA | Fix the territory limit for players | "flag only" territory | WMS_MissionDebug for most Diag_log
+	name = "v1.713_2022DEC07_GitHub"; //engineer/medic vars for bambies | no object cleaning around "flagonly" layout
 };
 
 class Extended_PreInit_EventHandlers {

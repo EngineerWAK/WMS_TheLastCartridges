@@ -33,7 +33,7 @@ player addEventHandler ["HandleDamage", {
 		if (alive player) then {
 			if !(isServer||isdedicated) then {
 				Diag_log format ["|WAK|TNA|WMS|Player eventHandler HandleDamage, _this = %1",_this];
-				if (_damage >= 2 && {(_selection == "head") || (_selection == "face_hub")}) then {
+				if (_damage >= 2.5 && {_projectile != ""} && {(_selection == "head") || (_selection == "face_hub")}) then {
 					playSound3D [getMissionPath 'Custom\Ogg\HelmetShot.ogg', player, false, position player, 1, (0.6+random 1)];
 					[playerSide, 'PAPA_BEAR'] commandChat format ["%1 got shot strait in the face! With %2", name _unit, _projectile];
 				};
