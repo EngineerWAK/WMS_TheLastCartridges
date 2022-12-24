@@ -96,10 +96,10 @@ WMS_IP_buildComputer = {
 		true,
 		true,
 		"",
+			//{('rhs_radio_R187P1' in (assigneditems _this)) || ('rhsusf_radio_anprc152' in (assigneditems _this))} &&
 		"
 			(alive _target) &&
 			{stance player == 'CROUCH'} &&
-			{('rhs_radio_R187P1' in (assigneditems _this)) || ('rhsusf_radio_anprc152' in (assigneditems _this))} &&
 			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
 			{(vehicle _this == _this)};
 		",

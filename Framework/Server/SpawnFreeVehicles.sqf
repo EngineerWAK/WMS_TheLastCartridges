@@ -87,9 +87,9 @@ if (_Spawn_Zones) then {
 	_vhls_List = [];
 	{
 		switch (_x select 2) do {
-			case "mil" : {_spawn_count = _Mil_count; _vhls_List = (_vhls select 0);_price = 2499;_display = "<t size='0.8' color='#44f708'>Full Repair for 2499!</t>";};
-			case "civ" : {_spawn_count = _Civ_count; _vhls_List = (_vhls select 1);_price = 799;_display = "<t size='0.8' color='#44f708'>Full Repair for 799!</t>";};
-			case "air" : {_spawn_count = _Air_count; _vhls_List = (_vhls select 2); _Spawn_Rad = _Spawn_Rad*1.5;_price = 1899;_display = "<t size='0.8' color='#44f708'>Full Repair for 1899!</t>";};
+			case "mil" : {_spawn_count = _Mil_count; _vhls_List = (_vhls select 0);_price = 2499;_display = "<t size='0.9' color='#44f708'>Full Repair for 2499!</t>";};
+			case "civ" : {_spawn_count = _Civ_count; _vhls_List = (_vhls select 1);_price = 799;_display = "<t size='0.9' color='#44f708'>Full Repair for 799!</t>";};
+			case "air" : {_spawn_count = _Air_count; _vhls_List = (_vhls select 2); _Spawn_Rad = _Spawn_Rad*1.5;_price = 1899;_display = "<t size='0.9' color='#44f708'>Full Repair for 1899!</t>";};
 		};
 		_vhl = objNull;
 		for "_i" from 1 to _spawn_count do {

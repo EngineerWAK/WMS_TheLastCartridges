@@ -28,6 +28,7 @@ You can create any new list of items or vehicles and call it from the trader in 
 Basically, any trader can sell anything you want, you can even create an hidden trader who will sell only one object
 since it's a call, anything could be a "trader", even a computer, a table or a truck
 Init: 
+[this, this] call ace_common_fnc_claim;
 if (isserver) then {
     [this, "office", 1] call WMS_fnc_initTraders; //[_traderObject, the trader config you want to sell, how many items/vehicles]
 };

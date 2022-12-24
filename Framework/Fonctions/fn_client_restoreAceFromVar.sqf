@@ -48,11 +48,33 @@ private _aceStuff = [
 if (count _aceData != count _aceStuff) exitWith {
 	if (WMS_MissionDebug) then {diag_log format ["[WMS_fnc_client_restoreAceFromVar]|WAK|TNA|WMS|ERROR _aceData %1, _aceStuff %2", (count _aceData), (count _aceStuff)]};
 };
-{
+/*{ //works but we seems to have instant death liked to previous morphin injection in ace_medical_medications
 	private _arrayNumber = (_aceStuff find _x);
 	private _savedData = (_aceData select _arrayNumber);
 	if !(_savedData isEqualTo [-999]) then {
 		_playerObject setVariable [_x,_savedData,true];
 		systemChat format ["Restoring ACE Medical %1 %2",_x, _savedData];
+	};
+}forEach _aceStuff;*/
+{
+	private _arrayNumber = (_aceStuff find _x);
+	private _savedData = (_aceData select _arrayNumber);
+	if !(_savedData isEqualTo [-999]) then {
+        if (_x isEqualTo "ace_medical_medications") then {
+            _savedDataFiltered = [];
+            {
+                if ("Morphine" in _x) then {
+                    _savedDataFiltered pushback [];
+		            systemChat format ["Preventing Morphine OD %1 %2",_x, _savedData];
+                }else{
+                    _savedDataFiltered pushback _x;
+                };
+            }forEach _savedData;
+		   _playerObject setVariable [_x,_savedDataFiltered,true];
+		    systemChat format ["Restoring ACE Medical %1 %2",_x, _savedDataFiltered];
+        }else{ 
+		    _playerObject setVariable [_x,_savedData,true];
+		    systemChat format ["Restoring ACE Medical %1 %2",_x, _savedData];
+        };
 	};
 }forEach _aceStuff;

@@ -26,6 +26,9 @@ if (_traderType == 'office') exitWith {[_traderObject, _traderType, _count] call
 if (_traderType == 'specopsItems' || _traderType == 'specopsExplo' || _traderType == 'specopsItems_RHS' || _traderType == 'specopsExplo_RHS') exitWith {[_traderObject, _traderType, _count] call WMS_fnc_initTraderActions_Specops;};
 _itemsCategories = getArray(missionConfigFile >> "CfgVehicleCategories" >> _traderType >> "items");
 _itemsSelected = [];
+if (_traderType == "vehiclesunarmed" || _traderType == "vehiclesunarmed_RHS" || _traderType == "vehiclesunarmed_RHS_Hatchet") then {
+	_itemsSelected pushBack "C_Quadbike_01_F"; //forced low respect vehicle
+};
 for "_i" from 1 to _count do {
 	_item = selectRandom _itemsCategories;
 	_itemsCategories deleteAt (_itemsCategories find _item);

@@ -16,15 +16,19 @@ WMS_lootHolderList = []; //[_house,_lootHolder,(serverTime+_timeToDelete)];
 WMS_HeadlessOwnerID = 2;
 //WMS_MissionDebug = false; //move to init
 
-WMS_customRespawnList = profileNameSpace getvariable["WMS_customRespawnList",[]]; //saved by WMS_infantryProgram, after last players kick before restart
-publicVariable "WMS_customRespawnList";
+WMS_customRespawnList = profileNameSpace getvariable["WMS_customRespawnList",[]]; //move from Profile to missionNameSpace, saved by WMS_infantryProgram, after last players kick before restart
+publicVariable "WMS_customRespawnList"; //UID list
+//from client, need to change: //this is probably why sometime the custom respawn is fucked, busy server doesnt send datas
+//private _customRespawnData = [missionNameSpace, ((getPlayerUID player)+"_RespawnData"), []] call BIS_fnc_getServerVariable;
 serverNameSpace setvariable["WMS_customRespawnList",WMS_customRespawnList]; //so the server can modify the list without modifying the public one
 if ((count WMS_customRespawnList) != 0) then {
 	{
-		private _dataVariable = (_x +"_RespawnData");
+		private _dataVariable = (_x +"_RespawnData"); //works, old version
+		private _dataVariableNew = (format ["WMS_%1_RespawnData",_x]);
 		if (true) then {diag_log format ["[CUSTOMRESPAWNDATA_INIT]|WAK|TNA|WMS|Transfering data from profilenamespace to missionnamespace for  %1", _dataVariable]};
 		private _respawndata = profileNameSpace getVariable[_dataVariable, []];
-		missionNamespace setVariable[_dataVariable, _respawndata];
+		missionNamespace setVariable[_dataVariableNew, _respawndata];
+		publicVariable _dataVariableNew;
 	}forEach WMS_customRespawnList;
 };
 

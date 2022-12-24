@@ -105,14 +105,14 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 ];
 
 //ADDACTION for resell the vehicle in the traderZone
+			/*if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
+				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump']; 
+			};*/
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_veh,
 	[
 		"<t color='#f86c20'>Resell the Vehicle</t>",//_display,
 		"
-			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
-				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump']; 
-			};
 			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_sellVehicles', 2];
 		",
 		[], //argument accessible in the script (_this select 3)
@@ -164,10 +164,10 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		"<t size='1' color='#4b48f9'>Sell Inventory</t>",// #035c10"
 		"
 			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
-			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump'];
+				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump'];
 			} else { 
-			hint 'Cargo Dump Container is empty, you punk';
-		};
+				'Inventory is empty, you punk' remoteExec ['hint', (owner (_this select 1))];
+			};
 		",
 		[], //argument accessible in the script (_this select 3)
 		1,

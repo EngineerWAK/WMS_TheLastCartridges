@@ -26,6 +26,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["B_Heli_Transport_03_base_F", 41], //huron
 	["Heli_Transport_02_base_F", 20], //Mohawk/Merlin //chinook
 
+	["vtx_MH60M_DAP_MLASS",10],
 	["vtx_UH60M_MEDEVAC", 10],
 	["vtx_UH60M_SLICK", 10],
 	["vtx_HH60", 10],

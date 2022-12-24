@@ -58,7 +58,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 				{
 					if !(getPlayerUID _x in _friends) then {
 						_friends pushback getPlayerUID _x;
-						['You are now in this territory FastTravel'] remoteExec ['hint', owner _x]
+						['You are now in this territory FastTravel'] remoteExec ['hint', owner _x];
 					};
 				}forEach _playersAround;
 				(_this select 0) setVariable ['WMS_BaseFriends', _friends, true];

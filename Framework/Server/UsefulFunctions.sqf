@@ -93,6 +93,9 @@ inGameUISetEventHandler ["Action", "
  } 
 "];
 };
+//check every action datas (probably?)
+inGameUISetEventHandler ["Action", "hint str _this; false"];
+
 
 //modify player money server side
 _targetUID = "76561197965501020";

@@ -66,7 +66,7 @@ _export = [
 /////////////////////////////////////////
 
 profileNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export,_playerTraits]];
-missionNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export,_playerTraits]];
+missionNameSpace setvariable[format ["WMS_%1",_inventoryVarName],[_playerUID,_pos,_aceMedical,_export,_playerTraits]];
 private _customRespawnList = serverNameSpace getvariable["WMS_customRespawnList",[]];
 if !(_playerUID in _customRespawnList) then {
 	_customRespawnList pushBack _playerUID;
@@ -75,6 +75,7 @@ if !(_playerUID in _customRespawnList) then {
 	missionNameSpace setvariable["WMS_customRespawnList",_customRespawnList];
 };
 publicVariable "WMS_customRespawnList";
+publicVariable (format ["WMS_%1",_inventoryVarName]);
 removeuniform _playerObject;
 removevest _playerObject;
 removeheadgear _playerObject;

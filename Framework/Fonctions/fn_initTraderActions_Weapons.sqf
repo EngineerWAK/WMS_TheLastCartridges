@@ -40,8 +40,8 @@ if (_traderType == 'weapons_RHS_NIA') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "AssaultEAST_RHS_NIA" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "AssaultWEST_RHS_NIA" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "MachineGun_RHS_NIA" >> "items");
-	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "SubMachineGun_NIA" >> "items");
-	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "SubMachineGun_RHS_NIA" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol_RHS_NIA" >> "items");
 	//no launchers here
 };
 if (_traderType == 'accessories') then {

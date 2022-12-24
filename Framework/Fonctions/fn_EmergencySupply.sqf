@@ -51,15 +51,82 @@ clearMagazineCargoGlobal _cargo;
 clearWeaponCargoGlobal _cargo; 
 clearItemCargoGlobal _cargo; 
 clearBackpackCargoGlobal _cargo;
-if (_item == "EmergencySupplyMeds") then {{_cargo addItemCargoGlobal [_x,1]} forEach _itemList;};
+if (_item == "EmergencySupplyMeds") then {
+	{_cargo addItemCargoGlobal [_x,1]} forEach _itemList;
+	//reset ACE Fatigue
+	_cargo setVariable ["ace_medical_isMedicalFacility", true, true];
+	_cargo setVariable ["WMS_resetFatigueTimer", (time-660), true];
+	[
+		_cargo,
+		[
+			"<t size='0.95' color='#528ffa'>Reset ACE Fatigue, Every 10 Minutes</t>",
+			"
+			[(_this select 1), objNull] call ace_advanced_fatigue_fnc_handlePlayerChanged;
+			(_this select 0) setVariable ['WMS_resetFatigueTimer', time, true];
+			",
+			[],
+			1,
+			true,
+			true,
+			"",
+			"('ACE_personalAidKit' in (items _this)) &&
+			{(time >= (600 + (_target getVariable ['WMS_resetFatigueTimer', time])))} && 
+			{(vehicle _this == _this)}",
+			3
+		]
+	] remoteExec [
+		"addAction",
+		0,
+		false //JIP
+	];
+	};
 if (_item == "EmergencySupplyWeaps") then {
 	_weap = selectRandom _itemList;
 	_cargo addWeaponCargoGlobal [_weap,1];
 	_cargo addMagazineCargoGlobal [((getArray (configfile >> "CfgWeapons" >> _weap >> "magazines")) select 0), 3];
 	{_cargo addItemCargoGlobal [_x,1]} forEach _itemListI;
 	{_cargo addMagazineCargoGlobal [_x, 1]} forEach _itemListM;
-
 	//{_cargo addBackpackCargoGlobal [(_x select 0),((_x select 1)+(round (random (_x select 2))))]} forEach _bagList;
+	[
+		_cargo,
+		[
+			"<t size='1' color='#528ffa'>Buy Ammo Default</t>",
+			"
+			[(_this select 1), (_this select 0), 'default','emergency'] call WMS_fnc_buyAmmoOnBox;
+			",
+			[],
+			1,
+			true,
+			true,
+			"",
+			"(vehicle _this == _this)",
+			5
+		]
+	] remoteExec [
+		"addAction",
+		0,
+		true //JIP
+	];
+	[
+		_cargo,
+		[
+			"<t size='1' color='#528ffa'>Buy Ammo Random</t>",
+			"
+			[(_this select 1), (_this select 0), 'random','emergency'] call WMS_fnc_buyAmmoOnBox;
+			",
+			[],
+			1,
+			true,
+			true,
+			"",
+			"(vehicle _this == _this)",
+			5
+		]
+	] remoteExec [
+		"addAction",
+		0,
+		true
+	];
 };
 
 //{_cargo addMagazineCargoGlobal [_x,1]} forEach _ammoList;

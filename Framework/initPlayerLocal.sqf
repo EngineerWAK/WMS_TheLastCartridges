@@ -28,27 +28,39 @@ switch (tolower _playerRole) do {
         [INDEPENDENT, "IND_Sniper"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_Pilot"] call BIS_fnc_addRespawnInventory;
     };
-        case "bambi": //no Bambi role yet
+/*        case "bambi": //no Bambi role yet
     {
         [INDEPENDENT, "IND_Bambi"] call BIS_fnc_addRespawnInventory;
-    };
+   };
+*/
 };
-
-if (hasinterface) then {
+//USER ACTIONS:
+    //Bohemia shit plane auto-landing
     inGameUISetEventHandler ["Action", " 
-    if (_this select 3 == 'Land') then 
+    if (_this select 3 == 'Land' || _this select 4 == 'Landing autopilot') then 
     { 
-        hint 'NOPE! no AutoLanding';  
+        hint 'NOPE! No AutoLanding';  
         true 
     } 
     "];
+    //Hatchet shit function to autostart choppers
     inGameUISetEventHandler ["Action", " 
-    if (_this select 3 == 'QuickStart') then 
+    if (_this select 4 == 'Automatic Engine Startup') then 
     { 
         hint 'NOPE! No QuickStart';  
         true 
     } 
     "];
+    //RHS shit function to tow statics
+    inGameUISetEventHandler ["Action", " 
+    if (_this select 4 == 'Switch to moving mode') then 
+    { 
+        hint 'NOPE! Not gonna happen';  
+        true 
+    } 
+    "];
+/////
+if (hasinterface) then {
     ///////////Artillery computer
     enableEngineArtillery false;
 

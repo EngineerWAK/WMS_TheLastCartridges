@@ -116,13 +116,14 @@
 		class C_IDAP_Truck_02_transport_F 	{ quality = 2; price = 18111; };
 		class C_IDAP_Truck_02_F 			{ quality = 2; price = 18111; };
 
+		class C_Quadbike_01_F 						{ quality = 0; price = 2500; }; //can not load //is forced at vehicle trader, probably from config or in initTraderActions
+		class B_Quadbike_01_F 						{ quality = 1; price = 1500; };
 		class rhsgref_tla_g_kraz255b1_cargo_open 	{ quality = 1; price = 9500; };
 		class rhs_kamaz5350_flatbed_cover_vdv 		{ quality = 2; price = 15000; };
 		class RHS_Ural_Flat_VDV_01 					{ quality = 1; price = 15000; };
 		class rhs_gaz66_flat_vdv 					{ quality = 0; price = 15000; };
 		class O_T_Truck_03_ammo_ghex_F 				{ quality = 3; price = 40000; }; //ammo
 		class rhs_kamaz5350_ammo_vdv 				{ quality = 3; price = 40000; }; //ammo
-		class B_Quadbike_01_F 						{ quality = 0; price = 1500; };
 		class rhsusf_mrzr4_w_mud 					{ quality = 1; price = 4500; };
 		class rhsgref_un_uaz 						{ quality = 0; price = 3000; };
 		class I_G_Offroad_01_F 						{ quality = 0; price = 16000; };

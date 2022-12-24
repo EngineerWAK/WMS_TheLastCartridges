@@ -50,7 +50,7 @@ _container enableRopeAttach false;
 			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
 				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump',2]; 
 			} else { 
-				[playerSide, 'PAPA_BEAR'] commandChat 'Container is empty, you punk';
+				'Cargo Dump Container is empty, you punk' remoteExec ['hint', (owner (_this select 1))];
 			}; 
 		", 
 		nil, 

@@ -17,7 +17,9 @@
 ];*/
 if (WMS_MissionDebug) then {diag_log format ["[WMS_client_canCustomRespawn]|WAK|TNA|WMS|_time %1, player %2", time, name player]};
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {(getPlayerUID player) in WMS_customRespawnList}) then {
-	private _customRespawnData = [missionNameSpace, ((getPlayerUID player)+"_RespawnData"), []] call BIS_fnc_getServerVariable;
+	//private _customRespawnData = [missionNameSpace, ((getPlayerUID player)+"_RespawnData"), []] call BIS_fnc_getServerVariable; //this is probably why sometime the custom respawn is fucked, busy server doesnt send datas
+	//private _customRespawnData = [missionNameSpace, ((getPlayerUID player)+"_RespawnData"), []] call BIS_fnc_getServerVariable; //this is probably why sometime the custom respawn is fucked, busy server doesnt send datas
+	private _customRespawnData = missionNamespace getVariable[format ["WMS_%1_RespawnData",(getPlayerUID player)],[]];
 	if (WMS_MissionDebug) then {diag_log format ["[WMS_client_canCustomRespawn]|WAK|TNA|WMS|_customRespawnData %1", _customRespawnData]};
 	if ((count _customRespawnData) == 4) then { //OLD version WITHOUT Players Traits
 		_customRespawn = [player,(_customRespawnData select 1),'1-Last Known Position'] call BIS_fnc_addRespawnPosition;

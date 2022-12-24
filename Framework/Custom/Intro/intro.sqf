@@ -2,7 +2,7 @@ waitUntil{!isNull (findDisplay 46)};
 sleep 20;
 
 //playSound3D ["a3\dubbing_radio_f\Sfx\radionoise1.ogg", Player];
-//playSound3D [getMissionPath "Custom\Ogg\Christmas.ogg", player, false, position player, 2, 1, 0, 0, true]; //true for local
+playSound3D [getMissionPath "Custom\Ogg\Christmas.ogg", player, false, position player, 2, 1, 0, 0, true]; //true for local
 //player say3D "Christmas";
 
 _role1 = "Welcome to TNA server";
@@ -20,7 +20,7 @@ _role4names = ["https://discord.gg/Zs23URtjwF"];
 _role5 = "Features";
 _role5names = ["Sell Mission VHL/crates","Sell roaming AI vehicles","Full Custom AI system","R3F Logistic","Igiload","Towing"];
 _role6 = "Last Punishment";
-_role6names = ["Nobody yet !","If you use a trainer you will be ban"];
+_role6names = ["Nobody yet !","If you use a 'trainer' you will be ban"];
 _role7 = "Traders Informations";
 _role7names = ["light trader system", "WastDump container to sell stuff","WastDump container to buy Ammo","Ammo only for primary weapon"];
 _role8 = "About Donations";

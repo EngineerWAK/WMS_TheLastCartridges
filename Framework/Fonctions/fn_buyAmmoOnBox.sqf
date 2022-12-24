@@ -12,7 +12,8 @@ private ["_playerMoney","_targetOwner","_targetUID","_price","_ammoTypeRandom","
 params [
 	"_playerObject",
 	"_boxObject",
-	["_option", "random"] //"random"
+	["_option", "random"], //"random"
+	["_tax","none"] //"emergency" = x3 price
 ];
 if (WMS_MissionDebug) then {diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|_this %1", _this]};
 
@@ -24,6 +25,7 @@ _ammoArray = [];
 _ammoTypeDefaultAll = [];
 _ammoTypeDefault = "";
 _ammoTypeRandom = "";
+_40mmHEList = ["1Rnd_HE_Grenade_shell","rhs_mag_M441_HE", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET","rhsusf_mag_6Rnd_M441_HE", "rhsusf_mag_6Rnd_M433_HEDP", "rhsusf_mag_6Rnd_M397_HET","CBA_40mm_M203", "CBA_40mm_EGLM"];
 //_ammoTypeDefault = _ammoArray select 0; //That's definitly NOT the default ammo
 switch (tolower _option) do {
     case "default":	{
@@ -52,7 +54,12 @@ if (_ammoCaliber < 0.75) then {_ammoCaliber = 0.75};
 _price = round (_ammoCaliber*_ammoCount*1.6);
 //"rhsusf_40mm_HE"
 if ("50rnd" in _ammoTypeDefault || "50rnd" in _ammoTypeRandom) then {_price == _price+50}; //those 50rnds HLC mags are waaaaaaayyyyyyy too cheap, especialy tac-TX, will be adjusted later
-if ("40mm" in _ammoType || "HE" in _ammoType) then {_price == _price*10}; //40mm grenades are 3$ each, thats ridiculous
+if ("HET" in _ammoType || "HE" in _ammoType|| "HEDP" in _ammoType) then { //40mm grenades are 3$ each, thats ridiculous
+		_price == _price*10;
+	}else {
+		if (_ammoTypeDefault in _40mmHEList || _ammoTypeRandom in _40mmHEList) then {_price == _price*10;};
+	};
+if (_tax == "emergency")then {_price == _price*3};
 _targetUID = getPlayerUID _playerObject;
 _targetOwner = (owner _playerObject);
 _playerMoney = _playerObject getVariable ["ExileMoney",0]; //for local use

@@ -2,7 +2,27 @@ params [
 	"_veh"
 ];
 private _vehicleClassName = (typeOf _veh);
-//UGV "\a3\Soft_F_Orange\UGV_01\Data\UGV_01_ext_IDAP_co.paa","\a3\Soft_F_Orange\UGV_01\Data\UGV_01_int_IDAP_co.paa","\a3\Soft_F_Orange\UGV_01\Data\Turret_IDAP_CO.paa"
+if (_vehicleClassName == "C_Quadbike_01_F") then { //no R3F log, trader vehicle forced at all traders (vehicles)
+	[
+		_veh,
+		"White",
+		true
+	] call BIS_fnc_initVehicle;
+};
+if (_vehicleClassName == "O_G_Van_01_transport_F") then { //igiload
+	[
+		_veh,
+		"Guerilla_07",//["Guerilla_07",1], 
+		true
+	] call BIS_fnc_initVehicle;
+};
+if (_vehicleClassName == "I_G_Van_01_transport_F") then { //no igiload
+	[
+		_veh,
+		"Red",//["Red",1], 
+		true
+	] call BIS_fnc_initVehicle;
+};
 if (_vehicleClassName == "I_UGV_01_F") then {
 	_veh setObjectTextureGlobal [0, "a3\Soft_F_Orange\UGV_01\Data\UGV_01_ext_IDAP_co.paa"]; 
 	_veh setObjectTextureGlobal [1, "a3\Soft_F_Orange\UGV_01\Data\UGV_01_int_IDAP_co.paa"]; 
@@ -167,7 +187,7 @@ if(_vehicleClassName == "O_LSV_02_unarmed_black_F") then{
 if(_vehicleClassName == "rhsusf_m1152_usarmy_wd") then{
 	[
 		_veh,
-		["rhs_olive",1], 
+		"rhs_olive",//["rhs_olive",1], 
 		["m1152_Hide",0,"m1152_tent_Hide",1,"door_LF",0,"door_RF",0,"iff_hide",0,"dwf_kit_Hide",1,"snorkel_lower",0,"BFT_Hide",0,"Antennas_Hide",0,"hide_spare",0]
 	] call BIS_fnc_initVehicle;
 };

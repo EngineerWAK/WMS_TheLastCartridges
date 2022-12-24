@@ -20,7 +20,7 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
-	
+	["rhsusf_RG33L_base",10], //M1234 M1237
 	["rhs_kamaz5350_flatbed_cover_vdv", 25], //flatbed cover
 	["RHS_Ural_Flat_VDV_01", 25], //flatbed cover
 	["rhs_gaz66_flat_vdv", 25], //flatbed cover

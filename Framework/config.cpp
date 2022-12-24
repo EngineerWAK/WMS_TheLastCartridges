@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.713_2022DEC07_GitHub"; //engineer/medic vars for bambies | no object cleaning around "flagonly" layout
+	name = "v1.723_2022DEC23_GitHub"; //Remoce RHS action on statics | Reset Fatigue on emergency meds crate | NIA traders fix | preventing morphine OD at player respawn | _can_be_transported_cargo statics | custom color van lvl 0
 };
 
 class Extended_PreInit_EventHandlers {
