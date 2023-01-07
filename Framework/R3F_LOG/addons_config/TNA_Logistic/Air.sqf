@@ -18,6 +18,9 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	["gm_gc_airforce_l410t",20], //GM plane
+	["gm_ge_airforce_do28d2",20], //GM plane
+
 	["RHS_C130J_Cargo",80],
 	["Heli_Light_02_base_F",10],
 

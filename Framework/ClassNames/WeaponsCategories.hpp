@@ -656,6 +656,7 @@ class Accessories_RHS
 		"muzzle_snds_58_blk_F"
 	};
 };
+//"gm_feroz24_blk" //g3A4 scope GM
 class Accessories_RHS_NIA
 {
 	name = "Accessories";

@@ -2,6 +2,25 @@ params [
 	"_veh"
 ];
 private _vehicleClassName = (typeOf _veh);
+
+if (_veh isKindOf "gm_Leopard1_base") then { //"gm_ge_army_Leopard1a1a1"
+	/*[
+		_veh,
+		nil, //["gm_ge_wdl",1], 
+		["CamoNet_01_unhide",1,"CamoNet_02_unhide",1,"CamoNet_03_unhide",1,"AmmoBox_01_unhide",1,"AmmoBox_02_unhide",1,"FuelCanister_01_unhide",1,"FuelCanister_02_unhide",1,"FuelCanister_03_unhide",1,"beacon_01_org_unhide",0,"sideskirt_unhide",1,"camonet_hull_unhide",1,"camofoilage_hull_unhide",1,"camonet_MainTurret_trav_unhide",1,"camofoilage_MainTurret_trav_unhide",1,"camonet_MainTurret_elev_unhide",1]
+	] call BIS_fnc_initVehicle;*/
+	_veh animate 				["camonet_hull_unhide",1];
+	_veh animate 				["camofoilage_hull_unhide",1];
+	_veh animate 				["camonet_MainTurret_trav_unhide",1];
+	_veh animate 				["camofoilage_MainTurret_trav_unhide",1];
+	_veh animate 				["camonet_MainTurret_elev_unhide",1];
+};
+if (_vehicleClassName == "rhsgref_cdf_b_reg_uaz_dshkm") then {
+	_veh addMagazineTurret ["rhs_mag_127x108mm_150", [0]];
+	_veh addMagazineTurret ["rhs_mag_127x108mm_150", [0]];
+	_veh addMagazineTurret ["rhs_mag_127x108mm_150", [0]];
+	_veh addMagazineTurret ["rhs_mag_127x108mm_150", [0]];
+};
 if (_vehicleClassName == "C_Quadbike_01_F") then { //no R3F log, trader vehicle forced at all traders (vehicles)
 	[
 		_veh,

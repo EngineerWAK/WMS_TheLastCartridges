@@ -53,7 +53,7 @@ switch (tolower _playerRole) do {
     "];
     //RHS shit function to tow statics
     inGameUISetEventHandler ["Action", " 
-    if (_this select 4 == 'Switch to moving mode') then 
+    if (_this select 4 == ' Switch to moving mode') then 
     { 
         hint 'NOPE! Not gonna happen';  
         true 

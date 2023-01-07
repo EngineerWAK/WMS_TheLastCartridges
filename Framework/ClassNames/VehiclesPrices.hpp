@@ -111,7 +111,7 @@
 		class C_IDAP_Van_02_medevac_F 		{ quality = 2; price = 17111; };
 		class C_IDAP_Offroad_02_unarmed_F 	{ quality = 2; price = 16111; };
 		class C_IDAP_Offroad_01_F 			{ quality = 2; price = 16111; };
-		class C_IDAP_Van_02_vehicle_F 		{ quality = 2; price = 17111; };
+		class C_IDAP_Van_02_vehicle_F 		{ quality = 3; price = 19111; }; //20 slots r3f + arma/ace cargo + medical
 		class C_IDAP_Van_02_transport_F 	{ quality = 2; price = 17111; };
 		class C_IDAP_Truck_02_transport_F 	{ quality = 2; price = 18111; };
 		class C_IDAP_Truck_02_F 			{ quality = 2; price = 18111; };
@@ -181,12 +181,12 @@
 		class R3F_PANDUR_CE 						{ quality = 4; price = 85999; }; //logistic forced Unarmed
 
 		//GLOBAL MOBILISATION
-		class gm_ge_army_k125 						{ quality = 0; price = 1500; };
-		class gm_ge_army_iltis_cargo 				{ quality = 0; price = 4500; };
-		class gm_ge_civ_u1300l						{ quality = 1; price = 17000; };
-		class gm_ge_army_u1300l_firefighter			{ quality = 2; price = 16000; };
-		class gm_ge_army_u1300l_medic				{ quality = 2; price = 16000; };
-		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 9500; };
+		class gm_ge_army_k125 						{ quality = 0; price = 1502; };
+		class gm_ge_army_iltis_cargo 				{ quality = 0; price = 4502; };
+		class gm_ge_civ_u1300l						{ quality = 1; price = 27002; }; //10000 cargo ! + arma/ace cargo load
+		class gm_ge_army_u1300l_firefighter			{ quality = 2; price = 16002; };
+		class gm_ge_army_u1300l_medic				{ quality = 2; price = 16002; };
+		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 9502; };
 
 //Ground Armed
 		//RCWS
@@ -303,15 +303,24 @@
 		class RHS_M119_WD							{ quality = 5; price = 140000; }; //Old Arti Canon
 
 		//GLOBAL MOBILISATION
-		class gm_ge_army_iltis_mg3 					{ quality = 3; price = 38000; };
-		class gm_dk_army_u1300l_container 			{ quality = 3; price = 48000; };
-		class gm_ge_army_u1300l_cargo 				{ quality = 3; price = 48000; };
-		class gm_dk_army_bpz2a0 					{ quality = 3; price = 70000; };
-		class gm_ge_army_fuchsa0_command 			{ quality = 4; price = 70000; };
-		class gm_ge_army_fuchsa0_reconnaissance 	{ quality = 4; price = 70000; };
-		class gm_ge_army_marder1a2 					{ quality = 5; price = 135000; };
-		class gm_ge_army_Leopard1a1a1 				{ quality = 5; price = 140000; };
-		class gm_dk_army_Leopard1a3 				{ quality = 5; price = 145000; };
+		class gm_ge_army_iltis_mg3 					{ quality = 3; price = 38002; };
+		class gm_dk_army_u1300l_container 			{ quality = 3; price = 48002; };
+		class gm_ge_army_u1300l_cargo 				{ quality = 3; price = 48002; };
+		class gm_ge_army_kat1_454_cargo 			{ quality = 3; price = 55002; }; //10t mg3 flatbed
+		class gm_dk_army_bpz2a0 					{ quality = 4; price = 75002; }; //mg3 nemera kind of tank
+		class gm_ge_army_fuchsa0_command 			{ quality = 4; price = 70002; }; //mg3
+		class gm_ge_army_fuchsa0_reconnaissance 	{ quality = 4; price = 85002; }; //missile launcher MG3
+		class gm_ge_army_m113a1g_apc 				{ quality = 3; price = 32002; }; //mg3
+		class gm_dk_army_m113a1dk_apc 				{ quality = 4; price = 35002; }; //M2 shield
+		class gm_dk_army_m113a2dk 					{ quality = 6; price = 100002; }; //fucking crazy autocanon
+		class gm_ge_army_marder1a2 					{ quality = 6; price = 135002; }; //fucking crazy autocanon
+		class gm_ge_army_Leopard1a1 				{ quality = 6; price = 130002; }; //green
+		class gm_ge_army_Leopard1a1a1 				{ quality = 5; price = 130002; };
+		class gm_dk_army_Leopard1a3 				{ quality = 5; price = 138002; }; //green camo
+		class gm_ge_army_Leopard1a3a1				{ quality = 5; price = 143002; }; //NV
+		class gm_ge_army_Leopard1a5					{ quality = 5; price = 152002; }; //advanced turred NV "T"
+		class gm_gc_army_t55ak 						{ quality = 5; price = 125002; }; //mid range t55 no "T"
+		class gm_ge_army_gepard1a1					{ quality = 6; price = 150002; }; //AA
 
 //Air unarmed
 	class rhs_uh1h_hidf_unarmed  				{ quality = 2; price = 45888; };
@@ -337,12 +346,12 @@
 	class O_Heli_Light_02_unarmed_F  			{ quality = 0; price = 10000; };
 
 		//GLOBAL MOBILISATION
-	class gm_ge_adak_bo105m_vbh  				{ quality = 1; price = 10000; };
-	class gm_gc_civ_mi2sr  						{ quality = 1; price = 10000; };
-	class gm_ge_army_bo105m_vbh  				{ quality = 2; price = 10000; };
-	class gm_ge_army_bo105p1m_vbh  				{ quality = 2; price = 10000; };
-	class gm_gc_airforce_l410t  				{ quality = 3; price = 10000; };
-	class gm_ge_airforce_do28d2  				{ quality = 1; price = 10000; };
+	class gm_ge_adak_bo105m_vbh  				{ quality = 1; price = 10002; };
+	class gm_gc_civ_mi2sr  						{ quality = 1; price = 10002; };
+	class gm_ge_army_bo105m_vbh  				{ quality = 2; price = 10002; };
+	class gm_ge_army_bo105p1m_vbh  				{ quality = 2; price = 10002; };
+	class gm_gc_airforce_l410t  				{ quality = 3; price = 10002; };
+	class gm_ge_airforce_do28d2  				{ quality = 1; price = 10002; };
 
 		//Chopper_Hatchet
 	class vtx_UH60M_MEDEVAC  					{ quality = 1; price = 13555; };
@@ -391,9 +400,9 @@
 	class UK3CB_BAF_Wildcat_AH1_CAS_8D  		{ quality = 3; price = 35000; };
 
 		//GLOBAL MOBILISATION
-	class gm_ge_army_bo105p_pah1a1  	{ quality = 5; price = 35000; };
-	class gm_gc_bgs_mi2us  				{ quality = 3; price = 25000; };
-	class gm_gc_airforce_mi2urn  		{ quality = 4; price = 45000; };
+	class gm_ge_army_bo105p_pah1a1  	{ quality = 5; price = 35002; };
+	class gm_gc_bgs_mi2us  				{ quality = 3; price = 25002; };
+	class gm_gc_airforce_mi2urn  		{ quality = 4; price = 45002; };
 	
 		//Chopper_Hatchet
 	class vtx_HH60  					{ quality = 2; price = 32555; };

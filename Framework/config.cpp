@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.723_2022DEC23_GitHub"; //Remoce RHS action on statics | Reset Fatigue on emergency meds crate | NIA traders fix | preventing morphine OD at player respawn | _can_be_transported_cargo statics | custom color van lvl 0
+	name = "v1.729_2023JAN07_GitHub"; //new GM vehicles | logs on permanent vehicle destroyed | r3f Log for GM planes | more ammo in UAZ dshkm | price increase for C_IDAP_Van_02_vehicle_F
 };
 
 class Extended_PreInit_EventHandlers {
@@ -161,6 +161,7 @@ class CfgForceAmmoFacilities //some Ammo vehicles/buildings are not recognized a
 	vehicles[] = 
 	{
 		//GM
+		"gm_dk_army_bpz2a0",
 		"gm_ge_army_kat1_454_reammo",
 		"gm_ge_army_kat1_451_reammo",
 		"gm_gc_army_ural4320_reammo",
