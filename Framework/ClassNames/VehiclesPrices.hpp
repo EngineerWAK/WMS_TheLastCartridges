@@ -187,6 +187,8 @@
 		class gm_ge_army_u1300l_firefighter			{ quality = 2; price = 16002; };
 		class gm_ge_army_u1300l_medic				{ quality = 2; price = 16002; };
 		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 9502; };
+		class gm_gc_ff_p601							{ quality = 1; price = 11112; }; //zastava kind of car forced medical
+		class gm_ge_ff_typ1200						{ quality = 2; price = 11112; }; //cox forced medical
 
 //Ground Armed
 		//RCWS

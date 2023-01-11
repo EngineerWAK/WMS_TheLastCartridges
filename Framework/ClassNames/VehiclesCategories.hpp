@@ -80,6 +80,8 @@
 			"gm_ge_army_u1300l_firefighter",
 			"gm_ge_army_u1300l_medic",
 			"gm_pl_army_ural4320_cargo",
+			"gm_gc_ff_p601", //zastava kind of car
+			"gm_ge_ff_typ1200", //cox
 			//regular non-GM:
 			//MEDICAL FACILITIES
 			"I_UGV_01_F",

@@ -1,8 +1,8 @@
 waitUntil{!isNull (findDisplay 46)};
 sleep 20;
 
-//playSound3D ["a3\dubbing_radio_f\Sfx\radionoise1.ogg", Player];
-playSound3D [getMissionPath "Custom\Ogg\Christmas.ogg", player, false, position player, 2, 1, 0, 0, true]; //true for local
+playSound3D ["a3\dubbing_radio_f\Sfx\radionoise1.ogg", Player];
+//playSound3D [getMissionPath "Custom\Ogg\Christmas.ogg", player, false, position player, 2, 1, 0, 0, true]; //true for local
 //player say3D "Christmas";
 
 _role1 = "Welcome to TNA server";

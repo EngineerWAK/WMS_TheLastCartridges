@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.729_2023JAN07_GitHub"; //new GM vehicles | logs on permanent vehicle destroyed | r3f Log for GM planes | more ammo in UAZ dshkm | price increase for C_IDAP_Van_02_vehicle_F
+	name = "v1.731_2023JAN11_GitHub"; //new GM vehicles | logs on permanent vehicle destroyed | r3f Log for GM planes | more ammo in UAZ dshkm | price increase for C_IDAP_Van_02_vehicle_F
 };
 
 class Extended_PreInit_EventHandlers {
@@ -81,6 +81,8 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 		"gm_gc_bgs_ural375d_medic",
 		"gm_pl_army_ural375d_medic",
 		"gm_ge_ff_u1300l_firefighter",
+		"gm_gc_ff_p601", //zastava kind of car
+		"gm_ge_ff_typ1200", //cox
 		//
 		"rhsusf_mkvsoc",
 		//

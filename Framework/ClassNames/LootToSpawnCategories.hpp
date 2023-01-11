@@ -4,29 +4,29 @@ class weapons
 		items[] = 
 		{
 			"rhsusf_weap_glock17g4",
-			//"R3F_HKUSP",
 			"rhsusf_weap_m1911a1",
-			//"hlc_pistol_C96_Wartime",
-			//"hlc_pistol_P226R_Elite",
 			"rhs_weap_Izh18",
 			"rhs_weap_M590_5RD",
-			//"R3F_M4S90",
-			//"hlc_rifle_aek971worn",
 			"rhs_weap_ak103",
-			//"hlc_rifle_ak47",
 			"rhs_weap_akm",
 			"sgun_HunterShotgun_01_F",
 			"sgun_HunterShotgun_01_sawedoff_F",
 			"rhs_weap_m1garand_sa43",
 			"rhs_weap_MP44",
 			"rhs_weap_savz58v_fold",
+			"rhs_weap_m3a1",
+			"rhs_weap_savz61",
+			"rhs_weap_kar98k"
+			//"hlc_rifle_M1903A1",
 			//"hlc_rifle_saiga12k",
 			//"hlc_rifle_slr107u",
 			//"hlc_smg_mp5a3",
-			"rhs_weap_m3a1",
-			"rhs_weap_savz61",
-			//"hlc_rifle_M1903A1",
-			"rhs_weap_kar98k"
+			//"hlc_rifle_ak47",
+			//"R3F_M4S90",
+			//"hlc_rifle_aek971worn",
+			//"hlc_pistol_C96_Wartime",
+			//"hlc_pistol_P226R_Elite",
+			//"R3F_HKUSP",
 		};
 	};
 //WMS_weapToSpawnList_spe = [    
@@ -44,7 +44,6 @@ class weapons_SPE
 			"rhs_weap_m4a1_blockII_M203_d",
 			"rhs_weap_m4a1_blockII_M203",
 			"rhs_weap_mk18_m320",
-			"rhs_weap_vhsd2_bg_ct15x",
 			"srifle_DMR_05_blk_F",
 			"srifle_DMR_02_F",
 
@@ -145,18 +144,18 @@ class weapons_MIL
 			"rhs_weap_m249_light_S"
 
 			//"hlc_rifle_g3sg1ris",
-			//"UK3CB_BAF_L118A1_Covert",
 			//"hlc_rifle_M21",
-			//"R3F_AT4CS",
 			//"hlc_rifle_bcmblackjack",
 			//"hlc_rifle_ACR68_mid_black",
 			//"hlc_rifle_vendimus",
-			//"R3F_Famas_G2_HG_DES",
-			//"R3F_SCAR_H_PR_20pcs_TAN",
 			//"hlc_rifle_hk51",
 			//"hlc_rifle_SG553LB_RIS",
 			//"hlc_lmg_minimipara",
 			//"R3F_Minimi",
+			//"UK3CB_BAF_L118A1_Covert",
+			//"R3F_AT4CS",
+			//"R3F_Famas_G2_HG_DES",
+			//"R3F_SCAR_H_PR_20pcs_TAN",
 		};
 	};
 //WMS_scopToSpawnList = [    
@@ -253,7 +252,7 @@ class items_SPE
 			"muzzle_snds_93mmg",
 			"rhsusf_acc_aac_762sd_silencer",
 			"rhsusf_acc_rotex5_grey",
-			//"BWA3_muzzle_snds_Rotex_Monoblock",
+			"rhsusf_acc_rotex_mp7",
 
 			"Laserdesignator_03",
 			"SatchelCharge_Remote_Mag",
@@ -281,6 +280,7 @@ class items_MIL
 			"rhs_acc_tgpa", //5.45
 			"muzzle_snds_M",
 			"muzzle_snds_58_blk_F",
+			"rhsusf_acc_rotex_mp7",
 
 			"DemoCharge_Remote_Mag",
 			"Rangefinder",
@@ -300,6 +300,7 @@ class items_IND
 		{
 			//"ACE_Wheel",
 			//"ACE_Track",
+			"toolKit",
 			"ACE_fortify",
 			"ACE_Cellphone",
 			"ACE_DefusalKit",
@@ -327,6 +328,7 @@ class medical
 	{
 		items[] = 
 		{
+			"ACE_personalAidKit",
 			"ACE_splint",
 			"ACE_adenosine",
 			"ACE_atropine",
@@ -341,7 +343,6 @@ class medical
 			"ACE_epinephrine",
 			"ACE_morphine",
 			"ACE_packingBandage",
-			//"ACE_personalAidKit",
 			"ACE_plasmaIV",
 			"ACE_plasmaIV_500",
 			"ACE_plasmaIV_250",
@@ -463,6 +464,7 @@ class uniforms_SPE
 			"U_B_CombatUniform_mcam",
 			"U_B_CombatUniform_mcam_wdl_f",
 			"U_B_FullGhillie_lsh",
+			"U_B_T_FullGhillie_tna_F",
 			"U_B_CBRN_Suit_01_Wdl_F",
 			"U_B_CombatUniform_sgg",
 			"U_B_survival_uniform"
@@ -474,9 +476,6 @@ class uniforms_MIL
 		items[] = 
 		{
 			"U_B_CombatUniform_mcam",
-			//"U_C_IDAP_Man_cargo_F",
-			//"U_C_IDAP_Man_casual_F",
-			//"U_C_IDAP_Man_jeans_F",
 			"U_BG_Guerilla2_1",
 			"U_BG_Guerilla2_2",
 			"U_BG_Guerilla2_3",
