@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.731_2023JAN11_GitHub"; //new GM vehicles | logs on permanent vehicle destroyed | r3f Log for GM planes | more ammo in UAZ dshkm | price increase for C_IDAP_Van_02_vehicle_F
+	name = "v1.733_2023JAN20_GitHub"; //Timed "save & disconnect"
 };
 
 class Extended_PreInit_EventHandlers {

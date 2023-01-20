@@ -20,6 +20,10 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
 	["gm_gc_airforce_l410t",20], //GM plane
 	["gm_ge_airforce_do28d2",20], //GM plane
+	["gm_ge_adak_bo105m_vbh",10],
+	["gm_gc_civ_mi2sr",10],
+	["gm_ge_army_bo105m_vbh",10],
+	["gm_ge_army_bo105p1m_vbh",10],
 
 	["RHS_C130J_Cargo",80],
 	["Heli_Light_02_base_F",10],

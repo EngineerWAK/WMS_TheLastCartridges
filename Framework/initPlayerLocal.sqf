@@ -80,6 +80,20 @@ if (hasinterface) then {
 
     _action4 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action4] call ace_interact_menu_fnc_addActionToObject;
+
+    _action5 = ["SaveAndDisconnectTimed","Save and Disconnect Timed","",{
+            //['Saving...', 10, {true}, 
+			//	{
+					[]call WMS_fnc_client_saveRespawnData
+			//	}, 
+			//	{hint 'Saving Aborted'},
+			//	[]
+			//] call CBA_fnc_progressBar;
+        },{
+            ((vehicle player) == player) &&
+            {servertime > ((player getVariable ["WMS_lastKill",0])+60)}
+        }] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action5] call ace_interact_menu_fnc_addActionToObject;
     
     //////////Mission File version on the map//////////
     _markerSystem = createMarkerLocal ["MissionVersion", [(worldsize /2),-500]];

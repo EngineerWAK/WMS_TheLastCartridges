@@ -262,7 +262,7 @@ publicVariable "WMS_tradersMkrPos";
 			};//destruction of the vehicle will start the cleaning process
 			//if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
 			if (_vehicleProtect) then {
-				_veh enableSimulationGlobal false;
+				//_veh enableSimulationGlobal false; //protect vehicle but mess-up with initVehicle and damage players around
 			}else {
 				_veh allowDamage true;
 				if !(_damage == 999) then {

@@ -316,7 +316,7 @@
 		class gm_dk_army_m113a1dk_apc 				{ quality = 4; price = 35002; }; //M2 shield
 		class gm_dk_army_m113a2dk 					{ quality = 6; price = 100002; }; //fucking crazy autocanon
 		class gm_ge_army_marder1a2 					{ quality = 6; price = 135002; }; //fucking crazy autocanon
-		class gm_ge_army_Leopard1a1 				{ quality = 6; price = 130002; }; //green
+		class gm_ge_army_Leopard1a1 				{ quality = 5; price = 130002; }; //green
 		class gm_ge_army_Leopard1a1a1 				{ quality = 5; price = 130002; };
 		class gm_dk_army_Leopard1a3 				{ quality = 5; price = 138002; }; //green camo
 		class gm_ge_army_Leopard1a3a1				{ quality = 5; price = 143002; }; //NV
