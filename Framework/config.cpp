@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.733_2023JAN20_GitHub"; //Timed "save & disconnect"
+	name = "v1.734_2023JAN25_GitHub"; //Some stuff for Judgement Day mission
 };
 
 class Extended_PreInit_EventHandlers {

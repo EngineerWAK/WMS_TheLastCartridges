@@ -77,7 +77,7 @@ force force ace_cookoff_enable = 2;
 force ace_cookoff_enableAmmobox = true;
 force ace_cookoff_enableAmmoCookoff = true;
 force ace_cookoff_enableFire = true;
-force ace_cookoff_probabilityCoef = 1;
+force ace_cookoff_probabilityCoef = 5;
 
 // ACE Crew Served Weapons
 force ace_csw_ammoHandling = 2;
@@ -119,8 +119,8 @@ ace_fire_enableScreams = true;
 
 // ACE Fortify
 force ace_fortify_markObjectsOnMap = 1;
-force ace_fortify_timeCostCoefficient = 1;
-force ace_fortify_timeMin = 1.5;
+force ace_fortify_timeCostCoefficient = 0.33;
+force ace_fortify_timeMin = 2;
 force force acex_fortify_settingHint = 1;
 
 // ACE Fragmentation Simulation
