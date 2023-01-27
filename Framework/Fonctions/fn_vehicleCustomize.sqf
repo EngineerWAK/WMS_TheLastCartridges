@@ -15,6 +15,14 @@ if (_veh isKindOf "gm_Leopard1_base") then { //"gm_ge_army_Leopard1a1a1"
 	_veh animate 				["camofoilage_MainTurret_trav_unhide",1];
 	_veh animate 				["camonet_MainTurret_elev_unhide",1];
 };
+if (_vehicleClassName == "gm_dk_army_bpz2a0") then { //no R3F log, trader vehicle forced at all traders (vehicles)
+	_veh setRepairCargo 1;
+	_veh setAmmoCargo 1;
+	_veh setFuelCargo 1;
+	_veh setVariable ["ACE_isRepairVehicle", true, true];
+	_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
+	[_veh, 1000] call ace_refuel_fnc_setFuel;
+};
 if (_vehicleClassName == "rhsgref_cdf_b_reg_uaz_dshkm") then {
 	_veh addMagazineTurret ["rhs_mag_127x108mm_150", [0]];
 	_veh addMagazineTurret ["rhs_mag_127x108mm_150", [0]];
@@ -102,13 +110,6 @@ if(_vehicleClassName == "rhs_bmd2k" || _vehicleClassName == "rhsgref_cdf_b_bmd2"
 	_veh setObjectTextureGlobal [1, "rhsafrf\addons\rhs_bmd_camo\data\sa_bmd2_02_rus4_co.paa"]; 
 	_veh setObjectTextureGlobal [2, "rhsafrf\addons\rhs_bmd_camo\data\sa_bmd2_03_rus4_co.paa"];
 };
-
-/*if (_vehicleClassName == "vtx_MH60S_GAU21L") then { //REMOVED BY HATCHET
-	_veh setObjectTextureGlobal [16, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\main_co.paa"]; 
-	_veh setObjectTextureGlobal [17, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\misc_co.paa"]; 
-	_veh setObjectTextureGlobal [18, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\tail_co.paa"];
-};*/
-
 if (_vehicleClassName == "rhsusf_m1152_rsv_usarmy_wd") then {
 	_veh setRepairCargo 0; //use the ACE3 one
 	_veh setAmmoCargo 0; //use the ACE3 one
