@@ -52,6 +52,7 @@ class CfgFunctions
 			class BaseSafetyPerimeter {};
 			class saveRespawnData {};
 			class deleteRespawnData {};
+			class ActivateDeactUAVs {};
 
 			class haloJump {};
 

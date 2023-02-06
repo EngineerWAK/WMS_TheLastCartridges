@@ -34,8 +34,8 @@ switch (tolower _playerRole) do {
    };
 */
 };
-//USER ACTIONS:
-    //Bohemia shit plane auto-landing
+//USER ACTIONS: //it seems that it not always 100% working from here, oving to "respawn EH"
+    /*//Bohemia shit plane auto-landing
     inGameUISetEventHandler ["Action", " 
     if (_this select 3 == 'Land' || _this select 4 == 'Landing autopilot') then 
     { 
@@ -58,7 +58,18 @@ switch (tolower _playerRole) do {
         hint 'NOPE! Not gonna happen';  
         true 
     } 
-    "];
+    "];*/
+inGameUISetEventHandler ["Action", " 
+if (
+	((_this select 3) == 'Land') || 
+	((_this select 4) == 'Landing autopilot')  ||
+	((_this select 4) == ' Switch to moving mode') ||
+	((_this select 4) == 'Automatic Engine Startup')
+) then { 
+        hint 'SORRY, This Action Is not permited';
+	    true 
+    };
+"];
 /////
 if (hasinterface) then {
     ///////////Artillery computer
@@ -78,10 +89,10 @@ if (hasinterface) then {
     _action3 = ["vhlInvSize","Inventory Size","",{hint format ["cargo size is %1",(getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad"))]},{(vehicle player) != player}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action3] call ace_interact_menu_fnc_addActionToObject;
 
-    _action4 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
-    [player, 1, ["ACE_SelfActions"], _action4] call ace_interact_menu_fnc_addActionToObject;
+    //_action4 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
+    //[player, 1, ["ACE_SelfActions"], _action4] call ace_interact_menu_fnc_addActionToObject;
 
-    _action5 = ["SaveAndDisconnectTimed","Save and Disconnect Timed","",{
+    _action5 = ["SaveAndDisconnectTimed","Save and Disconnect, Timed","",{
             //['Saving...', 10, {true}, 
 			//	{
 					[]call WMS_fnc_client_saveRespawnData

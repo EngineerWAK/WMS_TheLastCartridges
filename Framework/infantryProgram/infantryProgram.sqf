@@ -671,7 +671,7 @@ WMS_IP_buildComputer = {
 		"
 			_target = _this select 0; _caller = _this select 1;
 			if (WMS_JudgementDay_Run) then {
-				[(position _target)] remoteExec ['WMS_fnc_JMD_hideFallenTrees'];
+				[(position _target)] remoteExec ['WMS_JMD_hideFallenTrees'];
 				[_caller, 250] remoteExec ['WMS_fnc_smallTransactions'];
 			};
 			

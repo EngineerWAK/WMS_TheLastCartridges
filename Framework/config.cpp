@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.736_2023JAN27_GitHub"; //displayKillStat
+	name = "v1.739_2023FEB02_GitHub"; //displayKillStat | local triggers maximum height
 };
 
 class Extended_PreInit_EventHandlers {

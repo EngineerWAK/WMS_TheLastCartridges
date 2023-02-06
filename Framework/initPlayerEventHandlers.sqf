@@ -23,6 +23,44 @@ player addEventHandler ["Respawn",
 			_mkr = createmarkerLocal ["MKR_"+(name player), position player];
 			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
 			_mkr setMarkerColorLocal "ColorGUER";
+   			/*//Bohemia shit plane auto-landing
+   			inGameUISetEventHandler ["Action", " 
+   			if ((_this select 3) == 'Land' || (_this select 4) == 'Landing autopilot') then 
+   			{ 
+      			hint 'NOPE! No AutoLanding';  
+       			true 
+   			} 
+   			"];
+   			//Hatchet shit function to autostart choppers
+   			inGameUISetEventHandler ["Action", " 
+   			if ((_this select 4) == 'Automatic Engine Startup') then 
+   			{ 
+      			hint 'NOPE! No QuickStart';  
+       			true 
+   			} 
+    		"];
+   			//RHS shit function to tow statics
+   			inGameUISetEventHandler ["Action", " 
+   			if ((_this select 4) == ' Switch to moving mode') then 
+   			{ 
+       			hint 'NOPE! Not gonna happen';  
+      			true 
+   			} 
+   			"];
+			*/
+   			inGameUISetEventHandler ["Action", " 
+   			if (
+				((_this select 3) == 'Land') || 
+				((_this select 4) == 'Landing autopilot')  ||
+				((_this select 4) == ' Switch to moving mode') ||
+				((_this select 4) == 'Automatic Engine Startup')
+				)
+				then 
+   			{ 
+      			hint 'SORRY, This Action Is not permited';
+       			true 
+   			};
+   			"];
 			if (WMS_MissionDebug) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		};
 	}

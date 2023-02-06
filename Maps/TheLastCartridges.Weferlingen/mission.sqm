@@ -1639,7 +1639,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this] call WAKmp_fnc_initContainerCargoDump;";
+				init="[this] call WMS_fnc_initContainerCargoDump;";
 				description="CargoDump";
 			};
 			id=203;
@@ -5514,7 +5514,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setCombatBehaviour ""safe""; " \n "this disableAI ""ALL""; " \n "this allowDamage false; " \n "private _fonctions = [ 'notyet', 'weapons', 'equipement', 'office', 'accessories', 'vehiclesarmed', 'vehiclesunarmed', 'airarmed', 'airunarmed', 'foodandhealth' ]; " \n "if (isserver) then { " \n "    [this, ""foodandhealth"", 8] call WAKmp_fnc_initTraders; " \n "};";
+						init="this setCombatBehaviour ""safe""; " \n "this disableAI ""ALL""; " \n "this allowDamage false; " \n "private _fonctions = [ 'notyet', 'weapons', 'equipement', 'office', 'accessories', 'vehiclesarmed', 'vehiclesunarmed', 'airarmed', 'airunarmed', 'foodandhealth' ]; " \n "if (isserver) then { " \n "    [this, ""foodandhealth"", 8] call WMS_fnc_initTraders; " \n "};";
 						description="Traderfoodandhealth";
 						ignoreByDynSimulGrid=1;
 						class Inventory

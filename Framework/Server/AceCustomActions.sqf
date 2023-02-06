@@ -139,7 +139,7 @@ private _action1 = ["UnCoverHatchet", "UnCover", "", {
 //Activate Heavy stationary weapons
 private _action7 = ["activateWeaponStation", "Activate Weapon for 2500", "", {
 		diag_log format ["TNA|WAK|TNA activateWeaponStation _this = %1", _this];
-		[(_this select 0),(_this select 1), 2500]remoteExec ["WMS_fnc_weaponStationInitiate", 2]
+		[(_this select 0),(_this select 1), 2500]remoteExec ["WMS_fnc_weaponStationInitiate", 2];
 	},{
 		((_this select 0) getVariable ["WMS_WeaponStationActivate", true]) &&
 		{((_this select 1) getVariable ["ExileMoney", 0]) >= 2500}
@@ -155,9 +155,8 @@ private _action7 = ["activateWeaponStation", "Activate Weapon for 2500", "", {
 
 //Init UGVs/UAVs //if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
 private _action8 = ["ActivateUGV", "Activate UGV", "", {
-		createVehicleCrew (_this select 0);
-		(_this select 0)setVariable ["WMS_UAVcanActivate", false, true];
-		(_this select 0)setVariable ["WMS_UAVcanDeActivate", true, true];
+		diag_log format ["TNA|WAK|TNA ActivateDeactUAVs Action _this = %1", _this];
+		[(_this select 0), true] remoteExec ["WMS_fnc_ActivateDeactUAVs",2];
 	},{
 		(locked (_this select 0) == 0) &&
 		{(_this select 0)getVariable ["WMS_UAVcanActivate", true]}
@@ -167,9 +166,8 @@ private _action8 = ["ActivateUGV", "Activate UGV", "", {
 
 //Init UGVs/UAVs //if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
 private _action9 = ["ActivateUAV", "Activate UAV", "", {
-		createVehicleCrew (_this select 0);
-		(_this select 0)setVariable ["WMS_UAVcanActivate", false, true];
-		(_this select 0)setVariable ["WMS_UAVcanDeActivate", true, true];
+		diag_log format ["TNA|WAK|TNA ActivateDeactUAVs Action _this = %1", _this];
+		[(_this select 0), true] remoteExec ["WMS_fnc_ActivateDeactUAVs",2];
 	},{
 		(locked (_this select 0) == 0) &&
 		{(_this select 0)getVariable ["WMS_UAVcanActivate", true]}
@@ -180,9 +178,8 @@ private _action9 = ["ActivateUAV", "Activate UAV", "", {
 
 //Init UGVs/UAVs //if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
 private _action10 = ["DeActivateUGV", "DeActivate UGV", "", {
-		deleteVehicleCrew (_this select 0);
-		(_this select 0)setVariable ["WMS_UAVcanActivate", true, true];
-		(_this select 0)setVariable ["WMS_UAVcanDeActivate", false, true];
+		diag_log format ["TNA|WAK|TNA ActivateDeactUAVs Action _this = %1", _this];
+		[(_this select 0), false] remoteExec ["WMS_fnc_ActivateDeactUAVs",2];
 	},{
 		(locked (_this select 0) == 0) &&
 		{(_this select 0)getVariable ["WMS_UAVcanDeActivate", false]}
@@ -192,9 +189,8 @@ private _action10 = ["DeActivateUGV", "DeActivate UGV", "", {
 
 //Init UGVs/UAVs //if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
 private _action11 = ["DeActivateUAV", "DeActivate UAV", "", {
-		deleteVehicleCrew (_this select 0);
-		(_this select 0)setVariable ["WMS_UAVcanActivate", true, true];
-		(_this select 0)setVariable ["WMS_UAVcanDeActivate", false, true];
+		diag_log format ["TNA|WAK|TNA ActivateDeactUAVs Action _this = %1", _this];
+		[(_this select 0), false] remoteExec ["WMS_fnc_ActivateDeactUAVs",2];
 	},{
 		(locked (_this select 0) == 0) &&
 		{(_this select 0)getVariable ["WMS_UAVcanDeActivate", false]}
