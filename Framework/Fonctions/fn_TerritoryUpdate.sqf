@@ -1,5 +1,5 @@
 /**
- * WMS_fnc_territoryUpgrade
+ * WMS_fnc_territoryUpdate
  *
  * TNA-Community
  * https://discord.gg/Zs23URtjwF
@@ -31,14 +31,17 @@ _results = [];
 }forEach _territoriesArray;
 _result = _results find 0;
 
-if (_result == -1) exitWith {};
-if (_type == 'friends') then {
-	_buildingRightUID = ((_territoriesArray select _result) select 4);
+if (_result == -1) exitWith {diag_log format ["[UPDATETERRITORY]|WAK|TNA|WMS|ERROR _result = %1", _result]};
+diag_log format ["[UPDATETERRITORY]|WAK|TNA|WMS| _territoriesArray select _result %1", (_territoriesArray select _result)];
+if (_type == 'friends' && _result != -1) then {
+	//_buildingRightUID = ((_territoriesArray select _result) select 4); //not used
 	(_territoriesArray select _result) set [4, _update];
 
 	_territoryFastTravel = profileNameSpace getVariable ['WMS_territoryfasttravel', []];
 	_territoryFastTravel = _territoryFastTravel + _update; //will probably add some already existing UID since the owner is includ in "friends" but should work
 };
-profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
-profileNameSpace setVariable ['WMS_territoryfasttravel', _territoryFastTravel, true];
+diag_log format ["[UPDATETERRITORY]|WAK|TNA|WMS| _territoriesArray %1", _territoriesArray];
+diag_log format ["[UPDATETERRITORY]|WAK|TNA|WMS| _territoryFastTravel %1", _territoryFastTravel];
+profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray]; //no ', true'
+profileNameSpace setVariable ['WMS_territoryfasttravel', _territoryFastTravel]; //no ', true'
 
