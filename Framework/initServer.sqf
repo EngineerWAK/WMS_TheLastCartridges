@@ -82,6 +82,16 @@ while {true} do
 			_permanentVehiclesCount = _permanentVehiclesCount + (count _x)-1;
 		}forEach _permanentVhlArray;
 
-		if (true) then {diag_log format ["[240SEC_SERVER_LOOP]|WAK|TNA|WMS|UPDATE: FPS: %1, Players: %2, OPFOR: %3, CIV: %4, Permanent Vehicles: %5, Territories: %6", (diag_fps), (count allplayers), (EAST countSide allUnits), (CIVILIAN countSide allUnits), _permanentVehiclesCount, (count _TerritoriesArray)];};
-		uisleep 240;
+		{
+			if (time > (_x select 2))then{
+				(objectFromNetID (_x select 0)) setVariable ["_lootSpawned", nil, true];
+				clearItemCargoGlobal (objectFromNetID (_x select 1));
+				deleteVehicle (objectFromNetID (_x select 1));
+				//if (WMS_MissionDebug) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| Despawning: %1", _x]};
+				WMS_lootHolderList deleteAt (WMS_lootHolderList find _x);
+			};
+		}ForEach WMS_lootHolderList;
+
+		if (true) then {diag_log format ["[120SEC_SERVER_LOOP]|WAK|TNA|WMS|UPDATE: FPS: %1, Players: %2, OPFOR: %3, CIV: %4, Permanent Vehicles: %5, Territories: %6", (diag_fps), (count allplayers), (EAST countSide allUnits), (CIVILIAN countSide allUnits), _permanentVehiclesCount, (count _TerritoriesArray)];};
+		uisleep 120;
     };

@@ -27,7 +27,7 @@ if !(count _BuildingList == 0) then {
 		};
 	_lootToSpawn = selectRandom (WMS_lootToSpawnList selectRandomWeighted _weight);
 	_lootHolder = createVehicle ["WeaponHolderSimulated_scripted", [(_x select 1 select 0),(_x select 1 select 1),((_x select 1 select 2)+0.50)], [], 0, "CAN_COLLIDE"];
-	WMS_lootHolderList pushback [(_x select 0),_lootHolder,(time+_timeToDelete)];
+	WMS_lootHolderList pushback [(netID (_x select 0)),(netID _lootHolder),(time+_timeToDelete)]; //netID make objects freacking shoter!
 	if (
 		_lootToSpawn in (getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items"))|| 
 		_lootToSpawn in (getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons_SPE" >> "items"))|| 
@@ -55,7 +55,7 @@ if !(count _BuildingList == 0) then {
 
 //this should be in a loop and not each time the function is called by the client
 //however, now the client is calling only if he moved far enough and if new loot position
-{
+/*{ //moved to initserver loop
 	if (time > (_x select 2))then{
 		(_x select 0) setVariable ["_lootSpawned", nil, true];
 		clearItemCargoGlobal(_x select 1);
@@ -63,4 +63,4 @@ if !(count _BuildingList == 0) then {
 		//if (WMS_MissionDebug) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| Despawning: %1", _x]};
 		WMS_lootHolderList deleteAt (WMS_lootHolderList find _x);
 	};
-}ForEach WMS_lootHolderList;
+}ForEach WMS_lootHolderList;*/

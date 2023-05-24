@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.741_2023MAY21_GitHub"; //territory update, add friends
+	name = "v1.743_2023MAY24_GitHub"; //Loot despawn manager moved to initserver loop
 };
 
 class Extended_PreInit_EventHandlers {
