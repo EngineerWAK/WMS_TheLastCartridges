@@ -49,6 +49,21 @@ openMap true;
 				};
 			};
 		}forEach allMapMarkers;
+		//water check for over water base, it's a very basic check but should be enough to prevent players to build level 6 over water base in a puddle
+		if (surfaceIsWater _pos) then {
+			//north
+			if !(surfaceIsWater [(_pos select 0),(_pos select 1)+100]) then {_buildingAutorisation = false;hint parseText "<t color='#ff0000'>Water Position Too Close To shore</t>";} else {
+				//east
+				if !(surfaceIsWater [(_pos select 0)+100,(_pos select 1)]) then {_buildingAutorisation = false;hint parseText "<t color='#ff0000'>Water Position Too Close To shore</t>";} else {
+					//south
+					if !(surfaceIsWater [(_pos select 0),(_pos select 1)-100]) then {_buildingAutorisation = false;hint parseText "<t color='#ff0000'>Water Position Too Close To shore</t>";} else {
+						//west
+						if !(surfaceIsWater [(_pos select 0)-100,(_pos select 1)]) then {_buildingAutorisation = false;hint parseText "<t color='#ff0000'>Water Position Too Close To shore</t>";};
+					};
+				};
+			};
+		};
+		
 		//////////////////////////////
 		if (_buildingAutorisation) then {
 			[player, _pos] remoteExec ['WMS_fnc_CreateTerritory']; //_pos is defined by the 'click' itself

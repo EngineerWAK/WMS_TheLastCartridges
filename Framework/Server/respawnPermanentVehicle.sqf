@@ -11,7 +11,7 @@
 
 private ["_permanentVhlArray","_playerArray","_targetUID","_vehicleID","_vehicleClassName","_lastPos","_lastPosAGL","_direction","_damage","_weap","_ammo","_backpack","_item","_veh",
 			"_TerritoriesArray","_flagID","_flagPos","_territoryLevel","_ownerUID","_buildingRightUID","_flagDir","_flag","_marker","_noRespawnItems","_forceMedicalFacilities",
-			"_openVhl","_clusterVhl","_clusterMags","_tradersMkrs","_vehicleProtect"
+			"_openVhl","_clusterVhl","_clusterMags","_tradersMkrs","_vehicleProtect","_buildingAutorisation"
 		];
 
 //Respawn Territories first:
@@ -25,6 +25,8 @@ if !(count _TerritoriesArray == 0) then {
 		_buildingRightUID = (_x select 4);
 		_flagDir = (_x select 5);
 		_layout = (_x select 6);
+		_buildingAutorisation = true;
+
 		if (_layout != "flagonly") then {
 			_objectsToDespawn=["TREE", "SMALL TREE", "BUSH", "BUILDING", "HOUSE", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE","BUNKER","FOUNTAIN", "FENCE", "WALL", "HIDE", "BUSSTOP", "FOREST", "STACK", "RUIN", "TOURISM", "ROCK", "ROCKS", "RAILWAY"];
 			_terrainobjects = nearestTerrainObjects [_flagPos,_objectsToDespawn,40];
@@ -33,6 +35,17 @@ if !(count _TerritoriesArray == 0) then {
 		_flag = createVehicle ["rhsgref_serhat_radar", _flagPos, [], 1, "NONE"];//rhsgref_serhat_radar
 		if (surfaceIsWater _flagPos)then{
 			_flag setPosASL [_flagPos select 0, _flagPos select 1, 2.413];
+			//north
+			if !(surfaceIsWater [(_flagPos select 0),(_flagPos select 1)+99]) then {_buildingAutorisation = false;diag_log format ["[WATER TERRITORY]|WAK|TNA|WMS| Water Position Too Close To shore , owner %1, pos %2", _ownerUID,_flagPos];} else {
+				//east
+				if !(surfaceIsWater [(_flagPos select 0)+99,(_flagPos select 1)]) then {_buildingAutorisation = false;diag_log format ["[WATER TERRITORY]|WAK|TNA|WMS| Water Position Too Close To shore , owner %1, pos %2", _ownerUID,_flagPos];} else {
+					//south
+					if !(surfaceIsWater [(_flagPos select 0),(_flagPos select 1)-99]) then {_buildingAutorisation = false;diag_log format ["[WATER TERRITORY]|WAK|TNA|WMS| Water Position Too Close To shore , owner %1, pos %2", _ownerUID,_flagPos];} else {
+						//west
+						if !(surfaceIsWater [(_flagPos select 0)-99,(_flagPos select 1)]) then {_buildingAutorisation = false;diag_log format ["[WATER TERRITORY]|WAK|TNA|WMS| Water Position Too Close To shore , owner %1, pos %2", _ownerUID,_flagPos];};
+					};
+				};
+			};
 		};
 		_flag setDir _flagDir;
 		[_flag]call WMS_fnc_initFlagAddActions;
@@ -54,6 +67,12 @@ if !(count _TerritoriesArray == 0) then {
 		_marker = createMarker [_flagID, _flagPos];
 		_marker setMarkerType "mil_flag";
 		_marker setMarkerAlpha 0; //keep it invisible
+		if (_buildingAutorisation == false) then {
+			_layout = "waterworld";
+			_flag setVariable ['_layoutUpgradable', false, true];
+			_flag setVariable ["canSafetyPerimeter", false];
+		};
+
 		[_flag, _flagPos, _flagDir, _layout] call WMS_fnc_SpawnCamps;
 		
 		_houses = _flagPos nearObjects ["Building", 150];

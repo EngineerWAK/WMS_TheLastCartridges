@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.743_2023MAY24_GitHub"; //Loot despawn manager moved to initserver loop
+	name = "v1.744_2023JUN01_GitHub"; //Check for over water territories, no more water base in puddles
 };
 
 class Extended_PreInit_EventHandlers {

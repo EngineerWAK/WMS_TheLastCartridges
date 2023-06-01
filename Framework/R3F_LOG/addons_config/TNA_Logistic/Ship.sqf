@@ -24,7 +24,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
-	["rubber_duck_base_f", 40]
+	["rubber_duck_base_f", 20],
+	["Boat_Transport_02_base_F", 40] //RHIB
 ];
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
