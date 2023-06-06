@@ -5,7 +5,7 @@ _BuildingList = _this;
 
 if (WMS_MissionDebug) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| _BuildingList: %1", _BuildingList]};
 
-_timeToDelete = 180;
+_timeToDelete = getNumber(missionConfigFile >> "CfgLootSettings" >> "TimeToDelete");
 _lootToSpawn = objNull;
 _lootHolder = objNull;
 _weight = getArray(missionConfigFile >> "CfgLootToSpawnWeight" >> "Default" >> "weight");
@@ -27,7 +27,7 @@ if !(count _BuildingList == 0) then {
 		};
 	_lootToSpawn = selectRandom (WMS_lootToSpawnList selectRandomWeighted _weight);
 	_lootHolder = createVehicle ["WeaponHolderSimulated_scripted", [(_x select 1 select 0),(_x select 1 select 1),((_x select 1 select 2)+0.50)], [], 0, "CAN_COLLIDE"];
-	WMS_lootHolderList pushback [(netID (_x select 0)),(netID _lootHolder),(time+_timeToDelete)]; //netID make objects freacking shoter!
+	WMS_lootHolderList pushback [(netID (_x select 0)),(netID _lootHolder),(time+_timeToDelete)]; //netID make objects freacking shorter!
 	if (
 		_lootToSpawn in (getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items"))|| 
 		_lootToSpawn in (getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons_SPE" >> "items"))|| 
@@ -47,7 +47,7 @@ if !(count _BuildingList == 0) then {
 		};
 	};
 	(_x select 0) setVariable ["_lootSpawned", 1, true];
-    (_x select 0) setVariable ["_lootTimer",(time+_SpawnLootLifeTime), true];
+    (_x select 0) setVariable ["_lootTimer",(serverTime+_SpawnLootLifeTime), true];
 	//if (WMS_MissionDebug) then {diag_log format ["[SERVERLOOTSPAWN]|WAK|TNA|WMS| %3 | _house,_lootPos,servertime: %1, WMS_lootHolderList count : %2", _x, (count WMS_lootHolderList), time]};
 }forEach _buildingList;
 };

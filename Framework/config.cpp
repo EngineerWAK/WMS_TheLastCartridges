@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.744_2023JUN01_GitHub"; //Check for over water territories, no more water base in puddles
+	name = "v1.746_2023JUN05_GitHub"; //loot manager time/serverTime switch
 };
 
 class Extended_PreInit_EventHandlers {
@@ -446,7 +446,8 @@ class CfgLootSettings
 	SpawnLootRad = 50;
 	SpawnLoopTime = 30;
 	SpawnLootDistToMove = 30;
-	LootlifeTime = 480;
+	LootlifeTime = 480; //bit confusing but this is the delay before loot can spawn again
+	TimeToDelete = 180; //timer to delete loot and weaponHolder
 	minDistToTraders = 200; //not used yet
 	minDistToTerritories = 100; //not used yet
 };

@@ -33,8 +33,8 @@ _this spawn {
 	    	{
 		    	_lootStatus = _x getVariable ["_lootSpawned",0];
 		    	_lootAllowed = _x getVariable ["_lootAllowed",true];//var should be serverTime to add delay to the next loot spawn, if (serverTime > (_x getVariable ["_lootSpawned",0])) then { spawnLoot };
-              	_lootTimer = _x getVariable ["_lootTimer",(time-5)];
-		       	if ((_lootStatus == 0) && {(_lootAllowed)} && {(time > _lootTimer)}) then {
+              	_lootTimer = _x getVariable ["_lootTimer",(serverTime-5)];
+		       	if ((_lootStatus == 0) && {(_lootAllowed)} && {(serverTime > _lootTimer)}) then {
 					if !(count (_x buildingPos -1) == 0) then {
 						if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items")) then {_lootType = "special"};
 						if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Mil" >> "items")) then {_lootType = "military"};
@@ -42,8 +42,8 @@ _this spawn {
 						if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_ind" >> "items")) then {_lootType = "industrial"};
 
 						_lootPos = selectRandom (_x buildingPos -1);
-              			_x setVariable ["_lootSpawned",1, true];
-              			_x setVariable ["_lootTimer",(time+_SpawnLootLifeTime), true];
+              			//_x setVariable ["_lootSpawned",1, true]; //server side
+              			//_x setVariable ["_lootTimer",(serverTime+_SpawnLootLifeTime), true]; //server side
 			      		_BuildingList pushBack [_x,_lootPos,_lootType];
 					};
 		      	};
