@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.746_2023JUN05_GitHub"; //loot manager time/serverTime switch
+	name = "v1.747_2023JUN11_GitHub"; //Lingor mission.sqf
 };
 
 class Extended_PreInit_EventHandlers {
