@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.747_2023JUN11_GitHub"; //Lingor mission.sqf
+	name = "v1.748_2023JUN12_GitHub"; //Lingor mission.sqf //CUP Buildings to loot table
 };
 
 class Extended_PreInit_EventHandlers {

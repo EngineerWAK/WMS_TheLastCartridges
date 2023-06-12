@@ -1,3 +1,30 @@
+class specialItemsToSell //this list will be checked for custom prices, those items should be spawn/loot only
+	{
+		name = "BusinessIsBusiness";
+		items[]=
+		{	
+			"Csat_Id_01",
+			"Csat_Id_02",
+			"Csat_Id_03",
+			"Csat_Id_04",
+			"Csat_Id_05",
+			"FilesSecret",
+			"FileNetworkStructure",
+			"FileTopSecret",
+			"DocumentsSecret",
+			"Wallet_ID",
+			"FlashDisk",
+			"ButaneCanister",
+			"Keys",
+			"SatPhone",
+			"ACE_UAVBattery",
+			"Laptop_closed",
+			"Laptop_Unfolded",
+			"Antimalaricum",
+			"AntimalaricumVaccine",
+			"Antibiotic"
+		};
+	};
 class ItemsMOney
     {
 	    name = "Money";

@@ -1,4 +1,27 @@
 
+    //SPECIAL PRICED ITEMS
+    class Csat_Id_01				    { quality = 6; price = 750; };
+    class Csat_Id_02				    { quality = 6; price = 750; };
+    class Csat_Id_03				    { quality = 6; price = 750; };
+    class Csat_Id_04				    { quality = 6; price = 750; };
+    class Csat_Id_05				    { quality = 6; price = 750; };
+    class FilesSecret				    { quality = 6; price = 300; };
+    class FileNetworkStructure		    { quality = 6; price = 300; };
+    class FileTopSecret				    { quality = 6; price = 300; };
+    class DocumentsSecret				{ quality = 6; price = 300; };
+	class Wallet_ID				        { quality = 6; price = 150; };
+    class FlashDisk				        { quality = 6; price = 100; };
+    class ButaneCanister				{ quality = 6; price = 50; };
+    class Keys				            { quality = 6; price = 200; };
+    class SatPhone				        { quality = 6; price = 500; };
+    class ACE_UAVBattery				{ quality = 6; price = 150; };
+    class Laptop_closed				    { quality = 6; price = 250; };
+    class Laptop_Unfolded				{ quality = 6; price = 1000; }; //this one is BIG
+    class Antimalaricum				    { quality = 6; price = 200; };
+    class AntimalaricumVaccine		    { quality = 6; price = 1000; }; //this one is BIG
+    class Antibiotic				    { quality = 6; price = 250; };
+    //SPECIAL PRICED ITEMS
+    //////////////////////
     class Money_bunch				    { quality = 1; price = 60; }; //30
     class Money_roll				    { quality = 1; price = 300; }; //150
     class Money_stack				    { quality = 1; price = 1200; }; //600
