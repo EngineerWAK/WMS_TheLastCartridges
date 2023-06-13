@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.748_2023JUN12_GitHub"; //Lingor mission.sqf //CUP Buildings to loot table
+	name = "v1.750_2023JUN13_GitHub"; //extending unlock VTX choppers zone to prevent player to keep them around traders //permanent vehicle select 7 == ""
 };
 
 class Extended_PreInit_EventHandlers {
@@ -134,6 +134,17 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 		"Land_Medevac_house_V1_F",
 		"Land_MedicalTent_01_NATO_generic_open_F"
 	};
+	inventory[] = { 
+		{"ACE_personalAidKit",1},
+		{"ACE_bloodIV_500",5},
+		{"ACE_bloodIV_250",10},
+		{"ACE_elasticBandage",10},
+		{"ACE_fieldDressing",10},
+		{"ACE_splint",10},
+		{"ACE_epinephrine",5},
+		{"ACE_morphine",5},
+		{"vtx_stretcher_item",2}
+	};
 };
 class CfgForceRepairFacilities //some Repair vehicles/buildings are not recognized as Medical facilities
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
@@ -157,6 +168,15 @@ class CfgForceRepairFacilities //some Repair vehicles/buildings are not recogniz
 		"RHS_Ural_Repair_VDV_01",
 		"rhsusf_m1152_rsv_usarmy_wd"
 	};
+	inventory[] = {
+		{"ToolKit",1},
+		{"ACE_EntrenchingTool",5},
+		{"ACE_wirecutter",5},
+		{"SatchelCharge_Remote_Mag",10},
+		{"ACE_rope15",2},
+		{"ACE_rope36",2},
+		{"ACE_rope6",2}
+	};
 };
 class CfgForceAmmoFacilities //some Ammo vehicles/buildings are not recognized as Medical facilities
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
@@ -179,6 +199,16 @@ class CfgForceAmmoFacilities //some Ammo vehicles/buildings are not recognized a
 		"rhsusf_m113_usarmy_supply",
 		"rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom",
 		"rhsusf_m1152_rsv_usarmy_wd"
+	};
+	inventory[] = { //not yet
+		{"rhs_mag_an_m14_th3",10},
+		{"rhs_charge_tnt_x2_mag",10},
+		{"DemoCharge_Remote_Mag",10},
+		{"ACE_DefusalKit",4},
+		{"ACE_Clacker",4},
+		{"ACE_RangeTable_82mm",3},
+		{"ACE_artilleryTable",3},
+		{"ACE_RangeCard",3}
 	};
 };
 class CfgClaimReward
@@ -396,7 +426,9 @@ class CfgOfficeTrader
 	{
 		34, //number of restarts before unused vehicles get destroyed //34*5 = one week
 		28, //number of restart before warning
-		10000 //price to pay to the trader to reset restart counter //not yet
+		10000, //price to pay to the trader to reset restart counter //not yet
+		3, //allowed vehicles at start, no territory, that include vehicles from "claim reward"
+		1 //0 = no more vehicles //1 or 2 or 3 or n = use territories level to count max vehicles, n*territory level of all territories. if 1, 2 territories level 6 = "allowed vehicle at start" + 6 + 6
 	};
 
 	MarkersToCheck[] = 
@@ -410,7 +442,7 @@ class CfgOfficeTrader
  		80,		//_tradersZoneSize
  		300,	//_spawnZoneSize
  		100,	//_territorySize
-		50		//_vhlUnlockDist //blacklisted vehicles closer than _tradersZoneSize + this will be unlocked at server restart and can not be locked in this zone by players
+		270		//_vhlUnlockDist //blacklisted vehicles closer than _tradersZoneSize + this will be unlocked at server restart and can not be locked in this zone by players
 	};
 	
 };
@@ -428,7 +460,7 @@ class CfgRespectLevels {
 	};
  };
  //_traderColors = getArray(missionConfigFile >> "CfgRespectColors" >> "Colors");
-class CfgRespectColors {     
+class CfgRespectColors { //not used but I keep it as references
 	Colors[] =
 	{
 		"#ffffff", //white

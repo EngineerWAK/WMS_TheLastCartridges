@@ -123,7 +123,8 @@ _smoke attachTo [_veh, [0,0,0]];
 playSound3D [getMissionPath "Custom\Ogg\magicBus.ogg", _veh, false, position _veh, 9, 1, 0]; //keep the last number (distance) 0 !!!!
 //_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,[[],[],[],[]]]; //OLD
 //_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],[[],[],[],[]]]; //NEW [vID,classename,position,direction,damage,fuel,[friends],inventory]
-_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],_vehicleID_inventory,0]; //NEW [vID,classename,position,direction,damage,fuel,[friends],inventory,_howmanyrestarts]
+//_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],_vehicleID_inventory,0]; //NEW [vID,classename,position,direction,damage,fuel,[friends],inventory,_howmanyrestarts]
+_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],"",0]; //NEW [vID,classename,position,direction,damage,fuel,[friends],"nothing",_howmanyrestarts]
 _permanentVhlArray set [_arrayPosition, _playerArray];
 profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
 profileNameSpace setVariable [_vehicleID_inventory, [[],[],[],[]]];
@@ -134,36 +135,44 @@ if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew 
 
 //"ToolKit"
 _forceAmmoFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
+_forceAmmoInv = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "inventory");
 if ((typeOf _veh) in _forceAmmoFacilities) then {
 	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];};
 	_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
-	_veh addItemCargoGlobal ["rhs_mag_an_m14_th3",10];
+	{_veh addItemCargoGlobal [_x select 0,_x select 1];}forEach _forceAmmoInv;
+	/*_veh addItemCargoGlobal ["rhs_mag_an_m14_th3",10];
 	_veh addItemCargoGlobal ["rhs_charge_tnt_x2_mag",10];
 	_veh addItemCargoGlobal ["DemoCharge_Remote_Mag",10];
 	_veh addItemCargoGlobal ["ACE_DefusalKit",4];
 	_veh addItemCargoGlobal ["ACE_Clacker",4];
 	_veh addItemCargoGlobal ["ACE_RangeTable_82mm",3];
 	_veh addItemCargoGlobal ["ACE_artilleryTable",3];
-	_veh addItemCargoGlobal ["ACE_RangeCard",3];
+	_veh addItemCargoGlobal ["ACE_RangeCard",3];*/
 };
 
 _forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
+_forceRepairInv = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "inventory");
 if ((typeOf _veh) in _forceRepairFacilities) then {
 	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];};
 	_veh setVariable ["ACE_isRepairVehicle", true, true];
-	_veh addItemCargoGlobal ["ToolKit",1];
+	{_veh addItemCargoGlobal [_x select 0,_x select 1];}forEach _forceRepairInv;
+	/*_veh addItemCargoGlobal ["ToolKit",1];
 	_veh addItemCargoGlobal ["ACE_EntrenchingTool",5];
 	_veh addItemCargoGlobal ["ACE_wirecutter",5];
 	_veh addItemCargoGlobal ["SatchelCharge_Remote_Mag",10];
 	_veh addItemCargoGlobal ["ACE_rope15",2];
 	_veh addItemCargoGlobal ["ACE_rope36",2];
-	_veh addItemCargoGlobal ["ACE_rope6",2];
+	_veh addItemCargoGlobal ["ACE_rope6",2];*/
 };
 
 _forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
+_forceMedicalInv = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "inventory");
 if ((typeOf _veh) in _forceMedicalFacilities) then {
 	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Medical Facility", _veh];};
-	_veh addItemCargoGlobal ["ACE_personalAidKit",1];
+	_veh setVariable ["ace_medical_isMedicalFacility", true, true];
+	_veh setVariable ["WMS_resetFatigueTimer", time, true];
+	{_veh addItemCargoGlobal [_x select 0,_x select 1];}forEach _forceMedicalInv;
+	/*_veh addItemCargoGlobal ["ACE_personalAidKit",1];
 	_veh addItemCargoGlobal ["ACE_bloodIV_500",5];
 	_veh addItemCargoGlobal ["ACE_bloodIV_250",10];
 	_veh addItemCargoGlobal ["ACE_elasticBandage",10];
@@ -171,11 +180,8 @@ if ((typeOf _veh) in _forceMedicalFacilities) then {
 	_veh addItemCargoGlobal ["ACE_splint",10];
 	_veh addItemCargoGlobal ["ACE_epinephrine",5];
 	_veh addItemCargoGlobal ["ACE_morphine",5];
-	_veh addItemCargoGlobal ["vtx_stretcher_item",2];
+	_veh addItemCargoGlobal ["vtx_stretcher_item",2];*/
 
-
-	_veh setVariable ["ace_medical_isMedicalFacility", true, true];
-	_veh setVariable ["WMS_resetFatigueTimer", time, true];
 	//[player, nil] call ace_advanced_fatigue_fnc_handlePlayerChanged; //addAction "Reset Fatigue" for owner;
 	[ //params ["_target", "_caller", "_actionId", "_arguments"];
 		_veh,

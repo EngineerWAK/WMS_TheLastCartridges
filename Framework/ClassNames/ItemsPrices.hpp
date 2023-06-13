@@ -11,9 +11,12 @@
     class DocumentsSecret				{ quality = 6; price = 300; };
 	class Wallet_ID				        { quality = 6; price = 150; };
     class FlashDisk				        { quality = 6; price = 100; };
-    class ButaneCanister				{ quality = 6; price = 50; };
-    class Keys				            { quality = 6; price = 200; };
+    class ButaneCanister				{ quality = 6; price = 200; };
+    class Keys				            { quality = 6; price = 50; };
+    class ACE_key_east				    { quality = 6; price = 150; };
+    class ACE_Cellphone				    { quality = 6; price = 300; };
     class SatPhone				        { quality = 6; price = 500; };
+    class ACE_HuntIR_monitor		    { quality = 6; price = 400; };
     class ACE_UAVBattery				{ quality = 6; price = 150; };
     class Laptop_closed				    { quality = 6; price = 250; };
     class Laptop_Unfolded				{ quality = 6; price = 1000; }; //this one is BIG

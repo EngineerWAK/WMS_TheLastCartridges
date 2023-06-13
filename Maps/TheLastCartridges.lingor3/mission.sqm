@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1358;
+		nextID=1371;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=15;
 	};
 	class LayerIndexProvider
 	{
-		nextID=218;
+		nextID=266;
 	};
 	class Camera
 	{
 		pos[]={6230.2871,175.53499,4791.6699};
-		dir[]={-0.92525333,-0.17586079,0.33621353};
-		up[]={-0.16529189,0.98440826,0.060063273};
-		aside[]={0.34154037,2.7356145e-007,0.93990141};
+		dir[]={-0.68341237,-0.5174197,0.51506305};
+		up[]={-0.41320169,0.85572928,0.31141552};
+		aside[]={0.60189486,1.6228296e-006,0.79861939};
 	};
 };
 binarizationWanted=0;
@@ -632,7 +632,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=149;
+		items=162;
 		class Item0
 		{
 			dataType="Layer";
@@ -905,7 +905,7 @@ class Mission
 							class Attributes
 							{
 								ammo=0;
-								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WAKmp_fnc_initContainerCargoDump;";
+								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 							};
 							id=5;
 							type="B_Slingload_01_Cargo_F";
@@ -1560,7 +1560,7 @@ class Mission
 							class Attributes
 							{
 								ammo=0;
-								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WAKmp_fnc_initContainerCargoDump;";
+								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 							};
 							id=24;
 							type="B_Slingload_01_Cargo_F";
@@ -1648,7 +1648,7 @@ class Mission
 							class Attributes
 							{
 								ammo=0;
-								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WAKmp_fnc_initContainerCargoDump;";
+								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 							};
 							id=273;
 							type="B_Slingload_01_Cargo_F";
@@ -2300,7 +2300,7 @@ class Mission
 							class Attributes
 							{
 								ammo=0;
-								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WAKmp_fnc_initContainerCargoDump;";
+								init="[this, this] call ace_common_fnc_claim;" \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 							};
 							id=292;
 							type="B_Slingload_01_Cargo_F";
@@ -14438,14 +14438,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="WhiteHead_05";
 										};
 									};
 								};
@@ -14490,14 +14490,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="WhiteHead_05";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -14605,14 +14605,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="WhiteHead_05";
 										};
 									};
 								};
@@ -14657,14 +14657,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="WhiteHead_05";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -29456,6 +29456,123 @@ class Mission
 			};
 			id=1357;
 			atlOffset=-0.19292545;
+		};
+		class Item149
+		{
+			dataType="Marker";
+			position[]={7497.291,4.96,1741.4307};
+			name="marker_3";
+			type="respawn_air";
+			alpha=0;
+			id=1358;
+		};
+		class Item150
+		{
+			dataType="Marker";
+			position[]={667.91052,18.558424,1845.2313};
+			name="marker_4";
+			type="respawn_air";
+			alpha=0;
+			id=1359;
+		};
+		class Item151
+		{
+			dataType="Marker";
+			position[]={9326.4297,10.2,5028.96};
+			name="marker_5";
+			type="respawn_air";
+			alpha=0;
+			id=1360;
+		};
+		class Item152
+		{
+			dataType="Marker";
+			position[]={1129.9702,44.59,5768.4155};
+			name="marker_6";
+			type="respawn_air";
+			alpha=0;
+			id=1361;
+		};
+		class Item153
+		{
+			dataType="Marker";
+			position[]={3073.2012,14.05,6657.4092};
+			name="marker_7";
+			type="respawn_air";
+			alpha=0;
+			id=1362;
+		};
+		class Item154
+		{
+			dataType="Marker";
+			position[]={8331.752,3.4172039,7543.6162};
+			name="marker_8";
+			type="respawn_air";
+			alpha=0;
+			id=1363;
+		};
+		class Item155
+		{
+			dataType="Marker";
+			position[]={5493.6631,22.195482,9682.2793};
+			name="marker_9";
+			type="respawn_motor";
+			alpha=0;
+			id=1364;
+		};
+		class Item156
+		{
+			dataType="Marker";
+			position[]={945.53516,33.555195,5941.377};
+			name="marker_10";
+			type="respawn_motor";
+			alpha=0;
+			id=1365;
+		};
+		class Item157
+		{
+			dataType="Marker";
+			position[]={976.63568,16.42,1876.2225};
+			name="marker_11";
+			type="respawn_motor";
+			alpha=0;
+			id=1366;
+		};
+		class Item158
+		{
+			dataType="Marker";
+			position[]={4216.9429,24.99,4986.6924};
+			name="marker_12";
+			type="respawn_motor";
+			alpha=0;
+			id=1367;
+		};
+		class Item159
+		{
+			dataType="Marker";
+			position[]={8659.8516,4.96,2955.6177};
+			name="marker_13";
+			type="respawn_motor";
+			alpha=0;
+			id=1368;
+		};
+		class Item160
+		{
+			dataType="Marker";
+			position[]={568.68402,5,9955.4883};
+			name="marker_14";
+			type="respawn_armor";
+			alpha=0;
+			id=1369;
+		};
+		class Item161
+		{
+			dataType="Marker";
+			position[]={8682.79,16.842148,3853.311};
+			name="marker_15";
+			type="respawn_armor";
+			alpha=0;
+			id=1370;
 		};
 	};
 };

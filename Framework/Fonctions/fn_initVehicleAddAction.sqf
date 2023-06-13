@@ -28,7 +28,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 					_nearestTrader = [WMS_tradersMkrPos, (_this select 0)] call BIS_fnc_nearestPosition;
 					if ((_nearestTrader distance2D (_this select 0)) < ((_territoryOfficeData select 0)+(_territoryOfficeData select 3))) then {
 						hint 'Restricted Action in Traders';
-						[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle Can Not Be Locked In Traders Zone +50m'; 
+						[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle Can Not Be Locked In Traders Zone +270m'; 
 					}else{
 						(_this select 0) setVehicleLock 'LOCKED';
 						(_this select 0) lockInventory true;

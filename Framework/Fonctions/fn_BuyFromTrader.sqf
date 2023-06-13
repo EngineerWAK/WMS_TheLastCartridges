@@ -27,11 +27,25 @@ _itemSlotFreeOrNot = [];
 
 if (_playerMoney >= _price) then {
 	/////VEHICLES
-	if (_type == 'vehicle') then { 
-		[_item,_caller] call WMS_fnc_createPermanentVHL;
-	};
-	if (_type == 'sea') then { //Including the Boats
-		[_item,_caller] call WMS_fnc_createPermanentVHL;
+	if (_type == 'vehicle' || _type == 'sea') then {  //Including the Boats
+		_ownerArray = _targetUID call WMS_fnc_findUIDinVhlArray; //-1 if not in the array yet
+		_vehiclesManagement = getArray(missionConfigFile >> "CfgOfficeTrader" >> "vehiclesManagement"); //select 3 = start vehicle //select 4 = territory level
+		_totalVhl = 0;
+		_totalLvl = 0;
+		if (_ownerArray != -1)then {
+			_totalVhl = count ((profileNameSpace getVariable ["WMS_permanentVhlArray", []]) select _ownerArray)-1;
+		};
+		_totalAllowed = _vehiclesManagement select 3;
+		if ((_vehiclesManagement select 4) != 0) then {
+			{if (_x select 3 == _targetUID) then {_totalLvl = _totalLvl+ (_x select 2)}}forEach (profileNameSpace GetVariable ["WMS_territoriesArray", []]);
+			_totalAllowed = _totalAllowed + (_totalLvl*(_vehiclesManagement select 4));
+		};
+		if (_totalVhl < _totalAllowed) then {
+			[_item,_caller] call WMS_fnc_createPermanentVHL;
+		}else{
+			'Dude! you already got too many vehicles' remoteExec ["hint", (owner _caller)];
+			"Dude! you already got too many vehicles" remoteExec ["systemChat", (owner _caller)];
+		};
 	};
 	/////VEHICLES END
 	/////WEAPONS

@@ -125,7 +125,7 @@ publicVariable "WMS_tradersMkrPos";
 			_damage = _x select 4;
 			_fuel = _x select 5;
 			_friends = _x select 6;
-			//_vehicleID_inventory = _x select 7;
+			//_vehicleID_inventory = _x select 7; //is not useless so should be "" go gain space
 			_howmanyrestarts = _x select 8; //need to be converted before
 			_vehicleID_inventory = _vehicleID + "_inventory";
 			//if (typeName (_x select 7) == "SCALAR") then {_x set [7, _vehicleID_inventory]}; //convert the Old inventory system to the new one
@@ -207,12 +207,12 @@ publicVariable "WMS_tradersMkrPos";
 				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, %2, checking for trader zone", _veh, typeOf _veh];};
 				_nearestTrader = [WMS_tradersMkrPos, _veh] call BIS_fnc_nearestPosition;
 				if ((_nearestTrader distance2D _veh) > ((_territoryOfficeData select 0)+(_territoryOfficeData select 3))) then {
-					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle is protected", _veh,(_nearestTrader distance2D _veh)];};
+					if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle is protected", _veh,(_nearestTrader distance2D _veh)];};
 					_veh setVehicleLock "LOCKED";
 					_veh lockInventory true;
 					[_veh, true] remoteExec ["lockInventory", 0, true];
 				}else {
-					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle UNLOCKED", _veh,(_nearestTrader distance2D _veh)];};
+					if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle UNLOCKED", _veh,(_nearestTrader distance2D _veh)];};
 					_vehicleProtect = false;
 				};
 			}else{ 

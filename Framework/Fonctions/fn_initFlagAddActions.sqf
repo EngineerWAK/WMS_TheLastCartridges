@@ -118,10 +118,10 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		"<t size='0.9' color='#80c606'>Upgrade to next level (20000$)</t>",//_display,
 		"
 			_target = _this select 0; _caller = _this select 1;
-			[_target, _caller] remoteExec ['WMS_fnc_territoryUpgrade', 2];
 			_level = (_target getVariable ['exileterritorylevel', -1]);
-			hint format ['your territory is now level %1', _level];
-			systemChat format ['your territory is now level %1', _level];
+			[_target, _caller] remoteExec ['WMS_fnc_territoryUpgrade', 2];
+			hint format ['your territory is now level %1', _level +1];
+			systemChat format ['your territory is now level %1', _level +1];
 		",
 		[], //argument accessible in the script (_this select 3)
 		1,
