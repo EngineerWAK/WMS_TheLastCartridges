@@ -15,20 +15,22 @@ _role2 = "PVE server ONLY";
 _role2names = ["-Do not kill players, yet","-Do not kill /Civilians"];
 _role3 = "Territories/Camps";
 _role3names = ["2 max/player","the oldest one will be use to FastTravel"];
-_role4 = "Join us on TNA Discord";
-_role4names = ["https://discord.gg/Zs23URtjwF"];
-_role5 = "Features";
-_role5names = ["Sell Mission VHL/crates","Sell roaming AI vehicles","Full Custom AI system","R3F Logistic","Igiload","Towing"];
-_role6 = "Last Punishment";
-_role6names = ["Nobody yet !","If you use a 'trainer' you will be ban"];
-_role7 = "Traders Informations";
-_role7names = ["light trader system", "WastDump container to sell stuff","WastDump container to buy Ammo","Ammo only for primary weapon"];
-_role8 = "About Donations";
-_role8names = ["https://paypal.me/godsnipe"];
-_role9 = "Respect Levels with Master Level";
-_role9names = ["-Level 0 : 0","-Level 1 : 1000","-Level 2 : 6000","-Level 3 : 12000","-Level 4 : 18000","-Level 5 : 25000","-Level 6 : 50000"];
-_role10 = "Don't be a fuckup!";
-_role10names = [
+_role4 = "Permanent Vehicles";
+_role4names = ["3 maximum at start","+1 vehicle per territory level","max: 3 + 6 + 6 = 15 vehicles"];
+_role5 = "Join us on TNA Discord";
+_role5names = ["https://discord.gg/Zs23URtjwF"];
+_role6 = "Features";
+_role6names = ["Sell Mission VHL/crates","Sell roaming AI vehicles","Full Custom AI system","R3F Logistic","Igiload","Towing"];
+_role7 = "Last Punishment, BAN";
+_role7names = ["VLADY, steamID 76561199303840567","Duplicating Items","Abusing the server","Thinking admins are stupid"];
+_role8 = "Traders Informations";
+_role8names = ["light trader system", "WastDump container to sell stuff","WastDump container to buy Ammo","Ammo only for primary weapon"];
+_role9 = "About Donations";
+_role9names = ["https://paypal.me/godsnipe"];
+_role10 = "Respect Levels with Master Level";
+_role10names = ["-Level 0 : 0","-Level 1 : 1000","-Level 2 : 6000","-Level 3 : 12000","-Level 4 : 18000","-Level 5 : 25000","-Level 6 : 50000"];
+_role11 = "DO NOT DUPLICATE ITEMS!!!";
+_role11names = [
 	"And Have fun"
 ];
 
@@ -62,5 +64,6 @@ _onScreenTime = 15;
 	[_role7, _role7names],
 	[_role8, _role8names],
 	[_role9, _role9names],
-	[_role10, _role10names] //make SURE the last one here does NOT have a , at the end
+	[_role10, _role10names],
+	[_role11, _role11names] //make SURE the last one here does NOT have a , at the end
 ];

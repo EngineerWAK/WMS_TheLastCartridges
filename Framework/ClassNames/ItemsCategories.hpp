@@ -3,6 +3,20 @@ class specialItemsToSell //this list will be checked for custom prices, those it
 		name = "BusinessIsBusiness";
 		items[]=
 		{	
+			//dup items
+			"rhs_rpg18_mag",
+			"rhs_rpg26_mag",
+			"rhs_rpg75_mag",
+			"rhs_m72a7_mag",
+			"rhs_rshg2_mag",
+			"rhs_dummy_mag",
+			"rhs_m136_hedp_mag",
+			"rhs_m136_hp_mag",
+			"rhs_m136_mag",
+			//fuckedup items
+			"ACE_ReserveParachute", //default sell for 1200!!!
+			"rhs_fgm148_magazine_AT_empty", //default sell for 1200
+			//others
 			"Csat_Id_01",
 			"Csat_Id_02",
 			"Csat_Id_03",

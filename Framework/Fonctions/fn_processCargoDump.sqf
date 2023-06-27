@@ -61,7 +61,7 @@ _playerScore = profileNamespace getVariable [_playerUID_ExileScore,0];
 	//SPECIAL PRICED ITEMS
 	if (_item in _specialItemsToSell) then {
 		_priceDefault = getNumber(missionConfigFile >> "CfgAllPrices" >> _item >> "price");
-		if (true) then {diag_log format ["[WMS_fnc_processCargoDump]|WAK|TNA|WMS|Special Item %1, price %2", _item, _priceDefault]};
+		if (true) then {diag_log format ["[WMS_fnc_processCargoDump]|WAK|TNA|WMS|player %3, SPECIAL ITEM %1, price %2", _item, _priceDefault, (getPlayerUID _target)]};
 	} else {
 		if (_item isKindOf ["Launcher_Base_F", configFile >> "CfgWeapons"]) then {
 			//hint "this is a Launcher";
@@ -127,7 +127,7 @@ _playerScore = profileNamespace getVariable [_playerUID_ExileScore,0];
 			};};};};};
 	};
 	_totalPriceDump = round _totalPriceDump+_priceDefault;
-
+	if (true) then {diag_log format ["[WMS_fnc_processCargoDump]|WAK|TNA|WMS|player %3, Item %1, price %2", _item, _priceDefault, (getPlayerUID _target)]};
 }forEach _items;
 
 clearMagazineCargoGlobal _cargo; 

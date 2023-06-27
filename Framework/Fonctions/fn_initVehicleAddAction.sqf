@@ -95,7 +95,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		true,
 		true,
 		"",
-		"((alive _target) && (stance player == 'CROUCH') && (getplayerUID _this) in (_target getVariable ['WMS_friends', [0]]) && (vehicle _this == _this))",
+		"((alive _target) && {(locked _target == 0)} && {(stance player == 'CROUCH')} && {(getplayerUID _this) in (_target getVariable ['WMS_friends', [0]])} && {(vehicle _this == _this)})",
 		5
 	]
 ] remoteExec [

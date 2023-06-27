@@ -68,6 +68,13 @@ if (worldName == "Enoch") then {
 	_nil = [] execVM "Server\livoniaBagnoCamp.sqf";
 };
 
+/////////////////////////////
+//diag_log players stats
+_playerAlreadyConnected = profileNamespace getVariable ["WMS_playerAlreadyConnected",[]];
+{
+	diag_log format ["[PLAYERSTATS]|WAK|TNA|WMS| player UID: %1, Kills: %2, Death: %3, Money: %4, Score: %5", _x, profileNamespace getVariable [("ExileKills_"+_x), "nothing"], profileNamespace getVariable [("ExileDeath_"+_x), "nothing"], profileNamespace getVariable [("ExileMoney_"+_x), "nothing"], profileNamespace getVariable [("ExileScore_"+_x), "nothing"]];
+}forEach _playerAlreadyConnected;
+
 while {true} do
 	{
 		private _permanentVehiclesCount = 0;

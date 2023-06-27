@@ -24,6 +24,7 @@ if (_item == 'TradeRespect5k' || _item == 'TradeRespect10k') then {
 		profileNamespace setVariable [_playerUID_Exilemoney,_playerMoney+_cashBack];
 		_caller setVariable ["ExileScore",(_playerScore-_price), true];
 		_caller setVariable ["ExileMoney",(_playerMoney+_cashBack), true];
+		if (true) then {diag_log format ["[WMS_fnc_BuyFromOffice]|WAK|TNA|WMS|PLAYER SELLING RESPECT| player %1, Item %2, new respect %3, new money %4", (getPlayerUID _caller), _item, (_playerScore-_price),(_playerMoney+_cashBack)]};
 	}else {
 		//message something or nothing
 	};

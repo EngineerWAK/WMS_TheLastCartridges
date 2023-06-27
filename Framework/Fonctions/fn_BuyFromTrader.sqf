@@ -42,11 +42,13 @@ if (_playerMoney >= _price) then {
 		};
 		if (_totalVhl < _totalAllowed) then {
 			[_item,_caller] call WMS_fnc_createPermanentVHL;
+			profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney-_price)];
+			_caller setVariable ["ExileMoney", (_playerMoney-_price), true];
 		}else{
 			'Dude! you already got too many vehicles' remoteExec ["hint", (owner _caller)];
 			"Dude! you already got too many vehicles" remoteExec ["systemChat", (owner _caller)];
 		};
-	};
+	}else {
 	/////VEHICLES END
 	/////WEAPONS
 	if (_type == 'weapons') then {
@@ -247,4 +249,5 @@ if (_playerMoney >= _price) then {
 	profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney-_price)];
 	_caller setVariable ["ExileMoney", (_playerMoney-_price), true];
 	//saveProfileNamespace;
+};
 };

@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.750_2023JUN13_GitHub"; //extending unlock VTX choppers zone to prevent player to keep them around traders //permanent vehicle select 7 == ""
+	name = "v1.756_2023JUN26_GitHub"; //diag_log players stats at server start //forcing container sells logs //fixed vehicle trader filter //typeOf permanent vehicle destroyed log
 };
 
 class Extended_PreInit_EventHandlers {
@@ -623,6 +623,7 @@ class CfgOpenVhl {
 class CfgBlackListedItems {//from respawn vehicle inventory
 	items[] =
 	{
+		//"MineDetector", //increasing price A LOT so here for cleanup
 		//ACRE Radio
 		"ACRE_PRC77",
 		"ACRE_PRC117F",
@@ -671,6 +672,7 @@ class CfgBlackListedItems {//from respawn vehicle inventory
 class CfgBlackListedInv {//from player inventory at custom respawn
 	items[] =
 	{	
+		//"MineDetector", //increasing price A LOT so here for cleanup
 		//ACRE Radio
 		"ACRE_PRC77",
 		"ACRE_PRC117F",

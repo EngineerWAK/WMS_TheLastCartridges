@@ -167,7 +167,7 @@ publicVariable "WMS_tradersMkrPos";
 					if (true) then {
 						diag_log "|WAK|TNA|WMS|";
 						diag_log "|WAK|TNA|WMS|";
-						diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];
+						diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", typeOf vehicle (_this select 0), (_this select 1), (_this select 2)];
 						diag_log "|WAK|TNA|WMS|";
 						diag_log "|WAK|TNA|WMS|";
 						};

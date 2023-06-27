@@ -28,7 +28,7 @@ WMS_exportMissionObjects = {
 	systemChat format ["%1 Objects Exported", (count _missionObjects)];
 };
 //Modify array in players permanent vehicle array
--arrayModification = {
+_arrayModification = {
 	_UIDplayer = "76561197965501020";
 	_UIDplayerArrayPos = [_UIDplayer] call WMS_fnc_findUIDinVhlArray;
 	_permamentVehicle = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
@@ -189,3 +189,37 @@ private _actionFr = ["Fast Rope", "Fast Rope", "", {
 	}
 	] call ace_interact_menu_fnc_createAction;
 ["vtx_H60_base", 0, ["ACE_MainActions"], _actionFr, true] call ace_interact_menu_fnc_addActionToClass;
+
+/////////////////////////////
+//diag_log players stats
+_playerAlreadyConnected = profileNamespace getVariable ["WMS_playerAlreadyConnected",[]];
+{
+	diag_log format ["[PLAYERSTATS]|WAK|TNA|WMS| player UID: %1, Kills: %2, Death: %3, Money: %4, Score: %5", 
+		_x, 
+		profileNamespace getVariable [("ExileKills_"+_x), "nothing"], 
+		profileNamespace getVariable [("ExileDeath_"+_x), "nothing"], 
+		profileNamespace getVariable [("ExileMoney_"+_x), "nothing"], 
+		profileNamespace getVariable [("ExileScore_"+_x), "nothing"]
+	];
+}forEach _playerAlreadyConnected;
+//Console print Players stats
+private _playerAlreadyConnected = profileNamespace getVariable ["WMS_playerAlreadyConnected",[]];
+private _result = [];
+{
+	_stats = [
+		[_x], 
+		["Kills", profileNamespace getVariable [("ExileKills_"+_x), "nothing"]], 
+		["Deaths", profileNamespace getVariable [("ExileDeath_"+_x), "nothing"]], 
+		["Money", profileNamespace getVariable [("ExileMoney_"+_x), "nothing"]], 
+		["Score", profileNamespace getVariable [("ExileScore_"+_x), "nothing"]]
+	];
+	_result pushBack _stats;
+}forEach _playerAlreadyConnected;
+_result;
+
+////////////////////////////////
+//auto FastCombat //need some stuff in NPC Kill EH to modify WMS_FC_LastKill
+WMS_FC_peaceTimer = 1200;
+WMS_FC_Timer = 600;
+WMS_FC_LastKill = 0;
+WMS_FC_FightStart = 0;

@@ -23,6 +23,19 @@
     class Antimalaricum				    { quality = 6; price = 200; };
     class AntimalaricumVaccine		    { quality = 6; price = 1000; }; //this one is BIG
     class Antibiotic				    { quality = 6; price = 250; };
+        //fucked up items
+    class ACE_ReserveParachute		    { quality = 1; price = 50; }; //default sell for 1200!!!
+    class rhs_fgm148_magazine_AT_empty  { quality = 1; price = 50; };
+        //Duplicating items, try negative price, for "recycling fees"
+    class rhs_rpg18_mag				    { quality = 1; price = -100; };//RPG-18
+    class rhs_rpg26_mag				    { quality = 1; price = -100; };//RPG-26
+    class rhs_rpg75_mag				    { quality = 1; price = -100; };//RPG-75
+    class rhs_m72a7_mag				    { quality = 1; price = -100; };//M72 HEDP
+    class rhs_rshg2_mag				    { quality = 1; price = -100; };//RShG-2
+    class rhs_dummy_mag				    { quality = 1; price = -100; };//M136 HEAT
+    class rhs_m136_hedp_mag				{ quality = 1; price = -100; };//M136 HEDP
+    class rhs_m136_hp_mag				{ quality = 1; price = -100; };//M136 HP
+    class rhs_m136_mag				    { quality = 1; price = -100; };//M136 HEAT
     //SPECIAL PRICED ITEMS
     //////////////////////
     class Money_bunch				    { quality = 1; price = 60; }; //30
@@ -77,7 +90,7 @@
 
     //SPECOPS
     class B_Respawn_Sleeping_bag_brown_F	{ quality = 1; price = 15888; };
-    class MineDetector					    { quality = 2; price = 5000; };
+    class MineDetector					    { quality = 2; price = 25000; };
     class I_UavTerminal					    { quality = 1; price = 2500; };
     class ItemGPS						    { quality = 0; price = 450; };
     class Integrated_NVG_F					{ quality = 2; price = 1500; }; //fullscreen nvg
