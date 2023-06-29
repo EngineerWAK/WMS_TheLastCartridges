@@ -14,58 +14,94 @@ params [
 ];
 
 _items = (items _caller);
-    
+//First, reset the "specialist" traits, for "after restart", no more permanent doctors or advanced engineers
+_caller setVariable ["WMS_Specialist_Bambi",false,true];
+_caller setVariable ["WMS_Specialist_Engineer",false,true];
+_caller setVariable ["WMS_Specialist_Medic",false,true];
+_caller setVariable ["WMS_Specialist_Breacher",false,true];
+_caller setVariable ["WMS_Specialist_Sniper",false,true];
+_caller setVariable ["ace_IsEngineer",0,true];
+_caller setVariable ["ace_medical_medicclass", 0, true];
+_caller setUnitTrait ["UAVHacker",false];
+_caller setUnitTrait ["explosiveSpecialist",false];
+_caller setUnitTrait ["Medic",false];
+_caller setUnitTrait ["Engineer",false];
+	
 //if (worldName == "xcam_taunus") then {_caller setUnitTrait ["camouflageCoef",0.8]};
 //Banana only for Bambi Loadout will put the Bambi class to Engineer/Medic level 2
 if ("ACE_Banana" in _items) then {
     _caller setVariable ["WMS_Specialist_Bambi",true,true];
-    	_caller setVariable ["WMS_Specialist_Engineer",true,true];
-    	_caller setVariable ["WMS_Specialist_Medic",true,true];
+    _caller setVariable ["WMS_Specialist_Engineer",true,true];
+    _caller setVariable ["WMS_Specialist_Medic",true,true];
+    _caller setVariable ["WMS_Specialist_Breacher",false,true];
     _caller setVariable ["ace_IsEngineer",2,true];
     _caller setVariable ["ace_medical_medicclass", 2, true];
 	_caller setUnitTrait ["Medic",true];
 	_caller setUnitTrait ["Engineer",true];
 	//_caller setUnitTrait ["UAVHacker",true]; //messing up with the new Base Weapon system
-	_caller setUnitTrait ["explosiveSpecialist",true];
+	//_caller setUnitTrait ["explosiveSpecialist",true];
 } else {
 	//BREACHER
 	if ("ACE_DefusalKit" in _items && {"ACE_DeadManSwitch" in _items} && {"ACE_M26_Clacker" in _items} && {"ACE_Clacker" in _items}) then {
+    	_caller setVariable ["WMS_Specialist_Bambi",false,true];
     	_caller setVariable ["WMS_Specialist_Breacher",true,true];
+    	_caller setVariable ["WMS_Specialist_Engineer",false,true];
+    	_caller setVariable ["WMS_Specialist_Sniper",false,true];
+    	_caller setVariable ["WMS_Specialist_Medic",false,true];
 		_caller setUnitTrait ["explosiveSpecialist",true];
     	_caller setVariable ["ace_IsEngineer",1,true];
+    	_caller setVariable ["ace_medical_medicclass", 0, true];
+		_caller setUnitTrait ["Medic",false];
+		_caller setUnitTrait ["Engineer",false];
 	};
 	//ENGINEER LEVEL
 	//ToolKit Item only for Engineer Loadout
 	if ("ToolKit" in _items) then {
+    	_caller setVariable ["WMS_Specialist_Bambi",false,true];
     	_caller setVariable ["WMS_Specialist_Engineer",true,true];
+    	_caller setVariable ["WMS_Specialist_Sniper",false,true];
+    	_caller setVariable ["WMS_Specialist_Medic",false,true];
+    	_caller setVariable ["WMS_Specialist_Breacher",false,true];
     	_caller setVariable ["ace_IsEngineer",2,true];
+    	_caller setVariable ["ace_medical_medicclass", 0, true];
+		_caller setUnitTrait ["Medic",false];
 		_caller setUnitTrait ["Engineer",true];
 	} else {
 		if ("ACE_RangeCard" in _items) then {
 			//snipers not engineer
+    		_caller setVariable ["WMS_Specialist_Bambi",false,true];
     		_caller setVariable ["WMS_Specialist_Sniper",true,true];
+    		_caller setVariable ["WMS_Specialist_Engineer",false,true];
+    		_caller setVariable ["WMS_Specialist_Medic",false,true];
+    		_caller setVariable ["WMS_Specialist_Breacher",false,true];
     		_caller setVariable ["WMS_CamoCoef",[0.8,0.1],true];
     		_caller setVariable ["WMS_AudiCoef",[0.8,0.1],true];
 			_caller setVariable ["ace_IsEngineer",0,true];
+    		_caller setVariable ["ace_medical_medicclass", 0, true];
 			_caller setUnitTrait ["audibleCoef",0.8];
 			_caller setUnitTrait ["camouflageCoef",0.8];
-		}else{
-			_caller setVariable ["ace_IsEngineer",1,true];
+			_caller setUnitTrait ["Medic",false];
+			_caller setUnitTrait ["Engineer",false];
 		};
 	
 	};
 	//MEDIC LEVEL
 	//SurgicalKit only for Medic Loadout
  	if ("ACE_surgicalKit" in _items) then {
+    	_caller setVariable ["WMS_Specialist_Bambi",false,true];
     	_caller setVariable ["WMS_Specialist_Medic",true,true];
+    	_caller setVariable ["WMS_Specialist_Engineer",false,true];
+    	_caller setVariable ["WMS_Specialist_Sniper",false,true];
+    	_caller setVariable ["WMS_Specialist_Breacher",false,true];
     	_caller setVariable ["ace_medical_medicclass", 2, true];
 		_caller setUnitTrait ["Medic",true];
+    	_caller setVariable ["ace_IsEngineer",0,true];
+		_caller setUnitTrait ["Engineer",false];
 	} else {
 		if ("ACE_RangeCard" in _items) then {
 			//snipers not medic
     		_caller setVariable ["ace_medical_medicclass", 0, true];
-		}else{
-    		_caller setVariable ["ace_medical_medicclass", 1, true];
+			_caller setUnitTrait ["Medic",false];
 		};
 	};
 };

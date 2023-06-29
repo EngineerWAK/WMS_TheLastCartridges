@@ -42,6 +42,7 @@ _specialItemsToSell = getArray(missionConfigFile >> "CfgItemsCategories" >> "spe
 _totalPriceDump = 0; //all item Converted to poptabs
 _totalScoreDump = 0;
 _TotalScoreBonus = 0;
+_priceDefaultRST = _priceDefault;
 
 if !(count _items == 0) then {
 _targetUID = getPlayerUID _target;
@@ -128,6 +129,7 @@ _playerScore = profileNamespace getVariable [_playerUID_ExileScore,0];
 	};
 	_totalPriceDump = round _totalPriceDump+_priceDefault;
 	if (true) then {diag_log format ["[WMS_fnc_processCargoDump]|WAK|TNA|WMS|player %3, Item %1, price %2", _item, _priceDefault, (getPlayerUID _target)]};
+	_priceDefault = _priceDefaultRST; //reset before next item
 }forEach _items;
 
 clearMagazineCargoGlobal _cargo; 
@@ -145,8 +147,8 @@ _target setVariable ["ExileScore", _playerScore+_totalScoreDump, true];
 saveProfileNamespace;
 if (WMS_MissionDebug) then {diag_log "[WMS_fnc_processCargoDump]|WAK|TNA|WMS|ProfileNameSpace Saved"};
 
-_msgHint = format ["Total: Poptabs: %1, Score: %2", (profileNamespace getVariable [_playerUID_Exilemoney,0]),(profileNamespace getVariable [_playerUID_ExileScore,0])];
+_msgHint = format ["Total: Money: %1, Score: %2", (profileNamespace getVariable [_playerUID_Exilemoney,0]),(profileNamespace getVariable [_playerUID_ExileScore,0])];
 _msgHint remoteExec ["hint", _targetOwner];
-[format ["Dumped for %1 Poptabs and %2 Respect", _totalPriceDump, _totalScoreDump]] remoteExecCall ['SystemChat',_targetOwner];
+[format ["Dumped for %1 $ and %2 Respect", _totalPriceDump, _totalScoreDump]] remoteExecCall ['SystemChat',_targetOwner];
 [_msgHint] remoteExecCall ['SystemChat',_targetOwner];
 };

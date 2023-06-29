@@ -38,6 +38,9 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
+	/*"Box_Syndicate_WpsLaunch_F",
+	"Box_Syndicate_Wps_F",
+	"Box_Syndicate_Ammo_F",*/
 	"Box_East_AmmoVeh_F",
 	"Box_NATO_AmmoVeh_F",
 	"I_SupplyCrate_F",
@@ -49,8 +52,5 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Box_NATO_Wps_F",
 	"Box_FIA_Wps_F", //not in igiload yet
 	"Box_FIA_Support_F",
-	"Box_T_East_Wps_F",
-	"Box_Syndicate_WpsLaunch_F",
-	"Box_Syndicate_Wps_F",
-	"Box_Syndicate_Ammo_F"
+	"Box_T_East_Wps_F"
 ];

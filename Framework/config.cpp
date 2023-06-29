@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.756_2023JUN26_GitHub"; //diag_log players stats at server start //forcing container sells logs //fixed vehicle trader filter //typeOf permanent vehicle destroyed log
+	name = "v1.758_2023JUN29_GitHub"; //Banned plsyers vehicles will respawn open to everyone to use/players traits adjustment
 };
 
 class Extended_PreInit_EventHandlers {

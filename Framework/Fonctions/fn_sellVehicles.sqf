@@ -80,7 +80,7 @@ _target setVariable ["ExileScore", _playerScore+_totalScoreDump, true];
 //need to eject all players fom it (should be done BEFORE the transaction or as "condition" for the AddAction)
 deleteVehicle _cargo;
 
-_msgHint = format ["Total: Poptabs: %1, Score: %2", (profileNamespace getVariable [_playerUID_Exilemoney,0]),(profileNamespace getVariable [_playerUID_ExileScore,0])];
+_msgHint = format ["Total: Money: %1, Score: %2", (profileNamespace getVariable [_playerUID_Exilemoney,0]),(profileNamespace getVariable [_playerUID_ExileScore,0])];
 _msgHint remoteExec ["hint", _targetOwner];
-[format ["Dumped for %1 Poptabs and %2 Respect", _totalPriceDump, _totalScoreDump]] remoteExecCall ['SystemChat',_targetOwner];
+[format ["Dumped for %1 $ and %2 Respect", _totalPriceDump, _totalScoreDump]] remoteExecCall ['SystemChat',_targetOwner];
 [_msgHint] remoteExecCall ['SystemChat',_targetOwner];

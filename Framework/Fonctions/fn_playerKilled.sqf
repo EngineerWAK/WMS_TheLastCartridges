@@ -107,9 +107,9 @@ if (isPlayer _killer && {_killer != _target} && {_target != _instigator}) then {
 	};
 };
 
-if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Poptabs: %4, Score: %5, Death: %6", _target, _targetUID, _playerKills,_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0]),(profileNamespace getVariable [_playerUID_ExileDeath,0])]};
+if (WMS_MissionDebug) then {diag_log format ["[PLAYERKILLED]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Money: %4, Score: %5, Death: %6", _target, _targetUID, _playerKills,_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0]),(profileNamespace getVariable [_playerUID_ExileDeath,0])]};
 
-//_msgHint = format ["K: %1, D: %2, Poptabs: %3, Score: %4", _playerKills,(profileNamespace getVariable [_playerUID_ExileDeath,0]),_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0])];
+//_msgHint = format ["K: %1, D: %2, Money: %3, Score: %4", _playerKills,(profileNamespace getVariable [_playerUID_ExileDeath,0]),_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0])];
 //_msgHint remoteExec ["hint", _targetOwner];
 //[_msgHint] remoteExecCall ['SystemChat',_targetOwner];
 //saveProfileNamespace;

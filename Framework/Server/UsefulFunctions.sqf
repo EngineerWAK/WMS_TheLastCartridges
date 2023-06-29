@@ -216,7 +216,18 @@ private _result = [];
 	_result pushBack _stats;
 }forEach _playerAlreadyConnected;
 _result;
-
+////////////////////////Exile stuff
+	_killed = "NPC_object";
+	_Instigator = "player_Object";
+	_InstigatorUID = getPlayerUID _Instigator;
+	_Rep_bonus = _killed getVariable ["Rep_bonus", 500];
+	_KillerRespect = _Instigator getVariable ["ExileScore", 0];
+	_KillerRespect = _KillerRespect + _Rep_bonus;
+	_Instigator setVariable ["ExileScore",_KillerRespect];
+	format["setAccountScore:%1:%2", _KillerRespect, _InstigatorUID] call ExileServer_system_database_query_fireAndForget;
+	ExileClientPlayerScore = _KillerRespect;
+	(owner _Instigator) publicVariableClient "ExileClientPlayerScore";
+	ExileClientPlayerScore = nil;
 ////////////////////////////////
 //auto FastCombat //need some stuff in NPC Kill EH to modify WMS_FC_LastKill
 WMS_FC_peaceTimer = 1200;

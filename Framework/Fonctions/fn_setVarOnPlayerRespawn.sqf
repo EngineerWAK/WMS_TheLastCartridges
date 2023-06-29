@@ -32,9 +32,9 @@ _target setVariable ["ExileScore", _playerScore, true];
 _target setVariable ["ExileDeath", _playerDeath, true]; //try to fix the double death count each time the player die and respawn //This has no sense xD
 _target setVariable ["PlayerInTraderZone", false];
 
-if (WMS_MissionDebug) then {diag_log format ["[SETVARONPLAYERRESPAWN]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Poptabs: %4, Score: %5, Death: %6", _target, _targetUID, _playerKills,_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0]),(profileNamespace getVariable [_playerUID_ExileDeath,0])]};
+if (WMS_MissionDebug) then {diag_log format ["[SETVARONPLAYERRESPAWN]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Money: %4, Score: %5, Death: %6", _target, _targetUID, _playerKills,_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0]),(profileNamespace getVariable [_playerUID_ExileDeath,0])]};
 
-_msgHint = format ["K: %1, D: %2, Poptabs: %3, Score: %4", _playerKills,(profileNamespace getVariable [_playerUID_ExileDeath,0]),_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0])];
+_msgHint = format ["K: %1, D: %2, Money: %3, Score: %4", _playerKills,(profileNamespace getVariable [_playerUID_ExileDeath,0]),_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0])];
 _msgHint remoteExec ["hint", _targetOwner];
 
 //add the fast travel addAction to territory owner:

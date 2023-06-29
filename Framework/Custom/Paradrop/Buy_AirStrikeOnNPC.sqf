@@ -8,7 +8,7 @@ if (alive (player)) then
   private _target = player;
 
   _target addAction [  
-  "<t color='#ff0033'>Call AirStrike for 8999 PopTabss</t>",
+  "<t color='#ff0033'>Call AirStrike for 8999 $</t>",
  { 
   	private _TargetAction = (_this select 1);
     private _amount = 8999;

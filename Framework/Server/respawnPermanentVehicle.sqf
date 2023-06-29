@@ -203,25 +203,46 @@ publicVariable "WMS_tradersMkrPos";
 
 			[_veh,0, true]call WMS_fnc_initVehicleAddAction;
 
-			if (typeOf _veh in _openVhl) then {
-				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, %2, checking for trader zone", _veh, typeOf _veh];};
-				_nearestTrader = [WMS_tradersMkrPos, _veh] call BIS_fnc_nearestPosition;
-				if ((_nearestTrader distance2D _veh) > ((_territoryOfficeData select 0)+(_territoryOfficeData select 3))) then {
-					if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle is protected", _veh,(_nearestTrader distance2D _veh)];};
+			if (_targetUID in (missionNameSpace getVariable ["WMS_BanList",[]])) then {
+				if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is BANNED, %2 is free to use until it is destroyed",_targetUID, typeOf _veh];};
+				_veh setVehicleLock "UNLOCKED";
+				_veh lockInventory false;
+				_veh allowDamage true;
+				_triggBan = createTrigger ["EmptyDetector", (position _veh), true]; 
+				_triggBan attachTo [_veh, [0,0,0]];
+				_triggBan setTriggerActivation ["ANYPLAYER", "PRESENT", true]; 
+				_triggBan setTriggerArea [8,8,0,false,8];
+				_triggBan setTriggerStatements 
+				//[parseText "<t color='#1cff14'>Not Red</t>"]remoteExec ["hint",0] //can not use it, messing with "" and ''
+				[ 
+  					"this",  
+  					"
+					'Free Vehicle to Use and Loot, from BANNED Player' remoteExec ['hint', (owner (thislist select 0))];
+  					",  
+  					"" 
+  				];
+				
+			}else {
+				if (typeOf _veh in _openVhl) then {
+					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, %2, checking for trader zone", _veh, typeOf _veh];};
+					_nearestTrader = [WMS_tradersMkrPos, _veh] call BIS_fnc_nearestPosition;
+					if ((_nearestTrader distance2D _veh) > ((_territoryOfficeData select 0)+(_territoryOfficeData select 3))) then {
+						if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle is protected", _veh,(_nearestTrader distance2D _veh)];};
+						_veh setVehicleLock "LOCKED";
+						_veh lockInventory true;
+						[_veh, true] remoteExec ["lockInventory", 0, true];
+					}else {
+						if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle UNLOCKED", _veh,(_nearestTrader distance2D _veh)];};
+						_vehicleProtect = false;
+					};
+				}else{ 
+					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 NOT blacklisted, %2", _veh, typeOf _veh];};
 					_veh setVehicleLock "LOCKED";
-					_veh lockInventory true;
-					[_veh, true] remoteExec ["lockInventory", 0, true];
-				}else {
-					if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 is blacklisted, closest Trader %2m away, vehicle UNLOCKED", _veh,(_nearestTrader distance2D _veh)];};
-					_vehicleProtect = false;
-				};
-			}else{ 
-				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 NOT blacklisted, %2", _veh, typeOf _veh];};
-				_veh setVehicleLock "LOCKED";
-				_veh lockInventory true; //that fucking lock "localy" on the server, not client side
-				[_veh, true] remoteExec ["lockInventory", 0, true]; //should execute the lock localy on every players connecting after the vehicle creation //YES!
-			};
+					_veh lockInventory true; //that fucking lock "localy" on the server, not client side
+					[_veh, true] remoteExec ["lockInventory", 0, true]; //should execute the lock localy on every players connecting after the vehicle creation //YES!
 			
+				};
+			};
 			if ((typeOf _veh) in _forceAmmoFacilities) then {
 				if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];};
 				_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
