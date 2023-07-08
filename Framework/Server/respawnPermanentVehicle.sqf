@@ -236,11 +236,23 @@ publicVariable "WMS_tradersMkrPos";
 						_vehicleProtect = false;
 					};
 				}else{ 
-					if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 NOT blacklisted, %2", _veh, typeOf _veh];};
-					_veh setVehicleLock "LOCKED";
-					_veh lockInventory true; //that fucking lock "localy" on the server, not client side
-					[_veh, true] remoteExec ["lockInventory", 0, true]; //should execute the lock localy on every players connecting after the vehicle creation //YES!
-			
+					if ((_vehiclesManagement select 5) == 0) then {					
+						if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 NOT blacklisted, %2", _veh, typeOf _veh];};
+						_veh setVehicleLock "LOCKED";
+						_veh lockInventory true; //that fucking lock "localy" on the server, not client side
+						[_veh, true] remoteExec ["lockInventory", 0, true]; //should execute the lock localy on every players connecting after the vehicle creation //YES
+					}else{					
+						_nearestTrader = [WMS_tradersMkrPos, _veh] call BIS_fnc_nearestPosition;
+						if ((_nearestTrader distance2D _veh) > (_territoryOfficeData select 0)) then {
+							if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 NOT blacklisted and NOT in traders, %2", _veh, typeOf _veh];};
+							_veh setVehicleLock "LOCKED";
+							_veh lockInventory true;
+							[_veh, true] remoteExec ["lockInventory", 0, true];
+						}else {
+							if (true) then {diag_log format ["|WAK|TNA|WMS|RespawnPermanentVehicle %1 unlockeds in traderZone, %2", _veh, typeOf _veh];};
+							_vehicleProtect = false;
+						};
+					};
 				};
 			};
 			if ((typeOf _veh) in _forceAmmoFacilities) then {

@@ -1,5 +1,19 @@
 
     //SPECIAL PRICED ITEMS
+		//SOG others
+    class vn_b_item_bandage_01			{ quality = 6; price = 205; };
+    class vn_b_item_bugjuice_01			{ quality = 6; price = 205; };
+    class vn_b_item_cigs_01				{ quality = 6; price = 205; };
+    class vn_b_item_gunoil_01			{ quality = 6; price = 205; };
+    class vn_b_item_lighter_01			{ quality = 6; price = 205; };
+    class vn_b_item_rations_01			{ quality = 6; price = 205; };
+    class vn_prop_med_dysentery			{ quality = 6; price = 506; };
+    class vn_prop_med_antibiotics		{ quality = 6; price = 256; };
+    class vn_prop_med_antimalaria		{ quality = 6; price = 256; };
+    class vn_prop_med_antivenom			{ quality = 6; price = 256; };
+    class vn_prop_med_painkillers		{ quality = 6; price = 256; };
+    class vn_prop_med_wormpowder		{ quality = 6; price = 256; };
+        /////
     class Csat_Id_01				    { quality = 6; price = 750; };
     class Csat_Id_02				    { quality = 6; price = 750; };
     class Csat_Id_03				    { quality = 6; price = 750; };
@@ -38,12 +52,42 @@
     class rhs_m136_mag				    { quality = 1; price = -100; };//M136 HEAT
     //SPECIAL PRICED ITEMS
     //////////////////////
+
     class Money_bunch				    { quality = 1; price = 60; }; //30
     class Money_roll				    { quality = 1; price = 300; }; //150
     class Money_stack				    { quality = 1; price = 1200; }; //600
     class Money_stack_quest			    { quality = 1; price = 2400; }; //1200
     class Money						    { quality = 1; price = 16000; }; //8000 //craft only Money_stack_quest x7
 
+		//SOG Drinks (some...)
+	class vn_prop_drink_01                { quality = 0; price = 36; };
+	class vn_prop_drink_02                { quality = 0; price = 36; };
+	class vn_prop_drink_03                { quality = 0; price = 36; };
+    class vn_prop_drink_04                { quality = 0; price = 36; };
+    class vn_prop_drink_05                { quality = 0; price = 36; };
+    class vn_prop_drink_06                { quality = 0; price = 36; };
+    class vn_prop_drink_10                { quality = 0; price = 36; };
+    class vn_prop_drink_08_01             { quality = 0; price = 36; };
+    class vn_prop_drink_07_01             { quality = 0; price = 36; };
+    class vn_prop_drink_07_02             { quality = 0; price = 36; };
+    class vn_prop_drink_07_03             { quality = 0; price = 36; };
+    class vn_prop_drink_09_01             { quality = 0; price = 36; };
+
+		//SOG Food (some...)
+    class vn_prop_food_pir_01_01          { quality = 0; price = 36; };
+    class vn_prop_food_pir_01_02          { quality = 0; price = 36; };
+    class vn_prop_food_pir_01_03          { quality = 0; price = 36; };
+    class vn_prop_food_pir_01_04          { quality = 0; price = 36; };
+    class vn_prop_food_pir_01_05          { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_01         { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_02         { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_03         { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_04         { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_05         { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_06         { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_07         { quality = 0; price = 36; };
+    class vn_prop_food_lrrp_01_08         { quality = 0; price = 36; };
+        /////
     class ACE_Can_Franta                { quality = 0; price = 25; };
     class ACE_Can_RedGull               { quality = 0; price = 25; };
     class ACE_Can_Spirit                { quality = 0; price = 25; };
@@ -113,3 +157,20 @@
     class rhs_VOG25 	        { quality = 2; price = 70; };
     class rhs_VOG25p 	        { quality = 2; price = 70; };
     class rhs_vg40tb 	        { quality = 2; price = 70; };
+
+        //SOG
+    class vn_22mm_cs_mag 	        { quality = 2; price = 70; };
+    class vn_22mm_he_mag 	        { quality = 2; price = 70; };
+    class vn_22mm_lume_mag 	        { quality = 2; price = 70; };
+    class vn_20mm_dgn_wp_mag 	    { quality = 2; price = 70; };
+    class vn_20mm_f1n60_frag_mag 	{ quality = 2; price = 70; };
+    class vn_22mm_m17_frag_mag 	    { quality = 2; price = 70; };
+    class vn_22mm_m19_wp_mag 	    { quality = 2; price = 70; };
+    class vn_22mm_m1a2_frag_mag 	{ quality = 2; price = 70; };
+    class vn_22mm_m22_smoke_mag 	{ quality = 2; price = 70; };
+    class vn_22mm_m60_frag_mag 	    { quality = 2; price = 70; };
+    class vn_22mm_m60_heat_mag 	    { quality = 2; price = 70; };
+    class vn_22mm_m61_frag_mag 	    { quality = 2; price = 70; };
+    class vn_22mm_m9_heat_mag 	    { quality = 2; price = 70; };
+    class vn_22mm_n94_heat_mag 	    { quality = 2; price = 70; };
+    class vn_20mm_pgn60_heat_mag 	{ quality = 2; price = 70; };

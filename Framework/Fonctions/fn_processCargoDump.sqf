@@ -126,9 +126,9 @@ _playerScore = profileNamespace getVariable [_playerUID_ExileScore,0];
 			_priceDefault = getNumber(missionConfigFile >> "CfgAllPrices" >> "Money" >> "price");
 			_scoreDumpCoef = 0;
 			};};};};};
+		if (true) then {diag_log format ["[WMS_fnc_processCargoDump]|WAK|TNA|WMS|player %3, Item %1, price %2", _item, _priceDefault, (getPlayerUID _target)]};
 	};
 	_totalPriceDump = round _totalPriceDump+_priceDefault;
-	if (true) then {diag_log format ["[WMS_fnc_processCargoDump]|WAK|TNA|WMS|player %3, Item %1, price %2", _item, _priceDefault, (getPlayerUID _target)]};
 	_priceDefault = _priceDefaultRST; //reset before next item
 }forEach _items;
 

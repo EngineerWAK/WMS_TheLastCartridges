@@ -23,13 +23,13 @@ if (_traderType == 'specopsItems_RHS') then {
 };
 if (_traderType == 'specopsExplo') then {
 	_traderType = 'specops'; //' ' and not " "
-	_itemsCategories = getArray(missionConfigFile >> "CfgAmmoCategories" >> "RocketMissiles" >> "items");
+	_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "RocketMissiles" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops" >> "explo");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops" >> "grenades");
 };
 if (_traderType == 'specopsExplo_RHS') then {
 	_traderType = 'specops'; //' ' and not " "
-	_itemsCategories = getArray(missionConfigFile >> "CfgAmmoCategories" >> "RocketMissiles_RHS" >> "items");
+	_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "RocketMissiles_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops_RHS" >> "explo");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops_RHS" >> "grenades");
 };
@@ -61,10 +61,10 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	};
 		//MAGAZINES
 	if (
-			_item in getArray(missionConfigFile >> "CfgAmmoCategories" >> "RocketMissiles" >> "items") ||
+			_item in getArray(missionConfigFile >> "CfgItemsCategories" >> "RocketMissiles" >> "items") ||
 			_item in getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops" >> "explo") ||
 			_item in getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops" >> "grenades") ||
-			_item in getArray(missionConfigFile >> "CfgAmmoCategories" >> "RocketMissiles_RHS" >> "items") ||
+			_item in getArray(missionConfigFile >> "CfgItemsCategories" >> "RocketMissiles_RHS" >> "items") ||
 			_item in getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops_RHS" >> "explo") ||
 			_item in getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops_RHS" >> "grenades")
 		) then {

@@ -35,6 +35,27 @@ This version of the Framework include:
 You will need at least CBA, ACE3, RHS AFRF/USAF/GREF<br/>
 CfgSounds and custom\ogg will certainly change<br/>
 
+## S.O.G Prairie Fire
+
+Description.ext : <br/>
+
+    //#include "CfgRespawnInventory.hpp"
+    #include "CfgRespawnInventory_SOG.hpp"
+
+Config.cpp : <br/>
+
+    //#include "ClassNames\WeaponsCategories.hpp"
+    #include "ClassNames\WeaponsCategories_SOG.hpp"
+    //#include "ClassNames\VehiclesCategories.hpp"
+    #include "ClassNames\VehiclesCategories_SOG.hpp"
+    //#include "ClassNames\ItemsCategories.hpp"
+	//#include "ClassNames\EquipementCategories.hpp"
+    #include "ClassNames\ItemsCategories_SOG.hpp"
+	#include "ClassNames\EquipementCategories_SOG.hpp"
+	//#include "ClassNames\ClaimReward.hpp"
+	#include "ClassNames\ClaimReward_SOG.hpp"
+
+
 ## Custom Maps
 
 Look at NewMissionsFileSetup.md to create your own server config/map and then export a mission.sqm<br/>

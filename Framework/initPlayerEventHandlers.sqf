@@ -94,10 +94,10 @@ player addMPEventHandler ["mpkilled", {
 		if (_actualPlayer && hasInterface) then {
 			//First, reset the "specialist" traits, for "after restart", no more permanent doctors or advanced engineers
 			player setVariable ["WMS_Specialist_Bambi",false,true];
-			player setVariable ["WMS_Specialist_Engineer",false,true];
-			player setVariable ["WMS_Specialist_Medic",false,true];
 			player setVariable ["WMS_Specialist_Breacher",false,true];
+			player setVariable ["WMS_Specialist_Engineer",false,true];
 			player setVariable ["WMS_Specialist_Sniper",false,true];
+			player setVariable ["WMS_Specialist_Medic",false,true];
 			player setVariable ["ace_IsEngineer",0,true];
 			player setVariable ["ace_medical_medicclass", 0, true];
 			player setUnitTrait ["UAVHacker",false];

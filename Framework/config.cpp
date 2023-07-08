@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.758_2023JUN29_GitHub"; //Banned plsyers vehicles will respawn open to everyone to use/players traits adjustment
+	name = "v1.762_2023JUL09_GitHub"; //SOG Prairie Fire Setup //players traits still need a fix
 };
 
 class Extended_PreInit_EventHandlers {
@@ -24,22 +24,26 @@ class CfgBuildingsCategories
 {	//_weaponsCategories = getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items");
     #include "ClassNames\BuildingsLootSpawn.hpp"
 };
-class CfgAmmoCategories
+/*class CfgAmmoCategories //NOT USED ANYMORE
 {	//_weaponsCategories = getArray(missionConfigFile >> "CfgAmmoCategories" >> "Ammunition" >> "items");
     #include "ClassNames\AmmoCategories.hpp"
-};
+};*/
 class CfgWeapCategories
 {	//_weaponsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "SniperRifles" >> "items");
     #include "ClassNames\WeaponsCategories.hpp"
+    //#include "ClassNames\WeaponsCategories_SOG.hpp"
 };
 class CfgVehicleCategories
 {	//_vehicleCategories = getArray(missionConfigFile >> "CfgVehicleCategories" >> "Cars" >> "items");
     #include "ClassNames\VehiclesCategories.hpp"
+    //#include "ClassNames\VehiclesCategories_SOG.hpp"
 };
 class CfgItemsCategories
 {   //_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "ItemsBlabla" >> "items");
     #include "ClassNames\ItemsCategories.hpp"
 	#include "ClassNames\EquipementCategories.hpp"
+    //#include "ClassNames\ItemsCategories_SOG.hpp"
+	//#include "ClassNames\EquipementCategories_SOG.hpp"
 };
 class CfgLootToSpawnCategories
 {   //_itemsCategories = getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items");
@@ -72,6 +76,21 @@ class CfgPVP
 class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recognized as Medical facilities
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 	vehicles[] = {
+		//SOG Medicals
+		"vn_b_wheeled_lr2a_03_nz_army",
+		"vn_i_wheeled_btr40_02_fank_70",
+		"vn_b_armor_m577_02", //m113 medic
+		"vn_o_armor_btr50pk_03_nva65",
+		//SOG Medical choppers
+		"vn_b_air_uh1b_01_02",
+		"vn_b_air_uh1b_01_01",
+		"vn_b_air_uh1b_01_04",
+		"vn_b_air_uh1d_01_02", //bigger open
+		"vn_b_air_uh1d_01_07", //bigger open
+		"vn_o_air_mi2_02_02",
+		"vn_b_air_ch47_02_02",
+		//SOG Medical ship
+		"vn_b_boat_06_02", //big forced medical
 		//GM
 		"gm_dk_army_m113a1dk_medic",
 		"gm_ge_army_m113a1g_medic",
@@ -149,7 +168,12 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 class CfgForceRepairFacilities //some Repair vehicles/buildings are not recognized as Medical facilities
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
 	vehicles[] = 
-	{
+	{	
+		//SOG
+		"vn_b_wheeled_m54_repair_aus_army",//claimreward
+		"vn_b_wheeled_m54_repair",
+		//SOG Medical ship
+		"vn_b_boat_06_02", //big forced medical
 		//GM
 		"gm_dk_army_m113a1dk_engineer",
 		"gm_dk_army_bpz2a0",
@@ -182,6 +206,10 @@ class CfgForceAmmoFacilities //some Ammo vehicles/buildings are not recognized a
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceAmmoFacilities" >> "vehicles");
 	vehicles[] = 
 	{
+		//SOG
+		"vn_b_wheeled_m54_ammo",
+		//SOG Medical ship
+		"vn_b_boat_06_02", //big forced medical
 		//GM
 		"gm_dk_army_bpz2a0",
 		"gm_ge_army_kat1_454_reammo",
@@ -230,90 +258,8 @@ class CfgClaimReward
 		{0.4, 0.2,0.2,0.3, 0.3},
 		{0.5, 0.3,0.2,0.2, 0.2}
 	};
-	staticList[] =
-	{
-		{"RHS_Metis_Gun_Bag",
-		"RHS_Metis_Tripod_Bag"},
-		{"RHS_Kornet_Gun_Bag",
-		"RHS_Kornet_Tripod_Bag"},
-		{"RHS_DShkM_Gun_Bag",
-		"RHS_DShkM_TripodHigh_Bag"},
-		{"RHS_Kord_Tripod_Bag",
-		"RHS_Kord_Gun_Bag"},
-		{"RHS_NSV_Tripod_Bag",
-		"RHS_NSV_Gun_Bag"},
-		{"RHS_SPG9_Gun_Bag",
-		"RHS_SPG9_Tripod_Bag"},
-		{"rhs_Tow_Gun_Bag",
-		"rhs_TOW_Tripod_Bag"},
-		{"rhs_M252_Gun_Bag",
-		"rhs_M252_Bipod_Bag"}
-	};
-	itemsList[] =
-	{
-		{
-			"rocketMan",
-			"ACE_Can_Franta",
-			"ACE_Can_RedGull",
-			"ACE_Can_Spirit"
-		},
-		{
-			"static",
-			"ACE_fortify",
-			"B_Patrol_Respawn_bag_F",
-			"B_Respawn_Sleeping_bag_brown_F",
-			"I_UAV_01_backpack_F",
-			"H_HelmetO_ViperSP_ghex_F"
-		},
-		{
-			"rhs_weap_asval_grip_npz",
-			"rhs_weap_M107_w",
-			"MMG_02_black_F",
-			"MMG_01_hex_F",
-			"rhs_weap_m32",
-			"rhs_weap_SCARH_USA_LB",
-			"rhs_weap_SCARH_USA_CQC",
-			"rhs_weap_SCARH_USA_STD",
-			"rhs_weap_m14_socom_rail"
-		},
-		{
-			"rhs_weap_smaw",
-			"rhs_weap_rpg7",
-			"launch_I_Titan_short_F",
-			"rhs_weap_fgm148"
-		},
-		{
-			"rhsgref_tla_g_ZU23", //ZSU23-2 as test
-			"rhsgref_tla_g_ZU23", //ZSU23-2 as test
-			"RHS_Stinger_AA_pod_WD", //stingers station
-			"rhs_Igla_AA_pod_vdv", //Igla station
-			"rhsgref_nat_d30_at", //AT cannon
-
-			"I_UAV_02_CAS_F",
-			
-			"B_T_VTOL_01_armed_F",
-			"B_Plane_CAS_01_F", //A10
-			"rhs_l159_CDF", //small fighter
-			"rhs_uh1h_hidf_gunship",
-			"rhs_uh1h_idap",
-			"rhs_uh1h_un",
-
-			"RHS_M6_wd", //Bradley stingers
-			"I_E_APC_tracked_03_cannon_F", //FV-720
-			"rhsusf_stryker_m1134_wd", //Missiles
-			"rhsgref_cdf_zsu234",
-			"rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom",
-			"rhs_bmd1pk",
-			"rhs_bmd2k",
-			"RHS_Ural_Zu23_VDV_01",
-			"rhsgref_nat_btr70",
-			"rhs_t72bc_tv",
-			"rhs_btr80a_vdv",
-			"rhsusf_m1152_rsv_usarmy_wd",
-			"rhsusf_m1151_m240_v3_usmc_wd",
-			"RHS_Ural_Repair_VDV_01"
-		}
-	};
+	#include "ClassNames\ClaimReward.hpp"
+	//#include "ClassNames\ClaimReward_SOG.hpp"
 };
 //_customMapMarkers = getArray(missionConfigFile >> "CfgOfficeTrader" >> "MarkersToCheck");
 class CfgOfficeTrader
@@ -428,7 +374,8 @@ class CfgOfficeTrader
 		28, //number of restart before warning
 		10000, //price to pay to the trader to reset restart counter //not yet
 		3, //allowed vehicles at start, no territory, that include vehicles from "claim reward"
-		1 //0 = no more vehicles //1 or 2 or 3 or n = use territories level to count max vehicles, n*territory level of all territories. if 1, 2 territories level 6 = "allowed vehicle at start" + 6 + 6
+		1, //0 = no more vehicles //1 or 2 or 3 or n = use territories level to count max vehicles, n*territory level of all territories. if 1, 2 territories level 6 = "allowed vehicle at start" + 6 + 6
+		0 //0 = false //unlock vehicles in traders zone // _SOG = 1
 	};
 
 	MarkersToCheck[] = 

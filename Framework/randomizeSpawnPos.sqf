@@ -23,7 +23,7 @@ _spawnAllowed = true;
 _customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
 _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];
 _customPlayerTraits = missionNamespace getVariable["WMS_client_customRespawnTra",[false,false,false,false,false]];
-if (WMS_MissionDebug) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Randomazing Position: _customRespawnPos %1, _pos %2, _target %3, Traits %4", _customRespawnPos, _pos, (name _target),_customPlayerTraits]};	
+if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Randomazing Position: _customRespawnPos %1, _pos %2, _target %3, Traits %4", _customRespawnPos, _pos, (name _target),_customPlayerTraits]};	
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
 	//"CustomRespawn"
@@ -48,38 +48,53 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 		uisleep 1;
 		if(((player getVariable ['playerInRestrictionZone',-1]) == -1)) then {player setVariable ['playerInRestrictionZone',0]};
-   		player setVariable ["WMS_Specialist_Bambi",(_customPlayerTraits select 0)];
-    	player setVariable ["WMS_Specialist_Breacher",(_customPlayerTraits select 1)];
-    	player setVariable ["WMS_Specialist_Engineer",(_customPlayerTraits select 2)];
-    	player setVariable ["WMS_Specialist_Sniper",(_customPlayerTraits select 3)];
-    	player setVariable ["WMS_Specialist_Medic",(_customPlayerTraits select 4)];
-		//if ((_customPlayerTraits select 0))then{}; do nothing for Bambi status at custom Respawn
-		if ((_customPlayerTraits select 1))then{
-			player setUnitTrait ["explosiveSpecialist",true];
-    		player setVariable ["ace_IsEngineer",1,true];
-			//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Breacher Skill';
-			systemChat 'SKILL SET | You now have Breacher Skill';
-		};
-		if ((_customPlayerTraits select 2))then{
+   		player setVariable ["WMS_Specialist_Bambi",(_customPlayerTraits select 0),true];
+    	player setVariable ["WMS_Specialist_Breacher",(_customPlayerTraits select 1),true];
+    	player setVariable ["WMS_Specialist_Engineer",(_customPlayerTraits select 2),true];
+    	player setVariable ["WMS_Specialist_Sniper",(_customPlayerTraits select 3),true];
+    	player setVariable ["WMS_Specialist_Medic",(_customPlayerTraits select 4),true];
+			if ((_customPlayerTraits select 1))then{
+    			//player setVariable ["WMS_Specialist_Breacher",true,true]; //done already
+				player setUnitTrait ["explosiveSpecialist",true];
+    			player setVariable ["ace_IsEngineer",1,true];
+				//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Breacher Skill';
+				systemChat 'SKILL SET | You now have Breacher Skill';
+			};
+			if ((_customPlayerTraits select 2))then{
+    			//player setVariable ["WMS_Specialist_Engineer",true,true]; //done already
+    			player setVariable ["ace_IsEngineer",2,true];
+				player setUnitTrait ["Engineer",true];
+				//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Advanced Engineer';
+				systemChat 'SKILL SET | You are now Advanced Engineer';
+			};
+			if ((_customPlayerTraits select 3))then{
+    			//player setVariable ["WMS_Specialist_Sniper",true,true]; //done already
+    			player setVariable ["WMS_CamoCoef",[0.8,0.1],true];
+    			player setVariable ["WMS_AudiCoef",[0.8,0.1],true];
+				player setUnitTrait ["audibleCoef",0.8];
+				player setUnitTrait ["camouflageCoef",0.8];
+				//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Sniper Skill';
+				systemChat 'SKILL SET | You now have Sniper Skill';
+			};
+			if ((_customPlayerTraits select 4))then{
+    			//player setVariable ["WMS_Specialist_Medic",true,true]; //done already
+    			player setVariable ["ace_medical_medicclass", 2, true];
+				player setUnitTrait ["Medic",true];
+				//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Doctor';
+				systemChat 'SKILL SET | You are now Doctor';
+			};
+		if ((_customPlayerTraits select 0))then{
+    		//player setVariable ["WMS_Specialist_Bambi",true,true]; //done already
+    		player setVariable ["WMS_Specialist_Engineer",true,true];
+    		player setVariable ["WMS_Specialist_Medic",true,true];
+    		//player setVariable ["WMS_Specialist_Breacher",false,true];
     		player setVariable ["ace_IsEngineer",2,true];
-			player setUnitTrait ["Engineer",true];
-			//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Advanced Engineer';
-			systemChat 'SKILL SET | You are now Advanced Engineer';
-		};
-		if ((_customPlayerTraits select 3))then{
-    		player setVariable ["WMS_CamoCoef",[0.8,0.1],true];
-    		player setVariable ["WMS_AudiCoef",[0.8,0.1],true];
-			player setUnitTrait ["audibleCoef",0.8];
-			player setUnitTrait ["camouflageCoef",0.8];
-			//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Sniper Skill';
-			systemChat 'SKILL SET | You now have Sniper Skill';
-		};
-		if ((_customPlayerTraits select 4))then{
     		player setVariable ["ace_medical_medicclass", 2, true];
 			player setUnitTrait ["Medic",true];
-			//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Doctor';
-			systemChat 'SKILL SET | You are now Doctor';
+			player setUnitTrait ["Engineer",true];
+			systemChat 'SKILL SET | You now have Bambi Skill';
 		};
+		
 		player allowDamage true;
 		missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
 		missionNamespace setVariable["WMS_client_customRespawnAce",[]];
@@ -130,11 +145,11 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 };
 
 if ((getPlayerUID player) in WMS_customRespawnList) then {
-	if (WMS_MissionDebug) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
+	if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Deleting CustomSpawn information _customRespawnToDelete %1", _customRespawnToDelete]};
 	[player] remoteExec ["WMS_fnc_deleteRespawnData",2];
 	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 };
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test
 //_target execVM "InitPlayerSetTrait.sqf";
-if (WMS_MissionDebug) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|player respawned and ready to fight %1", time]};
+if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|player respawned and ready to fight %1", time]};

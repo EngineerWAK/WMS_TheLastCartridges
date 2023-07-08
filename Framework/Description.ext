@@ -10,6 +10,7 @@
  */
 #include "CfgRoles.hpp"
 #include "CfgRespawnInventory.hpp"
+//#include "CfgRespawnInventory_SOG.hpp"
 #include "CfgSounds.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgRemoteExec.hpp"

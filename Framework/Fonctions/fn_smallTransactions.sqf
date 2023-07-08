@@ -24,4 +24,4 @@ _newMoney = (_playerMoney-_price);
 
 profileNamespace setVariable [_playerUID_Exilemoney,_newMoney];
 _caller setVariable ["ExileMoney", _newMoney, true];
-if (WMS_MissionDebug) then {diag_log format ["[SMALL_TRANSACTION]|WAK|TNA|WMS| _playerMoney %1- _price %2= _newMoney", _playerMoney, _price, _newMoney]};
+if (WMS_MissionDebug) then {diag_log format ["[SMALL_TRANSACTION]|WAK|TNA|WMS| _playerMoney= %1 | _price= %2 | _newMoney= %3", _playerMoney, _price, _newMoney]};

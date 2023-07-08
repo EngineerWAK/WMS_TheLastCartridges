@@ -79,7 +79,7 @@ publicVariable "WMS_ServRestartSeconds";
 
 //GetMarkers position 
 _result = [];
-{
+{	
 	_result pushBack (getMarkerPos _x)
 }forEach allMapMarkers;
 _result
@@ -229,6 +229,131 @@ _result;
 	(owner _Instigator) publicVariableClient "ExileClientPlayerScore";
 	ExileClientPlayerScore = nil;
 ////////////////////////////////
+//Export stuff from crate, much easier than from cfg
+_crate = cursorTarget;
+_result = [(typeOf _crate),[],[],[],[]];
+{
+	_type = _x;
+	_result select (_type select 1) pushback (_type select 0);
+	{
+		if !(_x in (_result select (_type select 1))) then {_result select (_type select 1) pushBack _x};
+	}forEach (_type select 2);
+	_result select (_type select 1) pushback (count (_result select (_type select 1))-1);
+}forEach [
+	["Weapons",1,(WeaponCargo _crate)],
+	["Magazines",2,(magazineCargo _crate)],
+	["BackPacks",3,(backPackCargo _crate)],
+	["Items",4,(itemCargo _crate)]
+];
+//
+_cratesClasses = [
+	"vn_b_ammobox_kit_anzac",
+	"vn_o_ammobox_kit_nva",
+	"vn_b_ammobox_kit_sog",
+	"vn_b_ammobox_kit_usmc",
+	"vn_b_ammobox_supply_03",
+	"vn_b_ammobox_sog"
+];
+_result = [
+	"All Crates Export",
+	["WEAPONS"],
+	["MAGAZINES"],
+	["BACKPACKS"],
+	["ITEMS",["HEADGEARS"],["UNIFORMS"],["VESTS"],["BINOCULARS"],["BIPODS"],["SUPPRESSORS"],["LASERS"],["OTHERS"]]];
+_cratesObjects = [];
+{
+	_box = _x createVehicle position player;
+	_cratesObjects pushback _box;
+}forEach _cratesClasses;
+{
+	_crate = _x;
+	{
+		_type = _x;
+		_array = (_type select 1);
+		{
+			if !(_type select 0 == "Items") then {
+				if !(_x in (_result select _array)) then {_result select _array pushBack _x};
+			}else{
+				if (_x isKindOf ["HelmetBase", configFile >> "CfgWeapons"]) then {
+					if !(_x in (_result select _array select 1)) then {_result select _array select 1 pushBack _x};
+				}else{
+					if (_x isKindOf ["Uniform_Base", configFile >> "CfgWeapons"]) then {
+						if !(_x in (_result select _array select 2)) then {_result select _array select 2 pushBack _x};
+					}else{
+						if (_x isKindOf ["Vest_Camo_Base", configFile >> "CfgWeapons"]||_x isKindOf ["Vest_NoCamo_Base", configFile >> "CfgWeapons"]) then {
+							if !(_x in (_result select _array select 3)) then {_result select _array select 3 pushBack _x};
+						}else{
+							if (_x isKindOf ["Binocular", configFile >> "CfgWeapons"]) then {
+								if !(_x in (_result select _array select 4)) then {_result select _array select 4 pushBack _x};
+							}else{
+								if (_x isKindOf ["bipod_01_F_snd", configFile >> "CfgWeapons"]||_x isKindOf ["vn_acc_bipod_base", configFile >> "CfgWeapons"]||_x isKindOf ["vn_acc_camowrap_base", configFile >> "CfgWeapons"]) then {
+									if !(_x in (_result select _array select 5)) then {_result select _array select 5 pushBack _x};
+								}else{
+									if (_x isKindOf ["muzzle_snds_H", configFile >> "CfgWeapons"]) then {
+										if !(_x in (_result select _array select 6)) then {_result select _array select 6 pushBack _x};
+									}else{
+										if (_x isKindOf ["acc_pointer_IR", configFile >> "CfgWeapons"]||_x isKindOf ["acc_flashlight", configFile >> "CfgWeapons"]||_x isKindOf ["acc_flashlight_pistol", configFile >> "CfgWeapons"]) then {
+											if !(_x in (_result select _array select 7)) then {_result select _array select 7 pushBack _x};
+										}else{
+											if !(_x in (_result select _array select 8)) then {_result select _array select 8 pushBack _x};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		}forEach (_type select 2);
+	}forEach [
+		["Weapons",1,(WeaponCargo _crate)],
+		["Magazines",2,(magazineCargo _crate)],
+		["BackPacks",3,(backPackCargo _crate)],
+		["Items",4,(itemCargo _crate)]
+	];
+}forEach _cratesObjects;
+////////////////////////
+//Extract classeNames// from Larrow, bohemia's forum, modified to get SOG stuff
+result = [];
+filtered = [[],[],[],[],[]];
+{
+	_cfg = (configFile >> "CfgVehicles");
+	for "_i" from 0 to ((count _cfg)-1) do { 
+		if (isClass ((_cfg select _i) ) ) then { 
+			_cfgName = configName (_cfg select _i); 
+			_author = getText ((_cfg select _i) >> "author");
+			if (
+				(_author == "Savage Game Design") && 
+				(_cfgName isKindOf _x) && 
+				(getNumber ((_cfg select _i) >> "scope") == 2)
+			) then { 
+   				_side = getNumber ((_cfg select _i) >> "side"); 
+   				_temp = filtered select _side; 
+   				_temp set [count _temp, _cfgName ]; 
+				filtered set [_side, _temp]; 
+			}; 
+		}; 
+	};
+	result pushBack _x;
+	result pushBack filtered;
+	filtered = [[],[],[],[],[]];
+}forEach ["vn_armor_tank_base","APC_Tracked_01_base_F","vn_wheeled_truck_base","vn_wheeled_car_base","Helicopter","Plane","Ship","StaticWeapon"]; 
+//BackPacks "Bag_Base",
+//food "vn_magazine_provision_base"
+/////////////////
+	_cfg = (configFile >> "CfgWeapons"); 
+	["CannonCore","vn_mgun_base",
+	"vn_atgm_launcher_base","vn_Launcher_Base_F","vn_lmg","vn_m63a_lmg","vn_rifle762","vn_m16","vn_shotgun","vn_smg","vn_kbkg","vn_pistol",
+	"HelmetBase","Uniform_Base","Vest_NoCamo_Base",
+	"vn_acc_bipod_base","vn_optic_base","muzzle_snds_H",
+	"vn_acc_bayo_base","vn_melee_base",
+	"vn_itemcore","DetectorCore","Binocular"];
+	//"vn_acc_camowrap_base" weapons camo //"ItemRadio" a LOT of them //"vn_bomblauncher" well, BOMBS //"vn_m79" //"vn_m63a_lmg"
+/////////////////////////////
+	_cfg = (configFile >> "CfgMagazines");
+	["vn_lmagazine","vn_lmgmag_base","vn_riflemag_base","vn_shotgunmag_base","vn_smgmag_base","vn_pistolmag_base","vn_handgrenade_base","vn_mine_m18_mag",
+		"vn_prop_base"];
+/////////////
 //auto FastCombat //need some stuff in NPC Kill EH to modify WMS_FC_LastKill
 WMS_FC_peaceTimer = 1200;
 WMS_FC_Timer = 600;

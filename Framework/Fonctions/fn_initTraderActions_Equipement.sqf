@@ -61,7 +61,8 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 			_itemName = format ["HMT %1",_itemName];
 		};
 	};
-
+	if ("vn_prop_food" in _item) then {_itemName = "yummy can from SOG"}; //weird stuff with SOG food/drink
+	if ("vn_prop_drink" in _item) then {_itemName = "yummy drink from SOG"}; //weird stuff with SOG food/drink
 	_display = ("<t size=""0.85""  color=""#ffffff"">" + (str _itemName) +"</t>") + ("<t size=""0.85""  color=""#ffffff"">" + ("$") + (str _price) +"</t>");
 	//_traderColors = getArray(missionConfigFile >> "CfgRespectColors" >> "Colors");
 	switch (_quality) do

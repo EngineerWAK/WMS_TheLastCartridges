@@ -20,6 +20,81 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	["wheeled_apc_f", 10],
+	["tank", 5],
+	["car", 5],
+	["truck_f", 5],
+	["bus", 30],
+	//SOG Medicals
+	["vn_b_wheeled_lr2a_03_nz_army", 	5],
+	["vn_i_wheeled_btr40_02_fank_70", 	5],
+	["vn_b_armor_m577_02", 				5], //m113 medic
+	["vn_o_armor_btr50pk_03_nva65", 	5],
+	//////
+	//SOG Unarmed
+	["vn_o_bicycle_01_pl", 				5],
+	["vn_o_bicycle_02_pl", 				10],
+	["vn_o_car_01_01_kr", 				5],
+	["vn_o_car_03_01_kr", 				5],
+	["vn_o_car_02_01_kr", 				5],
+	["vn_o_car_04_01_kr", 				5],
+	["vn_b_wheeled_m274_01_01", 		10], //mule
+	["vn_b_wheeled_m274_02_01", 		10],	//mule
+	["vn_b_wheeled_m151_02", 			5],
+	["vn_i_wheeled_m151_01_fank_71", 	5],
+	["vn_b_wheeled_lr2a_02_nz_army",	5],
+	["vn_b_wheeled_lr2a_01_nz_army",	5],
+	["vn_i_wheeled_z157_01_fank_70", 	40], //s h i t truck
+	["vn_b_wheeled_m54_01", 			25],
+	["vn_b_wheeled_m54_01_sog", 		25],
+	["vn_b_wheeled_m54_02_sog", 		25],
+	["vn_b_wheeled_m54_02", 			25],
+	["vn_b_wheeled_m54_03", 			35], //cmd truck
+	["vn_b_wheeled_m54_fuel", 			10],
+	["vn_b_wheeled_m54_ammo", 			10],
+	["vn_b_wheeled_m54_repair", 		10],
+	["vn_i_wheeled_btr40_01_fank_70", 	10],
+	["vn_b_armor_m577_01", 				20], //m113 cmd
+	/////
+	//SOG Armed
+	["vn_o_car_04_mg_01_kr", 			10], //little truck LMG
+	["vn_b_wheeled_m274_mg_03_01", 		10], //mulle M134
+	["vn_b_wheeled_m274_mg_02_01", 		10], //mulle recoilless canon
+	["vn_b_wheeled_m274_mg_01_01", 		10], //mulle M60
+	["vn_b_wheeled_m151_mg_02", 		5], //jeep M2
+	["vn_b_wheeled_m151_mg_06",		 	5], //jeep recoilless canon
+	["vn_b_wheeled_m151_mg_03", 		5], //jeep patrol M2 M60
+	["vn_b_wheeled_m151_mg_05", 		5], //jeep tow
+	["vn_i_wheeled_m151_mg_01_fank_71", 5], //jeep M1919 .30
+	["vn_i_wheeled_m151_mg_04_fank_71", 5], //"armored" M60
+	["vn_b_wheeled_lr2a_mg_02_nz_army", 5], //LR twin M60
+	["vn_b_wheeled_lr2a_mg_03_nz_army", 5], //LR recoilless canon
+	["vn_i_wheeled_lr2a_mg_01_fank_71", 5], //LR M60
+	["vn_i_wheeled_z157_mg_01_fank_70", 10],//s h i t truck MG
+	["vn_b_wheeled_m54_mg_01", 			10], //truck "armored"
+	["vn_b_wheeled_m54_mg_03", 			10], //truck "armored"
+	["vn_b_wheeled_m54_mg_02", 			10], //truck ZSU
+	["vn_i_wheeled_btr40_mg_02_fank_70", 5], //DSHKM
+	["vn_i_wheeled_btr40_mg_01_fank_70", 5], //RPD
+	["vn_i_wheeled_btr40_mg_04_fank_70", 5], //SMG (LMG)
+	["vn_o_wheeled_btr40_mg_04_pl", 	5], //SMG (LMG) //same as the other one
+	["vn_o_wheeled_btr40_mg_05_pl", 	5], //recoilless canon
+	["vn_o_wheeled_btr40_mg_03_pl", 	5], //ZPU4
+	["vn_b_armor_m113_acav_04", 		10], //ACAV M134 (+ M60 sides)
+	["vn_b_armor_m113_acav_01", 		10], //ACAV M2 (+ M60 sides)
+	["vn_b_armor_m113_acav_03", 		10], //ACAV M60 (+sides)
+	["vn_b_armor_m113_01", 				10], //transport M2
+	["vn_b_armor_m132_01", 				10], //m113 flamethrower
+	["vn_o_armor_btr50pk_02_nva65", 	10], //PKT ZGU-1
+	["vn_o_armor_btr50pk_01_nva65", 	10], //PKT
+	["vn_i_armor_type63_01", 			5], //tank
+	["vn_i_armor_m67_01_01", 			5], //tank
+	["vn_b_armor_m41_01_01", 			5], //tank
+	["vn_b_armor_m48_01_01", 			5], //tank
+	["vn_o_armor_ot54_01_nva65", 		5], //tank flamethrower
+	["vn_o_armor_t54b_01_nva65", 		5], //tank
+
+	/////
 	["rhsusf_RG33L_base",10], //M1234 M1237
 	["rhs_kamaz5350_flatbed_cover_vdv", 25], //flatbed cover
 	["RHS_Ural_Flat_VDV_01", 25], //flatbed cover
@@ -30,11 +105,6 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy", 15],
 	["rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy", 35],
 	["rhsusf_M1083A1P2_B_WD_flatbed_fmtv_usarmy", 25],
-	["wheeled_apc_f", 10],
-	["tank", 5],
-	["car", 5],
-	["truck_f", 5],
-	["bus", 30],
 	["B_Truck_01_cargo_F",30],
 	["B_Truck_01_transport_F",20],
 	["b_truck_01_mover_f", 10],

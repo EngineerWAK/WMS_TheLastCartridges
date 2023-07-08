@@ -3,7 +3,7 @@ if (!hasInterface) exitWith {};
 //waitUntil {!isNil "ExileClientLoadedIn"};
  // Waits for Exile to finish up
 
-player createDiarySubject ["Main","TNA Briefing"];
+player createDiarySubject ["Main","WMS Briefing"];
 //player createDiarySubject ["Info","Website"];
 
 

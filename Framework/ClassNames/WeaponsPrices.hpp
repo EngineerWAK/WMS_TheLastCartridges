@@ -1,4 +1,15 @@
 //SNIPERS
+	//SOG
+class vn_k98k					{ quality = 2; price = 2506; };
+class vn_m1891					{ quality = 2; price = 2506; };
+class vn_m1903					{ quality = 2; price = 2506; };
+class vn_m1903_gl				{ quality = 3; price = 2506; };
+class vn_m36					{ quality = 2; price = 2506; };
+class vn_m38					{ quality = 2; price = 2506; };
+class vn_m40a1					{ quality = 2; price = 2506; };
+class vn_m9130					{ quality = 2; price = 2506; };
+class vn_vz54					{ quality = 2; price = 2506; };
+	/////
 class rhs_weap_dsr1					{ quality = 2; price = 2500; };
 class srifle_DMR_05_blk_F			{ quality = 2; price = 2500; };
 class R3F_FRF2			    		{ quality = 2; price = 2500; };
@@ -24,19 +35,39 @@ class hlc_rifle_awMagnum_OD_ghillie	{ quality = 2; price = 2105; };
 class hlc_rifle_awcovert_BL			{ quality = 5; price = 8105; };
 
 //DMR
+	//SOG
+class vn_l1a1_01			    	{ quality = 2; price = 1906; };
+class vn_l1a1_01_camo			    { quality = 2; price = 1906; };
+class vn_l1a1_02			    	{ quality = 2; price = 1906; };
+class vn_l1a1_02_camo			    { quality = 2; price = 1906; };
+class vn_l1a1_03			    	{ quality = 2; price = 1906; };
+class vn_l1a1_03_camo			    { quality = 2; price = 1906; };
+class vn_l1a1_xm148			    	{ quality = 4; price = 1906; };
+class vn_l1a1_xm148_camo			{ quality = 4; price = 1906; };
+class vn_l1a1_01_gl			    	{ quality = 3; price = 1906; };
+class vn_m14			    		{ quality = 2; price = 1906; };
+class vn_m14_camo			    	{ quality = 2; price = 1906; };
+class vn_m14a1			    		{ quality = 2; price = 1906; };
+class vn_m14a1_shorty			    { quality = 2; price = 1906; };
+class vn_m4956			    		{ quality = 2; price = 1906; };
+class vn_m4956_gl			    	{ quality = 3; price = 1906; };
+class vn_sks			    		{ quality = 2; price = 1906; };
+class vn_sks_gl			    		{ quality = 3; price = 1906; };
+class vn_svd			    		{ quality = 2; price = 1906; };
+	/////
 class srifle_DMR_04_F				{ quality = 3; price = 7500; }; //ASP
 class srifle_DMR_06_hunter_F		{ quality = 2; price = 1900; };
 class arifle_MXM_Black_F			{ quality = 2; price = 1900; };
 class arifle_SPAR_03_blk_F			{ quality = 2; price = 1900; };
-class rhs_weap_m14_socom_rail		{ quality = 4; price = 2800; };
-class rhs_weap_vss_npz				{ quality = 3; price = 2600; };
-class rhs_weap_vss					{ quality = 3; price = 2200; };
-class rhs_weap_l1a1			    	{ quality = 2; price = 1900; };
-class rhs_weap_m14_ris_wd			{ quality = 2; price = 1900; };
-class rhs_weap_mk17_LB			    { quality = 2; price = 1900; };
-class rhs_weap_sr25			    	{ quality = 2; price = 1900; };
-class rhs_weap_svdp			   	 	{ quality = 2; price = 1600; };
-class rhs_weap_svds_npz			    { quality = 2; price = 1800; };
+class rhs_weap_m14_socom_rail		{ quality = 4; price = 2804; };
+class rhs_weap_vss_npz				{ quality = 3; price = 2604; };
+class rhs_weap_vss					{ quality = 3; price = 2204; };
+class rhs_weap_l1a1			    	{ quality = 2; price = 1904; };
+class rhs_weap_m14_ris_wd			{ quality = 2; price = 1904; };
+class rhs_weap_mk17_LB			    { quality = 2; price = 1904; };
+class rhs_weap_sr25			    	{ quality = 2; price = 1904; };
+class rhs_weap_svdp			   	 	{ quality = 2; price = 1904; };
+class rhs_weap_svds_npz			    { quality = 2; price = 1904; };
 
 class R3F_SCAR_H_PR_20pcs_TAN		{ quality = 2; price = 2000; };
 class R3F_SCAR_H_TPR_20pcs_blk		{ quality = 2; price = 2100; };
@@ -64,6 +95,11 @@ class hlc_rifle_g3sg1				{ quality = 2; price = 1905; };
 class hlc_rifle_g3sg1ris			{ quality = 2; price = 1905; };
 
 //ASSAULT EAST
+//SOG
+class vn_ak_01				{ quality = 1; price = 456; };
+class vn_kbkg				{ quality = 1; price = 456; };
+class vn_type56				{ quality = 1; price = 456; };
+	/////
 class arifle_AK12_F				    { quality = 1; price = 450; };
 class arifle_Katiba_F				{ quality = 1; price = 450; };
 class arifle_AK12_GL_F				{ quality = 2; price = 650; };
@@ -71,21 +107,21 @@ class arifle_AK12U_F				{ quality = 1; price = 450; };
 class arifle_Katiba_GL_F			{ quality = 2; price = 650; };
 class arifle_Katiba_C_F				{ quality = 1; price = 450; };
 
-class rhs_weap_savz58v_ris			{ quality = 2; price = 750; };
-class rhs_weap_m92					{ quality = 1; price = 400; };
-class rhs_weap_aks74un				{ quality = 1; price = 450; };
-class rhs_weap_ak103_zenitco01_b33	{ quality = 1; price = 450; };
-class rhs_weap_ak103_zenitco01		{ quality = 1; price = 450; };
-class rhs_weap_ak103				{ quality = 1; price = 450; };
-class rhs_weap_ak105				{ quality = 1; price = 450; };
-class rhs_weap_ak74mr				{ quality = 1; price = 550; };
-class rhs_weap_ak74n_2_gp25_npz		{ quality = 1; price = 650; };
-class rhs_weap_akms				    { quality = 1; price = 450; };
-class rhs_weap_ak104				{ quality = 1; price = 450; };
-class rhs_weap_ak104_zenitco01_b33	{ quality = 1; price = 450; };
-class rhs_weap_ak105_zenitco01_b33	{ quality = 1; price = 450; };
-class rhs_weap_ak74				    { quality = 1; price = 450; };
-class rhs_weap_aks74n_npz			{ quality = 1; price = 450; };
+class rhs_weap_savz58v_ris			{ quality = 2; price = 754; };
+class rhs_weap_m92					{ quality = 1; price = 404; };
+class rhs_weap_aks74un				{ quality = 1; price = 454; };
+class rhs_weap_ak103_zenitco01_b33	{ quality = 1; price = 454; };
+class rhs_weap_ak103_zenitco01		{ quality = 1; price = 454; };
+class rhs_weap_ak103				{ quality = 1; price = 454; };
+class rhs_weap_ak105				{ quality = 1; price = 454; };
+class rhs_weap_ak74mr				{ quality = 1; price = 554; };
+class rhs_weap_ak74n_2_gp25_npz		{ quality = 1; price = 654; };
+class rhs_weap_akms				    { quality = 1; price = 454; };
+class rhs_weap_ak104				{ quality = 1; price = 454; };
+class rhs_weap_ak104_zenitco01_b33	{ quality = 1; price = 454; };
+class rhs_weap_ak105_zenitco01_b33	{ quality = 1; price = 454; };
+class rhs_weap_ak74				    { quality = 1; price = 454; };
+class rhs_weap_aks74n_npz			{ quality = 1; price = 454; };
 
 class hlc_rifle_saiga12k			{ quality = 2; price = 555; };
 class hlc_rifle_aek971_mtk			{ quality = 1; price = 455; };
@@ -101,6 +137,34 @@ class hlc_rifle_sg553RLB			{ quality = 2; price = 455; };
 class hlc_rifle_SG553LB_TAC			{ quality = 2; price = 505; };
 
 //ASSAULT WEST
+	//SOG
+class vn_gau5a			{ quality = 1; price = 450; };
+class vn_m1carbine			{ quality = 1; price = 450; };
+class vn_m1carbine_gl		{ quality = 4; price = 655; };//rifle Grenade
+class vn_m1_garand		{ quality = 1; price = 450; };
+class vn_m1_garand_gl		{ quality = 4; price = 655; };//rifle Grenade
+class vn_m16_usaf			{ quality = 1; price = 450; };
+class vn_m16					{ quality = 1; price = 450; };
+class vn_m16_camo			{ quality = 2; price = 450; };
+class vn_m16_m203_camo	{ quality = 4; price = 755; };//rifle Grenade
+class vn_m16_m203			{ quality = 4; price = 655; };//rifle Grenade
+class vn_m16_xm148			{ quality = 1; price = 655; };//rifle Grenade
+class vn_m2carbine			{ quality = 1; price = 450; };
+class vn_m2carbine_gl		{ quality = 4; price = 655; };//rifle Grenade
+class vn_m63a				{ quality = 1; price = 450; };
+class vn_m63a_cdo				{ quality = 1; price = 450; };//WTF? LMG
+class vn_xm16e1			{ quality = 1; price = 450; };
+class vn_xm16e1_xm148		{ quality = 4; price = 655; };//rifle Grenade
+class vn_xm177e1			{ quality = 1; price = 450; };
+class vn_xm177e1_camo		{ quality = 2; price = 450; };
+class vn_xm177				{ quality = 1; price = 450; };
+class vn_xm177_camo			{ quality = 2; price = 450; };
+class vn_xm177_m203			{ quality = 4; price = 655; };//rifle Grenade
+class vn_xm177_m203_camo		{ quality = 4; price = 755; };//rifle Grenade
+class vn_xm177_short			{ quality = 1; price = 450; };
+class vn_xm177_stock			{ quality = 1; price = 450; };
+class vn_xm177_xm148			{ quality = 4; price = 655; };//rifle Grenade
+	/////
 class arifle_CTAR_blk_F				{ quality = 1; price = 450; };
 class arifle_CTAR_GL_blk_F			{ quality = 2; price = 650; };
 class arifle_MX_Black_F				{ quality = 1; price = 450; };
@@ -111,25 +175,25 @@ class arifle_MSBS65_UBS_black_F		{ quality = 1; price = 450; };
 class arifle_SPAR_01_blk_F			{ quality = 1; price = 450; };
 class arifle_SPAR_01_GL_blk_F		{ quality = 2; price = 650; };
 
-class rhs_weap_M590_5RD				{ quality = 1; price = 350; };
-class rhs_weap_M590_8RD				{ quality = 1; price = 380; };
-class rhs_weap_m4_carryhandle_m203S	{ quality = 1; price = 650; };
-class rhs_weap_m4_carryhandle		{ quality = 1; price = 450; };
-class rhs_weap_m27iar				{ quality = 1; price = 450; };
-class rhs_weap_hk416d145_wd_2		{ quality = 1; price = 450; };
-class R3F_Famas_surb_HG				{ quality = 1; price = 450; };
-class rhs_weap_hk416d145			{ quality = 1; price = 450; };
-class UK3CB_BAF_L85A2_RIS			{ quality = 1; price = 450; };
-class rhs_weap_m4a1_blockII_M203_bk	{ quality = 1; price = 650; };
-class arifle_MSBS65_Mark_black_F	{ quality = 1; price = 450; };
-class arifle_ARX_blk_F				{ quality = 1; price = 750; };
-class rhs_weap_hk416d10_LMT			{ quality = 1; price = 450; };
-class rhs_weap_m4				    { quality = 1; price = 410; };
-class rhs_weap_m4a1_blockII_KAC		{ quality = 1; price = 450; };
-class rhs_weap_mk18_KAC				{ quality = 1; price = 450; };
-class BWA3_G38				    	{ quality = 1; price = 450; };
-class BWA3_G36A3				    { quality = 1; price = 450; };
-class BWA3_G36KA4				    { quality = 1; price = 450; };
+class rhs_weap_M590_5RD				{ quality = 1; price = 354; };
+class rhs_weap_M590_8RD				{ quality = 1; price = 384; };
+class rhs_weap_m4_carryhandle_m203S	{ quality = 1; price = 654; };
+class rhs_weap_m4_carryhandle		{ quality = 1; price = 454; };
+class rhs_weap_m27iar				{ quality = 1; price = 454; };
+class rhs_weap_hk416d145_wd_2		{ quality = 1; price = 454; };
+class R3F_Famas_surb_HG				{ quality = 1; price = 454; };
+class rhs_weap_hk416d145			{ quality = 1; price = 454; };
+class UK3CB_BAF_L85A2_RIS			{ quality = 1; price = 454; };
+class rhs_weap_m4a1_blockII_M203_bk	{ quality = 1; price = 654; };
+class arifle_MSBS65_Mark_black_F	{ quality = 1; price = 454; };
+class arifle_ARX_blk_F				{ quality = 1; price = 754; };
+class rhs_weap_hk416d10_LMT			{ quality = 1; price = 454; };
+class rhs_weap_m4				    { quality = 1; price = 414; };
+class rhs_weap_m4a1_blockII_KAC		{ quality = 1; price = 454; };
+class rhs_weap_mk18_KAC				{ quality = 1; price = 454; };
+class BWA3_G38				    	{ quality = 1; price = 454; };
+class BWA3_G36A3				    { quality = 1; price = 454; };
+class BWA3_G36KA4				    { quality = 1; price = 454; };
 
 class hlc_wp_MK17IUR_300_camo		{ quality = 4; price = 1755; };
 class hlc_wp_MK17IUR_556_camo		{ quality = 1; price = 455; };
@@ -163,6 +227,20 @@ class hlc_rifle_vendimus			{ quality = 4; price = 1755; };
 class hlc_rifle_honeybadger			{ quality = 5; price = 8005; };
 
 //LMG
+	//SOG
+class vn_dp28				{ quality = 1; price = 1506; };
+class vn_l2a1_01			{ quality = 1; price = 1506; };
+class vn_l4					{ quality = 1; price = 1506; };
+class vn_m1918				{ quality = 1; price = 1506; };
+class vn_m60				{ quality = 1; price = 1506; };
+class vn_m60_shorty			{ quality = 1; price = 1506; };
+class vn_m63a_lmg			{ quality = 1; price = 1506; };
+class vn_mg42				{ quality = 1; price = 1506; };
+class vn_pk					{ quality = 1; price = 1506; };
+class vn_rpd				{ quality = 1; price = 1506; };
+class vn_rpd_shorty_01		{ quality = 1; price = 1506; };
+class vn_rpd_shorty			{ quality = 1; price = 1506; };
+	/////
 class arifle_SPAR_02_blk_F			{ quality = 1; price = 1500; };
 class arifle_CTARS_blk_F			{ quality = 3; price = 1500; };
 class LMG_Mk200_black_F				{ quality = 2; price = 1500; };
@@ -184,6 +262,39 @@ class hlc_rifle_MG36				{ quality = 1; price = 1505; };
 class HLC_wp_M134Painless			{ quality = 6; price = 15005; };
 
 //SMG
+	//SOG
+class vn_izh54				{ quality = 1; price = 856; };//shotgun
+class vn_izh54_shorty		{ quality = 2; price = 756; };//shotgun
+class vn_f1_smg				{ quality = 1; price = 256; };
+class vn_k50m				{ quality = 1; price = 256; };
+class vn_l2a3				{ quality = 1; price = 256; };
+class vn_l2a3_f				{ quality = 1; price = 256; };
+class vn_l34a1				{ quality = 1; price = 256; };
+class vn_l34a1_f			{ quality = 1; price = 256; };
+class vn_l34a1_xm148		{ quality = 3; price = 1556; }; //40mm
+class vn_m45				{ quality = 1; price = 256; };
+class vn_m45_camo			{ quality = 1; price = 256; };
+class vn_m45_fold			{ quality = 1; price = 256; };
+class vn_m1928_tommy		{ quality = 1; price = 256; };
+class vn_m1928a1_tommy		{ quality = 1; price = 256; };
+class vn_m1a1_tommy			{ quality = 1; price = 256; };
+class vn_m1a1_tommy_so		{ quality = 1; price = 256; };
+class vn_m3sd				{ quality = 3; price = 956; };//suppressor
+class vn_m3a1				{ quality = 1; price = 256; };
+class vn_mat49				{ quality = 1; price = 256; };
+class vn_mat49_f			{ quality = 1; price = 256; };
+class vn_mat49_vc			{ quality = 1; price = 256; };
+class vn_mc10				{ quality = 1; price = 256; };
+class vn_mp40				{ quality = 1; price = 256; };
+class vn_mpu				{ quality = 1; price = 256; };
+class vn_pps43				{ quality = 1; price = 256; };
+class vn_pps52				{ quality = 1; price = 256; };
+class vn_ppsh41				{ quality = 1; price = 256; };
+class vn_sten				{ quality = 1; price = 256; };
+class vn_type64				{ quality = 1; price = 256; };
+class vn_type64_f			{ quality = 1; price = 256; }; //do not exist???
+class vn_vz61				{ quality = 1; price = 256; };
+	/////
 class SMG_03_khaki					{ quality = 1; price = 250; };
 class hlc_smg_mp510					{ quality = 3; price = 755; };
 class hlc_smg_mp5a4					{ quality = 1; price = 255; };
@@ -192,6 +303,25 @@ class hlc_smg_9mmar					{ quality = 1; price = 555; };
 class hlc_smg_mp5k_PDW				{ quality = 2; price = 855; };
 
 //PISTOLS
+	//SOG
+class vn_camera_01		{ quality = 1; price = 2226; };//brand new canon camera
+class vn_hd				{ quality = 3; price = 656; };//suppressor
+class vn_hp				{ quality = 1; price = 156; };
+class vn_izh54_p		{ quality = 2; price = 556; };//shotgun
+class vn_p38s			{ quality = 1; price = 156; };
+class vn_m1895			{ quality = 1; price = 156; };
+class vn_m1911			{ quality = 1; price = 156; };
+class vn_mx991_m1911	{ quality = 1; price = 456; };//flashlight
+class vn_m712			{ quality = 1; price = 156; };
+class vn_mk22			{ quality = 1; price = 156; };
+class vn_m10			{ quality = 1; price = 156; };
+class vn_p38			{ quality = 1; price = 156; };
+class vn_pm				{ quality = 1; price = 156; };
+class vn_fkb1_pm		{ quality = 3; price = 456; };//flashlight
+class vn_ppk			{ quality = 1; price = 156; };
+class vn_tt33			{ quality = 1; price = 156; };
+class vn_vz61_p			{ quality = 4; price = 2506; };//smg
+	/////
 class hgun_Pistol_heavy_01_F		{ quality = 1; price = 150; };
 class hlc_pistol_P226R_Combat		{ quality = 2; price = 155; };
 class hlc_pistol_P226R_357Combat	{ quality = 3; price = 255; };
@@ -207,6 +337,26 @@ class hlc_pistol_P226R_Stainless	{ quality = 1; price = 255; };
 class hlc_pistol_P229R_357Stainless	{ quality = 1; price = 255; };
 
 //SCOPES
+	//SOG
+class vn_o_anpvs2_m40a1		{ quality = 3; price = 4906; }; //NightVision
+class vn_o_anpvs2_m16		{ quality = 3; price = 4906; }; //NightVision
+class vn_o_anpvs2_m14		{ quality = 3; price = 4906; }; //NightVision
+class vn_o_9x_m14			{ quality = 3; price = 2206; };
+class vn_o_9x_m40a1			{ quality = 3; price = 2206; };
+class vn_o_9x_m16			{ quality = 3; price = 2206; };
+class vn_o_8x_m1903			{ quality = 3; price = 2206; };
+class vn_o_4x_m16			{ quality = 2; price = 906; };
+class vn_o_4x_m4956			{ quality = 2; price = 906; };
+class vn_o_4x_svd			{ quality = 2; price = 906; };
+class vn_o_3x_m9130			{ quality = 2; price = 906; };
+class vn_o_3x_sks			{ quality = 2; price = 906; };
+class vn_o_3x_m84			{ quality = 2; price = 906; };
+class vn_o_3x_l1a1			{ quality = 2; price = 906; };
+class vn_o_3x_vz54			{ quality = 2; price = 906; };
+class vn_o_1_5x_k98k		{ quality = 3; price = 1906; };
+class vn_o_1x_sp_m16		{ quality = 1; price = 356; };
+class vn_o_m14_front		{ quality = 1; price = 56; };
+	/////
 		//LongRange
 class BWA3_optic_PMII_ShortdotCC	{ quality = 3; price = 2200; };
 class BWA3_optic_PMII_DMR			{ quality = 3; price = 2200; };
@@ -280,6 +430,21 @@ class hlc_optic_ATACR				{ quality = 3; price = 1255; };
 class hlc_optic_ATACR_Offset		{ quality = 3; price = 1255; };
 
 //LASER/LaserLights
+	//SOG Bayonet
+class vn_b_type56		{ quality = 1; price = 256; };
+class vn_b_m1897		{ quality = 1; price = 256; };
+class vn_b_m16			{ quality = 1; price = 256; };
+class vn_b_m14			{ quality = 1; price = 256; };
+class vn_b_m38			{ quality = 1; price = 256; };
+class vn_b_sks			{ quality = 1; price = 256; };
+class vn_b_m4956		{ quality = 1; price = 256; };
+class vn_b_carbine		{ quality = 1; price = 256; };
+class vn_b_m1_garand	{ quality = 1; price = 256; };
+class vn_b_l1a1			{ quality = 1; price = 256; };
+class vn_b_m1903		{ quality = 1; price = 256; };
+class vn_b_m36			{ quality = 1; price = 256; };
+class vn_b_k98k			{ quality = 1; price = 256; };
+	/////
 class ACE_acc_pointer_red			{ quality = 2; price = 450; };
 class ACE_acc_pointer_green_IR		{ quality = 1; price = 300; };
 class ACE_acc_pointer_green			{ quality = 2; price = 450; };
@@ -295,6 +460,20 @@ class rhs_acc_perst3_2dp_light_h	{ quality = 1; price = 300; };
 class BWA3_acc_VarioRay_irlaser_black	{ quality = 1; price = 300; };
 
 //BIODS/GRIPS
+	//SOG camo and bipods
+class vn_b_camo_m14			{ quality = 1; price = 186; };
+class vn_b_camo_m40a1		{ quality = 1; price = 186; };
+class vn_b_camo_m9130		{ quality = 1; price = 186; };
+class vn_b_camo_m1_garand	{ quality = 1; price = 186; };
+class vn_b_camo_vz54		{ quality = 1; price = 186; };
+class vn_b_camo_m1903		{ quality = 1; price = 186; };
+class vn_b_camo_m36			{ quality = 1; price = 186; };
+class vn_b_camo_k98k		{ quality = 1; price = 186; };
+class vn_b_camo_svd			{ quality = 1; price = 186; };
+class vn_bipod_m1918		{ quality = 1; price = 106; };
+class vn_bipod_m16			{ quality = 1; price = 106; };
+class vn_bipod_m63a			{ quality = 1; price = 106; };
+	/////
 class rhsusf_acc_grip2				{ quality = 0; price = 100; };
 class bipod_03_F_blk				{ quality = 0; price = 100; };
 class rhs_acc_grip_ffg2				{ quality = 0; price = 100; };
@@ -307,6 +486,23 @@ class bipod_02_F_blk				{ quality = 0; price = 100; };
 class bipod_01_F_blk				{ quality = 0; price = 100; };
 
 //ROCKET/MISSILES/LAUNCHERS
+	//SOG
+class vn_m127 				{ quality = 2; price = 506; }; //flare
+class vn_rpg2 				{ quality = 1; price = 3516; };
+class vn_rpg2_fuze_mag 		{ quality = 1; price = 1516; };
+class vn_rpg2_mag 			{ quality = 1; price = 1516; };
+class vn_sa7 				{ quality = 5; price = 9526; };
+class vn_sa7_mag 			{ quality = 5; price = 4526; };
+class vn_sa7b 				{ quality = 5; price = 9536; };
+class vn_sa7b_mag 			{ quality = 5; price = 4536; };
+class vn_rpg7 				{ quality = 2; price = 3546; };
+class vn_rpg7_mag 			{ quality = 2; price = 1546; };
+class vn_m20a1b1_01 		{ quality = 3; price = 4556; };
+class vn_m20a1b1_heat_mag 	{ quality = 3; price = 1556; };
+class vn_m20a1b1_wp_mag 	{ quality = 3; price = 1556; };
+class vn_m72 				{ quality = 2; price = 2566; };
+class vn_m72_mag 			{ quality = 2; price = 1566; };
+	/////
 class launch_MRAWS_green_rail_F 	{ quality = 2; price = 4555; };
 //class ammo missing
 class launch_RPG32_green_F 			{ quality = 2; price = 4555; };

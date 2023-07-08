@@ -1,4 +1,42 @@
 //UNIFORMS
+		//SOG
+class vn_b_uniform_macv_01_17			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_02_17			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_04_17			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_06_17			{ quality = 1; price = 306; };
+class vn_b_uniform_aus_01_01			{ quality = 1; price = 306; };
+class vn_b_uniform_aus_08_01			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_03			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_15			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_06			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_08			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_01			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_05			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_02_02			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_03_07			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_04_05			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_04_02			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_06_07			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_16			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_03_16			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_06_16			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_01_18			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_03_18			{ quality = 1; price = 306; };
+class vn_b_uniform_macv_06_18			{ quality = 1; price = 306; };
+class vn_b_uniform_sas_03_06			{ quality = 1; price = 306; };
+class vn_b_uniform_k2b_02_05			{ quality = 1; price = 306; };
+class vn_b_uniform_k2b_01_01			{ quality = 1; price = 306; };
+class vn_b_uniform_k2b_02_01			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_01_06			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_01_02			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_02_07			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_03_01			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_05_06			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_05_02			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_07_02			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_07_04			{ quality = 1; price = 306; };
+class vn_b_uniform_seal_09_01			{ quality = 1; price = 306; };
+/////
 class BWA3_Uniform2_Fleck					{ quality = 1; price = 301; };
 class rhs_uniform_acu_ocp					{ quality = 1; price = 301; };
 class rhs_uniform_acu_oefcp					{ quality = 1; price = 301; };
@@ -24,6 +62,38 @@ class U_C_ConstructionCoverall_Black_F		{ quality = 0; price = 301; };
 class U_C_ConstructionCoverall_Red_F		{ quality = 0; price = 301; };
 
 //VESTS
+	//SOG light
+class vn_b_vest_anzac_10		{ quality = 0; price = 106; };
+class vn_b_vest_anzac_04		{ quality = 0; price = 106; };
+class vn_b_vest_anzac_06		{ quality = 0; price = 106; };
+class vn_b_vest_anzac_05		{ quality = 0; price = 106; };
+class vn_b_vest_anzac_01		{ quality = 0; price = 106; };
+class vn_b_vest_anzac_03		{ quality = 0; price = 106; };
+class vn_b_vest_usarmy_10		{ quality = 0; price = 106; };
+class vn_b_vest_usarmy_05		{ quality = 0; price = 106; };
+class vn_b_vest_usarmy_08		{ quality = 0; price = 106; };
+class vn_b_vest_usarmy_07		{ quality = 0; price = 106; };
+class vn_b_vest_usarmy_06		{ quality = 0; price = 106; };
+class vn_b_vest_usarmy_03		{ quality = 0; price = 106; };
+class vn_b_vest_usarmy_01		{ quality = 0; price = 106; };
+class vn_b_vest_sas_04			{ quality = 0; price = 106; };
+class vn_b_vest_sas_01			{ quality = 0; price = 106; };
+	//SOG better
+class vn_b_vest_aircrew_01		{ quality = 1; price = 406; };
+class vn_b_vest_anzac_09		{ quality = 1; price = 406; };
+class vn_b_vest_anzac_08		{ quality = 1; price = 406; };
+class vn_b_vest_usarmy_13		{ quality = 1; price = 406; };
+class vn_b_vest_usarmy_14		{ quality = 1; price = 406; };
+class vn_b_vest_aircrew_03		{ quality = 1; price = 406; };
+class vn_b_vest_seal_01			{ quality = 1; price = 406; };
+class vn_b_vest_seal_07			{ quality = 1; price = 406; };
+class vn_b_vest_seal_06			{ quality = 1; price = 406; };
+class vn_b_vest_seal_02			{ quality = 1; price = 406; };
+class vn_b_vest_usmc_05			{ quality = 1; price = 406; };
+class vn_b_vest_usmc_04			{ quality = 1; price = 406; };
+class vn_b_vest_usmc_03			{ quality = 1; price = 406; };
+class vn_b_vest_usmc_01			{ quality = 1; price = 406; };
+	/////
 class rhsgref_alice_webbing		{ quality = 0; price = 102; };
 class rhsgref_chicom			{ quality = 0; price = 102; };
 class V_Chestrig_rgr			{ quality = 0; price = 102; };
@@ -59,6 +129,42 @@ class rhsusf_spcs_ocp_teamleader			{ quality = 1; price = 402; };
 class rhsusf_spcs_ucp_teamleader			{ quality = 1; price = 402; };
 
 //HELMETS
+	//SOG
+class vn_i_beret_03_03				{ quality = 0; price = 206; };
+class vn_i_beret_01_01				{ quality = 0; price = 206; };
+class vn_i_beret_03_01				{ quality = 0; price = 206; };
+class vn_i_helmet_m1_02_01			{ quality = 1; price = 206; };
+class vn_i_helmet_m1_01_02			{ quality = 0; price = 206; };
+class vn_i_helmet_m1_02_02			{ quality = 1; price = 206; };
+class vn_b_bandana_03				{ quality = 0; price = 206; };
+class vn_b_bandana_06				{ quality = 0; price = 206; };
+class vn_b_bandana_07				{ quality = 0; price = 206; };
+class vn_b_bandana_05				{ quality = 0; price = 206; };
+class vn_b_boonie_01_08				{ quality = 0; price = 206; };
+class vn_b_boonie_01_01				{ quality = 0; price = 206; };
+class vn_b_boonie_01_07				{ quality = 0; price = 206; };
+class vn_b_boonie_01_05				{ quality = 0; price = 206; };
+class vn_b_helmet_aph6_02_02		{ quality = 1; price = 206; };
+class vn_b_helmet_aph6_02_05		{ quality = 1; price = 206; };
+class vn_b_helmet_aph6_02_03		{ quality = 1; price = 206; };
+class vn_b_helmet_aph6_02_04		{ quality = 1; price = 206; };
+class vn_b_helmet_aph6_02_01		{ quality = 1; price = 206; };
+class vn_b_helmet_m1_01_02			{ quality = 0; price = 206; };
+class vn_b_helmet_m1_14_01			{ quality = 1; price = 206; };
+class vn_b_helmet_m1_06_01			{ quality = 1; price = 206; };
+class vn_b_helmet_m1_11_01			{ quality = 1; price = 206; };
+class vn_b_helmet_m1_08_02			{ quality = 1; price = 206; };
+class vn_b_helmet_m1_09_02			{ quality = 1; price = 206; };
+class vn_b_helmet_svh4_02_01		{ quality = 1; price = 206; };
+class vn_b_helmet_svh4_02_04		{ quality = 1; price = 206; };
+class vn_b_helmet_svh4_02_02		{ quality = 1; price = 206; };
+class vn_b_helmet_svh4_02_05		{ quality = 1; price = 206; };
+class vn_b_helmet_svh4_02_03		{ quality = 1; price = 206; };
+class vn_b_helmet_t56_02_01			{ quality = 1; price = 206; };
+class vn_b_helmet_t56_01_02			{ quality = 1; price = 206; };
+class vn_b_helmet_sog_01			{ quality = 1; price = 206; };
+class vn_b_helmet_t56_02_03			{ quality = 1; price = 206; };
+	/////
 class R3F_casque_CQB					{ quality = 3; price = 603; };
 class rhs_6b26_green					{ quality = 1; price = 203; };
 class rhs_6b26							{ quality = 1; price = 203; };
@@ -87,6 +193,51 @@ class H_HelmetHBK_F						{ quality = 0; price = 203; };
 class rhsusf_ihadss						{ quality = 2; price = 1503; };
 
 //BACKPACK
+		//SOG
+class vn_b_pack_pfield_01				{ quality = 1; price = 606; };
+class vn_b_pack_p08_01				{ quality = 1; price = 606; };
+class vn_b_pack_p44_01				{ quality = 1; price = 606; };
+class vn_b_pack_lw_04				{ quality = 1; price = 606; };
+class vn_b_pack_m5_01				{ quality = 1; price = 606; };
+class vn_b_pack_lw_07				{ quality = 1; price = 606; };
+class vn_b_pack_lw_05				{ quality = 1; price = 606; };
+class vn_b_pack_lw_02				{ quality = 1; price = 606; };
+class vn_b_pack_lw_01				{ quality = 1; price = 606; };
+class vn_b_pack_lw_06				{ quality = 1; price = 606; };
+class vn_b_pack_trp_03_02			{ quality = 1; price = 606; };
+class vn_b_pack_trp_01_02			{ quality = 1; price = 606; };
+class vn_b_pack_trp_04_02			{ quality = 1; price = 606; };
+class vn_b_pack_trp_02_02			{ quality = 1; price = 606; };
+class vn_b_pack_arvn_01				{ quality = 1; price = 606; };
+class vn_b_pack_arvn_02				{ quality = 1; price = 606; };
+class vn_b_pack_arvn_03				{ quality = 1; price = 606; };
+class vn_b_pack_arvn_04				{ quality = 1; price = 606; };
+class vn_b_pack_05_02				{ quality = 1; price = 606; };
+class vn_b_pack_02_02				{ quality = 1; price = 606; };
+class vn_b_pack_03_02				{ quality = 1; price = 606; };
+class vn_b_pack_04_02				{ quality = 1; price = 606; };
+class vn_b_pack_01_02				{ quality = 1; price = 606; };
+class vn_b_pack_seal_01				{ quality = 2; price = 1606; };
+class vn_b_pack_05					{ quality = 1; price = 606; };
+class vn_b_pack_02					{ quality = 1; price = 606; };
+class vn_b_pack_03					{ quality = 1; price = 606; };
+class vn_b_pack_04					{ quality = 1; price = 606; };
+class vn_b_pack_01					{ quality = 1; price = 606; };
+class vn_b_pack_trp_03				{ quality = 1; price = 606; };
+class vn_b_pack_trp_01				{ quality = 1; price = 606; };
+class vn_b_pack_trp_04				{ quality = 1; price = 606; };
+class vn_b_pack_trp_02				{ quality = 1; price = 606; };
+class vn_b_pack_m41_01				{ quality = 1; price = 606; };
+class vn_b_pack_m41_02				{ quality = 1; price = 606; };
+class vn_b_pack_m41_03				{ quality = 1; price = 606; };
+class vn_b_pack_m41_04				{ quality = 1; price = 606; };
+class vn_b_pack_m41_05				{ quality = 1; price = 606; };
+		/////
+		//SOG Parachute
+class vn_b_pack_ba18_01				{ quality = 0; price = 1206; };
+class vn_b_pack_ba22_01				{ quality = 0; price = 1206; };
+class vn_b_pack_t10_01				{ quality = 0; price = 1206; };
+		/////
 class ACE_TacticalLadder_Pack			{ quality = 3; price = 504; };
 class B_RadioBag_01_wdl_F				{ quality = 3; price = 504; };
 

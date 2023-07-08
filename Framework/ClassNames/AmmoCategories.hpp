@@ -31,6 +31,7 @@ class Ammunition //not used
         "10Rnd_Mk14_762x51_Mag"
 	};
 };
+/* //MOVED TO ItemsCategories.hpp, AmmoCategories not used anymore
 class RocketMissiles
 {
 	name = "Rockets and Missiles";
@@ -68,4 +69,28 @@ class RocketMissiles_RHS
 		"rhs_mag_9k38_rocket",
 		"rhs_fim92_mag"
 	};
-};
+};*/
+/*
+"vn_m20a1b1_heat_mag",
+"vn_m20a1b1_wp_mag",
+"vn_m72_mag",
+"vn_rpg2_fuze_mag",
+"vn_rpg2_mag",
+"vn_rpg7_mag",
+"vn_22mm_cs_mag",
+"vn_22mm_he_mag",
+"vn_22mm_lume_mag",
+"vn_20mm_dgn_wp_mag",
+"vn_20mm_f1n60_frag_mag",
+"vn_22mm_m17_frag_mag",
+"vn_22mm_m19_wp_mag",
+"vn_22mm_m1a2_frag_mag",
+"vn_22mm_m22_smoke_mag",
+"vn_22mm_m60_frag_mag",
+"vn_22mm_m60_heat_mag",
+"vn_22mm_m61_frag_mag",
+"vn_22mm_m9_heat_mag",
+"vn_22mm_n94_heat_mag",
+"vn_20mm_pgn60_heat_mag",
+"vn_sa7_mag",
+"vn_sa7b_mag"*/

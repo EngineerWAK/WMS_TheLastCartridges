@@ -23,6 +23,11 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		"<t color='#035c10'>Lock/Unlock</t>",
 		"	
 			if (locked (_this select 0) == 0) then {
+				_vehiclesManagement = getArray(missionConfigFile >> 'CfgOfficeTrader' >> 'vehiclesManagement');
+				if ((_vehiclesManagement select 5) != 0) then {
+					[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle will be UNLOCKED in the Traders Zone after restart';
+					[playerSide, 'PAPA_BEAR'] commandChat 'You should move it';
+				};
 				if (typeOf (_this select 0) in (getArray(missionConfigFile>>'CfgOpenVhl'>>'vhl'))) then {
 					_territoryOfficeData = getArray(missionConfigFile >> 'CfgOfficeTrader' >> 'ZoneSizes');
 					_nearestTrader = [WMS_tradersMkrPos, (_this select 0)] call BIS_fnc_nearestPosition;

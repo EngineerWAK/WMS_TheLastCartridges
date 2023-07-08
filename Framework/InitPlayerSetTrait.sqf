@@ -16,10 +16,10 @@ params [
 _items = (items _caller);
 //First, reset the "specialist" traits, for "after restart", no more permanent doctors or advanced engineers
 _caller setVariable ["WMS_Specialist_Bambi",false,true];
-_caller setVariable ["WMS_Specialist_Engineer",false,true];
-_caller setVariable ["WMS_Specialist_Medic",false,true];
 _caller setVariable ["WMS_Specialist_Breacher",false,true];
+_caller setVariable ["WMS_Specialist_Engineer",false,true];
 _caller setVariable ["WMS_Specialist_Sniper",false,true];
+_caller setVariable ["WMS_Specialist_Medic",false,true];
 _caller setVariable ["ace_IsEngineer",0,true];
 _caller setVariable ["ace_medical_medicclass", 0, true];
 _caller setUnitTrait ["UAVHacker",false];
@@ -31,9 +31,9 @@ _caller setUnitTrait ["Engineer",false];
 //Banana only for Bambi Loadout will put the Bambi class to Engineer/Medic level 2
 if ("ACE_Banana" in _items) then {
     _caller setVariable ["WMS_Specialist_Bambi",true,true];
+    _caller setVariable ["WMS_Specialist_Breacher",false,true];
     _caller setVariable ["WMS_Specialist_Engineer",true,true];
     _caller setVariable ["WMS_Specialist_Medic",true,true];
-    _caller setVariable ["WMS_Specialist_Breacher",false,true];
     _caller setVariable ["ace_IsEngineer",2,true];
     _caller setVariable ["ace_medical_medicclass", 2, true];
 	_caller setUnitTrait ["Medic",true];

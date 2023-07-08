@@ -39,4 +39,4 @@ CHVD_allowNoGrass = false;
 CHVD_maxView = 12000;
 CHVD_maxObj = 12000;
 
-WMS_MissionDebug = false;
+WMS_MissionDebug = true;

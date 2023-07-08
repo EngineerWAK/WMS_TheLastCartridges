@@ -18,6 +18,58 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	//SOG Medical choppers
+	["vn_b_air_uh1b_01_02", 	10],
+	["vn_b_air_uh1b_01_01", 	10],
+	["vn_b_air_uh1b_01_04", 	10],
+	["vn_b_air_uh1d_01_02", 	15],//bigger open
+	["vn_b_air_uh1d_01_07", 	15],//bigger open
+	["vn_o_air_mi2_02_02", 		15],
+	["vn_b_air_ch47_02_02",		30],
+	//SOG Unarmed choppers
+	["vn_b_air_uh1b_01_09",		10],
+	["vn_b_air_uh1d_04_09", 	15],//bigger
+	["vn_o_air_mi2_01_02",		15],
+	["vn_o_air_mi2_03_01", 		10],//fuel
+	//SOG Armed Choppers
+	["vn_b_air_oh6a_01", 		9],//light armed
+	["vn_b_air_oh6a_03", 		5],
+	["vn_b_air_oh6a_04", 		5],
+	["vn_b_air_oh6a_05", 		5],
+	["vn_b_air_oh6a_06", 		5],
+	["vn_b_air_oh6a_07", 		5],
+	["vn_b_air_uh1c_07_07", 	10], //light armed
+	["vn_b_air_uh1d_02_07", 	10], //light armed bigger
+	["vn_b_air_uh1c_06_02", 	10],
+	["vn_b_air_uh1c_04_02", 	10],
+	["vn_b_air_uh1c_02_02", 	10],
+	["vn_b_air_uh1c_05_02", 	10],
+	["vn_o_air_mi2_04_05", 		10],
+	["vn_o_air_mi2_04_03", 		10],
+	["vn_o_air_mi2_05_01", 		10],
+	["vn_o_air_mi2_05_03", 		10],
+	["vn_b_air_ch34_04_03", 	10],
+	["vn_b_air_ch34_04_02", 	10],
+	["vn_b_air_ch34_04_04", 	10],
+	["vn_b_air_ch34_04_01", 	10],
+	["vn_b_air_ch34_03_01", 	15],//light armed
+	["vn_i_air_ch34_02_01", 	15],//light armed
+	["vn_b_air_ch47_03_02", 	60],//cargo
+	["vn_b_air_ch47_01_02", 	30],//transport
+	["vn_b_air_ach47_04_01", 	25],
+	["vn_b_air_ach47_03_01", 	25],
+	["vn_b_air_ach47_05_01", 	25],
+	["vn_b_air_ach47_01_01", 	25],
+	["vn_b_air_ach47_02_01", 	25],
+	["vn_b_air_ah1g_02", 		5],
+	["vn_b_air_ah1g_03",		5],
+	["vn_b_air_ah1g_04",		5],
+	["vn_b_air_ah1g_05", 		5],
+	["vn_b_air_ah1g_01",		5],
+	["vn_b_air_ah1g_08", 		5],
+	["vn_b_air_ah1g_09", 		5],
+	["vn_b_air_ah1g_06", 		5],
+	/////
 	["gm_gc_airforce_l410t",20], //GM plane
 	["gm_ge_airforce_do28d2",20], //GM plane
 	["gm_ge_adak_bo105m_vbh",10],

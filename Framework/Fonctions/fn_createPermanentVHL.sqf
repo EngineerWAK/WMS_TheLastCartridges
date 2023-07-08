@@ -27,7 +27,18 @@ _permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 _arrayPosition = _targetUID call WMS_fnc_findUIDinVhlArray;//if (_result == -1) exitWith {"not in the array"}
 ///////////////BOAT FILTER TO SPAWN ON WATER///////////////
 if (_vehicleClassName isKindOf "Ship" ||_vehicleClassName isKindOf "rhs_pontoon_float") then {
-	_pos = position _buyer findEmptyPosition [20,100,_vehicleClassName];
+	_helipadList =  nearestObjects [_buyer, ["Land_HelipadEmpty_F"], 50];
+	if (count _helipadList != 0) then {
+			_helipad = _helipadList select 0;
+			_helipadOccupied  =  nearestObjects [(position _helipad),["car","truck","tank","air","Ship"], 4];
+			if (count _helipadOccupied == 0) then {
+				_pos = position _helipad;
+			} else{
+				_pos = position _buyer findEmptyPosition [20,100,_vehicleClassName];
+			};
+		}else {
+			_pos = position _buyer findEmptyPosition [20,100,_vehicleClassName];
+		};
 	if (WMS_MissionDebug) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: Looking for empty position for the Boat: %1", _pos]};
 	//if (surFaceIsWater _pos) then{};
 	_veh = createVehicle [_vehicleClassName, _pos, [], 0, "NONE"];
@@ -76,7 +87,7 @@ if !(_arrayPosition == -1) then {
 		_veh = createVehicle [_vehicleClassName, position _buyer, [], 75, "NONE"];
 	};
 };*/
-_veh setDir (random 359);
+//_veh setDir (random 359);
 WMS_permanentVehicleObjects pushBack _veh;
 //_veh setOwner _buyer;
 _vehicleID = call WMS_fnc_generateHexaID;

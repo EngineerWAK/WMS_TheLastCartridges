@@ -8,30 +8,32 @@ class CfgRespawnInventory
 		//role = "Bambi";										// Optional, see CfgRoles
 		role = "LoneWolf";										// Optional, see CfgRoles
 
-		//weapons[] = {};
+		weapons[] = {"vn_m_shovel_01"};//you wanted a weapon? you got a weapon.
 		magazines[] = {
-			"SmokeShellGreen"
+			"vn_m18_purple_mag"
 		};
 		items[] = {
-			"ACE_Banana",
-			"ACE_Can_Spirit",
+			"ACE_Banana", //Define "Bambi"
+			"vn_fkb1",//flashlight
+			//"ACE_Can_Spirit",
 			"ACE_fieldDressing",
 			"ACE_fieldDressing",
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
-			"ACE_MRE_CreamTomatoSoup",
+			"vn_prop_food_can_03_04",
 			"ACE_splint",
 			"ACE_tourniquet",
-			"ACE_WaterBottle"
+			"vn_prop_drink_01"
 		};
 		linkedItems[] = {
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"rhsusf_ANPVS_14"
+			"vn_o_item_map",,
+			//"rhsusf_ANPVS_14"
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
+			"vn_b_headband_02"
 		};
-		uniformClass = "U_C_Scientist";
+		uniformClass = "vn_o_uniform_vc_02_05";
 		//backpack = "B_AssaultPack_rgr";
 	};
 	class IND_Medic
@@ -41,79 +43,75 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"SMG_02_F",
+			"vn_m45_camo",
 			"Binocular"
 		};
 		magazines[] = {
-			"30Rnd_9x21_Mag",
-			"30Rnd_9x21_Mag",
-			"30Rnd_9x21_Mag",
-			"SmokeShellGreen",
-			"SmokeShellGreen",
-			"SmokeShellGreen"
+			"vn_m45_mag",
+			"vn_m45_mag",
+			"vn_m45_mag",
+			"vn_m18_purple_mag",
+			"vn_m18_purple_mag"
 		};
 		items[] = {
 			"ACE_personalAidKit",
-			//"ACE_surgicalKit",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_packingBandage",
-			"ACE_packingBandage",
-			"ACE_packingBandage",
-			"ACE_packingBandage",
-			"ACE_packingBandage",
-			"ACE_packingBandage",
-			"ACE_packingBandage",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			//"ACE_adenosine",
-			//"ACE_adenosine",
-			"ACE_splint",
-			"ACE_splint",
-			"ACE_splint",
-			"ACE_splint",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_tourniquet",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_plasmaIV_250",
-			"ACE_plasmaIV_250",
-			"ACE_plasmaIV_250",
-			"ACE_plasmaIV_250",
-			"ACE_bodyBag",
 			"ACE_EarPlugs",
-			"ACE_MRE_BeefStew",
-			"ACE_Canteen"
+			"ACE_surgicalKit", //Define "Medic"
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			//"ACE_adenosine",
+			//"ACE_adenosine",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_plasmaIV_250",
+			"ACE_plasmaIV_250",
+			"ACE_plasmaIV_250",
+			"ACE_plasmaIV_250",
+			"vn_prop_food_can_02_04",
+			"vn_prop_drink_02"
 		};
 		linkedItems[] = {
-			"rhs_lifchik_vog",
-			"H_Booniehat_oli",
-			"rhs_acc_2dpZenit_ris",
-			"rhs_acc_pkas",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_b_vest_sog_02",
+			"vn_i_helmet_m1_01_01",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "AOR2_Camo_Cyre";
+		uniformClass = "vn_b_uniform_macv_03_17";
 		//backpack = "B_AssaultPack_rgr";
 		};
 	class IND_Engineer
@@ -123,21 +121,21 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"hgun_PDW2000_F",
-			"Binocular"
+			"vn_mat49",
+			"vn_m19_binocs_grn"
 		};
 		magazines[] = {
-			"30Rnd_9x21_Mag",
-			"30Rnd_9x21_Mag",
-			"30Rnd_9x21_Mag",
+			"vn_mat49_mag",
+			"vn_mat49_mag",
+			"vn_mat49_mag",
 			"rhs_mag_an_m14_th3",
 			"rhs_mag_an_m14_th3",
-			"rhs_charge_tnt_x2_mag",
-			"rhs_charge_tnt_x2_mag",
-			"SmokeShellGreen"
+			"vn_m7_grenade_mag",
+			"vn_m7_grenade_mag",
+			"vn_m18_purple_mag"
 		};
 		items[] = {
-			"ToolKit",
+			"ToolKit",//Define "Engineer"
 			"ACE_Clacker",
 			"ACE_Flashlight_MX991",
 			"ACE_fieldDressing",
@@ -147,23 +145,22 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_Can_Spirit",
-			"ACE_MRE_ChickenTikkaMasala",
+			"vn_prop_drink_04",
+			"vn_prop_food_can_02_03",
 			"ACE_splint",
 			"ACE_tourniquet",
 			"ACE_plasmaIV_250"
 		};
 		linkedItems[] = {
-			"rhs_6sh117_mg",
-			"H_Cap_blk_CMMG",
-			"acc_flashlight",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_b_vest_seal_07",//"rhs_6sh117_mg",
+			"vn_b_helmet_m1_03_01",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "U_BG_Guerrilla_6_1";
+		uniformClass = "vn_b_uniform_macv_04_07";
 		//backpack = "B_AssaultPack_rgr";
 	};
 	class IND_Breacher
@@ -173,19 +170,18 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhs_weap_M590_5RD",
-			"rhsusf_weap_glock17g4",
-			"rhsusf_bino_m24"
+			"vn_m1897",
+			"vn_m1911",
+			"vn_m19_binocs_grn"
 		};
 		magazines[] = {
-			"rhsusf_5Rnd_00Buck",
-			"rhsusf_5Rnd_00Buck",
-			"rhsusf_5Rnd_00Buck",
-			"rhsusf_5Rnd_Slug",
-			"rhsusf_5Rnd_Slug",
-			"rhsusf_5Rnd_Slug",
-			"rhsusf_mag_17Rnd_9x19_JHP",
-			"rhsusf_mag_17Rnd_9x19_JHP",
+			"vn_m1897_fl_mag",
+			"vn_m1897_fl_mag",
+			"vn_m1897_fl_mag",
+			"vn_m1897_fl_mag",
+			"vn_m1897_fl_mag",
+			"vn_m1911_mag",
+			"vn_m1911_mag",
 			"rhs_mag_an_m14_th3",
 			//"rhs_charge_tnt_x2_mag",
 			"SmokeShellGreen"
@@ -193,10 +189,10 @@ class CfgRespawnInventory
 		items[] = {
 			//"DemoCharge_Remote_Mag",
 			"rhs_charge_M2tet_x2_mag",
-			"ACE_DefusalKit",
-			"ACE_DeadManSwitch",
-			"ACE_M26_Clacker",
-			"ACE_Clacker",
+			"ACE_DefusalKit",//Define "Breacher"
+			"ACE_DeadManSwitch",//Define "Breacher"
+			"ACE_M26_Clacker",//Define "Breacher"
+			"ACE_Clacker",//Define "Breacher"
 			"ACE_Flashlight_MX991",
 			"ACE_fieldDressing",
 			"ACE_fieldDressing",
@@ -205,23 +201,22 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_Can_Spirit",
-			"ACE_MRE_ChickenTikkaMasala",
+			"vn_prop_drink_05",
+			"vn_prop_food_can_02_05",
 			"ACE_splint",
 			"ACE_tourniquet",
 			"ACE_plasmaIV_250"
 		};
 		linkedItems[] = {
-			"Marpat_MBSS_PACA",
-			"MarPat_Helmet2",
-			"rhsusf_ANPVS_14",
-			"ItemMap",
-			"ItemCompass",
-			"ChemicalDetector_01_watch_F",
-			"ItemRadio",
+			"vn_b_vest_sog_03",
+			"vn_b_helmet_m1_02_01",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "MarPat_Camo_Cyre_GS";
+		uniformClass = "vn_b_uniform_macv_05_05";
 		//backpack = "B_AssaultPack_rgr";
 	};
 	class IND_Assault
@@ -231,19 +226,19 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhs_weap_hk416d10_LMT",
-			"Binocular"
+			"vn_m16_camo",
+			"vn_m19_binocs_grn"
 		};
 		magazines[] = {
-			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
-			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
-			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
-			"ACE_30Rnd_556x45_Stanag_Mk318_mag",
+			"vn_m16_20_t_mag",
+			"vn_m16_20_t_mag",
+			"vn_m16_20_t_mag",
+			"vn_m16_20_t_mag",
 			"rhs_mag_an_m14_th3",
-			"rhs_mag_m67",
-			"rhs_mag_m67",
-			"rhs_mag_m67",
-			"SmokeShellGreen"
+			"vn_m61_grenade_mag",
+			"vn_m61_grenade_mag",
+			"vn_m61_grenade_mag",
+			"vn_m18_purple_mag"
 		};
 		items[] = {
 			"ACE_fieldDressing",
@@ -253,24 +248,23 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_MRE_BeefStew",
+			"vn_prop_drink_02",
+			"vn_prop_food_can_03_01",
 			"ACE_plasmaIV_250",
 			"ACE_splint",
-			"ACE_tourniquet",
-			"ACE_Canteen"
+			"ACE_tourniquet"
 		};
 		linkedItems[] = {
-			"rhsusf_acc_anpeq15_wmx_light",
-			"rhsusf_acc_compm4",
-			"DualTex_Vest_2",
-			"DualTex_Helmet2",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_b_m16", //baillonete
+			"vn_b_vest_usmc_01",
+			"vn_i_helmet_m1_02_01",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "DualTex_Camo_Cyre";
+		uniformClass = "vn_b_uniform_macv_06_07";
 		//backpack = "B_AssaultPack_rgr";
 	};
 	class IND_Assault2
@@ -280,20 +274,19 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhs_weap_mk17_CQC",
-			"hgun_Pistol_heavy_01_F",
-			"Binocular"
+			"vn_m1_garand",
+			"vn_m19_binocs_grn"
 		};
 		magazines[] = {
-			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
-			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
-			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
-			"rhs_mag_20Rnd_SCAR_762x51_m80_ball",
+			"vn_m1_garand_mag",
+			"vn_m1_garand_mag",
+			"vn_m1_garand_mag",
+			"vn_m1_garand_mag",
+			"vn_m1_garand_mag",
 			"rhs_mag_an_m14_th3",
-			"11Rnd_45ACP_Mag",
-			"rhs_mag_m67",
-			"rhs_mag_m67",
-			"SmokeShellGreen"
+			"vn_m61_grenade_mag",
+			"vn_m61_grenade_mag",
+			"vn_m18_purple_mag"
 		};
 		items[] = {
 			"ACE_fieldDressing",
@@ -303,24 +296,22 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_MRE_BeefStew",
+			"vn_prop_drink_01",
+			"vn_prop_food_can_01_13",
 			"ACE_plasmaIV_250",
 			"ACE_splint",
-			"ACE_tourniquet",
-			"ACE_Canteen"
+			"ACE_tourniquet"
 		};
 		linkedItems[] = {
-			"acc_flashlight",
-			"acc_flashlight_pistol",
-			"Scorpion_Vest_2",
-			"Scorpion_Helmet2",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_b_vest_usmc_02",
+			"vn_b_helmet_m1_07_01",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "Scorpion_Camo_Cyre";
+		uniformClass = "vn_b_uniform_macv_05_05";
 		//backpack = "B_AssaultPack_rgr";
 	};
 	class IND_Marksman
@@ -330,22 +321,24 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhs_weap_m14_rail",
-			"rhs_weap_type94_new",
-			"Rangefinder"
+			"vn_k98k",
+			"vn_m10",
+			"ACE_Yardage450"
 		};
 		magazines[] = {
-			"rhsusf_20Rnd_762x51_m80_Mag",
-			"rhsusf_20Rnd_762x51_m80_Mag",
-			"rhsusf_20Rnd_762x51_m80_Mag",
-			"rhs_mag_6x8mm_mhp",
-			"rhs_mag_6x8mm_mhp",
-			"SmokeShellGreen"
+			"vn_k98k_mag",
+			"vn_k98k_mag",
+			"vn_k98k_mag",
+			"vn_k98k_mag",
+			"vn_k98k_mag",
+			"vn_m10_mag",
+			"vn_m10_mag",
+			"vn_m18_purple_mag"
 		};
 		items[] = {
 			"ACE_Flashlight_MX991",
 			"ACE_Kestrel4500",
-			"ACE_RangeCard",
+			"ACE_RangeCard",//Define "Sniper"
 			"ACE_SpottingScope",
 			"ACE_fieldDressing",
 			"ACE_fieldDressing",
@@ -354,25 +347,25 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_MRE_BeefStew",
+			"vn_prop_drink_01",
+			"vn_prop_food_can_01_12",
 			"ACE_plasmaIV_250",
 			"ACE_splint",
-			"ACE_tourniquet",
-			"ACE_Canteen"
+			"ACE_tourniquet"
 		};
 		linkedItems[] = {
-			"Scorpion_Vest_2",
-			"Scorpion_Helmet2",
-			"rhsusf_acc_ACOG",
-			//"hlc_muzzle_Evo9",
-			"acc_flashlight_pistol",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_b_vest_sog_06",
+			"vn_b_helmet_m1_08_01",
+			"vn_b_k98k",
+			"vn_o_1_5x_k98k",
+			"vn_b_camo_k98k",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "rhsgref_uniform_gorka_1_f";
+		uniformClass = "vn_b_uniform_macv_03_05";
 		//backpack = "B_AssaultPack_rgr";
 	};
 	class IND_Marksman2
@@ -382,28 +375,26 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhs_weap_m76",
-			"rhs_weap_type94_new",
-			"Rangefinder"
+			"vn_m1903",
+			"vn_fkb1_pm",
+			"ACE_Yardage450"
 		};
 		magazines[] = {
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhsgref_10Rnd_792x57_m76",
-			"rhs_mag_6x8mm_mhp",
-			"rhs_mag_6x8mm_mhp",
-			"SmokeShellGreen"
+			"vn_m1903_mag",
+			"vn_m1903_mag",
+			"vn_m1903_mag",
+			"vn_m1903_mag",
+			"vn_m1903_mag",
+			"vn_m1903_mag",
+			"vn_m1903_mag",
+			"vn_pm_mag",
+			"vn_pm_mag",
+			"vn_m18_purple_mag"
 		};
 		items[] = {
 			"ACE_Flashlight_MX991",
 			"ACE_Kestrel4500",
-			"ACE_RangeCard",
+			"ACE_RangeCard",//Define "Sniper"
 			"ACE_SpottingScope",
 			"ACE_fieldDressing",
 			"ACE_fieldDressing",
@@ -412,29 +403,29 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_MRE_BeefStew",
+			"vn_prop_drink_02",
+			"vn_prop_food_can_01_9",
 			"ACE_plasmaIV_250",
 			"ACE_splint",
-			"ACE_tourniquet",
-			"ACE_Canteen"
+			"ACE_tourniquet"
 		};
 		linkedItems[] = {
-			"rhsusf_shemagh2_grn",
-			"Project_Honor_Vest_2",
-			"Project_Honor_Helmet2",
-			"rhs_acc_pso1m21",
-			//"hlc_muzzle_Evo9",
-			"acc_flashlight_pistol",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_b_scarf_01_01",
+			"vn_b_vest_sog_01",
+			"vn_b_bandana_01",
+			"vn_b_m1903",
+			"vn_o_8x_m1903",
+			"vn_b_camo_m1903",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "Project_Honor_Camo_Cyre";
+		uniformClass = "vn_b_uniform_macv_02_17";
 		//backpack = "B_AssaultPack_rgr";
 	};
-	class IND_Sniper
+	/*class IND_Sniper
 	{
 		displayName = "7-Sniper";							// Name visible in the menu
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
@@ -480,15 +471,15 @@ class CfgRespawnInventory
 			"rhsusf_acc_nxs_3515x50f1_h58",
 			//"hlc_muzzle_Evo9",
 			"acc_flashlight_pistol",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
 		uniformClass = "Tiger_Camo_Cyre";
 		//backpack = "B_AssaultPack_rgr";
-	};
+	};*/
 	class IND_MG
 	{
 		displayName = "8-MachineGunner";									// Name visible in the menu
@@ -496,18 +487,23 @@ class CfgRespawnInventory
 		role = "LoneWolf";											// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhs_weap_fnmag",
-			"hgun_Pistol_heavy_01_F",
-			"Binocular"
+			"vn_m1918_bipod",
+			"vn_mx991_m1911",
+			"vn_m19_binocs_grn"
 		};
 		magazines[] = {
-			"rhsusf_100Rnd_762x51_m62_tracer",
-			"rhsusf_100Rnd_762x51_m62_tracer",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
-			"rhs_mag_m67",
-			"rhs_mag_m67",
-			"SmokeShellGreen"
+			"vn_m1918_t_mag",
+			"vn_m1918_t_mag",
+			"vn_m1918_t_mag",
+			"vn_m1918_t_mag",
+			"vn_m1918_t_mag",
+			"vn_m1918_t_mag",
+			"vn_m1918_t_mag",
+			"vn_m1911_mag",
+			"vn_m1911_mag",
+			"vn_m67_grenade_mag",
+			"vn_m67_grenade_mag",
+			"vn_m18_yellow_mag"
 		};
 		items[] = {
 			"ACE_fieldDressing",
@@ -517,22 +513,23 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_MRE_BeefStew",
+			"vn_prop_food_can_03_01",
 			"ACE_plasmaIV_250",
 			"ACE_splint",
 			"ACE_tourniquet",
-			"ACE_Canteen"
+			"vn_prop_drink_07_03"
 		};
 		linkedItems[] = {
-			"V_PlateCarrier2_rgr_noflag_F",
-			"M81_Helmet1",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
+			"vn_b_vest_seal_03",
+			"vn_b_helmet_m1_04_01",
+			"vn_bipod_m1918",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			"vn_b_item_watch",
+			"vn_b_item_radio_urc10",
 			"rhsusf_ANPVS_14"
 		};
-		uniformClass = "M81_Camo_crye";
+		uniformClass = "vn_b_uniform_macv_06_05";
 		//backpack = "B_AssaultPack_mcamo";
 	};
 	class IND_Pilot
@@ -542,19 +539,19 @@ class CfgRespawnInventory
 		role = "LoneWolf";										// Optional, see CfgRoles
 
 		weapons[] = {
-			"rhsusf_weap_MP7A2_folded",
+			"vn_vz61_p",
 			"rhsusf_bino_lrf_Vector21"
 		};
 		magazines[] = {
-			"rhsusf_mag_40Rnd_46x30_FMJ",
-			"rhsusf_mag_40Rnd_46x30_FMJ",
+			"vn_vz61_mag",
+			"vn_vz61_mag",
+			"vn_vz61_mag",
 			"rhs_mag_an_m14_th3",
-			"SmokeShellGreen",
-			"SmokeShellGreen"
+			"vn_m61_grenade_mag",
+			"vn_m18_purple_mag"
 		};
 		items[] = {
-			"UH60_jvmf_tablet",
-			"rhsusf_ANPVS_14", //remove the helmet if "linkedItems"
+			//"UH60_jvmf_tablet",
 			"ACE_microDAGR",
 			"ACE_Flashlight_MX991",
 			"ACE_fieldDressing",
@@ -564,27 +561,27 @@ class CfgRespawnInventory
 			"ACE_bloodIV_250",
 			"ACE_EarPlugs",
 			"ACE_morphine",
-			"ACE_Can_Spirit",
-			"ACE_MRE_ChickenTikkaMasala",
+			"vn_prop_food_can_03_02",
+			"vn_prop_drink_07_03",
 			"ACE_splint",
 			"ACE_tourniquet",
 			"ACE_plasmaIV_250"
 		};
 		linkedItems[] = {
 			"ACE_Altimeter",
-			"rhsusf_acc_wmx_bk",
-			"rhsusf_ihadss",
-			"rhsusf_acc_eotech_xps3",
-			"OGA_G_Vest_3",
-			"ItemMap",
-			"ItemCompass",
-			//"rhs_radio_R187P1" //Infantry program Radio //too easy
+			"vn_b_helmet_svh4_01_01",
+			"vn_b_vest_aircrew_05",
+			"vn_o_item_map",
+			"vn_b_item_compass",
+			//"vn_b_item_watch",
+			"rhsusf_ANPVS_14",
+			//"vn_b_item_radio_urc10",
 			"rhsusf_radio_anprc152" //will be used for some advanced functions like "call for extraction"
 		};
-		uniformClass = "OGA_Camo_Cyre_Green";
+		uniformClass = "vn_b_uniform_k2b_02_02";
 		//backpack = "B_AssaultPack_rgr";
 	};
-	class IND_GI
+	/*class IND_GI
 	{
 		displayName = "GI";							// Name visible in the menu
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
@@ -680,5 +677,5 @@ class CfgRespawnInventory
 		};
 		uniformClass = "rhsgref_uniform_flecktarn";
 		//backpack = "B_AssaultPack_rgr";
-	};
+	};*/
 };
