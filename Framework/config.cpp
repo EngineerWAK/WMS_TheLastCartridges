@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.762_2023JUL09_GitHub"; //SOG Prairie Fire Setup //players traits still need a fix
+	name = "v1.763_2023JUL09_GitHub"; //SOG Prairie Fire Setup //players traits still need a fix
 };
 
 class Extended_PreInit_EventHandlers {
@@ -48,6 +48,7 @@ class CfgItemsCategories
 class CfgLootToSpawnCategories
 {   //_itemsCategories = getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items");
     #include "ClassNames\LootToSpawnCategories.hpp"
+    //#include "ClassNames\LootToSpawnCategories_SOG.hpp"
 };
 class CfgLootToSpawnWeight
 {  //_weight = getArray(missionConfigFile >> "CfgLootToSpawnWeight" >> "Special" >> "weight");

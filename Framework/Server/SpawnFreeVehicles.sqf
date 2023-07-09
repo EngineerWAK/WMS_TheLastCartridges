@@ -8,7 +8,50 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-private _vhls = [
+private _vhls = [];
+if (worldName == "Cam_Lao_Nam") then {
+	_vhls = [
+	[//_this select 0 = Military
+		"vn_b_wheeled_lr2a_01_nz_army",
+		"vn_b_wheeled_m151_01_aus_army",
+		"vn_b_wheeled_lr2a_03_aus_army",
+		"vn_b_armor_m577_02",
+		"vn_i_wheeled_btr40_01_fank_70",
+		"vn_o_armor_btr50pk_03_nvam",
+		"rhsgref_cdf_reg_uaz_open",
+		"rhsgref_BRDM2UM",
+		"rhsgref_cdf_zil131_open",
+		"rhsgref_tla_g_offroad",
+		"rhsgref_tla_g_kraz255b1_cargo_open",
+		"rhsgref_hidf_m113a3_unarmed",
+		"rhsgref_hidf_M998_4dr_fulltop",
+		"I_Quadbike_01_F",
+		"B_G_Van_01_fuel_F"
+	],
+	[//_this select 1 = Civilian
+		"vn_c_car_04_01",
+		"vn_c_car_01_02",
+		"vn_c_car_02_01",
+		"vn_c_car_03_01",
+		"rhsgref_un_uaz",
+		"rhsgref_un_zil131_open",
+		"rhsgref_nat_ural_work_open",
+		"C_IDAP_Truck_02_transport_F",
+		"C_Van_01_fuel_F",
+		"C_Truck_02_fuel_F",
+		"C_Tractor_01_F",
+		"C_Van_01_transport_F"
+	],
+	[//_this select 2 = Air
+		"vn_b_air_uh1b_01_03",
+		"vn_o_air_mi2_01_02",
+		"rhsgref_un_Mi8amt",
+		"C_Heli_Light_01_civil_F",
+		"rhs_uh1h_idap"
+	]
+	];
+}else{
+	_vhls = [
 	[//_this select 0 = Military
 		"I_G_Quadbike_01_F",
 		"I_E_Quadbike_01_F",
@@ -53,7 +96,8 @@ private _vhls = [
 		"RHS_UH60M_MEV2",
 		"RHS_CH_47F_cargo"
 	]
-];
+	];
+};
 
 private _Zones = [];
 private _markerVehicleCIV = ["respawn_motor"];
