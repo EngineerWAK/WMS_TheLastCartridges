@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=601;
+		nextID=621;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=163;
+		nextID=199;
 	};
 	class Camera
 	{
-		pos[]={18860.176,31.266874,10308.995};
-		dir[]={0.36499885,-0.53005278,0.76538885};
-		up[]={0.22815649,0.84796464,0.47843558};
-		aside[]={0.90261877,0,-0.43044111};
+		pos[]={18673.699,43.826336,924.85327};
+		dir[]={0.85088241,-0.31438479,-0.42117816};
+		up[]={0.28187495,0.94923949,-0.13952224};
+		aside[]={-0.44366425,1.9429572e-006,-0.89631963};
 	};
 };
 binarizationWanted=0;
@@ -88,13 +88,19 @@ addons[]=
 	"Scorpion_Config",
 	"A3_Structures_F_Exp_Civilian_Accessories",
 	"boat_f_vietnam_03_c",
-	"boat_f_vietnam_c"
+	"boat_f_vietnam_c",
+	"A3_Structures_F_Bootcamp_Items_Electronics",
+	"A3_Structures_F_Civ_InfoBoards",
+	"A3_Structures_F_Heli_Items_Electronics",
+	"A3_Boat_F_Jets_Carrier_01",
+	"ace_rearm",
+	"ace_refuel"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=47;
+		items=52;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -420,6 +426,41 @@ class AddonsMetaData
 			author="Savage Game Design";
 			url="https://www.arma3.com";
 		};
+		class Item47
+		{
+			className="A3_Structures_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item48
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item49
+		{
+			className="A3_Boat_F_Jets";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item50
+		{
+			className="ace_rearm";
+			name="ACE3 - Rearm";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item51
+		{
+			className="ace_refuel";
+			name="ACE3 - Refuel";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
 	};
 };
 dlcs[]=
@@ -562,7 +603,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=229;
+		items=248;
 		class Item0
 		{
 			dataType="Layer";
@@ -2030,7 +2071,7 @@ class Mission
 					class Attributes
 					{
 						ammo=0;
-						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
+						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 					};
 					id=37;
 					type="B_Slingload_01_Cargo_F";
@@ -3628,7 +3669,7 @@ class Mission
 					class Attributes
 					{
 						ammo=0;
-						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
+						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 					};
 					id=104;
 					type="B_Slingload_01_Cargo_F";
@@ -5384,7 +5425,7 @@ class Mission
 					class Attributes
 					{
 						ammo=0;
-						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
+						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 					};
 					id=159;
 					type="B_Slingload_01_Cargo_F";
@@ -13231,7 +13272,7 @@ class Mission
 					class Attributes
 					{
 						ammo=0;
-						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
+						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 					};
 					id=452;
 					type="B_Slingload_01_Cargo_F";
@@ -14297,7 +14338,7 @@ class Mission
 					class Attributes
 					{
 						ammo=0;
-						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "if (isServer) then {[this] call WMS_fnc_initContainerCargoDump;};";
+						init="[this, this] call ace_common_fnc_claim; " \n "this enableRopeAttach false;" \n "[this] call WMS_fnc_initContainerCargoDump;";
 					};
 					id=492;
 					type="B_Slingload_01_Cargo_F";
@@ -16209,6 +16250,395 @@ class Mission
 			};
 			id=600;
 			type="Campfire_burning_F";
+		};
+		class Item229
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={0,-103.16,0};
+			};
+			name="HC1";
+			isPlayable=1;
+			id=601;
+			type="HeadlessClient_F";
+		};
+		class Item230
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10632.568,15.817369,5167.6528};
+				angles[]={0,2.8726306,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=602;
+			type="Land_WaterCooler_01_old_F";
+			atlOffset=1.1864185;
+		};
+		class Item231
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10616.44,15.425726,5154.5337};
+				angles[]={0,3.1503963,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=603;
+			type="Land_Billboard_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Custom\Billboards\Billboard_Traders.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item232
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9442.6514,195.74489,12063.859};
+				angles[]={0,4.8645592,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=604;
+			type="Land_WaterCooler_01_old_F";
+			atlOffset=3.8466644;
+		};
+		class Item233
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9408.3994,187.9673,12083.892};
+				angles[]={0,2.4585125,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=605;
+			type="Land_Billboard_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Custom\Billboards\Billboard_Traders.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item234
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9442.6211,195.53305,12064.471};
+				angles[]={0,4.8812737,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=607;
+			type="Fridge_01_closed_F";
+		};
+		class Item235
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10630.52,15.603821,5169.6777};
+				angles[]={0,5.4229274,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=608;
+			type="Fridge_01_closed_F";
+		};
+		class Item236
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18849.504,20.196608,10236.364};
+				angles[]={0,5.1328249,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=609;
+			type="Land_WaterCooler_01_old_F";
+			atlOffset=1.1445351;
+		};
+		class Item237
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18856.893,19.97327,10253.326};
+				angles[]={0,0.20559208,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=610;
+			type="Land_Billboard_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Custom\Billboards\Billboard_Traders.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item238
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18852.311,19.983036,10236.331};
+				angles[]={0,1.5103016,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=611;
+			type="Fridge_01_closed_F";
+			atlOffset=1.1445503;
+		};
+		class Item239
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7293.769,239.1805,18300.465};
+				angles[]={0.047538601,2.6182022,0.034377873};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=612;
+			type="Land_WaterCooler_01_old_F";
+			atlOffset=1.709671;
+		};
+		class Item240
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7302.5376,238.48318,18299.904};
+				angles[]={0,0.70578134,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=613;
+			type="Land_Billboard_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Custom\Billboards\Billboard_Traders.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item241
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7290.6245,238.92892,18298.99};
+				angles[]={0.047538601,4.1842289,0.034377873};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=614;
+			type="Fridge_01_closed_F";
+			atlOffset=1.6713257;
+		};
+		class Item242
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3589.5708,40.203766,10198.241};
+				angles[]={0,1.2300227,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=615;
+			type="Land_WaterCooler_01_old_F";
+		};
+		class Item243
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3589.9421,41.143188,10199.883};
+				angles[]={0,3.5125504,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=616;
+			type="Land_Billboard_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Custom\Billboards\Billboard_Traders.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item244
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3584.2278,39.990177,10194.549};
+				angles[]={0,3.4936295,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=617;
+			type="Fridge_01_closed_F";
+		};
+		class Item245
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18796.174,0,938.69873};
+				angles[]={0,4.3165216,-0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=618;
+			type="Land_Carrier_01_base_F";
+			atlOffset=99.505905;
+		};
+		class Item246
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18758.707,24.890587,893.38397};
+				angles[]={0,5.8957572,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableRopeAttach false;";
+			};
+			id=619;
+			type="B_Slingload_01_Ammo_F";
+			atlOffset=0.00010490417;
+		};
+		class Item247
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18792.063,24.891106,907.87701};
+				angles[]={0,2.7398179,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this enableRopeAttach false;";
+			};
+			id=620;
+			type="B_Slingload_01_Fuel_F";
+			atlOffset=0.0002117157;
 		};
 	};
 };

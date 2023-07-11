@@ -62,7 +62,7 @@ class SubMachineGun
 		"vn_pps52",
 		"vn_ppsh41",
 		"vn_sten",
-		"vn_type64",
+		"vn_type64_smg",
 		//"vn_type64_f", //do not exist???
 		"vn_vz61"
 		/////

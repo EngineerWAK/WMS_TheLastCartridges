@@ -40,3 +40,9 @@ CHVD_maxView = 12000;
 CHVD_maxObj = 12000;
 
 WMS_MissionDebug = true;
+
+
+if (!hasInterface && !isServer) then
+{
+	execVM "init_HC.sqf";
+};

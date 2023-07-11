@@ -136,30 +136,3 @@ if (hasinterface) then {
         };
     };
 };
-
-/*if !(hasInterface) then {
-	WMS_HeadlessOwnerID = (owner player);
-	publicVariable "WMS_HeadlessOwnerID";
-	_targetUID = getPlayerUID player;
-	_targetOwner = (owner player);
-	if (WMS_MissionDebug) then {diag_log format ["[PLAYERJOINING_HC1]|WAK|TNA|WMS| player: %1, UID: %2", player, _targetUID]};
-
-	addMissionEventHandler ["PlayerDisconnected", //DOESNT WORK
-		{
-			params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
-			WMS_HeadlessOwnerID = 2;
-			publicVariable "WMS_HeadlessOwnerID";
-			if (WMS_MissionDebug) then {diag_log format ["[PLAYERLEAVING_HC1]|WAK|TNA|WMS| player: %1, UID: %2", _name, _uid]};
-
-		}
-	];
-
-    HC1_60secLoop = {
-        while {true} do
-        {
-			if (WMS_MissionDebug) then {diag_log format ["[HC1_60SecLoop]|WAK|TNA|WMS| player: %1, UID: %2, FPS: %3", name player, getPlayerUID player, diag_fps]};
-            uisleep 60;
-        };
-    };
-    [] call HC1_60secLoop;
-};*/

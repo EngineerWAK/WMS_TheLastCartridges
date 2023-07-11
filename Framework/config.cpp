@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.763_2023JUL09_GitHub"; //SOG Prairie Fire Setup //players traits still need a fix
+	name = "v1.764_2023JUL11_GitHub"; //SOG Prairie Fire Setup //players traits still need a fix
 };
 
 class Extended_PreInit_EventHandlers {
