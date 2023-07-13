@@ -13,7 +13,7 @@
 //if (true)then {execVM "DFO\WMS_DFO_functions.sqf"};
 
 WMS_lootHolderList = []; //[_house,_lootHolder,(serverTime+_timeToDelete)];
-WMS_HeadlessOwnerID = 2;
+WMS_HC1_ID = 2;
 //WMS_MissionDebug = false; //move to init
 
 WMS_customRespawnList = profileNameSpace getvariable["WMS_customRespawnList",[]]; //move from Profile to missionNameSpace, saved by WMS_infantryProgram, after last players kick before restart

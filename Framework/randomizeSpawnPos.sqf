@@ -27,13 +27,14 @@ if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Randomazi
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
 	//"CustomRespawn"
-	player allowDamage false;
+	_target allowDamage false;
 	if(((ASLtoATL _customRespawnPos) select 2) >= 0)then{
-		player setPosASL _customRespawnPos;
+		_target setPosASL _customRespawnPos;
 	};
-	[_customPlayerTraits]spawn {
+	[_customPlayerTraits,_target]spawn {
 		diag_log "[WMS_ANTI_ACE_BULSHIT]Launched";
 		_customPlayerTraits = _this select 0;
+		_target = _this select 1;
 		removeallassigneditems player;
 		removeallweapons player;
 		removeallitems player;
@@ -47,55 +48,60 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		uisleep 2;
 		if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 		uisleep 1;
-		if(((player getVariable ['playerInRestrictionZone',-1]) == -1)) then {player setVariable ['playerInRestrictionZone',0]};
-   		player setVariable ["WMS_Specialist_Bambi",(_customPlayerTraits select 0),true];
-    	player setVariable ["WMS_Specialist_Breacher",(_customPlayerTraits select 1),true];
-    	player setVariable ["WMS_Specialist_Engineer",(_customPlayerTraits select 2),true];
-    	player setVariable ["WMS_Specialist_Sniper",(_customPlayerTraits select 3),true];
-    	player setVariable ["WMS_Specialist_Medic",(_customPlayerTraits select 4),true];
+		if(((_target getVariable ['playerInRestrictionZone',-1]) == -1)) then {_target setVariable ['playerInRestrictionZone',0]};
+   		_target setVariable ["WMS_Specialist_Bambi",(_customPlayerTraits select 0),true];
+    	_target setVariable ["WMS_Specialist_Breacher",(_customPlayerTraits select 1),true];
+    	_target setVariable ["WMS_Specialist_Engineer",(_customPlayerTraits select 2),true];
+    	_target setVariable ["WMS_Specialist_Sniper",(_customPlayerTraits select 3),true];
+    	_target setVariable ["WMS_Specialist_Medic",(_customPlayerTraits select 4),true];
 			if ((_customPlayerTraits select 1))then{
     			//player setVariable ["WMS_Specialist_Breacher",true,true]; //done already
-				player setUnitTrait ["explosiveSpecialist",true];
-    			player setVariable ["ace_IsEngineer",1,true];
+				_target setUnitTrait ["explosiveSpecialist",true];
+    			_target setVariable ["ace_IsEngineer",1,true];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Breacher Skill';
+				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, BREACHER", name player]};
 				systemChat 'SKILL SET | You now have Breacher Skill';
 			};
 			if ((_customPlayerTraits select 2))then{
     			//player setVariable ["WMS_Specialist_Engineer",true,true]; //done already
-    			player setVariable ["ace_IsEngineer",2,true];
-				player setUnitTrait ["Engineer",true];
+    			_target setVariable ["ace_IsEngineer",2,true];
+				_target setUnitTrait ["Engineer",true];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Advanced Engineer';
+				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, ENGINEER", name player]};
 				systemChat 'SKILL SET | You are now Advanced Engineer';
 			};
 			if ((_customPlayerTraits select 3))then{
     			//player setVariable ["WMS_Specialist_Sniper",true,true]; //done already
-    			player setVariable ["WMS_CamoCoef",[0.8,0.1],true];
-    			player setVariable ["WMS_AudiCoef",[0.8,0.1],true];
-				player setUnitTrait ["audibleCoef",0.8];
-				player setUnitTrait ["camouflageCoef",0.8];
+    			_target setVariable ["WMS_CamoCoef",[0.8,0.1],true];
+    			_target setVariable ["WMS_AudiCoef",[0.8,0.1],true];
+				_target setUnitTrait ["audibleCoef",0.8];
+				_target setUnitTrait ["camouflageCoef",0.8];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Sniper Skill';
+				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, SNIPER", name player]};
 				systemChat 'SKILL SET | You now have Sniper Skill';
 			};
 			if ((_customPlayerTraits select 4))then{
     			//player setVariable ["WMS_Specialist_Medic",true,true]; //done already
-    			player setVariable ["ace_medical_medicclass", 2, true];
-				player setUnitTrait ["Medic",true];
+    			_target setVariable ["ace_medical_medicclass", 2, true];
+				_target setUnitTrait ["Medic",true];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Doctor';
+				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, DOCTOR", name player]};
 				systemChat 'SKILL SET | You are now Doctor';
 			};
 		if ((_customPlayerTraits select 0))then{
     		//player setVariable ["WMS_Specialist_Bambi",true,true]; //done already
-    		player setVariable ["WMS_Specialist_Engineer",true,true];
-    		player setVariable ["WMS_Specialist_Medic",true,true];
+    		_target setVariable ["WMS_Specialist_Engineer",true,true];
+    		_target setVariable ["WMS_Specialist_Medic",true,true];
     		//player setVariable ["WMS_Specialist_Breacher",false,true];
-    		player setVariable ["ace_IsEngineer",2,true];
-    		player setVariable ["ace_medical_medicclass", 2, true];
-			player setUnitTrait ["Medic",true];
-			player setUnitTrait ["Engineer",true];
+    		_target setVariable ["ace_IsEngineer",2,true];
+    		_target setVariable ["ace_medical_medicclass", 2, true];
+			_target setUnitTrait ["Medic",true];
+			_target setUnitTrait ["Engineer",true];
+			if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, BAMBI", name player]};
 			systemChat 'SKILL SET | You now have Bambi Skill';
 		};
 		
-		player allowDamage true;
+		_target allowDamage true;
 		missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
 		missionNamespace setVariable["WMS_client_customRespawnAce",[]];
 		missionNamespace setVariable["WMS_client_canCustomRespawn",false];

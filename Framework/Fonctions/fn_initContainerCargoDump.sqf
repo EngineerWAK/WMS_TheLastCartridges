@@ -44,13 +44,16 @@ _container enableRopeAttach false;
 ];
 [
 				//hint 'Cargo Dump Container is empty, you punk'; for what ever reason this is general to all players
+				//'Cargo Dump Container is empty, you punk' remoteExec ['hint', _own]; //because you are a moron, moron
 	_container, [
 		"<t size='1' color='#3d74ff'>Sell Inventory</t>", 
 		" 
-			if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
-				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump',2]; 
+			params ['_target', '_caller', '_actionId', '_arguments'];
+			_own = owner _caller;
+			if !(count ((ItemCargo _target)+(WeaponCargo _target)+(MagazineCargo _target)+(backpackCargo _target)) == 0) then { 
+				[_caller, _target] remoteExec ['WMS_fnc_processCargoDump',2]; 
 			} else { 
-				'Cargo Dump Container is empty, you punk' remoteExec ['hint', (owner (_this select 1))];
+				hint 'Cargo Dump Container is empty, you punk';
 			}; 
 		", 
 		nil, 

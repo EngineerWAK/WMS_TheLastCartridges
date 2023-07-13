@@ -24,7 +24,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		"	
 			if (locked (_this select 0) == 0) then {
 				_vehiclesManagement = getArray(missionConfigFile >> 'CfgOfficeTrader' >> 'vehiclesManagement');
-				if ((_vehiclesManagement select 5) != 0 &&{(player getVariable ['playerInTraderZone', true])}) then {
+				if ((_vehiclesManagement select 5) != 0 &&{(player getVariable ['playerInTraderZone', false])}) then {
 					[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle will be UNLOCKED after restart if in the Traders Zone';
 				};
 				if (typeOf (_this select 0) in (getArray(missionConfigFile>>'CfgOpenVhl'>>'vhl'))) then {

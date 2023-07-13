@@ -39,10 +39,10 @@ CHVD_allowNoGrass = false;
 CHVD_maxView = 12000;
 CHVD_maxObj = 12000;
 
-WMS_MissionDebug = true;
+WMS_MissionDebug = false;
 
 
 if (!hasInterface && !isServer) then
 {
-	execVM "init_HC.sqf";
+	execVM "HC_Package\init_HC.sqf";
 };

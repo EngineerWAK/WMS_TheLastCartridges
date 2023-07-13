@@ -93,7 +93,7 @@
 			"vn_b_nz_army_static_m101_01", //AT canon
 			"vn_i_fank_70_static_l60mk3", //40mm autocanon
 			"vn_i_static_m45", //x4 M2 AA gun
-			"n_i_fank_70_static_zgu1_01", //x1 23mm AA gun
+			"vn_i_fank_70_static_zgu1_01", //x1 23mm AA gun
 			"vn_b_armor_m125_01" //m113 mortar
 		}
 	};

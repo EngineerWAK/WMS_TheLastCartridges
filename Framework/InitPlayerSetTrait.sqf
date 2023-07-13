@@ -26,6 +26,7 @@ _caller setUnitTrait ["UAVHacker",false];
 _caller setUnitTrait ["explosiveSpecialist",false];
 _caller setUnitTrait ["Medic",false];
 _caller setUnitTrait ["Engineer",false];
+if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, RESET ALL TRAITS", name _caller]};
 	
 //if (worldName == "xcam_taunus") then {_caller setUnitTrait ["camouflageCoef",0.8]};
 //Banana only for Bambi Loadout will put the Bambi class to Engineer/Medic level 2
@@ -40,6 +41,7 @@ if ("ACE_Banana" in _items) then {
 	_caller setUnitTrait ["Engineer",true];
 	//_caller setUnitTrait ["UAVHacker",true]; //messing up with the new Base Weapon system
 	//_caller setUnitTrait ["explosiveSpecialist",true];
+	if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, BAMBI", name _caller]};
 } else {
 	//BREACHER
 	if ("ACE_DefusalKit" in _items && {"ACE_DeadManSwitch" in _items} && {"ACE_M26_Clacker" in _items} && {"ACE_Clacker" in _items}) then {
@@ -53,6 +55,7 @@ if ("ACE_Banana" in _items) then {
     	_caller setVariable ["ace_medical_medicclass", 0, true];
 		_caller setUnitTrait ["Medic",false];
 		_caller setUnitTrait ["Engineer",false];
+		if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, BREACHER", name _caller]};
 	};
 	//ENGINEER LEVEL
 	//ToolKit Item only for Engineer Loadout
@@ -66,6 +69,7 @@ if ("ACE_Banana" in _items) then {
     	_caller setVariable ["ace_medical_medicclass", 0, true];
 		_caller setUnitTrait ["Medic",false];
 		_caller setUnitTrait ["Engineer",true];
+		if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, ENGINEER", name _caller]};
 	} else {
 		if ("ACE_RangeCard" in _items) then {
 			//snipers not engineer
@@ -82,8 +86,8 @@ if ("ACE_Banana" in _items) then {
 			_caller setUnitTrait ["camouflageCoef",0.8];
 			_caller setUnitTrait ["Medic",false];
 			_caller setUnitTrait ["Engineer",false];
+			if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, SNIPER", name _caller]};
 		};
-	
 	};
 	//MEDIC LEVEL
 	//SurgicalKit only for Medic Loadout
@@ -97,11 +101,13 @@ if ("ACE_Banana" in _items) then {
 		_caller setUnitTrait ["Medic",true];
     	_caller setVariable ["ace_IsEngineer",0,true];
 		_caller setUnitTrait ["Engineer",false];
+		if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, DOCTOR", name _caller]};
 	} else {
 		if ("ACE_RangeCard" in _items) then {
 			//snipers not medic
     		_caller setVariable ["ace_medical_medicclass", 0, true];
 			_caller setUnitTrait ["Medic",false];
+			if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, NO MEDIC FOR SNIPER", name _caller]};
 		};
 	};
 };

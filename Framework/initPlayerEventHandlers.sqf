@@ -23,31 +23,6 @@ player addEventHandler ["Respawn",
 			_mkr = createmarkerLocal ["MKR_"+(name player), position player];
 			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
 			_mkr setMarkerColorLocal "ColorGUER";
-   			/*//Bohemia shit plane auto-landing
-   			inGameUISetEventHandler ["Action", " 
-   			if ((_this select 3) == 'Land' || (_this select 4) == 'Landing autopilot') then 
-   			{ 
-      			hint 'NOPE! No AutoLanding';  
-       			true 
-   			} 
-   			"];
-   			//Hatchet shit function to autostart choppers
-   			inGameUISetEventHandler ["Action", " 
-   			if ((_this select 4) == 'Automatic Engine Startup') then 
-   			{ 
-      			hint 'NOPE! No QuickStart';  
-       			true 
-   			} 
-    		"];
-   			//RHS shit function to tow statics
-   			inGameUISetEventHandler ["Action", " 
-   			if ((_this select 4) == ' Switch to moving mode') then 
-   			{ 
-       			hint 'NOPE! Not gonna happen';  
-      			true 
-   			} 
-   			"];
-			*/
    			inGameUISetEventHandler ["Action", " 
    			if (
 				((_this select 3) == 'Land') || 
@@ -68,11 +43,11 @@ player addEventHandler ["Respawn",
 
 player addEventHandler ["HandleDamage", { 
 		params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
-		if (alive player) then {
+		if (alive _unit) then {
 			if !(isServer||isdedicated) then {
 				Diag_log format ["|WAK|TNA|WMS|Player eventHandler HandleDamage, _this = %1",_this];
 				if (_damage >= 2.5 && {_projectile != ""} && {(_selection == "head") || (_selection == "face_hub")}) then {
-					playSound3D [getMissionPath 'Custom\Ogg\HelmetShot.ogg', player, false, position player, 1, (0.6+random 1)];
+					playSound3D [getMissionPath 'Custom\Ogg\HelmetShot.ogg', _unit, false, position _unit, 1, (0.6+random 1)];
 					[playerSide, 'PAPA_BEAR'] commandChat format ["%1 got shot strait in the face! With %2", name _unit, _projectile];
 				};
 			};
@@ -81,7 +56,7 @@ player addEventHandler ["HandleDamage", {
 ];
 
 player addEventHandler ["GetOutMan", {
-		//params ["_unit", "_role", "_vehicle", "_turret"];
+		params ["_unit", "_role", "_vehicle", "_turret"];
 		//(_this select 0) setVariable ["PlayerLastVehicle", (_this select 2), true]; //try to use this for wasteDump trader
 		if ((_this select 2) getVariable ["WMS_permanentvhl", false] && {damage (_this select 2) != 1} && {(((_this select 2) getVariable ["WMS_buyerowner", 0]) == (getPlayerUID (_this select 0)))}) then {
 			[(_this select 2),"getout"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
@@ -89,23 +64,25 @@ player addEventHandler ["GetOutMan", {
 	}
 ];
 player addMPEventHandler ["mpkilled", {
-		deleteMarkerLocal "MKR_"+(name (_this select 0));
-		_actualPlayer = (_this select 0) getVariable ["_spawnedPlayerReadyToFight", true];
+		params ["_unit", "_killer", "_instigator", "_useEffects"];
+		deleteMarkerLocal "MKR_"+(name _unit);
+		_actualPlayer = _unit getVariable ["_spawnedPlayerReadyToFight", true];
 		if (_actualPlayer && hasInterface) then {
 			//First, reset the "specialist" traits, for "after restart", no more permanent doctors or advanced engineers
-			player setVariable ["WMS_Specialist_Bambi",false,true];
-			player setVariable ["WMS_Specialist_Breacher",false,true];
-			player setVariable ["WMS_Specialist_Engineer",false,true];
-			player setVariable ["WMS_Specialist_Sniper",false,true];
-			player setVariable ["WMS_Specialist_Medic",false,true];
-			player setVariable ["ace_IsEngineer",0,true];
-			player setVariable ["ace_medical_medicclass", 0, true];
-			player setUnitTrait ["UAVHacker",false];
-			player setUnitTrait ["explosiveSpecialist",false];
-			player setUnitTrait ["Medic",false];
-			player setUnitTrait ["Engineer",false];
-			if ((getPlayerUID player) in WMS_customRespawnList) then {
-				[player] remoteExec ["WMS_fnc_deleteRespawnData",2];
+			_unit setVariable ["WMS_Specialist_Bambi",false,true];
+			_unit setVariable ["WMS_Specialist_Breacher",false,true];
+			_unit setVariable ["WMS_Specialist_Engineer",false,true];
+			_unit setVariable ["WMS_Specialist_Sniper",false,true];
+			_unit setVariable ["WMS_Specialist_Medic",false,true];
+			_unit setVariable ["ace_IsEngineer",0,true];
+			_unit setVariable ["ace_medical_medicclass", 0, true];
+			_unit setUnitTrait ["UAVHacker",false];
+			_unit setUnitTrait ["explosiveSpecialist",false];
+			_unit setUnitTrait ["Medic",false];
+			_unit setUnitTrait ["Engineer",false];
+			if (true) then {diag_log format ["[InitPlayerEventHandlers.sqf|MPkilled]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, RESETTING SKILLS", name _unit]};
+			if ((getPlayerUID _unit) in WMS_customRespawnList) then {
+				[_unit] remoteExec ["WMS_fnc_deleteRespawnData",2];
 				//[]spawn{};
 				private _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];
 				_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
