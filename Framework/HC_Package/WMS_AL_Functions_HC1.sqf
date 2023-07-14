@@ -225,7 +225,7 @@ WMS_fnc_AL_ManagementLoop = {
 	uisleep 5;
 	for "_i" from 1 to WMS_AL_VHLmax do {
 		[] call WMS_fnc_AL_createVHL;
-		uisleep 0.75;
+		uisleep 1;
 	};
 	for "_i" from 1 to WMS_AL_UnitMax do {
 		[] call WMS_fnc_AL_createUnits;

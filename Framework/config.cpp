@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.766_2023JUL13_GitHub"; //SOG Prairie Fire Setup //players traits FIXED!!! //HC1 setup for AmbientLife
+	name = "v1.767_2023JUL14_GitHub"; //SOG Prairie Fire Setup //players traits FIXED!!! //HC1 setup ...
 };
 
 class Extended_PreInit_EventHandlers {
