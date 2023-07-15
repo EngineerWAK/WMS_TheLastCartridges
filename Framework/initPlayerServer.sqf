@@ -19,8 +19,6 @@ if (missionNamespace getVariable ["WMS_firstPlayerConnected", true]) then { //Ac
 	missionNamespace setVariable ["WMS_firstPlayerConnected", false];
 	//forceRespawn _playerUnit; //this might fix the first player stuck before spawn map //nope it didnt
 };
-
-
 //profileNamespace setVariable [_playerUID_ExileScore, round (_playerScore*1.01)];
 
 _playerAlreadyConnected = profileNamespace getVariable ["WMS_playerAlreadyConnected",[]];

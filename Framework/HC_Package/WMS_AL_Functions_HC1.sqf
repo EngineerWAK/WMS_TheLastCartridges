@@ -21,8 +21,8 @@
 
 WMS_AL_Version		= "v0.3xBeta_HCVersion_2023JUL13";
 WMS_AmbientLife		= true;
-WMS_AL_Standalone	= true; //Keep true if you don't use WMS_DFO or WMS_InfantryProgram
-WMS_AL_LOGs			= true; //Debug
+WMS_AL_Standalone	= false; //Keep true if you don't use WMS_DFO or WMS_InfantryProgram
+WMS_AL_LOGs			= false; //Debug
 WMS_AL_IncludeLoc	= true; //will include "nameLocal" locations in the position list
 WMS_AL_StripOffUnit = true; //Remove or not NPC loadout when they die
 WMS_AL_LockVehicles = true; //lock vehicles for players
@@ -396,7 +396,8 @@ WMS_fnc_AL_UnitEH = {
 		[_killer] call WMS_fnc_AL_PunishPunks;
 	};
 	private _hexaID = _killed getVariable ["WMS_HexaID", "zzzzzzzz"];
-	WMS_HC_AllDeadsMgr pushBack [_killed,(serverTime+60)];
+	WMS_HC_AllDeadsMgr pushBack [_killed,(serverTime+60)]; //@infantryProgram
+	WMS_AllDeadsMgr pushBack [_killed,(serverTime+60)]; //@infantryProgram
 	if (WMS_AL_StripOffUnit) then {
 		_killed removeWeapon (primaryWeapon _killed);
 		_killed removeWeapon (secondaryWeapon _killed); //launcher
@@ -627,7 +628,7 @@ if (WMS_AL_Standalone) then {
 	[]call WMS_fnc_ScanForWater;
 	[]call WMS_fnc_FindRoad;
 };
-uisleep 15;
+uisleep 120;
 if (WMS_AmbientLife) then {
 	[] spawn WMS_fnc_AL_ManagementLoop;
 	if (true) then {diag_log format ['|WAK|TNA|WMS|WMS_AmbientLife Started, version %1', WMS_AL_Version]};

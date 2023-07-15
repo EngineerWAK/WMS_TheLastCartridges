@@ -38,7 +38,9 @@ HC1_60secLoop = {
 		if (worldName == "Cam_Lao_Nam"&&{name player == "HC1"}) then {
 			WMS_HC1 = true; //workInProgress
 			publicVariable "WMS_HC1";
-			call WMS_fnc_HC_AllDeadsMgr; //workInProgress
+			//call WMS_fnc_HC_AllDeadsMgr; //workInProgress
+			call WMS_fnc_AllDeadsMgr; //@infantryProgram
+
 		};
     };
  };
