@@ -138,6 +138,7 @@ class CfgRemoteExec
 		class WMS_fnc_waypoints_Patrol 				{ allowedTargets=0; };//to replace the trusty CBA one, at least on HC
 		class WMS_fnc_SetUnits 						{ allowedTargets=0; };//HC remote setUnits
 		class WMS_fnc_ServerProfileNameSpace 		{ allowedTargets=0; };//send serverProfile update from the HC, will need some safetry things
+		class WMS_fnc_transitKillStats 				{ allowedTargets=2; };
 
 		class WMS_fnc_DFO_Event		   				{ allowedTargets=2; }; //server side only
 
