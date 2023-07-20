@@ -61,24 +61,24 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["vn_b_wheeled_m274_mg_03_01", 		10], //mulle M134
 	["vn_b_wheeled_m274_mg_02_01", 		10], //mulle recoilless canon
 	["vn_b_wheeled_m274_mg_01_01", 		10], //mulle M60
-	["vn_b_wheeled_m151_mg_02", 		5], //jeep M2
-	["vn_b_wheeled_m151_mg_06",		 	5], //jeep recoilless canon
-	["vn_b_wheeled_m151_mg_03", 		10], //jeep patrol M2 M60
-	["vn_b_wheeled_m151_mg_05", 		5], //jeep tow
-	["vn_i_wheeled_m151_mg_01_fank_71", 5], //jeep M1919 .30
-	["vn_i_wheeled_m151_mg_04_fank_71", 5], //"armored" M60
+	["vn_b_wheeled_m151_mg_02", 		10], //jeep M2
+	["vn_b_wheeled_m151_mg_06",		 	10], //jeep recoilless canon
+	["vn_b_wheeled_m151_mg_03", 		15], //jeep patrol M2 M60
+	["vn_b_wheeled_m151_mg_05", 		10], //jeep tow
+	["vn_i_wheeled_m151_mg_01_fank_71", 10], //jeep M1919 .30
+	["vn_i_wheeled_m151_mg_04_fank_71", 10], //"armored" M60
 	["vn_b_wheeled_lr2a_mg_02_nz_army", 10], //LR twin M60
-	["vn_b_wheeled_lr2a_mg_03_nz_army", 5], //LR recoilless canon
-	["vn_i_wheeled_lr2a_mg_01_fank_71", 5], //LR M60
+	["vn_b_wheeled_lr2a_mg_03_nz_army", 10], //LR recoilless canon
+	["vn_i_wheeled_lr2a_mg_01_fank_71", 10], //LR M60
 	["vn_i_wheeled_z157_mg_01_fank_70", 20],//s h i t truck MG
 	["vn_b_wheeled_m54_mg_01", 			10], //truck "armored"
 	["vn_b_wheeled_m54_mg_03", 			10], //truck "armored"
 	["vn_b_wheeled_m54_mg_02", 			10], //truck ZSU
-	["vn_i_wheeled_btr40_mg_02_fank_70", 5], //DSHKM
-	["vn_i_wheeled_btr40_mg_01_fank_70", 5], //RPD
-	["vn_i_wheeled_btr40_mg_04_fank_70", 5], //SMG (LMG)
-	["vn_o_wheeled_btr40_mg_04_pl", 	5], //SMG (LMG) //same as the other one
-	["vn_o_wheeled_btr40_mg_05_pl", 	5], //recoilless canon
+	["vn_i_wheeled_btr40_mg_02_fank_70", 10], //DSHKM
+	["vn_i_wheeled_btr40_mg_01_fank_70", 10], //RPD
+	["vn_i_wheeled_btr40_mg_04_fank_70", 10], //SMG (LMG)
+	["vn_o_wheeled_btr40_mg_04_pl", 	10], //SMG (LMG) //same as the other one
+	["vn_o_wheeled_btr40_mg_05_pl", 	10], //recoilless canon
 	["vn_o_wheeled_btr40_mg_03_pl", 	5], //ZPU4
 	["vn_b_armor_m113_acav_04", 		10], //ACAV M134 (+ M60 sides)
 	["vn_b_armor_m113_acav_01", 		10], //ACAV M2 (+ M60 sides)

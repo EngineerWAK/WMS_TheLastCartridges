@@ -46,7 +46,7 @@
 			"vn_m3carbine",
 			"vn_m1carbine_shorty",
 			"vn_anpvs2_binoc",
-			"vn_hgun_m79",
+			"vn_m79",
 			"vn_mk1_udg", //under water
 			"vn_m40a1",
 			"vn_l1a1_xm148_camo",

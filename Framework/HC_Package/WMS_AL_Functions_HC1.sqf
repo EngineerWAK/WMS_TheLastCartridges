@@ -26,12 +26,12 @@ WMS_AL_LOGs			= false; //Debug
 WMS_AL_IncludeLoc	= true; //will include "nameLocal" locations in the position list
 WMS_AL_StripOffUnit = true; //Remove or not NPC loadout when they die
 WMS_AL_LockVehicles = true; //lock vehicles for players
-WMS_AL_VHLmax		= 35; //Max vehicles (all included) running at the same time
-WMS_AL_UnitMax		= 35; //Max units (groups if _CombatBehav true) patroling at the same time
+WMS_AL_VHLmax		= 25; //Max vehicles (all included) running at the same time
+WMS_AL_UnitMax		= 30; //Max units (groups if _CombatBehav true) patroling at the same time
 WMS_AL_VhlBalance	= [0,2,0,2,1,2,1,2]; //0 = AIR, 1 = GROUND, 2 = SEA //Random select at vehicle creation
 WMS_AL_Skills		= [0.8, 0.7, 0.2, 0.3, 0.3, 0.6, 0, 0.5, 0.5]; //"spotDistance","spotTime","aimingAccuracy","aimingShake","aimingSpeed","reloadSpeed","courage","commanding","general"
-/*
-//VANILLA
+
+//VANILLA //RHS
 WMS_AL_CombatBehav	= false;
 WMS_AL_Faction		= CIVILIAN;
 WMS_AL_Units		= [//infantry classname, do not mix factions!
@@ -39,27 +39,31 @@ WMS_AL_Units		= [//infantry classname, do not mix factions!
 						"C_Man_ConstructionWorker_01_Black_F","C_Man_ConstructionWorker_01_Blue_F","C_Man_ConstructionWorker_01_Red_F","C_Man_ConstructionWorker_01_Vrana_F","C_man_p_fugitive_F","C_man_p_shorts_1_F","C_man_hunter_1_F","C_Man_Paramedic_01_F","C_Man_UtilityWorker_01_F"
 					]; 
 WMS_AL_Vehicles		= [[ //[[AIR],[GROUND],[SEA]]
-						"C_Heli_Light_01_civil_F","C_IDAP_Heli_Transport_02_F","C_Heli_light_01_digital_F","C_Heli_light_01_shadow_F"
+						"C_Heli_Light_01_civil_F","C_Heli_light_01_digital_F","C_Heli_light_01_shadow_F","RHS_Mi8amt_civilian","C_Heli_Light_01_civil_F","rhs_uh1h_idap"
 					],[
 						"C_Van_01_fuel_F","C_Hatchback_01_F","C_Hatchback_01_sport_F","C_Offroad_02_unarmed_F","C_Truck_02_transport_F","C_Truck_02_covered_F","C_Offroad_01_F","C_Offroad_01_comms_F","C_Offroad_01_repair_F","C_Quadbike_01_F","C_SUV_01_F","C_Tractor_01_F","C_Van_01_transport_F","C_Van_01_box_F","C_Van_02_medevac_F","C_Van_02_transport_F"
 					],[
 						"C_Boat_Civil_01_F","C_Boat_Civil_01_police_F","C_Boat_Civil_01_rescue_F","C_Rubberboat","C_Boat_Transport_02_F","C_Scooter_Transport_01_F"
 					]];
-*/
+
 //SOG Prairie Fire
-WMS_AL_CombatBehav	= false;
-WMS_AL_Faction		= CIVILIAN;
-WMS_AL_Units		= [//infantry classname, do not mix factions!
+if (worldName == "Cam_Lao_Nam") then {
+	WMS_AL_VHLmax		= 35; //Max vehicles (all included) running at the same time
+	WMS_AL_UnitMax		= 35; //Max units (groups if _CombatBehav true) patroling at the same time
+
+	WMS_AL_CombatBehav	= false;
+	WMS_AL_Faction		= CIVILIAN;
+	WMS_AL_Units		= [//infantry classname, do not mix factions!
 						"vn_c_men_22","vn_c_men_29","vn_c_men_30","vn_c_men_32","vn_c_men_18","vn_c_men_06","vn_c_men_08","vn_c_men_01","vn_c_men_03","vn_c_men_09","vn_c_men_11"
 					]; 
-WMS_AL_Vehicles		= [[ //[[AIR],[GROUND],[SEA]]
+	WMS_AL_Vehicles		= [[ //[[AIR],[GROUND],[SEA]]
 						"vn_b_air_uh1b_01_09","vn_b_air_uh1d_04_09","RHS_Mi8amt_civilian","C_Heli_Light_01_civil_F","rhs_uh1h_idap"
 					],[
 						"vn_c_bicycle_02","vn_c_car_02_01","vn_c_bicycle_02","vn_c_car_03_01","vn_c_bicycle_02","vn_c_car_01_01","vn_c_bicycle_02","vn_c_car_04_01"
 					],[
 						"vn_c_boat_01_03","vn_c_boat_01_01","vn_c_boat_02_03","vn_c_boat_02_04","vn_c_boat_08_02","vn_c_boat_07_02","vn_c_boat_07_01","vn_c_boat_08_01"
 					]];
-
+};
 /*
 //GM
 WMS_AL_CombatBehav	= false;

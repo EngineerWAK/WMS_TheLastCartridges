@@ -87,3 +87,4 @@ switch (tolower _reward) do
 		_container addItemCargoGlobal [(selectRandom (_rewardList select 0)), 1];
 	};
 };
+if (true) then {diag_log format ['|WAK|TNA|WMS|[WMS_fnc_claimReward]ClaimReward Debug, the reward is = %1', _rewardObject]};

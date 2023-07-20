@@ -18,6 +18,8 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
+	//SOG Extraction chopper
+	["vn_b_air_uh1d_02_06", 	20],
 	//SOG Medical choppers
 	["vn_b_air_uh1b_01_02", 	10],
 	["vn_b_air_uh1b_01_01", 	10],

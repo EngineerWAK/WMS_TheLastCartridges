@@ -1,6 +1,6 @@
 _targetUID = getPlayerUID player;
 _targetOwner = (owner player);
-WMS_HC_AllDeadsMgr = [];
+//WMS_HC_AllDeadsMgr = [];
 if (WMS_MissionDebug) then {diag_log format ["[PLAYERJOINING_HC1]|WAK|TNA|WMS| player: %1, UID: %2", player, _targetUID]};
 
 //test to run AmbientLife on HC1 ONLY
@@ -8,10 +8,10 @@ waitUntil {time > 5};
 if (name player == "HC1") then {
 	WMS_HC1 = true;
 	publicVariable "WMS_HC1";
-	if (worldName == "Cam_Lao_Nam") then {
-		[] execVM "HC_Package\HC_CustomFunctions.sqf"; //workInProgress
+	//if (worldName == "Cam_Lao_Nam") then {
+		//[] execVM "HC_Package\HC_CustomFunctions.sqf"; //workInProgress
 		[] execVM "HC_Package\WMS_AL_Functions_HC1.sqf"; //workInProgress
-	};
+	//};
 };
 		
 if (name player == "HC2") then {
