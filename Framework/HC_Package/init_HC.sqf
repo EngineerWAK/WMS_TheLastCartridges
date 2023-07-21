@@ -10,7 +10,7 @@ if (name player == "HC1") then {
 	publicVariable "WMS_HC1";
 	//if (worldName == "Cam_Lao_Nam") then {
 		//[] execVM "HC_Package\HC_CustomFunctions.sqf"; //workInProgress
-		[] execVM "HC_Package\WMS_AL_Functions_HC1.sqf"; //workInProgress
+		//[] execVM "HC_Package\WMS_AL_Functions_HC1.sqf"; //workInProgress
 	//};
 };
 		

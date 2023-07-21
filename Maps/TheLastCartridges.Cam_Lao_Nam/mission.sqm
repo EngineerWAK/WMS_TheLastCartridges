@@ -8,22 +8,22 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=634;
+		nextID=644;
 	};
 	class MarkerIDProvider
 	{
-		nextID=10;
+		nextID=16;
 	};
 	class LayerIndexProvider
 	{
-		nextID=217;
+		nextID=253;
 	};
 	class Camera
 	{
 		pos[]={18673.699,43.826336,924.85327};
-		dir[]={0.85088241,-0.31438479,-0.42117816};
-		up[]={0.28187495,0.94923949,-0.13952224};
-		aside[]={-0.44366425,1.9429572e-006,-0.89631963};
+		dir[]={-0.84959966,-0.11287596,0.51543361};
+		up[]={-0.096647494,0.99357659,0.058630291};
+		aside[]={0.51874346,2.9537478e-006,0.85506392};
 	};
 };
 binarizationWanted=0;
@@ -97,14 +97,13 @@ addons[]=
 	"ace_refuel",
 	"modules_f_vietnam",
 	"ace_respawn",
-	"ace_map_gestures",
-	"ace_missionmodules"
+	"ace_map_gestures"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=56;
+		items=55;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -483,13 +482,6 @@ class AddonsMetaData
 		{
 			className="ace_map_gestures";
 			name="ACE3 - Map Gestures";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item55
-		{
-			className="ace_missionmodules";
-			name="ACE3 - Mission Modules";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
@@ -16703,70 +16695,15 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={11405.747,21.59584,6211.645};
-				angles[]={0.17615609,0,6.070447};
-			};
-			areaSize[]={1000,1000,1000};
-			flags=1;
-			id=623;
-			type="vn_module_ambient_audio";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="vn_module_ambient_audio_classname";
-					expression="_this setVariable ['audio_classname',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="vn_battle_ambient_medium_sound_1";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="vn_module_ambient_audio_custom_audio_classname_1";
-					expression="_this setVariable ['custom_audio_classname_1',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="vn_module_ambient_audio_custom_audio_classname_2";
-					expression="_this setVariable ['custom_audio_classname_2',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="";
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item251
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={17340.314,31.335762,5578.2334};
-				angles[]={0.0019834081,0,6.2674274};
+				position[]={17340.314,31.336,5578.2329};
+				angles[]={0.0019896752,0,6.2674246};
 			};
 			areaSize[]={200,50,150};
 			areaIsRectangle=1;
 			flags=1;
 			id=624;
 			type="vn_module_ambient_mines";
+			atlOffset=0.00023651123;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16778,7 +16715,7 @@ class Mission
 						class data
 						{
 							singleType="SCALAR";
-							value=25;
+							value=30;
 						};
 					};
 				};
@@ -16837,7 +16774,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item252
+		class Item251
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -16848,7 +16785,7 @@ class Mission
 			type="vn_module_situationalawarenessmodule";
 			atlOffset=90.171066;
 		};
-		class Item253
+		class Item252
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -16859,7 +16796,7 @@ class Mission
 			type="vn_module_photo_camera_enable_screenshots";
 			atlOffset=84.950279;
 		};
-		class Item254
+		class Item253
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -16870,7 +16807,7 @@ class Mission
 			type="vn_module_dynamicradiomusic";
 			atlOffset=89.104286;
 		};
-		class Item255
+		class Item254
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -16881,7 +16818,7 @@ class Mission
 			type="ACE_ModuleFriendlyFire";
 			atlOffset=93.254707;
 		};
-		class Item256
+		class Item255
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -16922,112 +16859,23 @@ class Mission
 				nAttributes=2;
 			};
 		};
+		class Item256
+		{
+			dataType="Marker";
+			position[]={10496.856,0,5161.3477};
+			name="marker_15";
+			type="loc_Quay";
+			id=642;
+			atlOffset=4.9933176;
+		};
 		class Item257
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={2281.4092,29.888456,4009.4641};
-				angles[]={-0,0,0.0060001095};
-			};
-			id=633;
-			type="ACE_moduleAmbianceSound";
-			atlOffset=1.9073486e-006;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleAmbianceSound_followPlayers";
-					expression="_this setVariable ['followPlayers',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_moduleAmbianceSound_minimalDelay";
-					expression="_this setVariable ['minimalDelay',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=10;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ACE_moduleAmbianceSound_soundVolume";
-					expression="_this setVariable ['soundVolume',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ACE_moduleAmbianceSound_maximalDistance";
-					expression="_this setVariable ['maximalDistance',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=900;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ACE_moduleAmbianceSound_maximalDelay";
-					expression="_this setVariable ['maximalDelay',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=170;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ACE_moduleAmbianceSound_minimalDistance";
-					expression="_this setVariable ['minimalDistance',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="SCALAR";
-							value=400;
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ACE_moduleAmbianceSound_soundFiles";
-					expression="_this setVariable ['soundFiles',_value,true];";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="";
-						};
-					};
-				};
-				nAttributes=7;
-			};
+			dataType="Marker";
+			position[]={18875.012,-2.6652832,10337.071};
+			name="marker_16";
+			type="loc_Quay";
+			id=643;
+			atlOffset=1.885674;
 		};
 	};
 };

@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.773_2023JUL19_GitHub"; ////working on Headless Client crap...
+	name = "v1.774_2023JUL20_GitHub"; ////working on Headless Client crap...
 };
 
 class Extended_PreInit_EventHandlers {

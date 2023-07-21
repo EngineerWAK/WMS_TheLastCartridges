@@ -18,6 +18,8 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 //_OpenVhl = getArray(missionConfigFile>>"CfgOpenVhl">>"vhl");
 [
 //					if ((_this select 1) getVariable ['playerInTraderZone', true])then{
+//[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle will be UNLOCKED after restart if in the Traders Zone';
+//[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle Can Not Be Locked In Traders Zone +270m';
 	_veh,
 	[
 		"<t color='#035c10'>Lock/Unlock</t>",
@@ -25,14 +27,16 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 			if (locked (_this select 0) == 0) then {
 				_vehiclesManagement = getArray(missionConfigFile >> 'CfgOfficeTrader' >> 'vehiclesManagement');
 				if ((_vehiclesManagement select 5) != 0 &&{(player getVariable ['playerInTraderZone', false])}) then {
-					[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle will be UNLOCKED after restart if in the Traders Zone';
+					systemChat 'Vehicles In trader Zone Will Be Unlocked After Restart';
+					hint 'Vehicles In trader Zone Will Be Unlocked After Restart';
 				};
 				if (typeOf (_this select 0) in (getArray(missionConfigFile>>'CfgOpenVhl'>>'vhl'))) then {
 					_territoryOfficeData = getArray(missionConfigFile >> 'CfgOfficeTrader' >> 'ZoneSizes');
 					_nearestTrader = [WMS_tradersMkrPos, (_this select 0)] call BIS_fnc_nearestPosition;
 					if ((_nearestTrader distance2D (_this select 0)) < ((_territoryOfficeData select 0)+(_territoryOfficeData select 3))) then {
 						hint 'Restricted Action in Traders';
-						[playerSide, 'PAPA_BEAR'] commandChat 'This Vehicle Can Not Be Locked In Traders Zone +270m'; 
+						systemChat 'This Vehicle Can Not Be Locked In Traders Zone +270m'; 
+						hint 'This Vehicle Can Not Be Locked In Traders Zone +270m'; 
 					}else{
 						(_this select 0) setVehicleLock 'LOCKED';
 						(_this select 0) lockInventory true;
