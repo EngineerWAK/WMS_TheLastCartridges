@@ -27,6 +27,7 @@ WMS_exportMissionObjects = {
 	copyToClipBoard format ["%1", _missionObjects]; 
 	systemChat format ["%1 Objects Exported", (count _missionObjects)];
 };
+
 //Modify array in players permanent vehicle array
 _arrayModification = {
 	_UIDplayer = "76561197965501020";
@@ -134,6 +135,7 @@ if ("Tank" in (name _x))then{_x setPos _pos};
 	mapGridPosition player
 ] spawn BIS_fnc_infoText;
 
+this enableRopeAttach false;
 
 getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad");
 

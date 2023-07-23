@@ -11,15 +11,15 @@ _this spawn {
 
 	params["_target"];
 
-	_SpawnLootRad = getNumber(missionConfigFile >> "CfgLootSettings" >> "SpawnLootRad");
-	_SpawnLootDistToMove = getNumber(missionConfigFile >> "CfgLootSettings" >> "SpawnLootDistToMove");
-	_SpawnLoopTime = getNumber(missionConfigFile >> "CfgLootSettings" >> "SpawnLoopTime");
-	_SpawnLootLifeTime = getNumber(missionConfigFile >> "CfgLootSettings" >> "LootlifeTime");
-
-	_BuildingList = []; //pushback [_house,_lootPos,_lootType];
-	_houses = objNull;
-    _lootPos = [];
-	_lootType = "default";//change if building is in a specific _buildingClass_List
+	_SpawnLootRad 			= getNumber(missionConfigFile >> "CfgLootSettings" >> "SpawnLootRad");
+	_SpawnLootDistToMove 	= getNumber(missionConfigFile >> "CfgLootSettings" >> "SpawnLootDistToMove");
+	_SpawnLoopTime 			= getNumber(missionConfigFile >> "CfgLootSettings" >> "SpawnLoopTime");
+	_SpawnLootLifeTime 		= getNumber(missionConfigFile >> "CfgLootSettings" >> "LootlifeTime");
+	_LootBL 				= getArray(missionConfigFile >> "CfgLootBlacklist" >> "buildings");
+	_BuildingList 	= []; //pushback [_house,_lootPos,_lootType];
+	_houses 		= objNull;
+    _lootPos 		= [];
+	_lootType 		= "default";//change if building is in a specific _buildingClass_List
     systemChat format ["lootSpawn activated on %1", name _this];
     while {alive _target} do {
 	    if (
@@ -31,22 +31,21 @@ _this spawn {
 	        _houses = position _target nearObjects ["Building", _SpawnLootRad]; //only one type   
 	    	//systemChat format ["%1 buildings found", count _houses];     
 	    	{
-		    	_lootStatus = _x getVariable ["_lootSpawned",0];
-		    	_lootAllowed = _x getVariable ["_lootAllowed",true];//var should be serverTime to add delay to the next loot spawn, if (serverTime > (_x getVariable ["_lootSpawned",0])) then { spawnLoot };
-              	_lootTimer = _x getVariable ["_lootTimer",(serverTime-5)];
-		       	if ((_lootStatus == 0) && {(_lootAllowed)} && {(serverTime > _lootTimer)}) then {
-					if !(count (_x buildingPos -1) == 0) then {
-						if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items")) then {_lootType = "special"};
-						if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Mil" >> "items")) then {_lootType = "military"};
-						if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Med" >> "items")) then {_lootType = "medical"};
-						if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_ind" >> "items")) then {_lootType = "industrial"};
-
-						_lootPos = selectRandom (_x buildingPos -1);
-              			//_x setVariable ["_lootSpawned",1, true]; //server side
-              			//_x setVariable ["_lootTimer",(serverTime+_SpawnLootLifeTime), true]; //server side
-			      		_BuildingList pushBack [_x,_lootPos,_lootType];
-					};
-		      	};
+				if !(typeOf _x in _LootBL) then {
+		    		_lootStatus = _x getVariable ["_lootSpawned",0];
+		    		_lootAllowed = _x getVariable ["_lootAllowed",true];//var should be serverTime to add delay to the next loot spawn, if (serverTime > (_x getVariable ["_lootSpawned",0])) then { spawnLoot };
+              		_lootTimer = _x getVariable ["_lootTimer",(serverTime-5)];
+		       		if ((_lootStatus == 0) && {(_lootAllowed)} && {(serverTime > _lootTimer)}) then {
+						if !(count (_x buildingPos -1) == 0) then {
+							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items")) then {_lootType = "special"};
+							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Mil" >> "items")) then {_lootType = "military"};
+							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Med" >> "items")) then {_lootType = "medical"};
+							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_ind" >> "items")) then {_lootType = "industrial"};
+							_lootPos = selectRandom (_x buildingPos -1);
+			      			_BuildingList pushBack [_x,_lootPos,_lootType];
+						};
+		      		};
+				};
 				_lootType = "default";
 		    }forEach _houses;
 			if !(count _BuildingList == 0) then {

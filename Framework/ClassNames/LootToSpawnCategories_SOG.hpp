@@ -772,8 +772,8 @@ class helmets
 			"H_Cap_blu",
 			"H_MilCap_blue",
 			"H_Hat_blue",
-			"H_RacingHelmet_1_F",
-			"H_RacingHelmet_2_F",
+			//"H_RacingHelmet_1_F",
+			//"H_RacingHelmet_2_F",
 			"H_HeadBandage_bloody_F"
 		};
 	};

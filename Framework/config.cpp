@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.774_2023JUL20_GitHub"; ////working on Headless Client crap...
+	name = "v1.776_2023JUL23_GitHub"; ////working on Headless Client crap...
 };
 
 class Extended_PreInit_EventHandlers {
@@ -311,7 +311,8 @@ class CfgOfficeTrader
 			"ACE_bloodIV", //500
 			"ACE_morphine", //250
 			"ACE_morphine", //250
-			"ACE_atropine", //250
+			"ACE_epinephrine", //250
+			"ACE_tourniquet", //30
 			"ACE_tourniquet", //30
 			"ACE_fieldDressing", //25
 			"ACE_fieldDressing", //25
@@ -426,10 +427,63 @@ class CfgLootSettings
 	SpawnLootRad = 50;
 	SpawnLoopTime = 30;
 	SpawnLootDistToMove = 30;
-	LootlifeTime = 480; //bit confusing but this is the delay before loot can spawn again
+	LootlifeTime = 900; //bit confusing but this is the delay before loot can spawn again
 	TimeToDelete = 180; //timer to delete loot and weaponHolder
 	minDistToTraders = 200; //not used yet
 	minDistToTerritories = 100; //not used yet
+};
+class CfgLootBlacklist
+{	//_LootBL = getArray(missionConfigFile >> "CfgLootBlacklist" >> "buildings");
+	buildings[] = //those buildings/objects will not spawn any loot
+	{
+		"Land_vn_dyke_10",
+		"Land_vn_crater_01_01",
+		"Land_vn_crater_01_02",
+		"Land_vn_crater_02_01",
+		"Land_vn_crater_02_02",
+		"Land_vn_crater_03_01",
+		"Land_vn_crater_03_02",
+		"Land_vn_crater_04_01",
+		"Land_vn_crater_04_02",
+		"Land_vn_usaf_revetment_comp_06",
+		"Land_vn_b_trench_revetment_tall_03",
+		"Land_vn_b_trench_revetment_05_01",
+		"Land_vn_b_trench_revetment_90_01",
+		"Land_vn_b_trench_revetment_tall_09",
+		"Land_vn_usaf_revetment_1_01",
+		"Land_vn_usaf_revetment_1_02",
+		"Land_vn_usaf_revetment_1_03",
+		"Land_vn_usaf_revetment_1_04",
+		"Land_vn_usaf_revetment_1_05",
+		"Land_vn_usaf_revetment_1_06",
+		"Land_vn_usaf_revetment_1_07",
+		"Land_vn_usaf_revetment_1_08",
+		"Land_vn_usaf_revetment_1_09",
+		"Land_vn_usaf_revetment_1_10",
+		"Land_vn_usaf_revetment_comp_01",
+		"Land_vn_usaf_revetment_comp_02",
+		"Land_vn_usaf_revetment_comp_03",
+		"Land_vn_usaf_revetment_comp_04",
+		"Land_vn_usaf_revetment_comp_05",
+		"Land_vn_usaf_revetment_comp_06",
+		"Land_vn_usaf_revetment_comp_07",
+		"Land_vn_usaf_revetment_comp_08",
+		"Land_vn_usaf_revetment_comp_09",
+		"Land_vn_usaf_revetment_comp_10",
+		"Land_vn_usaf_revetment_comp_solo_01",
+		"Land_vn_usaf_revetment_low_2",
+		"Land_vn_usaf_revetment_low_3",
+		"Land_vn_usaf_revetment_low_8",
+		"Land_vn_usaf_revetment_01",
+		"Land_vn_usaf_revetment_02",
+		"Land_vn_usaf_revetment_03",
+		"Land_vn_usaf_revetment_04",
+		"Land_vn_usaf_revetment_1",
+		"Land_vn_usaf_revetment_2",
+		"Land_vn_usaf_revetment_3",
+		"Land_vn_usaf_revetment_8",
+		"Land_vn_pierwooden_01_10m_norails_f"
+	};
 };
 
 class cfgCargoDump //for General sell/unlisted objects
