@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.776_2023JUL23_GitHub"; ////working on Headless Client crap...
+	name = "v1.777_2023JUL26_GitHub"; ////working on Headless Client crap...
 };
 
 class Extended_PreInit_EventHandlers {
@@ -482,7 +482,9 @@ class CfgLootBlacklist
 		"Land_vn_usaf_revetment_2",
 		"Land_vn_usaf_revetment_3",
 		"Land_vn_usaf_revetment_8",
-		"Land_vn_pierwooden_01_10m_norails_f"
+		
+		"Land_vn_pierwooden_01_10m_norails_f",
+		"Land_vn_o_trench_firing_01"
 	};
 };
 

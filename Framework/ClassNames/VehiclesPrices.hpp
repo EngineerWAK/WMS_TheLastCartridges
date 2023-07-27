@@ -26,6 +26,9 @@
 	class rhs_gaz66_r142_msv  					{ quality = 1; price = 14000; };
 	class rhsgref_BRDM2UM_msv  					{ quality = 1; price = 15000; };
 	class rhs_prp3_msv  						{ quality = 1; price = 28000; };
+	//SOG
+	//["vn_b_wheeled_m54_03",[],[[],[]]],
+	//["vn_b_armor_m577_01",[],[[],[]]],
 
 //WMS_AMS_LightRwds = [
 	class B_LSV_01_unarmed_olive_F  			{ quality = 1; price = 8000; };
@@ -37,6 +40,20 @@
 	class B_G_Van_01_fuel_F  					{ quality = 1; price = 8000; };
 	class B_G_Offroad_01_F  					{ quality = 1; price = 8000; };
 	class C_Offroad_02_unarmed_blue_F  			{ quality = 1; price = 8000; };
+	//SOG
+	class vn_b_wheeled_m151_01  				{ quality = 1; price = 12000; };
+	//vn_b_wheeled_m274_01_01  					{ quality = 1; price = 8000; };
+	//vn_b_wheeled_m274_02_01  					{ quality = 1; price = 8000; };
+	class vn_b_wheeled_lr2a_02_aus_army  		{ quality = 1; price = 15000; };
+	class vn_b_wheeled_lr2a_01_aus_army  		{ quality = 1; price = 15000; };
+	class vn_b_wheeled_m151_01_aus_army  		{ quality = 1; price = 12000; };
+	class vn_b_wheeled_m151_02_aus_army  		{ quality = 1; price = 12000; };
+	class vn_b_wheeled_m54_01_aus_army  		{ quality = 1; price = 16000; };
+	class vn_c_car_01_01  						{ quality = 1; price = 8000; };
+	class vn_c_car_03_01  						{ quality = 1; price = 8000; };
+	class vn_c_car_02_01  						{ quality = 1; price = 8000; };
+	class vn_c_wheeled_m151_02  				{ quality = 1; price = 12000; };
+	class vn_c_car_04_01  						{ quality = 1; price = 8000; };
 
 //WMS_AMS_TruckRwds = [
 	//class O_T_Truck_03_device_ghex_F  		{ quality = 1; price = 1000; };
@@ -51,6 +68,14 @@
 	class O_T_Truck_02_F  						{ quality = 1; price = 15000; };
 	class B_T_Truck_01_flatbed_F  				{ quality = 1; price = 15000; };
 	class I_E_Truck_02_F  						{ quality = 1; price = 15000; };
+	//SOG
+	//class vn_c_car_04_01  					{ quality = 1; price = 8000; };
+	//class vn_b_wheeled_m54_01  				{ quality = 1; price = 8000; };
+	//class vn_b_wheeled_m54_01_sog  			{ quality = 1; price = 8000; };
+	//class vn_b_wheeled_m54_02_sog  			{ quality = 1; price = 8000; };
+	//class vn_b_wheeled_m54_02  				{ quality = 1; price = 8000; };
+	class vn_o_wheeled_z157_01_nva65  			{ quality = 1; price = 9500; };
+	class vn_o_wheeled_z157_02_nva65  			{ quality = 1; price = 9500; };
 
 //WMS_AMS_SpclRwds = [
 	//class O_T_Truck_03_ammo_ghex_F  			{ quality = 1; price = 18000; };
@@ -68,6 +93,13 @@
 	class O_T_Truck_03_fuel_ghex_F  			{ quality = 1; price = 18000; };
 	class B_T_Truck_01_fuel_F  					{ quality = 1; price = 18000; };
 	class O_T_Truck_02_Ammo_F  					{ quality = 1; price = 18000; };
+	//SOG
+	class vn_b_wheeled_m54_03_usmc  			{ quality = 1; price = 18000; };
+	class vn_b_wheeled_m54_repair_usmc  		{ quality = 1; price = 60000; };
+	class vn_b_wheeled_m54_fuel_usmc  			{ quality = 1; price = 25000; };
+	class vn_b_wheeled_m54_ammo_usmc  			{ quality = 1; price = 25000; };
+	//class vn_b_wheeled_m54_mg_03  				{ quality = 1; price = 35000; };
+	//class vn_b_wheeled_m54_mg_01  				{ quality = 1; price = 35000; };
 
 //WMS_AMS_ArmoredLightRwds = [
 	//class R3F_FENNEC_CE  						{ quality = 1; price = 10001; };
@@ -75,12 +107,30 @@
 	class O_T_MRAP_02_ghex_F  					{ quality = 1; price = 12000; };
 	class B_T_MRAP_01_F  						{ quality = 1; price = 12000; };
 	class I_MRAP_03_F  							{ quality = 1; price = 12000; };
+	//SOG
+	//	class vn_b_armor_m113_acav_04 			{ quality = 1; price = 36000; };
+	class vn_b_armor_m113_acav_02 				{ quality = 1; price = 36000; };
+	//	class vn_b_armor_m113_acav_01 			{ quality = 1; price = 36000; };
+	class vn_b_armor_m113_acav_06 				{ quality = 1; price = 36000; };
+	//	class vn_b_armor_m113_acav_03 			{ quality = 1; price = 36000; };
+	class vn_b_armor_m113_acav_05 				{ quality = 1; price = 36000; };
+	//	class vn_b_armor_m132_01 				{ quality = 1; price = 38000; };
+	//	class vn_o_wheeled_btr40_mg_05_pl 		{ quality = 1; price = 43000; };
+	class vn_o_wheeled_btr40_mg_02_pl 			{ quality = 1; price = 43000; };
+	//	class vn_o_wheeled_btr40_mg_04_pl 		{ quality = 1; price = 43000; };
 
 //WMS_AMS_LightArmedRwds = [
 	//class B_G_Offroad_01_armed_F  			{ quality = 1; price = 1000; };
 	//class I_C_Offroad_02_LMG_F  				{ quality = 1; price = 1000; };
 	class B_LSV_01_armed_olive_F  				{ quality = 1; price = 16000; };
 	class O_LSV_02_armed_ghex_F  				{ quality = 1; price = 16000; };
+	//SOG
+	class vn_b_wheeled_m151_mg_04  				{ quality = 1; price = 39000; };
+	class vn_b_wheeled_m151_mg_03_mp  			{ quality = 1; price = 39000; };
+	//	class vn_b_wheeled_m151_mg_05  			{ quality = 1; price = 16000; };
+	//	class vn_b_wheeled_m274_mg_03_01  		{ quality = 1; price = 16000; };
+	class vn_b_wheeled_lr2a_mg_02_aus_army  	{ quality = 1; price = 30000; };
+	class vn_b_wheeled_lr2a_mg_03_aus_army  	{ quality = 1; price = 39000; };
 
 //WMS_AMS_ChopperRwds = [
 	//class O_Heli_Light_02_unarmed_F  			{ quality = 1; price = 1000; };
@@ -101,6 +151,36 @@
 	class UK3CB_BAF_Wildcat_Transport_RN_ZZ396  { quality = 1; price = 14000; };
 	class RHS_Mi24Vt_vvs  						{ quality = 1; price = 20000; };
 	class RHS_Mi8amt_civilian  					{ quality = 1; price = 14000; };
+	//SOG
+	
+	class vn_i_air_ch34_01_02  					{ quality = 1; price = 38000; };
+	//	class vn_i_air_ch34_02_01  					{ quality = 1; price = 14000; };
+	class vn_i_air_uh1c_07_01  					{ quality = 1; price = 35000; };
+	class vn_i_air_uh1c_02_01  					{ quality = 1; price = 35000; };
+	class vn_i_air_uh1c_01_01  					{ quality = 1; price = 35000; };
+	class vn_i_air_uh1d_01_01  					{ quality = 1; price = 35000; };
+	class vn_i_air_uh1d_02_01  					{ quality = 1; price = 35000; };
+	//class vn_b_air_ah1g_02  					{ quality = 1; price = 60000; };
+	//class vn_b_air_ah1g_08  					{ quality = 1; price = 14000; };
+	//class vn_b_air_oh6a_01  					{ quality = 1; price = 14000; };
+	//class vn_b_air_oh6a_05  					{ quality = 1; price = 14000; };
+	class vn_b_air_oh6a_02  					{ quality = 1; price = 32000; };
+	//class vn_b_air_ch34_04_02  					{ quality = 1; price = 14000; };
+	//class vn_b_air_ch34_03_01  					{ quality = 1; price = 14000; };
+//WMS AMS CIV Rewards
+	//SOG
+	//["vn_c_car_01_01",[],[[],[]]],
+	//["vn_c_car_03_01",[],[[],[]]],
+	//["vn_c_car_02_01",[],[[],[]]],
+	//["vn_c_wheeled_m151_02",[],[[],[]]],
+	class vn_c_wheeled_m151_01 					{ quality = 1; price = 12000; };
+	class vn_c_car_01_02 						{ quality = 1; price = 8000; };
+	//["vn_c_car_04_01",[],[[],[]]],
+//WMS AMS Medical rewards
+	//SOG
+	//["vn_b_armor_m577_02",[],[[],[]]],
+	//["vn_b_wheeled_lr2a_03_aus_army",[],[[],[]]],
+
 ////////////////////
 ////////////////////
 ////////////////////

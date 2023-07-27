@@ -18,13 +18,13 @@
 		{	
 			//MEDICAL FACILITIES
 			//"I_UGV_01_F", //UGV seems to be f u c k e d up
-			"C_IDAP_Van_02_medevac_F",
+			//"C_IDAP_Van_02_medevac_F",
 			//"C_IDAP_Offroad_02_unarmed_F",
 			//"C_IDAP_Offroad_01_F",
 			//"C_IDAP_Van_02_vehicle_F",
 			//"C_IDAP_Van_02_transport_F",
 			"C_IDAP_Truck_02_transport_F",
-			"C_IDAP_Truck_02_F",
+			//"C_IDAP_Truck_02_F",
 			//SOG Medicals
 			"vn_b_wheeled_lr2a_03_nz_army",
 			"vn_i_wheeled_btr40_02_fank_70",
