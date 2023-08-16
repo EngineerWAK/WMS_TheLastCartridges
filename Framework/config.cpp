@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.777_2023JUL26_GitHub"; ////working on Headless Client crap...
+	name = "v1.782_2023AUG11_GitHub"; //Added CH47 slingload //SOG level 6 camp //upgrade MRZR //vehicle trader now display vehicle inventory size
 };
 
 class Extended_PreInit_EventHandlers {
@@ -78,6 +78,7 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 	vehicles[] = {
 		//SOG Medicals
+		"Land_vn_tent_mash_01_03",//base med tent
 		"vn_b_wheeled_lr2a_03_nz_army",
 		"vn_i_wheeled_btr40_02_fank_70",
 		"vn_b_armor_m577_02", //m113 medic

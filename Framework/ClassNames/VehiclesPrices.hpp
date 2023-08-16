@@ -235,7 +235,7 @@
 		class rhs_gaz66_flat_vdv 					{ quality = 0; price = 15000; };
 		class O_T_Truck_03_ammo_ghex_F 				{ quality = 3; price = 40000; }; //ammo
 		class rhs_kamaz5350_ammo_vdv 				{ quality = 3; price = 40000; }; //ammo
-		class rhsusf_mrzr4_w_mud 					{ quality = 1; price = 4500; };
+		class rhsusf_mrzr4_w_mud 					{ quality = 1; price = 12000; }; //can be loaded 20 slots, can load 10 slots
 		class rhsgref_un_uaz 						{ quality = 0; price = 5000; };
 		class I_G_Offroad_01_F 						{ quality = 0; price = 16000; };
 		class UK3CB_BAF_LandRover_Soft_Green_A 		{ quality = 1; price = 11500; };
@@ -546,6 +546,8 @@
 
 //Air Armed
 	//SOG Armed Choppers
+	class vn_b_air_ch47_01_01   				{ quality = 3; price = 36666; }; //slingload I guess
+	class vn_i_air_ch47_01_01   				{ quality = 2; price = 46666; }; //slingload I guess
 	class vn_b_air_oh6a_01  					{ quality = 1; price = 31006; }; //light armed
 	class vn_b_air_oh6a_03  					{ quality = 2; price = 34006; };
 	class vn_b_air_oh6a_04  					{ quality = 2; price = 34006; };
@@ -558,6 +560,7 @@
 	class vn_b_air_uh1c_04_02   				{ quality = 3; price = 35006; };
 	class vn_b_air_uh1c_02_02   				{ quality = 3; price = 35006; };
 	class vn_b_air_uh1c_05_02   				{ quality = 3; price = 35006; };
+	class vn_b_air_uh1c_03_01  					{ quality = 3; price = 35006; };//niniguns door + some rockets
 	class vn_o_air_mi2_04_05   					{ quality = 3; price = 37006; };
 	class vn_o_air_mi2_04_03   					{ quality = 3; price = 37006; };
 	class vn_o_air_mi2_05_01   					{ quality = 3; price = 37006; };

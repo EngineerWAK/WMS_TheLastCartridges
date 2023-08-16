@@ -83,8 +83,9 @@ if (_type == "HaloJump") then {
 	uisleep 2;    
 	player allowDamage false;    
 	player setPos [(_pos select 0), (_pos select 1),_hight];  
-	waitUntil {((position player) select 2) <= 135 || (vehicle player) != player}; 
-	if (vehicle player == player) then { 
+	waitUntil {((position player) select 2) <= 150 || !(vehicle player isKindOf "Man")}; 
+	uisleep 0.7;
+	if (vehicle player isKindOf "Man") then { 
  		player action ["OpenParachute", player]; 
 	}; 
 	private _Rope = ropeCreate [vehicle player, [0,0,0], _crate, [0,0,0], 5];    
@@ -95,4 +96,12 @@ if (_type == "HaloJump") then {
 	[_crate, [0,0,0], [0,0,0]] ropeAttachTo _Rope;   
 	player allowDamage true;   
 	[_crate, false, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable; 
+	_smoke = "smokeShellPurple" createVehicle [0,0,300];
+	_smoke attachTo [_crate, [0, 0, 0]];
 };
+
+/*
+//Fine the lost crate:
+_crate = position player nearObjects ["Box_EAF_Ammo_F",500];
+[position (_crate select 0)]
+*/

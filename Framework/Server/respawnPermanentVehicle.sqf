@@ -29,7 +29,7 @@ if !(count _TerritoriesArray == 0) then {
 
 		if (_layout != "flagonly") then {
 			_objectsToDespawn=["TREE", "SMALL TREE", "BUSH", "BUILDING", "HOUSE", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE","BUNKER","FOUNTAIN", "FENCE", "WALL", "HIDE", "BUSSTOP", "FOREST", "STACK", "RUIN", "TOURISM", "ROCK", "ROCKS", "RAILWAY"];
-			_terrainobjects = nearestTerrainObjects [_flagPos,_objectsToDespawn,40];
+			_terrainobjects = nearestTerrainObjects [_flagPos,_objectsToDespawn,50];
 			{hideObjectGlobal _x} foreach _terrainobjects;
 		};
 		_flag = createVehicle ["rhsgref_serhat_radar", _flagPos, [], 1, "NONE"];//rhsgref_serhat_radar

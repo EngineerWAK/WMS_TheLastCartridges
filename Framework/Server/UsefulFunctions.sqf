@@ -97,6 +97,10 @@ inGameUISetEventHandler ["Action", "
 //check every action datas (probably?)
 inGameUISetEventHandler ["Action", "hint str _this; false"];
 
+//add Loadout
+player addVest "vn_b_vest_usmc_01";
+player addBackPack "vn_b_pack_trp_03";
+{player addItem _x}forEach ['rhs_radio_R187P1','rhsusf_radio_anprc152',"ACE_personalAidKit","ToolKit"];
 
 //modify player money server side
 _targetUID = "76561197965501020";
@@ -116,9 +120,30 @@ _moneyToAdd = 10000;
 _playerMoney = player getVariable ["ExileMoney",0];
 player setVariable ["ExileMoney",(_playerMoney+_playerMoney), true];
 
+//Spawn a new permanent vehicle
+_item = "vn_b_air_ch47_01_01";
+_price = 999;
+_playerObject = player;
+[_item,_price,_playerObject,'vehicle'] remoteExec ['WMS_fnc_BuyFromTrader'];
+	// or, no filter, serverSide, "_pos" is optional, _playerObject IS NOT :
+	// (Can be used for AMS permanent vehicle "Convert to permanent vehicle" action, condition: traderZone):
+[_item,_playerObject,_pos] call WMS_fnc_createPermanentVHL;
+_targetUID = getPlayerUID _playerObject;
+_playerUID_ExileMoney = "ExileMoney_"+_targetUID;
+_playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
+profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney-_price)];
+_playerObject setVariable ["ExileMoney", (_playerMoney-_price), true];
+	// can be used to giveback permanent vehicle to player, defined pos would be better but (position _x) is optional:
+{
+	if ("WAKeupneo" in (name _x)) then {
+		["vn_b_air_ch47_01_01",_x,(position _x)] call WMS_fnc_createPermanentVHL;
+	};
+}forEach allPlayers;
+////////////////////////////
+
 //get players owners from server side
 _result = [];
-{_result pushBack [name _x, owner _x]}forEach allPlayers;
+{_result pushBack [name _x, owner _x, netId _x]}forEach allPlayers;
 _result;
 
 //TP players with their name
@@ -129,6 +154,22 @@ if ("Tank" in (name _x))then{_x setPos _pos};
 
 //////////////////////////////////
 //////////NOTE FOR LATER//////////
+
+//Operation Popeye
+60 setGusts 0.1;
+60 setWindDir (random 359);
+60 setWindForce 0.1;
+60 setOvercast 1;
+60 setRain 1;
+60 setFog 0;
+//
+//Export Convoys position/direction
+_result = [];
+_vehicle = "vn_o_boat_04_01";
+{_result pushBack [[(position _x select 0),(position _x select 1),0],getDir _x]}forEach ([worldSize/2,worldSize/2,0] nearEntities [_vehicle, worldSize]);
+_result;
+//
+
 [
 	"Somewhere on Altis", 
 	format ["Year %1", date select 0], 

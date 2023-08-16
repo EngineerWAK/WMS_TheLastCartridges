@@ -25,7 +25,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["vn_o_nva_65_static_d44", 		20], //85mm AT gun
 	["vn_b_army_static_m101_01", 	20], //105mm AT canon
 	["vn_i_static_m45", 			15], //x4 M2 AA gun
-	["n_i_fank_70_static_zgu1_01", 	10], //x1 23mm AA gun
+	["vn_i_fank_70_static_zgu1_01", 	10], //x1 23mm AA gun
 	["vn_i_fank_70_static_l60mk3", 	20], //40mm autocanon
 	["vn_i_fank_71_static_l70mk2", 	10], //20mm autocanon
 	["vn_o_nva_65_static_zpu4", 	20], //x4 23mm AA gun
@@ -59,7 +59,7 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"vn_o_nva_65_static_d44", //85mm AT gun
 	"vn_b_army_static_m101_01", //105mm AT canon
 	"vn_i_static_m45", //x4 M2 AA gun
-	"n_i_fank_70_static_zgu1_01", //x1 23mm AA gun
+	"vn_i_fank_70_static_zgu1_01", //x1 23mm AA gun
 	"vn_i_fank_70_static_l60mk3", //40mm autocanon
 	"vn_i_fank_71_static_l70mk2", //20mm autocanon
 	"vn_o_nva_65_static_zpu4", //x4 23mm AA gun

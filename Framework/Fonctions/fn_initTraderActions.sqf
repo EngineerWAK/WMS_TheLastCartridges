@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 //[this, "CarsToBuy", 5] call WMS_fnc_initTraderActions_vehicles;
-private ["_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
+private ["_cargo","_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
 params[
 	"_traderObject",
 	["_traderType", 'notYet'], //'notyet','weapons','equipement','office','accessories','vehiclesarmed','vehiclesunarmed','airarmed','airunarmed'
@@ -42,18 +42,27 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	_respectLevel = (_levelArray select _quality);
 	_price = getNumber(missionConfigFile >> "CfgAllPrices" >> _item >> "price");
 	_itemName =  getText (configFile >> "CfgVehicles" >> _item >> "displayName");
+	_cargo = (getNumber(configFile >> "CfgVehicles" >> _item >> "maximumLoad"));
 	_display = ("<t size=""0.85""  color=""#ffffff"">" + (str _itemName) +"</t>") + ("<t size=""0.85""  color=""#ffffff"">" + ("$") + (str _price) +"</t>");
 	_traderColors = getArray(missionConfigFile >> "CfgRespectColors" >> "Colors");
 	switch (_quality) do
 	{
-		case 0: { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
+	/*case 0: { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
 		case 1: { _display = ("<t size=""0.9""  color=""#8dfb7e"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
 		case 2: { _display = ("<t size=""0.9""  color=""#1fd507"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
 		case 3: { _display = ("<t size=""0.9""  color=""#07d593"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
 		case 4: { _display = ("<t size=""0.9""  color=""#0797d5"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
 		case 5: { _display = ("<t size=""0.9""  color=""#8d07d5"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
 		case 6: { _display = ("<t size=""0.9""  color=""#d5074b"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		default { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
+		default { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };*/
+		case 0: { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
+		case 1: { _display = ("<t size=""0.9""  color=""#8dfb7e"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
+		case 2: { _display = ("<t size=""0.9""  color=""#1fd507"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
+		case 3: { _display = ("<t size=""0.9""  color=""#07d593"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
+		case 4: { _display = ("<t size=""0.9""  color=""#0797d5"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
+		case 5: { _display = ("<t size=""0.9""  color=""#8d07d5"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
+		case 6: { _display = ("<t size=""0.9""  color=""#d5074b"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
+		default { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
 	};
 
 	if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|_item %1, _quality %2, _respectLevel %3, _price %4", _item, _quality, _respectLevel, _price]};

@@ -18,14 +18,17 @@
 private ["_pos","_customRespawnPos","_hight","_spawnAllowed","_customRespawnToDelete"];
 params["_target"];
 _pos = position _target;
+systemChat format ["FIRST POSITION | %1",_pos];
 _hight = 1000;
 _spawnAllowed = true;
 _customRespawnPos = missionNamespace getVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
+systemChat format ["CUSTOM POSITION | %1",_customRespawnPos];
 _customRespawnToDelete = missionNamespace getVariable["WMS_client_customRespawnToDelete",[]];
 _customPlayerTraits = missionNamespace getVariable["WMS_client_customRespawnTra",[false,false,false,false,false]];
 if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|Randomazing Position: _customRespawnPos %1, _pos %2, _target %3, Traits %4", _customRespawnPos, _pos, (name _target),_customPlayerTraits]};	
 
 if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((position _target) distance _customRespawnPos) <= 25})then {
+	systemChat format ["CUSTOM POSITION ALLOWED| %1",(position _target)];
 	//"CustomRespawn"
 	_target allowDamage false;
 	if(((ASLtoATL _customRespawnPos) select 2) >= 0)then{
@@ -35,16 +38,16 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		diag_log "[WMS_ANTI_ACE_BULSHIT]Launched";
 		_customPlayerTraits = _this select 0;
 		_target = _this select 1;
-		removeallassigneditems player;
-		removeallweapons player;
-		removeallitems player;
-		removebackpack player;
-		removevest player;	
-		removeuniform player;
-		removeheadgear player;
-		removegoggles player;
+		removeallassigneditems _target;
+		removeallweapons _target;
+		removeallitems _target;
+		removebackpack _target;
+		removevest _target;	
+		removeuniform _target;
+		removeheadgear _target;
+		removegoggles _target;
 		uisleep 1;
-		[player,WMS_client_customRespawnInv]spawn WMS_fnc_client_restoreLoadoutFromVar;
+		[_target,WMS_client_customRespawnInv]spawn WMS_fnc_client_restoreLoadoutFromVar;
 		uisleep 2;
 		if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 		uisleep 1;
@@ -107,8 +110,10 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		missionNamespace setVariable["WMS_client_canCustomRespawn",false];
 		missionNamespace setVariable["WMS_client_customRespawnTra",[false,false,false,false,false]];
 		diag_log "[WMS_ANTI_ACE_BULSHIT]player ready to die again";
+		systemChat format ["WMS_ANTI_ACE_BULSHIT| %1 is ready to die again ",(name _target)];
 	};
 }else{
+	systemChat format ["CUSTOM POSITION not ALLOWED| %1",(position _target)];
 	//"randomiseSpawnPos"
 	if ((getPlayerUID player) in WMS_customRespawnList) then {	
 		[_target] remoteExec ["WMS_fnc_deleteRespawnData",2];
@@ -145,6 +150,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		_hight = 300;
 	};
 	removeBackpackGlobal _target;
+	systemChat format ["RANDOM POSITION SPAWN| Adding parachute to %1",(name _target)];
 	_target addBackpackGlobal "B_Parachute";
 	_target setposATL [(_pos select 0), (_pos select 1), _hight];
 	_target execVM "InitPlayerSetTrait.sqf";

@@ -11,12 +11,12 @@
  */
 player addEventHandler ["Respawn",
 	{
-		if (WMS_MissionDebug) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, respawning at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
+		if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, respawning at %3, %4 ASL", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		[(_this select 0)] spawn {
 			waitUntil {alive player};
-			player setVariable ["WMS_respawnTime",time];
-			[(_this select 0)] remoteExec ["WMS_fnc_setVarOnPlayerRespawn",2];
 			(_this select 0) execVM "randomizeSpawnPos.sqf";
+			[(_this select 0)] remoteExec ["WMS_fnc_setVarOnPlayerRespawn",2];
+			player setVariable ["WMS_respawnTime",time];
 			(_this select 0) execVM "spawnLoot.sqf";
 			[(_this select 0)] execVM "infantryProgram\infantryProgram.sqf";
 			(_this select 0) addrating 100000; //to prevent players to get shot by fucking territory weapon system
@@ -36,7 +36,7 @@ player addEventHandler ["Respawn",
        			true 
    			};
    			"];
-			if (WMS_MissionDebug) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
+			if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4 ASL", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		};
 	}
 ];
@@ -57,9 +57,8 @@ player addEventHandler ["HandleDamage", {
 
 player addEventHandler ["GetOutMan", {
 		params ["_unit", "_role", "_vehicle", "_turret"];
-		//(_this select 0) setVariable ["PlayerLastVehicle", (_this select 2), true]; //try to use this for wasteDump trader
-		if ((_this select 2) getVariable ["WMS_permanentvhl", false] && {damage (_this select 2) != 1} && {(((_this select 2) getVariable ["WMS_buyerowner", 0]) == (getPlayerUID (_this select 0)))}) then {
-			[(_this select 2),"getout"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
+		if (_vehicle getVariable ["WMS_permanentvhl", false] && {damage _vehicle != 1} && {((_vehicle getVariable ["WMS_buyerowner", 0]) == (getPlayerUID _unit))}) then {
+			[_vehicle,"getout"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];
 		};
 	}
 ];
@@ -80,7 +79,7 @@ player addMPEventHandler ["mpkilled", {
 			_unit setUnitTrait ["explosiveSpecialist",false];
 			_unit setUnitTrait ["Medic",false];
 			_unit setUnitTrait ["Engineer",false];
-			if (true) then {diag_log format ["[InitPlayerEventHandlers.sqf|MPkilled]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, RESETTING SKILLS", name _unit]};
+			if (WMS_MissionDebug) then {diag_log format ["[InitPlayerEventHandlers.sqf|MPkilled]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, RESETTING SKILLS", name _unit]};
 			if ((getPlayerUID _unit) in WMS_customRespawnList) then {
 				[_unit] remoteExec ["WMS_fnc_deleteRespawnData",2];
 				//[]spawn{};

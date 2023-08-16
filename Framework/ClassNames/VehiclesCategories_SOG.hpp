@@ -287,6 +287,8 @@
 		items[] = 
 		{
 			//SOG Armed Choppers
+			"vn_b_air_ch47_01_01", //slingload I guess
+			"vn_i_air_ch47_01_01", //slingload I guess
 			"vn_b_air_oh6a_01", //light armed
 			"vn_b_air_oh6a_03",
 			"vn_b_air_oh6a_04",
@@ -299,6 +301,7 @@
 			"vn_b_air_uh1c_04_02",
 			"vn_b_air_uh1c_02_02",
 			"vn_b_air_uh1c_05_02",
+			"vn_b_air_uh1c_03_01",//niniguns door + some rockets
 			"vn_o_air_mi2_04_05",
 			"vn_o_air_mi2_04_03",
 			"vn_o_air_mi2_05_01",

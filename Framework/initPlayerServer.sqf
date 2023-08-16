@@ -22,7 +22,8 @@ if (missionNamespace getVariable ["WMS_firstPlayerConnected", true]) then { //Ac
 //profileNamespace setVariable [_playerUID_ExileScore, round (_playerScore*1.01)];
 
 _playerAlreadyConnected = profileNamespace getVariable ["WMS_playerAlreadyConnected",[]];
-if (!(_targetUID in _playerAlreadyConnected)&&{hasinterface}) then {
+//if (!(_targetUID in _playerAlreadyConnected)&&{hasinterface}) then {
+if (!(_targetUID in _playerAlreadyConnected)&&{count _targetUID == 17}) then {
 	_playerAlreadyConnected pushback _targetUID;
 	profileNamespace setVariable ["WMS_playerAlreadyConnected",_playerAlreadyConnected];
 };

@@ -3,6 +3,14 @@ params [
 ];
 private _vehicleClassName = (typeOf _veh);
 
+if (_vehicleClassName == "vn_b_air_uh1c_03_01") then {
+	[
+		_veh,
+		"uh1c_08", 
+		true
+	] call BIS_fnc_initVehicle;
+};
+
 if (_veh isKindOf "gm_Leopard1_base") then { //"gm_ge_army_Leopard1a1a1"
 	/*[
 		_veh,

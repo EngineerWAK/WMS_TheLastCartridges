@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=253;
+		nextID=271;
 	};
 	class Camera
 	{
-		pos[]={18673.699,43.826336,924.85327};
-		dir[]={-0.84959966,-0.11287596,0.51543361};
-		up[]={-0.096647494,0.99357659,0.058630291};
-		aside[]={0.51874346,2.9537478e-006,0.85506392};
+		pos[]={3761.3088,64.400002,10197.251};
+		dir[]={-0.93579191,-0.34911755,0.049451217};
+		up[]={-0.34864137,0.93707383,0.018423095};
+		aside[]={0.052769989,9.8452801e-008,0.99862206};
 	};
 };
 binarizationWanted=0;
@@ -6629,99 +6629,93 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3663.4622,40.351242,10181.209};
+				position[]={3663.4622,39.083744,10181.209};
 				angles[]={0,3.1410482,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 			};
 			id=193;
 			type="Land_vn_b_trench_20_02";
-			atlOffset=1.267498;
 		};
 		class Item76
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3683.251,40.505661,10181.279};
+				position[]={3683.251,39.083744,10181.279};
 				angles[]={0,3.1410482,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 			};
 			id=194;
 			type="Land_vn_b_trench_20_02";
-			atlOffset=1.421917;
 		};
 		class Item77
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3702.991,40.505661,10181.336};
+				position[]={3702.991,39.083744,10181.336};
 				angles[]={0,3.1410482,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 			};
 			id=195;
 			type="Land_vn_b_trench_20_02";
-			atlOffset=1.421917;
 		};
 		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3661.9026,40.351345,10246.392};
+				position[]={3661.9026,39.083744,10246.392};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 			};
 			id=196;
 			type="Land_vn_b_trench_20_02";
-			atlOffset=1.267601;
 		};
 		class Item79
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3681.6392,40.535378,10246.457};
+				position[]={3681.6392,39.668926,10246.457};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 			};
 			id=197;
 			type="Land_vn_b_trench_20_02";
-			atlOffset=0.86645126;
 		};
 		class Item80
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3699.1814,41.011036,10246.425};
+				position[]={3699.1814,39.58559,10246.425};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 			};
 			id=198;
 			type="Land_vn_b_trench_20_02";
-			atlOffset=1.4254456;
 		};
 		class Item81
 		{
@@ -13834,14 +13828,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="WhiteHead_05";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -13886,14 +13880,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="WhiteHead_05";
 										};
 									};
 								};
@@ -13989,14 +13983,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="WhiteHead_05";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -14041,14 +14035,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="WhiteHead_05";
 										};
 									};
 								};

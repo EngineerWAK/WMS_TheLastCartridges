@@ -34,6 +34,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["vn_o_air_mi2_01_02",		15],
 	["vn_o_air_mi2_03_01", 		10],//fuel
 	//SOG Armed Choppers
+	["vn_b_air_ch47_01_01", 	30], //slingload I guess
+	["vn_i_air_ch47_01_01", 	30], //slingload I guess
 	["vn_b_air_oh6a_01", 		9],//light armed
 	["vn_b_air_oh6a_03", 		5],
 	["vn_b_air_oh6a_04", 		5],
@@ -46,6 +48,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["vn_b_air_uh1c_04_02", 	10],
 	["vn_b_air_uh1c_02_02", 	10],
 	["vn_b_air_uh1c_05_02", 	10],
+	["vn_b_air_uh1c_03_01",		10],//niniguns door + some rockets
 	["vn_o_air_mi2_04_05", 		10],
 	["vn_o_air_mi2_04_03", 		10],
 	["vn_o_air_mi2_05_01", 		10],

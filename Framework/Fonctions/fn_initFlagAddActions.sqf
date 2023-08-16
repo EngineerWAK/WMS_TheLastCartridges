@@ -214,6 +214,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 		"",
 		"	(_target getVariable ['canSafetyPerimeter', true]) &&
 			{
+				((_target getVariable ['layout', 'nope']) == 'soglvl6') ||
 				((_target getVariable ['layout', 'nope']) == 'logisticpod') || 
 				((_target getVariable ['layout', 'nope']) == 'thecamp') || 
 				((_target getVariable ['layout', 'nope']) == 'twinheliup') || 

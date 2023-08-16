@@ -20,11 +20,11 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
-	["wheeled_apc_f", 10],
 	["tank", 5],
 	["car", 5],
 	["truck_f", 5],
 	["bus", 30],
+	["wheeled_apc_f", 10],
 	//SOG Medicals
 	["vn_b_wheeled_lr2a_03_nz_army", 	10],
 	["vn_i_wheeled_btr40_02_fank_70", 	10],
@@ -34,10 +34,10 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	//SOG Unarmed
 	["vn_o_bicycle_01_pl", 				5],
 	["vn_o_bicycle_02_pl", 				10],
-	["vn_o_car_01_01_kr", 				5],
-	["vn_o_car_03_01_kr", 				5],
-	["vn_o_car_02_01_kr", 				5],
-	["vn_o_car_04_01_kr", 				5],
+	["vn_o_car_01_01_kr", 				10],
+	["vn_o_car_03_01_kr", 				10],
+	["vn_o_car_02_01_kr", 				10],
+	["vn_o_car_04_01_kr", 				10],
 	["vn_b_wheeled_m274_01_01", 		15], //mule
 	["vn_b_wheeled_m274_02_01", 		15],	//mule
 	["vn_b_wheeled_m151_02", 			10],
@@ -79,7 +79,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["vn_i_wheeled_btr40_mg_04_fank_70", 10], //SMG (LMG)
 	["vn_o_wheeled_btr40_mg_04_pl", 	10], //SMG (LMG) //same as the other one
 	["vn_o_wheeled_btr40_mg_05_pl", 	10], //recoilless canon
-	["vn_o_wheeled_btr40_mg_03_pl", 	5], //ZPU4
+	["vn_o_wheeled_btr40_mg_03_pl", 	10], //ZPU4
 	["vn_b_armor_m113_acav_04", 		10], //ACAV M134 (+ M60 sides)
 	["vn_b_armor_m113_acav_01", 		10], //ACAV M2 (+ M60 sides)
 	["vn_b_armor_m113_acav_03", 		10], //ACAV M60 (+sides)
@@ -95,6 +95,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["vn_o_armor_t54b_01_nva65", 		5], //tank
 
 	/////
+	["rhsusf_mrzr4_w_mud",10],
 	["rhsusf_RG33L_base",10], //M1234 M1237
 	["rhs_kamaz5350_flatbed_cover_vdv", 25], //flatbed cover
 	["RHS_Ural_Flat_VDV_01", 25], //flatbed cover
@@ -148,6 +149,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
+	["rhsusf_mrzr4_w_mud",20],
 	["B_LSV_01_unarmed_black_F", 41],
 	["O_LSV_02_unarmed_black_F", 41],
 	["rhsgref_nat_ural", 42],

@@ -87,6 +87,12 @@ private _layoutsList = [
 	['Armed Logistic Pod',		'logisticpod',95000,6,'#80c606',false,false],
 	['Armed Logistic Pod',		'logisticpod',115000,6,'#80c606',true,false]
 ];
+if (worldName == "Cam_Lao_Nam") then {
+	_layoutsList = _layoutsList+[
+		['SOG Camp LvL6',			'soglvl6',40000,6,'#80c606',false,false],
+		['SOG Camp LvL6',			'soglvl6',45000,6,'#80c606',true,false]
+	];
+};
 ////////////////////////////////////////////////////////////////////////////
 {
 	//format the things
