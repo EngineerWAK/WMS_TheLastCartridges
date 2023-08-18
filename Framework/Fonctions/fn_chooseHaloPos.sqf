@@ -11,10 +11,12 @@ _this spawn {
 		//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_markersToCheck %1", _markersToCheck]}; //rpt client side
 		_markerTraders = [(_markersToCheck select 0)];
 		_markerSpawns = [(_markersToCheck select 1)];
+		_markerTerritory = [(_markersToCheck select 2)];
 		_territoryOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "territory");
 		//if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_territoryOfficeData %1", _territoryOfficeData]}; //rpt client side
 		_zoneTrader = (_territoryOfficeData select 2);
 		_zoneSpawn = (_territoryOfficeData select 3);
+		_zoneTerritory = (_territoryOfficeData select 6);
 		_buildingAutorisation = true;
 		/////Is it too close to a marker:
 		{
@@ -23,7 +25,7 @@ _this spawn {
 					_buildingAutorisation = false;
 					//"Too Close To Traders" remoteExec ["hint", (owner _caller)];
 					//hint "Too Close To Traders";
-					hint parseText "<t color='#ff0000'>Not available in Exclusion Zones</t>";
+					hint parseText "<t color='#ff0000'>Not available in Exclusion Zones (Traders)</t>";
 					openMap false;
 					true
 				};
@@ -33,7 +35,17 @@ _this spawn {
 					_buildingAutorisation = false;
 					//"Too Close To Spawn" remoteExec ["hint", (owner _caller)];
 					//hint "Too Close To Spawn";
-					hint parseText "<t color='#ff0000'>Not available in Exclusion Zones</t>";
+					hint parseText "<t color='#ff0000'>Not available in Exclusion Zones (Spawn)</t>";
+					openMap false;
+					true
+				};
+			};
+			if (markertype _x in _markerTerritory) then {
+				if((_pos distance2D (getMarkerPos _x)) <= _zoneTerritory)ExitWith{
+					_buildingAutorisation = false;
+					//"Too Close To Spawn" remoteExec ["hint", (owner _caller)];
+					//hint "Too Close To Spawn";
+					hint parseText "<t color='#ff0000'>Not available in Exclusion Zones (Territory)</t>";
 					openMap false;
 					true
 				};

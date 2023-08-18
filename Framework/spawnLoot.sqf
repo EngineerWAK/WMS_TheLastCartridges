@@ -31,7 +31,7 @@ _this spawn {
 	        _houses = position _target nearObjects ["Building", _SpawnLootRad]; //only one type   
 	    	//systemChat format ["%1 buildings found", count _houses];     
 	    	{
-				if !(typeOf _x in _LootBL) then {
+				if (!(typeOf _x in _LootBL) || !(local _x)) then {
 		    		_lootStatus = _x getVariable ["_lootSpawned",0];
 		    		_lootAllowed = _x getVariable ["_lootAllowed",true];//var should be serverTime to add delay to the next loot spawn, if (serverTime > (_x getVariable ["_lootSpawned",0])) then { spawnLoot };
               		_lootTimer = _x getVariable ["_lootTimer",(serverTime-5)];

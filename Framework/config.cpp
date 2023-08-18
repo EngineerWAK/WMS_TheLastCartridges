@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.782_2023AUG11_GitHub"; //Added CH47 slingload //SOG level 6 camp //upgrade MRZR //vehicle trader now display vehicle inventory size
+	name = "v1.783_2023AUG18_GitHub"; //few improvement
 };
 
 class Extended_PreInit_EventHandlers {
