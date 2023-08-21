@@ -54,10 +54,13 @@ if (_ammoCaliber < 0.75) then {_ammoCaliber = 0.75};
 _price = round (_ammoCaliber*_ammoCount*1.6);
 //"rhsusf_40mm_HE"
 if ("50rnd" in _ammoTypeDefault || "50rnd" in _ammoTypeRandom) then {_price == _price+50}; //those 50rnds HLC mags are waaaaaaayyyyyyy too cheap, especialy tac-TX, will be adjusted later
-if ("HET" in _ammoType || "HE" in _ammoType|| "HEDP" in _ammoType) then { //40mm grenades are 3$ each, thats ridiculous
-		_price == _price*10;
+if (
+	"HET" in _ammoType || "HE" in _ammoType|| "HEDP" in _ammoType||
+	"HET" in _ammoTypeDefault || "HE" in _ammoTypeDefault|| "HEDP" in _ammoTypeDefault||
+	"HET" in _ammoTypeRandom || "HE" in _ammoTypeRandom|| "HEDP" in _ammoTypeRandom) then { //40mm grenades are 3$ each, thats ridiculous
+		_price == _price*15;
 	}else {
-		if (_ammoTypeDefault in _40mmHEList || _ammoTypeRandom in _40mmHEList) then {_price == _price*10;};
+		if (_ammoTypeDefault in _40mmHEList || _ammoTypeRandom in _40mmHEList) then {_price == _price*15;};
 	};
 if (_tax == "emergency")then {_price == _price*3};
 _targetUID = getPlayerUID _playerObject;

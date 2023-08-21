@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.783_2023AUG18_GitHub"; //few improvement
+	name = "v1.784_2024AUG20_GitHub"; //few improvement //fortify
 };
 
 class Extended_PreInit_EventHandlers {
@@ -523,6 +523,7 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
    //sleep 1500;
 	interval = 30;
    	middleEastMaps[] = {"Lythium"}; //not much rain
+   	SOGMaps[] = {"Cam_Lao_Nam"}; //not much rain
 	//keyframes[] = {"clear","clearwindy","windy","stillrain","storm"}; //not used yet
 	//keyframesMiddleEast[] = {"clear","clear","clearwindy","cover"}; //not used yet
 
@@ -607,8 +608,29 @@ class CfgWeatherSetting { //[fog,gusts,(wind dir),(wind force),overcast,rain]
 		0,      //rain = 
 		0      //rainR = 
 	};
+	popeye[] =
+	{
+		0.05,    //fogValue = 
+		0.1,    //fogValueR =
+		0.1,    //gusts = 
+		0.1,    //gustsR = 
+		0.1,    //windFor = 
+		0.1,    //windForR = 
+		1,   //overcast = 
+		0,   //overcastR = 
+		1,      //rain = 
+		0      //rainR = 
+	};
 
 };
+/*//Operation Popeye
+60 setGusts 0.1;
+60 setWindDir (random 359);
+60 setWindForce 0.1;
+60 setOvercast 1;
+60 setRain 1;
+60 setFog 0;*/
+
 ///////////Unlocked Vehicles in traders to prevent players to harvest them in the trader zone. Made mostly to keep Hatchet chopper away from trader since they ruine everybody's FPS
 //_OpenVhl = getArray(missionConfigFile >> "CfgOpenVhl" >> "vhl");
 class CfgOpenVhl {

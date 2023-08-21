@@ -24,7 +24,8 @@ if (worldName == "Cam_Lao_Nam") then {
     ["Land_vn_b_foxhole_01",66],
     ["Land_vn_b_mortarpit_01",56],
     ["Land_vn_b_tower_01",86],
-    ["Land_vn_b_trench_bunker_05_01",46]
+    ["Land_vn_b_trench_bunker_05_01",46],
+    ["Land_vn_b_trench_firing_05",96]
     ]
 ] call ace_fortify_fnc_registerObjects;
 }else {

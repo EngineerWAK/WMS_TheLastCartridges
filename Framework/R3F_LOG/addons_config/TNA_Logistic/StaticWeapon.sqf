@@ -20,6 +20,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
+	["vn_b_nz_army_static_m101_01", 20], //howitzer 105mm AT
 	["vn_b_nz_army_static_m101_02", 20], //howitzer 105mm
 	["vn_o_nva_65_static_h12", 		20], //x12 rocket launcher
 	["vn_o_nva_65_static_d44", 		20], //85mm AT gun
@@ -53,7 +54,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
 	//"staticweapon"
-	
+	"vn_b_nz_army_static_m101_01", //howitzer 105mm AT
 	"vn_b_nz_army_static_m101_02", //howitzer 105mm
 	"vn_o_nva_65_static_h12", //x12 rocket launcher
 	"vn_o_nva_65_static_d44", //85mm AT gun
