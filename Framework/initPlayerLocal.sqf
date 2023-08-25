@@ -86,6 +86,9 @@ if (hasinterface) then {
     _action2 = ["FixMyChat","Fix My Chat","",{showChat true},{true}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action2] call ace_interact_menu_fnc_addActionToObject;
 
+    _action22 = ["DeactivateMyChat","Deactivate My Chat","",{showChat false},{true}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action22] call ace_interact_menu_fnc_addActionToObject;
+
     _action3 = ["vhlInvSize","Inventory Size","",{hint format ["cargo size is %1",(getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad"))]},{(vehicle player) != player}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action3] call ace_interact_menu_fnc_addActionToObject;
 

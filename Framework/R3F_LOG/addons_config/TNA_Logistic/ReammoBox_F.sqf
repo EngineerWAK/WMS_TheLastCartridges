@@ -24,12 +24,12 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
 	["Box_East_AmmoVeh_F",15],
 	["Box_NATO_AmmoVeh_F",15],
-	["I_SupplyCrate_F",10], //mission crate
+	["I_SupplyCrate_F",10], //mission crate L
 	//["B_SupplyCrate_F",10], //B_supplyCrate_F if above the IDAP crate, it will be removed from logistic/moving system [R3F]
 	["C_IDAP_CargoNet_01_supplies_F",10],
-	["O_CargoNet_01_ammo_F",10],
-	["B_CargoNet_01_ammo_F",10],
-	["I_CargoNet_01_ammo_F",10],
+	["O_CargoNet_01_ammo_F",15],
+	["B_CargoNet_01_ammo_F",15], //mission crate XL
+	["I_CargoNet_01_ammo_F",15],
 	["Box_NATO_Wps_F",5],
 	["Box_FIA_Wps_F",10], //not in igiload yet
 	["Box_FIA_Support_F",5],

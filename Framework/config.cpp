@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.784_2024AUG20_GitHub"; //few improvement //fortify
+	name = "v1.785_2024AUG22_GitHub"; //few improvement //fortify
 };
 
 class Extended_PreInit_EventHandlers {
@@ -428,7 +428,7 @@ class CfgLootSettings
 	SpawnLootRad = 50;
 	SpawnLoopTime = 30;
 	SpawnLootDistToMove = 30;
-	LootlifeTime = 900; //bit confusing but this is the delay before loot can spawn again
+	LootlifeTime = 1550; //bit confusing but this is the delay before loot can spawn again
 	TimeToDelete = 180; //timer to delete loot and weaponHolder
 	minDistToTraders = 200; //not used yet
 	minDistToTerritories = 100; //not used yet

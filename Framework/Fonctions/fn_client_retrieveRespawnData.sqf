@@ -36,6 +36,9 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {(getPla
 			missionNamespace setVariable["WMS_client_customRespawnInv",(_customRespawnData select 3)];
 			missionNamespace setVariable["WMS_client_customRespawnTra",(_customRespawnData select 4)];
 			missionNamespace setVariable["WMS_client_customRespawnToDelete",_customRespawn];
+			if (count (_customRespawnData select 4) == 6) then {
+				localNamespace setVariable ['WMS_Loc_CanBuildComputer',(_customRespawnData select 4 select 5)]; //this prevent players disconnect/reconnect when they forgot their computer (should)
+			};
 		} else {
 			systemChat "No custom Spawn Data Not Available";
 		};

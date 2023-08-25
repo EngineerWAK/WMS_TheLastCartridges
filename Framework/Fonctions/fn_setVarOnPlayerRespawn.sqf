@@ -31,6 +31,7 @@ _target setVariable ["ExileMoney", _playerMoney, true];
 _target setVariable ["ExileScore", _playerScore, true];
 _target setVariable ["ExileDeath", _playerDeath, true]; //try to fix the double death count each time the player die and respawn //This has no sense xD
 _target setVariable ["PlayerInTraderZone", false];
+_target setVariable ["WMS_HaloJumpTime", serverTime, true];
 
 if (WMS_MissionDebug) then {diag_log format ["[SETVARONPLAYERRESPAWN]|WAK|TNA|WMS| player: %1, UID: %2, Kills: %3, Money: %4, Score: %5, Death: %6", _target, _targetUID, _playerKills,_playerMoney,(profileNamespace getVariable [_playerUID_ExileScore,0]),(profileNamespace getVariable [_playerUID_ExileDeath,0])]};
 

@@ -14,6 +14,12 @@ params[
 	"_pos",
 	["_type","HaloJump"] //"HaloJumpComputer"
 	];
+_HaloJumpTime = player getVariable ["WMS_HaloJumpTime", (Time-901)];
+if (time < (_HaloJumpTime+900)) exitWith {
+	_msg = format["HaloJump in cool down for %1 secondes", round((_HaloJumpTime+900)-time)]; 
+	hint _msg; 
+	systemChat _msg;
+};
 //_pos = position _target;
 _hight = 1000;
 		//////////CUSTOM SPAWN POSITION FILTER//////////
@@ -78,11 +84,12 @@ if (_type == "HaloJump") then {
 	uisleep 2;      
 	player addBackPack "B_Parachute";    
 	uisleep 1;     
-	_crate attachTo [player, [0,0.35,-0.25],"pelvis",true];     
-	_crate setVectorDirandUp [[1,0,0],[0,0,1]];    
-	uisleep 2;    
+	_crate attachTo [player, [0,0.35,-0.25],"pelvis",true];
+	_crate setVectorDirandUp [[1,0,0],[0,0,1]];
+	uisleep 2;
 	player allowDamage false;    
 	player setPos [(_pos select 0), (_pos select 1),_hight];  
+	player setVariable ["WMS_HaloJumpTime", (time-600), true];
 	waitUntil {((position player) select 2) <= 150 || !(vehicle player isKindOf "Man")}; 
 	uisleep 0.7;
 	if (vehicle player isKindOf "Man") then { 
