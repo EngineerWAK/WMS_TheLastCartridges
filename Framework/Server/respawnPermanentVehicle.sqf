@@ -26,14 +26,20 @@ if !(count _TerritoriesArray == 0) then {
 		_flagDir = (_x select 5);
 		_layout = (_x select 6);
 		_buildingAutorisation = true;
+		_cleanRad = 50;
+		if (_layout == "TheOneMillionDollarsBase") then{
+			//_maxTerr = _maxTerr+1;
+			_territoryLevel = 6;
+			_cleanRad = 80;
+		};
 
 		if (_layout != "flagonly") then {
 			_objectsToDespawn=["TREE", "SMALL TREE", "BUSH", "BUILDING", "HOUSE", "FOREST BORDER", "FOREST TRIANGLE", "FOREST SQUARE","BUNKER","FOUNTAIN", "FENCE", "WALL", "HIDE", "BUSSTOP", "FOREST", "STACK", "RUIN", "TOURISM", "ROCK", "ROCKS", "RAILWAY"];
-			_terrainobjects = nearestTerrainObjects [_flagPos,_objectsToDespawn,50];
+			_terrainobjects = nearestTerrainObjects [_flagPos,_objectsToDespawn,_cleanRad];
 			{hideObjectGlobal _x} foreach _terrainobjects;
 		};
 		_flag = createVehicle ["rhsgref_serhat_radar", _flagPos, [], 1, "NONE"];//rhsgref_serhat_radar
-		if (surfaceIsWater _flagPos)then{
+		if (surfaceIsWater _flagPos && {(AtltoAsl _flagPos) select 2 < -5})then{
 			_flag setPosASL [_flagPos select 0, _flagPos select 1, 2.413];
 			//north
 			if !(surfaceIsWater [(_flagPos select 0),(_flagPos select 1)+99]) then {_buildingAutorisation = false;diag_log format ["[WATER TERRITORY]|WAK|TNA|WMS| Water Position Too Close To shore , owner %1, pos %2", _ownerUID,_flagPos];} else {
@@ -73,7 +79,12 @@ if !(count _TerritoriesArray == 0) then {
 			_flag setVariable ["canSafetyPerimeter", false];
 		};
 
-		[_flag, _flagPos, _flagDir, _layout] call WMS_fnc_SpawnCamps;
+		if (_layout == "TheOneMillionDollarsBase") then {
+			_flag setVariable ["TheOneMillionDollarsBase", true, true];
+			[_flag, _flagPos, _flagDir, _layout] execVM "Fonctions\WMS_TheOneMillionDollarsBase.sqf";
+		}else{
+			[_flag, _flagPos, _flagDir, _layout] call WMS_fnc_SpawnCamps;
+		};
 		
 		_houses = _flagPos nearObjects ["Building", 150];
 		if (WMS_MissionDebug) then {diag_log format ["[TERRITORYZONENOLOOT]|WAK|TNA|WMS| Territory found @ %1, %2 buildings lootspawn deactivated", _flagPos, (count _houses)]};

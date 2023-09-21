@@ -67,6 +67,10 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 		_itemName = "Buy Breacher skill";
 		_quality = 1;
 	};
+	if (_item == 'TheOneMillionDollarsBase') then {
+		_itemName = "The One Million Dollars Base";
+		_quality = 6;
+	};
 
 	_levelArray = getArray(missionConfigFile >> "CfgRespectLevels" >> "Respect");
 	_respectLevel = (_levelArray select _quality);

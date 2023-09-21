@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.785_2024AUG22_GitHub"; //few improvement //fortify
+	name = "v1.797_2023SEP20_GitHub";
 };
 
 class Extended_PreInit_EventHandlers {
@@ -19,6 +19,10 @@ class Extended_PreInit_EventHandlers {
         init = "call compile preprocessFileLineNumbers 'XEH_preInit.sqf'";
     };
 };
+
+///////////////////////
+// REMEMBER CfgRespawnInventory IN description.ext _SOG
+///////////////////////
 
 class CfgBuildingsCategories
 {	//_weaponsCategories = getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items");
@@ -276,7 +280,8 @@ class CfgOfficeTrader
 		HaloJump,
 		CompDoc,
 		CompEng,
-		CompExplo //Breatcher
+		CompExplo, //Breatcher
+		TheOneMillionDollarsBase
 	};
 
 	Territory[] = 
@@ -371,6 +376,10 @@ class CfgOfficeTrader
 	{
 		3500 //Price to get Explosive Competence
 	};
+	TheOneMillionDollarsBase[] = 
+	{
+		1000000
+	};
 	vehiclesManagement[] = 
 	{
 		34, //number of restarts before unused vehicles get destroyed //34*5 = one week
@@ -378,7 +387,7 @@ class CfgOfficeTrader
 		10000, //price to pay to the trader to reset restart counter //not yet
 		3, //allowed vehicles at start, no territory, that include vehicles from "claim reward"
 		1, //0 = no more vehicles //1 or 2 or 3 or n = use territories level to count max vehicles, n*territory level of all territories. if 1, 2 territories level 6 = "allowed vehicle at start" + 6 + 6
-		0 //0 = false //unlock vehicles in traders zone // _SOG = 1
+		1 //0 = false //unlock vehicles in traders zone // Default is now = 1
 	};
 
 	MarkersToCheck[] = 
@@ -428,7 +437,7 @@ class CfgLootSettings
 	SpawnLootRad = 50;
 	SpawnLoopTime = 30;
 	SpawnLootDistToMove = 30;
-	LootlifeTime = 1550; //bit confusing but this is the delay before loot can spawn again
+	LootlifeTime = 1950; //bit confusing but this is the delay before loot can spawn again
 	TimeToDelete = 180; //timer to delete loot and weaponHolder
 	minDistToTraders = 200; //not used yet
 	minDistToTerritories = 100; //not used yet
@@ -438,6 +447,9 @@ class CfgLootBlacklist
 	buildings[] = //those buildings/objects will not spawn any loot
 	{
 		"Land_vn_dyke_10",
+		"Land_vn_b_trench_45_01",
+		"Land_vn_b_trench_20_01",
+		"Land_vn_b_trench_05_01",
 		"Land_vn_crater_01_01",
 		"Land_vn_crater_01_02",
 		"Land_vn_crater_02_01",
@@ -688,6 +700,8 @@ class CfgBlackListedItems {//from respawn vehicle inventory
 		"rhs_m136_hp_mag",//M136 HP
 		"rhs_m136_mag",//M136 HEAT
 
+		"FlashDisk", //quest Item
+
 		"ACE_rope12", //One rope change className and duplicate //that was the new ACE "add rope to vehicle" function
 		"ACE_tourniquet",
 		"ItemMap",
@@ -726,6 +740,8 @@ class CfgBlackListedInv {//from player inventory at custom respawn
 		"rhs_muzzleFlash_dtk2",
 		"rhs_muzzleFlash_dtk3",
 		"rhs_muzzleflash_dtkakm",
+
+		"FlashDisk", //quest Item
 
 		"rhs_rpg18_mag",//RPG-18
 		"rhs_rpg26_mag",//RPG-26

@@ -194,7 +194,14 @@
 	        //"I_C_Offroad_02_LMG_F",
 	        //"I_C_Offroad_02_AT_F",
 	        //"O_T_LSV_02_armed_F",
-
+			"B_T_LSV_01_AT_F",
+			"O_T_LSV_02_AT_F",
+			////////////////////SPECIAL////////////////////
+			"rhs_t14_tv",
+			"rhs_t15_tv",
+			"B_T_MBT_01_TUSK_F",
+			"O_T_MBT_04_command_F",
+			////////////////////SPECIAL////////////////////
 			"RHS_M119_WD",
 			"rhsgref_cdf_reg_d30",
 			"rhsgref_cdf_2s1", //Old Arti Tank
@@ -268,10 +275,13 @@
 	        "C_Heli_Light_01_civil_F",
 	        "C_IDAP_Heli_Transport_02_F",
 	        "O_Heli_Light_02_unarmed_F",
+			"rhsusf_CH53e_USMC_cargo",
 
+			"RHS_AN2",
 			"rhsgred_hidf_cessna_o3a",
 	        "rhs_uh1h_hidf_unarmed",
-	        "RHS_UH60M2",
+	        //"RHS_UH60M2",
+			"RHS_UH60M_MEV2",
 	        "RHS_MELB_MH6M",
 	        "RHS_UH1Y_UNARMED",
 	        "rhsgref_cdf_reg_Mi8amt",
@@ -328,6 +338,8 @@
 			"vn_b_air_ah1g_09",
 			"vn_b_air_ah1g_06",
 			//SOG Armed Planes
+			"vn_b_air_f4c_chico", //vulcan pods
+			"vn_b_air_f4b_usmc_ucas", //vulcan pods
 			"vn_o_air_mig19_at",
 			"vn_o_air_mig19_bmb",
 			"vn_o_air_mig19_cas",
@@ -351,6 +363,9 @@
 			"vn_b_air_f4b_navy_sead",
 			"vn_b_air_f4b_navy_ucas",
 			/////
+			"rhsusf_CH53E_USMC_GAU21",
+			"RHS_UH60M_ESSS_d", //4 pylons
+			"RHS_UH60M_ESSS2", //2 pylons
 			//"O_Heli_Light_02_dynamicLoadout_F",
 	        //"I_E_Heli_light_03_dynamicLoadout_F",
 	        //"B_Heli_Attack_01_dynamicLoadout_F",

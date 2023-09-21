@@ -8,6 +8,29 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
+
+
+//////////////////////////////
+//CLAIM REWARDS NOT IN TRADERS
+//////////////////////////////
+	class vn_b_armor_m48_01_02  			{ quality = 6; price = 90006; };
+	class vn_b_armor_m41_01_02  			{ quality = 6; price = 90006; };
+	class vn_o_armor_t54b_01  				{ quality = 6; price = 90006; };
+	class vn_o_armor_pt76b_01  				{ quality = 6; price = 90006; };
+	class RHS_M6_wd  						{ quality = 6; price = 90006; };
+	class rhsusf_m1a1hc_wd					{ quality = 6; price = 100006; };
+	class rhs_t90am_tv						{ quality = 6; price = 100006; };
+	class RHS_M2A3_BUSKI_wd					{ quality = 6; price = 90006; };
+	class rhsgref_cdf_zsu234				{ quality = 6; price = 90006; };
+	class rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom { quality = 6; price = 60006; };
+	class rhsgref_nat_btr70  				{ quality = 6; price = 80006; };
+	class rhs_btr80a_msv  					{ quality = 6; price = 90006; };
+	class rhsusf_m1152_rsv_usarmy_wd  		{ quality = 6; price = 70006; };
+	class rhsusf_m1151_m240_v3_usmc_wd  	{ quality = 6; price = 50006; };
+	class RHS_Ural_Repair_VDV_01  			{ quality = 6; price = 70006; };
+	class rhsusf_m1a2sep2wd_usarmy  		{ quality = 6; price = 100006; };
+	class vn_b_armor_m125_01   				{ quality = 6; price = 80006; };//m113 mortar
+
 //////////////////////////////
 //AMS REWARDS NOT IN TRADERS
 //////////////////////////////
@@ -235,7 +258,7 @@
 		class rhs_gaz66_flat_vdv 					{ quality = 0; price = 15000; };
 		class O_T_Truck_03_ammo_ghex_F 				{ quality = 3; price = 40000; }; //ammo
 		class rhs_kamaz5350_ammo_vdv 				{ quality = 3; price = 40000; }; //ammo
-		class rhsusf_mrzr4_w_mud 					{ quality = 1; price = 12000; }; //can be loaded 20 slots, can load 10 slots
+		class rhsusf_mrzr4_w_mud 					{ quality = 2; price = 18000; }; //can be loaded 20 slots, can load 10 slots
 		class rhsgref_un_uaz 						{ quality = 0; price = 5000; };
 		class I_G_Offroad_01_F 						{ quality = 0; price = 16000; };
 		class UK3CB_BAF_LandRover_Soft_Green_A 		{ quality = 1; price = 11500; };
@@ -378,13 +401,15 @@
 		class I_C_Offroad_02_LMG_F 					{ quality = 3; price = 38000; };
 		class I_C_Offroad_02_AT_F 					{ quality = 3; price = 55000; };
 		class O_T_LSV_02_armed_F 					{ quality = 3; price = 43000; };
-	
+
+		class B_T_LSV_01_AT_F						{ quality = 4; price = 59000; };
+		class O_T_LSV_02_AT_F						{ quality = 4; price = 56000; };
 		class BWA3_Eagle_FLW100_Fleck 				{ quality = 3; price = 57000; };
 		class BWA3_Dingo2_FLW100_MG3_CG13_Fleck 	{ quality = 3; price = 59000; };
 		class rhsgref_cdf_b_reg_uaz_dshkm 			{ quality = 3; price = 28000; };
 		class rhsgref_cdf_b_reg_uaz_spg9 			{ quality = 4; price = 38000; };
 		class B_G_Offroad_01_armed_F 				{ quality = 3; price = 28000; };
-		class B_G_Offroad_01_AT_F 					{ quality = 4; price = 58000; };
+		class B_G_Offroad_01_AT_F 					{ quality = 4; price = 52000; };
 		class rhsgref_hidf_m113a3_m2 				{ quality = 3; price = 42000; };
 		class rhsgref_hidf_m1025_m2 				{ quality = 3; price = 42500; };
 		class UK3CB_BAF_Coyote_Passenger_L111A1_W 	{ quality = 3; price = 48000; };
@@ -409,7 +434,13 @@
 
 		class BWA3_Puma_Fleck 						{ quality = 3; price = 145000; };
 		class BWA3_Leopard2_Fleck 					{ quality = 6; price = 195000; };
+		/////////////////SPECIAL//////////////
+		class rhs_t14_tv							{ quality = 6; price = 500004; };
+		class rhs_t15_tv							{ quality = 6; price = 500004; };
+		class B_T_MBT_01_TUSK_F						{ quality = 6; price = 500000; };
+		class O_T_MBT_04_command_F					{ quality = 6; price = 500000; };
 		//////////////////////////////NOT ARMORED SERVER//////////////////////////////
+
 		class B_APC_Wheeled_01_cannon_F 			{ quality = 5; price = 150000; }; //Badger
 		class I_APC_Wheeled_03_cannon_F				{ quality = 6; price = 180000; }; //Pandur 2
 		class B_AFV_Wheeled_01_cannon_F				{ quality = 6; price = 190000; };
@@ -500,10 +531,13 @@
 		class vn_o_air_mi2_01_02				{ quality = 0; price = 10006; };
 		class vn_o_air_mi2_03_01				{ quality = 4; price = 21006; }; //fuel
 			/////
+	class RHS_AN2  								{ quality = 2; price = 10004; };
+	class rhsusf_CH53e_USMC_cargo  				{ quality = 3; price = 25004; };
 	class rhs_uh1h_hidf_unarmed  				{ quality = 2; price = 45888; };
 	class UK3CB_BAF_Merlin_HC3_Cargo  			{ quality = 2; price = 20000; };
 	class UK3CB_BAF_Merlin_HM2_18  				{ quality = 2; price = 25000; };
-	class RHS_UH60M2  							{ quality = 2; price = 15004; };
+	class RHS_UH60M2  							{ quality = 2; price = 18114; };
+	class RHS_UH60M_MEV2  						{ quality = 2; price = 18114; };
 	class RHS_MELB_MH6M  						{ quality = 1; price = 10004; };
 	class RHS_UH1Y_UNARMED 						{ quality = 2; price = 10004; };
 	class B_Heli_Transport_03_unarmed_F  		{ quality = 2; price = 20000; };
@@ -535,14 +569,16 @@
 	class vtx_UH60M_SLICK  						{ quality = 1; price = 12555; };
 
 //Planes
-	class rhsgred_hidf_cessna_o3a  				{ quality = 1; price = 8777; }; //Recon cessna
-	class rhs_l39_cdf_b_cdf  					{ quality = 3; price = 50777; }; //L-39C Albatros
-	class RHSGREF_A29B_HIDF  					{ quality = 4; price = 60777; }; //Super Tucano
-	class rhs_l159_cdf_b_CDF  					{ quality = 4; price = 85777; }; //L-159 Alca
-	class RHS_A10  								{ quality = 4; price = 115777; }; //A10
-	class B_T_VTOL_01_vehicle_F  				{ quality = 2; price = 25777; }; //BlackFish VHL
-	class RHS_Su25SM_CAS_vvs  					{ quality = 4; price = 115777; }; //SU25
-	class RHS_C130J_Cargo  						{ quality = 3; price = 25777; };
+	class rhsgred_hidf_cessna_o3a  				{ quality = 1; price = 8774; }; //Recon cessna
+	class rhs_l39_cdf_b_cdf  					{ quality = 3; price = 50774; }; //L-39C Albatros
+	class RHSGREF_A29B_HIDF  					{ quality = 5; price = 90774; }; //Super Tucano
+	class rhs_l159_cdf_b_CDF  					{ quality = 4; price = 85774; }; //L-159 Alca
+	class RHS_A10  								{ quality = 4; price = 115774; }; //A10
+	class B_T_VTOL_01_vehicle_F  				{ quality = 2; price = 25770; }; //BlackFish VHL
+	class RHS_Su25SM_CAS_vvs  					{ quality = 4; price = 115774; }; //SU25
+	class RHS_C130J_Cargo  						{ quality = 3; price = 25774; };
+	/////////////////////SPECIAL////////////////////////
+	class B_T_VTOL_01_armed_F  					{ quality = 6; price = 500000; };
 
 //Air Armed
 	//SOG Armed Choppers
@@ -587,6 +623,8 @@
 	class vn_b_air_ah1g_09  					{ quality = 4; price = 84006; };
 	class vn_b_air_ah1g_06  					{ quality = 4; price = 84006; };
 	//SOG Armed Planes
+	class vn_b_air_f4c_chico  					{ quality = 6; price = 99776; }; //vulcan pods
+	class vn_b_air_f4b_usmc_ucas  				{ quality = 6; price = 99776; }; //vulcan pods
 	class vn_o_air_mig19_at  					{ quality = 4; price = 83776; };
 	class vn_o_air_mig19_bmb  					{ quality = 4; price = 83776; };
 	class vn_o_air_mig19_cas  					{ quality = 4; price = 83776; };
@@ -602,14 +640,17 @@
 	class vn_b_air_f100d_cbu  					{ quality = 4; price = 86776; };
 	class vn_b_air_f100d_mr  					{ quality = 4; price = 86776; };
 	class vn_b_air_f100d_sead  					{ quality = 4; price = 86776; };
-	class vn_b_air_f4b_navy_at  				{ quality = 5; price = 88776; };
-	class vn_b_air_f4b_navy_bmb  				{ quality = 5; price = 88776; };
-	class vn_b_air_f4b_navy_cap  				{ quality = 5; price = 88776; };
-	class vn_b_air_f4b_navy_cas  				{ quality = 5; price = 88776; };
-	class vn_b_air_f4b_navy_cbu  				{ quality = 5; price = 88776; };
-	class vn_b_air_f4b_navy_sead  				{ quality = 5; price = 88776; };
-	class vn_b_air_f4b_navy_ucas  				{ quality = 5; price = 88776; };
+	class vn_b_air_f4b_navy_at  				{ quality = 5; price = 99776; };
+	class vn_b_air_f4b_navy_bmb  				{ quality = 5; price = 99776; };
+	class vn_b_air_f4b_navy_cap  				{ quality = 5; price = 99776; };
+	class vn_b_air_f4b_navy_cas  				{ quality = 5; price = 99776; };
+	class vn_b_air_f4b_navy_cbu  				{ quality = 5; price = 99776; };
+	class vn_b_air_f4b_navy_sead  				{ quality = 5; price = 99776; };
+	class vn_b_air_f4b_navy_ucas  				{ quality = 5; price = 99776; };
 			/////
+	class rhsusf_CH53E_USMC_GAU21  				{ quality = 4; price = 35004; };
+	class RHS_UH60M_ESSS_d  					{ quality = 5; price = 75004; }; //4 pylons
+	class RHS_UH60M_ESSS2  						{ quality = 4; price = 55004; }; //2 pylons
 	class rhs_uh1h_hidf_gunship  				{ quality = 4; price = 125888; }; //NO AFM
 	class rhs_uh1h_hidf  						{ quality = 3; price = 65888; }; //NO AFM
 	class RHS_MELB_AH6M_M  						{ quality = 3; price = 36004; };
@@ -620,11 +661,11 @@
 	class RHS_UH1Y  							{ quality = 3; price = 35004; };
 	class RHS_AH1Z_wd  							{ quality = 4; price = 85004; };
 	class RHS_Ka52_vvsc  						{ quality = 4; price = 95004; };
-	class rhs_mi28n_vvs  						{ quality = 5; price = 95004; };
-	class rhs_mi28n_s13_vvsc  					{ quality = 5; price = 95004; };
+	class rhs_mi28n_vvs  						{ quality = 6; price = 125004; };
+	class rhs_mi28n_s13_vvsc  					{ quality = 6; price = 125004; };
 	class RHS_Mi24P_vvsc  						{ quality = 4; price = 95004; };
 	class RHS_AH64D_wd  						{ quality = 5; price = 95004; };
-	class rhsgref_b_mi24g_CAS  					{ quality = 5; price = 95004; };
+	class rhsgref_b_mi24g_CAS  					{ quality = 6; price = 105004; };
 	class rhsgref_cdf_b_reg_Mi17Sh  			{ quality = 3; price = 55004; };
 	class rhsgref_cdf_Mi35  					{ quality = 5; price = 90004; };
 	class O_Heli_Light_02_dynamicLoadout_F  	{ quality = 4; price = 65000; }; //ka-60

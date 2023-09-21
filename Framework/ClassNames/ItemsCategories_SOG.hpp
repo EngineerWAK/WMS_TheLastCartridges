@@ -153,7 +153,7 @@ class food
 			"vn_prop_drink_01",
 			"vn_prop_drink_02",
 			"vn_prop_drink_03",
-			"vn_prop_drink_04",
+			/*"vn_prop_drink_04",
 			"vn_prop_drink_05",
 			"vn_prop_drink_06",
 			"vn_prop_drink_10",
@@ -161,11 +161,11 @@ class food
 			"vn_prop_drink_07_01",
 			"vn_prop_drink_07_02",
 			"vn_prop_drink_07_03",
-			"vn_prop_drink_09_01",
+			"vn_prop_drink_09_01",*/
 
-	    		//"ACE_Can_Franta",
+	    		"ACE_Can_Franta",
 	    		//"ACE_Can_RedGull",
-	    		//"ACE_Can_Spirit",
+	    		"ACE_Can_Spirit",
 	    	"ACE_Canteen",
 	    		//"ACE_Canteen_Empty",
 	    		//"ACE_Canteen_Half",
@@ -173,10 +173,13 @@ class food
 	    		//"ACE_WaterBottle_Empty",
 	    		//"ACE_WaterBottle_Half",
 
+	    		"ACE_Humanitarian_Ration",
+	    		"ACE_MRE_BeefStew",
+	    		//"ACE_MRE_ChickenTikkaMasala",
 			//SOG Food (some...)
 			"vn_prop_food_pir_01_01",
 			"vn_prop_food_pir_01_02",
-			"vn_prop_food_pir_01_03",
+			/*"vn_prop_food_pir_01_03",
 			"vn_prop_food_pir_01_04",
 			"vn_prop_food_pir_01_05",
 			"vn_prop_food_lrrp_01_01",
@@ -184,7 +187,7 @@ class food
 			"vn_prop_food_lrrp_01_03",
 			"vn_prop_food_lrrp_01_04",
 			"vn_prop_food_lrrp_01_05",
-			"vn_prop_food_lrrp_01_06",
+			"vn_prop_food_lrrp_01_06",*/
 			"vn_prop_food_lrrp_01_07",
 			"vn_prop_food_lrrp_01_08"
 	    };
@@ -235,6 +238,8 @@ class RocketMissiles
 		   	"vn_m20a1b1_wp_mag",
 		   	"vn_m72_mag",
 			/////
+			"Vorona_HEAT",
+			"Vorona_HE",
 		   	"MRAWS_HEAT_F",
 		   	"MRAWS_HE_F",
 		   	"MRAWS_HEAT55_F",
@@ -254,7 +259,9 @@ class SpecOps
 	    name = "SpecOps";
 	    items[]= //weapon specops //cfgWeapons
 	    {	
-			//"B_Respawn_Sleeping_bag_brown_F", //BACKPACK
+			"U_O_T_Sniper_F",
+    		"U_O_T_FullGhillie_tna_F",
+
 	    	"MineDetector",
 			"I_UavTerminal",
 			"ItemGPS",

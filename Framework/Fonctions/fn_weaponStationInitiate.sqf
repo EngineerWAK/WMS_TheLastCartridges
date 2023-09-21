@@ -54,5 +54,7 @@ _waponStationObject enableSimulationGlobal true;
 	_vehic allowDamage true;
 	_vehic setVehicleLock "LOCKED";
 	_vehic setVariable ["WMS_WeaponStationActivate", false, true];
+	_vehic setVariable ["_lootAllowed",false,true];
+	_vehic setVariable ["_territoryObject",true,true];
 	[(_this select 1), (_this select 2)] call WMS_fnc_smallTransactions;
 };

@@ -8,32 +8,53 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-private [];
+private ["_objToCheck"];
 params [
 	"_container"
 ];
+if !(isServer) ExitWith {Diag_Log format["Nope, %1, %2",_container, position _container]};
 _container enableRopeAttach false;
+
+_objToCheck = missionNameSpace getVariable ["WMS_ObjectsToCheck",[]];
+_objToCheck pushBack _container;
+missionNameSpace setVariable ["WMS_ObjectsToCheck",_objToCheck]; //this will be useful later
+_container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this will be useful later
+///////////////////////CLAIM STUFF//////////////////////////////////////////
 [
-	_container, [
-		"<t size='1' color='#4bff1a'>Claim Reward</t>", 
+	_container, [ //"Special Item" is the MAR-10 DMR, because even in arma there is pay to win... and this will create a BIIIIIIG log server side
+		"<t size='1' color='#4bff1a'>Initiate Banana Protocol</t>", 
 		"
-			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_claimReward',2];
-			{player removeitem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
+			params ['_target', '_caller', '_actionId', '_arguments'];
+			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
+				if ((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) then {
+					[_caller, _target,'banana'] remoteExec ['WMS_fnc_claimItems',2];
+					_caller removeItem 'ACE_Cellphone';
+					for '_i' from 1 to 100 do {
+						_caller removeItem 'ACE_Banana';
+					};
+				}else{
+					[_caller] call WMS_fnc_rocketMan;
+				};
+			}else{
+				[_caller, _target,'banana'] remoteExec ['WMS_fnc_claimItems',2];
+					_caller removeItem 'ACE_Cellphone';
+				for '_i' from 1 to 100 do {
+					_caller removeItem 'ACE_Banana';
+				};
+			};
+			(_this select 0) removeaction (_this select 2);
 		", 
-		nil, 
+		nil,
 		1, 
 		true, 
 		true, 
 		"", 
 		"
-		(_this getVariable ['playerInTraderZone', false]) &&
-		(vehicle _this == _this) &&
-		{(magazines player find 'Csat_Id_01' >= 0)} &&
-		{(magazines player find 'Csat_Id_02' >= 0)} &&
-		{(magazines player find 'Csat_Id_03' >= 0)} &&
-		{(magazines player find 'Csat_Id_04' >= 0)} &&
-		{(magazines player find 'Csat_Id_05' >= 0)}
-		",  
+		((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
+		(vehicle _this == _this)  &&
+		{(items player find 'ACE_Cellphone' != -1)} &&
+		{(count (items player select {_x == 'ACE_Banana'}) > 99)}
+		",
 		5, 
 		false 
 	]
@@ -43,25 +64,130 @@ _container enableRopeAttach false;
 	true //JIP
 ];
 [
-				//hint 'Cargo Dump Container is empty, you punk'; for what ever reason this is general to all players
-				//'Cargo Dump Container is empty, you punk' remoteExec ['hint', _own]; //because you are a moron, moron
-	_container, [
-		"<t size='1' color='#3d74ff'>Sell Inventory</t>", 
-		" 
+	_container, [ //"Special Item" is the MAR-10 DMR, because even in arma there is pay to win... and this will create a BIIIIIIG log server side
+		"<t size='1' color='#4bff1a'>Claim Special Item</t>", 
+		"
 			params ['_target', '_caller', '_actionId', '_arguments'];
-			_own = owner _caller;
-			if !(count ((ItemCargo _target)+(WeaponCargo _target)+(MagazineCargo _target)+(backpackCargo _target)) == 0) then { 
-				[_caller, _target] remoteExec ['WMS_fnc_processCargoDump',2]; 
-			} else { 
-				hint 'Cargo Dump Container is empty, you punk';
-			}; 
+			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
+				if (((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) || ((getPlayerUID _caller) in (_target getVariable ['WMS_BaseFriends', '']))) then {
+					[_caller, _target,'noreen'] remoteExec ['WMS_fnc_claimItems',2];
+					[_caller,5000] remoteExec ['WMS_fnc_smallTransactions',2];
+					{_caller removeItem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05','ACE_Cellphone','FilesSecret'];
+					for '_i' from 1 to 25 do {
+						_caller removeItem 'FlashDisk';
+					};
+				}else{
+					[_caller] call WMS_fnc_rocketMan;
+				};
+			}else{
+				[_caller, _target,'noreen'] remoteExec ['WMS_fnc_claimItems',2];
+				[_caller,5000] remoteExec ['WMS_fnc_smallTransactions',2];
+				{_caller removeItem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05','ACE_Cellphone','FilesSecret'];
+				for '_i' from 1 to 25 do {
+					_caller removeItem 'FlashDisk';
+				};
+			};
+			(_this select 0) removeaction (_this select 2);
+		", 
+		nil,
+		1, 
+		true, 
+		true, 
+		"", 
+		"
+		((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
+		(vehicle _this == _this) &&
+		{(_this getVariable ['ExileMoney', 0] > 4999)} &&
+		{(items player find 'ACE_Cellphone' != -1)} &&
+		{(magazines player find 'FilesSecret' != -1)} &&
+		{(count (magazines player select {_x == 'FlashDisk'}) > 24)} &&
+		{(magazines player find 'Csat_Id_01' != -1)} &&
+		{(magazines player find 'Csat_Id_02' != -1)} &&
+		{(magazines player find 'Csat_Id_03' != -1)} &&
+		{(magazines player find 'Csat_Id_04' != -1)} &&
+		{(magazines player find 'Csat_Id_05' != -1)}
+		",
+		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];
+
+[
+	_container, [
+		"<t size='1' color='#4bff1a'>Claim Reward</t>", 
+		"
+			params ['_target', '_caller', '_actionId', '_arguments'];
+			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
+				if ((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) then {
+					[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_claimReward',2];
+					{_caller removeItem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
+				}else{
+					[_caller] call WMS_fnc_rocketMan;
+					(_this select 0) removeaction (_this select 2);
+				};
+			}else{
+				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_claimReward',2];
+				{_caller removeitem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
+			};
 		", 
 		nil, 
 		1, 
 		true, 
 		true, 
 		"", 
-		"(_this getVariable ['playerInTraderZone', false])",  
+		"
+		((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
+		(vehicle _this == _this) &&
+		{(magazines player find 'Csat_Id_01' >= 0)} &&
+		{(magazines player find 'Csat_Id_02' >= 0)} &&
+		{(magazines player find 'Csat_Id_03' >= 0)} &&
+		{(magazines player find 'Csat_Id_04' >= 0)} &&
+		{(magazines player find 'Csat_Id_05' >= 0)}
+		",
+		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[
+				//hint 'Cargo Dump Container is empty, you punk'; for what ever reason this is general to all players
+				//'Cargo Dump Container is empty, you punk' remoteExec ['hint', _own]; //because you are a moron, moron
+	_container, [
+		"<t size='1' color='#3d74ff'>Sell Inventory</t>", 
+		" 
+			params ['_target', '_caller', '_actionId', '_arguments'];
+			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
+				if (((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) || ((getPlayerUID _caller) in (_target getVariable ['WMS_BaseFriends', '']))) then {
+					if !(count ((ItemCargo _target)+(WeaponCargo _target)+(MagazineCargo _target)+(backpackCargo _target)) == 0) then { 
+						[_caller, _target, (_target getVariable ['WMS_buyerowner', ''])] remoteExec ['WMS_fnc_processCargoDump',2]; 
+					}; 
+				}else{
+					[_caller] call WMS_fnc_rocketMan;
+					(_this select 0) removeaction (_this select 2);
+				};
+			}else{
+				_own = owner _caller;
+				if !(count ((ItemCargo _target)+(WeaponCargo _target)+(MagazineCargo _target)+(backpackCargo _target)) == 0) then { 
+					[_caller, _target] remoteExec ['WMS_fnc_processCargoDump',2]; 
+				} else { 
+					hint 'Cargo Dump Container is empty, you punk';
+				}; 
+			};
+		", 
+		nil, 
+		1, 
+		true, 
+		true, 
+		"", 
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))",  
 		5, 
 		false 
 	]
@@ -81,7 +207,7 @@ _container enableRopeAttach false;
 		true, 
 		true, 
 		"", 
-		"(_this getVariable ['playerInTraderZone', false])",  
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))",  
  		5, 
 		false 
 	]
@@ -101,7 +227,28 @@ _container enableRopeAttach false;
 		true, 
 		true, 
 		"", 
-		"(_this getVariable ['playerInTraderZone', false])",  
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))",  
+ 		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];
+
+[
+	_container, [
+		"<t size='0.9' color='#26e600'>Buy Pistol Ammo</t>",
+		"   
+			[(_this select 1), (_this select 0), 'randompistol'] call WMS_fnc_buyAmmoOnBox;  
+		", 
+		nil, 
+		1, 
+		true, 
+		true, 
+		"", 
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) && {!(handgunWeapon _this isEqualTo '')}",
  		5, 
 		false 
 	]
@@ -135,7 +282,7 @@ _container enableRopeAttach false;
 		true,
 		"",
 		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
-		"(_this getVariable ['playerInTraderZone', false])",
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))",
 		5
 	]
 ] remoteExec [
@@ -167,7 +314,7 @@ _container enableRopeAttach false;
 		true,
 		"",
 		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
-		"(_this getVariable ['playerInTraderZone', false])",
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))",
 		5
 	]
 ] remoteExec [
@@ -199,7 +346,7 @@ _container enableRopeAttach false;
 		true,
 		"",
 		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
-		"(_this getVariable ['playerInTraderZone', false])",
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))",
 		5
 	]
 ] remoteExec [
@@ -231,7 +378,7 @@ _container enableRopeAttach false;
 		true,
 		"",
 		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
-		"(_this getVariable ['playerInTraderZone', false])",
+		"((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))",
 		5
 	]
 ] remoteExec [
@@ -266,7 +413,7 @@ _container enableRopeAttach false;
 		"",
 		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"
-			(_this getVariable ['playerInTraderZone', false]) &&
+			((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
 			{(_this getVariable ['ExileScore', 0] >= 2500)}
 		",
 		5
@@ -301,7 +448,7 @@ _container enableRopeAttach false;
 		"",
 		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"
-			(_this getVariable ['playerInTraderZone', false]) &&
+			((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
 			{(_this getVariable ['ExileScore', 0] >= 2500)}
 		",
 		5
@@ -337,7 +484,7 @@ _container enableRopeAttach false;
 		"",
 		//"((getplayerUID _this) == (_target getVariable ['WMS_BuyerOwner', 0]) && (vehicle _this == _this))",
 		"
-			(_this getVariable ['playerInTraderZone', false]) &&
+			((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
 			{('ARX' in primaryWeapon player)} &&
 			{(_this getVariable ['ExileScore', 0] >= 2500)}
 		",

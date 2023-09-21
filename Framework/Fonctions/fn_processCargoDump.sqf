@@ -20,8 +20,8 @@ private ["_items","_item","_priceDefault","_priceAmmo","_priceGrenade","_priceRo
 		"_totalPriceDump","_totalScoreDump","_TotalScoreBonus","_scoreDumpCoef","_targetUID","_targetOwner","_playerUID_ExileMoney","_playerUID_ExileScore","_playerMoney","_playerScore"];
 params [
 	"_target", //player
-	"_cargo" //the crate, "_items" could be listed server side from the _cargo
-	//"_items", [] //_items = (ItemCargo _cargo)+(WeaponCargo _cargo)+(MagazineCargo _cargo)
+	"_cargo", //the crate, "_items" could be listed server side from the _cargo
+	["_options", ""] //_options = playerUID will be used for base owner special taxes
 ];
 
 //Need a WMS_CargoDumpLastCall = [_target,_cargo,time] or _cargo setVariable ["_CargoDumpLastCall", [_target,_totalPriceDump,time]]; to prevent 2 players so sell the same cargo since the call will come from AddAction
@@ -40,6 +40,7 @@ _pricePistol 	= getNumber(missionConfigFile >> "cfgCargoDump" >> "pricePistol");
 _scoreDumpCoef 	= getNumber(missionConfigFile >> "cfgCargoDump" >> "scoreDumpCoef");
 _specialItemsToSell = getArray(missionConfigFile >> "CfgItemsCategories" >> "specialItemsToSell" >> "items");
 _totalPriceDump = 0; //all item Converted to poptabs
+_totalPriceDumpOwn = 0;
 _totalScoreDump = 0;
 _TotalScoreBonus = 0;
 _priceDefaultRST = _priceDefault;
@@ -136,7 +137,18 @@ clearMagazineCargoGlobal _cargo;
 clearWeaponCargoGlobal _cargo; 
 clearItemCargoGlobal _cargo; 
 clearBackpackCargoGlobal _cargo;
-
+if (count _options != 0) then {
+	if (getPlayerUID _target != _options) then { //the seller is not the owner of the container, 25% of the transaction goes to the owner
+		_totalPriceDumpOwn = round _totalPriceDump*0.25;
+		_totalPriceDump = round _totalPriceDump*0.75;
+		//Container owner transaction, money only
+		//_playerUID_ExileMoney = "ExileMoney_"+_options;
+		private _ownerMoney = profileNamespace getVariable ["ExileMoney_"+_options,0];
+		profileNamespace setVariable ["ExileMoney_"+_options,_ownerMoney+_totalPriceDumpOwn];
+		//_target setVariable ["ExileMoney", _ownerMoney+_totalPriceDumpOwn, true];
+		if (true) then {diag_log format ["[WMS_fnc_processCargoDump]|WAK|TNA|WMS|[OWNER GETTING PAID] %1, %2",("ExileMoney_"+_options),(+_totalPriceDumpOwn)]};
+	};
+};
 _TotalScoreBonus = round (_totalPriceDump*_scoreDumpCoef);
 _totalScoreDump = _totalScoreDump+_TotalScoreBonus;
 

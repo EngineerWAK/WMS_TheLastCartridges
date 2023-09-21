@@ -158,6 +158,10 @@
     class rhs_VOG25p 	        { quality = 2; price = 70; };
     class rhs_vg40tb 	        { quality = 2; price = 70; };
 
+    //ghillies
+	class U_O_T_Sniper_F	                { quality = 6; price = 15000; };
+    class U_O_T_FullGhillie_tna_F	        { quality = 5; price = 10000; };
+
         //SOG
     class vn_22mm_cs_mag 	        { quality = 2; price = 70; };
     class vn_22mm_he_mag 	        { quality = 2; price = 70; };

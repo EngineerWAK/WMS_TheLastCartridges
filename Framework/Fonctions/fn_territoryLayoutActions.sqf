@@ -104,6 +104,7 @@ if (worldName == "Cam_Lao_Nam") then {
 		_conditions = format ["
 			(alive _target) &&
 			{(surfaceIsWater (position _target))} &&
+			{((atltoasl position _target) select 2 < -5)} &&
 			{(_target getVariable ['_layoutUpgradable', true])} &&
 			{((_target getVariable ['exileterritorylevel', -1]) > %1)} &&
 			{((_target getVariable ['exileterritorylevel', -1]) < %2)} &&
@@ -117,6 +118,7 @@ if (worldName == "Cam_Lao_Nam") then {
 		_conditions = format ["
 			(alive _target) &&
 			{!(surfaceIsWater (position _target))} &&
+			{((atltoasl position _target) select 2 > -5)} &&
 			{(_target getVariable ['_layoutUpgradable', true])} &&
 			{((_target getVariable ['exileterritorylevel', -1]) > %1)} &&
 			{((_target getVariable ['exileterritorylevel', -1]) < %2)} &&

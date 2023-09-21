@@ -56,7 +56,7 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 			if (count _friends < 6) then {
 				_playersAround = (position (_this select 0)) nearEntities ['I_Survivor_F', 10];
 				{
-					if !(getPlayerUID _x in _friends) then {
+					if !(getPlayerUID _x in _friends && {(count _friends < 6)}) then {
 						_friends pushback getPlayerUID _x;
 						['You are now in this territory FastTravel'] remoteExec ['hint', owner _x];
 					};
@@ -170,6 +170,124 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 	_caller,
 	_jip
 ];
+
+[
+	_flag,
+	[
+		"<t size='0.9' color='#b80000'>Activate Safety Perimeter, 7.5k</t>",//_display,
+		"
+			_target = _this select 0; _caller = _this select 1;
+			_rad = 34.5;
+			_layout = _target getVariable ['layout', 'nope'];
+			if (_layout == 'TheOneMillionDollarsBase') then {_rad = 49.5};
+			[_target, _caller,7500,_rad]remoteExec ['WMS_fnc_BaseSafetyPerimeter', 2];
+			_target removeaction (_this select 2);
+		", //params ["_target", "_caller", "_actionId", "_arguments"]; 
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"	(_target getVariable ['canSafetyPerimeter', true]) &&
+			{
+				((_target getVariable ['layout', 'nope']) == 'soglvl6') ||
+				((_target getVariable ['layout', 'nope']) == 'logisticpod') || 
+				((_target getVariable ['layout', 'nope']) == 'thecamp') || 
+				((_target getVariable ['layout', 'nope']) == 'twinheliup') || 
+				((_target getVariable ['layout', 'nope']) == 'circularfob') || 
+				((_target getVariable ['layout', 'nope']) == 'TheOneMillionDollarsBase')
+			} 
+		",//condition: _target = object, _this = caller
+		2
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+
+ /////////////ACTIONS ONLY FOR THE TheOneMillionDollarsBase/////////////
+//if ((_flag getVariable ['layout', 'nope']) == 'TheOneMillionDollarsBase') then {
+[
+	_flag,
+	[
+		"<t size='0.9' color='#0188ef'>Create The Mission Crate</t>",//_display,
+		"
+			_target = _this select 0; _caller = _this select 1;
+			['B_CargoNet_01_ammo_F', _caller]remoteExec ['WMS_fnc_CreateNONpermanentVHL', 2];
+			_target removeaction (_this select 2);
+		", //params ["_target", "_caller", "_actionId", "_arguments"]; 
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"	
+			(alive _target) &&
+			{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+			{((_target getVariable ['layout', 'nope']) == 'TheOneMillionDollarsBase')};
+		",//condition: _target = object, _this = caller
+		2
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+[
+	_flag,
+	[
+		"<t size='0.9' color='#0188ef'>Create Courtesy Vehicle</t>",//_display,
+		"
+			_target = _this select 0; _caller = _this select 1;
+			[(selectRandom ['SUV_01_base_orange_F','C_Hatchback_01_sport_orange_F','C_Offroad_02_unarmed_orange_F','C_Quadbike_01_red_F','C_Heli_light_01_red_F','rhsgref_ins_uaz_open']), _caller]remoteExec ['WMS_fnc_CreateNONpermanentVHL', 2];
+			_target removeaction (_this select 2);
+		", //params ["_target", "_caller", "_actionId", "_arguments"]; 
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"	
+			(alive _target) &&
+			{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+			{((_target getVariable ['layout', 'nope']) == 'TheOneMillionDollarsBase')};
+		",//condition: _target = object, _this = caller
+		2
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+//};
+/////////////ACTIONS ONLY FOR THE TheOneMillionDollarsBase\\\\\\\\\\\\\\\\\\\\\
+
+////////////////////DELETE TERRITORY AT THE END////////////////////////////
+[
+	_flag,
+	[
+		"<t size='0.9' color='#b80000'>-------------------</t>",
+		"
+		", 
+		nil,
+		1,
+		true,
+		true,
+		"",
+		"	
+		(alive _target) &&
+		{((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))} &&
+		{(vehicle _this == _this)};
+		",
+		2
+	]
+] remoteExec [
+	"addAction",
+	_caller,
+	_jip
+];
+
 [
 	_flag,
 	[
@@ -197,35 +315,3 @@ _flag setVariable ['_origininalHeading', (getDir _flag), true];
 	_caller,
 	_jip
 ];
-
-[
-	_flag,
-	[
-		"<t size='0.9' color='#b80000'>Activate Safety Perimeter, 5k</t>",//_display,
-		"
-			_target = _this select 0; _caller = _this select 1;
-			[_target, _caller]remoteExec ['WMS_fnc_BaseSafetyPerimeter', 2];
-			_target removeaction (_this select 2);
-		", //params ["_target", "_caller", "_actionId", "_arguments"]; 
-		[], //argument accessible in the script (_this select 3)
-		1,
-		true,
-		true,
-		"",
-		"	(_target getVariable ['canSafetyPerimeter', true]) &&
-			{
-				((_target getVariable ['layout', 'nope']) == 'soglvl6') ||
-				((_target getVariable ['layout', 'nope']) == 'logisticpod') || 
-				((_target getVariable ['layout', 'nope']) == 'thecamp') || 
-				((_target getVariable ['layout', 'nope']) == 'twinheliup') || 
-				((_target getVariable ['layout', 'nope']) == 'circularfob')
-			} 
-		",//condition: _target = object, _this = caller
-		2
-	]
-] remoteExec [
-	"addAction",
-	_caller,
-	_jip
-];
-

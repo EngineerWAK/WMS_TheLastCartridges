@@ -1,7 +1,13 @@
 //if (WMS_MissionDebug) then {diag_log format ["[BUY_FROM_OFFICE]|WAK|TNA|WMS|_this %1", _this]}; //rpt client side
 openMap true;
-[] spawn {
+_this spawn { //["TheOneMillionDollarsBase"]
 	uisleep 2;
+	WMS_1Mlayout = _this select 0; //local
+	if (WMS_1Mlayout == "TheOneMillionDollarsBase") then {
+		hint parseText "<t color='#0fff8f'>The One Million Dollars Base !!!</t>";
+	};
+	if (true) then {diag_log format ["[WMS_fnc_chooseTerritoryPos]|WAK|TNA|WMS|_This = %1",_this]};
+	
 	onMapSingleClick { 
 		onMapSingleClick {};		
 		//////////POSITION FILTER//////////
@@ -50,7 +56,7 @@ openMap true;
 			};
 		}forEach allMapMarkers;
 		//water check for over water base, it's a very basic check but should be enough to prevent players to build level 6 over water base in a puddle
-		if (surfaceIsWater _pos) then {
+		if (surfaceIsWater _pos && {((AtltoAsl _pos) select 2 < -5)}) then {
 			//north
 			if !(surfaceIsWater [(_pos select 0),(_pos select 1)+100]) then {_buildingAutorisation = false;hint parseText "<t color='#ff0000'>Water Position Too Close To shore</t>";} else {
 				//east
@@ -66,12 +72,16 @@ openMap true;
 		
 		//////////////////////////////
 		if (_buildingAutorisation) then {
-			[player, _pos] remoteExec ['WMS_fnc_CreateTerritory']; //_pos is defined by the 'click' itself
+			if (WMS_1Mlayout == "TheOneMillionDollarsBase") then {
+				hint parseText "<t color='#0fff8f'>!!! CONGRATULATIONS !!!</t>";
+			};
+			[player, _pos, WMS_1Mlayout] remoteExec ['WMS_fnc_CreateTerritory']; //_pos is defined by the 'click' itself
 			_mkr1 = createMarkerLocal [format ["MKR1_%1_%2",_pos, time], _pos];
 			_mkr1 setMarkerTypeLocal "selector_selectedMission";
 			_mkr1 setMarkerColorLocal "colorBLUFOR";
 			_mkr1 setMarkerTextLocal "Base Owner";
 		};
+		WMS_1Mlayout = "";
 		openMap false;
 		true
 	};

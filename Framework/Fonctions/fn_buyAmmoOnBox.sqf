@@ -12,7 +12,7 @@ private ["_playerMoney","_targetOwner","_targetUID","_price","_ammoTypeRandom","
 params [
 	"_playerObject",
 	"_boxObject",
-	["_option", "random"], //"random"
+	["_option", "random"], //"random" //randompistol
 	["_tax","none"] //"emergency" = x3 price
 ];
 if (WMS_MissionDebug) then {diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|_this %1", _this]};
@@ -48,6 +48,13 @@ switch (tolower _option) do {
 		_ammoType = getText (configfile >> "CfgMagazines" >> _ammoTypeRandom >> "ammo"); //will be used to defind the "caliber" and "extract a price per bullet
 		_ammoCaliber = getNumber (configfile >> "CfgAmmo" >> _ammoType >> "caliber"); //not the "real" Caliber but seems to follow some logic
 	};
+     case "randompistol":		{
+		_ammoArray = [handgunWeapon _playerObject] call CBA_fnc_compatibleMagazines; //CBA
+		_ammoTypeRandom = selectRandom _ammoArray;
+		_ammoCount = getNumber (configfile >> "CfgMagazines" >> _ammoTypeRandom >> "count"); //ammo count in the mag
+		_ammoType = getText (configfile >> "CfgMagazines" >> _ammoTypeRandom >> "ammo"); //will be used to defind the "caliber" and "extract a price per bullet
+		_ammoCaliber = getNumber (configfile >> "CfgAmmo" >> _ammoType >> "caliber"); //not the "real" Caliber but seems to follow some logic
+	};
 };
 if (count _ammoArray == 0) exitWith {Diag_log "something went wrong remoteExec message Blablablabla"};
 if (_ammoCaliber < 0.75) then {_ammoCaliber = 0.75};
@@ -62,7 +69,8 @@ if (
 	}else {
 		if (_ammoTypeDefault in _40mmHEList || _ammoTypeRandom in _40mmHEList) then {_price == _price*15;};
 	};
-if (_tax == "emergency")then {_price == _price*3};
+if (_tax == "emergency")then {_price = _price*3};
+if (_price < 30)then {_price = 30};
 _targetUID = getPlayerUID _playerObject;
 _targetOwner = (owner _playerObject);
 _playerMoney = _playerObject getVariable ["ExileMoney",0]; //for local use
@@ -77,6 +85,12 @@ if (_playerMoney >= (_price*_magsCount)) then {
 			_boxObject addMagazineCargoGlobal [_ammoTypeRandom, _magsCount];
 			[_playerObject, (_price*_magsCount)] remoteExec ['WMS_fnc_smallTransactions'];
 			hint format ["%1 in the container for %2 $",_ammoTypeRandom,(_price*_magsCount)];
+		}else {
+			if (_option == "randompistol") then {
+				_boxObject addMagazineCargoGlobal [_ammoTypeRandom, _magsCount];
+				[_playerObject, (_price*_magsCount)] remoteExec ['WMS_fnc_smallTransactions'];
+				hint format ["%1 in the container for %2 $",_ammoTypeRandom,(_price*_magsCount)];
+			};
 		};
 	};
 } else {

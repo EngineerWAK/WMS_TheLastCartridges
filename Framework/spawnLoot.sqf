@@ -31,20 +31,32 @@ _this spawn {
 	        _houses = position _target nearObjects ["Building", _SpawnLootRad]; //only one type   
 	    	//systemChat format ["%1 buildings found", count _houses];     
 	    	{
-				if (!(typeOf _x in _LootBL) || !(local _x)) then {
-		    		_lootStatus = _x getVariable ["_lootSpawned",0];
-		    		_lootAllowed = _x getVariable ["_lootAllowed",true];//var should be serverTime to add delay to the next loot spawn, if (serverTime > (_x getVariable ["_lootSpawned",0])) then { spawnLoot };
-              		_lootTimer = _x getVariable ["_lootTimer",(serverTime-5)];
-		       		if ((_lootStatus == 0) && {(_lootAllowed)} && {(serverTime > _lootTimer)}) then {
-						if !(count (_x buildingPos -1) == 0) then {
-							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items")) then {_lootType = "special"};
-							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Mil" >> "items")) then {_lootType = "military"};
-							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Med" >> "items")) then {_lootType = "medical"};
-							if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_ind" >> "items")) then {_lootType = "industrial"};
-							_lootPos = selectRandom (_x buildingPos -1);
-			      			_BuildingList pushBack [_x,_lootPos,_lootType];
+				if (typeOf _x in _LootBL) then {
+					if (WMS_MissionDebug) then {diag_log format ["[SPAWNLOOT|WAK|TNA|WMS| The Building Is Blacklisted: %1", typeOf _x]};
+				}else{
+					//if(local _x)then{ //it seems all buildings are local, need to get a variable for ACE_Fortify, fix later, keep an eye on abusers
+					if(false)then{
+						if (WMS_MissionDebug) then {diag_log format ["[SPAWNLOOT|WAK|TNA|WMS| The Building Is LOCAL (fortify?): %1", typeOf _x]};
+					}else{
+						if("invisiblepath" in (typeOf _x))then{
+							if (WMS_MissionDebug) then {diag_log format ["[SPAWNLOOT|WAK|TNA|WMS| The Building Is 'invisiblepath': %1", typeOf _x]};
+						}else{
+		    				_lootStatus = _x getVariable ["_lootSpawned",0];
+		    				_lootAllowed = _x getVariable ["_lootAllowed",true];//var should be serverTime to add delay to the next loot spawn, if (serverTime > (_x getVariable ["_lootSpawned",0])) then { spawnLoot };
+              				_lootTimer = _x getVariable ["_lootTimer",(serverTime-5)];
+		       				if ((_lootStatus == 0) && {(_lootAllowed)} && {(serverTime > _lootTimer)}) then {
+								if !(count (_x buildingPos -1) == 0) then {
+									if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items")) then {_lootType = "special"};
+									if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Mil" >> "items")) then {_lootType = "military"};
+									if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Med" >> "items")) then {_lootType = "medical"};
+									if (typeOf _x in getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_ind" >> "items")) then {_lootType = "industrial"};
+									_lootPos = selectRandom (_x buildingPos -1);
+			      					_BuildingList pushBack [_x,_lootPos,_lootType];
+									if (WMS_MissionDebug) then {diag_log format ["[SPAWNLOOT|WAK|TNA|WMS| The Building Is Valid: %1", ([typeOf _x,_lootPos,_lootType])]};
+								};
+		      				};
 						};
-		      		};
+					};
 				};
 				_lootType = "default";
 		    }forEach _houses;

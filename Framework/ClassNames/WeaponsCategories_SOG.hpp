@@ -135,6 +135,7 @@ class AssaultWEST
 		"vn_xm177_stock",
 		"vn_xm177_xm148",
 		/////
+		"rhs_weap_m16a4_carryhandle_M203",
 		"rhs_weap_M590_5RD", //shotgun
 		"rhs_weap_M590_8RD", //shotgun
 		"rhs_weap_m4_carryhandle_m203S",
@@ -214,7 +215,7 @@ class SniperRifles
 		"srifle_GM6_F",
 		"srifle_LRR_F",
 		"rhs_weap_XM2010",
-		//"srifle_DMR_02_F",
+		//"srifle_DMR_02_F", //MAR 10
 		"rhs_weap_m24sws",
 		"rhs_weap_m24sws_wd",
 		"rhs_weap_m38_rail",
@@ -394,6 +395,7 @@ class Accessories
 		"vn_bipod_m16",
 		"vn_bipod_m63a",
 		/////
+		"rhsusf_acc_grip_m203_blk",
 		"rhsusf_acc_grip2",
 		"bipod_03_F_blk",
 		"rhs_acc_grip_ffg2",

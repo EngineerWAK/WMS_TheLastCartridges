@@ -10,6 +10,7 @@ class CfgFunctions
 			class buyFromOffice {};
 			class confLockUnlock {};
 			class createPermanentVHL {};
+			class createNONpermanentVHL {};
 			class findUIDinVhlArray {};
 			class findVhlIDinVhlArray {};
 			class generateHexaID {};
@@ -55,6 +56,8 @@ class CfgFunctions
 			class ActivateDeactUAVs {};
 
 			class haloJump {};
+			class UIactions {};
+			class claimItems {};
 
 			class chooseSupplyPos {}; //client
 			class chooseTerritoryPos {}; //client

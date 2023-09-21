@@ -19,7 +19,7 @@ class BWA3_G82			    		{ quality = 2; price = 8500; };
 class UK3CB_BAF_L115A3_BL			{ quality = 2; price = 2900; };
 class srifle_LRR_F			    	{ quality = 2; price = 2500; };
 class rhs_weap_XM2010			    { quality = 2; price = 2500; };
-class srifle_DMR_02_F			    { quality = 2; price = 2500; };
+class srifle_DMR_02_F			    { quality = 2; price = 2500; };//MAR 10
 class rhs_weap_m24sws			    { quality = 2; price = 2500; };
 class R3F_TAC50			   			{ quality = 2; price = 8500; };
 class rhs_weap_m38				    { quality = 2; price = 2000; };
@@ -175,6 +175,7 @@ class arifle_MSBS65_UBS_black_F		{ quality = 1; price = 450; };
 class arifle_SPAR_01_blk_F			{ quality = 1; price = 450; };
 class arifle_SPAR_01_GL_blk_F		{ quality = 2; price = 650; };
 
+class rhs_weap_m16a4_carryhandle_M203	{ quality = 2; price = 654; };
 class rhs_weap_M590_5RD				{ quality = 1; price = 354; };
 class rhs_weap_M590_8RD				{ quality = 1; price = 384; };
 class rhs_weap_m4_carryhandle_m203S	{ quality = 1; price = 654; };
@@ -451,12 +452,12 @@ class ACE_acc_pointer_green			{ quality = 2; price = 450; };
 
 class rhs_acc_2dpZenit				{ quality = 1; price = 300; };
 class rhs_acc_2dpZenit_ris			{ quality = 1; price = 300; };
-class rhsusf_acc_anpeq15_wmx_light	{ quality = 1; price = 300; };
-class rhsusf_acc_anpeq15_bk_light	{ quality = 1; price = 300; };
+class rhsusf_acc_anpeq15_wmx_light	{ quality = 1; price = 304; };
+class rhsusf_acc_anpeq15_bk_light	{ quality = 1; price = 304; };
 class acc_pointer_IR				{ quality = 0; price = 300; };
-class rhs_acc_perst1ik				{ quality = 1; price = 300; };
-class rhs_acc_perst1ik_ris			{ quality = 1; price = 300; };
-class rhs_acc_perst3_2dp_light_h	{ quality = 1; price = 300; };
+class rhs_acc_perst1ik				{ quality = 1; price = 304; };
+class rhs_acc_perst1ik_ris			{ quality = 1; price = 304; };
+class rhs_acc_perst3_2dp_light_h	{ quality = 1; price = 304; };
 class BWA3_acc_VarioRay_irlaser_black	{ quality = 1; price = 300; };
 
 //BIODS/GRIPS
@@ -474,14 +475,15 @@ class vn_bipod_m1918		{ quality = 1; price = 106; };
 class vn_bipod_m16			{ quality = 1; price = 106; };
 class vn_bipod_m63a			{ quality = 1; price = 106; };
 	/////
-class rhsusf_acc_grip2				{ quality = 0; price = 100; };
+class rhsusf_acc_grip_m203_blk		{ quality = 3; price = 104; };
+class rhsusf_acc_grip2				{ quality = 0; price = 104; };
 class bipod_03_F_blk				{ quality = 0; price = 100; };
-class rhs_acc_grip_ffg2				{ quality = 0; price = 100; };
-class rhsusf_acc_grip1				{ quality = 0; price = 100; };
-class rhsusf_acc_harris_bipod		{ quality = 0; price = 100; };
-class rhsusf_acc_m14_bipod			{ quality = 0; price = 100; };
-class rhs_acc_grip_rk2				{ quality = 0; price = 100; };
-class rhsusf_acc_rvg_blk			{ quality = 0; price = 100; };
+class rhs_acc_grip_ffg2				{ quality = 0; price = 104; };
+class rhsusf_acc_grip1				{ quality = 0; price = 104; };
+class rhsusf_acc_harris_bipod		{ quality = 0; price = 104; };
+class rhsusf_acc_m14_bipod			{ quality = 0; price = 104; };
+class rhs_acc_grip_rk2				{ quality = 0; price = 104; };
+class rhsusf_acc_rvg_blk			{ quality = 0; price = 104; };
 class bipod_02_F_blk				{ quality = 0; price = 100; };
 class bipod_01_F_blk				{ quality = 0; price = 100; };
 
@@ -502,7 +504,13 @@ class vn_m20a1b1_heat_mag 	{ quality = 3; price = 1556; };
 class vn_m20a1b1_wp_mag 	{ quality = 3; price = 1556; };
 class vn_m72 				{ quality = 2; price = 2566; };
 class vn_m72_mag 			{ quality = 2; price = 1566; };
+
+
 	/////
+class Vorona_HEAT					{ quality = 4; price = 6000; };
+class Vorona_HE						{ quality = 4; price = 6000; };
+
+
 class launch_MRAWS_green_rail_F 	{ quality = 2; price = 4555; };
 //class ammo missing
 class launch_RPG32_green_F 			{ quality = 2; price = 4555; };

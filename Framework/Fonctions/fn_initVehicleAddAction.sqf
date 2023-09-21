@@ -25,6 +25,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		"<t color='#035c10'>Lock/Unlock</t>",
 		"	
 			if (locked (_this select 0) == 0) then {
+				call WMS_fnc_UIactions;
 				_vehiclesManagement = getArray(missionConfigFile >> 'CfgOfficeTrader' >> 'vehiclesManagement');
 				if ((_vehiclesManagement select 5) != 0 &&{(player getVariable ['playerInTraderZone', false])}) then {
 					systemChat 'Vehicles In trader Zone Will Be Unlocked After Restart';
@@ -111,32 +112,55 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 	_targetOwner, //0 for all players
 	_jip //JIP
 ];
-
-//ADDACTION for resell the vehicle in the traderZone
-			/*if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
-				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump']; 
-			};*/
-[ //params ["_target", "_caller", "_actionId", "_arguments"];
+//experimental FLIP
+[
 	_veh,
 	[
-		"<t color='#f86c20'>Resell the Vehicle</t>",//_display,
+		"<t color='#f50000'>Flip Experimental</t>",
 		"
-			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_sellVehicles', 2];
+			if (locked (_this select 0) == 0) then {
+				private _posASL = getposASL (_this select 0);
+				(_this select 0) setPosASL [(_posASL select 0),(_posASL select 1),((_posASL select 2)+0.25)];
+			};
 		",
-		[], //argument accessible in the script (_this select 3)
+		nil, //argument accessible in the script (_this select 3)
 		1,
 		true,
 		true,
 		"",
-		"(alive _target) && (stance player == 'CROUCH') && {(vehicle _this == _this)} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))};",
+		"((alive _target) && {(locked _target == 0)} && {(stance player == 'CROUCH')} && {(getplayerUID _this) in (_target getVariable ['WMS_friends', [0]])} && {(vehicle _this == _this)})",
 		5
 	]
 ] remoteExec [
 	"addAction",
-	_targetOwner, //0 for all players //2 server only //-2 everyone but the server
+	_targetOwner, //0 for all players
 	_jip //JIP
 ];
-
+//Rotate 180
+[
+	_veh,
+	[
+		"<t color='#f50000'>Rotate 180 Deg</t>",
+		"
+			if (locked (_this select 0) == 0) then {
+				private _posASL = getposASL (_this select 0);
+				(_this select 0) setPosASL [(_posASL select 0),(_posASL select 1),((_posASL select 2)+0.15)];
+				(_this select 0) setDir (getDir (_this select 0)+180);
+			};
+		",
+		nil, //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"((alive _target) && {(locked _target == 0)} && {(stance player == 'CROUCH')} && {(getplayerUID _this) in (_target getVariable ['WMS_friends', [0]])} && {(vehicle _this == _this)})",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_targetOwner, //0 for all players
+	_jip //JIP
+];
 
 //Add friends to the vehicle array
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
@@ -183,6 +207,53 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		true,
 		"",
 		"(alive _target) && {(vehicle _this == _this)} && {(stance player == 'CROUCH')} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))};",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_targetOwner, //0 for all players //2 server only //-2 everyone but the server
+	_jip //JIP
+];
+
+
+////////////////////RESELL VEHICLE AT THE END////////////////////////////
+[
+	_veh,
+	[
+		"<t size='1' color='#f86c20'>-------------------</t>",
+		"
+		", 
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"(alive _target) && (stance player == 'CROUCH') && {(vehicle _this == _this)} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))};",
+		5
+	]
+] remoteExec [
+	"addAction",
+	_targetOwner,
+	_jip
+];
+
+//ADDACTION for resell the vehicle in the traderZone
+			/*if !(count ((ItemCargo (_this select 0))+(WeaponCargo (_this select 0))+(MagazineCargo (_this select 0))+(backpackCargo (_this select 0))) == 0) then { 
+				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_processCargoDump']; 
+			};*/
+[ //params ["_target", "_caller", "_actionId", "_arguments"];
+	_veh,
+	[
+		"<t color='#f86c20'>Resell the Vehicle</t>",//_display,
+		"
+			[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_sellVehicles', 2];
+		",
+		[], //argument accessible in the script (_this select 3)
+		1,
+		true,
+		true,
+		"",
+		"(alive _target) && (stance player == 'CROUCH') && {(vehicle _this == _this)} && {(_this getVariable ['playerInTraderZone', false])} && {((_target getVariable ['WMS_BuyerOwner', -1]) == (getPlayerUID _this))};",
 		5
 	]
 ] remoteExec [

@@ -41,13 +41,20 @@ profileNameSpace setVariable ["WMS_territoriesArray", _territoriesArray];
 	if (_territoryObject) then {
 		_buildingsToDelete pushBack _x;
 	};
-}forEach ((position _flag) nearObjects ["Building", 150]);
+//}forEach ((position _flag) nearObjects ["Building", 150]);
+}forEach ((position _flag) nearObjects 100);
 
 {
 	deleteVehicle _x;
 }forEach _buildingsToDelete;
 
-[_flag, (position _flag), _newHading, _layout] call WMS_fnc_SpawnCamps;
+		if (_layout == "TheOneMillionDollarsBase") then {
+			[_flag, (position _flag), _newHading, _layout] execVM "Fonctions\WMS_TheOneMillionDollarsBase.sqf";
+		}else{
+			[_flag, (position _flag), _newHading, _layout] call WMS_fnc_SpawnCamps;
+		};
+
+//[_flag, (position _flag), _newHading, _layout] call WMS_fnc_SpawnCamps;
 
 if (_price != "free") then { //free from the Layout Upgrade
 	//profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney-2500)];

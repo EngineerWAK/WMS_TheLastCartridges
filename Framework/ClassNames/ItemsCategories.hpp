@@ -166,6 +166,8 @@ class RocketMissiles
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=  //ammo specops
        {
+		"Vorona_HEAT",
+		"Vorona_HE",
 		 "Titan_AT",
 		 "rhs_rpg7_PG7V_mag",
 		 "rhs_rpg7_TBG7V_mag",

@@ -2,7 +2,8 @@ private ["_pos","_radius","_triggContest","_textureG"];
 params [
 	"_flagObject",
 	"_playerObject",
-	["_price", 5000]
+	["_price", 7500],
+	["_radius", 34.5] //34.5 //49.5 for 1Mbase
 ];
 //blablabla message
 [ 
@@ -12,7 +13,7 @@ params [
 	]  
 ]remoteExec ["BIS_fnc_typeText", (owner (_this select 1))];
 _pos = position _flagObject;
-_radius = 34.5;
+//_radius = 34.5;
 _textureG = "#(rgb,8,8,3)color(0,255,0,1)";
 _triggContest = createTrigger ["EmptyDetector", _pos, true];
 //_triggContest setVariable ["flagObject", _flagObject];
@@ -22,7 +23,12 @@ _triggContest setTriggerStatements
 	[ 
   		"this",  
   		"
-		{[_x] call WMS_fnc_rocketMan;}forEach thisList;
+		{
+			if !(vehicle _x isKindOf 'air')then {
+				[_x] call WMS_fnc_rocketMan;
+			};
+			
+		}forEach thisList;
 		",  
   		"
 		

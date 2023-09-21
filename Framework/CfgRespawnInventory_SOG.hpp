@@ -8,7 +8,7 @@ class CfgRespawnInventory
 		//role = "Bambi";										// Optional, see CfgRoles
 		role = "LoneWolf";										// Optional, see CfgRoles
 
-		weapons[] = {"vn_m_shovel_01"};//you wanted a weapon? you got a weapon.
+		weapons[] = {"vn_m_bayo_m16"};//you wanted a weapon? you got a weapon.
 		magazines[] = {
 			"vn_m18_purple_mag"
 		};

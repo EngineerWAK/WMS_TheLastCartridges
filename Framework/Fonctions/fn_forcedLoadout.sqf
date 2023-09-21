@@ -1,0 +1,66 @@
+_unit = player; 
+ 
+removeAllWeapons _unit; 
+removeAllItems _unit; 
+removeAllAssignedItems _unit; 
+removeUniform _unit; 
+removeVest _unit; 
+removeBackpack _unit; 
+removeHeadgear _unit; 
+removeGoggles _unit; 
+ 
+_unit forceAddUniform "Project_Honor_Camo_Cyre"; 
+_unit addVest "Project_Honor_Vest_1"; 
+_unit addBackpackGlobal "vn_b_pack_05"; 
+ 
+_unit addWeaponGlobal "rhs_weap_hk416d145_wd_2"; 
+_unit addWeaponGlobal "rhs_weap_m72a7"; 
+_unit addWeaponGlobal "vn_m_bayo_m16"; 
+_unit addWeaponGlobal "rhsusf_bino_lerca_1200_tan"; 
+ 
+_unit linkItem "vn_b_item_map"; 
+_unit linkItem "vn_b_item_compass_sog"; 
+_unit linkItem "ACE_Altimeter"; 
+_unit linkItem "rhs_radio_R187P1"; 
+_unit linkItem "ItemGPS"; 
+_unit linkItem "ACE_NVG_Wide_Green"; 
+ 
+_unit addItemToUniform "ACE_Banana"; 
+for "_i" from 1 to 5 do {_unit addItemToUniform "ACE_quikclot";}; 
+for "_i" from 1 to 5 do {_unit addItemToUniform "ACE_fieldDressing";}; 
+_unit addItemToUniform "ACE_bloodIV_250"; 
+_unit addItemToUniform "ACE_Canteen"; 
+_unit addItemToUniform "ACE_Fortify"; 
+for "_i" from 1 to 5 do {_unit addItemToUniform "ACE_morphine";}; 
+_unit addItemToUniform "ACE_personalAidKit"; 
+_unit addItemToUniform "ACE_RangeCard"; 
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_splint";}; 
+_unit addItemToUniform "ACE_MRE_BeefStew"; 
+for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_epinephrine";}; 
+_unit addItemToUniform "ACE_EarPlugs"; 
+for "_i" from 1 to 5 do {_unit addItemToVest "ACE_fieldDressing";}; 
+for "_i" from 1 to 2 do {_unit addItemToVest "ACE_bloodIV_250";}; 
+for "_i" from 1 to 2 do {_unit addItemToVest "ACE_bloodIV_500";}; 
+_unit addItemToVest "ACE_bloodIV"; 
+_unit addItemToVest "ACE_Can_Franta"; 
+_unit addItemToVest "ACE_DefusalKit"; 
+_unit addItemToVest "ACE_Clacker"; 
+for "_i" from 1 to 3 do {_unit addItemToVest "vn_m67_grenade_mag";}; 
+for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger";}; 
+_unit addItemToBackpack "ToolKit"; 
+for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_Banana";}; 
+for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_fieldDressing";}; 
+_unit addItemToBackpack "ACE_bloodIV"; 
+for "_i" from 1 to 2 do {_unit addItemToBackpack "ACE_CableTie";}; 
+_unit addItemToBackpack "ACE_Canteen"; 
+for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_splint";}; 
+for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_tourniquet";}; 
+for "_i" from 1 to 5 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger";}; 
+for "_i" from 1 to 2 do {_unit addItemToBackpack "vn_m67_grenade_mag";}; 
+_unit addItemToBackpack "rhsusf_m112_mag"; 
+_unit addHeadgear "Project_Honor_Helmet2"; 
+_unit addGoggles "vn_b_acc_m17_02"; 
+_unit addPrimaryWeaponItem "rhsusf_acc_wmx_bk"; 
+_unit addPrimaryWeaponItem "rhsusf_acc_ACOG_wd"; 
+_unit addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger"; 
+_unit addPrimaryWeaponItem "rhs_acc_harris_swivel";

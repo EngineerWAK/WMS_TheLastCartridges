@@ -100,7 +100,9 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["vtx_MH60S_GAU21L", 10],
 	["vtx_MH60M_DAP", 10],
 	["vtx_MH60S_Pylons", 10],
-	
+
+	["rhsusf_CH53e_USMC_cargo",60],
+	["rhsusf_CH53E_USMC_GAU21",30],
 	["RHS_UH60M", 10],
 	["RHS_UH60M_d", 10],
 	["RHS_UH60M2", 10],

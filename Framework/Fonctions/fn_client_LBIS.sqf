@@ -15,7 +15,7 @@ params [
 	["_option",""]
 ];
 _run 		= WMS_LBIS; //CBA var
-_msgs 		= ["default","stuck","cash","r187p1","halo","fasttravel","acefatigue","save","roamingvhl","cargodump","fridge","lock","reward","safer","dfo","abandoned","notabandoned"];
+_msgs 		= ["default","stuck","cash","r187p1","halo","fasttravel","acefatigue","save","roamingvhl","cargodump","fridge","lock","lock2","reward","safer","dfo","abandoned","notabandoned","frozen","computerON","militaries","1Mbase"];
 
 _stuck 		= ["If you are stuck after connecting to the server with no map to respawn, just hit 'esc' and click 'respawn'","#1fd507",80];
 _cash 		= ["Do not sell cash with other items, cash remove the respect bonus you can get","#1fd507",60];
@@ -28,12 +28,18 @@ _roamingVHL = ["You can steal Roaming AI vehices but you have to be quick before
 _cargoDump 	= ["Use the green container at the traders to buy ammo or sell items","#1fd507",40];
 _fridge 	= ["The fridge at the food trader can give you 100% food and drink","#1fd507",40];
 _lock 		= ["Lock your vehicles! AI will come to steal them!","#1fd507",40];
-_reward 	= ["Go claim a reward at the trader green container with all the CSAT cards","#1fd507",60];
+_lock2 		= ["LOCK YOUR FREACKING VEHICLES!!! Even in your base!","#1fd507",40];
+_reward 	= ["Go claim a reward at the trader green container with all the CSAT cards (v1 to v5)","#1fd507",60];
 _safer 		= ["Respawning as Bambi and Fast travel to a territory is MUCH safer than 'Save And Disconnect'","#1fd507",60];
 _DFO 		= ["DFO, DynamicFlightOperations, is a mission system for helicopters, acces locked to registered players'","#1fd507",70];
 _civilians 	= ["Do not kill CIVILIANS, you will be punished and anyway you can not use their vehicles","#1fd507",70];
 _abandoned 	= ["Abandoned vehicles will be automatically destroyed after about a week, including around Traders","#1fd507",90];
 _notAbandoned 	= ["Vehicles parked inside territories won't be automatically destroyed, anywhere else they will be 'Abandoned'","#1fd507",90];
+
+_frozen 	= ["If your 'Stat Bar' down your screen is frozen, this is not a server problem, log out, close arma and log back in","#1fd507",80];
+_computerON = ["DO NOT leave the server with your 'Infantry Computer' on the ground, REMOVE it before disconnecting","#1fd507",80];
+_militaries = ["Building a base close to a militaty zone is a good way to have 'permanent action' going on","#1fd507",80];
+_1Mbase 	= ["The 'OneMillionDollarsBase' come with features you don't want to use if you are not 'Owner' or in the base 'Friend List'","#1fd507",90];
 
 while {_run && WMS_LBIS} do {
 	uisleep 900+random 900;
@@ -54,12 +60,17 @@ while {_run && WMS_LBIS} do {
 			case "cargodump": 	{ _msg  =  _cargoDump; };
 			case "fridge": 		{ _msg  =  _fridge; };
 			case "lock": 		{ _msg  =  _lock; };
+			case "lock2": 		{ _msg  =  _lock2; };
 			case "reward": 		{ _msg  =  _reward; };
 			case "safer": 		{ _msg  =  _safer; };
 			case "dfo": 		{ _msg  =  _DFO; };
 			case "civilians": 	{ _msg  =  _civilians; };
 			case "abandoned": 	{ _msg  =  _abandoned; };
 			case "notabandoned":{ _msg  =  _notAbandoned; };
+			case "frozen":		{ _msg  =  _frozen; };
+			case "computerON":	{ _msg  =  _computerON; };
+			case "militaries":	{ _msg  =  _militaries; };
+			case "1Mbase":		{ _msg  =  _1Mbase; };
 			default 			{ _msg  =  ["This is a Local Broadcast Information System Test, stay inside, lock your doors, they are coming, but not to help you",'#ff0000',100] };
 		};
 	[

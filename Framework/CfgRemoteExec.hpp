@@ -88,6 +88,7 @@ class CfgRemoteExec
 		class WMS_fnc_processCargoDump 				{ allowedTargets=2; };
 		class WMS_fnc_buyAction 					{ allowedTargets=2; };
 		class WMS_fnc_createPermanentVHL 			{ allowedTargets=2; };
+		class WMS_fnc_createNONpermanentVHL 		{ allowedTargets=2; };
 		class WMS_fnc_updatePermanentVHL		 	{ allowedTargets=2; };
 		class WMS_fnc_initVehicleAddAction 			{ allowedTargets=2; };
 		class WMS_fnc_ConfLockUnlock 				{ allowedTargets=2; };
@@ -107,6 +108,7 @@ class CfgRemoteExec
 		class WMS_fnc_territoryUpdate 				{ allowedTargets=2; };
 		class WMS_fnc_EmergencySupply 				{ allowedTargets=2; };
 		class WMS_fnc_claimReward 					{ allowedTargets=2; };
+		class WMS_fnc_claimItems 					{ allowedTargets=2; };
 		class WMS_fnc_getOwnedPermanentVhls			{ allowedTargets=2; };
 		class WMS_fnc_client_markerOnPersonalVhls	{ allowedTargets=0; };
 		class WMS_fnc_HatchetCover 					{ allowedTargets=0; };

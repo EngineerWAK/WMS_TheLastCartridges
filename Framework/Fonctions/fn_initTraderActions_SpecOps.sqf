@@ -10,7 +10,11 @@ params[
 if (false) then {diag_log format ["[INIT_TRADERS_ACTIONS]|WAK|TNA|WMS|_this %1", _this]};
 if (_traderType == 'notYet') exitWith {diag_log "[INIT_TRADERS]|WAK|TNA|WMS|Trader not setup yet, exiting the init"};
 _itemsCategories = [];
-
+/* 
+	//getText (configFile >> "CfgWeapons" >> "U_O_T_FullGhillie_tna_F" >> "displayName");
+	U_O_T_FullGhillie_tna_F
+	U_O_T_Sniper_F
+*/
 if (_traderType == 'specopsItems') then {
 	_traderType = 'specops'; //' ' and not " "
 	_itemsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "launchers" >> "items");

@@ -59,17 +59,7 @@ switch (tolower _playerRole) do {
         true 
     } 
     "];*/
-inGameUISetEventHandler ["Action", " 
-if (
-	((_this select 3) == 'Land') || 
-	((_this select 4) == 'Landing autopilot')  ||
-	((_this select 4) == ' Switch to moving mode') ||
-	((_this select 4) == 'Automatic Engine Startup')
-) then { 
-        hint 'SORRY, This Action Is not permited';
-	    true 
-    };
-"];
+call WMS_fnc_UIactions;
 /////
 if (hasinterface) then {
     ///////////Artillery computer
@@ -92,24 +82,34 @@ if (hasinterface) then {
     _action3 = ["vhlInvSize","Inventory Size","",{hint format ["cargo size is %1",(getNumber(configFile >> "CfgVehicles" >> (typeOf vehicle player) >> "maximumLoad"))]},{(vehicle player) != player}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action3] call ace_interact_menu_fnc_addActionToObject;
 
+    _action4 = ["MoveOutCrew","Eject Crew","",{
+            ({if (_x != player) then {moveOut _x}}forEach (crew (vehicle player)))
+        },{
+            ((vehicle player) != player)&&
+            {(driver (vehicle player) == player)}&&
+            {(count (crew (vehicle player)) > 1)}
+        }] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action4] call ace_interact_menu_fnc_addActionToObject;
+
     _action5 = ["MoveOutForced","Force MoveOut","",{moveOut player},{((vehicle player) != player)&&{damage (vehicle player) == 1}}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action5] call ace_interact_menu_fnc_addActionToObject;
 
-    //_action4 = ["SaveAndDisconnect","Save and Disconnect","",{[]call WMS_fnc_client_saveRespawnData},{(vehicle player) == player}] call ace_interact_menu_fnc_createAction;
-    //[player, 1, ["ACE_SelfActions"], _action4] call ace_interact_menu_fnc_addActionToObject;
     _action6 = ["SaveAndDisconnectTimed","Save and Disconnect, Timed","",{
-            //['Saving...', 10, {true}, 
-			//	{
-					[]call WMS_fnc_client_saveRespawnData
-			//	}, 
-			//	{hint 'Saving Aborted'},
-			//	[]
-			//] call CBA_fnc_progressBar;
+			[]call WMS_fnc_client_saveRespawnData
         },{
             ((vehicle player) == player) &&
-            {servertime > ((player getVariable ["WMS_lastKill",0])+60)}
+            {servertime > ((player getVariable ["WMS_lastKill",0])+60)} &&
+            {(localNamespace getVariable ['WMS_Loc_CanBuildComputer',true])};
         }] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action6] call ace_interact_menu_fnc_addActionToObject;
+    _action7 = ["SaveAndDisconnectTimed","REMOVE YOUR COMPUTER BEFORE Save and Disconnect!","",{
+			[]call WMS_fnc_client_saveRespawnData
+        },{
+            ((vehicle player) == player) &&
+            {servertime > ((player getVariable ["WMS_lastKill",0])+60)} &&
+            {!(localNamespace getVariable ['WMS_Loc_CanBuildComputer',true])};
+        }] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action7] call ace_interact_menu_fnc_addActionToObject;
     
     //////////Mission File version on the map//////////
     _markerSystem = createMarkerLocal ["MissionVersion", [(worldsize /2),-500]];

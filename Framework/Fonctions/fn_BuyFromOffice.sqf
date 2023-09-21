@@ -68,6 +68,9 @@ if (_item == 'TradeRespect5k' || _item == 'TradeRespect10k') then {
 			[_caller, _price] call WMS_fnc_smallTransactions;
 			'You are now Explosive Specialist' remoteExec ["hint", (owner _caller)];
 		};	
+		if (_item == 'TheOneMillionDollarsBase') then {
+			[_item] remoteExecCall ["WMS_fnc_chooseTerritoryPos", (owner _caller)]; //payment will be done in WMS_fnc_createTerritory
+		};
 	};
 };
 

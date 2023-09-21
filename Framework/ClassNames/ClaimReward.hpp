@@ -59,7 +59,6 @@
 
 			"I_UAV_02_CAS_F",
 			
-			"B_T_VTOL_01_armed_F",
 			"B_Plane_CAS_01_F", //A10
 			"rhs_l159_CDF", //small fighter
 			"rhs_uh1h_hidf_gunship",

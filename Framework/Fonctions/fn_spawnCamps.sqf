@@ -2286,7 +2286,9 @@ _compoRefPoint setDir _dirFlag;
 			true //JIP
 		];
 	};
-	_object enableSimulationGlobal true; 
+	if !(_object isKindOf "Land_vn_b_helipad_01") then {
+		_object enableSimulationGlobal true; 
+	};
 	_object allowDamage false;
 	_object setVariable ["_lootAllowed",false,true];
 	_object setVariable ["_territoryObject",true,true];
