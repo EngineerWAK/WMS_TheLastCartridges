@@ -54,6 +54,7 @@ class CfgFunctions
 			class saveRespawnData {};
 			class deleteRespawnData {};
 			class ActivateDeactUAVs {};
+			class forcedLoadout  {};
 
 			class haloJump {};
 			class UIactions {};

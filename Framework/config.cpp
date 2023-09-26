@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.797_2023SEP20_GitHub";
+	name = "v1.798_2023SEP26_GitHub"; //OneMillionDollarsBase spawn fixed with uisleep 5; +5 for each base
 };
 
 class Extended_PreInit_EventHandlers {

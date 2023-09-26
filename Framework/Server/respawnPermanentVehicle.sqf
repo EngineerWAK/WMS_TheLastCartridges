@@ -9,13 +9,14 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private ["_permanentVhlArray","_playerArray","_targetUID","_vehicleID","_vehicleClassName","_lastPos","_lastPosAGL","_direction","_damage","_weap","_ammo","_backpack","_item","_veh",
+private ["_spawnSleep","_permanentVhlArray","_playerArray","_targetUID","_vehicleID","_vehicleClassName","_lastPos","_lastPosAGL","_direction","_damage","_weap","_ammo","_backpack","_item","_veh",
 			"_TerritoriesArray","_flagID","_flagPos","_territoryLevel","_ownerUID","_buildingRightUID","_flagDir","_flag","_marker","_noRespawnItems","_forceMedicalFacilities",
 			"_openVhl","_clusterVhl","_clusterMags","_tradersMkrs","_vehicleProtect","_buildingAutorisation"
 		];
 
 //Respawn Territories first:
 _TerritoriesArray = profileNameSpace GetVariable ["WMS_territoriesArray", []];
+_spawnSleep = 5;
 if !(count _TerritoriesArray == 0) then {
 	{
 		_flagID = (_x select 0);
@@ -81,7 +82,12 @@ if !(count _TerritoriesArray == 0) then {
 
 		if (_layout == "TheOneMillionDollarsBase") then {
 			_flag setVariable ["TheOneMillionDollarsBase", true, true];
-			[_flag, _flagPos, _flagDir, _layout] execVM "Fonctions\WMS_TheOneMillionDollarsBase.sqf";
+			[[_flag, _flagPos, _flagDir, _layout],_spawnSleep]spawn {
+				uisleep (_this select 1);
+				(_this select 0) execVM "Fonctions\WMS_TheOneMillionDollarsBase.sqf";
+			};
+			_spawnSleep = _spawnSleep+5;
+			//[_flag, _flagPos, _flagDir, _layout] execVM "Fonctions\WMS_TheOneMillionDollarsBase.sqf";
 		}else{
 			[_flag, _flagPos, _flagDir, _layout] call WMS_fnc_SpawnCamps;
 		};

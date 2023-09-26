@@ -103,6 +103,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 	["rhsusf_CH53e_USMC_cargo",60],
 	["rhsusf_CH53E_USMC_GAU21",30],
+	["B_T_VTOL_01_vehicle_F",60],
+	["RHS_AN2",15],
 	["RHS_UH60M", 10],
 	["RHS_UH60M_d", 10],
 	["RHS_UH60M2", 10],

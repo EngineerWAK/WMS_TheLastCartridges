@@ -118,7 +118,8 @@ class CfgRemoteExec
 		class WMS_fnc_saveRespawnData 				{ allowedTargets=2; };
 		class WMS_fnc_deleteRespawnData 			{ allowedTargets=2; };
 		class WMS_fnc_ActivateDeactUAVs 			{ allowedTargets=2; };
-		
+		class WMS_fnc_forcedLoadout 				{ allowedTargets=0; };
+
 		class WMS_fnc_HideObjectGlobal				{ allowedTargets=2; };//InfantryProgram crates //EXILE
 		class WMS_fnc_Compo_BunkerCamp 				{ allowedTargets=2; };//InfantryProgram   //EXILE
 		class WMS_fnc_Pull_BUY_Push					{ allowedTargets=2; };//InfantryProgram   //EXILE
