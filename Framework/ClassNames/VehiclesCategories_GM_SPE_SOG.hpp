@@ -31,6 +31,27 @@
 			"vn_b_armor_m577_02", //m113 medic
 			"vn_o_armor_btr50pk_03_nva65",
 			//////
+			//SPE...
+			"SPE_FFI_OpelBlitz_Ambulance",
+			"SPE_FR_M3_Halftrack_Ambulance",
+			"SPE_FFI_OpelBlitz",
+			"SPE_FFI_OpelBlitz_Ammo",
+			"SPE_FFI_OpelBlitz_Fuel",
+			"SPE_FFI_OpelBlitz_Open",
+			"SPE_FFI_OpelBlitz_Repair",
+			"SPE_FR_M3_Halftrack_Ammo",
+			"SPE_FR_M3_Halftrack_Fuel",
+			"SPE_FR_M3_Halftrack_Repair",
+			"SPE_FR_M3_Halftrack_Unarmed",
+			"SPE_FR_M3_Halftrack_Unarmed_Open",
+			//GM
+			"gm_ge_army_k125",
+			"gm_ge_army_iltis_cargo",
+			"gm_ge_civ_u1300l",
+			"gm_ge_army_u1300l_firefighter",
+			"gm_ge_army_u1300l_medic",
+			"gm_pl_army_ural4320_cargo",
+			"gm_gc_ff_p601", //zastava ki
 			//SOG Unarmed
 			"vn_o_bicycle_01_pl",
 			"vn_o_bicycle_02_pl",
@@ -114,6 +135,53 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			//SPE...
+			"SPE_FFI_SdKfz250_1",
+			"SPE_FR_M16_Halftrack",
+			"SPE_FR_M3_Halftrack",
+			//SPE Tanks
+			"SPE_ST_PzKpfwIII_J",
+			"SPE_ST_PzKpfwIV_G",
+			"SPE_FR_M10",
+			"SPE_FR_M4A0_75_Early",
+			"SPE_FR_M4A0_75_mid",
+			"SPE_FR_M4A1_76",
+			"SPE_FR_M4A1_75",
+			"SPE_M18_Hellcat",
+			"SPE_M4A1_T34_Calliope_Direct",
+			"SPE_M4A1_T34_Calliope",
+			//SPE Statics
+			"SPE_FR_57mm_M1",
+			"SPE_FR_M45_Quadmount", //AA
+			"SPE_ST_leFH18", //105mm
+			"SPE_ST_leFH18_AT", //105mm
+			"SPE_ST_FlaK_36",
+			"SPE_ST_FlaK_36_AA",
+			"SPE_ST_FlaK_38",
+			//"SPE_ST_MG34_Lafette_Deployed" //NOPE just for ref
+			//"SPE_ST_MG42_Lafette_Deployed" //NOPE just for ref
+			"SPE_ST_Pak40",
+			//"SPE_ST_GrW278_1" //mortar //NOPE just for ref
+			//"SPE_MLE_27_31" //mortar //NOPE just for ref
+			//GM ARMED
+	        "gm_ge_army_iltis_mg3",
+	        "gm_dk_army_u1300l_container",
+	        "gm_ge_army_u1300l_cargo",
+			"gm_ge_army_kat1_454_cargo", //10t mg3
+	        "gm_dk_army_bpz2a0",
+	        "gm_ge_army_fuchsa0_command",
+	        "gm_ge_army_fuchsa0_reconnaissance",
+			"gm_ge_army_m113a1g_apc", //mg3
+			"gm_dk_army_m113a1dk_apc", //M2 shield
+			"gm_dk_army_m113a2dk",
+	        "gm_ge_army_marder1a2",
+			"gm_ge_army_Leopard1a1", //green
+	        //"gm_ge_army_Leopard1a1a1",
+	        "gm_dk_army_Leopard1a3",
+			"gm_ge_army_Leopard1a3a1",
+			"gm_ge_army_Leopard1a5",
+			"gm_gc_army_t55ak",
+			"gm_ge_army_gepard1a1", //AA
 			//SOG Armed
 			"vn_o_car_04_mg_01_kr", //little truck LMG
 			"vn_b_wheeled_m274_mg_03_01", //mulle M134
@@ -249,6 +317,14 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			//GM
+			"gm_ge_adak_bo105m_vbh",
+			"gm_gc_civ_mi2sr",
+			"gm_ge_army_bo105m_vbh",
+			"gm_ge_army_bo105p1m_vbh",
+			"gm_gc_airforce_l410t", //plane
+			//"gm_ge_airforce_do28d2" //plane
+
 			//SOG Medical choppers
 			"vn_b_air_uh1b_01_02",
 			"vn_b_air_uh1b_01_01",
@@ -297,6 +373,10 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
+			//GM 
+			"gm_ge_army_bo105p_pah1a1",
+			"gm_gc_bgs_mi2us",
+			"gm_gc_airforce_mi2urn",
 			//SOG Armed Choppers
 			"vn_b_air_ch47_01_01", //slingload I guess
 			"vn_i_air_ch47_01_01", //slingload I guess

@@ -95,6 +95,9 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["vn_o_armor_t54b_01_nva65", 		5], //tank
 
 	/////
+	["rhsusf_mrzr4_d",5],
+	["rhsusf_mrzr4_d_mud",5],
+	["rhsusf_mrzr4_w",10],
 	["rhsusf_mrzr4_w_mud",10],
 	["rhsusf_RG33L_base",10], //M1234 M1237
 	["rhs_kamaz5350_flatbed_cover_vdv", 25], //flatbed cover
@@ -106,6 +109,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy", 15],
 	["rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy", 35],
 	["rhsusf_M1083A1P2_B_WD_flatbed_fmtv_usarmy", 25],
+	["rhsusf_M1084A1P2_WD_fmtv_usarmy",15],
+	["rhsusf_M1084A1P2_B_WD_fmtv_usarmy",15],
 	["B_Truck_01_cargo_F",30],
 	["B_Truck_01_transport_F",20],
 	["b_truck_01_mover_f", 10],
@@ -149,6 +154,7 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
+	["rhsusf_mrzr4_w",20],
 	["rhsusf_mrzr4_w_mud",20],
 	["B_LSV_01_unarmed_black_F", 41],
 	["O_LSV_02_unarmed_black_F", 41],

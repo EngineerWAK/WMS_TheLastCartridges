@@ -55,6 +55,7 @@ class CfgFunctions
 			class deleteRespawnData {};
 			class ActivateDeactUAVs {};
 			class forcedLoadout  {};
+			class setDefaultAmmo  {};
 
 			class haloJump {};
 			class UIactions {};

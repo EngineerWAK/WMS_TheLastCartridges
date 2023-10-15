@@ -114,7 +114,18 @@ _ScoreToAdd = 5000;
 _playerUID_ExileScore = "ExileScore_"+_targetUID; 
 _playerScore = profileNamespace getVariable [_playerUID_ExileScore,0]; 
 profileNamespace setVariable [_playerUID_ExileScore,(_playerScore+_ScoreToAdd)];
+//Reset player stats:
+_targetUID = "76561197965501020";
 
+_playerUID_ExileKills = "ExileKills_"+_targetUID; 
+_playerUID_ExileMoney = "ExileMoney_"+_targetUID; 
+_playerUID_ExileScore = "ExileScore_"+_targetUID; 
+_playerUID_ExileDeath = "ExileDeath_"+_targetUID;
+  
+profileNamespace setVariable [_playerUID_ExileKills,0];  
+profileNamespace setVariable [_playerUID_ExileMoney,0];  
+profileNamespace setVariable [_playerUID_ExileScore,0];  
+profileNamespace setVariable [_playerUID_ExileDeath,0];
 //modify player money local
 _moneyToAdd = 10000;
 _playerMoney = player getVariable ["ExileMoney",0];
@@ -339,3 +350,30 @@ _objToCheck = missionNameSpace getVariable ["WMS_ObjectsToCheck",[]];
 _objToCheck pushBack _container;
 missionNameSpace setVariable ["WMS_ObjectsToCheck",_objToCheck]; //this will be useful later
 _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this will be useful later
+/////Convert permanent VHL array /////
+[]spawn {
+	private _permanentVhlArray_Temp = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
+	uisleep 1;
+	profileNameSpace setVariable ["WMS_permanentVhlArray_BKP", _permanentVhlArray_Temp];
+	uisleep 1;
+	profileNameSpace setVariable ["WMS_permanentVhlArray", []];
+	uisleep 1;
+	_permanentVhlArray = [];
+	{
+		private _playerID_Vhls = (_x select 0)+"_VHLs";
+		profileNameSpace setVariable [_playerID_Vhls, _x];
+		private _playerVHLhexaIDs = [(_x select 0),[]];
+		{
+			if (count _x != 17 && {count _x != 0}) then {
+				(_playerVHLhexaIDs select 1) pushBack (_x select 0);
+			};
+		}forEach _x;
+		_permanentVhlArray pushBack _playerVHLhexaIDs;
+	}forEach _permanentVhlArray_Temp;
+	uisleep 1;
+	profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
+	uisleep 1;
+	_permanentVhlArray_Temp = [];
+};
+/////
+BIS_fnc_getVehicleCUstomization

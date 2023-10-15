@@ -219,3 +219,11 @@ if(_vehicleClassName == "rhsusf_m1152_usarmy_wd") then{
 		["m1152_Hide",0,"m1152_tent_Hide",1,"door_LF",0,"door_RF",0,"iff_hide",0,"dwf_kit_Hide",1,"snorkel_lower",0,"BFT_Hide",0,"Antennas_Hide",0,"hide_spare",0]
 	] call BIS_fnc_initVehicle;
 };
+
+if(_vehicleClassName == "I_G_Offroad_01_F" ||_vehicleClassName ==  "B_G_Offroad_01_armed_F") then{
+	[
+		_veh,
+		"Green",//["rhs_olive",1], 
+		["HideDoor1",0,"HideDoor2",0,"HideDoor3",0,"HideBackpacks",0,"HideBumper1",0,"HideBumper2",1,"HideConstruction",0,"hidePolice",1,"HideServices",1,"BeaconsStart",0,"BeaconsServicesStart",0]
+	] call BIS_fnc_initVehicle;
+};

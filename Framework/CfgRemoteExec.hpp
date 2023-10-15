@@ -119,6 +119,7 @@ class CfgRemoteExec
 		class WMS_fnc_deleteRespawnData 			{ allowedTargets=2; };
 		class WMS_fnc_ActivateDeactUAVs 			{ allowedTargets=2; };
 		class WMS_fnc_forcedLoadout 				{ allowedTargets=0; };
+		//class WMS_fnc_setDefaultAmmo 				{ allowedTargets=2; }; //no need remoteExec, it will be local on the client
 
 		class WMS_fnc_HideObjectGlobal				{ allowedTargets=2; };//InfantryProgram crates //EXILE
 		class WMS_fnc_Compo_BunkerCamp 				{ allowedTargets=2; };//InfantryProgram   //EXILE

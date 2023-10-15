@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private ["_playerArray","_targetUID","_targetOwner","_permanentVhlArray","_arrayPosition","_veh","_vehicleID","_helipadList","_helipad","_helipadOccupied"];
+private ["_playerVHLarray","_playerArray","_targetUID","_targetOwner","_permanentVhlArray","_arrayPosition","_veh","_vehicleID","_helipadList","_helipad","_helipadOccupied"];
 params[
 	"_vehicleClassName",
 	"_buyer",
@@ -18,6 +18,7 @@ params[
 if (WMS_MissionDebug) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 
 _playerArray = [];
+_playerVHLarray = [];
 _helipadList = [];
 _helipad = "";
 _veh = ObjNull;
@@ -25,6 +26,48 @@ _targetUID = getPlayerUID _buyer;
 _targetOwner = (owner _buyer);
 _permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 _arrayPosition = _targetUID call WMS_fnc_findUIDinVhlArray;//if (_result == -1) exitWith {"not in the array"}
+
+////////////////////////NEEDED UPDATE///////////////////////////
+/*
+	"WMS_permanentVhlArray" can get very big if it contain all vehicles of all players
+	Each player should have it's own _permanentVhlArray with just a reference in the general "WMS_permanentVhlArray"
+	"WMS_permanentVhlArray" could contain "only" the player UID and maybe vehicles HexaID like: 
+	WMS_permanentVhlArray = [
+		["76561197965501020",["504b0617","a6e1c0a0","8b825bbe"]],
+		["76561198008251883",["9aff3be9","9e09c0fe"]]
+		];
+	then use the hexaID array to find the vehicle in the player _permanentVhlArray like:
+	"76561197965501020_VHLs" = [
+		"76561197965501020",
+		["504b0617","vn_b_wheeled_m54_repair",[10926.3,14381.5,70.0854],33.3324,0,0.942812,["76561197965501020"],"",0],
+		["a6e1c0a0","vn_b_air_ch47_02_02",[10880.4,14417.5,70.5312],99.185,0,0.717694,["76561197965501020"],"",0],
+		["8b825bbe","vn_b_air_uh1c_03_01",[10979.6,14472.8,69.8176],204.327,0.0472441,0.790981,["76561197965501020"],"",0]
+		];
+	A convertion function will be needed to convert the old "WMS_permanentVhlArray" to the new one with new playerID_VHLs:
+	/////
+		private _permanentVhlArray_Temp = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
+		profileNameSpace setVariable ["WMS_permanentVhlArray_BKP", _permanentVhlArray_Temp];
+		profileNameSpace setVariable ["WMS_permanentVhlArray", []];
+		{
+			//export each player stuff to it's own vehicle array:
+			private _playerID_Vhls = (_x select 0)+"_VHLs";
+			profileNameSpace setVariable [_playerID_Vhls, _x];
+			//modify _permanentVhlArray_Temp to the new format [["playerUID",["VHLhexaID"]],["playerUID",["VHLhexaID"]],["playerUID",["VHLhexaID"]]]
+			private _playerVHLhexaIDs = [(_x select 0),[]];
+			{
+				if (count _x != 17 && {count _x != 0}) then {
+					(_playerVHLhexaIDs select 1) pushBack (_x select 0);
+				};
+			}forEach _x;
+			WMS_permanentVhlArray pushBack _playerVHLhexaIDs;
+		}forEach _permanentVhlArray_Temp;
+		_permanentVhlArray_Temp = [];
+	/////
+	if everything is fine:
+	profileNameSpace setVariable ["WMS_permanentVhlArray_BKP", nil];
+*/
+////////////////////////NEEDED UPDATE\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 ///////////////BOAT FILTER TO SPAWN ON WATER///////////////
 if (_vehicleClassName isKindOf "Ship" ||_vehicleClassName isKindOf "rhs_pontoon_float") then {
 	_helipadList =  nearestObjects [_buyer, ["Land_HelipadEmpty_F"], 50];
@@ -69,25 +112,19 @@ if (_vehicleClassName isKindOf "Ship" ||_vehicleClassName isKindOf "rhs_pontoon_
 //////////////
 
 if !(_arrayPosition == -1) then {
-		_playerArray = (_permanentVhlArray select _arrayPosition); //[_targetUID,["0a0a0a0a",_vehicleClassName,[0,0,0],359,0,[[],[],[],[]]]]
-	} else {
-		_permanentVhlArray pushback [_targetUID];
-		profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
-		//saveProfileNameSpace;
-		_arrayPosition = _targetUID call WMS_fnc_findUIDinVhlArray;
-		_playerArray = (_permanentVhlArray select _arrayPosition);
-	};
-
-//_veh = createVehicle [_vehicleClassName, _pos, [], 0, "NONE"];
-/*if (count _pos == 0) then {
-	_pos = position _buyer findEmptyPosition [5,75,_vehicleClassName];
-	if !(count _pos == 0) then {
-		_veh = createVehicle [_vehicleClassName, _pos, [], 0, "NONE"];
-	} else {
-		_veh = createVehicle [_vehicleClassName, position _buyer, [], 75, "NONE"];
-	};
-};*/
-//_veh setDir (random 359);
+	_playerArray = (_permanentVhlArray select _arrayPosition); //[_targetUID,["0a0a0a0a","1a0a0a0a","2a0a0a0a"]]
+} else {
+	//_permanentVhlArray pushback [_targetUID]; //OLD
+	_permanentVhlArray pushback [_targetUID,[]]; //Add the player uid in the _permanentVhlArray //NEW
+	profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
+	/////NEW SYSTEM/////
+	//profileNameSpace setVariable [_targetUID+"_VHLs", [_targetUID,[]]]; //create the new player vehicle array, one for each player and not one for all players
+	profileNameSpace setVariable [_targetUID+"_VHLs", [_targetUID]]; //create the new player vehicle array, one for each player and not one for all players
+	/////NEW SYSTEM\\\\\
+	_arrayPosition = _targetUID call WMS_fnc_findUIDinVhlArray;
+	_playerArray = (_permanentVhlArray select _arrayPosition);
+};
+_playerVHLarray = profileNameSpace getVariable [_targetUID+"_VHLs", [_targetUID]]; //NEW
 WMS_permanentVehicleObjects pushBack _veh;
 //_veh setOwner _buyer;
 _vehicleID = call WMS_fnc_generateHexaID;
@@ -99,28 +136,19 @@ _veh setVariable ["WMS_howmanyrestarts", 0];
 _vehicleID_inventory = _vehicleID + "_inventory";
 _veh setVariable ["WMS_vehicleID_inventory", _vehicleID_inventory, true];
 if (_veh isKindOf "tank"||_veh isKindOf "Wheeled_Apc_F") then {_veh setVariable ["ace_cookoff_enable", true, true];};
-			_veh addMPEventHandler ["MPkilled", {
-				if (isDedicated) then {
-					//[(_this select 0),"destroyed"] remoteExec ['WMS_fnc_updatePermanentVHL', 2];//remoteExec doesnt make sens
-					[(_this select 0),"destroyed"] call WMS_fnc_updatePermanentVHL; //remoteExec doesnt make sens
-					//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
-					if (WMS_MissionDebug) then {
-						if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};
-						if (WMS_MissionDebug) then {diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];};
-						if (WMS_MissionDebug) then {diag_log "|WAK|TNA|WMS|";};
-						};
-				};
-				}
-			];//params ["_unit", "_killer", "_instigator", "_useEffects"];
-
-			/*_veh addEventHandler ["ContainerClosed", { //DO NOT WORK
-					diag_log "|WAK|TNA|WMS|";
-					diag_log format ["permanent vehicle (%1) inventory acces by  %2", (_this select 0), (_this select 1)];
-					diag_log "|WAK|TNA|WMS|";
-					//params ["_container", "_unit"];
-					(_this select 0) remoteExec ['WMS_fnc_updatePermanentVHL', 2];
-				}
-			];*/
+/////VEHICLE DESTROYED EH/////
+_veh addMPEventHandler ["MPkilled", {
+	if (isDedicated) then {
+		[(_this select 0),"destroyed"] call WMS_fnc_updatePermanentVHL;
+		//[(format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)]),"VEHICLEDESTROYED_log"]call A3log;
+		if (true) then {
+			diag_log "|WAK|TNA|WMS|";
+			diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];
+			diag_log "|WAK|TNA|WMS|";
+		};
+	};
+}];//params ["_unit", "_killer", "_instigator", "_useEffects"];
+/////VEHICLE DESTROYED EH\\\\\
 clearMagazineCargoGlobal _veh; 
 clearWeaponCargoGlobal _veh; 
 clearItemCargoGlobal _veh; 
@@ -129,17 +157,15 @@ _veh setVehicleLock "LOCKED";
 _veh lockInventory true;
 _smoke = "smokeShellOrange" createVehicle position _veh;
 _smoke attachTo [_veh, [0,0,0]];
-	//add sound/music here
-//playsound "magicbus"; //no position for this on
+
 playSound3D [getMissionPath "Custom\Ogg\magicBus.ogg", _veh, false, position _veh, 9, 1, 0]; //keep the last number (distance) 0 !!!!
-//_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,[[],[],[],[]]]; //OLD
-//_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],[[],[],[],[]]]; //NEW [vID,classename,position,direction,damage,fuel,[friends],inventory]
-//_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],_vehicleID_inventory,0]; //NEW [vID,classename,position,direction,damage,fuel,[friends],inventory,_howmanyrestarts]
-_playerArray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],"",0]; //NEW [vID,classename,position,direction,damage,fuel,[friends],"nothing",_howmanyrestarts]
+
+_playerVHLarray pushback [_vehicleID,_vehicleClassName,_pos,(direction _veh),0,1,[_targetUID],"",0]; //OLD but new array unic to player
+(_playerArray select 1) pushback _vehicleID;
 _permanentVhlArray set [_arrayPosition, _playerArray];
-profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];
-profileNameSpace setVariable [_vehicleID_inventory, [[],[],[],[]]];
-//saveProfileNameSpace;
+profileNameSpace setVariable [_targetUID+"_VHLs", _playerVHLarray]; //full vehicle array unic to the player
+profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray]; //permanent vehicle array for all player with only _vehicleID
+profileNameSpace setVariable [_vehicleID_inventory, [[],[],[],[]]]; //vehicle inventory
 
 if (_veh isKindOf "UGV_01_base_F"||_veh isKindOf "UAV") then {createVehicleCrew _veh};
 [_veh,_targetOwner, false]call WMS_fnc_initVehicleAddAction;
@@ -151,14 +177,6 @@ if ((typeOf _veh) in _forceAmmoFacilities) then {
 	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Ammo Facility", _veh];};
 	_veh setVariable ["ace_rearm_isSupplyVehicle", true, true];
 	{_veh addItemCargoGlobal [_x select 0,_x select 1];}forEach _forceAmmoInv;
-	/*_veh addItemCargoGlobal ["rhs_mag_an_m14_th3",10];
-	_veh addItemCargoGlobal ["rhs_charge_tnt_x2_mag",10];
-	_veh addItemCargoGlobal ["DemoCharge_Remote_Mag",10];
-	_veh addItemCargoGlobal ["ACE_DefusalKit",4];
-	_veh addItemCargoGlobal ["ACE_Clacker",4];
-	_veh addItemCargoGlobal ["ACE_RangeTable_82mm",3];
-	_veh addItemCargoGlobal ["ACE_artilleryTable",3];
-	_veh addItemCargoGlobal ["ACE_RangeCard",3];*/
 };
 
 _forceRepairFacilities = getArray(missionConfigFile >> "CfgForceRepairFacilities" >> "vehicles");
@@ -167,13 +185,6 @@ if ((typeOf _veh) in _forceRepairFacilities) then {
 	if (WMS_MissionDebug) then {diag_log format ["|WAK|TNA|WMS| Creating %1 as Repair Facility", _veh];};
 	_veh setVariable ["ACE_isRepairVehicle", true, true];
 	{_veh addItemCargoGlobal [_x select 0,_x select 1];}forEach _forceRepairInv;
-	/*_veh addItemCargoGlobal ["ToolKit",1];
-	_veh addItemCargoGlobal ["ACE_EntrenchingTool",5];
-	_veh addItemCargoGlobal ["ACE_wirecutter",5];
-	_veh addItemCargoGlobal ["SatchelCharge_Remote_Mag",10];
-	_veh addItemCargoGlobal ["ACE_rope15",2];
-	_veh addItemCargoGlobal ["ACE_rope36",2];
-	_veh addItemCargoGlobal ["ACE_rope6",2];*/
 };
 
 _forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
@@ -183,16 +194,6 @@ if ((typeOf _veh) in _forceMedicalFacilities) then {
 	_veh setVariable ["ace_medical_isMedicalFacility", true, true];
 	_veh setVariable ["WMS_resetFatigueTimer", time, true];
 	{_veh addItemCargoGlobal [_x select 0,_x select 1];}forEach _forceMedicalInv;
-	/*_veh addItemCargoGlobal ["ACE_personalAidKit",1];
-	_veh addItemCargoGlobal ["ACE_bloodIV_500",5];
-	_veh addItemCargoGlobal ["ACE_bloodIV_250",10];
-	_veh addItemCargoGlobal ["ACE_elasticBandage",10];
-	_veh addItemCargoGlobal ["ACE_fieldDressing",10];
-	_veh addItemCargoGlobal ["ACE_splint",10];
-	_veh addItemCargoGlobal ["ACE_epinephrine",5];
-	_veh addItemCargoGlobal ["ACE_morphine",5];
-	_veh addItemCargoGlobal ["vtx_stretcher_item",2];*/
-
 	//[player, nil] call ace_advanced_fatigue_fnc_handlePlayerChanged; //addAction "Reset Fatigue" for owner;
 	[ //params ["_target", "_caller", "_actionId", "_arguments"];
 		_veh,

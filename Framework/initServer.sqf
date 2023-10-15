@@ -79,6 +79,12 @@ while {true} do
 	{
 		private _permanentVehiclesCount = 0;
 		private _permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
+		
+			/*_playerArray = _x; //playerArray will change and will contain only [playerUID, [vhlHexaID,vhlHexaID,vhlHexaID]];
+			//_playerArrayRef = _x; //[playerUID, [vhlHexaID,vhlHexaID,vhlHexaID]];
+			//_playerArrayVar = (_x select 0)+"_VHLs";
+			//_playerArray = profileNameSpace getVariable [_playerArrayVar, []];*/
+
 		private _TerritoriesArray = profileNameSpace getVariable ["WMS_territoriesArray", []];
 		if ((count allPlayers) != 0) then {
 			saveProfilenameSpace;

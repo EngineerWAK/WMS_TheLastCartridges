@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  //if (_caller canAdd _item)then{}else{};
-private ["_targetUID","_targetOwner","_playerUID_ExileMoney","_playerMoney","_itemSlotFreeOrNot","_compatibleItems"];
+private ["_totalAllowedLvl","_totalVhl","_totalLvl","_playerVHLArray","_targetUID","_targetOwner","_playerUID_ExileMoney","_playerMoney","_itemSlotFreeOrNot","_compatibleItems"];
 params [
 	"_item", //classename
 	"_price",
@@ -24,22 +24,35 @@ _targetOwner = (owner _caller);
 _playerUID_ExileMoney = "ExileMoney_"+_targetUID;
 _playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
 _itemSlotFreeOrNot = [];
+_totalVhl = 0;
+_totalLvl = 0;
+_playerVHLArray = [_targetUID];
+_totalAllowed = 0;
+_totalAllowedLvl = 0;
 
 if (_playerMoney >= _price) then {
 	/////VEHICLES
 	if (_type == 'vehicle' || _type == 'sea') then {  //Including the Boats
-		_ownerArray = _targetUID call WMS_fnc_findUIDinVhlArray; //-1 if not in the array yet
+		//_ownerArray = _targetUID call WMS_fnc_findUIDinVhlArray; //-1 if not in the array yet //no need anymore
 		_vehiclesManagement = getArray(missionConfigFile >> "CfgOfficeTrader" >> "vehiclesManagement"); //select 3 = start vehicle //select 4 = territory level
-		_totalVhl = 0;
-		_totalLvl = 0;
-		if (_ownerArray != -1)then {
-			_totalVhl = count ((profileNameSpace getVariable ["WMS_permanentVhlArray", []]) select _ownerArray)-1;
+		//if (_ownerArray != -1)then {
+		_playerVHLArray = profileNameSpace getVariable [_targetUID+"_VHLs", [_targetUID]]; //NEW
+		if (count _playerVHLArray != 0)then {
+			//_playerVHLArray = profileNameSpace getVariable [_targetUID+"_VHLs", [_targetUID,[]]]; //NEW
+			//_totalVhl = count ((profileNameSpace getVariable ["WMS_permanentVhlArray", []]) select _ownerArray)-1;
+			_totalVhl = ((count _playerVHLArray)-1); //NEW
 		};
 		_totalAllowed = _vehiclesManagement select 3;
+		_totalAllowedLvl = _vehiclesManagement select 4;
 		if ((_vehiclesManagement select 4) != 0) then {
-			{if (_x select 3 == _targetUID) then {_totalLvl = _totalLvl+ (_x select 2)}}forEach (profileNameSpace GetVariable ["WMS_territoriesArray", []]);
-			_totalAllowed = _totalAllowed + (_totalLvl*(_vehiclesManagement select 4));
+			{
+				if (_x select 3 == _targetUID) then {
+					_totalLvl = _totalLvl+ (_x select 2);
+				};
+			}forEach (profileNameSpace GetVariable ["WMS_territoriesArray", []]);
 		};
+		_totalAllowed = _totalAllowed+(_totalAllowedLvl*_totalLvl);
+		if (true) then {diag_log format ["[BUY_FROM_TRADERS]|WAK|TNA|WMS|_caller %1, _targetUID %2, _totalVhl %3, _totalAllowed %4",_caller, _targetUID, _totalVhl ,_totalAllowed]};
 		if (_totalVhl < _totalAllowed) then {
 			[_item,_caller] call WMS_fnc_createPermanentVHL;
 			profileNamespace setVariable [_playerUID_Exilemoney,(_playerMoney-_price)];

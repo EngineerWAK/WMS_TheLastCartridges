@@ -20,6 +20,17 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
+	
+	//SPE Statics
+	["SPE_FR_57mm_M1", 20],
+	["SPE_FR_M45_Quadmount", 15], //AA
+	["SPE_ST_leFH18", 20], //105mm
+	["SPE_ST_leFH18_AT", 20], //105mm
+	["SPE_ST_FlaK_36", 20],
+	["SPE_ST_FlaK_36_AA", 20],
+	["SPE_ST_FlaK_38", 10],
+	["SPE_ST_Pak40", 20],
+
 	["vn_b_nz_army_static_m101_01", 20], //howitzer 105mm AT
 	["vn_b_nz_army_static_m101_02", 20], //howitzer 105mm
 	["vn_o_nva_65_static_h12", 		20], //x12 rocket launcher
@@ -54,6 +65,17 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
 	//"staticweapon"
+
+	//SPE Statics
+	"SPE_FR_57mm_M1",
+	"SPE_FR_M45_Quadmount", //AA
+	"SPE_ST_leFH18", //105mm
+	"SPE_ST_leFH18_AT", //105mm
+	"SPE_ST_FlaK_36",
+	"SPE_ST_FlaK_36_AA",
+	"SPE_ST_FlaK_38",
+	"SPE_ST_Pak40",
+
 	"vn_b_nz_army_static_m101_01", //howitzer 105mm AT
 	"vn_b_nz_army_static_m101_02", //howitzer 105mm
 	"vn_o_nva_65_static_h12", //x12 rocket launcher

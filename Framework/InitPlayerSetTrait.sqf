@@ -91,7 +91,7 @@ if ("ACE_Banana" in _items) then {
 	};
 	//MEDIC LEVEL
 	//SurgicalKit only for Medic Loadout
- 	if ("ACE_surgicalKit" in _items) then {
+ 	if ("ACE_personalAidKit" in _items) then {//ACE_personalAidKit //ACE_surgicalKit
     	_caller setVariable ["WMS_Specialist_Bambi",false,true];
     	_caller setVariable ["WMS_Specialist_Medic",true,true];
     	_caller setVariable ["WMS_Specialist_Engineer",false,true];

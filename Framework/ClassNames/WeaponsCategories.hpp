@@ -399,23 +399,30 @@ class Pistol
 		"hgun_Pistol_heavy_01_F"
 	};
 };
+/*
+
+Chopper 9 Jun @ 2:21pm //STEAM NIA v14
+@Outlaw Lord Do not use pistols of this mod chambered for 9mm. Or remove them from the mission. (rzabinar mission.sqm and delete all p226 lines. Write to PM, I'll help).
+Wait for a fix from the author.
+
+*/
 class Pistol_RHS_NIA
 {
 	name = "Pistol";
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
 	{
-		"hlc_pistol_P226R_Combat",
+		//"hlc_pistol_P226R_Combat",
 		"hlc_pistol_P226R_357Combat",
 		"hlc_pistol_P226R_40Combat",
-		"hlc_pistol_P229R_Combat",
+		//"hlc_pistol_P229R_Combat",
 		"hlc_pistol_P229R_357Combat",
 		"hlc_pistol_P229R_40Combat",
-		"hlc_pistol_P239",
+		//"hlc_pistol_P239",
 		"hlc_pistol_P239_357",
 		"hlc_pistol_P239_40",
 		"hlc_pistol_C96_Wartime",
-		"hlc_pistol_P226R_Stainless",
+		//"hlc_pistol_P226R_Stainless",
 		"hlc_pistol_P229R_357Stainless"
 	};
 };

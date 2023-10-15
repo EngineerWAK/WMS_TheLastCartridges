@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.798_2023SEP26_GitHub"; //OneMillionDollarsBase spawn fixed with uisleep 5; +5 for each base
+	name = "v1.809_2023OCT15_GitHub"; //GM_SPE_SOG vehicles
 };
 
 class Extended_PreInit_EventHandlers {
@@ -24,14 +24,7 @@ class Extended_PreInit_EventHandlers {
 // REMEMBER CfgRespawnInventory IN description.ext _SOG
 ///////////////////////
 
-class CfgBuildingsCategories
-{	//_weaponsCategories = getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items");
-    #include "ClassNames\BuildingsLootSpawn.hpp"
-};
-/*class CfgAmmoCategories //NOT USED ANYMORE
-{	//_weaponsCategories = getArray(missionConfigFile >> "CfgAmmoCategories" >> "Ammunition" >> "items");
-    #include "ClassNames\AmmoCategories.hpp"
-};*/
+/////TRADERS
 class CfgWeapCategories
 {	//_weaponsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "SniperRifles" >> "items");
     #include "ClassNames\WeaponsCategories.hpp"
@@ -41,6 +34,7 @@ class CfgVehicleCategories
 {	//_vehicleCategories = getArray(missionConfigFile >> "CfgVehicleCategories" >> "Cars" >> "items");
     #include "ClassNames\VehiclesCategories.hpp"
     //#include "ClassNames\VehiclesCategories_SOG.hpp"
+    //#include "ClassNames\VehiclesCategories_GM_SPE_SOG.hpp"
 };
 class CfgItemsCategories
 {   //_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "ItemsBlabla" >> "items");
@@ -48,6 +42,12 @@ class CfgItemsCategories
 	#include "ClassNames\EquipementCategories.hpp"
     //#include "ClassNames\ItemsCategories_SOG.hpp"
 	//#include "ClassNames\EquipementCategories_SOG.hpp"
+};
+
+/////LOOT SPAWN
+class CfgBuildingsCategories
+{	//_weaponsCategories = getArray(missionConfigFile >> "CfgBuildingsCategories" >> "BuildingClass_Spe" >> "items");
+    #include "ClassNames\BuildingsLootSpawn.hpp"
 };
 class CfgLootToSpawnCategories
 {   //_itemsCategories = getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items");
@@ -81,6 +81,9 @@ class CfgPVP
 class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recognized as Medical facilities
 {//_forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
 	vehicles[] = {
+		//SPE Medicals
+		"SPE_FFI_OpelBlitz_Ambulance",
+		"SPE_FR_M3_Halftrack_Ambulance",
 		//SOG Medicals
 		"Land_vn_tent_mash_01_03",//base med tent
 		"vn_b_wheeled_lr2a_03_nz_army",
@@ -167,8 +170,8 @@ class CfgForceMedicalFacilities //some Medical vehicles/buildings are not recogn
 		{"ACE_fieldDressing",10},
 		{"ACE_splint",10},
 		{"ACE_epinephrine",5},
-		{"ACE_morphine",5},
-		{"vtx_stretcher_item",2}
+		{"ACE_morphine",5}//,
+		//{"vtx_stretcher_item",2} //nope
 	};
 };
 class CfgForceRepairFacilities //some Repair vehicles/buildings are not recognized as Medical facilities

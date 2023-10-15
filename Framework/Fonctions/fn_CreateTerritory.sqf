@@ -14,7 +14,7 @@ private ["_maxTerr","_allowed","_territoryBuiltCount","_targetUID","_targetOwner
 params  [
 	"_caller",
 	"_pos",
-	"_layout" //used for "TheOneMillionDollarsBase"
+	"_layout" //used for "TheOneMillionDollarsBase" //default is now "Territory" 
 ];
 if (true) then {diag_log format ["[WMS_fnc_CreateTerritory]|WAK|TNA|WMS|_This = %1",_this]};
 _targetUID = getPlayerUID _caller;
@@ -48,7 +48,7 @@ if (_layout == "TheOneMillionDollarsBase") then{
 	_territoryLevel = 6;
 	_cleanRad = 80;
 	}else{
-		_layout == "bunkercamp";
+		_layout = "bunkercamp";
 	};
 if !(count _territoriesArray == 0) then {
 	{

@@ -38,7 +38,7 @@ class RscTitles
 class Header
 {
 	gameType 	=  Survive;	// Game type
-	minPlayers 	=  0;	// minimum number of players the mission supports
+	minPlayers 	=  1;	// minimum number of players the mission supports
 	maxPlayers 	= 32;	// maximum number of players the mission supports
 };
 

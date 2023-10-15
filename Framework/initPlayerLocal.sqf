@@ -127,7 +127,7 @@ if (hasinterface) then {
     //////////Mission related//////////
     [] execVM "initPlayerEventHandlers.sqf";
     [] execVM "initTriggerZonesOnMarkers.sqf";
-
+    missionNameSpace setVariable ["WMS_PlayerConnect", serverTime];
 
     /////////// Load Status Bar //////////
     [] execVM "Custom\StatusBar\statusBar_init.sqf"; //Use Exile Threads manager

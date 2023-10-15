@@ -161,6 +161,8 @@ if ((getPlayerUID player) in WMS_customRespawnList) then {
 	[player] remoteExec ["WMS_fnc_deleteRespawnData",2];
 	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 };
+_playerConnect = missionNameSpace getVariable ["WMS_PlayerConnect", time-900]; //registered as serverTime in initPlayerLocal
+_target setVariable ["WMS_PlayerConnect", _playerConnect];
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test
 //_target execVM "InitPlayerSetTrait.sqf";

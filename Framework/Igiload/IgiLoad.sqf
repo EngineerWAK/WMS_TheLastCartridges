@@ -33,7 +33,7 @@ if (isnil "IL_Variables") then
 	//-1 - do nothing
 	//0 - set to 0
 	//1 - keep such as before loading/unloading
-	IL_CDamage = -1;   /// fix for repair car by load/unload
+	IL_CDamage = 1;   /// fix for repair car by load/unload
 	//AddAction menu position
 	IL_Action_LU_Priority = 30; //Load and (para)unload
 	IL_Action_O_Priority = 0;	//Open and close
@@ -58,10 +58,10 @@ if (isnil "IL_Variables") then
 	//Para unload score = 2 * IL_Unload_Score
 	IL_Unload_Score = 10;
 	//The minimum altitude for the drop with parachute
-	IL_Para_Drop_ATL = 50;
-	IL_Para_Jump_ATL = 30;
+	IL_Para_Drop_ATL = 200;
+	IL_Para_Jump_ATL = 250;
 	//The minimum altitude for parachute opening
-	IL_Para_Drop_Open_ATL = 150;
+	IL_Para_Drop_Open_ATL = 90;
 	IL_Para_Jump_Open_ATL = 150;
 	//Parachute get velocity from player or cargo
 	IL_Para_Drop_Velocity = true;
@@ -97,6 +97,8 @@ if (isnil "IL_Variables") then
 	
 	IL_Supported_Vehicles_OFFROAD =  //Can be loaded WITH something else
 	[
+		"I_G_Offroad_01_F",
+		"C_IDAP_Offroad_01_F",
 		"Exile_Car_Offroad_Repair_Civillian",
 		"Exile_Car_Offroad_Repair_Red",
 		"Exile_Car_Offroad_Repair_Beige",
@@ -321,7 +323,7 @@ if (isnil "IL_Variables") then
 		"Exile_Chopper_Hummingbird_Civillian_Wasp",
 		"Exile_Chopper_Hummingbird_Civillian_Wave",
 		"B_Heli_Light_01_F",
-		"B_Heli_Light_01_armed_F",
+		//"B_Heli_Light_01_armed_F",
 		"RHS_MELB_MH6M"
 	];
 
@@ -772,11 +774,11 @@ if (isnil "IL_Variables") then
 		"Land_Pod_Heli_Transport_04_covered_F",
 		"Land_Pod_Heli_Transport_04_fuel_F",
 		"Land_Pod_Heli_Transport_04_medevac_F",
-		"Land_Pod_Heli_Transport_04_repair_F",
-		"B_Slingload_01_Ammo_F",
-		"B_Slingload_01_Medical_F",
-		"B_Slingload_01_Fuel_F",
-		"B_Slingload_01_Repair_F"
+		"Land_Pod_Heli_Transport_04_repair_F"
+		//"B_Slingload_01_Ammo_F",
+		//"B_Slingload_01_Medical_F",
+		//"B_Slingload_01_Fuel_F",
+		//"B_Slingload_01_Repair_F"
 		//"B_Slingload_01_Cargo_F"
 	];
 	//needed for the new Initialization, put all supported Vehicles & all supported Cargo in!!!
@@ -901,6 +903,7 @@ if (isnil "IL_Procedures") then
 		
 		if (_obj_type in IL_Supported_Vehicles_MH9) then
 		{
+			private _newZload = -1.15; //will try to adjust depending the classname [WMS] //old = -0.48
 			if ((isNil {_obj getVariable "box_l"}) || (_force)) then {_obj setVariable["box_l", _obj, true];};
 			if ((isNil {_obj getVariable "box_r"}) || (_force)) then {_obj setVariable["box_r", _obj, true];};
 
@@ -911,7 +914,7 @@ if (isnil "IL_Procedures") then
 			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
 			if ((isNil {_obj getVariable "can_copilot"}) || (_force)) then {_obj setVariable["can_copilot", IL_Can_CoPilot, true];};
 			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
-			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.48, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", _newZload, true];}; //-0.48
 			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 1, true];};
 			if ((isNil {_obj getVariable "usable_ramp"}) || (_force)) then {_obj setVariable["usable_ramp", IL_Ramp, true];};
 		};
@@ -1306,7 +1309,7 @@ if (isnil "IL_Procedures") then
 	};
 
 	
-	IL_Move_Attach=
+	IL_Move_Attach= //[_v, _x, [_x_cargo_offset-3,1.3,-1.3 + _zload], [_x_cargo_offset-1,-0.2,_zload], 1, _turn] call IL_Move_Attach;
 	{
 		private ["_veh", "_obj", "_from", "_to", "_pos", "_step", "_steps", "_from_x", "_from_y", "_from_z", "_to_x", "_to_y", "_to_z", "_x", "_y", "_z", "_i", "_x_step", "_y_step", "_z_step", "_turn"];
 		_veh = _this select 0;
@@ -1426,8 +1429,8 @@ if (isnil "IL_Procedures") then
 		};
 
         _chute = createVehicle ["B_Parachute_02_F", position _cargo, [], 0, "CAN_COLLIDE"];
-        _chute attachTo [_cargo, _cargo_pos];
-        detach _chute;
+       	_chute attachTo [_cargo, _cargo_pos];
+       	detach _chute;
 
         if (IL_Para_Drop_Velocity) then
         {
@@ -1616,14 +1619,14 @@ if (isnil "IL_Procedures") then
 		if ((_obj_type in IL_Supported_Vehicles_MH9) && (_doors == "L")) then
 		{
 			_sdist = IL_SDistL + IL_SDistL_Heli_offset;
-			_spoint = _v modelToWorld [0-3,1.3,-1.3];
+			_spoint = _v modelToWorld [-3,0.8,-1.3]; //[-3,1.3,-1.3] //looking for a crate at this position
 			_box_num = _v getVariable "box_num_l";
 			_slot_num = _v getVariable "slots_num_l";
 		};
 		if ((_obj_type in IL_Supported_Vehicles_MH9) && (_doors == "R")) then
 		{
 			_sdist = IL_SDistL + IL_SDistL_Heli_offset;
-			_spoint = _v modelToWorld [0+3,1.3,-1.3];
+			_spoint = _v modelToWorld [3,0.8,-1.3]; //[3,1.3,-1.3]
 			_box_num = _v getVariable "box_num_r";
 			_slot_num = _v getVariable "slots_num_r";
 		};
@@ -1746,11 +1749,11 @@ if (isnil "IL_Procedures") then
 						};
 						if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "L")) then
 						{
-							[_v, _x, [_x_cargo_offset-3,1.3,-1.3 + _zload], [_x_cargo_offset-1,-0.2,_zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset-3,1.3,-1.3 + _zload], [_x_cargo_offset-1,0.7,_zload], 1, _turn] call IL_Move_Attach; //[_x_cargo_offset-1,-0.2,_zload]
 						};
 						if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "R")) then
 						{
-							[_v, _x, [_x_cargo_offset+3,1.3,-1.3 + _zload], [_x_cargo_offset+1,-0.2,_zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset+3,1.3,-1.3 + _zload], [_x_cargo_offset+1,0.7,_zload], 1, _turn] call IL_Move_Attach; //[_x_cargo_offset+1,-0.2,_zload]
 						};
 
 						_counter = _counter - (_x getVariable "slots");
@@ -2085,7 +2088,7 @@ if (isnil "IL_Procedures") then
 		if ((typeOf _v) in IL_Supported_Vehicles_MH9) then
 		{
 			_dist_out = 5;
-			_dist_out_para = 5;
+			_dist_out_para = 7;//5
 		};
 		if ((typeOf _v) in IL_Supported_Vehicles_MOHAWK) then
 		{
@@ -2729,7 +2732,7 @@ if (_obj_main_type in IL_Supported_Vehicles_MH9) then
 	{
 		[_this select 0, IL_Supported_Cargo_MH9, "L"] call IL_Do_Load;
 	},[],IL_Action_LU_Priority,true,true,"",
-	"(count (nearestObjects[ _target modelToWorld [0-3,1,-1.3], IL_Supported_Cargo_MH9, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || (((_this in (nearestObjects[ _target modelToWorld [0-3,1,-1.3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside')))) && (_target getVariable 'box_num_l' > _target getVariable 'slots_num_l') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt)"
+	"(count (nearestObjects[ _target modelToWorld [-3,1,-1.3], IL_Supported_Cargo_MH9, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || (((_this in (nearestObjects[ _target modelToWorld [0-3,1,-1.3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside')))) && (_target getVariable 'box_num_l' > _target getVariable 'slots_num_l') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt)"
 	];
 
 	_obj_main addAction [
@@ -2737,7 +2740,7 @@ if (_obj_main_type in IL_Supported_Vehicles_MH9) then
 	{
 		[_this select 0, IL_Supported_Cargo_MH9, "R"] call IL_Do_Load;
 	},[],IL_Action_LU_Priority,true,true,"",
-	"(count (nearestObjects[ _target modelToWorld [0+3,1,-1.3], IL_Supported_Cargo_MH9, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || (((_this in (nearestObjects[ _target modelToWorld [0+3,1,-1.3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside')))) && (_target getVariable 'box_num_r' > _target getVariable 'slots_num_r') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt)"
+	"(count (nearestObjects[ _target modelToWorld [3,1,-1.3], IL_Supported_Cargo_MH9, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || (((_this in (nearestObjects[ _target modelToWorld [0+3,1,-1.3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside')))) && (_target getVariable 'box_num_r' > _target getVariable 'slots_num_r') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt)"
 	];
 
 	_obj_main addAction [

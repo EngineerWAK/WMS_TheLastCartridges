@@ -26,20 +26,49 @@ _ammoTypeDefaultAll = [];
 _ammoTypeDefault = "";
 _ammoTypeRandom = "";
 _40mmHEList = ["1Rnd_HE_Grenade_shell","rhs_mag_M441_HE", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET","rhsusf_mag_6Rnd_M441_HE", "rhsusf_mag_6Rnd_M433_HEDP", "rhsusf_mag_6Rnd_M397_HET","CBA_40mm_M203", "CBA_40mm_EGLM"];
+
+_targetUID = getPlayerUID _playerObject;
+_defaultAmmo = profileNameSpace GetVariable [_targetUID+"_defaultAmmo", []];
+_weapPlayer = primaryweapon _playerObject;
+
+_result = [];
+_defaultRegist = "";
+{  
+	_found = _x find _weapPlayer; 
+	_result pushback _found; 
+}forEach _defaultAmmo;
+_result = _result find 0;
+if (_result != -1) then {
+	_defaultRegist = ((_defaultAmmo select _result) select 1);
+};
 //_ammoTypeDefault = _ammoArray select 0; //That's definitly NOT the default ammo
 switch (tolower _option) do {
     case "default":	{
 		_ammoTypeDefaultAll = (getArray (configfile >> "CfgWeapons" >> (primaryWeapon _playerObject) >> "magazines"));
 		if (count _ammoTypeDefaultAll != 0) then {
 			_ammoTypeDefault = _ammoTypeDefaultAll select 0;
-			if ("hlc_" in (primaryweapon _playerObject) && !("hlc_" in _ammoTypeDefault)) then {_ammoTypeDefault = format["HLC_%1",_ammoTypeDefault]}; //FUCKYOU with your broken config NIA
+			
+			if (_defaultRegist != "") then {_ammoTypeDefault = _defaultRegist;};
+			
+			if ("hlc_" in (primaryweapon _playerObject) && {!("hlc_" in _ammoTypeDefault)} && {(_defaultRegist == "")}) then {_ammoTypeDefault = format["HLC_%1",_ammoTypeDefault]}; //FUCKYOU with your broken config NIA
 			_ammoCount = getNumber (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "count"); //ammo count in the mag
 			_ammoType = getText (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "ammo"); //will be used to defind the "caliber" and "extract a price per bullet
 			_ammoCaliber = getNumber (configfile >> "CfgAmmo" >> _ammoType >> "caliber"); //not the "real" Caliber but seems to follow some logic
 			_ammoArray = ["ammoClassName"];
 		}else{
-			hint format ["%1 Doesn't have Default ammo because NIA config is crap, buy RANDOM",(primaryWeapon _playerObject)];
+			if (_defaultRegist != "") then {
+				_ammoTypeDefault = _defaultRegist;
+				if ("hlc_" in (primaryweapon _playerObject) && {!("hlc_" in _ammoTypeDefault)} && {(_defaultRegist == "")}) then {_ammoTypeDefault = format["HLC_%1",_ammoTypeDefault]}; //FUCKYOU with your broken config NIA
+				_ammoCount = getNumber (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "count"); //ammo count in the mag
+				_ammoType = getText (configfile >> "CfgMagazines" >> _ammoTypeDefault >> "ammo"); //will be used to defind the "caliber" and "extract a price per bullet
+				_ammoCaliber = getNumber (configfile >> "CfgAmmo" >> _ammoType >> "caliber"); //not the "real" Caliber but seems to follow some logic
+				_ammoArray = ["ammoClassName"];
+			}else {
+				hint format ["%1 Doesn't have Default ammo because NIA config is crap, buy RANDOM",(primaryWeapon _playerObject)];
+			};
+			
 		};
+
 	};
      case "random":		{
 		_ammoArray = [primaryWeapon _playerObject] call CBA_fnc_compatibleMagazines; //CBA

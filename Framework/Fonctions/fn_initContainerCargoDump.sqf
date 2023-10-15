@@ -23,7 +23,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [
 	_container, [ //"Special Item" is the MAR-10 DMR, because even in arma there is pay to win... and this will create a BIIIIIIG log server side
 		"<t size='1' color='#4bff1a'>Initiate Banana Protocol</t>", 
-		"
+		{
 			params ['_target', '_caller', '_actionId', '_arguments'];
 			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
 				if ((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) then {
@@ -43,7 +43,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 				};
 			};
 			(_this select 0) removeaction (_this select 2);
-		", 
+		}, 
 		nil,
 		1, 
 		true, 
@@ -66,7 +66,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [
 	_container, [ //"Special Item" is the MAR-10 DMR, because even in arma there is pay to win... and this will create a BIIIIIIG log server side
 		"<t size='1' color='#4bff1a'>Claim Special Item</t>", 
-		"
+		{
 			params ['_target', '_caller', '_actionId', '_arguments'];
 			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
 				if (((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) || ((getPlayerUID _caller) in (_target getVariable ['WMS_BaseFriends', '']))) then {
@@ -88,7 +88,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 				};
 			};
 			(_this select 0) removeaction (_this select 2);
-		", 
+		}, 
 		nil,
 		1, 
 		true, 
@@ -119,7 +119,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [
 	_container, [
 		"<t size='1' color='#4bff1a'>Claim Reward</t>", 
-		"
+		{
 			params ['_target', '_caller', '_actionId', '_arguments'];
 			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
 				if ((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) then {
@@ -133,7 +133,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 				[(_this select 1), (_this select 0)] remoteExec ['WMS_fnc_claimReward',2];
 				{_caller removeitem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05'];
 			};
-		", 
+		}, 
 		nil, 
 		1, 
 		true, 
@@ -162,7 +162,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 				//'Cargo Dump Container is empty, you punk' remoteExec ['hint', _own]; //because you are a moron, moron
 	_container, [
 		"<t size='1' color='#3d74ff'>Sell Inventory</t>", 
-		" 
+		{ 
 			params ['_target', '_caller', '_actionId', '_arguments'];
 			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
 				if (((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) || ((getPlayerUID _caller) in (_target getVariable ['WMS_BaseFriends', '']))) then {
@@ -181,7 +181,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 					hint 'Cargo Dump Container is empty, you punk';
 				}; 
 			};
-		", 
+		}, 
 		nil, 
 		1, 
 		true, 
@@ -198,10 +198,35 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 ];
 [
 	_container, [
-		"<t size='0.9' color='#26e600'>Buy Default Ammo Primary Weap </t>",
-		"   
+		"<t size='1' color='#00d150'>Set Primary Default ammo</t>",
+		{  
+			//[(_this select 1), (_this select 0), 'default'] call WMS_fnc_buyAmmoOnBox;
+			[(_this select 1), (primaryWeapon (_this select 1)), ((magazineCargo (_this select 0)) select 0)]call WMS_fnc_setDefaultAmmo;  
+		}, 
+		nil, 
+		1, 
+		true, 
+		true, 
+		"", 
+		"
+		((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false]))&&
+		{(count magazineCargo _target == 1)} &&
+		{(primaryWeapon _this != '')}
+		",  
+ 		5, 
+		false 
+	]
+]remoteExec [
+	"addAction",
+	0, //0 for all players //2 server only //-2 everyone but the server
+	true //JIP
+];
+[
+	_container, [
+		"<t size='1' color='#26e600'>Buy Default Ammo Primary Weap</t>",
+		{  
 			[(_this select 1), (_this select 0), 'default'] call WMS_fnc_buyAmmoOnBox;  
-		", 
+		}, 
 		nil, 
 		1, 
 		true, 
@@ -218,10 +243,10 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 ];
 [
 	_container, [
-		"<t size='0.9' color='#26e600'>Buy Random Ammo Primary Weap </t>",
-		"   
+		"<t size='1' color='#26e600'>Buy Random Ammo Primary Weap </t>",
+		{  
 			[(_this select 1), (_this select 0), 'random'] call WMS_fnc_buyAmmoOnBox;  
-		", 
+		}, 
 		nil, 
 		1, 
 		true, 
@@ -239,10 +264,10 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 
 [
 	_container, [
-		"<t size='0.9' color='#26e600'>Buy Pistol Ammo</t>",
-		"   
+		"<t size='1' color='#26e600'>Buy Pistol Ammo</t>",
+		{   
 			[(_this select 1), (_this select 0), 'randompistol'] call WMS_fnc_buyAmmoOnBox;  
-		", 
+		}, 
 		nil, 
 		1, 
 		true, 
@@ -261,8 +286,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_container,
 	[
-		"<t size='0.9' color='#528ffa'>Buy MoneyRoll 301</t>",
-		"
+		"<t size='1' color='#528ffa'>Buy MoneyRoll 301</t>",
+		{
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
 					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
@@ -275,7 +300,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			} else {
 				hint 'You are too poor Dude';
 			};
-		",
+		},
 		["Money_roll",301,0], //argument accessible in the script (_this select 3)
 		1,
 		true,
@@ -293,8 +318,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_container,
 	[
-		"<t size='0.9' color='#528ffa'>Buy MoneyStack 1202</t>",
-		"
+		"<t size='1' color='#528ffa'>Buy MoneyStack 1202</t>",
+		{
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
 					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
@@ -307,7 +332,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			} else {
 				hint 'You are too poor Dude';
 			};
-		",
+		},
 		["Money_stack",1202,0], //argument accessible in the script (_this select 3)
 		1,
 		true,
@@ -325,8 +350,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_container,
 	[
-		"<t size='0.9' color='#528ffa'>Buy MoneyStack 2403</t>",
-		"
+		"<t size='1' color='#528ffa'>Buy MoneyStack 2403</t>",
+		{
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
 					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
@@ -339,7 +364,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			} else {
 				hint 'You are too poor Dude';
 			};
-		",
+		},
 		["Money_stack_quest",2403,0], //argument accessible in the script (_this select 3)
 		1,
 		true,
@@ -357,8 +382,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_container,
 	[
-		"<t size='0.9' color='#528ffa'>Buy BigMoney 16005</t>",
-		"
+		"<t size='1' color='#528ffa'>Buy BigMoney 16005</t>",
+		{
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
 					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
@@ -371,7 +396,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			} else {
 				hint 'You are too poor Dude';
 			};
-		",
+		},
 		["Money",16005,0], //argument accessible in the script (_this select 3)
 		1,
 		true,
@@ -391,8 +416,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_container,
 	[
-		"<t size='0.9' color='#1fd507'>Buy *10 40mm 750$ </t>",
-		"
+		"<t size='1' color='#1fd507'>Buy *10 40mm 750$ </t>",
+		{
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
 					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
@@ -405,7 +430,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			} else {
 				hint 'You are too poor Dude';
 			};
-		",
+		},
 		[["rhs_mag_M441_HE", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET", "1Rnd_HE_Grenade_shell"],750,2500], //argument accessible in the script (_this select 3)
 		1,
 		true,
@@ -426,8 +451,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_container,
 	[
-		"<t size='0.9' color='#1fd507'>Buy *10 VOG25 750$ </t>",
-		"
+		"<t size='1' color='#1fd507'>Buy *10 VOG25 750$ </t>",
+		{
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
 					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
@@ -440,7 +465,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			} else {
 				hint 'You are too poor Dude';
 			};
-		",
+		},
 		[["rhs_VOG25", "rhs_VOG25p", "rhs_vg40tb"],750,2500], //argument accessible in the script (_this select 3)
 		1,
 		true,
@@ -462,8 +487,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 [ //params ["_target", "_caller", "_actionId", "_arguments"];
 	_container,
 	[
-		"<t size='0.9' color='#1fd507'>Buy *3 10Rnd 50BW 150$ </t>",
-		"
+		"<t size='1' color='#1fd507'>Buy *3 10Rnd 50BW 150$ </t>",
+		{
 			if ((_this select 1) getVariable ['ExileMoney', 0] >= (_this select 3) select 1) then {
 				if ((_this select 1) getVariable ['ExileScore', 0] >= (_this select 3) select 2) then {
 					[(_this select 1),(_this select 3) select 1] remoteExec ['WMS_fnc_smallTransactions',2];
@@ -476,7 +501,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			} else {
 				hint 'You are too poor Dude';
 			};
-		",
+		},
 		[["10Rnd_50BW_Mag_F"],150,2500], //argument accessible in the script (_this select 3)
 		1,
 		true,

@@ -60,33 +60,33 @@
     class Money						    { quality = 1; price = 16000; }; //8000 //craft only Money_stack_quest x7
 
 		//SOG Drinks (some...)
-	class vn_prop_drink_01                { quality = 0; price = 36; };
-	class vn_prop_drink_02                { quality = 0; price = 36; };
-	class vn_prop_drink_03                { quality = 0; price = 36; };
-    class vn_prop_drink_04                { quality = 0; price = 36; };
-    class vn_prop_drink_05                { quality = 0; price = 36; };
-    class vn_prop_drink_06                { quality = 0; price = 36; };
-    class vn_prop_drink_10                { quality = 0; price = 36; };
-    class vn_prop_drink_08_01             { quality = 0; price = 36; };
-    class vn_prop_drink_07_01             { quality = 0; price = 36; };
-    class vn_prop_drink_07_02             { quality = 0; price = 36; };
-    class vn_prop_drink_07_03             { quality = 0; price = 36; };
-    class vn_prop_drink_09_01             { quality = 0; price = 36; };
+	class vn_prop_drink_01                { quality = 0; price = 126; };
+	class vn_prop_drink_02                { quality = 0; price = 126; };
+	class vn_prop_drink_03                { quality = 0; price = 126; };
+    class vn_prop_drink_04                { quality = 0; price = 126; };
+    class vn_prop_drink_05                { quality = 0; price = 126; };
+    class vn_prop_drink_06                { quality = 0; price = 126; };
+    class vn_prop_drink_10                { quality = 0; price = 126; };
+    class vn_prop_drink_08_01             { quality = 0; price = 126; };
+    class vn_prop_drink_07_01             { quality = 0; price = 126; };
+    class vn_prop_drink_07_02             { quality = 0; price = 126; };
+    class vn_prop_drink_07_03             { quality = 0; price = 126; };
+    class vn_prop_drink_09_01             { quality = 0; price = 126; };
 
 		//SOG Food (some...)
-    class vn_prop_food_pir_01_01          { quality = 0; price = 36; };
-    class vn_prop_food_pir_01_02          { quality = 0; price = 36; };
-    class vn_prop_food_pir_01_03          { quality = 0; price = 36; };
-    class vn_prop_food_pir_01_04          { quality = 0; price = 36; };
-    class vn_prop_food_pir_01_05          { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_01         { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_02         { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_03         { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_04         { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_05         { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_06         { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_07         { quality = 0; price = 36; };
-    class vn_prop_food_lrrp_01_08         { quality = 0; price = 36; };
+    class vn_prop_food_pir_01_01          { quality = 0; price = 126; };
+    class vn_prop_food_pir_01_02          { quality = 0; price = 126; };
+    class vn_prop_food_pir_01_03          { quality = 0; price = 126; };
+    class vn_prop_food_pir_01_04          { quality = 0; price = 126; };
+    class vn_prop_food_pir_01_05          { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_01         { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_02         { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_03         { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_04         { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_05         { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_06         { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_07         { quality = 0; price = 126; };
+    class vn_prop_food_lrrp_01_08         { quality = 0; price = 126; };
         /////
     class ACE_Can_Franta                { quality = 0; price = 25; };
     class ACE_Can_RedGull               { quality = 0; price = 25; };

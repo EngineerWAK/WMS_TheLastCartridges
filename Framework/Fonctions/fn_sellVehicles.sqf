@@ -57,13 +57,22 @@ _isRoaming 		= _cargo getVariable ["roamingAIVehicle", false];
 
 if (_isPermanent) then {
 	//Vehicles destroyed/sold, removing from player array
-	_vehicleID = _cargo getVariable ["WMS_vehicleid", -1];
-	_ownerUID = _cargo getVariable ["WMS_buyerowner", -1];
-	_permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
-	_playerArrayNumber = _ownerUID call WMS_fnc_findUIDinVhlArray; //fiind the owner Array in the _permanentVhlArray
-	_vehicleArrayNumber = [_playerArrayNumber,_vehicleID]  call WMS_fnc_findVhlIDinVhlArray; //return -1 if fuckedup
-	_vehicleArray = ((_permanentVhlArray select _playerArrayNumber) select _vehicleArrayNumber);
-	(_permanentVhlArray select _playerArrayNumber) deleteAt _vehicleArrayNumber;
+	_vehicleID = _cargo getVariable ["WMS_vehicleid", -1]; //OK
+	_ownerUID = _cargo getVariable ["WMS_buyerowner", -1]; //OK
+	_permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];  //OK but not the same = [playerUID, [vhlHexaID,vhlHexaID,vhlHexaID]];
+	//_playerVHLarray = profileNameSpace getVariable [_targetUID+"_VHLs", [_targetUID,[]]]; //NEW, replace _permanentVhlArray+_playerArrayNumber for the vehicle datas
+	_playerVHLarray = profileNameSpace getVariable [_targetUID+"_VHLs", [_targetUID]]; //NEW, replace _permanentVhlArray+_playerArrayNumber for the vehicle datas
+	_playerArrayNumber = _ownerUID call WMS_fnc_findUIDinVhlArray; //find the owner Array in the _permanentVhlArray //OK but not the one with all the data from the vehicle
+	((_permanentVhlArray select _playerArrayNumber) select 1) deleteAt (((_permanentVhlArray select _playerArrayNumber) select 1) find _vehicleID);//NEW this take care only of the _vehicleID
+	_vehicleArrayNumber = [_targetUID,_vehicleID] call WMS_fnc_findVhlIDinVhlArray; //return -1 if fuckedup //OK
+
+	if (_vehicleArrayNumber != -1)then{
+		_playerVHLarray deleteAt _vehicleArrayNumber;
+	}else {
+		diag_log format["[WMS_fnc_SellVehicles]|WAK|TNA|WMS|SOMETHING IS REALLY BROKEN WITH THIS PERMENENT VEHICLE _this = %1",_this];
+	};
+	profileNameSpace setVariable ["WMS_permanentVhlArray", _permanentVhlArray];	//WHY IT WASN'T THERE BEFORE???
+	profileNameSpace setVariable [_targetUID+"_VHLs", _playerVHLarray];	//WHY IT WASN'T THERE BEFORE???
 	_totalScoreDump = 0;
 };
 if (_isRoaming) then {

@@ -164,7 +164,7 @@
 	//class UK3CB_BAF_Merlin_HC3_Cargo  		{ quality = 1; price = 1000; };
 	//class UK3CB_BAF_Merlin_HM2_18  			{ quality = 1; price = 1000; };
 	//class RHS_Mi8mt_Cargo_vvs  				{ quality = 1; price = 1000; };
-	class B_Heli_Light_01_F  					{ quality = 1; price = 10000; };
+	class B_Heli_Light_01_F  					{ quality = 1; price = 14880; }; //igiload 2 crates, probably
 	class I_Heli_Transport_02_F  				{ quality = 1; price = 10000; };
 	class I_C_Heli_Light_01_civil_F  			{ quality = 1; price = 10000; };
 	class I_E_Heli_light_03_unarmed_F  			{ quality = 1; price = 10000; };
@@ -208,11 +208,25 @@
 ////////////////////
 ////////////////////
 //Ground unarmed
+			//SPE... price ref = 7
+	class SPE_FFI_OpelBlitz_Ambulance 			{ quality = 2; price = 16117; };
+	class SPE_FR_M3_Halftrack_Ambulance 		{ quality = 3; price = 22117; };
+
+	class SPE_FFI_OpelBlitz 					{ quality = 3; price = 16007; };
+	class SPE_FFI_OpelBlitz_Ammo 				{ quality = 5; price = 25007; };
+	class SPE_FFI_OpelBlitz_Fuel 				{ quality = 5; price = 25007; };
+	class SPE_FFI_OpelBlitz_Open 				{ quality = 3; price = 16007; };
+	class SPE_FFI_OpelBlitz_Repair 				{ quality = 6; price = 85007; };
+	class SPE_FR_M3_Halftrack_Ammo 				{ quality = 5; price = 28007; };
+	class SPE_FR_M3_Halftrack_Fuel 				{ quality = 5; price = 28007; };
+	class SPE_FR_M3_Halftrack_Repair 			{ quality = 6; price = 88007; };
+	class SPE_FR_M3_Halftrack_Unarmed 			{ quality = 4; price = 16007; };
+	class SPE_FR_M3_Halftrack_Unarmed_Open		{ quality = 4; price = 16007; };
 			//SOG Medicals
-	class vn_b_wheeled_lr2a_03_nz_army 		{ quality = 2; price = 16116; };
-	class vn_i_wheeled_btr40_02_fank_70 	{ quality = 2; price = 16116; };
-	class vn_b_armor_m577_02 				{ quality = 2; price = 18116; }; //m113 medic
-	class vn_o_armor_btr50pk_03_nva65 		{ quality = 2; price = 26116; };
+	class vn_b_wheeled_lr2a_03_nz_army 			{ quality = 2; price = 16117; };
+	class vn_i_wheeled_btr40_02_fank_70 		{ quality = 2; price = 16117; };
+	class vn_b_armor_m577_02 					{ quality = 2; price = 18117; }; //m113 medic
+	class vn_o_armor_btr50pk_03_nva65 			{ quality = 2; price = 26117; };
 			//////
 			//SOG Unarmed
 	class vn_o_bicycle_01_pl 					{ quality = 1; price = 1206; };
@@ -252,19 +266,20 @@
 
 		class C_Quadbike_01_F 						{ quality = 0; price = 2500; }; //can not load //is forced at vehicle trader, probably from config or in initTraderActions
 		class B_Quadbike_01_F 						{ quality = 1; price = 1500; };
-		class rhsgref_tla_g_kraz255b1_cargo_open 	{ quality = 1; price = 9500; };
-		class rhs_kamaz5350_flatbed_cover_vdv 		{ quality = 2; price = 15000; };
-		class RHS_Ural_Flat_VDV_01 					{ quality = 1; price = 15000; };
-		class rhs_gaz66_flat_vdv 					{ quality = 0; price = 15000; };
+		class rhsgref_tla_g_kraz255b1_cargo_open 	{ quality = 1; price = 9504; };
+		class rhs_kamaz5350_flatbed_cover_vdv 		{ quality = 2; price = 15004; };
+		class RHS_Ural_Flat_VDV_01 					{ quality = 1; price = 15004; };
+		class rhs_gaz66_flat_vdv 					{ quality = 0; price = 15004; };
 		class O_T_Truck_03_ammo_ghex_F 				{ quality = 3; price = 40000; }; //ammo
-		class rhs_kamaz5350_ammo_vdv 				{ quality = 3; price = 40000; }; //ammo
-		class rhsusf_mrzr4_w_mud 					{ quality = 2; price = 18000; }; //can be loaded 20 slots, can load 10 slots
-		class rhsgref_un_uaz 						{ quality = 0; price = 5000; };
+		class rhs_kamaz5350_ammo_vdv 				{ quality = 3; price = 40004; }; //ammo
+		class rhsusf_mrzr4_w_mud 					{ quality = 2; price = 18994; }; //can be loaded 20 slots, can load 10 slots
+		class rhsusf_mrzr4_w 						{ quality = 2; price = 18994; }; //can be loaded 20 slots, can load 10 slots
+		class rhsgref_un_uaz 						{ quality = 0; price = 5004; };
 		class I_G_Offroad_01_F 						{ quality = 0; price = 16000; };
 		class UK3CB_BAF_LandRover_Soft_Green_A 		{ quality = 1; price = 11500; };
-		class rhsusf_m1025_w 						{ quality = 1; price = 14500; };
-		class rhsusf_m998_w_4dr 					{ quality = 1; price = 14500; };
-		class rhsusf_m998_w_2dr_halftop 			{ quality = 1; price = 15088; };
+		class rhsusf_m1025_w 						{ quality = 1; price = 14504; };
+		class rhsusf_m998_w_4dr 					{ quality = 1; price = 14504; };
+		class rhsusf_m998_w_2dr_halftop 			{ quality = 1; price = 15884; };
 		class I_C_Offroad_02_unarmed_F 				{ quality = 1; price = 16000; };
 
 		class B_T_LSV_01_unarmed_F 					{ quality = 1; price = 20000; };
@@ -273,37 +288,37 @@
 		class O_LSV_02_unarmed_black_F 				{ quality = 2; price = 29941; }; //transportable cargo chopper 41 slots
 		class R3F_FENNEC_CE 						{ quality = 3; price = 25001; };
 		class R3F_MATV_CE 							{ quality = 3; price = 25001; };
-		class rhsusf_m1151_usarmy_wd 				{ quality = 3; price = 25000; };
-		class rhsusf_m1152_usarmy_wd 				{ quality = 3; price = 25088; }; //armored humvee 2dr
+		class rhsusf_m1151_usarmy_wd 				{ quality = 3; price = 25004; };
+		class rhsusf_m1152_usarmy_wd 				{ quality = 3; price = 25884; }; //armored humvee 2dr
 		class O_MRAP_02_F 							{ quality = 3; price = 25000; };
-		class rhs_tigr_vdv 							{ quality = 1; price = 16000; };
-		class rhs_tigr_m_vdv 						{ quality = 1; price = 18000; };
+		class rhs_tigr_vdv 							{ quality = 1; price = 16004; };
+		class rhs_tigr_m_vdv 						{ quality = 1; price = 18004; };
 
-		class rhsgref_un_zil131 					{ quality = 0; price = 9500; };
-		class rhsusf_M1078A1P2_WD_fmtv_usarmy 		{ quality = 2; price = 16500; };
-		class rhsusf_M1083A1P2_WD_fmtv_usarmy 		{ quality = 2; price = 17500; };
+		class rhsgref_un_zil131 					{ quality = 0; price = 9504; };
+		class rhsusf_M1078A1P2_WD_fmtv_usarmy 		{ quality = 2; price = 16884; };
+		class rhsusf_M1083A1P2_WD_fmtv_usarmy 		{ quality = 2; price = 17884; };
 		
-		class rhsusf_M1078A1P2_WD_open_fmtv_usarmy 	{ quality = 2; price = 16588; };//igiload
-		class rhsusf_M1083A1P2_WD_open_fmtv_usarmy 	{ quality = 2; price = 17588; };//igiload
-		class rhsusf_M1084A1P2_WD_fmtv_usarmy 		{ quality = 2; price = 20588; };//igiload
-		class rhsusf_M1084A1P2_B_WD_fmtv_usarmy 	{ quality = 2; price = 22088; };
+		class rhsusf_M1078A1P2_WD_open_fmtv_usarmy 	{ quality = 2; price = 16884; };//igiload
+		class rhsusf_M1083A1P2_WD_open_fmtv_usarmy 	{ quality = 2; price = 17884; };//igiload
+		class rhsusf_M1084A1P2_WD_fmtv_usarmy 		{ quality = 2; price = 20884; };//igiload
+		class rhsusf_M1084A1P2_B_WD_fmtv_usarmy 	{ quality = 2; price = 22884; };
 		class I_G_Van_01_transport_F 				{ quality = 0; price = 17000; };
 		class B_Truck_01_mover_F 					{ quality = 1; price = 18000; }; //HEMMET
 		class B_Truck_01_cargo_F 					{ quality = 1; price = 18000; }; //HEMMET
 		class B_Truck_01_transport_F 				{ quality = 1; price = 18088; }; //HEMMET
 		class UK3CB_BAF_MAN_HX60_Cargo_Green_A 		{ quality = 1; price = 18000; };
 		class I_E_Truck_02_transport_F 				{ quality = 1; price = 18000; }; //zamak
-		class rhsgref_nat_ural 						{ quality = 1; price = 15500; };
-		class rhsgref_nat_ural_open 				{ quality = 1; price = 15500; };
+		class rhsgref_nat_ural 						{ quality = 1; price = 15504; };
+		class rhsgref_nat_ural_open 				{ quality = 1; price = 15504; };
 		class O_Truck_03_transport_F 				{ quality = 1; price = 18088; }; //tempest
 		class O_G_Van_01_transport_F 				{ quality = 1; price = 17088; };
 		class C_Van_01_box_F						{ quality = 1; price = 18088; };
-		class rhsgref_BRDM2UM_vdv 					{ quality = 1; price = 25000; };
-		class rhsusf_M1232_usarmy_wd 				{ quality = 2; price = 40000; };
-		class rhsusf_M1238A1_socom_wd 				{ quality = 2; price = 34000; };
-		class rhsusf_M1239_socom_wd 				{ quality = 2; price = 39000; };
-		class rhsusf_m113_usarmy_unarmed 			{ quality = 3; price = 22000; };
-		class rhsusf_m113_usarmy_medical 			{ quality = 3; price = 25000; };
+		class rhsgref_BRDM2UM_vdv 					{ quality = 1; price = 25004; };
+		class rhsusf_M1232_usarmy_wd 				{ quality = 2; price = 40004; };
+		class rhsusf_M1238A1_socom_wd 				{ quality = 2; price = 34004; };
+		class rhsusf_M1239_socom_wd 				{ quality = 2; price = 39004; };
+		class rhsusf_m113_usarmy_unarmed 			{ quality = 3; price = 22004; };
+		class rhsusf_m113_usarmy_medical 			{ quality = 3; price = 25004; };
 		
 		class R3F_KAMAZ_CE_trans 					{ quality = 2; price = 21881; }; //zamak
 		class R3F_KAMAZ_CE_VPC 						{ quality = 2; price = 21001; }; //zamak
@@ -320,11 +335,26 @@
 		class gm_ge_civ_u1300l						{ quality = 1; price = 27002; }; //10000 cargo ! + arma/ace cargo load
 		class gm_ge_army_u1300l_firefighter			{ quality = 2; price = 16002; };
 		class gm_ge_army_u1300l_medic				{ quality = 2; price = 16002; };
-		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 9502; };
+		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 29412; }; //20k cargo
 		class gm_gc_ff_p601							{ quality = 1; price = 11112; }; //zastava kind of car forced medical
 		class gm_ge_ff_typ1200						{ quality = 2; price = 11112; }; //cox forced medical
 
 //Ground Armed
+		//SPE...
+		class SPE_FFI_SdKfz250_1   					{ quality = 2; price = 21007; }; //MG42, small
+		class SPE_FR_M16_Halftrack   				{ quality = 4; price = 42007; }; //AA .50 x4
+		class SPE_FR_M3_Halftrack   				{ quality = 3; price = 37007; }; //M2
+		//SPE Tanks...
+		class SPE_ST_PzKpfwIII_J					{ quality = 4; price = 105006; }; //tank
+		class SPE_ST_PzKpfwIV_G						{ quality = 5; price = 105006; }; //tank
+		class SPE_FR_M10							{ quality = 5; price = 115006; }; //tank
+		class SPE_FR_M4A0_75_Early					{ quality = 5; price = 115006; }; //tank
+		class SPE_FR_M4A0_75_mid					{ quality = 5; price = 115006; }; //tank
+		class SPE_FR_M4A1_76						{ quality = 5; price = 115006; }; //tank
+		class SPE_FR_M4A1_75						{ quality = 5; price = 115006; }; //tank
+		class SPE_M18_Hellcat						{ quality = 5; price = 125006; }; //tank
+		class SPE_M4A1_T34_Calliope_Direct			{ quality = 6; price = 125006; }; //tank
+		class SPE_M4A1_T34_Calliope					{ quality = 6; price = 155006; }; //tank
 			//SOG Armed
 		class vn_o_car_04_mg_01_kr  				{ quality = 2; price = 17006; }; //little truck LMG
 		class vn_b_wheeled_m274_mg_03_01  			{ quality = 3; price = 20006; }; //mulle M134
@@ -362,6 +392,19 @@
 		class vn_b_armor_m48_01_01 					{ quality = 5; price = 115006; }; //tank
 		class vn_o_armor_ot54_01_nva65 				{ quality = 5; price = 115006; }; //tank flamethrower
 		class vn_o_armor_t54b_01_nva65 				{ quality = 5; price = 115006; }; //tank
+			//SPE Statics
+		class SPE_FR_57mm_M1 						{ quality = 5; price = 75007; };
+		class SPE_FR_M45_Quadmount 					{ quality = 4; price = 55007; }; //x4 M2 AA gun//AA
+		class SPE_ST_leFH18 						{ quality = 6; price = 140007; };//105mm
+		class SPE_ST_leFH18_AT 						{ quality = 6; price = 75007; };//105mm
+		class SPE_ST_FlaK_36						{ quality = 5; price = 105007; };
+		class SPE_ST_FlaK_36_AA						{ quality = 5; price = 105007; };
+		class SPE_ST_FlaK_38						{ quality = 5; price = 50007; };
+		//class SPE_ST_MG34_Lafette_Deployed
+		//class SPE_ST_MG42_Lafette_Deployed
+		class SPE_ST_Pak40 							{ quality = 5; price = 75007; };
+		//class SPE_ST_GrW278_1 //mortar
+		//class SPE_MLE_27_31 //mortar
 			//SOG STATICS
 		class vn_b_nz_army_static_m101_02 			{ quality = 5; price = 140006; }; //howitzer 105mm
 		class vn_o_nva_65_static_h12 				{ quality = 6; price = 130006; }; //x12 rocket launcher
@@ -538,7 +581,7 @@
 	class UK3CB_BAF_Merlin_HM2_18  				{ quality = 2; price = 25000; };
 	class RHS_UH60M2  							{ quality = 2; price = 18114; };
 	class RHS_UH60M_MEV2  						{ quality = 2; price = 18114; };
-	class RHS_MELB_MH6M  						{ quality = 1; price = 10004; };
+	class RHS_MELB_MH6M  						{ quality = 3; price = 15884; }; //igiload 2 crates
 	class RHS_UH1Y_UNARMED 						{ quality = 2; price = 10004; };
 	class B_Heli_Transport_03_unarmed_F  		{ quality = 2; price = 20000; };
 	class I_Heli_light_03_unarmed_F  			{ quality = 1; price = 10000; };
@@ -581,6 +624,9 @@
 	class B_T_VTOL_01_armed_F  					{ quality = 6; price = 500000; };
 
 //Air Armed
+	//SPE Planes, sooooo many
+	class SPE_P47  								{ quality = 3; price = 50777; };
+	class SPE_FW190F8  							{ quality = 3; price = 50777; };
 	//SOG Armed Choppers
 	class vn_b_air_ch47_01_01   				{ quality = 3; price = 36666; }; //slingload I guess
 	class vn_i_air_ch47_01_01   				{ quality = 2; price = 46666; }; //slingload I guess
@@ -713,6 +759,7 @@
 	class vn_o_boat_03_02  				{ quality = 5; price = 19006; }; //big
 	class vn_o_boat_04_02  				{ quality = 5; price = 19006; }; //big
 	/////
+	class B_SDV_01_F  					{ quality = 2; price = 5088; };
 	class rhs_pontoon_float  			{ quality = 1; price = 999; };//TEST!!!!!!! this is not a vehicle
 
 	class rhsgref_hidf_canoe  			{ quality = 1; price = 2504; };
