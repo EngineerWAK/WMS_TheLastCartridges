@@ -119,14 +119,12 @@ addons[]=
 	"A3_Weapons_F_Enoch_Rifles_AK12",
 	"rhsusf_c_weapons",
 	"rhsgref_c_weapons",
-	"ace_compat_rhs_usf3",
 	"rhsusf_c_troops",
 	"AOR2_Config",
 	"hlcweapons_aks",
 	"hlcweapons_XM8",
 	"hlcweapons_core",
 	"rhs_c_weapons",
-	"ace_compat_rhs_afrf3",
 	"Scorpion_Config",
 	"A3_Weapons_F_Rifles_SDAR",
 	"A3_Structures_F_Exp_Walls_Pipe",
@@ -166,7 +164,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=70;
+		items=68;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -505,8 +503,8 @@ class AddonsMetaData
 		};
 		class Item48
 		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USF Compatibility";
+			className="ace_concertina_wire";
+			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
@@ -549,10 +547,10 @@ class AddonsMetaData
 		};
 		class Item55
 		{
-			className="ace_compat_rhs_afrf3";
-			name="ACE3 - RHS AFRF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Boat_F_Jets";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item56
 		{
@@ -635,20 +633,6 @@ class AddonsMetaData
 			name="ACE3 - Sitting";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
-		};
-		class Item68
-		{
-			className="ace_concertina_wire";
-			name="ACE3 - Concertina Wire";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item69
-		{
-			className="A3_Boat_F_Jets";
-			name="Arma 3 Jets - Boats and Submersibles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
 		};
 	};
 };

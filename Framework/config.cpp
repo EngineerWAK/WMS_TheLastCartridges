@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.809_2023OCT15_GitHub"; //GM_SPE_SOG vehicles
+	name = "v1.811_2023OCT17_GitHub"; //Removing all ACE Compat //GM_SPE_SOG vehicles //SPE_Normandy update
 };
 
 class Extended_PreInit_EventHandlers {

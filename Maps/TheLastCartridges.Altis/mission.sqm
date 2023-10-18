@@ -165,11 +165,9 @@ addons[]=
 	"A3_Weapons_F_Enoch_Rifles_AK12",
 	"rhsusf_c_weapons",
 	"rhsgref_c_weapons",
-	"ace_compat_rhs_usf3",
 	"rhsusf_c_troops",
 	"AOR2_Config",
 	"rhs_c_weapons",
-	"ace_compat_rhs_afrf3",
 	"Scorpion_Config",
 	"A3_Weapons_F_Mod_SMGs_SMG_03",
 	"A3_Weapons_F_Mod",
@@ -209,7 +207,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=75;
+		items=73;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -646,10 +644,10 @@ class AddonsMetaData
 		};
 		class Item62
 		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Boat_F_EPC";
+			name="Arma 3 Win Episode - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item63
 		{
@@ -672,10 +670,10 @@ class AddonsMetaData
 		};
 		class Item66
 		{
-			className="ace_compat_rhs_afrf3";
-			name="ACE3 - RHS AFRF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Structures_F_Exp_Civilian";
+			name="Arma 3 Apex - Civilian Buildings";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item67
 		{
@@ -714,20 +712,6 @@ class AddonsMetaData
 		{
 			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item73
-		{
-			className="A3_Boat_F_EPC";
-			name="Arma 3 Win Episode - Boats and Submersibles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item74
-		{
-			className="A3_Structures_F_Exp_Civilian";
-			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};

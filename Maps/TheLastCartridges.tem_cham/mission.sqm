@@ -71,11 +71,9 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"rhsusf_c_weapons",
 	"rhsgref_c_weapons",
-	"ace_compat_rhs_usf3",
 	"rhsusf_c_troops",
 	"AOR2_Config",
 	"rhs_c_weapons",
-	"ace_compat_rhs_afrf3",
 	"Scorpion_Config",
 	"A3_Ui_F",
 	"A3_Structures_F_Heli_Items_Electronics",
@@ -112,7 +110,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=46;
+		items=44;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -283,10 +281,10 @@ class AddonsMetaData
 		};
 		class Item24
 		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item25
 		{
@@ -309,8 +307,8 @@ class AddonsMetaData
 		};
 		class Item28
 		{
-			className="ace_compat_rhs_afrf3";
-			name="ACE3 - RHS AFRF Compatibility";
+			className="ace_sitting";
+			name="ACE3 - Sitting";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
@@ -416,20 +414,6 @@ class AddonsMetaData
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item44
-		{
-			className="A3_Structures_F_EPA";
-			name="Arma 3 Survive Episode - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item45
-		{
-			className="ace_sitting";
-			name="ACE3 - Sitting";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
 		};
 	};
 };

@@ -126,11 +126,9 @@ addons[]=
 	"hlcweapons_ar15",
 	"hlcweapons_core",
 	"rhsusf_c_weapons",
-	"ace_compat_rhs_usf3",
 	"rhsusf_c_troops",
 	"AOR2_Config",
 	"rhs_c_weapons",
-	"ace_compat_rhs_afrf3",
 	"Scorpion_Config",
 	"A3_Props_F_Exp_Military_Camps",
 	"ace_rearm",
@@ -147,7 +145,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=66;
+		items=64;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -545,10 +543,10 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item57
+		class Item67
 		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USF Compatibility";
+			className="ace_rearm";
+			name="ACE3 - Rearm";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
@@ -573,8 +571,8 @@ class AddonsMetaData
 		};
 		class Item61
 		{
-			className="ace_compat_rhs_afrf3";
-			name="ACE3 - RHS AFRF Compatibility";
+			className="ace_fortify";
+			name="ace_fortify";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
@@ -589,20 +587,6 @@ class AddonsMetaData
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item64
-		{
-			className="ace_rearm";
-			name="ACE3 - Rearm";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item65
-		{
-			className="ace_fortify";
-			name="ace_fortify";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
 		};
 	};
 };

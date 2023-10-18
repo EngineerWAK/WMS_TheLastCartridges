@@ -352,7 +352,7 @@ class Accessories
 	LaserLights[]=
 	{
 		//SOG Bayonet
-		"vn_b_type56",
+		/*"vn_b_type56",//baillonette should move to loot
 		"vn_b_m1897",
 		"vn_b_m16",
 		"vn_b_m14",
@@ -364,7 +364,7 @@ class Accessories
 		"vn_b_l1a1",
 		"vn_b_m1903",
 		"vn_b_m36",
-		"vn_b_k98k",
+		"vn_b_k98k",*/
 		/////
 		"ACE_acc_pointer_red",
 		//"ACE_acc_pointer_green_IR",
@@ -382,7 +382,7 @@ class Accessories
 	Bipods[]=
 	{
 		//SOG camo and bipods
-		"vn_b_camo_m14",
+		/*"vn_b_camo_m14",//camo should move to loot
 		"vn_b_camo_m40a1",
 		"vn_b_camo_m9130",
 		"vn_b_camo_m1_garand",
@@ -393,7 +393,7 @@ class Accessories
 		"vn_b_camo_svd",
 		"vn_bipod_m1918",
 		"vn_bipod_m16",
-		"vn_bipod_m63a",
+		"vn_bipod_m63a",*/
 		/////
 		"rhsusf_acc_grip_m203_blk",
 		"rhsusf_acc_grip2",

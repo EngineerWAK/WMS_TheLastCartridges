@@ -64,11 +64,9 @@ addons[]=
 	"A3_Weapons_F_Enoch_Rifles_AK12",
 	"rhsusf_c_weapons",
 	"rhsgref_c_weapons",
-	"ace_compat_rhs_usf3",
 	"rhsusf_c_troops",
 	"AOR2_Config",
 	"rhs_c_weapons",
-	"ace_compat_rhs_afrf3",
 	"Scorpion_Config",
 	"A3_Supplies_F_Heli_Slingload",
 	"ace_cargo",
@@ -127,7 +125,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=62;
+		items=60;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -270,10 +268,8 @@ class AddonsMetaData
 		};
 		class Item20
 		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="CUP_StandaloneTerrains_Core_Faction";
+			name="CUP_StandaloneTerrains_Core_Faction";
 		};
 		class Item21
 		{
@@ -296,10 +292,10 @@ class AddonsMetaData
 		};
 		class Item24
 		{
-			className="ace_compat_rhs_afrf3";
-			name="ACE3 - RHS AFRF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Structures_F_Enoch";
+			name="Arma 3 Contact Platform - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item25
 		{
@@ -533,18 +529,6 @@ class AddonsMetaData
 		{
 			className="CUP_WarfareBuildings";
 			name="CUP_WarfareBuildings";
-		};
-		class Item60
-		{
-			className="CUP_StandaloneTerrains_Core_Faction";
-			name="CUP_StandaloneTerrains_Core_Faction";
-		};
-		class Item61
-		{
-			className="A3_Structures_F_Enoch";
-			name="Arma 3 Contact Platform - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
 		};
 	};
 };

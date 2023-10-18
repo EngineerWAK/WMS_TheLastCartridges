@@ -168,16 +168,18 @@ class RocketMissiles
        {
 		"Vorona_HEAT",
 		"Vorona_HE",
-		 "Titan_AT",
-		 "rhs_rpg7_PG7V_mag",
-		 "rhs_rpg7_TBG7V_mag",
-		 "rhs_rpg7_OG7V_mag",
-		 "rhs_mag_9k38_rocket",
-		 "rhs_fim92_mag",
-		 "R3F_AT4CS_Mag",
-		 "R3F_ERYX_Mag",
-		 "UK3CB_BAF_Javelin_Mag",
-		 "UK3CB_BAF_1Rnd_Milan"
+		   "MRAWS_HEAT_F",
+		   "MRAWS_HE_F",
+		   "MRAWS_HEAT55_F",
+		"rhs_mag_smaw_HEAA",
+		"rhs_mag_smaw_HEDP",
+		"rhs_fgm148_magazine_AT",
+		"Titan_AT",
+		"rhs_rpg7_PG7V_mag",
+		"rhs_rpg7_TBG7V_mag",
+		"rhs_rpg7_OG7V_mag",
+		"rhs_mag_9k38_c6vrocket",
+		"rhs_fim92_mag"
 	};
 };
 class RocketMissiles_RHS
@@ -186,6 +188,8 @@ class RocketMissiles_RHS
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=  //ammo specops
        {
+		"Vorona_HEAT",
+		"Vorona_HE",
 		   "MRAWS_HEAT_F",
 		   "MRAWS_HE_F",
 		   "MRAWS_HEAT55_F",
@@ -211,7 +215,7 @@ class SpecOps
 			"ItemGPS",
 			"Integrated_NVG_F",
 			"NVGogglesB_grn_F",
-			"UK3CB_BAF_Soflam_Laserdesignator",
+			//"UK3CB_BAF_Soflam_Laserdesignator",
 			"Laserdesignator"
 	    };
 	    explo[]= //ammo specops //CfgMagazines

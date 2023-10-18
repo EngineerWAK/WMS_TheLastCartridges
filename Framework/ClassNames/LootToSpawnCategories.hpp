@@ -44,8 +44,8 @@ class weapons_SPE
 			"rhs_weap_m4a1_blockII_M203_d",
 			"rhs_weap_m4a1_blockII_M203",
 			"rhs_weap_mk18_m320",
-			"srifle_DMR_05_blk_F",
-			"srifle_DMR_02_F",
+			//"srifle_DMR_05_blk_F", //cyrus
+			//"srifle_DMR_02_F", //MAR-10
 
 			"rhs_weap_ak103_2_npz",
 			"rhs_weap_ak103_zenitco01_b33",
@@ -56,7 +56,7 @@ class weapons_SPE
 			"rhs_weap_ak103_gp25_npz",
 			"rhs_weap_asval_grip_npz",
 			"srifle_DMR_04_F",
-			"srifle_DMR_05_hex_F",
+			//"srifle_DMR_05_hex_F",//cyrus
 			"MMG_01_hex_F",
 			"srifle_GM6_ghex_F",
 			"arifle_SPAR_03_blk_F",
@@ -76,7 +76,7 @@ class weapons_SPE
 			"rhs_weap_mk18_KAC_wd",
 			"arifle_MSBS65_Mark_camo_F",
 			"arifle_MXM_Black_F",
-			"srifle_DMR_02_camo_F",
+			//"srifle_DMR_02_camo_F",//MAR-10
 			"rhs_weap_rpk74m_npz",
 			"rhs_weap_svdp_wd",
 			"rhs_weap_vss_grip_npz",
@@ -128,7 +128,7 @@ class weapons_MIL
 			"rhs_weap_ak103",
 
 			"rhs_weap_m79",
-			"srifle_DMR_02_camo_F",
+			//"srifle_DMR_02_camo_F",//MAR-10
 			"rhs_weap_m40a5_wd",
 			"rhs_weap_sr25_ec",
 			"srifle_DMR_06_camo_F",

@@ -53,7 +53,6 @@ addons[]=
 	"A3_Weapons_F_Pistols_Rook40",
 	"A3_Characters_F_Orange",
 	"A3_Characters_F_Jets_Vests",
-	"ace_compat_sog",
 	"ace_gforces",
 	"weapons_f_vietnam_03_c",
 	"A3_Misc_F_Helpers",
@@ -82,7 +81,6 @@ addons[]=
 	"A3_Structures_F_Enoch_Industrial_Materials",
 	"A3_Structures_F_Civ_Accessories",
 	"rhsusf_c_weapons",
-	"ace_compat_rhs_usf3",
 	"A3_Characters_F_Enoch",
 	"AOR2_Config",
 	"Scorpion_Config",
@@ -106,7 +104,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=57;
+		items=55;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -242,10 +240,24 @@ class AddonsMetaData
 		};
 		class Item19
 		{
-			className="ace_compat_sog";
-			name="ACE3 - S.O.G. Prairie Fire Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Props_F_Decade";
+			name="CFGPATCHES_A3_Props_F_Decade";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item55
+		{
+			className="A3_Props_F_Decade";
+			name="CFGPATCHES_A3_Props_F_Decade";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item56
+		{
+			className="A3_Structures_F_Enoch";
+			name="Arma 3 Contact Platform - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item20
 		{
@@ -389,10 +401,10 @@ class AddonsMetaData
 		};
 		class Item40
 		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USF Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
+			className="A3_Structures_F_Enoch";
+			name="Arma 3 Contact Platform - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item41
 		{
@@ -487,20 +499,6 @@ class AddonsMetaData
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
-		};
-		class Item55
-		{
-			className="A3_Props_F_Decade";
-			name="CFGPATCHES_A3_Props_F_Decade";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item56
-		{
-			className="A3_Structures_F_Enoch";
-			name="Arma 3 Contact Platform - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
 		};
 	};
 };
