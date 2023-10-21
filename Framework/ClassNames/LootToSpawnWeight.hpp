@@ -31,6 +31,38 @@ class Default
 		1 //_foodList, 
 	};
 };
+class Military
+{
+	name = "Military";
+	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+	weight[]= 
+    {
+		0.2, //_weapList, 
+		0, //_weapList_spe, 
+		2, //_weapList_mil, 
+		0.2, //_scopList, 
+		0, //_scopList_spe, 
+		0.6, //_scopList_mil, 
+		0.2, //_itemList, 
+		0, //_itemList_spe, 
+		1.5, //_itemList_mil, 
+		0, //_itemList_ind, 
+		0.2, //_medList, 
+		0.2, //_bagList, 
+		0, //_bagList_spe, 
+		0.4, //_bagList_mil, 
+		0.1, //_vestList, 
+		0, //_vestList_spe, 
+		0.5, //_vestList_mil, 
+		0.1, //_unifList, 
+		0, //_unifList_spe, 
+		0.6, //_unifList_mil, 
+		0.1, //_helmets, 
+		0, //_helmets_spe, 
+		0.6, //_helmets_mil, 
+		0.2 //_foodList, 
+	};
+};
 class Special
 {
 	name = "Special";
@@ -39,15 +71,15 @@ class Special
     {
 		0, //_weapList, 
 		3, //_weapList_spe, 
-		0.3, //_weapList_mil, 
+		0.2, //_weapList_mil, 
 		0, //_scopList, 
 		1, //_scopList_spe, 
 		0.1, //_scopList_mil, 
 		0, //_itemList, 
-		2.5, //_itemList_spe, 
+		2.1, //_itemList_spe, 
 		0.1, //_itemList_mil, 
 		0, //_itemList_ind, 
-		0.3, //_medList, 
+		0.2, //_medList, 
 		0, //_bagList, 
 		1, //_bagList_spe, 
 		0.1, //_bagList_mil, 
@@ -61,38 +93,6 @@ class Special
 		1, //_helmets_spe, 
 		0.1, //_helmets_mil, 
 		0.1 //_foodList, 
-	};
-};
-class Military
-{
-	name = "Military";
-	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
-	weight[]= 
-    {
-		0.3, //_weapList, 
-		0, //_weapList_spe, 
-		2, //_weapList_mil, 
-		0.3, //_scopList, 
-		0, //_scopList_spe, 
-		0.5, //_scopList_mil, 
-		0.2, //_itemList, 
-		0, //_itemList_spe, 
-		1.5, //_itemList_mil, 
-		0, //_itemList_ind, 
-		0.3, //_medList, 
-		0.2, //_bagList, 
-		0, //_bagList_spe, 
-		0.4, //_bagList_mil, 
-		0.3, //_vestList, 
-		0, //_vestList_spe, 
-		0.4, //_vestList_mil, 
-		0.3, //_unifList, 
-		0, //_unifList_spe, 
-		0.4, //_unifList_mil, 
-		0.2, //_helmets, 
-		0, //_helmets_spe, 
-		0.5, //_helmets_mil, 
-		0.2 //_foodList, 
 	};
 };
 class Medical
@@ -111,7 +111,7 @@ class Medical
 		0, //_itemList_spe, 
 		0, //_itemList_mil, 
 		0, //_itemList_ind, 
-		1.5, //_medList, 
+		3, //_medList, 
 		0.5, //_bagList, 
 		0, //_bagList_spe, 
 		0, //_bagList_mil, 
@@ -142,7 +142,7 @@ class Industrial
 		0.2, //_itemList, 
 		0, //_itemList_spe, 
 		0, //_itemList_mil, 
-		3, //_itemList_ind, 
+		5, //_itemList_ind, 
 		0.4, //_medList, 
 		0.3, //_bagList, 
 		0, //_bagList_spe, 

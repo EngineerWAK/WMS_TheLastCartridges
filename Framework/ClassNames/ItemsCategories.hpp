@@ -178,7 +178,7 @@ class RocketMissiles
 		"rhs_rpg7_PG7V_mag",
 		"rhs_rpg7_TBG7V_mag",
 		"rhs_rpg7_OG7V_mag",
-		"rhs_mag_9k38_c6vrocket",
+		"rhs_mag_9k38_rocket",
 		"rhs_fim92_mag"
 	};
 };

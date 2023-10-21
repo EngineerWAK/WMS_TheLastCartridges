@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.811_2023OCT17_GitHub"; //Removing all ACE Compat //GM_SPE_SOG vehicles //SPE_Normandy update
+	name = "v1.817_2023OCT21_GitHub"; //Office trader fix (_price) //GM_SPE_SOG vehicles //SPE_Normandy update //LootToSpawnCategories_GM_SPE_SOG
 };
 
 class Extended_PreInit_EventHandlers {
@@ -53,6 +53,7 @@ class CfgLootToSpawnCategories
 {   //_itemsCategories = getArray(missionConfigFile >> "CfgLootToSpawnCategories" >> "weapons" >> "items");
     #include "ClassNames\LootToSpawnCategories.hpp"
     //#include "ClassNames\LootToSpawnCategories_SOG.hpp"
+    //#include "ClassNames\LootToSpawnCategories_GM_SPE_SOG.hpp" //not yet, next coming
 };
 class CfgLootToSpawnWeight
 {  //_weight = getArray(missionConfigFile >> "CfgLootToSpawnWeight" >> "Special" >> "weight");

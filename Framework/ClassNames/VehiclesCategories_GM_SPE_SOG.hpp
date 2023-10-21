@@ -45,6 +45,10 @@
 			"SPE_FR_M3_Halftrack_Unarmed",
 			"SPE_FR_M3_Halftrack_Unarmed_Open",
 			//GM
+			"gm_dk_army_typ247_cargo", //NEW
+			"gm_dk_army_typ253_cargo", //NEW
+			"gm_dk_army_typ253_mp", //NEW
+
 			"gm_ge_army_k125",
 			"gm_ge_army_iltis_cargo",
 			"gm_ge_civ_u1300l",
@@ -53,29 +57,29 @@
 			"gm_pl_army_ural4320_cargo",
 			"gm_gc_ff_p601", //zastava ki
 			//SOG Unarmed
-			"vn_o_bicycle_01_pl",
-			"vn_o_bicycle_02_pl",
+			//"vn_o_bicycle_01_pl",
+			//"vn_o_bicycle_02_pl",
 			"vn_o_car_01_01_kr",
 			"vn_o_car_03_01_kr",
-			"vn_o_car_02_01_kr",
-			"vn_o_car_04_01_kr",
+			//"vn_o_car_02_01_kr",
+			//"vn_o_car_04_01_kr",
 			"vn_b_wheeled_m274_01_01", //mule
-			"vn_b_wheeled_m274_02_01",	//mule
+			//"vn_b_wheeled_m274_02_01",	//mule
 			"vn_b_wheeled_m151_02",
-			"vn_i_wheeled_m151_01_fank_71",
-			"vn_b_wheeled_lr2a_02_nz_army",
+			//"vn_i_wheeled_m151_01_fank_71",
+			//"vn_b_wheeled_lr2a_02_nz_army",
 			"vn_b_wheeled_lr2a_01_nz_army",
-			"vn_i_wheeled_z157_01_fank_70", //s h i t truck
-			"vn_b_wheeled_m54_01",
+			//"vn_i_wheeled_z157_01_fank_70", //s h i t truck
+			//"vn_b_wheeled_m54_01",
 			"vn_b_wheeled_m54_01_sog",
 			"vn_b_wheeled_m54_02_sog",
-			"vn_b_wheeled_m54_02",
-			"vn_b_wheeled_m54_03", //cmd truck
+			//"vn_b_wheeled_m54_02",
+			//"vn_b_wheeled_m54_03", //cmd truck
 			"vn_b_wheeled_m54_fuel",
 			"vn_b_wheeled_m54_ammo",
 			"vn_b_wheeled_m54_repair",
 			"vn_i_wheeled_btr40_01_fank_70",
-			"vn_b_armor_m577_01", //m113 cmd
+			//"vn_b_armor_m577_01", //m113 cmd
 			/////
 			"B_Quadbike_01_F",
 	        "B_Truck_01_mover_F",
@@ -164,10 +168,12 @@
 			//"SPE_ST_GrW278_1" //mortar //NOPE just for ref
 			//"SPE_MLE_27_31" //mortar //NOPE just for ref
 			//GM ARMED
+			"gm_ge_army_kat1_454_cargo", //10t mg3
+			"gm_ge_army_kat1_451_container",
+			"gm_ge_army_kat1_452_container",
 	        "gm_ge_army_iltis_mg3",
 	        "gm_dk_army_u1300l_container",
 	        "gm_ge_army_u1300l_cargo",
-			"gm_ge_army_kat1_454_cargo", //10t mg3
 	        "gm_dk_army_bpz2a0",
 	        "gm_ge_army_fuchsa0_command",
 	        "gm_ge_army_fuchsa0_reconnaissance",
@@ -184,35 +190,35 @@
 			"gm_ge_army_gepard1a1", //AA
 			//SOG Armed
 			"vn_o_car_04_mg_01_kr", //little truck LMG
-			"vn_b_wheeled_m274_mg_03_01", //mulle M134
-			"vn_b_wheeled_m274_mg_02_01", //mulle recoilless canon
+			//"vn_b_wheeled_m274_mg_03_01", //mulle M134
+			//"vn_b_wheeled_m274_mg_02_01", //mulle recoilless canon
 			"vn_b_wheeled_m274_mg_01_01", //mulle M60
 			"vn_b_wheeled_m151_mg_02", //jeep M2
 			"vn_b_wheeled_m151_mg_06", //jeep recoilless canon
 			"vn_b_wheeled_m151_mg_03", //jeep patrol M2 M60
-			"vn_b_wheeled_m151_mg_05", //jeep tow
+			//"vn_b_wheeled_m151_mg_05", //jeep tow
 			"vn_i_wheeled_m151_mg_01_fank_71", //jeep M1919 .30
 			"vn_i_wheeled_m151_mg_04_fank_71", //"armored" M60
 			"vn_b_wheeled_lr2a_mg_02_nz_army", //LR twin M60
 			"vn_b_wheeled_lr2a_mg_03_nz_army", //LR recoilless canon
-			"vn_i_wheeled_lr2a_mg_01_fank_71", //LR M60
-			"vn_i_wheeled_z157_mg_01_fank_70",//s h i t truck MG
+			//"vn_i_wheeled_lr2a_mg_01_fank_71", //LR M60
+			//"vn_i_wheeled_z157_mg_01_fank_70",//s h i t truck MG
 			"vn_b_wheeled_m54_mg_01", //truck "armored"
 			"vn_b_wheeled_m54_mg_03", //truck "armored"
 			"vn_b_wheeled_m54_mg_02", //truck ZSU
-			"vn_i_wheeled_btr40_mg_02_fank_70", //DSHKM
-			"vn_i_wheeled_btr40_mg_01_fank_70", //RPD
+			//"vn_i_wheeled_btr40_mg_02_fank_70", //DSHKM
+			//"vn_i_wheeled_btr40_mg_01_fank_70", //RPD
 			"vn_i_wheeled_btr40_mg_04_fank_70", //SMG (LMG)
 			//"vn_o_wheeled_btr40_mg_04_pl", //SMG (LMG) //same as the other one
 			"vn_o_wheeled_btr40_mg_05_pl", //recoilless canon
 			"vn_o_wheeled_btr40_mg_03_pl", //ZPU4
 			"vn_b_armor_m113_acav_04", //ACAV M134 (+ M60 sides)
-			"vn_b_armor_m113_acav_01", //ACAV M2 (+ M60 sides)
+			//"vn_b_armor_m113_acav_01", //ACAV M2 (+ M60 sides)
 			"vn_b_armor_m113_acav_03", //ACAV M60 (+sides)
 			"vn_b_armor_m113_01", //transport M2
 			"vn_b_armor_m132_01", //m113 flamethrower
 			"vn_o_armor_btr50pk_02_nva65", //PKT ZGU-1
-			"vn_o_armor_btr50pk_01_nva65", //PKT
+			//"vn_o_armor_btr50pk_01_nva65", //PKT
 			"vn_i_armor_type63_01", //tank
 			"vn_i_armor_m67_01_01", //tank
 			"vn_b_armor_m41_01_01", //tank

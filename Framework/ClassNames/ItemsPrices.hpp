@@ -1,5 +1,8 @@
 
     //SPECIAL PRICED ITEMS
+        //GM 
+    class gm_g3a3a0_gold			    { quality = 6; price = 15888; }; //from loot table weap SPE
+    
 		//SOG others
     class vn_b_item_bandage_01			{ quality = 6; price = 205; };
     class vn_b_item_bugjuice_01			{ quality = 6; price = 205; };
@@ -146,35 +149,35 @@
     class SatchelCharge_Remote_Mag			{ quality = 4; price = 4000; };	//M183 Demolition Charge Assembly
     class ClaymoreDirectionalMine_Remote_Mag{ quality = 2; price = 500; };	//M18A1 Claymore
     
-    class rhs_charge_tnt_x2_mag 			{ quality = 0; price = 150; };
-    class rhs_charge_sb3kg_mag 				{ quality = 1; price = 950; };
-    class rhs_grenade_sthgr24_x7bundle_mag 	{ quality = 2; price = 350; };
+    class rhs_charge_tnt_x2_mag 			{ quality = 0; price = 154; };
+    class rhs_charge_sb3kg_mag 				{ quality = 1; price = 954; };
+    class rhs_grenade_sthgr24_x7bundle_mag 	{ quality = 2; price = 354; };
 
-    class rhs_mag_M441_HE 	    { quality = 2; price = 70; };
-    class rhs_mag_M433_HEDP 	{ quality = 2; price = 70; };
-    class rhs_mag_M397_HET 	    { quality = 2; price = 70; };
+    class rhs_mag_M441_HE 	    { quality = 2; price = 74; };
+    class rhs_mag_M433_HEDP 	{ quality = 2; price = 74; };
+    class rhs_mag_M397_HET 	    { quality = 2; price = 74; };
     class 1Rnd_HE_Grenade_shell { quality = 1; price = 90; };
-    class rhs_VOG25 	        { quality = 2; price = 70; };
-    class rhs_VOG25p 	        { quality = 2; price = 70; };
-    class rhs_vg40tb 	        { quality = 2; price = 70; };
+    class rhs_VOG25 	        { quality = 2; price = 74; };
+    class rhs_VOG25p 	        { quality = 2; price = 74; };
+    class rhs_vg40tb 	        { quality = 2; price = 74; };
 
     //ghillies
 	class U_O_T_Sniper_F	                { quality = 6; price = 15000; };
     class U_O_T_FullGhillie_tna_F	        { quality = 5; price = 10000; };
 
         //SOG
-    class vn_22mm_cs_mag 	        { quality = 2; price = 70; };
-    class vn_22mm_he_mag 	        { quality = 2; price = 70; };
-    class vn_22mm_lume_mag 	        { quality = 2; price = 70; };
-    class vn_20mm_dgn_wp_mag 	    { quality = 2; price = 70; };
-    class vn_20mm_f1n60_frag_mag 	{ quality = 2; price = 70; };
-    class vn_22mm_m17_frag_mag 	    { quality = 2; price = 70; };
-    class vn_22mm_m19_wp_mag 	    { quality = 2; price = 70; };
-    class vn_22mm_m1a2_frag_mag 	{ quality = 2; price = 70; };
-    class vn_22mm_m22_smoke_mag 	{ quality = 2; price = 70; };
-    class vn_22mm_m60_frag_mag 	    { quality = 2; price = 70; };
-    class vn_22mm_m60_heat_mag 	    { quality = 2; price = 70; };
-    class vn_22mm_m61_frag_mag 	    { quality = 2; price = 70; };
-    class vn_22mm_m9_heat_mag 	    { quality = 2; price = 70; };
-    class vn_22mm_n94_heat_mag 	    { quality = 2; price = 70; };
-    class vn_20mm_pgn60_heat_mag 	{ quality = 2; price = 70; };
+    class vn_22mm_cs_mag 	        { quality = 2; price = 76; };
+    class vn_22mm_he_mag 	        { quality = 2; price = 76; };
+    class vn_22mm_lume_mag 	        { quality = 2; price = 76; };
+    class vn_20mm_dgn_wp_mag 	    { quality = 2; price = 76; };
+    class vn_20mm_f1n60_frag_mag 	{ quality = 2; price = 76; };
+    class vn_22mm_m17_frag_mag 	    { quality = 2; price = 76; };
+    class vn_22mm_m19_wp_mag 	    { quality = 2; price = 76; };
+    class vn_22mm_m1a2_frag_mag 	{ quality = 2; price = 76; };
+    class vn_22mm_m22_smoke_mag 	{ quality = 2; price = 76; };
+    class vn_22mm_m60_frag_mag 	    { quality = 2; price = 76; };
+    class vn_22mm_m60_heat_mag 	    { quality = 2; price = 76; };
+    class vn_22mm_m61_frag_mag 	    { quality = 2; price = 76; };
+    class vn_22mm_m9_heat_mag 	    { quality = 2; price = 76; };
+    class vn_22mm_n94_heat_mag 	    { quality = 2; price = 76; };
+    class vn_20mm_pgn60_heat_mag 	{ quality = 2; price = 76; };

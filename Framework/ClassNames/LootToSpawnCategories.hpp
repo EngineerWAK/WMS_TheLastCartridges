@@ -223,12 +223,12 @@ class items
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
-			"G_Balaclava_oli",
+			//"G_Balaclava_oli",
 			"Money_bunch",
 			"Money_roll",
 			"Money_stack",
 			"Antimalaricum",
-			//"AntimalaricumVaccine",
+			"AntimalaricumVaccine",
 			"Antibiotic"
 		};
 	};

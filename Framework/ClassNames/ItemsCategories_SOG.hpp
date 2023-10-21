@@ -55,7 +55,7 @@ class specialItemsToSell //this list will be checked for custom prices, those it
 			"Antibiotic"
 		};
 	};
-class ItemsMOney
+class ItemsMoney
     {
 	    name = "Money";
 	    items[]=

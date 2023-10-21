@@ -30,7 +30,7 @@ if (_traderType == 'weapons_RHS') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "AssaultWEST_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "MachineGun_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "SubMachineGun" >> "items");
-	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol" >> "items");
+	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol_RHS" >> "items");
 	//no launchers here
 };
 if (_traderType == 'weapons_RHS_NIA') then {

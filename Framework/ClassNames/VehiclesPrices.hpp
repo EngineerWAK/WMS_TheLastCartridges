@@ -330,11 +330,15 @@
 		class R3F_PANDUR_CE 						{ quality = 4; price = 85999; }; //logistic forced Unarmed
 
 		//GLOBAL MOBILISATION
+		class gm_dk_army_typ247_cargo				{ quality = 2; price = 16002; }; //NEW
+		class gm_dk_army_typ253_cargo				{ quality = 2; price = 16002; }; //NEW
+		class gm_dk_army_typ253_mp					{ quality = 3; price = 16002; }; //NEW
+
 		class gm_ge_army_k125 						{ quality = 0; price = 1502; };
 		class gm_ge_army_iltis_cargo 				{ quality = 0; price = 4502; };
 		class gm_ge_civ_u1300l						{ quality = 1; price = 27002; }; //10000 cargo ! + arma/ace cargo load
 		class gm_ge_army_u1300l_firefighter			{ quality = 2; price = 16002; };
-		class gm_ge_army_u1300l_medic				{ quality = 2; price = 16002; };
+		class gm_ge_army_u1300l_medic				{ quality = 2; price = 18112; };
 		class gm_pl_army_ural4320_cargo				{ quality = 1; price = 29412; }; //20k cargo
 		class gm_gc_ff_p601							{ quality = 1; price = 11112; }; //zastava kind of car forced medical
 		class gm_ge_ff_typ1200						{ quality = 2; price = 11112; }; //cox forced medical
@@ -543,7 +547,9 @@
 		class gm_ge_army_iltis_mg3 					{ quality = 3; price = 38002; };
 		class gm_dk_army_u1300l_container 			{ quality = 3; price = 48002; };
 		class gm_ge_army_u1300l_cargo 				{ quality = 3; price = 48002; };
-		class gm_ge_army_kat1_454_cargo 			{ quality = 3; price = 55002; }; //10t mg3 flatbed
+		class gm_ge_army_kat1_451_container 		{ quality = 3; price = 50002; }; //NEW //5t  mg3 flatbed
+		class gm_ge_army_kat1_452_container 		{ quality = 3; price = 52502; }; //NEW //7t  mg3 flatbed
+		class gm_ge_army_kat1_454_cargo 			{ quality = 4; price = 55002; }; //10t mg3 flatbed
 		class gm_dk_army_bpz2a0 					{ quality = 4; price = 75002; }; //mg3 nemera kind of tank
 		class gm_ge_army_fuchsa0_command 			{ quality = 4; price = 70002; }; //mg3
 		class gm_ge_army_fuchsa0_reconnaissance 	{ quality = 4; price = 85002; }; //missile launcher MG3
@@ -604,8 +610,8 @@
 	class gm_gc_civ_mi2sr  						{ quality = 1; price = 10002; };
 	class gm_ge_army_bo105m_vbh  				{ quality = 2; price = 10002; };
 	class gm_ge_army_bo105p1m_vbh  				{ quality = 2; price = 10002; };
-	class gm_gc_airforce_l410t  				{ quality = 3; price = 10002; };
-	class gm_ge_airforce_do28d2  				{ quality = 1; price = 10002; };
+	class gm_gc_airforce_l410t  				{ quality = 3; price = 10772; };
+	class gm_ge_airforce_do28d2  				{ quality = 1; price = 10772; };
 
 		//Chopper_Hatchet
 	class vtx_UH60M_MEDEVAC  					{ quality = 1; price = 13555; };

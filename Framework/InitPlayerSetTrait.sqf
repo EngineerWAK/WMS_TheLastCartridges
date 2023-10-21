@@ -30,6 +30,21 @@ if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A
 	
 //if (worldName == "xcam_taunus") then {_caller setUnitTrait ["camouflageCoef",0.8]};
 //Banana only for Bambi Loadout will put the Bambi class to Engineer/Medic level 2
+if ("ACE_Chemlight_HiGreen" in (magazines _caller)) then { //this one spawn on the ground, random position, no map
+    _caller setVariable ["WMS_Specialist_Bambi",false,true];
+    _caller setVariable ["WMS_Specialist_Breacher",true,true];
+    _caller setVariable ["WMS_Specialist_Engineer",true,true];
+    _caller setVariable ["WMS_Specialist_Medic",true,true];
+    _caller setVariable ["ace_IsEngineer",2,true];
+    _caller setVariable ["ace_medical_medicclass", 2, true];
+	_caller setUnitTrait ["Medic",true];
+	_caller setUnitTrait ["Engineer",true];
+    
+	_caller setVariable ["WMS_Specialist_Sniper",true,true];
+	_caller setUnitTrait ["audibleCoef",0.8];
+	_caller setUnitTrait ["camouflageCoef",0.8];
+}else{
+
 if ("ACE_Banana" in _items) then {
     _caller setVariable ["WMS_Specialist_Bambi",true,true];
     _caller setVariable ["WMS_Specialist_Breacher",false,true];
@@ -111,5 +126,5 @@ if ("ACE_Banana" in _items) then {
 		};
 	};
 };
-
+};
 systemChat format ["You are now Medic level %1 and Engineer level %2", (_caller getVariable  ["ace_medical_medicclass", 0]), (_caller getVariable  ["ace_IsEngineer", 0])];

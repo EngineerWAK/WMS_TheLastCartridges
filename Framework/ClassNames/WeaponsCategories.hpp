@@ -250,6 +250,10 @@ class AssaultWEST_RHS
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
 	{
+		"rhs_weap_g36c",
+		"rhs_weap_g36c_Folded",
+		"rhs_weap_g36kv",
+		"rhs_weap_g36kv_Folded",
 		"rhs_weap_M590_5RD", //shotgun
 		"rhs_weap_M590_8RD", //shotgun
 		"rhs_weap_m4_carryhandle_m203S",
@@ -376,6 +380,20 @@ class SubMachineGun
 		"SMG_03_khaki"
 	};
 };
+class SubMachineGun_RHS
+{
+	name = "SMG";
+	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+	items[]=
+	{
+		"SMG_03_khaki",
+		"rhs_weap_aks74u_folded", //yeah, I know it's not really an SMG
+		"rhs_weap_pp2000",
+		"rhs_weap_m3a1", //greasegun
+		"rhs_weap_savz61",
+		"rhsusf_weap_MP7A2_grip1" //the grip will duplicate and will be blacklisted
+	};
+};
 class SubMachineGun_RHS_NIA
 {
 	name = "SMG";
@@ -399,11 +417,26 @@ class Pistol
 		"hgun_Pistol_heavy_01_F"
 	};
 };
+class Pistol_RHS
+{
+	name = "Pistol";
+	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+	items[]=
+	{
+		"hgun_Pistol_heavy_01_F",
+		"rhsusf_weap_glock17g4",
+		"rhsusf_weap_m1911a1",
+		"rhsusf_weap_m9",
+		"rhs_weap_cz99_etched",
+		"rhs_weap_pya",
+
+	};
+};
 /*
 
-Chopper 9 Jun @ 2:21pm //STEAM NIA v14
-@Outlaw Lord Do not use pistols of this mod chambered for 9mm. Or remove them from the mission. (rzabinar mission.sqm and delete all p226 lines. Write to PM, I'll help).
-Wait for a fix from the author.
+	Chopper 9 Jun @ 2:21pm //STEAM NIA v14
+	@Outlaw Lord Do not use pistols of this mod chambered for 9mm. Or remove them from the mission. (rzabinar mission.sqm and delete all p226 lines. Write to PM, I'll help).
+	Wait for a fix from the author.
 
 */
 class Pistol_RHS_NIA
@@ -412,6 +445,12 @@ class Pistol_RHS_NIA
 	icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 	items[]=
 	{
+		"hgun_Pistol_heavy_01_F",
+		"rhsusf_weap_glock17g4",
+		"rhsusf_weap_m1911a1",
+		"rhsusf_weap_m9",
+		"rhs_weap_cz99_etched",
+		"rhs_weap_pya",
 		//"hlc_pistol_P226R_Combat",
 		"hlc_pistol_P226R_357Combat",
 		"hlc_pistol_P226R_40Combat",

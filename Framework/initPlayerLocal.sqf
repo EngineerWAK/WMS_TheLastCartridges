@@ -27,12 +27,8 @@ switch (tolower _playerRole) do {
         [INDEPENDENT, "IND_Frantz"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_Sniper"] call BIS_fnc_addRespawnInventory;
         [INDEPENDENT, "IND_Pilot"] call BIS_fnc_addRespawnInventory;
+        [INDEPENDENT, "IND_RMO"] call BIS_fnc_addRespawnInventory;
     };
-/*        case "bambi": //no Bambi role yet
-    {
-        [INDEPENDENT, "IND_Bambi"] call BIS_fnc_addRespawnInventory;
-   };
-*/
 };
 //USER ACTIONS: //it seems that it not always 100% working from here, oving to "respawn EH"
     /*//Bohemia shit plane auto-landing

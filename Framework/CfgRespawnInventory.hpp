@@ -681,4 +681,19 @@ class CfgRespawnInventory
 		uniformClass = "rhsgref_uniform_flecktarn";
 		//backpack = "B_AssaultPack_rgr";
 	};
+	class IND_RMO
+	{
+		displayName = "RealMenOnly";							// Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";	// Icon displayed next to the name
+		role = "LoneWolf";										// Optional, see CfgRoles
+		magazines[] = {
+			"ACE_Chemlight_HiGreen" //item check for traits
+		};
+		//items[] = {};
+		linkedItems[] = {
+			"G_Balaclava_Halloween_01",
+			"ItemCompass"
+		};
+		uniformClass = "U_C_Poloshirt_tricolour";
+	};
 };

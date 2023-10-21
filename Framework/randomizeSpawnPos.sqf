@@ -142,16 +142,23 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		};
 	}forEach allMapMarkers;
 	//////////////////////////////
-	if (_spawnAllowed) then {
-		_pos = [[[position _target, 300]],[]] call BIS_fnc_randomPos;
-		_hight = 750;
-	}else {
-		_pos = [position _target, 1500, 2500, 0, 1] call BIS_fnc_findSafePos;
-		_hight = 300;
+	if ("ACE_Chemlight_HiGreen" in (magazines _target)) then { //IND_RMO, RealMenOnly spawn with nothing, on the ground
+		_pos = [[worldSize/2,worldSize/2,0],(worldSize/2)] call CBA_fnc_randPos;
+		_hight = 0;
+		_newGrp = createGroup Independent;
+		[_target] joinSilent _newGrp;
+	}else{
+		if (_spawnAllowed) then {
+			_pos = [[[position _target, 300]],[]] call BIS_fnc_randomPos;
+			_hight = 750;
+		}else {
+			_pos = [position _target, 1500, 2500, 0, 1] call BIS_fnc_findSafePos;
+			_hight = 300;
+		};
+		removeBackpackGlobal _target;
+		systemChat format ["RANDOM POSITION SPAWN| Adding parachute to %1",(name _target)];
+		_target addBackpackGlobal "B_Parachute";
 	};
-	removeBackpackGlobal _target;
-	systemChat format ["RANDOM POSITION SPAWN| Adding parachute to %1",(name _target)];
-	_target addBackpackGlobal "B_Parachute";
 	_target setposATL [(_pos select 0), (_pos select 1), _hight];
 	_target execVM "InitPlayerSetTrait.sqf";
 };
