@@ -427,7 +427,7 @@ class Pistol_RHS
 		"rhsusf_weap_glock17g4",
 		"rhsusf_weap_m1911a1",
 		"rhsusf_weap_m9",
-		"rhs_weap_cz99_etched",
+		//"rhs_weap_cz99_etched", //this one is f u c k e d 
 		"rhs_weap_pya",
 
 	};
@@ -449,7 +449,7 @@ class Pistol_RHS_NIA
 		"rhsusf_weap_glock17g4",
 		"rhsusf_weap_m1911a1",
 		"rhsusf_weap_m9",
-		"rhs_weap_cz99_etched",
+		//"rhs_weap_cz99_etched", //this one is f u c k e d 
 		"rhs_weap_pya",
 		//"hlc_pistol_P226R_Combat",
 		"hlc_pistol_P226R_357Combat",

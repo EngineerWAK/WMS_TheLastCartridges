@@ -90,11 +90,13 @@ if (hasinterface) then {
     _action5 = ["MoveOutForced","Force MoveOut","",{moveOut player},{((vehicle player) != player)&&{damage (vehicle player) == 1}}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action5] call ace_interact_menu_fnc_addActionToObject;
 
+/////_target setVariable ["WMS_SaveAndResp_Timer",serverTime+3600,true]; //will be use to block ACE "Save & Respawn" option
     _action6 = ["SaveAndDisconnectTimed","Save and Disconnect, Timed","",{
 			[]call WMS_fnc_client_saveRespawnData
         },{
             ((vehicle player) == player) &&
             {servertime > ((player getVariable ["WMS_lastKill",0])+60)} &&
+            {servertime > (player getVariable ["WMS_SaveAndResp_Timer",0])} &&
             {(localNamespace getVariable ['WMS_Loc_CanBuildComputer',true])};
         }] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action6] call ace_interact_menu_fnc_addActionToObject;
@@ -103,10 +105,11 @@ if (hasinterface) then {
         },{
             ((vehicle player) == player) &&
             {servertime > ((player getVariable ["WMS_lastKill",0])+60)} &&
+            {servertime > (player getVariable ["WMS_SaveAndResp_Timer",0])} &&
             {!(localNamespace getVariable ['WMS_Loc_CanBuildComputer',true])};
         }] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action7] call ace_interact_menu_fnc_addActionToObject;
-    
+/////
     //////////Mission File version on the map//////////
     _markerSystem = createMarkerLocal ["MissionVersion", [(worldsize /2),-500]];
     _markerSystem setMarkerTypeLocal "mil_dot";

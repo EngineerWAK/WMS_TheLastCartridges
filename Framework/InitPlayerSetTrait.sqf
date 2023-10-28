@@ -20,6 +20,7 @@ _caller setVariable ["WMS_Specialist_Breacher",false,true];
 _caller setVariable ["WMS_Specialist_Engineer",false,true];
 _caller setVariable ["WMS_Specialist_Sniper",false,true];
 _caller setVariable ["WMS_Specialist_Medic",false,true];
+_caller setVariable ["WMS_Specialist_RMO",false,true]; //new
 _caller setVariable ["ace_IsEngineer",0,true];
 _caller setVariable ["ace_medical_medicclass", 0, true];
 _caller setUnitTrait ["UAVHacker",false];
@@ -35,6 +36,7 @@ if ("ACE_Chemlight_HiGreen" in (magazines _caller)) then { //this one spawn on t
     _caller setVariable ["WMS_Specialist_Breacher",true,true];
     _caller setVariable ["WMS_Specialist_Engineer",true,true];
     _caller setVariable ["WMS_Specialist_Medic",true,true];
+	_caller setVariable ["WMS_Specialist_RMO",true,true];
     _caller setVariable ["ace_IsEngineer",2,true];
     _caller setVariable ["ace_medical_medicclass", 2, true];
 	_caller setUnitTrait ["Medic",true];
@@ -43,6 +45,8 @@ if ("ACE_Chemlight_HiGreen" in (magazines _caller)) then { //this one spawn on t
 	_caller setVariable ["WMS_Specialist_Sniper",true,true];
 	_caller setUnitTrait ["audibleCoef",0.8];
 	_caller setUnitTrait ["camouflageCoef",0.8];
+
+	_caller setVariable ["WMS_SaveAndResp_Timer",serverTime+3600,true]; //will be use to block ACE "Save & Respawn" option
 }else{
 
 if ("ACE_Banana" in _items) then {

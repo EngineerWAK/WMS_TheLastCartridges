@@ -336,7 +336,7 @@ class vn_vz61_p			{ quality = 4; price = 2506; };//smg
 class rhsusf_weap_glock17g4			{ quality = 3; price = 154; };
 class rhsusf_weap_m1911a1			{ quality = 2; price = 154; };
 class rhsusf_weap_m9				{ quality = 1; price = 154; };
-class rhs_weap_cz99_etched			{ quality = 4; price = 154; };
+class rhs_weap_cz99_etched			{ quality = 4; price = 154; }; //this one is f u c k e d 
 class rhs_weap_pya					{ quality = 1; price = 154; };
 	/////
 class hgun_Pistol_heavy_01_F		{ quality = 1; price = 150; };

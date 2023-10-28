@@ -52,7 +52,8 @@ private _playerTraits = [
     player getVariable ["WMS_Specialist_Engineer",false],
     player getVariable ["WMS_Specialist_Sniper",false],
     player getVariable ["WMS_Specialist_Medic",false],
-    localNamespace getVariable ['WMS_Loc_CanBuildComputer',true] //this one is a special, to prevent players to be lazy and disconnect/reconnect when they forgot their computer
+    localNamespace getVariable ['WMS_Loc_CanBuildComputer',true], //this one is a special, to prevent players to be lazy and disconnect/reconnect when they forgot their computer
+    player getVariable ["WMS_Specialist_RMO",false] //"RealMenOnly" respawn loadout will suppress the "Save & Disconnect" for at least 1 hours, probably more
 ];
 serverCommand "#Logout";
 [player,getPosASL player,_aceMedical,_playerTraits]remoteExec ["WMS_fnc_saveRespawnData",2];

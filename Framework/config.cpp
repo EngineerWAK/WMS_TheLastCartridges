@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.817_2023OCT21_GitHub"; //Office trader fix (_price) //GM_SPE_SOG vehicles //SPE_Normandy update //LootToSpawnCategories_GM_SPE_SOG
+	name = "v1.818_2023OCT27_GitHub"; //"rhs_weap_cz99_etched", this one is f u c k e d //"WMS_SaveAndResp_Timer"
 };
 
 class Extended_PreInit_EventHandlers {

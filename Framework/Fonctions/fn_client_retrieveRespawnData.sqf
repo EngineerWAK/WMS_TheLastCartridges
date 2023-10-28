@@ -26,7 +26,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {(getPla
 		missionNamespace setVariable["WMS_client_customRespawnPos",(_customRespawnData select 1)];
 		missionNamespace setVariable["WMS_client_customRespawnAce",(_customRespawnData select 2)];
 		missionNamespace setVariable["WMS_client_customRespawnInv",(_customRespawnData select 3)];
-		missionNamespace setVariable["WMS_client_customRespawnTra",[false,false,false,false,false]];
+		missionNamespace setVariable["WMS_client_customRespawnTra",[false,false,false,false,false,false]]; //_caller setVariable ["WMS_Specialist_RMO",false,true]; //new, select 5
 		missionNamespace setVariable["WMS_client_customRespawnToDelete",_customRespawn];
 	}else {
 		if ((count _customRespawnData) == 5) then { //NEW version WITH Players Traits
