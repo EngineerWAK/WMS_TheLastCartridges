@@ -133,8 +133,10 @@ if (hasinterface) then {
     WMS_StatusBarTest = {
         while {true} do
         {
-            "MKR_"+(name player) setMarkerPosLocal (position player);
-            "MKR_"+(name player) setMarkerDirLocal (getDir player);
+            if !(player getVariable ["WMS_Specialist_RMO",false])then{
+                "MKR_"+(name player) setMarkerPosLocal (position player);
+                "MKR_"+(name player) setMarkerDirLocal (getDir player);
+            };
             [] call statusBar_update;
             uisleep 2;
         };

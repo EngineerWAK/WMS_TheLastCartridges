@@ -20,10 +20,12 @@ player addEventHandler ["Respawn",
 			(_this select 0) execVM "spawnLoot.sqf";
 			[(_this select 0)] execVM "infantryProgram\infantryProgram.sqf";
 			(_this select 0) addrating 100000; //to prevent players to get shot by fucking territory weapon system
-			_mkr = createmarkerLocal ["MKR_"+(name player), position player];
+			//_mkr = createmarkerLocal ["MKR_"+(name player), position player];
+			_mkr = createmarkerLocal ["MKR_"+(name player), [-1000,-1000,0]];
 			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
 			_mkr setMarkerColorLocal "ColorGUER";
-   			inGameUISetEventHandler ["Action", " 
+			_mkr setMarkerDirLocal 0;
+   			inGameUISetEventHandler ["Action", { 
    			if (
 				((_this select 3) == 'Land') || 
 				((_this select 4) == 'Landing autopilot')  ||
@@ -35,7 +37,7 @@ player addEventHandler ["Respawn",
       			hint 'SORRY, This Action Is not permited';
        			true 
    			};
-   			"];
+   			}];
 			if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4 ASL", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		};
 	}
