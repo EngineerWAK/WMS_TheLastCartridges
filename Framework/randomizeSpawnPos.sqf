@@ -66,6 +66,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
     			//player setVariable ["WMS_Specialist_Breacher",true,true]; //done already
 				_target setUnitTrait ["explosiveSpecialist",true];
     			_target setVariable ["ace_IsEngineer",1,true];
+				_target setVariable ["WMS_Specialist_RMO",false,true];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Breacher Skill';
 				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, BREACHER", name player]};
 				systemChat 'SKILL SET | You now have Breacher Skill';
@@ -74,6 +75,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
     			//player setVariable ["WMS_Specialist_Engineer",true,true]; //done already
     			_target setVariable ["ace_IsEngineer",2,true];
 				_target setUnitTrait ["Engineer",true];
+				_target setVariable ["WMS_Specialist_RMO",false,true];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Advanced Engineer';
 				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, ENGINEER", name player]};
 				systemChat 'SKILL SET | You are now Advanced Engineer';
@@ -84,6 +86,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
     			_target setVariable ["WMS_AudiCoef",[0.8,0.1],true];
 				_target setUnitTrait ["audibleCoef",0.8];
 				_target setUnitTrait ["camouflageCoef",0.8];
+				_target setVariable ["WMS_Specialist_RMO",false,true];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You now have Sniper Skill';
 				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, SNIPER", name player]};
 				systemChat 'SKILL SET | You now have Sniper Skill';
@@ -92,6 +95,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
     			//player setVariable ["WMS_Specialist_Medic",true,true]; //done already
     			_target setVariable ["ace_medical_medicclass", 2, true];
 				_target setUnitTrait ["Medic",true];
+				_target setVariable ["WMS_Specialist_RMO",false,true];
 				//[playerSide, 'PAPA_BEAR'] commandChat 'You are now Doctor';
 				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, DOCTOR", name player]};
 				systemChat 'SKILL SET | You are now Doctor';
@@ -105,6 +109,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
     			_target setVariable ["ace_medical_medicclass", 2, true];
 				_target setUnitTrait ["Medic",true];
 				_target setUnitTrait ["Engineer",true];
+				_target setVariable ["WMS_Specialist_RMO",false,true];
 				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, BAMBI", name player]};
 				systemChat 'SKILL SET | You now have Bambi Skill';
 			}else {

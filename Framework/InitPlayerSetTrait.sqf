@@ -54,6 +54,7 @@ if ("ACE_Banana" in _items) then {
     _caller setVariable ["WMS_Specialist_Breacher",false,true];
     _caller setVariable ["WMS_Specialist_Engineer",true,true];
     _caller setVariable ["WMS_Specialist_Medic",true,true];
+	_caller setVariable ["WMS_Specialist_RMO",false,true]; //new
     _caller setVariable ["ace_IsEngineer",2,true];
     _caller setVariable ["ace_medical_medicclass", 2, true];
 	_caller setUnitTrait ["Medic",true];
@@ -69,6 +70,7 @@ if ("ACE_Banana" in _items) then {
     	_caller setVariable ["WMS_Specialist_Engineer",false,true];
     	_caller setVariable ["WMS_Specialist_Sniper",false,true];
     	_caller setVariable ["WMS_Specialist_Medic",false,true];
+		_caller setVariable ["WMS_Specialist_RMO",false,true]; //new
 		_caller setUnitTrait ["explosiveSpecialist",true];
     	_caller setVariable ["ace_IsEngineer",1,true];
     	_caller setVariable ["ace_medical_medicclass", 0, true];
@@ -84,6 +86,7 @@ if ("ACE_Banana" in _items) then {
     	_caller setVariable ["WMS_Specialist_Sniper",false,true];
     	_caller setVariable ["WMS_Specialist_Medic",false,true];
     	_caller setVariable ["WMS_Specialist_Breacher",false,true];
+		_caller setVariable ["WMS_Specialist_RMO",false,true]; //new
     	_caller setVariable ["ace_IsEngineer",2,true];
     	_caller setVariable ["ace_medical_medicclass", 0, true];
 		_caller setUnitTrait ["Medic",false];
@@ -97,6 +100,7 @@ if ("ACE_Banana" in _items) then {
     		_caller setVariable ["WMS_Specialist_Engineer",false,true];
     		_caller setVariable ["WMS_Specialist_Medic",false,true];
     		_caller setVariable ["WMS_Specialist_Breacher",false,true];
+			_caller setVariable ["WMS_Specialist_RMO",false,true]; //new
     		_caller setVariable ["WMS_CamoCoef",[0.8,0.1],true];
     		_caller setVariable ["WMS_AudiCoef",[0.8,0.1],true];
 			_caller setVariable ["ace_IsEngineer",0,true];
@@ -116,6 +120,7 @@ if ("ACE_Banana" in _items) then {
     	_caller setVariable ["WMS_Specialist_Engineer",false,true];
     	_caller setVariable ["WMS_Specialist_Sniper",false,true];
     	_caller setVariable ["WMS_Specialist_Breacher",false,true];
+		_caller setVariable ["WMS_Specialist_RMO",false,true]; //new
     	_caller setVariable ["ace_medical_medicclass", 2, true];
 		_caller setUnitTrait ["Medic",true];
     	_caller setVariable ["ace_IsEngineer",0,true];
