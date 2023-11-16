@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.821_2023NOV14_GitHub"; //"rhs_weap_cz99_etched", this one is f u c k e d //"WMS_SaveAndResp_Timer" //RMO fix for non RMO resp loadout
+	name = "v1.822_2023NOV15_GitHub"; //"rhs_weap_cz99_etched", this one is f u c k e d //"WMS_SaveAndResp_Timer" //RMO fix for non RMO resp loadout
 };
 
 class Extended_PreInit_EventHandlers {

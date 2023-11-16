@@ -25,7 +25,7 @@ player addEventHandler ["Respawn",
 			_mkr setMarkerTypeLocal "mil_triangle_noShadow";
 			_mkr setMarkerColorLocal "ColorGUER";
 			_mkr setMarkerDirLocal 0;
-   			inGameUISetEventHandler ["Action", { 
+   			inGameUISetEventHandler ["Action", "  
    			if (
 				((_this select 3) == 'Land') || 
 				((_this select 4) == 'Landing autopilot')  ||
@@ -37,7 +37,7 @@ player addEventHandler ["Respawn",
       			hint 'SORRY, This Action Is not permited';
        			true 
    			};
-   			}];
+   			"];// "" and not {}; //Error Type code, expected String
 			if (true) then {diag_log format ["[PLAYERRESPAWN_LOG_FROM_EH]|WAK|TNA|WMS| %1, %2, IS ALIVE at %3, %4 ASL", name (_this select 0), getPlayerUID (_this select 0), time, getposASL (_this select 0)]};
 		};
 	}

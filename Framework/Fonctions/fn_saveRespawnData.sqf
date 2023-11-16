@@ -92,12 +92,18 @@ if (count (getitemcargo _playerObject select 0) > 0) then {clearitemcargoglobal 
 //WMS_serverCMDpwd serverCommand format ["#kick %1",_playerUID]; //thats pretty hardcore xD
 saveprofileNameSpace;
 if (WMS_MissionDebug) then {diag_log "[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|ProfileNameSpace Saved"};
-[_playerObject] spawn {
+[_playerObject] spawn { //this spawn will now trigger a "last vehicle backup" if no player left on the server to try to minimize dirty server restart where vehicle data are lost
 	hideBody  (_this select 0);
-	uisleep 3;
+	uisleep 2;
 	if ((_this select 0) isKindOf "man" ) then {
 		deleteVehicle (_this select 0); //Suspicious destruction of some personal vehicles at the same time
 	}else{
 		diag_log "[WMS_fnc_saveRespawnData]|WAK|TNA|WMS|WTF DUDE!?!? THIS IS NOT A DEAD BODY!!!"
+	};
+	uisleep 1;
+	if (count allPlayers == 0) then { //need a check to not force the update during the last 2 minutes, check WMS_ServRestartSeconds
+		if (serverTime <= (WMS_ServRestartSeconds-120)) then {
+			[] call WMS_fnc_permanentVehiclesLastUpdate; //TheLastCartridges permanent vehicles
+		};
 	};
 };
