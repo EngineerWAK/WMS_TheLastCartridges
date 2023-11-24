@@ -10,6 +10,7 @@
  */
 /*private _playerTraits = [
     player getVariable ["WMS_Specialist_Bambi",false],
+    player getVariable ["WMS_Specialist_RMO",false],
     player getVariable ["WMS_Specialist_Breacher",false],
     player getVariable ["WMS_Specialist_Engineer",false],
     player getVariable ["WMS_Specialist_Sniper",false],
@@ -114,6 +115,8 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 				systemChat 'SKILL SET | You now have Bambi Skill';
 			}else {
 				if ((_customPlayerTraits select 5)) then { //this one spawn on the ground, random position, no map
+					private _newGrp = createGroup Independent;
+					[_target] joinSilent _newGrp;
 					//_target setVariable ["WMS_Specialist_Bambi",false,true];
 					_target setVariable ["WMS_Specialist_Breacher",true,true];
 					_target setVariable ["WMS_Specialist_Engineer",true,true];
@@ -199,7 +202,7 @@ if ((getPlayerUID player) in WMS_customRespawnList) then {
 	_customRespawnToDelete call BIS_fnc_removeRespawnPosition;
 };
 _playerConnect = missionNameSpace getVariable ["WMS_PlayerConnect", time-900]; //registered as serverTime in initPlayerLocal
-_target setVariable ["WMS_PlayerConnect", _playerConnect];
+_target setVariable ["WMS_PlayerConnect", _playerConnect, true]; //the public true was missing...
 _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test
 //_target execVM "InitPlayerSetTrait.sqf";
