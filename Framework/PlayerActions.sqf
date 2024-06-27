@@ -27,12 +27,19 @@
 
 private _action1 = ["SkillsSets","Display Skills","",{
 		showChat true;
-		[playerSide, 'PAPA_BEAR'] commandChat format ["SKILL Bambi: %1, SKILL RealMenOnly: %2", player getVariable ["WMS_Specialist_Bambi",false], player getVariable ["WMS_Specialist_RMO",false]];
+		/*[playerSide, 'PAPA_BEAR'] commandChat format ["SKILL Bambi: %1, SKILL RealMenOnly: %2", player getVariable ["WMS_Specialist_Bambi",false], player getVariable ["WMS_Specialist_RMO",false]];
 		[playerSide, 'PAPA_BEAR'] commandChat format ["SKILL Engineer: %1, SKILL Medic: %2", player getVariable ["WMS_Specialist_Engineer",false], player getVariable ["WMS_Specialist_Medic",false]];
 		[playerSide, 'PAPA_BEAR'] commandChat format ["SKILL Sniper: %1, SKILL Breacher: %2", player getVariable ["WMS_Specialist_Sniper",false], player getVariable ["WMS_Specialist_Breacher",false]];
 		[playerSide, 'PAPA_BEAR'] commandChat format ["Camo Coef: %1, Audible Coef: %2", player getVariable ["WMS_CamoCoef",[1,1]], player getVariable ["WMS_AudiCoef",[1,1]]];
 		[playerSide, 'PAPA_BEAR'] commandChat format ["ACE Engineer lvl: %1, ACE Medic lvl: %2", player getVariable ["ace_IsEngineer",0], player getVariable ["ace_medical_medicclass",0]];
-		[playerSide, 'PAPA_BEAR'] commandChat format ["Save&Disconnect Time: %1, Server Time: %2", player getVariable ["WMS_SaveAndResp_Timer",0], serverTime];
+		[playerSide, 'PAPA_BEAR'] commandChat format ["Save&Disconnect Time: %1, Server Time: %2", player getVariable ["WMS_SaveAndResp_Timer",0], serverTime];*/
+        
+		systemChat format ["*** SKILL Bambi: %1, SKILL RealMenOnly: %2", player getVariable ["WMS_Specialist_Bambi",false], player getVariable ["WMS_Specialist_RMO",false]];
+		systemChat format ["*** SKILL Engineer: %1, SKILL Medic: %2", player getVariable ["WMS_Specialist_Engineer",false], player getVariable ["WMS_Specialist_Medic",false]];
+		systemChat format ["*** SKILL Sniper: %1, SKILL Breacher: %2", player getVariable ["WMS_Specialist_Sniper",false], player getVariable ["WMS_Specialist_Breacher",false]];
+		systemChat format ["*** Camo Coef: %1, Audible Coef: %2", player getVariable ["WMS_CamoCoef",[1,1]], player getVariable ["WMS_AudiCoef",[1,1]]];
+		systemChat format ["*** ACE Engineer lvl: %1, ACE Medic lvl: %2", player getVariable ["ace_IsEngineer",0], player getVariable ["ace_medical_medicclass",0]];
+		systemChat format ["*** Save&Disconnect Time: %1, Server Time: %2", player getVariable ["WMS_SaveAndResp_Timer",0], serverTime];
 	},{true}] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action1] call ace_interact_menu_fnc_addActionToObject;
 

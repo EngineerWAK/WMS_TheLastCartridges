@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.824_2023NOV24_GitHub"; //Added action to display all skills
+	name = "v1.830_2024JUN23_GitHub"; //position ASL for IND_RMO spawn
 };
 
 class Extended_PreInit_EventHandlers {

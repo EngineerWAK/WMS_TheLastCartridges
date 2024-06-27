@@ -180,6 +180,17 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		_hight = 0;
 		_newGrp = createGroup Independent;
 		[_target] joinSilent _newGrp;
+		if (surfaceIsWater _pos) then {
+			_pos set [2, _hight];
+			_target setPosASL _pos;
+		}else{
+			/////from KK_fnc_setPosAGLS bohemia wiki PositionAGL, will prevent spawn inside rocks
+			_pos set [2, worldSize];
+			_target setPosASL _pos;
+			_pos set [2, vectorMagnitude (_pos vectorDiff getPosVisual _target) + _hight];
+			_target setPosASL _pos;
+			/////
+		};
 	}else{
 		if (_spawnAllowed) then {
 			_pos = [[[position _target, 300]],[]] call BIS_fnc_randomPos;
@@ -191,8 +202,8 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		removeBackpackGlobal _target;
 		systemChat format ["RANDOM POSITION SPAWN| Adding parachute to %1",(name _target)];
 		_target addBackpackGlobal "B_Parachute";
+		_target setposATL [(_pos select 0), (_pos select 1), _hight];
 	};
-	_target setposATL [(_pos select 0), (_pos select 1), _hight];
 	_target execVM "InitPlayerSetTrait.sqf";
 };
 

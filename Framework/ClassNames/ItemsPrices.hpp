@@ -1,5 +1,6 @@
 
     //SPECIAL PRICED ITEMS
+    class SmokeShellGreen			    { quality = 0; price = 2; }; //"free" item in loadout selling for 30
         //GM 
     class gm_g3a3a0_gold			    { quality = 6; price = 15888; }; //from loot table weap SPE
     

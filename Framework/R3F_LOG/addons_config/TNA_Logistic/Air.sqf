@@ -122,8 +122,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["RHS_Mi8mtv3_Cargo_vdv", 30], //2*15 //3*10 //6*5
 	["UK3CB_BAF_Merlin_HC3_Cargo", 41], //2*15 //3*10 //6*5
 	["UK3CB_BAF_Merlin_HC4_Cargo", 41], //2*15 //3*10 //6*5
-	//["I_Heli_Transport_02_F", 30], //2*15 //3*10 //6*5
-	//["Exile_Chopper_Mohawk_FIA", 30], //2*15 //3*10 //6*5
+	//["I_Heli_Transport_02_F", 30], //2*15 //3*10 //6*5 //_base already
+	//["Exile_Chopper_Mohawk_FIA", 30], //2*15 //3*10 //6*5 //_base already
 	["R3F_AH6_CE", 5],
 	["R3F_AH6_DA", 5],
 	["R3F_AH6_MA", 5],
@@ -167,8 +167,8 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["Exile_Chopper_Orca_CSAT", 5],
 	["Exile_Chopper_Huron_Green", 10],
 	["Exile_Chopper_Huron_Black", 10],
-	//["B_Heli_Transport_03_unarmed_green_F", 10],
-	//["B_Heli_Transport_03_unarmed_F", 10],
+	//["B_Heli_Transport_03_unarmed_green_F", 10], //_base already
+	//["B_Heli_Transport_03_unarmed_F", 10], //_base already
 	["RwG_Mozzie_Carl_Exile", 5],
 	["RwG_Mozzie_Carl_Gold", 10]
 	

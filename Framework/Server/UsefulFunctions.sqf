@@ -375,5 +375,13 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 	uisleep 1;
 	_permanentVhlArray_Temp = [];
 };
-/////
-BIS_fnc_getVehicleCUstomization
+
+/////ERROR//////////
+Error in expression <em)then{
+_caller addItem _item;
+_caller addItem [_ammo,1];
+'Item in your invento>
+  Error position: <addItem [_ammo,1];
+'Item in your invento>
+  Error additem: Type Array, expected String
+File mpmissions\__cur_mp.tem_cham\Fonctions\fn_buyFromTrader.sqf..., line 75

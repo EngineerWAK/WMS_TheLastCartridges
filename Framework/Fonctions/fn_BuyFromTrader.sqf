@@ -72,7 +72,8 @@ if (_playerMoney >= _price) then {
 		} else {
 			if (_caller canAdd _item)then{
 				_caller addItem _item;
-				_caller addItem [_ammo,1];
+				//_caller addItem [_ammo,1]; //NOPE
+				_caller addItem _ammo;
 				'Item in your inventory' remoteExec ["hint", (owner _caller)];
 			}else{
 				_weaponHolderTrader = createVehicle ["GroundWeaponHolder", [(position _caller select 0),(position _caller select 1),((position _caller select 2)+0.10)], [], 1, "CAN_COLLIDE"];

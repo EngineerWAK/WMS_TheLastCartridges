@@ -41,7 +41,7 @@ if !(count _TerritoriesArray == 0) then {
 			{_x setDamage 1}forEach (_flagPos nearObjects ["Land_vn_misc_cable_ep1",500]);
 		};
 		_flag = createVehicle ["rhsgref_serhat_radar", _flagPos, [], 1, "NONE"];//rhsgref_serhat_radar
-		if (surfaceIsWater _flagPos && {(AtltoAsl _flagPos) select 2 < -5})then{
+		if (surfaceIsWater _flagPos && {(AtltoAsl _flagPos) select 2 < -4.5})then{ //exactly 5 is not accurate, -4.6ASL show -5 on the map
 			_flag setPosASL [_flagPos select 0, _flagPos select 1, 2.413];
 			//north
 			if !(surfaceIsWater [(_flagPos select 0),(_flagPos select 1)+99]) then {_buildingAutorisation = false;diag_log format ["[WATER TERRITORY]|WAK|TNA|WMS| Water Position Too Close To shore , owner %1, pos %2", _ownerUID,_flagPos];} else {

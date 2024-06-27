@@ -1,9 +1,9 @@
 waitUntil{!isNull (findDisplay 46)};
 sleep 20;
 
-playSound3D ["a3\dubbing_radio_f\Sfx\radionoise1.ogg", Player];
+//playSound3D ["a3\dubbing_radio_f\Sfx\radionoise1.ogg", Player];
 //playSound3D [getMissionPath "Custom\Ogg\Christmas.ogg", player, false, position player, 2, 1, 0, 0, true]; //true for local
-//player say3D "Christmas";
+player say3D "Christmas";
 
 _role1 = "Welcome to TNA server";
 _role1names = [
@@ -14,7 +14,7 @@ _role1names = [
 _role2 = "PVE server ONLY";
 _role2names = ["-Do not kill players, yet","-Do not kill /Civilians"];
 _role3 = "Territories/Camps";
-_role3names = ["2 max/player","the oldest one will be use to FastTravel"];
+_role3names = ["2 max/player","Plus, the One Million Dollar Base", "All of them can be used to FastTravel"];
 _role4 = "Permanent Vehicles";
 _role4names = ["3 maximum at start","+1 vehicle per territory level","max: 3 + 6 + 6 = 15 vehicles"];
 _role5 = "Join us on TNA Discord";

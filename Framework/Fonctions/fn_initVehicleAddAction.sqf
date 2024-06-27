@@ -93,7 +93,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 [
 	_veh,
 	[
-		"<t color='#f50000'>Flip</t>",
+		"<t color='#f50000'>Flip, bohemia</t>",
 		"
 			if (locked (_this select 0) == 0) then {
 				(_this select 0) call bis_fnc_unflipVehicle;
@@ -120,6 +120,7 @@ if (WMS_MissionDebug) then {diag_log format ["[INIT_PERMANENT_VHL]|WAK|TNA|WMS|U
 		"
 			if (locked (_this select 0) == 0) then {
 				private _posASL = getposASL (_this select 0);
+				(_this select 0) setpos [0,0,4444];
 				(_this select 0) setPosASL [(_posASL select 0),(_posASL select 1),((_posASL select 2)+0.25)];
 			};
 		",

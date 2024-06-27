@@ -225,6 +225,7 @@ class hlc_rifle_bcmblackjack		{ quality = 3; price = 755; };
 class hlc_rifle_Bushmaster300		{ quality = 4; price = 1755; };
 class hlc_rifle_vendimus			{ quality = 4; price = 1755; };
 class hlc_rifle_honeybadger			{ quality = 5; price = 8005; };
+class hlc_rifle_honeybase			{ quality = 5; price = 8005; };
 
 //class R3F_Famas_surb_HG				{ quality = 1; price = 454; };
 //class UK3CB_BAF_L85A2_RIS			{ quality = 1; price = 454; };

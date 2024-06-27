@@ -300,6 +300,8 @@ if (isnil "IL_Variables") then
 		"Exile_Chopper_Huron_Green",
 		"B_Heli_Transport_03_F", //CH-67 Huron
 		"B_Heli_Transport_03_black_F", //CH-67 Huron
+		"B_Heli_Transport_03_unarmed_F",
+		"B_Heli_Transport_03_unarmed_green_F",
 		"RHS_CH_47F" //chinook
 	];
 	IL_Supported_Vehicles_MH9 = //Can be loaded WITH something else
