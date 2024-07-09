@@ -14,7 +14,7 @@ params [
 	"_playerObject",
 	"_pos", //ASL
 	["_aceMedical",[]], //got it's own function, but transit from here
-	["_playerTraits",[false,false,false,false,false]]
+	["_playerTraits",[false,false,false,false,false,false,false]] //[_bambi,_breacher,_engineer,_sniper,_medic,_CanBuildComputer,_RMO]
 ];
 private _playerUID = getPlayerUID _playerObject;
 private _inventoryVarName = (_playerUID+"_RespawnData");

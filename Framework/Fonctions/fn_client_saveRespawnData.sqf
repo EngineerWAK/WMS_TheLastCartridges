@@ -57,6 +57,7 @@ private _playerTraits = [
 ];
 //serverCommand "#Logout"; //moving at the end seems to be more logical
 [player,getPosASL player,_aceMedical,_playerTraits]remoteExec ["WMS_fnc_saveRespawnData",2];
+//profileNameSpace setvariable[_inventoryVarName,[_playerUID,_pos,_aceMedical,_export,_playerTraits]]; //from WMS_fnc_saveRespawnData, _export is the full loadour
 serverCommand "#Logout";
 //missionNamespace setVariable["WMS_client_canCustomRespawn",true]; //this should make the custom Respawn available during the same run and not only after restart
 

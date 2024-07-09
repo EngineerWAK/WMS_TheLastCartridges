@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.830_2024JUN23_GitHub"; //position ASL for IND_RMO spawn
+	name = "v1.832_2024JUL09_GitHub"; //InfantryProgram computer menu empty line, fix RMO variable on non RMO players
 };
 
 class Extended_PreInit_EventHandlers {

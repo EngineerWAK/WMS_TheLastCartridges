@@ -26,7 +26,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {(getPla
 		missionNamespace setVariable["WMS_client_customRespawnPos",(_customRespawnData select 1)];
 		missionNamespace setVariable["WMS_client_customRespawnAce",(_customRespawnData select 2)];
 		missionNamespace setVariable["WMS_client_customRespawnInv",(_customRespawnData select 3)];
-		missionNamespace setVariable["WMS_client_customRespawnTra",[false,false,false,false,false,false]]; //_caller setVariable ["WMS_Specialist_RMO",false,true]; //new, select 5
+		missionNamespace setVariable["WMS_client_customRespawnTra",[false,false,false,false,false,true,false]]; //[_bambi,_breacher,_engineer,_sniper,_medic,_CanBuildComputer,_RMO]
 		missionNamespace setVariable["WMS_client_customRespawnToDelete",_customRespawn];
 	}else {
 		if ((count _customRespawnData) == 5) then { //NEW version WITH Players Traits
@@ -34,10 +34,14 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {(getPla
 			missionNamespace setVariable["WMS_client_customRespawnPos",(_customRespawnData select 1)];
 			missionNamespace setVariable["WMS_client_customRespawnAce",(_customRespawnData select 2)];
 			missionNamespace setVariable["WMS_client_customRespawnInv",(_customRespawnData select 3)];
-			missionNamespace setVariable["WMS_client_customRespawnTra",(_customRespawnData select 4)];
+			missionNamespace setVariable["WMS_client_customRespawnTra",(_customRespawnData select 4)];//[_bambi,_breacher,_engineer,_sniper,_medic,_CanBuildComputer,_RMO]
 			missionNamespace setVariable["WMS_client_customRespawnToDelete",_customRespawn];
-			if (count (_customRespawnData select 4) == 6) then {
+			//if (count (_customRespawnData select 4) == 6) then {
+			if (count (_customRespawnData select 4) == 7) then {
 				localNamespace setVariable ['WMS_Loc_CanBuildComputer',(_customRespawnData select 4 select 5)]; //this prevent players disconnect/reconnect when they forgot their computer (should)
+			} else {
+				localNamespace setVariable ['WMS_Loc_CanBuildComputer',true];
+				systemChat "Infantry Computer Available By Default";
 			};
 		} else {
 			systemChat "No custom Spawn Data Not Available";

@@ -53,15 +53,17 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		if (count (missionNamespace getVariable["WMS_client_customRespawnAce",[]]) != 0) then {[player,WMS_client_customRespawnAce]call WMS_fnc_client_restoreAceFromVar;};
 		uisleep 1;
 		if(((_target getVariable ['playerInRestrictionZone',-1]) == -1)) then {_target setVariable ['playerInRestrictionZone',0]};
+		 //[_bambi,_breacher,_engineer,_sniper,_medic,_CanBuildComputer,_RMO]
    		_target setVariable ["WMS_Specialist_Bambi",(_customPlayerTraits select 0),true];
     	_target setVariable ["WMS_Specialist_Breacher",(_customPlayerTraits select 1),true];
     	_target setVariable ["WMS_Specialist_Engineer",(_customPlayerTraits select 2),true];
     	_target setVariable ["WMS_Specialist_Sniper",(_customPlayerTraits select 3),true];
     	_target setVariable ["WMS_Specialist_Medic",(_customPlayerTraits select 4),true];
-		if (count _customPlayerTraits == 6) then {
-    		_target setVariable ["WMS_Specialist_RMO",(_customPlayerTraits select 5),true];
+		if (count _customPlayerTraits == 7) then {
+    		_target setVariable ["WMS_Specialist_RMO",(_customPlayerTraits select 6),true];
 		} else {
     		_target setVariable ["WMS_Specialist_RMO",false,true];
+			_customPlayerTraits set [6, false]; //new
 		};
 			if ((_customPlayerTraits select 1))then{
     			//player setVariable ["WMS_Specialist_Breacher",true,true]; //done already
@@ -114,7 +116,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 				if (true) then {diag_log format ["[RandomizeSpawnPos.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, BAMBI", name player]};
 				systemChat 'SKILL SET | You now have Bambi Skill';
 			}else {
-				if ((_customPlayerTraits select 5)) then { //this one spawn on the ground, random position, no map
+				if ((_customPlayerTraits select 6)) then { //this one spawn on the ground, random position, no map
 					private _newGrp = createGroup Independent;
 					[_target] joinSilent _newGrp;
 					//_target setVariable ["WMS_Specialist_Bambi",false,true];
@@ -141,7 +143,7 @@ if (missionNamespace getVariable["WMS_client_canCustomRespawn",true] && {((posit
 		missionNamespace setVariable["WMS_client_customRespawnPos",[-999,-999,-999]];
 		missionNamespace setVariable["WMS_client_customRespawnAce",[]];
 		missionNamespace setVariable["WMS_client_canCustomRespawn",false];
-		missionNamespace setVariable["WMS_client_customRespawnTra",[false,false,false,false,false,false]];
+		missionNamespace setVariable["WMS_client_customRespawnTra",[false,false,false,false,false,false,false]];
 		diag_log "[WMS_ANTI_ACE_BULSHIT]player ready to die again";
 		systemChat format ["WMS_ANTI_ACE_BULSHIT| %1 is ready to die again ",(name _target)];
 	};

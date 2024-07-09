@@ -47,6 +47,7 @@ if ("ACE_Chemlight_HiGreen" in (magazines _caller)) then { //this one spawn on t
 	_caller setUnitTrait ["camouflageCoef",0.8];
 
 	_caller setVariable ["WMS_SaveAndResp_Timer",serverTime+3600,true]; //will be use to block ACE "Save & Respawn" option
+	if (true) then {diag_log format ["[InitPlayerSetTrait.sqf]|WAK|TNA|WMS|THIS IS A DEBUG FOR BROKEN PLAYERS TRAITS: %1, RMO", name _caller]};
 }else{
 
 if ("ACE_Banana" in _items) then {
