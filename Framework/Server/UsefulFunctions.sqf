@@ -376,12 +376,34 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 	_permanentVhlArray_Temp = [];
 };
 
-/////ERROR//////////
-Error in expression <em)then{
-_caller addItem _item;
-_caller addItem [_ammo,1];
-'Item in your invento>
-  Error position: <addItem [_ammo,1];
-'Item in your invento>
-  Error additem: Type Array, expected String
-File mpmissions\__cur_mp.tem_cham\Fonctions\fn_buyFromTrader.sqf..., line 75
+//experimental FLIP on Player
+player addAction
+[
+	"<t color='#f57200'>Flip Experimental</t>",
+	{
+		private _vhl = cursorObject;
+		if (locked _vhl == 0) then {
+				private _posASL = getposASL _vhl;
+				_vhl setpos [0,0,4444];
+				_vhl setPosASL [(_posASL select 0),(_posASL select 1),((_posASL select 2)+0.25)];
+		};
+	},
+	"",
+	1.5,
+	true,
+	true,
+	"",
+	"	
+		(stance player == 'CROUCH') &&
+		{(player distance cursorObject <= 5)} &&
+		{(cursorObject iskindOf 'car')} &&
+		{(alive cursorObject)} && 
+		{(locked cursorObject == 0)} &&
+		{(count crew cursorObject == 0)} &&
+		{(vehicle player isKindOf 'man')}
+	",
+	3,
+	false,
+	"",
+	""
+];

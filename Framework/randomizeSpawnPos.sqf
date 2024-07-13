@@ -220,3 +220,36 @@ _target setVariable ["_spawnedPlayerReadyToFight", true, true];
 setCurrentChannel 3; //Force Group Channel test
 //_target execVM "InitPlayerSetTrait.sqf";
 if (true) then {diag_log format ["[RandomizeSpawnPosition]|WAK|TNA|WMS|player respawned and ready to fight %1", time]};
+
+
+//experimental FLIP on Player
+player addAction
+[
+	"<t color='#f57200'>Flip Experimental</t>",
+	{
+		private _vhl = cursorObject;
+		if (locked _vhl == 0) then {
+				private _posASL = getposASL _vhl;
+				_vhl setpos [0,0,4444];
+				_vhl setPosASL [(_posASL select 0),(_posASL select 1),((_posASL select 2)+0.25)];
+		};
+	},
+	"",
+	1.5,
+	true,
+	true,
+	"",
+	"	
+		(stance player == 'CROUCH') &&
+		{(player distance cursorObject <= 5)} &&
+		{(cursorObject iskindOf 'car')} &&
+		{(alive cursorObject)} && 
+		{(locked cursorObject == 0)} &&
+		{(count crew cursorObject == 0)} &&
+		{(vehicle player isKindOf 'man')}
+	",
+	3,
+	false,
+	"",
+	""
+];

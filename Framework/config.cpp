@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.832_2024JUL09_GitHub"; //InfantryProgram computer menu empty line, fix RMO variable on non RMO players
+	name = "v1.834_2024JUL13_GitHub"; //InfantryProgram computer menu empty line, fix RMO variable on non RMO players
 };
 
 class Extended_PreInit_EventHandlers {

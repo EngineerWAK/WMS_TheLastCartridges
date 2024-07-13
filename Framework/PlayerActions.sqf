@@ -25,6 +25,39 @@
     player getVariable ["ace_medical_medicclass",0]; //0,1,2
 */
 
+//experimental FLIP on Player
+/*player addAction
+[
+	"<t color='#f57200'>Flip Experimental</t>",
+	{
+		private _vhl = cursorObject;
+		if (locked _vhl == 0) then {
+				private _posASL = getposASL _vhl;
+				_vhl setpos [0,0,4444];
+				_vhl setPosASL [(_posASL select 0),(_posASL select 1),((_posASL select 2)+0.25)];
+		};
+	},
+	"",
+	1.5,
+	true,
+	true,
+	"",
+	"	
+		(stance player == 'CROUCH') &&
+		{(player distance cursorObject <= 5)} &&
+		{(cursorObject iskindOf 'car')} &&
+		{(alive cursorObject)} && 
+		{(locked cursorObject == 0)} &&
+		{(count crew cursorObject == 0)} &&
+		{(vehicle player isKindOf 'man')}
+	",
+	3,
+	false,
+	"",
+	""
+];*/
+//////////////////
+
 private _action1 = ["SkillsSets","Display Skills","",{
 		showChat true;
 		/*[playerSide, 'PAPA_BEAR'] commandChat format ["SKILL Bambi: %1, SKILL RealMenOnly: %2", player getVariable ["WMS_Specialist_Bambi",false], player getVariable ["WMS_Specialist_RMO",false]];
