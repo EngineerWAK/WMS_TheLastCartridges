@@ -13,7 +13,8 @@ private ["_playerVHLarray","_playerArray","_targetUID","_targetOwner","_permanen
 params[
 	"_vehicleClassName",
 	"_buyer",
-	["_pos",[]]
+	["_pos",[]],
+	["_insurance", true] //will be used to recreate the vehicle if destroyed early after creation
 ];
 if (WMS_MissionDebug) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: _this %1", _this]};
 
@@ -128,6 +129,7 @@ _playerVHLarray = profileNameSpace getVariable [_targetUID+"_VHLs", [_targetUID]
 WMS_permanentVehicleObjects pushBack _veh;
 //_veh setOwner _buyer;
 _vehicleID = call WMS_fnc_generateHexaID;
+_veh setVariable ["WMS_buyerObject", _buyer, true]; //used for insurance respawn
 _veh setVariable ["WMS_buyerowner", _targetUID, true];
 _veh setVariable ["WMS_friends", [_targetUID], true];
 _veh setVariable ["WMS_vehicleid", _vehicleID, true];
@@ -146,6 +148,29 @@ _veh addMPEventHandler ["MPkilled", {
 			diag_log format ["a permanent vehicle (%1) has been destroyed by %2, instigator %3", (_this select 0), (_this select 1), (_this select 2)];
 			diag_log "|WAK|TNA|WMS|";
 		};
+	/////////////INSURANCE/////////////
+		if !(isPlayer (_this select 1)) then {
+			if !(isPlayer (_this select 2)) then {
+				//no players involved in the vehicle destruction, call for respawn if _veh setVariable ["WMS_insuranceTimer", (serverTime + 900), true];
+				private _buyerObject = (_this select 0) getVariable ["WMS_buyerObject", objNull];
+				private _insuranceTimer = (_this select 0) getVariable ["WMS_insuranceTimer", -900];
+				//if (serverTime <= _insuranceTimer && !(isNil _buyerObject)) then { //nope
+				if (serverTime <= _insuranceTimer && !(isNull _buyerObject)) then {
+					[(typeOf (_this select 0)),_buyerObject,[],false] call WMS_fnc_createPermanentVHL;
+					diag_log format ["INSURANCE RESPAWNED VEHICLE: (%1) has been destroyed by %2, instigator %3, _insuranceTimer %4, serverTime %5", typeOf (_this select 0), (_this select 1), (_this select 2),_insuranceTimer,serverTime];
+				} else {
+					//too late bro
+					diag_log format ["INSURANCE TIMED OUT: (%1) has been destroyed by %2, instigator %3, _insuranceTimer %4, serverTime %5", typeOf (_this select 0), (_this select 1), (_this select 2),_insuranceTimer,serverTime];
+				};
+			}else {
+				//a player destroyed the vehicle
+				diag_log format ["INSURANCE FRAUD: (%1) has been destroyed by %2, instigator %3", typeOf (_this select 0), (_this select 1), name (_this select 2)];
+			};
+		}else {
+			//a player destroyed the vehicle
+			diag_log format ["INSURANCE FRAUD: (%1) has been destroyed by %2, instigator %3", typeOf (_this select 0), name (_this select 1), (_this select 2)];
+		};
+	/////////////INSURANCE\\\\\\\\\\\\\
 	};
 }];//params ["_unit", "_killer", "_instigator", "_useEffects"];
 /////VEHICLE DESTROYED EH\\\\\
@@ -227,7 +252,12 @@ private _clusterMags = getArray(missionConfigFile >> "CfgBlackListedBomb" >> "ma
 if (_vehicleClassName in _clusterVhl) then {	
 	_veh setVariable ["ace_pylons_magazineBlacklist", _clusterMags];
 };
-
+///////////////INSURANCE///////////
+if (_insurance) then {
+	_veh setVariable ["WMS_insuranceTimer", (serverTime + 900), true]; //if vehicle destroyed before WMS_insuranceTimer, vehicle will be re-created
+}else  {
+	_veh setVariable ["WMS_insuranceTimer", -900, true];
+};
 //////////CUSTOM VEHICLES//////////
 [_veh] call WMS_fnc_vehicleCustomize;
 //////////CUSTOM VEHICLES END//////////

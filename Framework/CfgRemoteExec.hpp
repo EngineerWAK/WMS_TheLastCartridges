@@ -58,6 +58,7 @@ class CfgRemoteExec
 		class bis_fnc_effectkilledairdestructionStage2	{ allowedTargets=0; };
 		class BIS_fnc_setCustomSoundController 			{ allowedTargets=0; };
 		class BIS_fnc_typeText 							{ allowedTargets=0; };
+		class bis_fnc_effectkilled 						{ allowedTargets=0; };
 		
 		class SA_Simulate_Towing 					{ allowedTargets=0; };
 		class SA_Attach_Tow_Ropes 					{ allowedTargets=0; };

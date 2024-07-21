@@ -31,6 +31,51 @@
 	class rhsusf_m1a2sep2wd_usarmy  		{ quality = 6; price = 100006; };
 	class vn_b_armor_m125_01   				{ quality = 6; price = 80006; };//m113 mortar
 
+	class gm_gc_army_t55am2b  				{ quality = 6; price = 80006; }; //REDrwd
+	class gm_gc_army_t55  					{ quality = 6; price = 80006; }; //REDrwd
+	class gm_gc_army_pt76b  				{ quality = 6; price = 80006; }; //REDrwd
+	class gm_gc_army_bmp1sp2  				{ quality = 6; price = 80006; }; //REDrwd
+	//	class gm_ge_army_Leopard1a1
+	class gm_ge_army_Leopard1a3  			{ quality = 6; price = 100006; };
+	//	class gm_ge_army_Leopard1a5
+	class gm_ge_army_luchsa2  				{ quality = 6; price = 80006; };
+	class gm_ge_army_marder1a1a  			{ quality = 6; price = 90006; };
+	//	class gm_ge_army_gepard1a1
+	//	class gm_dk_army_m113a2dk
+	//	class gm_ge_army_m113a1g_apc
+	class gm_ge_army_m113a1g_apc_milan  	{ quality = 6; price = 60006; };
+	class gm_ge_army_m113a1g_command  		{ quality = 6; price = 60006; };
+	//	class gm_ge_army_fuchsa0_reconnaissance
+	//	class gm_ge_army_fuchsa0_command
+	class gm_pl_army_brdm2  				{ quality = 6; price = 80006; };
+	class gm_gc_army_btr60pa_dshkm  		{ quality = 6; price = 80006; };
+
+	class gm_gc_bgs_ural4320_reammo  		{ quality = 6; price = 60006; };
+	class gm_gc_bgs_ural4320_repair  		{ quality = 6; price = 60006; };
+	class gm_ge_army_u1300l_repair  		{ quality = 6; price = 60006; };
+	class gm_ge_army_kat1_451_reammo  		{ quality = 6; price = 60006; };
+	class gm_ge_army_kat1_451_refuel  		{ quality = 6; price = 60006; };
+	class gm_ge_army_kat1_454_reammo  		{ quality = 6; price = 60006; };
+	class gm_ge_army_kat1_463_mlrs  		{ quality = 6; price = 80006; };
+
+	class gm_ge_army_typ247_firefighter  	{ quality = 6; price = 12006; };
+	//	class gm_dk_army_typ253_cargo
+	class gm_dk_army_typ1200_cargo  		{ quality = 6; price = 12006; };
+	class gm_ge_army_w123_cargo  			{ quality = 6; price = 12006; };
+	//	class gm_ge_army_iltis_cargo
+	class gm_gc_army_uaz469_cargo  			{ quality = 6; price = 12006; };
+	class gm_gc_bgs_p601  					{ quality = 6; price = 12006; };
+	//	class gm_ge_civ_u1300l
+	class gm_ge_dbp_typ247  				{ quality = 6; price = 12006; };
+	//	class gm_ge_army_u1300l_firefighter
+
+	//	class gm_ge_army_kat1_454_cargo
+	//	class gm_ge_army_kat1_452_container
+	class gm_ge_army_kat1_451_cargo  		{ quality = 6; price = 22006; };
+	class gm_gc_army_ural375d_cargo  		{ quality = 6; price = 12006; };
+	class gm_gc_bgs_ural4320_cargo  		{ quality = 6; price = 12006; };
+	//	class gm_pl_army_ural4320_cargo
+
 //////////////////////////////
 //AMS REWARDS NOT IN TRADERS
 //////////////////////////////
