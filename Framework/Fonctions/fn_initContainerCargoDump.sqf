@@ -28,7 +28,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
 				if ((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) then {
 					[_caller, _target,'banana'] remoteExec ['WMS_fnc_claimItems',2];
-					_caller removeItem 'ACE_Cellphone';
+					//_caller removeItem 'ACE_Cellphone';
 					for '_i' from 1 to 100 do {
 						_caller removeItem 'ACE_Banana';
 					};
@@ -37,7 +37,7 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 				};
 			}else{
 				[_caller, _target,'banana'] remoteExec ['WMS_fnc_claimItems',2];
-					_caller removeItem 'ACE_Cellphone';
+					//_caller removeItem 'ACE_Cellphone';
 				for '_i' from 1 to 100 do {
 					_caller removeItem 'ACE_Banana';
 				};
@@ -49,10 +49,10 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 		true, 
 		true, 
 		"", 
+		//{(items player find 'ACE_Cellphone' != -1)} &&
 		"
 		((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
 		(vehicle _this == _this)  &&
-		{(items player find 'ACE_Cellphone' != -1)} &&
 		{(count (items player select {_x == 'ACE_Banana'}) > 99)}
 		",
 		5, 
@@ -71,8 +71,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 			if ((_target getVariable ['TheOneMillionDollarsBase',false]))then{
 				if (((_target getVariable ['WMS_buyerowner', '']) == (getPlayerUID _caller)) || ((getPlayerUID _caller) in (_target getVariable ['WMS_BaseFriends', '']))) then {
 					[_caller, _target,'noreen'] remoteExec ['WMS_fnc_claimItems',2];
-					[_caller,5000] remoteExec ['WMS_fnc_smallTransactions',2];
-					{_caller removeItem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05','ACE_Cellphone','FilesSecret'];
+					//[_caller,5000] remoteExec ['WMS_fnc_smallTransactions',2];
+					//{_caller removeItem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05','ACE_Cellphone','FilesSecret'];
 					for '_i' from 1 to 25 do {
 						_caller removeItem 'FlashDisk';
 					};
@@ -81,8 +81,8 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 				};
 			}else{
 				[_caller, _target,'noreen'] remoteExec ['WMS_fnc_claimItems',2];
-				[_caller,5000] remoteExec ['WMS_fnc_smallTransactions',2];
-				{_caller removeItem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05','ACE_Cellphone','FilesSecret'];
+				//[_caller,5000] remoteExec ['WMS_fnc_smallTransactions',2];
+				//{_caller removeItem _x}forEach ['Csat_Id_01','Csat_Id_02','Csat_Id_03','Csat_Id_04','Csat_Id_05','ACE_Cellphone','FilesSecret'];
 				for '_i' from 1 to 25 do {
 					_caller removeItem 'FlashDisk';
 				};
@@ -93,19 +93,20 @@ _container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this wil
 		1, 
 		true, 
 		true, 
-		"", 
-		"
-		((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
-		(vehicle _this == _this) &&
+		"",  
+		/*&&
 		{(_this getVariable ['ExileMoney', 0] > 4999)} &&
 		{(items player find 'ACE_Cellphone' != -1)} &&
 		{(magazines player find 'FilesSecret' != -1)} &&
-		{(count (magazines player select {_x == 'FlashDisk'}) > 24)} &&
 		{(magazines player find 'Csat_Id_01' != -1)} &&
 		{(magazines player find 'Csat_Id_02' != -1)} &&
 		{(magazines player find 'Csat_Id_03' != -1)} &&
 		{(magazines player find 'Csat_Id_04' != -1)} &&
-		{(magazines player find 'Csat_Id_05' != -1)}
+		{(magazines player find 'Csat_Id_05' != -1)}*/
+		"
+		((_this getVariable ['playerInTraderZone', false])||(_target getVariable ['TheOneMillionDollarsBase',false])) &&
+		(vehicle _this == _this) &&
+		{(count (magazines player select {_x == 'FlashDisk'}) > 24)}
 		",
 		5, 
 		false 
