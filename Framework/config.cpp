@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.835_2024JUL24_GitHub"; //cargoDump addActions
+	name = "v1.837_2024SEP21_GitHub";
 };
 
 class Extended_PreInit_EventHandlers {

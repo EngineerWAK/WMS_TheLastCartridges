@@ -8,7 +8,7 @@ sleep 1;
 //  ARRAY SETTINGS [fog,gusts,(wind dir),(wind force),overcast,rain]
 
 // Weather Types
-_interval = getNumber(missionConfigFile >> "CfgWeatherSetting" >> "interval");
+_interval 		= getNumber(missionConfigFile >> "CfgWeatherSetting" >> "interval");
 _middleEastMaps = getArray(missionConfigFile >> "CfgWeatherSetting" >> "middleEastMaps"); //keyframesMiddleEast
 _SOGMaps 		= getArray(missionConfigFile >> "CfgWeatherSetting" >> "SOGMaps"); //SOGMaps
 _lowFogMaps 	= getArray(missionConfigFile >> "CfgWeatherSetting" >> "lowFogMaps");
@@ -33,7 +33,7 @@ _weatherpattern = [_clear];
 if (worldName in _middleEastMaps) then {
 	_weatherpattern = [_clear,_clear,_clearwindy,_cover]; //_keyFrames = ["clear","clear","clearwindy","cover"];
 } else {
-	if (worldName in _SOGMaps) then {
+	if ((worldName in _SOGMaps) || (missionName == "TheLastCartridges_SOG_Special")) then {
 		_weatherpattern = [_clear,_popeye,_windy,_stillrain,_clear,_storm,_popeye]; //_keyFrames = ["clear","clear","clearwindy","cover"];
 	}else {
 		_weatherpattern = [_clear,_clearwindy,_windy,_stillrain,_clear,_storm,_windy]; //_keyFrames = ["clear","clearwindy","windy","stillrain","storm"];

@@ -43,17 +43,19 @@ _arrayModification = {
 	_result
 };
 //Set multiple markers from position in an array
-_Pos_Array = [];
-_mkrNameArray = [];
-{  
-  _mkr1 = createMarkerLocal [format ["MKR1_%1_%2",_x, time], _x]; 
-  _mkr1 setMarkerTypeLocal "selector_selectedMission"; 
-  _mkr1 setMarkerColorLocal "colorOPFOR";
-  _mkrNameArray pushBack _mkr1;
-}forEach _Pos_Array;
-uisleep 60;
-{deleteMarker _x}forEach _mkrNameArray;
-
+[] spawn {
+	_Pos_Array = [];
+	_mkrNameArray = [];
+	{  
+  		_mkr1 = createMarkerLocal [format ["MKR1_%1_%2",_x, time], _x]; 
+ 		_mkr1 setMarkerTypeLocal "selector_selectedMission"; 
+  		_mkr1 setMarkerColorLocal "colorOPFOR";
+  		_mkrNameArray pushBack _mkr1;
+	}forEach _Pos_Array;
+	uisleep 60;
+	{deleteMarker _x}forEach _mkrNameArray;
+};
+//
 WMS_fnc_GetOwnedPermanentVhl = {
 	params [
 		"_ownerUID"

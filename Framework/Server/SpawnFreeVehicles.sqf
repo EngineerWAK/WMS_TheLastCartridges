@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 private _vhls = [];
-if (worldName == "Cam_Lao_Nam") then {
+if (worldName == "Cam_Lao_Nam" || (missionName == "TheLastCartridges_SOG_Special")) then {
 	_vhls = [
 	[//_this select 0 = Military
 		"vn_b_wheeled_lr2a_01_nz_army",
