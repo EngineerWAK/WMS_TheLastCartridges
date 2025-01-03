@@ -75,6 +75,8 @@ WMS_fnc_GetOwnedPermanentVhl = {
 
 //spawn a mission server side ONLY (WMS_AMS/InfantryProgram)
 ["commsrelay"] call WMS_fnc_AMS_SpawnMission; //missions from WMS_AMS_MissionList
+["VC Arty"] call WMS_fnc_AMS_SpawnMission;
+
 
 //change server running time server side compatible with statusBar
 WMS_ServRestartSeconds = serverTime+3600; //restart in one hour

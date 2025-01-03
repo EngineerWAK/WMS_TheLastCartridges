@@ -11,6 +11,12 @@
 class CfgSounds
 {
 	sounds[] = {};
+     class AirRaid
+	{
+		name = "AirRaid";
+		sound[] = {"Custom\Ogg\airRaid.ogg",2,1,0};
+		titles[] = {};
+	};
 	class RocketMan
 	{
 		// how the sound is referred to in the editor (e.g. trigger effects)

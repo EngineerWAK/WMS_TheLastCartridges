@@ -263,12 +263,12 @@
 			"vn_o_air_mi2_01_02",
 			"vn_o_air_mi2_03_01", //fuel
 			/////
-			//"O_Heli_Transport_04_medevac_black_F", //Taru is broken
+			"O_Heli_Transport_04_medevac_black_F", //Taru is broken
 			//"O_Heli_Transport_04_repair_black_F",
 			//"O_Heli_Transport_04_ammo_black_F",
-			//"O_Heli_Transport_04_fuel_black_F",
-	       	//"O_Heli_Transport_04_F",
-	       	//"O_Heli_Transport_04_bench_F",
+			"O_Heli_Transport_04_fuel_black_F",
+	       	"O_Heli_Transport_04_F",
+	       	"O_Heli_Transport_04_bench_F",
 	        //"O_Heli_Transport_04_box_F",
 			"B_T_VTOL_01_vehicle_F",
 	        "B_Heli_Transport_03_unarmed_F",

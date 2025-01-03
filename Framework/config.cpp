@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.837_2024SEP21_GitHub";
+	name = "v1.840_2024OCT12_GitHub"; //airRaid sound for VC Arty
 };
 
 class Extended_PreInit_EventHandlers {
