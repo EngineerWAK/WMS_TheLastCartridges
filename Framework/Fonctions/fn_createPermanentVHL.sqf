@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
-private ["_playerVHLarray","_playerArray","_targetUID","_targetOwner","_permanentVhlArray","_arrayPosition","_veh","_vehicleID","_helipadList","_helipad","_helipadOccupied"];
+private ["_spawnDir", "_playerVHLarray","_playerArray","_targetUID","_targetOwner","_permanentVhlArray","_arrayPosition","_veh","_vehicleID","_helipadList","_helipad","_helipadOccupied"];
 params[
 	"_vehicleClassName",
 	"_buyer",
@@ -74,6 +74,7 @@ if (_vehicleClassName isKindOf "Ship" ||_vehicleClassName isKindOf "rhs_pontoon_
 	_helipadList =  nearestObjects [_buyer, ["Land_HelipadEmpty_F"], 50];
 	if (count _helipadList != 0) then {
 			_helipad = _helipadList select 0;
+			_spawnDir = getDir _helipad;
 			_helipadOccupied  =  nearestObjects [(position _helipad),["car","truck","tank","air","Ship"], 4];
 			if (count _helipadOccupied == 0) then {
 				_pos = position _helipad;
@@ -85,7 +86,9 @@ if (_vehicleClassName isKindOf "Ship" ||_vehicleClassName isKindOf "rhs_pontoon_
 		};
 	if (WMS_MissionDebug) then {diag_log format ["[CREATE_PERMANENT_VHL]|WAK|TNA|WMS|UPDATE: Looking for empty position for the Boat: %1", _pos]};
 	//if (surFaceIsWater _pos) then{};
-	_veh = createVehicle [_vehicleClassName, _pos, [], 0, "NONE"];
+	_veh = createVehicle [_vehicleClassName, [(_pos select 0), (_pos select 1), (_pos select 2)+200], [], 0, "NONE"]; //spawn above everithing else to set the right direction
+	_veh setDir _spawnDir;
+	_veh setpos _pos;
 } else {
 	if (count _pos == 0) then {
 		_helipadList =  nearestObjects [_buyer, ["Land_HelipadEmpty_F"], 150];

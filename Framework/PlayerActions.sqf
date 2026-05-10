@@ -117,3 +117,9 @@ private _action7 = ["SaveAndDisconnectTimed","REMOVE YOUR COMPUTER BEFORE Save a
             {!(localNamespace getVariable ['WMS_Loc_CanBuildComputer',true])};
         }] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions"], _action7] call ace_interact_menu_fnc_addActionToObject;
+
+//[] call ace_volume_fnc_lowerVolume; [] call ace_volume_fnc_restoreVolume;
+private _action8 = ["lowervolume","EMERGENCY EARPLUGS!","",{[] call ace_volume_fnc_lowerVolume},{((vehicle player) != player)}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action8] call ace_interact_menu_fnc_addActionToObject;
+private _action9 = ["restorevolume","Listen Around","",{[] call ace_volume_fnc_restoreVolume},{((vehicle player) != player)}] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions"], _action9] call ace_interact_menu_fnc_addActionToObject;

@@ -528,13 +528,13 @@
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{
-			//"O_Heli_Transport_04_medevac_black_F", //Taru is broken
-			//"O_Heli_Transport_04_repair_black_F",
-			//"O_Heli_Transport_04_ammo_black_F",
-			//"O_Heli_Transport_04_fuel_black_F",
-	       	//"O_Heli_Transport_04_F",
-	       	//"O_Heli_Transport_04_bench_F",
-	        //"O_Heli_Transport_04_box_F",
+			"O_Heli_Transport_04_medevac_black_F", //Taru is broken
+			"O_Heli_Transport_04_repair_black_F",
+			"O_Heli_Transport_04_ammo_black_F",
+			"O_Heli_Transport_04_fuel_black_F",
+	       	"O_Heli_Transport_04_F",
+	       	"O_Heli_Transport_04_bench_F",
+	        "O_Heli_Transport_04_box_F",
 			"vtx_UH60M_MEDEVAC",
 			"vtx_UH60M_SLICK",
 			"rhsgred_hidf_cessna_o3a",

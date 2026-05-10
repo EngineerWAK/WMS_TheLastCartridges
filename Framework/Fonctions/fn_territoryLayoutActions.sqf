@@ -93,6 +93,14 @@ if (worldName == "Cam_Lao_Nam" || (missionName == "TheLastCartridges_SOG_Special
 		['SOG Camp LvL6',			'soglvl6',45000,6,'#80c606',true,false]
 	];
 };
+if (worldName == "brf_sumava") then {
+	_layoutsList = _layoutsList+[
+		['The Pond Camp LvL6',			'CUPpondlvl6',45000,6,'#80c606',false,false],
+		['The Pond Camp LvL6',			'CUPpondlvl6',50000,6,'#80c606',true,false],
+		['The CUP Camp LvL6',			'CUPlvl6',40000,6,'#80c606',false,false],
+		['The CUP Camp LvL6',			'CUPlvl6',45000,6,'#80c606',true,false]
+	];
+};
 ////////////////////////////////////////////////////////////////////////////
 {
 	//format the things

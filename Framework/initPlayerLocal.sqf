@@ -79,7 +79,7 @@ if (hasinterface) then {
     ////////// temporary markers on permanent vehicles
     [player] remoteExec ["WMS_fnc_getOwnedPermanentVhls", 2]; //to the server
     //////////Bypass the "faction only" bulshit //////////
-    //[] execVM "Custom\AllUniforms.sqf";
+    [] execVM "Custom\AllUniforms.sqf"; //buggy but so f u c k i n g convenient
 
     //////////Briefing//////////
     _null = [] execVM "Custom\Briefing\briefing.sqf"; // Briefing and Rules

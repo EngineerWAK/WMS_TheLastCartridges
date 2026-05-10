@@ -227,3 +227,106 @@ if(_vehicleClassName == "I_G_Offroad_01_F" ||_vehicleClassName ==  "B_G_Offroad_
 		["HideDoor1",0,"HideDoor2",0,"HideDoor3",0,"HideBackpacks",0,"HideBumper1",0,"HideBumper2",1,"HideConstruction",0,"hidePolice",1,"HideServices",1,"BeaconsStart",0,"BeaconsServicesStart",0]
 	] call BIS_fnc_initVehicle;
 };
+
+//HATCHET///////////////////////////////////////////////////////////////////////////////////
+if(_vehicleClassName == "vtx_S70M") then{
+//_veh = createVehicle ["vtx_S70M",position player,[],0,"NONE"];
+	/*[
+		_veh,
+		["mh60s",1], 
+		["GunnerSeats_Hide",0,"Hoist_hide",0,"Skis_show",0,"Door_LF_Hide",1,"Door_RF_Hide",1,"ERFS_show",0,"cabindoor_L",0,"cabindoor_R",0]
+	] call BIS_fnc_initVehicle;*/
+};
+
+
+if(_vehicleClassName == "vtx_UH60M_MEDEVAC") then{
+//_veh = createVehicle ["vtx_UH60M_MEDEVAC",position player,[],0,"NONE"];
+/*[
+	_veh,
+	["s70a9_aus_med",1], 
+	["Hoist_hide",0,"cabindoor_L",1,"cabindoor_R",1,"Skis_show",0,"Door_LF_Hide",0,"Door_RF_Hide",0,"ERFS_show",0,"GunnerSeats_Hide",0]
+] call BIS_fnc_initVehicle;*/
+
+_veh setObjectTextureGlobal [16, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia_medevac\main_co.paa"];
+_veh setObjectTextureGlobal [17, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia_medevac\misc_co.paa"];
+_veh setObjectTextureGlobal [18, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia_medevac\tail_co.paa"];
+
+};
+
+if(_vehicleClassName == "vtx_UH60M_SLICK") then{
+	//_veh = createVehicle ["vtx_UH60M_SLICK",position player,[],0,"NONE"];
+/*[
+	_veh,
+	["mh60m_aus",1], 
+	["Hoist_hide",1,"GunnerSeats_Hide",0,"cabindoor_L",0,"cabindoor_R",0,"Skis_show",0,"Door_LF_Hide",0,"Door_RF_Hide",0,"ERFS_show",0]
+] call BIS_fnc_initVehicle;*/
+[_veh] call ace_fastroping_fnc_equipFRIES;
+_veh setObjectTextureGlobal [16, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\main_co.paa"];
+_veh setObjectTextureGlobal [17, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\misc_co.paa"];
+_veh setObjectTextureGlobal [18, "z\vtx\addons\uh60_misc\data\textures\s-70a-9_australia\tail_co.paa"];
+};
+
+if(_vehicleClassName == "vtx_HH60") then{ //no change
+	//_veh = createVehicle ["vtx_HH60",position player,[],0,"NONE"];
+/*[
+	_veh,
+	["hh60g",1], 
+	["ERFS_show",1,"GunnerSeats_Hide",0,"cabindoor_L",0,"cabindoor_R",0,"Hoist_hide",0,"Skis_show",0,"Door_LF_Hide",0,"Door_RF_Hide",0]
+] call BIS_fnc_initVehicle;*/
+[_veh] call ace_fastroping_fnc_equipFRIES;
+
+};
+
+if(_vehicleClassName == "vtx_UH60M") then{
+	//_veh = createVehicle ["vtx_UH60M",position player,[],0,"NONE"];
+/*[
+	_veh,
+	["uh60m_usa",1], 
+	["Hoist_hide",1,"cabindoor_L",0,"cabindoor_R",0,"CabinSeats_1_Hide",0,"CabinSeats_2_Hide",0,"CabinSeats_3_Hide",0,"Skis_show",0,"Door_LF_Hide",1,"Door_RF_Hide",1,"ERFS_show",0,"GunnerSeats_Hide",0]
+] call BIS_fnc_initVehicle;*/
+[_veh] call ace_fastroping_fnc_equipFRIES;
+_veh setObjectTextureGlobal [16, "z\vtx\addons\uh60_misc\data\textures\uh-60m_us_army\main_co.paa"];
+//_veh setObjectTextureGlobal [17, "z\vtx\addons\uh60\data\exterior\misc_co.paa"];
+_veh setObjectTextureGlobal [18, "z\vtx\addons\uh60_misc\data\textures\uh-60m_us_army\tail_co.paa"];
+
+};
+
+if(_vehicleClassName == "vtx_MH60M") then{
+	//_veh = createVehicle ["vtx_MH60M",position player,[],0,"NONE"];
+/*[
+	_veh,
+	["mh60m",1], 
+	["ERFS_show",1,"Hoist_hide",0,"Skis_show",0,"Door_LF_Hide",1,"Door_RF_Hide",1,"GunnerSeats_Hide",0,"cabindoor_L",0,"cabindoor_R",0]
+] call BIS_fnc_initVehicle; //do not work on hatchet but:*/
+	//_veh setObjectTextureGlobal [16, "a3\armor_f_exp\apc_wheeled_02\data\apc_wheeled_02_ext_01_ghex_co.paa"]; //17 is rotor texture
+	//_veh setObjectTextureGlobal [18, "a3\armor_f_exp\apc_wheeled_02\data\apc_wheeled_02_ext_02_ghex_co.paa"];
+[_veh] call ace_fastroping_fnc_equipFRIES;
+//hide fuel prob// //works
+[_veh, parseNumber false, true] call vtx_uh60_misc_fnc_fold; 
+ _veh animateSource ['FuelProbe_show', [getNumber (configOf _veh >> 'AnimationSources' >> 'FuelProbe_show' >> 'initPhase'), 0] select true, true];
+
+};
+
+if(_vehicleClassName == "vtx_MH60M_DAP") then{ //no change
+	//_veh = createVehicle ["vtx_MH60M_DAP",position player,[],0,"NONE"];
+/*[
+	_veh,
+	["mh60m",1], 
+	["GunnerSeats_Hide",1,"Hoist_hide",0,"Skis_show",0,"Door_LF_Hide",1,"Door_RF_Hide",1,"ERFS_show",0,"cabindoor_L",0,"cabindoor_R",0]
+] call BIS_fnc_initVehicle;*/
+[_veh] call ace_fastroping_fnc_equipFRIES;
+//hide fuel prob// //works
+[_veh, parseNumber false, true] call vtx_uh60_misc_fnc_fold; 
+ _veh animateSource ['FuelProbe_show', [getNumber (configOf _veh >> 'AnimationSources' >> 'FuelProbe_show' >> 'initPhase'), 0] select true, true];
+};
+
+if(_vehicleClassName == "vtx_MH60M_DAP_MLASS") then{ //no change
+	//_veh = createVehicle ["vtx_MH60M_DAP_MLASS",position player,[],0,"NONE"];
+/*[
+	_veh,
+	["mh60m",1], 
+	["GunnerSeats_Hide",1,"Hoist_hide",0,"Skis_show",0,"Door_LF_Hide",1,"Door_RF_Hide",1,"ERFS_show",0,"cabindoor_L",0,"cabindoor_R",0]
+] call BIS_fnc_initVehicle;*/
+[_veh] call ace_fastroping_fnc_equipFRIES;
+
+};

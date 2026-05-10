@@ -189,7 +189,7 @@ class rhs_weap_hk416d145_wd_2		{ quality = 1; price = 454; };
 class rhs_weap_hk416d145			{ quality = 1; price = 454; };
 class rhs_weap_m4a1_blockII_M203_bk	{ quality = 1; price = 654; };
 class arifle_MSBS65_Mark_black_F	{ quality = 1; price = 454; };
-class arifle_ARX_blk_F				{ quality = 1; price = 754; };
+class arifle_ARX_blk_F				{ quality = 1; price = 1754; };
 class rhs_weap_hk416d10_LMT			{ quality = 1; price = 454; };
 class rhs_weap_m4				    { quality = 1; price = 414; };
 class rhs_weap_m4a1_blockII_KAC		{ quality = 1; price = 454; };

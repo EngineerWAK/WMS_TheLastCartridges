@@ -644,8 +644,8 @@
 	class O_Heli_Transport_04_bench_F  			{ quality = 2; price = 10000; };
 	class O_Heli_Transport_04_box_F  			{ quality = 2; price = 10000; };
 	class O_Heli_Transport_04_medevac_black_F	{ quality = 4; price = 15110; };
-	class O_Heli_Transport_04_repair_black_F	{ quality = 4; price = 25000; };
-	class O_Heli_Transport_04_ammo_black_F		{ quality = 4; price = 25000; };
+	class O_Heli_Transport_04_repair_black_F	{ quality = 4; price = 45000; };
+	class O_Heli_Transport_04_ammo_black_F		{ quality = 4; price = 35000; };
 	class O_Heli_Transport_04_fuel_black_F		{ quality = 4; price = 21000; };
 	class RHS_Mi8mt_Cargo_vvs  					{ quality = 1; price = 20004; };
 	class O_Heli_Light_02_unarmed_F  			{ quality = 0; price = 10000; };

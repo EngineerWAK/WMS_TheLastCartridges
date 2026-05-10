@@ -411,3 +411,40 @@ player addAction
 	"",
 	""
 ];
+
+ropeAttachEnabled (vehicle player);
+(vehicle player) enableRopeAttach false;
+//
+[] spawn {
+private _mkrN = 0;
+private _mkrName = "MKR_";
+private _mkrList = [];
+{
+	if (_x isKindOf "I_Survivor_F") then {
+		_mkrName = format ["MKR_%1", _mkrN]
+		private _marker = createMarker [_mkrName, position _x];
+		_marker setMarkerType "MinefieldAP";
+		_marker setMarkerText (name _x);
+		_mkrN = _mkrN+1;
+		_mkrList pushback _mkrName;
+	};
+}forEach allDeadMen;
+uisleep 60;
+{deleteMarker _x}forEach _mkrList;
+};
+//export markers position to list
+private _list = [];
+private _mkrType = "";
+private _dir = false;
+{
+	if ((getmarkerType _x) == _mkrType || (markershape _x) == _mkrType) then {
+		if (_dir) then {
+			_list pushback [(getMarkerPos _x), markerDir _x];
+		} else {
+			_list pushback (getMarkerPos _x);
+		};
+	};
+}forEach allMapMarkers;
+
+copyToClipBoard format ["%1",_list]; 
+systemChat format ["%1 positions Exported", (count _list)];

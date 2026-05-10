@@ -2073,6 +2073,184 @@ _waterWorldLVL6 = [
 	["Land_WaterCooler_01_old_F",[-0.5,-1.8,0.27],93.6],
 	["Land_WaterTank_03_F",[29.7,14.9,0.01],0]
 	];
+_CUPpondlvl6 = [
+	["Box_IND_AmmoVeh_F",[6,-11.4,0],143],
+	["Campfire_burning_F",[1.7,-18.9,0],4.4],
+	["Land_BagFence_01_corner_green_F",[-3.9,-32,5.17],6.9,"flat"],
+	["Land_BagFence_01_corner_green_F",[-22.4,23.7,5.12],39.6,"flat"],
+	["Land_BagFence_01_corner_green_F",[-25.7,19.5,5.15],126.7,"flat"],
+	["Land_BagFence_01_corner_green_F",[31.7,8,5.07],159.9,"flat"],
+	["Land_BagFence_01_corner_green_F",[29.7,13,5.1],247.1,"flat"],
+	["Land_BagFence_01_corner_green_F",[-9.2,-31.3,5.15],279.8,"flat"],
+	["Land_BagFence_01_short_green_F",[30.4,10.4,5.09],68.4,"flat"],
+	["Land_BagFence_01_short_green_F",[-6.6,-31.4,5.17],188.2,"flat"],
+	["Land_BagFence_01_short_green_F",[-23.8,21.4,5.14],308,"flat"],
+	["Land_Cargo_Patrol_V1_F",[-6.9,-33.8,0],10.4,"flat"],
+	["Land_Cargo_Patrol_V1_F",[-25.7,22.9,0],130.1,"flat"],
+	["Land_Cargo_Patrol_V1_F",[32.7,11.4,0],249.4,"flat"],
+	["Land_ClothShelter_02_F",[3.5,-16.9,0],54.1,"flat"],
+	["Land_CncBlock_Stripes",[-29.8,20.8,0],210],
+	["Land_CncBlock_Stripes",[-33,15.4,0],210],
+	["Land_CncBlock_Stripes",[-3.3,-33.7,0],270],
+	["Land_CncBlock_Stripes",[3,-33.7,0],270],
+	["Land_CncBlock_Stripes",[32.8,15.6,0],330.3],
+	["Land_CncBlock_Stripes",[29.7,21.1,0],330.3],
+	["Land_fs_feed_F",[9.5,-3.9,0],54.5,"flat"],
+	["Land_GH_Stairs_F",[-29.3,-10.3,-2.17],70.3,"flat"],
+	["Land_GH_Stairs_F",[5.3,30.6,-2.17],189.6,"flat"],
+	["Land_GH_Stairs_F",[23.3,-20.7,-2.17],322.4,"flat"],
+	["Land_HelipadCircle_F",[12.6,17.9,0],35.1],
+	["Land_HelipadCircle_F",[-15.6,-15.5,0],225.3],
+	["Land_HelipadCircle_F",[-21.8,2,0],275.2],
+	["Land_HelipadCircle_F",[-5.6,21.2,0],345.2],
+	["Land_i_Shed_Ind_old_F",[8.3,-17,0],53.3,"flat"],
+	["Land_LampIndustrial_01_F",[31.1,15.1,0],62.7,"flat"],
+	["Land_LampIndustrial_01_F",[-3.2,-34,0],180,"flat"],
+	["Land_LampIndustrial_01_F",[-28,19.5,0],301.3,"flat"],
+	["Land_Net_Fence_Gate_F",[-0.2,-34.9,0],0,"flat"],
+	["Land_Net_Fence_Gate_F",[30.2,17.8,0],60.2,"flat"],
+	["Land_Net_Fence_Gate_F",[-30.3,17.4,0],300,"flat"],
+
+	["Land_PierWooden_01_16m_F",[0.2,-48.1,-1],180],//,"asl"
+	["Land_PierWooden_01_dock_F",[4.9,-64,-1],180],//,"asl"
+	["Land_PierWooden_01_hut_F",[-0.9,-74.3,-1],180],//,"asl"
+
+	["Land_PortableLight_single_F",[-3.8,34.3,0],12.9],
+	["Land_PortableLight_single_F",[23.7,24.9,0],56.4],
+	["Land_PortableLight_single_F",[-27.4,-20.6,0],247.1],
+	["Land_PortableLight_single_F",[-33.6,7.6,0],298.2],
+	["Land_Research_house_V1_F",[5,-23.5,0],53.2,"flat"],
+	["Land_SandbagBarricade_01_half_F",[0.2,-15.1,0],323.4],
+	["Land_SandbagBarricade_01_hole_F",[15.6,-31.7,0],153.4,"flat"],
+	["Land_Shed_Small_F",[19.8,-10.5,0],323.4],
+	["Land_WaterTank_03_F",[4.2,-13.7,0],0],
+	["Land_WoodenLog_F",[1.3,-16.5,0],174],
+	["Land_WoodenLog_F",[3.9,-18.9,0],271],
+	//["rhsgref_serhat_radar",[0,0,0],0],
+	["Wire",[-7.1,-35.5,0],10.8],
+	["Wire",[-27.3,24,0],131.4],
+	["Wire",[34.1,12,0],250.8],
+	["zed2",[-6.3,-34.4,0],10.5,"flat"],
+	["zed2",[-12.2,-32.8,0],20.4,"flat"],
+	["zed2",[-17.7,-30.2,0],30.4,"flat"],
+	["zed2",[-22.6,-26.7,0],40.4,"flat"],
+	["zed2",[-26.9,-22.4,0],50.3,"flat"],
+	["zed2",[-30.4,-17.3,0],60.3,"flat"],
+	["zed2",[-32.9,-11.8,0],70.3,"flat"],
+	["zed2",[-34.5,-6,0],80.1,"flat"],
+	["zed2",[-35,0,0],90,"flat"],
+	["zed2",[-34.5,6.1,0],100,"flat"],
+	["zed2",[-32.9,11.9,0],110,"flat"],
+	["zed2",[-26.8,22.4,0],129.9,"flat"],
+	["zed2",[-22.5,26.8,0],139.9,"flat"],
+	["zed2",[-17.5,30.2,0],149.9,"flat"],
+	["zed2",[-12,32.8,0],159.9,"flat"],
+	["zed2",[-6.2,34.5,0],169.7,"flat"],
+	["zed2",[-0.2,35,0],179.6,"flat"],
+	["zed2",[5.9,34.5,0],189.6,"flat"],
+	["zed2",[11.7,33,0],199.6,"flat"],
+	["zed2",[17.3,30.4,0],209.6,"flat"],
+	["zed2",[22.3,27,0],219.5,"flat"],
+	["zed2",[26.6,22.7,0],229.5,"flat"],
+	["zed2",[26.1,-12.3,0],232.9,"flat"],
+	["zed2",[22.4,-7.4,0],232.9,"flat"],
+	["zed2",[32.8,12.3,0],249.5,"flat"],
+	["zed2",[34.4,6.5,0],259.4,"flat"],
+	["zed2",[35,0.5,0],269.2,"flat"],
+	["zed2",[34.6,-5.6,0],279.2,"flat"],
+	["zed2",[33.1,-11.5,0],289.2,"flat"],
+	["zed2",[30.6,-17.1,0],299.2,"flat"],
+	["zed2",[27.2,-22.1,0],309.1,"flat"],
+	["zed2",[11.8,-33,0],340.4,"flat"],
+	["zed2",[5.9,-34.5,0],350.4,"flat"]
+	];
+_CUPlvl6 = [
+	["Box_IND_AmmoVeh_F",[6,-11.4,0],143],
+	["Campfire_burning_F",[1.7,-18.9,0],4.4],
+	["Land_BagFence_01_corner_green_F",[-3.9,-32,5.17],6.9,"flat"],
+	["Land_BagFence_01_corner_green_F",[-22.4,23.7,5.12],39.6,"flat"],
+	["Land_BagFence_01_corner_green_F",[-25.7,19.5,5.15],126.7,"flat"],
+	["Land_BagFence_01_corner_green_F",[31.7,8,5.07],159.9,"flat"],
+	["Land_BagFence_01_corner_green_F",[29.7,13,5.1],247.1,"flat"],
+	["Land_BagFence_01_corner_green_F",[-9.2,-31.3,5.15],279.8,"flat"],
+	["Land_BagFence_01_short_green_F",[30.4,10.4,5.09],68.4,"flat"],
+	["Land_BagFence_01_short_green_F",[-6.6,-31.4,5.17],188.2,"flat"],
+	["Land_BagFence_01_short_green_F",[-23.8,21.4,5.14],308,"flat"],
+	["Land_Cargo_Patrol_V1_F",[-6.9,-33.8,0],10.4,"flat"],
+	["Land_Cargo_Patrol_V1_F",[-25.7,22.9,0],130.1,"flat"],
+	["Land_Cargo_Patrol_V1_F",[32.7,11.4,0],249.4,"flat"],
+	["Land_ClothShelter_02_F",[3.5,-16.9,0],54.1],
+	["Land_CncBlock_Stripes",[-29.8,20.8,0],210],
+	["Land_CncBlock_Stripes",[-33,15.4,0],210],
+	["Land_CncBlock_Stripes",[3,-36.2,0],270],
+	["Land_CncBlock_Stripes",[-3.4,-36.3,0],270],
+	["Land_CncBlock_Stripes",[29.7,21.1,0],330.3],
+	["Land_CncBlock_Stripes",[32.8,15.6,0],330.3],
+	["Land_fs_feed_F",[9.5,-3.9,0],54.5,"flat"],
+	["Land_GH_Stairs_F",[-29.3,-10.3,-2.17],70.3,"flat"],
+	["Land_GH_Stairs_F",[5.3,30.6,-2.17],189.6,"flat"],
+	["Land_GH_Stairs_F",[23.3,-20.7,-2.17],322.4,"flat"],
+	["Land_HelipadCircle_F",[12.6,17.9,0],35.1],
+	["Land_HelipadCircle_F",[-15.6,-15.5,0],225.3],
+	["Land_HelipadCircle_F",[-21.8,2,0],275.2],
+	["Land_HelipadCircle_F",[-5.6,21.2,0],345.2],
+	["Land_i_Shed_Ind_old_F",[8.3,-17,0],53.3,"flat"],
+	["Land_LampIndustrial_01_F",[31.1,15.1,0],62.7,"flat"],
+	["Land_LampIndustrial_01_F",[-3.2,-34,0],180,"flat"],
+	["Land_LampIndustrial_01_F",[-28,19.5,0],301.3,"flat"],
+	["Land_Net_Fence_Gate_F",[30.2,17.8,0],60.2,"flat"],
+	["Land_Net_Fence_Gate_F",[-0.2,-34.9,0],180.4,"flat"],
+	["Land_Net_Fence_Gate_F",[-30.3,17.4,0],300,"flat"],
+	["Land_PortableLight_single_F",[-3.8,34.3,0],12.9],
+	["Land_PortableLight_single_F",[23.7,24.9,0],56.4],
+	["Land_PortableLight_single_F",[-27.4,-20.6,0],247.1],
+	["Land_PortableLight_single_F",[-33.6,7.6,0],298.2],
+	["Land_Research_house_V1_F",[5,-23.5,0],53.2,"flat"],
+	["Land_SandbagBarricade_01_half_F",[0.2,-15.1,0],323.4],
+	["Land_SandbagBarricade_01_hole_F",[15.6,-31.7,0],153.4,"flat"],
+	["Land_Shed_Small_F",[19.8,-10.5,0],323.4,"flat"],
+	["Land_WaterTank_03_F",[4.2,-13.7,0],0],
+	["Land_WoodenLog_F",[1.3,-16.5,0],174],
+	["Land_WoodenLog_F",[3.9,-18.9,0],271],
+	//["rhsgref_serhat_radar",[0,0,0],0],
+	["Wire",[-7.1,-35.5,0],10.8],
+	["Wire",[-27.3,24,0],131.4],
+	["Wire",[34.1,12,0],250.8],
+	["zed2",[-6.3,-34.4,0],10.5,"flat"],
+	["zed2",[-12.2,-32.8,0],20.4,"flat"],
+	["zed2",[-17.7,-30.2,0],30.4,"flat"],
+	["zed2",[-22.6,-26.7,0],40.4,"flat"],
+	["zed2",[-26.9,-22.4,0],50.3,"flat"],
+	["zed2",[-30.4,-17.3,0],60.3,"flat"],
+	["zed2",[-32.9,-11.8,0],70.3,"flat"],
+	["zed2",[-34.5,-6,0],80.1,"flat"],
+	["zed2",[-35,0,0],90,"flat"],
+	["zed2",[-34.5,6.1,0],100,"flat"],
+	["zed2",[-32.9,11.9,0],110,"flat"],
+	["zed2",[-26.8,22.4,0],129.9,"flat"],
+	["zed2",[-22.5,26.8,0],139.9,"flat"],
+	["zed2",[-17.5,30.2,0],149.9,"flat"],
+	["zed2",[-12,32.8,0],159.9,"flat"],
+	["zed2",[-6.2,34.5,0],169.7,"flat"],
+	["zed2",[-0.2,35,0],179.6,"flat"],
+	["zed2",[5.9,34.5,0],189.6,"flat"],
+	["zed2",[11.7,33,0],199.6,"flat"],
+	["zed2",[17.3,30.4,0],209.6,"flat"],
+	["zed2",[22.3,27,0],219.5,"flat"],
+	["zed2",[26.6,22.7,0],229.5,"flat"],
+	["zed2",[22.4,-7.4,0],232.9,"flat"],
+	["zed2",[26.1,-12.3,0],232.9,"flat"],
+	["zed2",[32.8,12.3,0],249.5,"flat"],
+	["zed2",[34.4,6.5,0],259.4,"flat"],
+	["zed2",[35,0.5,0],269.2,"flat"],
+	["zed2",[34.6,-5.6,0],279.2,"flat"],
+	["zed2",[33.1,-11.5,0],289.2,"flat"],
+	["zed2",[30.6,-17.1,0],299.2,"flat"],
+	["zed2",[27.2,-22.1,0],309.1,"flat"],
+	["zed2",[11.8,-33,0],340.4,"flat"],
+	["zed2",[5.9,-34.5,0],350.4,"flat"]
+	];
+
 switch (tolower _layout) do
 {	//lvl 1
 	case "flagonly": {
@@ -2173,6 +2351,12 @@ switch (tolower _layout) do
 	case "soglvl6": {
 		_objects = _SOGLVL6;
 		};
+	case "cuppondlvl6": {
+		_objects = _CUPpondlvl6;
+		};
+	case "cuplvl6": {
+		_objects = _CUPlvl6;
+		};
 	default { 
 		_objects = [["FirePlace_burning_F",[-2.66703,-5.399602,0],46.8]];
 		};
@@ -2181,7 +2365,18 @@ if (WMS_MissionDebug) then {diag_log format ["[BASE CAMP]|WAK|TNA|WMS| _layout =
 _fastTravelers = _flagObject getVariable ["WMS_BaseFriends", []];
 _weaponSystemList = ["B_AAA_System_01_F","B_SAM_System_01_F","B_SAM_System_02_F","B_SAM_System_03_F","B_Radar_System_01_F"];
 _weaponSystemObjects = [];
-_waterWorldObjectASL = ["Land_QuayConcrete_01_20m_F","Land_QuayConcrete_01_20m_wall_F","Land_QuayConcrete_01_5m_ladder_F","Land_QuayConcrete_01_innerCorner_F","Land_QuayConcrete_01_outterCorner_F","Land_QuayConcrete_01_pier_F"];
+_waterWorldObjectASL = [
+	"Land_PierWooden_01_16m_F",
+	"Land_PierWooden_01_dock_F",
+	"Land_PierWooden_01_hut_F",
+
+	"Land_QuayConcrete_01_20m_F",
+	"Land_QuayConcrete_01_20m_wall_F",
+	"Land_QuayConcrete_01_5m_ladder_F",
+	"Land_QuayConcrete_01_innerCorner_F",
+	"Land_QuayConcrete_01_outterCorner_F",
+	"Land_QuayConcrete_01_pier_F"
+	];
 _waterSources = ["Land_ConcreteWell_02_F"];
 _ammoSources = ["Box_IND_AmmoVeh_F"];
 _forceMedicalFacilities = getArray(missionConfigFile >> "CfgForceMedicalFacilities" >> "vehicles");
@@ -2202,10 +2397,10 @@ _compoRefPoint setDir _dirFlag;
 			_object setvectorup _gradient;
 		};
 	};
-	if ((count _x) > 4) then { //useless
+	/*if ((count _x) > 4) then { //useless
 		_objPos = position _object;
 		_object setpos [(_objPos select 0), (_objPos select 1), (_x select 4)];
-	};
+	};*/
 	if ((_x select 0) in _waterSources) then {
 		[_object, 150] call acex_field_rations_fnc_setRemainingWater;
 	};

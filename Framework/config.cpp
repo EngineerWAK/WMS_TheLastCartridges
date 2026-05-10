@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.840_2024OCT12_GitHub"; //airRaid sound for VC Arty
+	name = "v1.846_2026MAY10_GitHub"; //hatchet remoteExec shit and sumava map
 };
 
 class Extended_PreInit_EventHandlers {

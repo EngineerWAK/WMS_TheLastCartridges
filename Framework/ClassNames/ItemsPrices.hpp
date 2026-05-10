@@ -112,6 +112,7 @@
     class ACE_MRE_MeatballsPasta        { quality = 0; price = 30; };
     class ACE_MRE_SteakVegetables       { quality = 0; price = 30; };
 	
+    class ACE_EarPlugs                  { quality = 0; price = 50; };
     class ACE_personalAidKit            { quality = 5; price = 1500; };
     class ACE_surgicalKit               { quality = 5; price = 1500; };
     class ACE_adenosine				    { quality = 1; price = 250; };

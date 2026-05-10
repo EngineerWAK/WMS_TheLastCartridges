@@ -252,8 +252,8 @@ class AssaultWEST_RHS
 	{
 		"rhs_weap_g36c",
 		"rhs_weap_g36c_Folded",
-		"rhs_weap_g36kv",
-		"rhs_weap_g36kv_Folded",
+		//"rhs_weap_g36kv", no more
+		//"rhs_weap_g36kv_Folded",
 		"rhs_weap_M590_5RD", //shotgun
 		"rhs_weap_M590_8RD", //shotgun
 		"rhs_weap_m4_carryhandle_m203S",
