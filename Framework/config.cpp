@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.846_2026MAY10_GitHub"; //hatchet remoteExec shit and sumava map
+	name = "v1.850_2026MAY22_GitHub"; //ALAMO Base LVL 6
 };
 
 class Extended_PreInit_EventHandlers {
@@ -296,7 +296,8 @@ class CfgOfficeTrader
 		750, //DistSpawnZone = 
 		210, //DistTerritories = 
 		2, //maximum Territories/player
-		300 //DistTerritoriesNoCustomSpawn
+		300, //DistTerritoriesNoCustomSpawn
+		-4 //surfaceIsWater minimum depth
 	};
 	TradeRespect5k[] = 
 	{

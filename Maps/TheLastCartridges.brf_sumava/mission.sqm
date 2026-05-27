@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1756;
+		nextID=1791;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=261;
+		nextID=317;
 	};
 	class Camera
 	{
-		pos[]={1864.5951,145.99303,6053.9751};
-		dir[]={-0.82642353,-0.24078964,-0.50909364};
-		up[]={-0.20504135,0.97057265,-0.12631232};
-		aside[]={-0.52452809,4.7780486e-07,0.85148549};
+		pos[]={2863.0427,90.652992,8308.5107};
+		dir[]={0.66638923,-0.33614489,0.66559577};
+		up[]={0.23784102,0.9417994,0.23755869};
+		aside[]={0.70671165,1.3236422e-07,-0.70755386};
 	};
 };
 binarizationWanted=0;
@@ -132,7 +132,9 @@ addons[]=
 	"CUP_Editor_A2_Roads_Config",
 	"A3_Rocks_F_Exp_Cliff",
 	"CUP_Buildings_Config",
-	"A3_Structures_F_Mil_BagBunker"
+	"A3_Structures_F_Mil_BagBunker",
+	"A3_Props_F_Exp_Military_Camps",
+	"A3_Structures_F_Walls"
 };
 class AddonsMetaData
 {
@@ -679,7 +681,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=971;
+		items=1006;
 		class Item0
 		{
 			dataType="Marker";
@@ -26792,7 +26794,7 @@ class Mission
 			position[]={8197.8418,3,5271.7095};
 			name="marker_180";
 			type="mil_triangle";
-			angle=174.73535;
+			angle=174.73532;
 			id=1387;
 		};
 		class Item634
@@ -30623,7 +30625,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3017.5833,236.81,312.32339};
-				angles[]={0,2.9740832,-0};
+				angles[]={0,2.9740832,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30639,7 +30641,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3039.085,239.99539,319.98648};
-				angles[]={0,0.84528917,-0};
+				angles[]={0,0.84528917,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30655,7 +30657,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3078.5349,241.005,346.09601};
-				angles[]={0,4.2378187,-0};
+				angles[]={0,4.2378187,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30671,7 +30673,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3101.5571,241.55521,299.974};
-				angles[]={0,5.067018,-0};
+				angles[]={0,5.067018,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30687,7 +30689,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3049.2998,241.02684,269.51617};
-				angles[]={0,6.2022033,-0};
+				angles[]={0,6.2022033,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30703,7 +30705,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2971.5598,241.175,242.90924};
-				angles[]={0,0.23187552,-0};
+				angles[]={0,0.23187552,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30719,7 +30721,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2922.5249,235.97066,255.20642};
-				angles[]={0,1.453352,-0};
+				angles[]={0,1.453352,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30735,7 +30737,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3053.6292,241.1116,388.06021};
-				angles[]={0,3.5090535,-0};
+				angles[]={0,3.5090535,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30751,7 +30753,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2972.5474,241.12592,365.8688};
-				angles[]={0,2.9479859,-0};
+				angles[]={0,2.9479859,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30767,7 +30769,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2919.804,241.175,330.73996};
-				angles[]={0,1.9945086,-0};
+				angles[]={0,1.9945086,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30783,7 +30785,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2892.8716,239.65932,261.73154};
-				angles[]={0,0.95815897,-0};
+				angles[]={0,0.95815897,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30799,7 +30801,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2932.6448,236.98956,279.0506};
-				angles[]={0,5.560246,-0};
+				angles[]={0,5.560246,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30815,7 +30817,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2970.9338,237.31735,276.72412};
-				angles[]={0,4.6085873,-0};
+				angles[]={0,4.6085873,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30831,7 +30833,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3017.6575,237.16734,286.94626};
-				angles[]={0,4.0986814,-0};
+				angles[]={0,4.0986814,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30847,7 +30849,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3021.1548,237.16734,342.9053};
-				angles[]={0,1.4430175,-0};
+				angles[]={0,1.4430175,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30863,7 +30865,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2983.9404,237.16734,317.86206};
-				angles[]={0,0.88026106,-0};
+				angles[]={0,0.88026106,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30919,7 +30921,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={236.43396,238.10799,2047.9886};
-				angles[]={0,2.1510556,-0};
+				angles[]={0,2.1510556,0};
 			};
 			side="Empty";
 			flags=1;
@@ -30936,7 +30938,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={235.19684,236.14337,2069.9683};
-				angles[]={0,3.0738394,-0};
+				angles[]={0,3.0738394,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30953,7 +30955,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={278.6091,238.12839,2056.6807};
-				angles[]={0,3.451447,-0};
+				angles[]={0,3.451447,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30969,7 +30971,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={246.24295,237.61067,2014.3333};
-				angles[]={0,0.66065985,-0};
+				angles[]={0,0.66065985,0};
 			};
 			side="Empty";
 			flags=5;
@@ -30985,7 +30987,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={215.84097,235.83963,2056.4856};
-				angles[]={0,1.7448972,-0};
+				angles[]={0,1.7448972,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31001,7 +31003,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={313.85364,227.80125,1984.4896};
-				angles[]={0,5.1551113,-0};
+				angles[]={0,5.1551113,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31017,7 +31019,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={325.91785,227.18257,2030.5601};
-				angles[]={0,3.5856407,-0};
+				angles[]={0,3.5856407,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31033,7 +31035,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={308.31708,228.02303,1982.5034};
-				angles[]={0,3.3132346,-0};
+				angles[]={0,3.3132346,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31049,7 +31051,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={331.6528,226.26242,2028.7545};
-				angles[]={0,0.44451132,-0};
+				angles[]={0,0.44451132,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31065,7 +31067,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={271.6521,237.72758,2057.7002};
-				angles[]={0,0.17786734,-0};
+				angles[]={0,0.17786734,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31081,7 +31083,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={283.59558,237.49995,2052.7664};
-				angles[]={0,0.80791664,-0};
+				angles[]={0,0.80791664,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31097,7 +31099,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={228.46347,235.27029,2067.3721};
-				angles[]={0,5.8150377,-0};
+				angles[]={0,5.8150377,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31113,7 +31115,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={218.91869,235.60985,2050.8401};
-				angles[]={0,3.5650592,-0};
+				angles[]={0,3.5650592,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31129,7 +31131,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={219.25693,235.11737,2061.8938};
-				angles[]={0,5.3778162,-0};
+				angles[]={0,5.3778162,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31145,7 +31147,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={227.9249,236.30064,2048.9866};
-				angles[]={0,3.6817083,-0};
+				angles[]={0,3.6817083,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31161,7 +31163,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={240.46169,237.10193,2039.833};
-				angles[]={0,3.7821546,-0};
+				angles[]={0,3.7821546,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31177,7 +31179,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={249.35263,237.08536,2008.0659};
-				angles[]={0,4.2215672,-0};
+				angles[]={0,4.2215672,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31193,7 +31195,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={240.58435,236.65054,2016.8746};
-				angles[]={0,3.6742773,-0};
+				angles[]={0,3.6742773,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31280,7 +31282,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11521.498,91.545288,9879.8135};
-				angles[]={0,3.0850489,-0};
+				angles[]={0,3.0850489,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31297,7 +31299,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11515.621,92.120483,9901.7266};
-				angles[]={0,1.8127689,-0};
+				angles[]={0,1.8127689,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31358,7 +31360,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11502.424,92.054405,9897.8682};
-				angles[]={0,0.08989577,-0};
+				angles[]={0,0.08989577,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31407,7 +31409,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7151.9019,48.224575,6042.5806};
-				angles[]={0,5.7238259,-0};
+				angles[]={0,5.7238259,0};
 			};
 			side="Empty";
 			flags=1;
@@ -31441,7 +31443,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7157.0186,48.00285,6045.8413};
-				angles[]={0,1.0291917,-0};
+				angles[]={0,1.0291917,0};
 			};
 			side="Empty";
 			flags=1;
@@ -31475,7 +31477,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7138.1694,54.614693,6013.0068};
-				angles[]={0,1.1148282,-0};
+				angles[]={0,1.1148282,0};
 			};
 			side="Empty";
 			flags=1;
@@ -31492,7 +31494,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7186.5894,73.934906,6007.8618};
-				angles[]={0,2.8913758,-0};
+				angles[]={0,2.8913758,0};
 			};
 			side="Empty";
 			flags=1;
@@ -31509,7 +31511,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7185.1646,74.65947,6042.5303};
-				angles[]={0,3.2824321,-0};
+				angles[]={0,3.2824321,0};
 			};
 			side="Empty";
 			flags=1;
@@ -31526,7 +31528,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7208.334,52.076359,6079.3721};
-				angles[]={0,2.2607768,-0};
+				angles[]={0,2.2607768,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31543,7 +31545,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7165.9663,90.140213,5965.1948};
-				angles[]={0,4.9074302,-0};
+				angles[]={0,4.9074302,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31560,7 +31562,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7149.1118,80.028793,5993.5273};
-				angles[]={0,0.31579825,-0};
+				angles[]={0,0.31579825,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31577,7 +31579,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7153.7207,59.481461,5980.7544};
-				angles[]={0,6.0645909,-0};
+				angles[]={0,6.0645909,0};
 			};
 			side="Empty";
 			flags=1;
@@ -31594,7 +31596,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7176.6074,52.079544,5941.0513};
-				angles[]={0,4.1774797,-0};
+				angles[]={0,4.1774797,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31611,7 +31613,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7168.9902,65.399384,6005.521};
-				angles[]={0,1.6269422,-0};
+				angles[]={0,1.6269422,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31708,7 +31710,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9466.5508,13.21,10959.127};
-				angles[]={0,3.0714638,-0};
+				angles[]={0,3.0714638,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31724,7 +31726,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9479.0498,16.379332,10981.444};
-				angles[]={0,4.6216569,-0};
+				angles[]={0,4.6216569,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31733,6 +31735,7 @@ class Mission
 			};
 			id=1699;
 			type="Land_Medevac_HQ_V1_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item917
 		{
@@ -31740,7 +31743,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9443.5586,16.385401,10998.099};
-				angles[]={0,6.1914315,-0};
+				angles[]={0,6.1914315,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31756,7 +31759,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9462.29,25.39621,10999.125};
-				angles[]={0,4.6311188,-0};
+				angles[]={0,4.6311188,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31772,7 +31775,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9435.749,13.2,11007.836};
-				angles[]={0,6.1933851,-0};
+				angles[]={0,6.1933851,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31788,7 +31791,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9443.8701,13.2,11008.556};
-				angles[]={0,6.1933851,-0};
+				angles[]={0,6.1933851,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31804,7 +31807,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9451.9053,13.2,11009.235};
-				angles[]={0,6.1933851,-0};
+				angles[]={0,6.1933851,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31820,7 +31823,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9454.9629,13.2,10988.429};
-				angles[]={0,3.0553005,-0};
+				angles[]={0,3.0553005,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31836,7 +31839,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9446.1572,13.2,10987.563};
-				angles[]={0,3.0553005,-0};
+				angles[]={0,3.0553005,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31852,7 +31855,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9395.916,17.415001,10969.748};
-				angles[]={0,1.4875391,-0};
+				angles[]={0,1.4875391,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31868,7 +31871,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9388.7646,17.415001,11049.343};
-				angles[]={0,1.4875391,-0};
+				angles[]={0,1.4875391,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31884,7 +31887,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9441.5312,17.419548,11108.729};
-				angles[]={0,3.0495346,-0};
+				angles[]={0,3.0495346,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31893,6 +31896,7 @@ class Mission
 			};
 			id=1710;
 			type="Land_Cargo_Patrol_V1_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item927
 		{
@@ -31900,7 +31904,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9507.498,17.415001,11100.887};
-				angles[]={0,3.831392,-0};
+				angles[]={0,3.831392,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31916,7 +31920,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9573.082,17.445,11073.733};
-				angles[]={0,3.0508368,-0};
+				angles[]={0,3.0508368,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31925,6 +31929,7 @@ class Mission
 			};
 			id=1712;
 			type="Land_Cargo_Patrol_V1_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item929
 		{
@@ -31932,7 +31937,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9608.3828,17.455,11047.998};
-				angles[]={0,4.6227703,-0};
+				angles[]={0,4.6227703,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31941,6 +31946,7 @@ class Mission
 			};
 			id=1713;
 			type="Land_Cargo_Patrol_V1_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item930
 		{
@@ -31948,7 +31954,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9546.8047,17.426342,11008.301};
-				angles[]={0,5.6340756,-0};
+				angles[]={0,5.6340756,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31957,6 +31963,7 @@ class Mission
 			};
 			id=1714;
 			type="Land_Cargo_Patrol_V1_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item931
 		{
@@ -31964,7 +31971,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9519.6172,17.425001,10960.815};
-				angles[]={0,6.1916118,-0};
+				angles[]={0,6.1916118,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31980,7 +31987,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9500.8984,17.434999,10923.038};
-				angles[]={0,6.197824,-0};
+				angles[]={0,6.197824,0};
 			};
 			side="Empty";
 			flags=5;
@@ -31989,6 +31996,7 @@ class Mission
 			};
 			id=1716;
 			type="Land_Cargo_Patrol_V1_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item933
 		{
@@ -31996,7 +32004,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9400.293,13.913578,10994.332};
-				angles[]={0,4.6331944,-0};
+				angles[]={0,4.6331944,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32012,7 +32020,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9402.5146,13.913578,11059.52};
-				angles[]={0,6.1941471,-0};
+				angles[]={0,6.1941471,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32028,7 +32036,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9530.8057,13.933577,11070.025};
-				angles[]={0,0.57954836,-0};
+				angles[]={0,0.57954836,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32037,6 +32045,7 @@ class Mission
 			};
 			id=1720;
 			type="Land_Bunker_02_double_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item936
 		{
@@ -32044,7 +32053,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9576.5293,13.943577,11045.204};
-				angles[]={0,6.1956654,-0};
+				angles[]={0,6.1956654,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32053,6 +32062,7 @@ class Mission
 			};
 			id=1721;
 			type="Land_Bunker_02_double_F";
+			atlOffset=-9.5367432e-07;
 		};
 		class Item937
 		{
@@ -32060,7 +32070,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9640.001,13.963733,10990.266};
-				angles[]={0,3.9728172,-0};
+				angles[]={0,3.9728172,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32076,7 +32086,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9647.3418,13.870046,11070.252};
-				angles[]={0,2.966507,-0};
+				angles[]={0,2.966507,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32093,7 +32103,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9347.5059,13.497345,11053.067};
-				angles[]={0,0.090770051,-0};
+				angles[]={0,0.090770051,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32109,7 +32119,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9365.7051,13.50063,10942.257};
-				angles[]={0,0.4592621,-0};
+				angles[]={0,0.4592621,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32190,7 +32200,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5891.9604,50.464432,7260.7827};
-				angles[]={0,3.305898,-0};
+				angles[]={0,3.305898,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32207,7 +32217,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6522.1328,39.932091,6885.1772};
-				angles[]={0,2.0902414,-0};
+				angles[]={0,2.0902414,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32224,7 +32234,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5374.2393,64.072845,6813.8223};
-				angles[]={0,1.7285947,-0};
+				angles[]={0,1.7285947,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32241,7 +32251,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8079.4263,61.52132,8679.1875};
-				angles[]={0,3.305898,-0};
+				angles[]={0,3.305898,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32258,7 +32268,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9492.9111,45.149815,8381.082};
-				angles[]={0,2.0399818,-0};
+				angles[]={0,2.0399818,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32275,7 +32285,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7454.4487,35.184662,10467.328};
-				angles[]={0,0.49991211,-0};
+				angles[]={0,0.49991211,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32292,7 +32302,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7639.8057,30.798763,10443.833};
-				angles[]={0,2.2828844,-0};
+				angles[]={0,2.2828844,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32309,7 +32319,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3746.0867,42.743912,10768.368};
-				angles[]={0,3.8105164,-0};
+				angles[]={0,3.8105164,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32326,7 +32336,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2332.0642,40.478767,10293.805};
-				angles[]={0,1.7833287,-0};
+				angles[]={0,1.7833287,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32343,7 +32353,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2180.8508,22.890739,8851.7842};
-				angles[]={0,1.8142492,-0};
+				angles[]={0,1.8142492,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32360,7 +32370,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={452.60773,47.862766,8806.0332};
-				angles[]={0,3.305898,-0};
+				angles[]={0,3.305898,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32377,7 +32387,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1522.7413,74.585426,7083.6084};
-				angles[]={0,2.2106943,-0};
+				angles[]={0,2.2106943,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32394,7 +32404,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={355.2681,4.1402464,6463.105};
-				angles[]={0,4.1680455,-0};
+				angles[]={0,4.1680455,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32411,7 +32421,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2407.8816,71.641647,7046.3716};
-				angles[]={0,4.008028,-0};
+				angles[]={0,4.008028,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32428,7 +32438,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4041.0117,35.705814,7408.2983};
-				angles[]={0,6.2175751,-0};
+				angles[]={0,6.2175751,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32445,7 +32455,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4077.2607,192.16373,4559.8398};
-				angles[]={0,6.1927981,-0};
+				angles[]={0,6.1927981,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32462,7 +32472,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4039.3472,192.60838,4636.896};
-				angles[]={0,2.9226851,-0};
+				angles[]={0,2.9226851,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32479,7 +32489,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4029.6206,191.6418,4667.9224};
-				angles[]={0,0.30724046,-0};
+				angles[]={0,0.30724046,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32496,7 +32506,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4042.0649,191.19313,4734.4272};
-				angles[]={0,3.1085804,-0};
+				angles[]={0,3.1085804,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32513,7 +32523,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1881.3405,54.601028,3897.8838};
-				angles[]={0,4.3459215,-0};
+				angles[]={0,4.3459215,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32530,7 +32540,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1710.0782,40.842854,3558.0347};
-				angles[]={0,6.1260629,-0};
+				angles[]={0,6.1260629,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32547,7 +32557,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={958.98523,23.438953,5549.6182};
-				angles[]={0,0.840662,-0};
+				angles[]={0,0.840662,0};
 			};
 			side="Empty";
 			flags=5;
@@ -32556,7 +32566,1098 @@ class Mission
 			};
 			id=1755;
 			type="Land_PillboxBunker_01_hex_F";
-			atlOffset=0.040439606;
+			atlOffset=0.040441513;
+		};
+		class Item971
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6071.2368,110.61055,1843.8134};
+				angles[]={0.0053232545,5.2720809,6.2738476};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1756;
+			type="Land_HelipadCircle_F";
+			atlOffset=-0.2758255;
+		};
+		class Item972
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6055.8892,111.34242,1830.2103};
+				angles[]={6.2332287,0.84283698,6.276526};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _ObjToAddAction = missionNameSpace getVariable [""WMS_DFO_ObjToAddAction"", []]; " \n " _ObjToAddAction pushBack this; " \n " missionNameSpace setVariable [""WMS_DFO_ObjToAddAction"",_ObjToAddAction]; " \n "};";
+			};
+			id=1757;
+			type="Land_TripodScreen_01_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="DFO\WMS_DFO_Console.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item973
+		{
+			dataType="Marker";
+			position[]={6068.2134,110.62441,1844.96};
+			name="marker_0";
+			text="DFO";
+			type="b_hq";
+			id=1758;
+			atlOffset=-0.31510925;
+		};
+		class Item974
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8066.8906,6.8353996,5713.1763};
+				angles[]={0.0053232545,5.2720809,6.2738476};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1759;
+			type="Land_HelipadCircle_F";
+			atlOffset=0.095769405;
+		};
+		class Item975
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8048.5527,8.1079302,5719.0459};
+				angles[]={6.2083254,2.0354636,6.2648535};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _ObjToAddAction = missionNameSpace getVariable [""WMS_DFO_ObjToAddAction"", []]; " \n " _ObjToAddAction pushBack this; " \n " missionNameSpace setVariable [""WMS_DFO_ObjToAddAction"",_ObjToAddAction]; " \n "};";
+			};
+			id=1760;
+			type="Land_TripodScreen_01_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="DFO\WMS_DFO_Console.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item976
+		{
+			dataType="Marker";
+			position[]={8063.8672,6.8492622,5714.3228};
+			name="marker_1";
+			text="DFO";
+			type="b_hq";
+			id=1761;
+			atlOffset=0.16333914;
+		};
+		class Item977
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11898.597,3.2622986,10425.131};
+				angles[]={6.2756171,0.28827485,6.2755537};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1762;
+			type="Land_HelipadCircle_F";
+			atlOffset=0.27130365;
+		};
+		class Item978
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11923.703,4.0272379,10430.664};
+				angles[]={-0,4.0876751,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _ObjToAddAction = missionNameSpace getVariable [""WMS_DFO_ObjToAddAction"", []]; " \n " _ObjToAddAction pushBack this; " \n " missionNameSpace setVariable [""WMS_DFO_ObjToAddAction"",_ObjToAddAction]; " \n "};";
+			};
+			id=1763;
+			type="Land_TripodScreen_01_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="DFO\WMS_DFO_Console.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item979
+		{
+			dataType="Marker";
+			position[]={11895.573,3.2761612,10426.277};
+			name="marker_2";
+			text="DFO";
+			type="b_hq";
+			id=1764;
+			atlOffset=0.28616118;
+		};
+		class Item980
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2858.1604,81.910934,8322.9893};
+			};
+			areaSize[]={20,0,20};
+			flags=1;
+			id=1765;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item981
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2857.1565,81.808868,8322.2871};
+				angles[]={6.2818713,2.5260718,0.010667847};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1766;
+			type="Land_HelipadCircle_F";
+		};
+		class Item982
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2877.3057,86.077515,8315.7725};
+				angles[]={0.0039062523,5.3002644,6.2816806};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _ObjToAddAction = missionNameSpace getVariable [""WMS_DFO_ObjToAddAction"", []]; " \n " _ObjToAddAction pushBack this; " \n " missionNameSpace setVariable [""WMS_DFO_ObjToAddAction"",_ObjToAddAction]; " \n "};";
+			};
+			id=1767;
+			type="Land_TripodScreen_01_large_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="DFO\WMS_DFO_Console.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item983
+		{
+			dataType="Marker";
+			position[]={2856.3455,82.022072,8325.2646};
+			name="marker_3";
+			text="DFO";
+			type="b_hq";
+			id=1768;
+			atlOffset=0.23655701;
+		};
+		class Item984
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5126.5137,76.87896,1418.9446};
+				angles[]={6.2818713,2.5260718,0.010667847};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1769;
+			type="Land_HelipadCircle_F";
+		};
+		class Item985
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1444.7737,42.348618,2396.4097};
+				angles[]={0.00028699744,5.7635174,6.2724409};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1770;
+			type="Land_HelipadCircle_F";
+			atlOffset=1.5258789e-05;
+		};
+		class Item986
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1591.374,16.075897,2368.8018};
+				angles[]={6.2753396,0.32528946,6.2758389};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1771;
+			type="Land_HelipadCircle_F";
+			atlOffset=10.222;
+		};
+		class Item987
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2179.3728,6.6101503,2740.6599};
+				angles[]={6.274693,1.7376331,0.0065885223};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1772;
+			type="Land_HelipadCircle_F";
+			atlOffset=6.1988831e-06;
+		};
+		class Item988
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1160.1483,2.5906661,1449.4519};
+				angles[]={0.0093601421,3.7055371,0.005283752};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1773;
+			type="Land_HelipadCircle_F";
+		};
+		class Item989
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={824.35675,30.488319,1226.214};
+				angles[]={6.2738295,1.5924972,0.0052910028};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1774;
+			type="Land_HelipadCircle_F";
+			atlOffset=2.8487682;
+		};
+		class Item990
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3386.218,150.37454,992.07391};
+				angles[]={6.2777567,0.036508229,6.2739086};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1775;
+			type="Land_HelipadCircle_F";
+		};
+		class Item991
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2832.291,3.7285442,3138.229};
+				angles[]={6.2736034,1.5467457,0.0048520151};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1776;
+			type="Land_HelipadCircle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item992
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9257.6143,128.41092,2706.3096};
+				angles[]={0.0092559317,3.6876311,0.0054481253};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1777;
+			type="Land_HelipadCircle_F";
+			atlOffset=4.5776367e-05;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item993
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9170.708,118.98,2557.4697};
+				angles[]={6.2777419,2.1173234,0.0092587322};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1778;
+			type="Land_HelipadCircle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item994
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10232.617,49.189999,6828.2593};
+				angles[]={6.27951,6.1397004,6.2730937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1779;
+			type="Land_HelipadCircle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item995
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3970.697,79.230003,1066.8754};
+				angles[]={0.0089510614,3.6340818,0.0059357337};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1780;
+			type="Land_HelipadCircle_F";
+			atlOffset=0.50795746;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item996
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7422.1001,13.651906,4765.2803};
+				angles[]={0.0101615,3.8898389,0.0034781878};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1781;
+			type="Land_HelipadCircle_F";
+			atlOffset=2.0027161e-05;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item997
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6302.0317,11.571087,5786.6548};
+				angles[]={6.2728806,1.3637491,0.0030272764};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1782;
+			type="Land_HelipadCircle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item998
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11479.059,61.221439,12188.217};
+				angles[]={6.2736354,1.5532734,0.0049144607};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1783;
+			type="Land_HelipadCircle_F";
+			atlOffset=-5.7220459e-05;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item999
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10954.468,25.094292,7746.7793};
+				angles[]={6.2787194,6.2192774,6.2734179};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1784;
+			type="Land_HelipadCircle_F";
+			atlOffset=3.8146973e-06;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1000
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4761.8784,8.4870691,6077.6797};
+				angles[]={0.0075604469,5.0094833,6.275557};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1785;
+			type="Land_HelipadCircle_F";
+			atlOffset=-1.9073486e-06;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1001
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5501.8335,32.779999,10550.325};
+				angles[]={6.2797446,2.3226726,0.010174121};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1786;
+			type="Land_HelipadCircle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1002
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5490.5396,33.668419,10274.089};
+				angles[]={6.2780995,2.1554892,0.0094596827};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1787;
+			type="Land_HelipadCircle_F";
+			atlOffset=-1.5258789e-05;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1003
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2277.0146,25.299999,11508.157};
+				angles[]={6.2753592,0.32366556,6.2758303};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1788;
+			type="Land_HelipadCircle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1004
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2092.8145,44.887653,11306.732};
+				angles[]={6.2733436,1.4899443,0.0043002074};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="if(isServer)then{ " \n " private _BasePositions = missionNameSpace getVariable [""WMS_DFO_BasePositions"", []];" \n "if(surfaceIsWater position this) then {" \n "_BasePositions pushBack (getPosAsL this);" \n "} else {" \n "_BasePositions pushBack (getPosATL this);" \n "}; " \n " " \n " missionNameSpace setVariable [""WMS_DFO_BasePositions"",_BasePositions]; " \n "};";
+			};
+			id=1789;
+			type="Land_HelipadCircle_F";
+			atlOffset=-1.5258789e-05;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item1005
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2877.1931,83.785782,8315.6582};
+				angles[]={0,1.9434738,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1790;
+			type="Land_CncShelter_F";
+			atlOffset=-2.2060547;
 		};
 	};
 };

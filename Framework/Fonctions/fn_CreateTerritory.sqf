@@ -10,7 +10,7 @@
  */
  
 //[player, _pos] remoteExec ['WAMmp_fnc_CreateTerritory']; //_pos is defined by the 'click' itself
-private ["_maxTerr","_allowed","_territoryBuiltCount","_targetUID","_targetOwner","_playerUID_ExileMoney","_playerMoney","_territoryLevel","_territoryOfficeData","_flagID","_flag","_flagDir","_layout","_marker","_objectsToDespawn","_terrainobjects"];
+private ["_waterDepth","_maxTerr","_allowed","_territoryBuiltCount","_targetUID","_targetOwner","_playerUID_ExileMoney","_playerMoney","_territoryLevel","_territoryOfficeData","_flagID","_flag","_flagDir","_layout","_marker","_objectsToDespawn","_terrainobjects"];
 params  [
 	"_caller",
 	"_pos",
@@ -23,6 +23,7 @@ _playerUID_ExileMoney = "ExileMoney_"+_targetUID;
 _playerMoney = profileNamespace getVariable [_playerUID_Exilemoney,0];
 _territoryOfficeData = getArray(missionConfigFile >> "CfgOfficeTrader" >> "territory");
 _price = (_territoryOfficeData select 0);
+_waterDepth = (_territoryOfficeData select 7);
 _territoryLevel = 1;
 _cleanRad = 20;
 _allowed = true;
@@ -72,7 +73,7 @@ if (_allowed) then {
 		_terrainobjects = nearestTerrainObjects [_Pos,_objectsToDespawn,_cleanRad];
 		{hideObjectGlobal _x} foreach _terrainobjects;
 		_flag = createVehicle ["rhsgref_serhat_radar", _Pos, [], 1, "NONE"];//rhsgref_serhat_radar //Flag_Redburger_F
-		if (surfaceIsWater _pos && {((atltoasl _pos) select 2 < -5)})then{
+		if (surfaceIsWater _pos && {((atltoasl _pos) select 2 < -5)})then{ //need variable
 			_flag setPosASL [_Pos select 0, _Pos select 1, 2.413];
 			_layout = "waterworld";
 		};

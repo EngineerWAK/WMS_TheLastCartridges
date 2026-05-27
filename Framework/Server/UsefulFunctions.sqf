@@ -1,3 +1,12 @@
+//Recover Dead Body, CAS sensitive
+{
+	_dead = "WAKeupneo"; 
+	_pos = [9225.33,7822.39,1]; 
+	if (_dead in (name _x)) then { 
+		_x setpos _pos;  
+	}; 
+}forEach allDeadMen;
+
 WMS_countPermanentVehicles = {
 	private _permamentVehicle = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 	private _count = [];
@@ -448,3 +457,7 @@ private _dir = false;
 
 copyToClipBoard format ["%1",_list]; 
 systemChat format ["%1 positions Exported", (count _list)];
+//tree cleanup around SAR mission (rivers)
+_pos = [0,0,0];
+_treeToCut = nearestTerrainObjects [_pos,["TREE", "SMALL TREE"],22];
+{_x setDamage 1} foreach _treeToCut;

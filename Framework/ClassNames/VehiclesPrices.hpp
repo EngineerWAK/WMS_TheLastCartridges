@@ -174,7 +174,7 @@
 	//class R3F_MATV_CE  						{ quality = 1; price = 10001; };
 	class O_T_MRAP_02_ghex_F  					{ quality = 1; price = 12000; };
 	class B_T_MRAP_01_F  						{ quality = 1; price = 12000; };
-	class I_MRAP_03_F  							{ quality = 1; price = 12000; };
+	class I_MRAP_03_F  							{ quality = 4; price = 35000; };
 	//SOG
 	//	class vn_b_armor_m113_acav_04 			{ quality = 1; price = 36000; };
 	class vn_b_armor_m113_acav_02 				{ quality = 1; price = 36000; };
@@ -336,6 +336,8 @@
 		class rhsusf_m1151_usarmy_wd 				{ quality = 3; price = 25004; };
 		class rhsusf_m1152_usarmy_wd 				{ quality = 3; price = 25884; }; //armored humvee 2dr
 		class O_MRAP_02_F 							{ quality = 3; price = 25000; };
+		class B_MRAP_01_F 							{ quality = 3; price = 25000; };//hunter
+		//class I_MRAP_03_F 							{ quality = 3; price = 28000; };//strider //armored light rewards 28000
 		class rhs_tigr_vdv 							{ quality = 1; price = 16004; };
 		class rhs_tigr_m_vdv 						{ quality = 1; price = 18004; };
 
@@ -345,6 +347,23 @@
 		
 		class rhsusf_M1078A1P2_WD_open_fmtv_usarmy 	{ quality = 2; price = 16884; };//igiload
 		class rhsusf_M1083A1P2_WD_open_fmtv_usarmy 	{ quality = 2; price = 17884; };//igiload
+		
+			class rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy 	{ quality = 3; price = 19884; };//igiload //R3F: 35
+
+			class rhsusf_M977A4_usarmy_wd 					{ quality = 1; price = 18004; };
+			class rhsusf_M977A4_AMMO_usarmy_wd 				{ quality = 3; price = 40004; };
+			class rhsusf_M977A4_REPAIR_usarmy_wd 			{ quality = 5; price = 90004; };
+			class rhsusf_M978A4_usarmy_wd 					{ quality = 2; price = 19004; }; //fuel
+
+			class rhsusf_M977A4_BKIT_usarmy_wd 				{ quality = 1; price = 23004; }; //armored
+			class rhsusf_M977A4_AMMO_BKIT_usarmy_wd 		{ quality = 3; price = 45004; }; //armored
+			class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd 		{ quality = 6; price = 80004; }; //armored
+			class rhsusf_M978A4_BKIT_usarmy_wd 				{ quality = 2; price = 24004; }; //armored
+			//armed M977
+			class rhsusf_M977A4_BKIT_M2_usarmy_wd 			{ quality = 1; price = 28004; };//M2 armored
+			class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd 		{ quality = 3; price = 50004; };//M2 armored
+			class rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd 	{ quality = 6; price = 85004; };//M2 armored
+		
 		class rhsusf_M1084A1P2_WD_fmtv_usarmy 		{ quality = 2; price = 20884; };//igiload
 		class rhsusf_M1084A1P2_B_WD_fmtv_usarmy 	{ quality = 2; price = 22884; };
 		class I_G_Van_01_transport_F 				{ quality = 0; price = 17000; };

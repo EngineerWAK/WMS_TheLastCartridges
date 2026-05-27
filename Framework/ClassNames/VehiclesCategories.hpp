@@ -41,6 +41,7 @@
 			"rhsusf_M1078A1P2_WD_open_fmtv_usarmy", //igiload
 			"rhsusf_M1083A1P2_WD_open_fmtv_usarmy", //igiload
 			"rhsusf_M1084A1P2_WD_fmtv_usarmy", //igiload
+			"rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy", //igiload R3F: 35
 	        "rhsusf_M1084A1P2_B_WD_fmtv_usarmy",
 	        "rhsusf_mrzr4_w_mud",
 	        "rhsusf_M1238A1_socom_wd",
@@ -64,7 +65,7 @@
 	        "rhs_tigr_m_vdv",
 	        "rhsgref_BRDM2UM_vdv",
 			"O_APC_Wheeled_02_rcws_v2_F",//FORCED UNARMED
-	        "R3F_PANDUR_CE",//FORCED UNARMED
+	        //"R3F_PANDUR_CE",//FORCED UNARMED
 			"B_APC_Tracked_01_CRV_F" //FORCED UNARMED
 		};
 	};
@@ -148,7 +149,7 @@
 	};
 	class VehiclesUnarmed_RHS_Hatchet
 	{
-		name = "Chopper";
+		name = "GND Unarmed";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
 		{	
@@ -163,6 +164,8 @@
 			"C_IDAP_Truck_02_transport_F",
 			"C_IDAP_Truck_02_F",
 			//
+			"I_MRAP_03_F",
+			"B_MRAP_01_F",
 			"rhsgref_tla_g_kraz255b1_cargo_open",
 			"rhs_kamaz5350_flatbed_cover_vdv", //flatbed cover
 			"RHS_Ural_Flat_VDV_01", //flatbed cover
@@ -188,6 +191,17 @@
 			"rhsusf_M1083A1P2_WD_open_fmtv_usarmy", //igiload
 			"rhsusf_M1084A1P2_WD_fmtv_usarmy", //igiload
 	        "rhsusf_M1084A1P2_B_WD_fmtv_usarmy",
+			"rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy", //igiload R3F: 35
+			
+			"rhsusf_M977A4_usarmy_wd",
+			"rhsusf_M977A4_AMMO_usarmy_wd",
+			"rhsusf_M977A4_REPAIR_usarmy_wd",
+			"rhsusf_M977A4_BKIT_usarmy_wd",
+			"rhsusf_M977A4_AMMO_BKIT_usarmy_wd",
+			"rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
+			"rhsusf_M978A4_usarmy_wd",
+			"rhsusf_M978A4_BKIT_usarmy_wd",
+
 	        "rhsusf_mrzr4_w_mud",
 	        "rhsusf_M1238A1_socom_wd",
 	        "rhsusf_M1239_socom_wd",
@@ -443,6 +457,11 @@
 	        "rhsusf_m1a2sep1tuskiiwd_usarmy",
 	        "rhsusf_M1078A1P2_B_M2_WD_open_fmtv_usarmy",
 	        "rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy",
+			
+	        "rhsusf_M977A4_BKIT_M2_usarmy_wd",
+	        "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd",
+	        "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+
 	        "rhsusf_CGRCAT1A2_M2_usmc_wd",
 	        "I_C_Offroad_02_LMG_F",
 	        "I_C_Offroad_02_AT_F",

@@ -379,7 +379,8 @@ if (isnil "IL_Variables") then
 		"Exile_Car_Tempest",
 		"O_T_Truck_03_transport_ghex_F",
 		"O_T_Truck_03_covered_ghex_F",
-		"O_Truck_03_covered_F"
+		"O_Truck_03_covered_F",
+		"O_Truck_03_transport_F"
 	];
 	IL_Supported_M977 = //Can be loaded on something else
 	[

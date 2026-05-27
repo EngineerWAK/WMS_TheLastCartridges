@@ -3,6 +3,11 @@ params [
 ];
 private _vehicleClassName = (typeOf _veh);
 
+if (_vehicleClassName == "I_MRAP_03_F") then {
+	_veh setObjectTextureGlobal [0, "a3\soft_f_beta\mrap_03\data\MRAP_03_ext_CO"]; 
+	//_veh setObjectTextureGlobal [1, "a3\data_f\vehicles\turret_indp_co.paa"];
+};
+
 if (_vehicleClassName == "vn_b_air_uh1c_03_01") then {
 	[
 		_veh,

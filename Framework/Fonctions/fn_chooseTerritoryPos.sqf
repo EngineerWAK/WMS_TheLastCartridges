@@ -21,6 +21,7 @@ _this spawn { //["TheOneMillionDollarsBase"]
 		_zoneTrader = (_territoryOfficeData select 2);
 		_zoneSpawn = (_territoryOfficeData select 3);
 		_zoneTerritory = (_territoryOfficeData select 4);
+		_waterDepth = (_territoryOfficeData select 7);
 		_buildingAutorisation = true;
 		/////Is it too close to a marker:
 		{
@@ -56,7 +57,7 @@ _this spawn { //["TheOneMillionDollarsBase"]
 			};
 		}forEach allMapMarkers;
 		//water check for over water base, it's a very basic check but should be enough to prevent players to build level 6 over water base in a puddle
-		if (surfaceIsWater _pos && {((AtltoAsl _pos) select 2 < -4.5)}) then {
+		if (surfaceIsWater _pos && {((AtltoAsl _pos) select 2 < _waterDepth)}) then {
 			//north
 			if !(surfaceIsWater [(_pos select 0),(_pos select 1)+100]) then {_buildingAutorisation = false;hint parseText "<t color='#ff0000'>Water Position Too Close To shore</t>";} else {
 				//east
