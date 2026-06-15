@@ -446,14 +446,18 @@ class uniforms
 	{
 		items[] = 
 		{
-			//"U_B_CombatUniform_mcam",
+			/*//"U_B_CombatUniform_mcam",
 			"U_C_IDAP_Man_cargo_F",
 			"U_C_IDAP_Man_casual_F",
 			"U_C_IDAP_Man_jeans_F",
 			"U_BG_Guerilla2_1",
 			"U_BG_Guerilla2_2",
 			"U_BG_Guerilla2_3",
-			"U_B_GEN_Soldier_F"
+			"U_B_GEN_Soldier_F"*/
+			"U_IG_Guerilla1_1","U_IG_Guerilla2_1","U_IG_Guerilla2_3","U_IG_Guerilla3_1","U_IG_Guerrilla_6_1", //weird, not in the mission editor
+			"U_C_CBRN_Suit_01_White_F","U_C_E_LooterJacket_01_F","U_C_HunterBody_grn", //weird, from "other" factions but works
+			"U_I_C_Soldier_Bandit_4_F","U_I_C_Soldier_Bandit_1_F","U_I_C_Soldier_Bandit_2_F","U_I_C_Soldier_Bandit_5_F","U_I_C_Soldier_Bandit_3_F", //bandits
+			"U_I_L_Uniform_01_camo_F","U_I_L_Uniform_01_deserter_F","U_I_L_Uniform_01_tshirt_black_F","U_I_L_Uniform_01_tshirt_olive_F","U_I_L_Uniform_01_tshirt_skull_F","U_I_L_Uniform_01_tshirt_sport_F", //looters
 		};
 	};
 //WMS_unifToSpawnList_spe = [    
@@ -461,13 +465,21 @@ class uniforms_SPE
 	{
 		items[] = 
 		{
-			"U_B_CombatUniform_mcam",
+			/*"U_B_CombatUniform_mcam",
 			"U_B_CombatUniform_mcam_wdl_f",
 			"U_B_FullGhillie_lsh",
 			"U_B_T_FullGhillie_tna_F",
 			"U_B_CBRN_Suit_01_Wdl_F",
 			"U_B_CombatUniform_sgg",
-			"U_B_survival_uniform"
+			"U_B_survival_uniform"*/
+			"U_I_G_Story_Protagonist_F",
+			"rhsgref_uniform_gorka_1_f",
+			"U_O_R_Gorka_01_black_F", //weird, from "other" factions but works
+			"U_I_HeliPilotCoveralls","U_I_E_Uniform_01_coveralls_F","U_I_pilotCoveralls",
+			"U_I_FullGhillie_ard","U_I_FullGhillie_lsh","U_I_FullGhillie_sard",
+			//"U_I_GhillieSuit", //meh
+			"U_I_Wetsuit",
+			"U_I_CBRN_Suit_01_AAF_F","U_I_E_CBRN_Suit_01_EAF_F"
 		};
 	};
 //WMS_unifToSpawnList_mil = [    
@@ -475,12 +487,20 @@ class uniforms_MIL
 	{
 		items[] = 
 		{
-			"U_B_CombatUniform_mcam",
+			/*"U_B_CombatUniform_mcam",
 			"U_BG_Guerilla2_1",
 			"U_BG_Guerilla2_2",
 			"U_BG_Guerilla2_3",
 			"U_B_GEN_Soldier_F",
-			"U_B_survival_uniform"
+			"U_B_survival_uniform"*/
+			"U_I_E_Uniform_01_officer_F","U_I_E_Uniform_01_shortsleeve_F","U_I_G_resistanceLeader_F","U_I_E_Uniform_01_sweater_F","U_I_E_Uniform_01_tanktop_F","U_I_CombatUniform", //fatigues
+			"U_I_OfficerUniform","U_I_CombatUniform_shortsleeve","U_I_E_Uniform_01_F", //fatigues
+			"U_I_C_Soldier_Para_2_F","U_I_C_Soldier_Para_3_F","U_I_C_Soldier_Para_5_F","U_I_C_Soldier_Para_4_F","U_I_C_Soldier_Para_1_F","U_I_C_Soldier_Camo_F",// syndicate
+			"rhsgref_uniform_TLA_1","rhsgref_uniform_TLA_2","rhsgref_uniform_para_ttsko_mountain","rhsgref_uniform_para_ttsko_oxblood","rhsgref_uniform_para_ttsko_urban",//rhsgref
+			"rhsgref_uniform_vsr","rhsgref_uniform_ttsko_forest","rhsgref_uniform_ttsko_mountain","rhsgref_uniform_ttsko_urban","rhsgref_uniform_3color_desert","rhsgref_uniform_alpenflage",//rhsgref
+			"rhsgref_uniform_altis_lizard","rhsgref_uniform_altis_lizard_olive","rhsgref_uniform_dpm","rhsgref_uniform_dpm_olive","rhsgref_uniform_ERDL","rhsgref_uniform_flecktarn",//rhsgref
+			"rhsgref_uniform_flecktarn_full","rhsgref_uniform_og107","rhsgref_uniform_og107_erdl","rhsgref_uniform_olive","rhsgref_uniform_tigerstripe","rhsgref_uniform_reed",//rhsgref
+			"rhsgref_uniform_woodland","rhsgref_uniform_woodland_olive","rhsgref_uniform_specter",//rhsgref	
 		};
 	};
 //WMS_helmToSpawnList = [    

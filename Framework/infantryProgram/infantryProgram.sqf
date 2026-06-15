@@ -56,8 +56,16 @@ WMS_IP_buildComputer = {
 	params [
 		"_IPplayer"
 	];
-	private _IPantenna = "SatelliteAntenna_01_Small_Black_F" createvehicle [0,0,0];
-	private _IPcomputer = "Land_MultiScreenComputer_01_black_F" createvehicle [0,0,0];
+	//private _IPantenna = "SatelliteAntenna_01_Small_Black_F" createvehicle [0,0,0];
+	//private _IPcomputer = "Land_MultiScreenComputer_01_black_F" createvehicle [0,0,0];
+	private _cpuObj = "Land_MultiScreenComputer_01_black_F";
+	if ('rhs_radio_R187P1' in (assigneditems _IPplayer))then{
+		_cpuObj = "RuggedTerminal_01_communications_F";
+	}else{
+		_cpuObj = "RuggedTerminal_01_F";
+	};
+	private _IPcomputer = _cpuObj createvehicle [0,0,0];
+	_IPcomputer allowDamage false;
 	private _mkr = createMarkerLocal [format ['MKRSB_%1', (round time)], position _IPplayer]; 
   	_mkr setMarkerTypeLocal 'respawn_unknown'; 
   	_mkr setMarkerColorLocal 'colorIndependent';
@@ -67,7 +75,7 @@ WMS_IP_buildComputer = {
 		_IPcomputer setPos (_IPplayer modeltoworld [0,1,0.2]);
 	};
 	_IPcomputer setdir (direction _IPplayer);
-	_IPantenna attachTo [_IPcomputer, [0,0.4,0.27]];
+	//_IPantenna attachTo [_IPcomputer, [0,0.4,0.27]];
 	_IPcomputer setVariable ['IPcomputerAllActionsID',[]];
 	_IPcomputer setVariable ['WMS_Loc_SpawnBeacon_Mkr',_mkr,true];
 	localNamespace setVariable ['WMS_Loc_CanBuildComputer',false];
@@ -77,20 +85,20 @@ WMS_IP_buildComputer = {
 
 	if (WMS_JudgementDay && {!(WMS_JudgementDay_Run)} && {player getVariable ['ExileMoney', 0] >= 5000} && {player getVariable ['ExileScore', 0] >= 5000}) then {
 		_playersPosList = allPlayers select {alive _x && (_x distance2D (position player) < 100)} apply {GetPosATL _x};
-		_houses = position player nearObjects ["house", 55];
+		_houses = position player nearObjects ["house", (WMS_JudgementDay_Num select 0)];
 		_JudgementDay_Ban = ["Land_vn_dyke_10"];
 		_houses = _houses select {!(typeOf _x in _JudgementDay_Ban)};
 		_spawnPosList = [];
-		if ((count _houses) >= 60) then {
-			for "_i" from 1 to 60 do {
+		if ((count _houses) >= (WMS_JudgementDay_Num select 1)) then {
+			for "_i" from 1 to (count _houses) do {
 				_targetHouse = selectRandom _houses;
 				_houses deleteAt (_houses find _targetHouse);
 				{
 					_posToPush = _x;
-					{if (_posToPush distance2d _x > 25) then{_spawnPosList pushBack _posToPush}}forEach _playersPosList;
+					{if (_posToPush distance2d _x > (WMS_JudgementDay_Num select 2)) then{_spawnPosList pushBack _posToPush}}forEach _playersPosList;
 				}forEach (_targetHouse buildingPos -1);
 			};
-			if ((count _spawnPosList) >= 50) then {
+			if ((count _spawnPosList) >= (WMS_JudgementDay_Num select 3)) then {
 				WMS_allowJudgementDay = true;
 				_IPcomputer setVariable ['WMS_allowJudgementDay',true, true];
 				};
@@ -309,7 +317,7 @@ WMS_IP_buildComputer = {
 		5
 	];
 	_allActionsID pushBack _IDnumber;*/
-	//LOADOUT	
+	//LOADOUT	EQUIPED
 	_IDnumber = _IPcomputer addAction
 	[
 		"<t size='0.9' color='#068604'>Equipement Scorpion 2.5k$</t>",
@@ -327,6 +335,33 @@ WMS_IP_buildComputer = {
 			{('rhs_radio_R187P1' in (assigneditems _this))} &&
 			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
 			{((getPlayerUID _this) in WMS_IP_Active_list)} &&
+			{(vehicle _this == _this)};
+		",
+		5
+	];
+	_allActionsID pushBack _IDnumber;
+	//LOADOUT	ground
+	_IDnumber = _IPcomputer addAction
+	[
+		"<t size='0.9' color='#068604'>Diving Gear on the ground 2.5k$</t>",
+		"
+			_target = _this select 0; _caller = _this select 1;
+			private _hd = createVehicle ['GroundWeaponHolder', position _caller, [], 1, 'NONE'];
+					_hd addItemCargoGlobal ['U_I_Wetsuit',1];
+					_hd addItemCargoGlobal ['V_RebreatherIA',1];
+					_hd addItemCargoGlobal ['G_I_Diving',1];
+					[_caller, 2500] remoteExec ['WMS_fnc_smallTransactions'];
+		", 
+		[],
+		1,
+		true,
+		true,
+		"",
+		"	
+			(alive _target) &&
+			{('rhsusf_radio_anprc152' in (assigneditems _this))} &&
+			{((_this getVariable ['playerInRestrictionZone',-1]) == 0)} &&
+			{!((getPlayerUID _this) in WMS_IP_Active_list)} &&
 			{(vehicle _this == _this)};
 		",
 		5

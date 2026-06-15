@@ -455,9 +455,72 @@ private _dir = false;
 	};
 }forEach allMapMarkers;
 
-copyToClipBoard format ["%1",_list]; 
-systemChat format ["%1 positions Exported", (count _list)];
-//tree cleanup around SAR mission (rivers)
-_pos = [0,0,0];
-_treeToCut = nearestTerrainObjects [_pos,["TREE", "SMALL TREE"],22];
-{_x setDamage 1} foreach _treeToCut;
+//turrets crew debug
+_result = [];
+_pos = position player;
+_vehicle = "rhsusf_m1a2sep1tuskid_usarmy";
+_unitsClass = "B_T_Crew_F";
+_VHLgrp = createGroup [BLUFOR, false];
+_result pushback _vhlgrp;
+_rwd = createVehicle [_vehicle, _pos, [], 15, "NONE"];
+_result pushback (netID _rwd);
+_VHLgrp addVehicle _rwd;
+_emptyPos = _pos findEmptyPosition [15,50,_vehicle];
+_result pushback _emptyPos;
+_turrets = allTurrets _rwd;
+_result pushback _turrets;
+diag_log format ["[AMS AI VHL]|WAK|TNA|WMS| %1,", _result];
+{
+	_unit = _VHLgrp createUnit [_unitsClass, _emptyPos, [], 0, "NONE"];
+	_unit moveinTurret [_rwd, _x];
+}forEach _turrets;
+_result
+
+//diving gear
+private _holder = createVehicle ["GroundWeaponHolder", position player, [], 1, "CAN_COLLIDE"];
+_holder addItemCargoGlobal ["U_I_Wetsuit",1];
+_holder addItemCargoGlobal ["V_RebreatherIA",1];
+_holder addItemCargoGlobal ["G_I_Diving",1];
+
+//find and count inf pos in building for judgement day
+_houses = position player nearObjects ["house", 55];
+_playersPosList = [position player];
+_spawnPosList = [];
+for "_i" from 1 to 60 do {
+				_targetHouse = selectRandom _houses;
+				_houses deleteAt (_houses find _targetHouse);
+				{
+					_posToPush = _x;
+					{if (_posToPush distance2d _x > 25) then{
+						_spawnPosList pushBack _posToPush;
+						_object = createVehicle ["VR_3DSelector_01_incomplete_F", _posToPush, [], 0, 'CAN_COLLIDE'];
+						_object enableSimulation false;
+						}}forEach _playersPosList;
+				}forEach (_targetHouse buildingPos -1);
+			};
+			_spawnPosList;
+
+
+//keep this for later, grab money on NPC, THIS IS LOCAL!
+//private _action9 = ["restorevolume","Listen Around","",{the call},{conditions}] call ace_interact_menu_fnc_createAction;
+//_unit setVariable ["ExileMoney",100,true];
+//_unit getVariable ["ExileMoney",0];
+
+private _actionMoney = ["grabmoney","Grab The Money!","",{
+	private _money = _this getVariable ["ExileMoney",0];
+	[player, -(_this getVariable ["ExileMoney",0])] remoteExec ['WMS_fnc_smallTransactions'];
+	_this setVariable ["ExileMoney",0,true];
+},{
+	!(alive _this) &&
+	((vehicle player) == player) &&
+	((_this getVariable ["ExileMoney",0]) != 0)
+}] call ace_interact_menu_fnc_createAction;
+[_this, 0, ["ACE_MainActions"], _actionMoney] call ace_interact_menu_fnc_addActionToObject;
+
+private _actiontest = ["testaction","Test ACE Action","",{
+	diag_log format ["_this: %1", _this];
+	systemChat format ["_this: %1", _this];
+},{
+	true
+}] call ace_interact_menu_fnc_createAction;
+[_this, 0, ["ACE_MainActions"], _actiontest] call ace_interact_menu_fnc_addActionToObject;

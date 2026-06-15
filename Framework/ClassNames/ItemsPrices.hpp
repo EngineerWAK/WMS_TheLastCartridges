@@ -61,7 +61,7 @@
     class Money_roll				    { quality = 1; price = 300; }; //150
     class Money_stack				    { quality = 1; price = 1200; }; //600
     class Money_stack_quest			    { quality = 1; price = 2400; }; //1200
-    class Money						    { quality = 1; price = 16000; }; //8000 //craft only Money_stack_quest x7
+    class Money						    { quality = 1; price = 16000; }; //8000 //craft only Money_stack_quest x7 //VIPER JUDGEMENT DAY ITEM
 
 		//SOG Drinks (some...)
 	class vn_prop_drink_01                { quality = 0; price = 126; };

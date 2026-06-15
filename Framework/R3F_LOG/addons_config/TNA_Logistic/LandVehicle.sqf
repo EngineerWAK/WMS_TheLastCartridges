@@ -108,9 +108,60 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["rhsusf_M1078A1P2_WD_flatbed_fmtv_usarmy", 25],
 	["rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy", 15],
 	["rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy", 35],
+	["rhsusf_M1083A1P2_WD_open_fmtv_usarmy", 20],
+	["rhsusf_M1083A1P2_WD_fmtv_usarmy", 30],
 	["rhsusf_M1083A1P2_B_WD_flatbed_fmtv_usarmy", 25],
 	["rhsusf_M1084A1P2_WD_fmtv_usarmy",15],
 	["rhsusf_M1084A1P2_B_WD_fmtv_usarmy",15],
+
+	//GAZ66 to make them usefull
+	["rhsgref_cdf_b_gaz66_flat",35],
+	["rhsgref_cdf_b_gaz66o_flat",35],
+	["rhsgref_cdf_gaz66_flat",35],
+	["rhsgref_cdf_gaz66o_flat",35],
+	["rhsgref_ins_g_gaz66_flat",35],
+	["rhsgref_ins_g_gaz66o_flat",35],
+
+	["rhsgref_cdf_b_gaz66",30],
+	["rhsgref_cdf_b_gaz66o",30],
+	["rhsgref_cdf_gaz66",30],
+	["rhsgref_cdf_gaz66o",30],
+	["rhsgref_ins_g_gaz66",30],
+	["rhsgref_ins_g_gaz66o",30],
+	
+	["rhsgref_cdf_b_gaz66_ammo",20],
+	["rhsgref_cdf_gaz66_ammo",20],
+	["rhsgref_ins_g_gaz66_ammo",20],
+	["rhsgref_cdf_b_gaz66_repair",20],
+	["rhsgref_cdf_gaz66_repair",20],
+	["rhsgref_ins_g_gaz66_repair",20],
+
+	["rhsgref_cdf_b_gaz66_r142",15],
+	["rhsgref_cdf_gaz66_r142",15],
+	["rhsgref_ins_g_gaz66_r142",15],
+	["rhsgref_cdf_b_gaz66_ap2",15],
+	["rhsgref_cdf_gaz66_ap2",15],
+	["rhsgref_ins_g_gaz66_ap2",15],
+
+	["rhsgref_cdf_b_gaz66_zu23",10],
+	["rhsgref_cdf_gaz66_zu23",10],
+	["rhsgref_ins_g_gaz66_zu23",10],
+
+	// M113 to make them usefull
+	["rhsgref_hidf_m113a3_unarmed",30],
+	["rhsusf_m113_usarmy_medical",30],
+	["rhsusf_m113_usarmy_unarmed",30],
+
+	["rhsusf_m113_usarmy_M240",20],
+
+	["rhsgref_hidf_m113a3_m2",15],
+	["rhsusf_m113_usarmy_supply",15],
+	["rhsusf_m113_usarmy",15],
+	["rhsusf_m113_usarmy_M2_90",15],
+
+	["rhsgref_hidf_m113a3_mk19",10],
+	["rhsusf_m113_usarmy_MK19",10],
+	["rhsusf_m113_usarmy_MK19_90",10],
 
 	["rhsusf_M977A4_usarmy_wd",25],
 	["rhsusf_M977A4_BKIT_usarmy_wd",25],

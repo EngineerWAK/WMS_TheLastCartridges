@@ -166,6 +166,7 @@
 			//
 			"I_MRAP_03_F",
 			"B_MRAP_01_F",
+			"rhsusf_m1240a1_usarmy_wd", //hunter
 			"rhsgref_tla_g_kraz255b1_cargo_open",
 			"rhs_kamaz5350_flatbed_cover_vdv", //flatbed cover
 			"RHS_Ural_Flat_VDV_01", //flatbed cover
@@ -451,8 +452,10 @@
 	        "RHS_M2A2_wd",
 	        "RHS_M2A3_BUSKIII_wd",
 	        "rhsusf_M1237_M2_usarmy_wd",
-	        "rhsusf_m1240a1_m2_usarmy_wd",
-	        "rhsusf_m1240a1_m2_uik_usarmy_wd",
+	        "rhsusf_m1240a1_m2_usarmy_wd", //hunter
+	        "rhsusf_m1240a1_m2_uik_usarmy_wd", //hunter
+			"rhsusf_m1240a1_m240_usarmy_wd", //hunter
+			"rhsusf_m1240a1_m240_uik_usarmy_wd", //hunter
 	        "rhsusf_m1a1aimwd_usarmy",
 	        "rhsusf_m1a2sep1tuskiiwd_usarmy",
 	        "rhsusf_M1078A1P2_B_M2_WD_open_fmtv_usarmy",
@@ -546,7 +549,7 @@
 		name = "Chopper_RHS_Hatchet";
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] = 
-		{
+		{			
 			"O_Heli_Transport_04_medevac_black_F", //Taru is broken
 			"O_Heli_Transport_04_repair_black_F",
 			"O_Heli_Transport_04_ammo_black_F",

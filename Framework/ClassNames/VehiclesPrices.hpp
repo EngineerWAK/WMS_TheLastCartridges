@@ -383,6 +383,7 @@
 		class rhsusf_M1239_socom_wd 				{ quality = 2; price = 39004; };
 		class rhsusf_m113_usarmy_unarmed 			{ quality = 3; price = 22004; };
 		class rhsusf_m113_usarmy_medical 			{ quality = 3; price = 25004; };
+		class rhsusf_m1240a1_usarmy_wd 					{ quality = 3; price = 25004; };//hunter
 		
 		class R3F_KAMAZ_CE_trans 					{ quality = 2; price = 21881; }; //zamak
 		class R3F_KAMAZ_CE_VPC 						{ quality = 2; price = 21001; }; //zamak
@@ -499,15 +500,15 @@
 		class I_MRAP_03_hmg_F 			{ quality = 4; price = 65000; };
 		class O_T_APC_Wheeled_02_rcws_v2_ghex_F 	{ quality = 5; price = 95000; }; //forced Unarmed //"O_APC_Wheeled_02_rcws_v2_F" is UNARMED
 		//CROWS
-		class rhsusf_M1239_M2_Deploy_socom_d 		{ quality = 6; price = 65000; };
-		class rhsusf_M1239_MK19_Deploy_socom_d 		{ quality = 6; price = 65000; };
-		class rhsusf_M1239_M2_socom_d 				{ quality = 4; price = 60000; };
-		class rhsusf_M1239_MK19_socom_d 			{ quality = 4; price = 60000; };
-		class rhsusf_M1238A1_M2_socom_d 			{ quality = 4; price = 55000; };
-		class rhsusf_M1238A1_Mk19_socom_d 			{ quality = 4; price = 55000; };
-		class rhsusf_m1165a1_gmv_m134d_m240_socom_d { quality = 4; price = 52000; };
-		class rhsusf_m1165a1_gmv_m2_m240_socom_d 	{ quality = 4; price = 52000; };
-		class rhsusf_m1165a1_gmv_mk19_m240_socom_d 	{ quality = 4; price = 52000; };
+		class rhsusf_M1239_M2_Deploy_socom_d 		{ quality = 6; price = 65004; };
+		class rhsusf_M1239_MK19_Deploy_socom_d 		{ quality = 6; price = 65004; };
+		class rhsusf_M1239_M2_socom_d 				{ quality = 4; price = 60004; };
+		class rhsusf_M1239_MK19_socom_d 			{ quality = 4; price = 60004; };
+		class rhsusf_M1238A1_M2_socom_d 			{ quality = 4; price = 55004; };
+		class rhsusf_M1238A1_Mk19_socom_d 			{ quality = 4; price = 55004; };
+		class rhsusf_m1165a1_gmv_m134d_m240_socom_d { quality = 4; price = 52004; };
+		class rhsusf_m1165a1_gmv_m2_m240_socom_d 	{ quality = 4; price = 52004; };
+		class rhsusf_m1165a1_gmv_mk19_m240_socom_d 	{ quality = 4; price = 52004; };
 
 		class I_C_Offroad_02_LMG_F 					{ quality = 3; price = 38000; };
 		class I_C_Offroad_02_AT_F 					{ quality = 3; price = 55000; };
@@ -517,29 +518,33 @@
 		class O_T_LSV_02_AT_F						{ quality = 4; price = 56000; };
 		class BWA3_Eagle_FLW100_Fleck 				{ quality = 3; price = 57000; };
 		class BWA3_Dingo2_FLW100_MG3_CG13_Fleck 	{ quality = 3; price = 59000; };
-		class rhsgref_cdf_b_reg_uaz_dshkm 			{ quality = 3; price = 28000; };
-		class rhsgref_cdf_b_reg_uaz_spg9 			{ quality = 4; price = 38000; };
+		class rhsgref_cdf_b_reg_uaz_dshkm 			{ quality = 3; price = 28004; };
+		class rhsgref_cdf_b_reg_uaz_spg9 			{ quality = 4; price = 38004; };
 		class B_G_Offroad_01_armed_F 				{ quality = 3; price = 28000; };
 		class B_G_Offroad_01_AT_F 					{ quality = 4; price = 52000; };
-		class rhsgref_hidf_m113a3_m2 				{ quality = 3; price = 42000; };
-		class rhsgref_hidf_m1025_m2 				{ quality = 3; price = 42500; };
+		class rhsgref_hidf_m113a3_m2 				{ quality = 3; price = 42004; };
+		class rhsgref_hidf_m1025_m2 				{ quality = 3; price = 42504; };
 		class UK3CB_BAF_Coyote_Passenger_L111A1_W 	{ quality = 3; price = 48000; };
 		class UK3CB_BAF_Jackal2_L111A1_W 			{ quality = 3; price = 45000; };
 		class UK3CB_BAF_LandRover_WMIK_HMG_Green_B 	{ quality = 3; price = 26500; };
-		class rhsusf_m113_usarmy 					{ quality = 3; price = 35000; };
-		class rhsusf_m113_usarmy_supply 			{ quality = 3; price = 40000; };
-		class rhsusf_m1025_w_m2 					{ quality = 3; price = 40000; };
-		class rhsusf_m1045_w 						{ quality = 3; price = 65000; };
-		class rhsusf_m1151_m2_lras3_v1_usarmy_wd 	{ quality = 3; price = 62000; };
-		class rhsusf_m1151_m2_v2_usarmy_wd 			{ quality = 3; price = 60000; };
-		class rhsusf_M1237_M2_usarmy_wd 			{ quality = 3; price = 59000; };
-		class rhsusf_m1240a1_m2_usarmy_wd 			{ quality = 3; price = 65000; };
-		class rhsusf_m1240a1_m2_uik_usarmy_wd 		{ quality = 3; price = 65000; };
+		class rhsusf_m113_usarmy 					{ quality = 3; price = 35004; };
+		class rhsusf_m113_usarmy_supply 			{ quality = 3; price = 40004; };
+		class rhsusf_m1025_w_m2 					{ quality = 3; price = 40004; };
+		class rhsusf_m1045_w 						{ quality = 3; price = 65004; };
+		class rhsusf_m1151_m2_lras3_v1_usarmy_wd 	{ quality = 3; price = 62004; };
+		class rhsusf_m1151_m2_v2_usarmy_wd 			{ quality = 3; price = 60004; };
+		class rhsusf_M1237_M2_usarmy_wd 			{ quality = 3; price = 59004; };
+		class rhsusf_m1240a1_m2_usarmy_wd 			{ quality = 4; price = 61004; };
+		class rhsusf_m1240a1_m2_uik_usarmy_wd 		{ quality = 4; price = 65004; };
+		
+		class rhsusf_m1240a1_m240_usarmy_wd 		{ quality = 3; price = 54004; };
+		class rhsusf_m1240a1_m240_uik_usarmy_wd 	{ quality = 3; price = 58004; };
+
 		class rhsusf_M1078A1P2_B_M2_WD_open_fmtv_usarmy 	{ quality = 3; price = 49588; };
-		class rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy 	{ quality = 3; price = 57000; };
-		class rhsusf_CGRCAT1A2_M2_usmc_wd 			{ quality = 3; price = 49000; };
-		class rhsusf_stryker_m1127_m2_wd 			{ quality = 3; price = 70000; };
-		class rhsgref_cdf_b_gaz66_zu23 				{ quality = 3; price = 75000; };
+		class rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy 	{ quality = 3; price = 57004; };
+		class rhsusf_CGRCAT1A2_M2_usmc_wd 			{ quality = 3; price = 49004; };
+		class rhsusf_stryker_m1127_m2_wd 			{ quality = 3; price = 70004; };
+		class rhsgref_cdf_b_gaz66_zu23 				{ quality = 3; price = 75004; };
 
 		class I_LT_01_cannon_F 						{ quality = 4; price = 85000; };
 
@@ -555,26 +560,26 @@
 		class B_APC_Wheeled_01_cannon_F 			{ quality = 5; price = 150000; }; //Badger
 		class I_APC_Wheeled_03_cannon_F				{ quality = 6; price = 180000; }; //Pandur 2
 		class B_AFV_Wheeled_01_cannon_F				{ quality = 6; price = 190000; };
-		class RHS_M2A2_wd 							{ quality = 5; price = 125000; };
-		class RHS_M2A3_BUSKIII_wd 					{ quality = 6; price = 150000; };
-		class rhsgref_cdf_b_bmd1k 					{ quality = 4; price = 115000; };
-		class rhsgref_cdf_b_bmd2 					{ quality = 5; price = 145000; };
-		class rhs_btr80a_vdv 						{ quality = 6; price = 165000; };
+		class RHS_M2A2_wd 							{ quality = 5; price = 125004; };
+		class RHS_M2A3_BUSKIII_wd 					{ quality = 6; price = 150004; };
+		class rhsgref_cdf_b_bmd1k 					{ quality = 4; price = 115004; };
+		class rhsgref_cdf_b_bmd2 					{ quality = 5; price = 145004; };
+		class rhs_btr80a_vdv 						{ quality = 6; price = 165004; };
 
-		class rhsusf_m1a1aimwd_usarmy 				{ quality = 5; price = 155000; };
-		class rhsusf_m1a2sep1tuskiiwd_usarmy 		{ quality = 6; price = 175000; };
-		class rhsgref_cdf_bmd1pk					{ quality = 4; price = 85000; }; //76mm
-		class rhs_brm1k_vdv 						{ quality = 4; price = 95000; };
-		class rhs_sprut_vdv 						{ quality = 5; price = 105000; };
+		class rhsusf_m1a1aimwd_usarmy 				{ quality = 5; price = 155004; };
+		class rhsusf_m1a2sep1tuskiiwd_usarmy 		{ quality = 6; price = 175004; };
+		class rhsgref_cdf_bmd1pk					{ quality = 4; price = 85004; }; //76mm
+		class rhs_brm1k_vdv 						{ quality = 4; price = 95004; };
+		class rhs_sprut_vdv 						{ quality = 5; price = 105004; };
 
-		class rhs_t90sm_tv 							{ quality = 6; price = 155000; }; //faster turret, camera sight
-		class rhs_t90saa_tv 						{ quality = 5; price = 145000; }; //faster turret than t72, hybrid traditional + camera sight
-		class rhs_t80u45m 							{ quality = 5; price = 140000; };
-		class rhs_t80bv 							{ quality = 5; price = 135000; };
-		class rhs_t72be_tv 							{ quality = 5; price = 135000; }; //2016  //faster turret, camera sight
-		class rhs_t72bb_tv 							{ quality = 5; price = 125000; }; //1985 active armor
-		class rhs_t72ba_tv 							{ quality = 5; price = 115000; }; //1984
-		class rhsgref_cdf_b_zsu234 					{ quality = 5; price = 195000; };
+		class rhs_t90sm_tv 							{ quality = 6; price = 155004; }; //faster turret, camera sight
+		class rhs_t90saa_tv 						{ quality = 5; price = 145004; }; //faster turret than t72, hybrid traditional + camera sight
+		class rhs_t80u45m 							{ quality = 5; price = 140004; };
+		class rhs_t80bv 							{ quality = 5; price = 135004; };
+		class rhs_t72be_tv 							{ quality = 5; price = 135004; }; //2016  //faster turret, camera sight
+		class rhs_t72bb_tv 							{ quality = 5; price = 125004; }; //1985 active armor
+		class rhs_t72ba_tv 							{ quality = 5; price = 115004; }; //1984
+		class rhsgref_cdf_b_zsu234 					{ quality = 5; price = 195004; };
 		//////////////////////////////ARMORED SERVER//////////////////////////////Lower levels and 30k cheaper
 		/*
 		class B_APC_Wheeled_01_cannon_F 			{ quality = 3; price = 120000; }; //Badger

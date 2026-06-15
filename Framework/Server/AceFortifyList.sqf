@@ -31,29 +31,43 @@ if (worldName == "Cam_Lao_Nam") then {
 }else {
     if (worldName == "brf_sumava") then {
         [INDEPENDENT, 2222, [
+            ["Land_Cargo20_sand_F",500], //test
             ["CUP_A2_Road_Bridge_wood_25",200], //test
-            ["rhs_pontoon_float",200], //test
+            //["rhs_pontoon_float",200], //test
             ["rhs_pontoon_static",200], //test
-            ["rhs_pontoon_end_static",200], //test
+            //["rhs_pontoon_end_static",200], //test
             ["Land_Plank_01_4m_F", 20],
             ["Land_Plank_01_8m_F", 35],
             //["Land_BagFence_Short_F", 20],
             //["Land_BagFence_Long_F", 25],
             //["Land_BagFence_Round_F", 30],
-            ["Land_HBarrier_3_F", 60],
-            ["Land_HBarrier_5_F", 90],
-            ["Land_HBarrier_1_F", 30],
+           ["Land_HBarrier_3_F", 60],
+           // ["Land_HBarrier_5_F", 90],
+           // ["Land_HBarrier_1_F", 30],
             ["Land_CncBarrierMedium_F", 40],
             ["Land_CncBarrierMedium4_F", 90],
-            ["Land_CncBarrier_stripes_F", 30],
+           // ["Land_CncBarrier_stripes_F", 30],
+            ["Land_Razorwire_F",50],
 
             ["Land_BagFence_01_short_green_F", 20],
             ["Land_BagFence_01_long_green_F", 25],
-            ["Land_BagFence_01_round_green_F", 30],
+            //["Land_BagFence_01_round_green_F", 30],
 
             ["Land_SandbagBarricade_01_half_F", 40],
             ["Land_SandbagBarricade_01_F", 50],
             ["Land_SandbagBarricade_01_hole_F", 45],
+
+            ["Land_LampShabby_F", 30],
+            ["Land_Camping_Light_F", 9],
+            ["Land_PortableLight_single_F", 20],
+            ["Land_TentLamp_01_standing_red_F", 12],
+
+            //["TargetP_Alien1_Acc1_F", 90],
+            ["TargetP_Zom_Acc1_F", 90],
+            ["TargetP_Inf9_Acc2_F", 90],
+            ["Land_Target_Dueling_01_F", 20],
+            ["Scarecrow_01_F", 20],
+
             ["Campfire_burning_F", 50],
             ["Land_WoodenLog_F",10]
             ]

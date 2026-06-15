@@ -8,14 +8,14 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-private ["_playerMoney","_targetOwner","_targetUID","_price","_ammoTypeRandom","_ammoTypeDefault","_ammoCaliber","_ammoCount","_magsCount","_weaponConfig","_ammoArray","_ammoType"];
+private ["_40mmHEListx6rnds","_playerMoney","_targetOwner","_targetUID","_price","_ammoTypeRandom","_ammoTypeDefault","_ammoCaliber","_ammoCount","_magsCount","_weaponConfig","_ammoArray","_ammoType"];
 params [
 	"_playerObject",
 	"_boxObject",
 	["_option", "random"], //"random" //randompistol
 	["_tax","none"] //"emergency" = x3 price
 ];
-if (WMS_MissionDebug) then {diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|_this %1", _this]};
+if (true) then {diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|_this %1", _this]};//WMS_MissionDebug
 
 _magsCount = 3;
 _ammoCount = 30;
@@ -25,8 +25,9 @@ _ammoArray = [];
 _ammoTypeDefaultAll = [];
 _ammoTypeDefault = "";
 _ammoTypeRandom = "";
-_40mmHEList = ["1Rnd_HE_Grenade_shell","rhs_mag_M441_HE", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET","rhsusf_mag_6Rnd_M441_HE", "rhsusf_mag_6Rnd_M433_HEDP", "rhsusf_mag_6Rnd_M397_HET","CBA_40mm_M203", "CBA_40mm_EGLM"];
-
+_price = 999;
+_40mmHEList = ["1Rnd_HE_Grenade_shell","rhs_mag_M441_HE", "rhs_mag_M433_HEDP", "rhs_mag_M397_HET","CBA_40mm_M203", "CBA_40mm_EGLM"];
+_40mmHEListx6rnds  = ["rhsusf_mag_6Rnd_M441_HE","rhsusf_mag_6Rnd_M433_HEDP","rhsusf_mag_6Rnd_M397_HET"];
 _targetUID = getPlayerUID _playerObject;
 _defaultAmmo = profileNameSpace GetVariable [_targetUID+"_defaultAmmo", []];
 _weapPlayer = primaryweapon _playerObject;
@@ -85,20 +86,39 @@ switch (tolower _option) do {
 		_ammoCaliber = getNumber (configfile >> "CfgAmmo" >> _ammoType >> "caliber"); //not the "real" Caliber but seems to follow some logic
 	};
 };
+	diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|default %1, random %2", _ammoTypeDefault,_ammoTypeRandom];
+
 if (count _ammoArray == 0) exitWith {Diag_log "something went wrong remoteExec message Blablablabla"};
+
 if (_ammoCaliber < 0.75) then {_ammoCaliber = 0.75};
 _price = round (_ammoCaliber*_ammoCount*1.6);
 //"rhsusf_40mm_HE"
-if ("50rnd" in _ammoTypeDefault || "50rnd" in _ammoTypeRandom) then {_price == _price+50}; //those 50rnds HLC mags are waaaaaaayyyyyyy too cheap, especialy tac-TX, will be adjusted later
+if ("50rnd" in _ammoTypeDefault || "50rnd" in _ammoTypeRandom) then {
+	_price = (_price+50);
+	diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|50rnd+50= _price %1", _price];
+	}; //those 50rnds HLC mags are waaaaaaayyyyyyy too cheap, especialy tac-TX, will be adjusted later
 if (
 	"HET" in _ammoType || "HE" in _ammoType|| "HEDP" in _ammoType||
 	"HET" in _ammoTypeDefault || "HE" in _ammoTypeDefault|| "HEDP" in _ammoTypeDefault||
 	"HET" in _ammoTypeRandom || "HE" in _ammoTypeRandom|| "HEDP" in _ammoTypeRandom) then { //40mm grenades are 3$ each, thats ridiculous
-		_price == _price*15;
+		_price = (_price*15);
+		diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|HET HE HEDP*15= _price %1", _price];
 	}else {
-		if (_ammoTypeDefault in _40mmHEList || _ammoTypeRandom in _40mmHEList) then {_price == _price*15;};
+		if (_ammoTypeDefault in _40mmHEList || _ammoTypeRandom in _40mmHEList) then {
+			_price = (_price*15);
+			diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|40mmHEList*15= _price %1", _price];
+		};
 	};
-if (_tax == "emergency")then {_price = _price*3};
+
+if (_ammoTypeDefault in _40mmHEListx6Rnds || _ammoTypeRandom in _40mmHEListx6Rnds) then {
+		_price = 688;
+		diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|40mmHEListx6Rnds688= _price %1", _price];
+	};//"rhsusf_mag_6Rnd_M441_HE","rhsusf_mag_6Rnd_M433_HEDP","rhsusf_mag_6Rnd_M397_HET"
+
+if (_tax == "emergency")then {
+		_price = _price*3;
+		diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|emergency*3= _price %1", _price];
+	};
 if (_price < 30)then {_price = 30};
 _targetUID = getPlayerUID _playerObject;
 _targetOwner = (owner _playerObject);
@@ -122,8 +142,14 @@ if (_playerMoney >= (_price*_magsCount)) then {
 			};
 		};
 	};
+	diag_log format ["[BUY_AMMO]|WAK|TNA|WMS|_price*3mags= _price %1", (_price*_magsCount)];
 } else {
 	//Too Poor remoteExec message
 		hint "Dude! You are too poor!";
 };
-
+/*
+17:05:07 "[BUY_AMMO]|WAK|TNA|WMS|default rhsusf_mag_6Rnd_M441_HE, random "
+17:05:07 "[BUY_AMMO]|WAK|TNA|WMS|HET HE HEDP*15= _price 19"
+17:05:07 "[BUY_AMMO]|WAK|TNA|WMS|40mmHEListx6Rnds688= _price 19"
+17:05:07 "[BUY_AMMO]|WAK|TNA|WMS|_price*3mags= _price 90"
+*/

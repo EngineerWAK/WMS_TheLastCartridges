@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.850_2026MAY22_GitHub"; //ALAMO Base LVL 6
+	name = "v1.853_2026JUN11_GitHub"; //modified IP computer //added items in fortify list, //claimreward rewards
 };
 
 class Extended_PreInit_EventHandlers {
@@ -238,7 +238,7 @@ class CfgForceAmmoFacilities //some Ammo vehicles/buildings are not recognized a
 		"rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom",
 		"rhsusf_m1152_rsv_usarmy_wd"
 	};
-	inventory[] = { //not yet
+	inventory[] = {
 		{"rhs_mag_an_m14_th3",10},
 		{"rhs_charge_tnt_x2_mag",10},
 		{"DemoCharge_Remote_Mag",10},
@@ -261,10 +261,10 @@ class CfgClaimReward
 		25000
 	};
 	weight[] =  {
-		{0.05, 0.1,0.3,0.2, 0.8},//["trash", "item", "weap", "launcher", "vhl"];
-		{0.1, 0.1,0.3,0.2, 0.6},
-		{0.2, 0.2,0.3,0.2, 0.5},
-		{0.3, 0.2,0.3,0.3, 0.4},
+		{0.01, 0.1,0.3,0.2, 0.8},//["trash", "item", "weap", "launcher", "vhl"];
+		{0.05, 0.1,0.3,0.2, 0.6},
+		{0.15, 0.2,0.3,0.2, 0.5},
+		{0.25, 0.2,0.3,0.3, 0.4},
 		{0.4, 0.2,0.2,0.3, 0.3},
 		{0.5, 0.3,0.2,0.2, 0.2}
 	};

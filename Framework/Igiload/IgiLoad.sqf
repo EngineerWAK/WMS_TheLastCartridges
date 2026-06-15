@@ -97,9 +97,7 @@ if (isnil "IL_Variables") then
 	
 	IL_Supported_Vehicles_OFFROAD =  //Can be loaded WITH something else
 	[
-		"I_G_Offroad_01_F",
-		"C_IDAP_Offroad_01_F",
-		"Exile_Car_Offroad_Repair_Civillian",
+		/*"Exile_Car_Offroad_Repair_Civillian",
 		"Exile_Car_Offroad_Repair_Red",
 		"Exile_Car_Offroad_Repair_Beige",
 		"Exile_Car_Offroad_Repair_White",
@@ -143,7 +141,36 @@ if (isnil "IL_Variables") then
 		"Exile_Car_LandRover_Urban",
 		"Exile_Car_LandRover_Green",
 		"Exile_Car_LandRover_Sand",
-		"Exile_Car_LandRover_Desert",
+		"Exile_Car_LandRover_Desert",*/
+		"B_G_Offroad_01_F",
+		//"B_G_Offroad_01_AT_F",
+		//"B_G_Offroad_01_armed_F",
+		//"B_G_Offroad_01_repair_F",
+		"B_GEN_Offroad_01_gen_F",
+		//"B_GEN_Offroad_01_comms_F",
+		//"B_GEN_Offroad_01_covered_F",
+		"O_G_Offroad_01_F",
+		//"O_G_Offroad_01_AT_F",
+		//"O_G_Offroad_01_armed_F",
+		//"O_G_Offroad_01_repair_F",
+		"rhsgref_tla_offroad",
+		//"rhsgref_tla_offroad_at",
+		//"rhsgref_tla_offroad_armed",
+		//"I_G_Offroad_01_AT_F",
+		//"I_G_Offroad_01_armed_F",
+		//"I_G_Offroad_01_repair_F",
+		"I_E_Offroad_01_F",
+		//"I_E_Offroad_01_comms_F",
+		//"I_E_Offroad_01_covered_F",
+		"rhsgref_tla_g_offroad",
+		//"rhsgref_tla_g_offroad_at",
+		//"rhsgref_tla_g_offroad_armed",
+		"C_Offroad_01_F",
+		//"C_Offroad_01_comms_F",
+		//"C_Offroad_01_covered_F",
+
+		"I_G_Offroad_01_F",
+		"C_IDAP_Offroad_01_F",
 		"rhsusf_m998_w_2dr",
 		"rhsusf_m998_d_2dr",
 		"rhsusf_m998_w_s_2dr",
@@ -159,13 +186,13 @@ if (isnil "IL_Variables") then
 		"rhsusf_m1152_usarmy_wd" //armored humvee test
 	];
 	IL_Supported_Vehicles_SDV = //Can be loaded WITH something else
-	[
-		"B_SDV_01_F",
-		"O_SDV_01_F",
-		"I_SDV_01_F",
+	[/*,
 		"Exile_Boat_SDV_CSAT",
 		"Exile_Boat_SDV_Digital",
-		"Exile_Boat_SDV_Grey"
+		"Exile_Boat_SDV_Grey"*/
+		"B_SDV_01_F",
+		"O_SDV_01_F",
+		"I_SDV_01_F"
 	];
 	IL_Supported_Vehicles_UGV = //Can be loaded WITH something else
 	[
@@ -177,9 +204,7 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_Vehicles_VAN =  //Can be loaded WITH something else
 	[
-		//"I_G_Van_01_transport_F",
-		"O_G_Van_01_transport_F",
-		"Exile_Car_Van_Black",
+		/*"Exile_Car_Van_Black",
 		"Exile_Car_Van_White",
 		"Exile_Car_Van_Red",
 		"Exile_Car_Van_Guerilla01",
@@ -190,7 +215,6 @@ if (isnil "IL_Variables") then
 		"Exile_Car_Van_Guerilla06",
 		"Exile_Car_Van_Guerilla07",
 		"Exile_Car_Van_Guerilla08",
-		"C_Van_01_box_F",
 		"Exile_Car_Van_Box_Black",
 		"Exile_Car_Van_Box_White",
 		"Exile_Car_Van_Box_Red",
@@ -201,7 +225,43 @@ if (isnil "IL_Variables") then
 		"Exile_Car_Van_Box_Guerilla05",
 		"Exile_Car_Van_Box_Guerilla06",
 		"Exile_Car_Van_Box_Guerilla07",
-		"Exile_Car_Van_Box_Guerilla08",
+		"Exile_Car_Van_Box_Guerilla08",*/
+		//TEST
+"rhsgref_cdf_b_gaz66",
+//"rhsgref_cdf_b_gaz66_ammo",
+"rhsgref_cdf_b_gaz66_flat",
+"rhsgref_cdf_b_gaz66o",
+"rhsgref_cdf_b_gaz66o_flat",
+//"rhsgref_cdf_b_gaz66_r142",
+//"rhsgref_cdf_b_gaz66_zu23",
+//"rhsgref_cdf_b_gaz66_ap2",
+//"rhsgref_cdf_b_gaz66_repair",
+"rhsgref_cdf_gaz66",
+//"rhsgref_cdf_gaz66_ammo",
+"rhsgref_cdf_gaz66_flat",
+"rhsgref_cdf_gaz66o",
+"rhsgref_cdf_gaz66o_flat",
+//"rhsgref_cdf_gaz66_r142",
+//"rhsgref_cdf_gaz66_zu23",
+//"rhsgref_cdf_gaz66_ap2",
+//"rhsgref_cdf_gaz66_repair",
+"rhsgref_ins_g_gaz66",
+//"rhsgref_ins_g_gaz66_ammo",
+"rhsgref_ins_g_gaz66_flat",
+"rhsgref_ins_g_gaz66o",
+"rhsgref_ins_g_gaz66o_flat",
+//"rhsgref_ins_g_gaz66_r142",
+//"rhsgref_ins_g_gaz66_zu23",
+//"rhsgref_ins_g_gaz66_ap2",
+//"rhsgref_ins_g_gaz66_repair",
+
+		"B_G_Van_01_transport_F",
+		"O_G_Van_01_transport_F",
+		"I_G_Van_01_transport_F",
+		"rhsgref_nat_van",
+		"I_C_Van_01_transport_F",
+		"C_Van_01_transport_F",
+		"C_Van_01_box_F",
 		"rhsusf_M1078A1P2_WD_open_fmtv_usarmy", //ok
 		"rhsusf_M1078A1P2_B_WD_open_fmtv_usarmy",//test
 		"rhsusf_M1078A1P2_B_M2_WD_open_fmtv_usarmy" //ok m2
@@ -222,12 +282,22 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_Vehicles_HEMTT =  //Can be loaded WITH something else
 	[
-	"Exile_Car_HEMMT",
-	"B_Truck_01_transport_F",
-	"B_Truck_01_covered_F"
+		/*"Exile_Car_HEMMT",*/
+		//"B_Truck_01_mover_F",
+		"B_Truck_01_cargo_F",
+		"B_Truck_01_flatbed_F",
+		//"B_T_Truck_01_mover_F",
+		"B_T_Truck_01_cargo_F",
+		"B_T_Truck_01_flatbed_F",
+		"B_T_Truck_01_transport_F",
+		"B_T_Truck_01_covered_F",
+		"B_Truck_01_transport_F",
+		"B_Truck_01_covered_F"
 	];
 	IL_Supported_Vehicles_KAMAZ =  //Can be loaded WITH something else
-	[		"R3F_KAMAZ_CE_trans",
+	[		
+		/*"Exile_Car_Zamak",*/
+		"R3F_KAMAZ_CE_trans",
 			//"R3F_KAMAZ_CE_VPC",
 			//"R3F_KAMAZ_CE_MEDEVAC",
 			//"R3F_KAMAZ_CE_FUEL",
@@ -236,7 +306,6 @@ if (isnil "IL_Variables") then
 			//"R3F_KAMAZ_DA_MEDEVAC",
 			//"R3F_KAMAZ_DA_FUEL",
 		"I_Truck_02_covered_F",
-		"Exile_Car_Zamak",
 		"O_Truck_02_covered_F",
 		"O_Truck_02_transport_F",
 		"I_Truck_02_transport_F",
@@ -268,7 +337,7 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_Vehicles_TEMPEST =  //Can be loaded WITH something else
 	[
-		"Exile_Car_Tempest",
+		/*"Exile_Car_Tempest",*/
 		"O_T_Truck_03_transport_ghex_F",
 		"O_T_Truck_03_covered_ghex_F",
 		"O_Truck_03_covered_F",
@@ -276,11 +345,11 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_Vehicles_M977 =  //Can be loaded WITH something else
 	[
+		"rhsusf_M977A4_usarmy_wd",
 		"rhsusf_M977A4_usarmy_d"
 	];
 	IL_Supported_Vehicles_M977M2 =  //Can be loaded WITH something else
 	[
-		"rhsusf_M977A4_usarmy_wd",
 		"rhsusf_M977A4_BKIT_M2_usarmy_wd",
 		"rhsusf_M977A4_BKIT_M2_usarmy_d",
 		"rhsusf_M977A4_BKIT_usarmy_wd", //no M2
@@ -289,23 +358,25 @@ if (isnil "IL_Variables") then
 	
 	IL_Supported_Vehicles_MOHAWK = 
 	[
-		"Exile_Chopper_Mohawk_FIA",
+		/*"Exile_Chopper_Mohawk_FIA",*/
+		"C_IDAP_Heli_Transport_02_F",
 		"I_Heli_Transport_02_F",
 		"UK3CB_BAF_Merlin_HC3_Cargo",
 		"UK3CB_BAF_Merlin_HC4_Cargo"
 	]; //Can be loaded WITH something else
 	IL_Supported_Vehicles_CHINOOK =  //Can be loaded WITH something else
 	[
-		"Exile_Chopper_Huron_Black",
-		"Exile_Chopper_Huron_Green",
+		/*"Exile_Chopper_Huron_Black",
+		"Exile_Chopper_Huron_Green",*/
 		"B_Heli_Transport_03_F", //CH-67 Huron
 		"B_Heli_Transport_03_black_F", //CH-67 Huron
 		"B_Heli_Transport_03_unarmed_F",
 		"B_Heli_Transport_03_unarmed_green_F",
+		"RHS_CH_47F_cargo",
 		"RHS_CH_47F" //chinook
 	];
 	IL_Supported_Vehicles_MH9 = //Can be loaded WITH something else
-	[
+	[/*
 		"Exile_Chopper_Hummingbird_Green",
 		"Exile_Chopper_Hummingbird_Civillian_Blue",
 		"Exile_Chopper_Hummingbird_Civillian_Red",
@@ -323,7 +394,7 @@ if (isnil "IL_Variables") then
 		"Exile_Chopper_Hummingbird_Civillian_Sunset",
 		"Exile_Chopper_Hummingbird_Civillian_Vrana",
 		"Exile_Chopper_Hummingbird_Civillian_Wasp",
-		"Exile_Chopper_Hummingbird_Civillian_Wave",
+		"Exile_Chopper_Hummingbird_Civillian_Wave",*/
 		"B_Heli_Light_01_F",
 		//"B_Heli_Light_01_armed_F",
 		"RHS_MELB_MH6M"
@@ -334,13 +405,13 @@ if (isnil "IL_Variables") then
 
 	IL_Supported_Bicycles = //Can be loaded on something else
 	[
-		"Exile_Bike_OldBike",
+		/*"Exile_Bike_OldBike",
 		"Exile_Bike_MountainBike",
-		"Exile_Bike_Crosser"
+		"Exile_Bike_Crosser"*/
 	];
 	IL_Supported_Karts = //Can be loaded on something else
 	[
-		"Exile_Car_Kart_BluKing",
+		/*"Exile_Car_Kart_BluKing",
 		"Exile_Car_Kart_RedStone",
 		"Exile_Car_Kart_Vrana",
 		"Exile_Car_Kart_Green",
@@ -348,13 +419,28 @@ if (isnil "IL_Variables") then
 		"Exile_Car_Kart_Orange",
 		"Exile_Car_Kart_White",
 		"Exile_Car_Kart_Yellow",
-		"Exile_Car_Kart_Black"
+		"Exile_Car_Kart_Black"*/
+		"C_Kart_01_F",
+		"C_Kart_01_Blu_F",
+		"C_Kart_01_Fuel_F",
+		"C_Kart_01_Red_F",
+		"C_Kart_01_Vrana_F"
 	];
-	IL_Supported_HEMTT = ["Exile_Car_HEMMT"]; //Can be loaded on something else
+	IL_Supported_HEMTT = [ //Can be loaded on something else
+		/*"Exile_Car_HEMMT"*/
+		"B_Truck_01_mover_F",
+		"B_Truck_01_cargo_F",
+		"B_Truck_01_flatbed_F",
+		"B_Truck_01_transport_F",
+		"B_T_Truck_01_mover_F",
+		"B_T_Truck_01_cargo_F",
+		"B_T_Truck_01_flatbed_F",
+		"B_T_Truck_01_transport_F"
+		];
 	IL_Supported_KAMAZ = //Can be loaded on something else
 	[
+		/*"Exile_Car_Zamak",*/
 		"I_Truck_02_covered_F",
-		"Exile_Car_Zamak",
 		"O_Truck_02_covered_F",
 		"O_Truck_02_transport_F",
 		"I_Truck_02_transport_F",
@@ -376,7 +462,7 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_TEMPEST = //Can be loaded on something else
 	[
-		"Exile_Car_Tempest",
+		/*"Exile_Car_Tempest",*/
 		"O_T_Truck_03_transport_ghex_F",
 		"O_T_Truck_03_covered_ghex_F",
 		"O_Truck_03_covered_F",
@@ -396,7 +482,7 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_MH9 = //Can be loaded ON something else //AS TEST
 	[
-		"Exile_Chopper_Hummingbird_Green",
+		/*"Exile_Chopper_Hummingbird_Green",
 		"Exile_Chopper_Hummingbird_Civillian_Blue",
 		"Exile_Chopper_Hummingbird_Civillian_Red",
 		"Exile_Chopper_Hummingbird_Civillian_ION",
@@ -413,7 +499,20 @@ if (isnil "IL_Variables") then
 		"Exile_Chopper_Hummingbird_Civillian_Sunset",
 		"Exile_Chopper_Hummingbird_Civillian_Vrana",
 		"Exile_Chopper_Hummingbird_Civillian_Wasp",
-		"Exile_Chopper_Hummingbird_Civillian_Wave",
+		"Exile_Chopper_Hummingbird_Civillian_Wave",*/
+		//B_UAV_02_dynamicLoadout_F
+
+		//TEST
+		"O_T_UAV_04_CAS_F",
+		"O_UAV_02_dynamicLoadout_F",
+		"rhs_pchela1t_vvsc",
+		"rhs_pchela1t_vvs",
+		"B_T_UAV_03_dynamicLoadout_F",
+		"I_UAV_02_dynamicLoadout_F",
+		"I_UAV_02_F",
+
+		"I_C_Heli_Light_01_civil_F",
+		"C_Heli_Light_01_civil_F",
 		"B_Heli_Light_01_F",
 		"B_Heli_Light_01_armed_F",
 		"RHS_MELB_MH6M",
@@ -426,27 +525,51 @@ if (isnil "IL_Variables") then
 	
 	IL_Supported_Strider = //Can be loaded on something else
 	[
+		/*"Exile_Car_Strider",*/
 		"I_MRAP_03_F",
 		"I_MRAP_03_hmg_F",
-		"Exile_Car_Strider",
 		"R3F_FENNEC_CE",
 		"R3F_FENNEC_DA"
 	];
 	IL_Supported_Hunter = //Can be loaded on something else
 	[
+		/*"Exile_Car_Hunter",*/
+		"rhsusf_m1240a1_usarmy_d",
+		"rhsusf_m1240a1_m2_usarmy_d",
+		"rhsusf_m1240a1_m240_usarmy_d",
+		"rhsusf_m1240a1_mk19_usarmy_d",
+		"rhsusf_m1240a1_m2_uik_usarmy_d",
+		"rhsusf_m1240a1_m240_uik_usarmy_d",
+		"rhsusf_m1240a1_mk19_uik_usarmy_d",
+		"rhsusf_m1240a1_usarmy_wd",
+		"rhsusf_m1240a1_m2_usarmy_wd",
+		"rhsusf_m1240a1_m240_usarmy_wd",
+		"rhsusf_m1240a1_mk19_usarmy_wd",
+		"rhsusf_m1240a1_m2_uik_usarmy_wd",
+		"rhsusf_m1240a1_m240_uik_usarmy_wd",
+		"rhsusf_m1240a1_m240_uik_usarmy_wd",
+		"rhsusf_m1240a1_mk19_uik_usarmy_wd",
+		"rhsusf_m1240a1_usmc_d",
+		"rhsusf_m1240a1_m2_usmc_d",
+		"rhsusf_m1240a1_m240_usmc_d",
+		"rhsusf_m1240a1_mk19_usmc_d",
+		"rhsusf_m1240a1_usmc_wd",
+		"rhsusf_m1240a1_m2_usmc_wd",
+		"rhsusf_m1240a1_m240_usmc_wd",
+		"rhsusf_m1240a1_mk19_usmc_wd",
+
 		"B_T_MRAP_01_F",
 		"B_T_MRAP_01_hmg_F",
 		"B_MRAP_01_hmg_F",
 		"B_MRAP_01_F",
-		"Exile_Car_Hunter",
 		"R3F_MATV_CE",
 		"R3F_MATV_DA"
 	];
 	IL_Supported_Ifrit = //Can be loaded on something else
-	[
+	[/*,
+		"Exile_Car_Ifrit"*/
 		"O_MRAP_02_F",
-		"O_MRAP_02_hmg_F",
-		"Exile_Car_Ifrit"
+		"O_MRAP_02_hmg_F"
 	];
 	IL_Supported_UGV = //Can be loaded on something else
 	[
@@ -460,6 +583,72 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_VAN = //Can be loaded on something else //Try Prowler and qilin WAK
 	[
+			/*"Exile_Car_ProwlerLight", //cheaper
+			"Exile_Car_ProwlerUnarmed", //cheaper
+		"Exile_Car_Van_Black",
+		"Exile_Car_Van_White",
+		"Exile_Car_Van_Red",
+		"Exile_Car_Van_Guerilla01",
+		"Exile_Car_Van_Guerilla02",
+		"Exile_Car_Van_Guerilla03",
+		"Exile_Car_Van_Guerilla04",
+		"Exile_Car_Van_Guerilla05",
+		"Exile_Car_Van_Guerilla06",
+		"Exile_Car_Van_Guerilla07",
+		"Exile_Car_Van_Guerilla08",
+		"Exile_Car_Van_Box_Black",
+		"Exile_Car_Van_Box_White",
+		"Exile_Car_Van_Box_Red",
+		"Exile_Car_Van_Box_Guerilla01",
+		"Exile_Car_Van_Box_Guerilla02",
+		"Exile_Car_Van_Box_Guerilla03",
+		"Exile_Car_Van_Box_Guerilla04",
+		"Exile_Car_Van_Box_Guerilla05",
+		"Exile_Car_Van_Box_Guerilla06",
+		"Exile_Car_Van_Box_Guerilla07",
+		"Exile_Car_Van_Box_Guerilla08",
+		"Exile_Car_Van_Fuel_Black",
+		"Exile_Car_Van_Fuel_White",
+		"Exile_Car_Van_Fuel_Red",
+		"Exile_Car_Van_Fuel_Guerilla01",
+		"Exile_Car_Van_Fuel_Guerilla02",
+		"Exile_Car_Van_Fuel_Guerilla03",*/
+
+		"B_G_Van_01_transport_F",
+		"O_G_Van_01_transport_F",
+		"I_G_Van_01_transport_F",
+		"rhsgref_nat_van",
+		"I_C_Van_01_transport_F",
+		"C_Van_01_transport_F",
+//test
+"rhsgref_cdf_b_gaz66",
+"rhsgref_cdf_b_gaz66_ammo",
+"rhsgref_cdf_b_gaz66_flat",
+"rhsgref_cdf_b_gaz66o",
+"rhsgref_cdf_b_gaz66o_flat",
+"rhsgref_cdf_b_gaz66_r142",
+"rhsgref_cdf_b_gaz66_zu23",
+"rhsgref_cdf_b_gaz66_ap2",
+"rhsgref_cdf_b_gaz66_repair",
+"rhsgref_cdf_gaz66",
+"rhsgref_cdf_gaz66_ammo",
+"rhsgref_cdf_gaz66_flat",
+"rhsgref_cdf_gaz66o",
+"rhsgref_cdf_gaz66o_flat",
+"rhsgref_cdf_gaz66_r142",
+"rhsgref_cdf_gaz66_zu23",
+"rhsgref_cdf_gaz66_ap2",
+"rhsgref_cdf_gaz66_repair",
+"rhsgref_ins_g_gaz66",
+"rhsgref_ins_g_gaz66_ammo",
+"rhsgref_ins_g_gaz66_flat",
+"rhsgref_ins_g_gaz66o",
+"rhsgref_ins_g_gaz66o_flat",
+"rhsgref_ins_g_gaz66_r142",
+"rhsgref_ins_g_gaz66_zu23",
+"rhsgref_ins_g_gaz66_ap2",
+"rhsgref_ins_g_gaz66_repair",
+
 		"B_T_LSV_01_unarmed_F", //olive
 			"B_T_LSV_01_unarmed_CTRG_F",
 			"B_LSV_01_unarmed_F", //sand
@@ -479,8 +668,6 @@ if (isnil "IL_Variables") then
 			"B_T_LSV_01_armed_olive_F",
 			"B_T_LSV_01_armed_sand_F",
 			"B_CTRG_LSV_01_light_F",
-			"Exile_Car_ProwlerLight", //cheaper
-			"Exile_Car_ProwlerUnarmed", //cheaper
 		"O_T_LSV_02_unarmed_F",
 			"O_T_LSV_02_unarmed_viper_F",
 			"O_LSV_02_unarmed_F",
@@ -501,35 +688,7 @@ if (isnil "IL_Variables") then
 			"O_LSV_02_armed_black_F", //clone
 			"O_LSV_02_armed_ghex_F",
 			"O_LSV_02_armed_arid_F",
-		"Exile_Car_Van_Black",
-		"Exile_Car_Van_White",
-		"Exile_Car_Van_Red",
-		"Exile_Car_Van_Guerilla01",
-		"Exile_Car_Van_Guerilla02",
-		"Exile_Car_Van_Guerilla03",
-		"Exile_Car_Van_Guerilla04",
-		"Exile_Car_Van_Guerilla05",
-		"Exile_Car_Van_Guerilla06",
-		"Exile_Car_Van_Guerilla07",
-		"Exile_Car_Van_Guerilla08",
-		"C_Van_01_box_F",
-		"Exile_Car_Van_Box_Black",
-		"Exile_Car_Van_Box_White",
-		"Exile_Car_Van_Box_Red",
-		"Exile_Car_Van_Box_Guerilla01",
-		"Exile_Car_Van_Box_Guerilla02",
-		"Exile_Car_Van_Box_Guerilla03",
-		"Exile_Car_Van_Box_Guerilla04",
-		"Exile_Car_Van_Box_Guerilla05",
-		"Exile_Car_Van_Box_Guerilla06",
-		"Exile_Car_Van_Box_Guerilla07",
-		"Exile_Car_Van_Box_Guerilla08",
-		"Exile_Car_Van_Fuel_Black",
-		"Exile_Car_Van_Fuel_White",
-		"Exile_Car_Van_Fuel_Red",
-		"Exile_Car_Van_Fuel_Guerilla01",
-		"Exile_Car_Van_Fuel_Guerilla02",
-		"Exile_Car_Van_Fuel_Guerilla03"
+		"C_Van_01_box_F"
 	];
 	IL_Supported_MARID = //Can be loaded on something else 
 	[
@@ -538,11 +697,7 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_OFFROAD = //Can be loaded on something else //Try MRZR WAK
 	[
-		"rhsusf_mrzr4_d",
-		"rhsusf_mrzr4_d_mud",
-		"rhsusf_mrzr4_w",
-		"rhsusf_mrzr4_w_mud",
-		"Exile_Car_Offroad_Red",
+		/*"Exile_Car_Offroad_Red",
 		"Exile_Car_Offroad_Beige",
 		"Exile_Car_Offroad_White",
 		"Exile_Car_Offroad_Blue",
@@ -599,6 +754,47 @@ if (isnil "IL_Variables") then
 		"Exile_Car_LandRover_Green",
 		"Exile_Car_LandRover_Sand",
 		"Exile_Car_LandRover_Desert",
+		"Exile_Car_HMMWV_M134_Green",
+		"Exile_Car_HMMWV_M134_Desert",
+		"Exile_Car_HMMWV_M2_Green",
+		"Exile_Car_HMMWV_M2_Desert",
+		"Exile_Car_HMMWV_MEV_Green",
+		"Exile_Car_HMMWV_MEV_Desert",
+		"Exile_Car_HMMWV_UNA_Green",
+		"Exile_Car_HMMWV_UNA_Desert",*/
+		"B_G_Offroad_01_F",
+		"B_G_Offroad_01_AT_F",
+		"B_G_Offroad_01_armed_F",
+		"B_G_Offroad_01_repair_F",
+		"B_GEN_Offroad_01_gen_F",
+		"B_GEN_Offroad_01_comms_F",
+		"B_GEN_Offroad_01_covered_F",
+		"O_G_Offroad_01_F",
+		"O_G_Offroad_01_AT_F",
+		"O_G_Offroad_01_armed_F",
+		"O_G_Offroad_01_repair_F",
+		"rhsgref_tla_offroad",
+		"rhsgref_tla_offroad_at",
+		"rhsgref_tla_offroad_armed",
+		"I_G_Offroad_01_F",
+		"I_G_Offroad_01_AT_F",
+		"I_G_Offroad_01_armed_F",
+		"I_G_Offroad_01_repair_F",
+		"I_E_Offroad_01_F",
+		"I_E_Offroad_01_comms_F",
+		"I_E_Offroad_01_covered_F",
+		"rhsgref_tla_g_offroad",
+		"rhsgref_tla_g_offroad_at",
+		"rhsgref_tla_g_offroad_armed",
+		"C_Offroad_01_F",
+		"C_Offroad_01_comms_F",
+		"C_Offroad_01_covered_F",
+		//"C_Offroad_01_repair_F" ambiante life
+		"C_IDAP_Offroad_01_F",
+		"rhsusf_mrzr4_d",
+		"rhsusf_mrzr4_d_mud",
+		"rhsusf_mrzr4_w",
+		"rhsusf_mrzr4_w_mud",
 		"rhsusf_m998_w_2dr",
 		"rhsusf_m998_d_2dr",
 		"rhsusf_m998_w_s_2dr",
@@ -609,14 +805,6 @@ if (isnil "IL_Variables") then
 		"rhsusf_m998_d_s_2dr_fulltop",
 		"rhsusf_m998_w_s_2dr_halftop",
 		"rhsusf_m998_d_s_2dr_halftop",
-		"Exile_Car_HMMWV_M134_Green",
-		"Exile_Car_HMMWV_M134_Desert",
-		"Exile_Car_HMMWV_M2_Green",
-		"Exile_Car_HMMWV_M2_Desert",
-		"Exile_Car_HMMWV_MEV_Green",
-		"Exile_Car_HMMWV_MEV_Desert",
-		"Exile_Car_HMMWV_UNA_Green",
-		"Exile_Car_HMMWV_UNA_Desert",
 		"rhsusf_m1025_w",
 		"rhsusf_m1025_w_m2",
 		"rhssaf_m1025_olive", //0.4.2 RHSSAF
@@ -625,14 +813,15 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_SUV =  //Can be loaded on something else
 	[
-		"Exile_Car_SUV_Red",
+		/*"Exile_Car_SUV_Red",
 		"Exile_Car_SUV_Black",
 		"Exile_Car_SUV_Grey",
-		"Exile_Car_SUV_Orange"
+		"Exile_Car_SUV_Orange"*/
+		"C_SUV_01_F"
 	];
 	IL_Supported_Hatchback =  //Can be loaded on something else
 	[
-		"Exile_Car_Hatchback_Beige",
+		/*"Exile_Car_Hatchback_Beige",
 		"Exile_Car_Hatchback_Green",
 		"Exile_Car_Hatchback_Blue",
 		"Exile_Car_Hatchback_BlueCustom",
@@ -649,11 +838,13 @@ if (isnil "IL_Variables") then
 		"Exile_Car_Hatchback_Sport_Orange",
 		"Exile_Car_Hatchback_Sport_White",
 		"Exile_Car_Hatchback_Sport_Beige",
-		"Exile_Car_Hatchback_Sport_Green"
+		"Exile_Car_Hatchback_Sport_Green"*/
+		"C_Hatchback_01_F",
+		"C_Hatchback_01_sport_F"
 	];
 	IL_Supported_Quadbike =  //Can be loaded on something else
 	[
-		"Exile_Bike_QuadBike_Black",
+		/*"Exile_Bike_QuadBike_Black",
 		"Exile_Bike_QuadBike_Blue",
 		"Exile_Bike_QuadBike_Red",
 		"Exile_Bike_QuadBike_White",
@@ -661,7 +852,17 @@ if (isnil "IL_Variables") then
 		"Exile_Bike_QuadBike_Csat",
 		"Exile_Bike_QuadBike_Fia",
 		"Exile_Bike_QuadBike_Guerilla01",
-		"Exile_Bike_QuadBike_Guerilla02"
+		"Exile_Bike_QuadBike_Guerilla02"*/
+		"B_G_Quadbike_01_F",
+		"B_Quadbike_01_F",
+		"B_T_Quadbike_01_F",
+		"O_Quadbike_01_F",
+		"O_T_Quadbike_01_ghex_F",
+		"O_G_Quadbike_01_F",
+		"I_Quadbike_01_F",
+		"I_G_Quadbike_01_F",
+		"I_E_Quadbike_01_F",
+		"C_Quadbike_01_F"
 	];
 	IL_Supported_Supply_Crate =  //Can be loaded on something else
 	[
@@ -672,7 +873,8 @@ if (isnil "IL_Variables") then
 		"C_supplyCrate_F"
 	];
 	IL_Supported_Veh_Ammo =  //Can be loaded on something else
-	[
+	[/*,
+		"Exile_Container_SupplyBox"*/
 		"Box_NATO_AmmoVeh_F",
 		"Box_East_AmmoVeh_F",
 		//"Box_IND_AmmoVeh_F", //NO STEALING of the Repair camp ammo box
@@ -681,8 +883,7 @@ if (isnil "IL_Variables") then
 		"Box_FIA_Ammo_F",
 		"I_CargoNet_01_ammo_F",
 		"O_CargoNet_01_ammo_F",
-		"B_CargoNet_01_ammo_F",
-		"Exile_Container_SupplyBox"
+		"B_CargoNet_01_ammo_F"
 	];
 	IL_Supported_Barrel = 
 	[
@@ -707,20 +908,37 @@ if (isnil "IL_Variables") then
 	];
 	IL_Supported_Rubberboat =  //Can be loaded on something else
 	[
-		"Exile_Boat_RubberDuck_CSAT",
+		/*"Exile_Boat_RubberDuck_CSAT",
 		"Exile_Boat_RubberDuck_Digital",
 		"Exile_Boat_RubberDuck_Orange",
 		"Exile_Boat_RubberDuck_Blue",
-		"Exile_Boat_RubberDuck_Black"
+		"Exile_Boat_RubberDuck_Black"*/
+		"C_Scooter_Transport_01_F",
+		"rhsgref_hidf_canoe",
+		"B_G_Boat_Transport_01_F",
+		"rhsgref_hidf_assault_boat",
+		"B_Boat_Transport_01_F",
+		"B_Lifeboat",
+		"B_T_Boat_Transport_01_F",
+		"B_T_Lifeboat",
+		"O_Boat_Transport_01_F",
+		"O_Lifeboat",
+		"O_T_Boat_Transport_01_F",
+		"O_T_Lifeboat",
+		"O_G_Boat_Transport_01_F",
+		"I_Boat_Transport_01_F",
+		"I_G_Boat_Transport_01_F",
+		"I_C_Boat_Transport_01_F",
+		"C_Rubberboat"
 	];
 	IL_Supported_SDV =  //Can be loaded on something else
-	[
-		"B_SDV_01_F",
-		"O_SDV_01_F",
-		"I_SDV_01_F",
+	[/*,
 		"Exile_Boat_SDV_CSAT",
 		"Exile_Boat_SDV_Digital",
-		"Exile_Boat_SDV_Grey"
+		"Exile_Boat_SDV_Grey"*/
+		"B_SDV_01_F",
+		"O_SDV_01_F",
+		"I_SDV_01_F"
 	];
 	IL_Supported_Box_H1 =  //Can be loaded on something else
 	[
@@ -999,7 +1217,7 @@ if (isnil "IL_Procedures") then
 			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_M977, true];};
 			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
 			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
-			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", 0.8, true];}; //WAK
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", 0, true];}; //WAK
 			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 0.5, true];};
 		};
 		if (_obj_type in IL_Supported_Vehicles_M977M2) then
@@ -1008,8 +1226,8 @@ if (isnil "IL_Procedures") then
 			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_M977, true];};
 			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
 			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
-			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", 0.2, true];}; //WAK //0.4
-			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", -1.1, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.6, true];}; //WAK //0.2
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 0.5, true];};
 		};
 		if (_obj_type in IL_Supported_Vehicles_HEMTT) then
 		{
@@ -1087,10 +1305,15 @@ if (isnil "IL_Procedures") then
 			_obj setVariable["slots", 7, true];
 			_obj setVariable["cargo_offset", 1.3, true];
 		};
-		if (_obj_type in IL_Supported_VAN) then
+		if (_obj_type in IL_Supported_VAN) then //truck 0.5, gaz66 1.8
 		{
 			_obj setVariable["slots", 6, true];
-			_obj setVariable["cargo_offset", 1.8, true];
+			if ("gaz66" in _obj_type) then {
+				_obj setVariable["cargo_offset", 1.8, true];
+			}else{
+				_obj setVariable["cargo_offset", 0.5, true];
+			};
+			
 		};
 		if (_obj_type in IL_Supported_MARID) then
 		{
@@ -1112,7 +1335,7 @@ if (isnil "IL_Procedures") then
 			_obj setVariable["slots", 6, true];
 			_obj setVariable["cargo_offset", 2, true];
 		};
-		if (_obj_type in IL_Supported_OFFROAD) then
+		if (_obj_type in IL_Supported_OFFROAD) then //humvee 1
 		{
 			_obj setVariable["slots", 6, true];
 			_obj setVariable["cargo_offset", 2.4, true];
@@ -1594,14 +1817,14 @@ if (isnil "IL_Procedures") then
 		if ((_obj_type in IL_Supported_Vehicles_M977) && (_doors == "B")) then
 		{
 			_sdist = IL_SDistL;
-			_spoint = _v modelToWorld [0,-6.5 - (_v getVariable "load_offset"),0];
+			_spoint = _v modelToWorld [0,-5.8 - (_v getVariable "load_offset"),0];
 			_box_num = _v getVariable "box_num";
 			_slot_num = _v getVariable "slots_num";
 		};
 		if ((_obj_type in IL_Supported_Vehicles_M977M2) && (_doors == "B")) then
 		{
 			_sdist = IL_SDistL;
-			_spoint = _v modelToWorld [0,-6.6 - (_v getVariable "load_offset"),0]; //WAK
+			_spoint = _v modelToWorld [0,-5.8 - (_v getVariable "load_offset"),0]; //WAK
 			_box_num = _v getVariable "box_num";
 			_slot_num = _v getVariable "slots_num";
 		};
