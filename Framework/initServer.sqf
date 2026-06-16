@@ -9,8 +9,10 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-// Start DynamicFlightOps
-//if (true)then {execVM "DFO\WMS_DFO_functions.sqf"};
+/////FROM @InfantryProgram/////
+//WMS_sys_ActReactAntiTheft	= []; //KEEP EMPTY!!! pushback list of protected crates/containers/vehicles objects that should not be moved/stollen. WMS_sys_ActReactAntiTheft pushback [position _this, netID _this];
+WMS_sys_ActReactAntiTheft = missionNameSpace getVariable ["WMS_sys_ActReactAntiTheft",[]]; //mission plaved object can not call for the var directly
+///////////////////////////////
 
 WMS_lootHolderList = []; //[_house,_lootHolder,(serverTime+_timeToDelete)];
 WMS_HC1_ID = 2;
@@ -61,7 +63,7 @@ WMS_lootToSpawnList = [
 
 _nil = [] execVM "Server\initTraderBuildingsNoLoot.sqf";
 _nil = [] execVM "Server\Weather.sqf";
-_nil = [] execVM "Server\respawnPermanentVehicle.sqf";
+_nil = [] execVM "Server\respawnPermanentVehicle.sqf"; //that also respawn TERRITORIES! check for ammocrate pushback to WMS_sys_ActReactAntiTheft
 _nil = [] execVM "Server\SpawnFreeVehicles.sqf";
 //_nil = [] execVM "Server\AceFortifyList.sqf"; //NOPE
 if (worldName == "Enoch") then {
@@ -76,7 +78,7 @@ _playerAlreadyConnected = profileNamespace getVariable ["WMS_playerAlreadyConnec
 }forEach _playerAlreadyConnected;
 
 while {true} do
-	{
+	{//permanent vehicles are not srored in a big array anymore, need an update
 		private _permanentVehiclesCount = 0;
 		private _permanentVhlArray = profileNameSpace getVariable ["WMS_permanentVhlArray", []];
 		

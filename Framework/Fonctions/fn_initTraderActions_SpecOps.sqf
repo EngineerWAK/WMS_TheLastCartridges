@@ -1,5 +1,5 @@
 //[this, "CarsToBuy", 5] call WMS_fnc_initTraderActions_vehicles;
-private ["_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
+private ["_presentation","_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
 params[
 	"_traderObject",
 	["_traderType", 'notYet'], //"SniperRifles" //"CarsToBuy" class from Cfg
@@ -15,27 +15,32 @@ _itemsCategories = [];
 	U_O_T_FullGhillie_tna_F
 	U_O_T_Sniper_F
 */
+_presentation = "<t size='1' color='#00a2ff'>Simon & Garfunkel, SpecOps Traders</t>";
 if (_traderType == 'specopsItems') then {
 	_traderType = 'specops'; //' ' and not " "
 	_itemsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "launchers" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Simon, SpecOps Traders</t>";
 };
 if (_traderType == 'specopsItems_RHS') then {
 	_traderType = 'specops'; //' ' and not " "
 	_itemsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "launchers_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops_RHS" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Simon, SpecOps Traders</t>";
 };
 if (_traderType == 'specopsExplo') then {
 	_traderType = 'specops'; //' ' and not " "
 	_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "RocketMissiles" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops" >> "explo");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops" >> "grenades");
+	_presentation = "<t size='1' color='#00a2ff'>Garfunkel, SpecOps Traders</t>";
 };
 if (_traderType == 'specopsExplo_RHS') then {
 	_traderType = 'specops'; //' ' and not " "
 	_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "RocketMissiles_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops_RHS" >> "explo");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "Specops_RHS" >> "grenades");
+	_presentation = "<t size='1' color='#00a2ff'>Garfunkel, SpecOps Traders</t>";
 };
 
 _itemsSelected = [];
@@ -45,6 +50,25 @@ for "_i" from 1 to _count do {
 	_itemsSelected pushBack _item;
 };
 if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSelected %1", _itemsSelected]};
+[
+	_traderObject,
+	[
+		_presentation,
+		"
+		", 
+		[],
+		5,
+		true,
+		true,
+		"",
+		"(alive _target)",
+		5
+	]
+	] remoteExec [
+		"addAction",
+		0,
+		true
+];
 {
 	_item = _x;
 	_itemName = _item;
@@ -53,7 +77,7 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	_respectLevel = (_levelArray select _quality);
 	_price = getNumber(missionConfigFile >> "CfgAllPrices" >> _item >> "price");
 
-//THIS CHANGE:
+ //THIS CHANGE:
 		//WEAPONS
 	if (
 			_item in getArray(missionConfigFile >> "CfgWeapCategories" >> "launchers" >> "items") ||
@@ -79,8 +103,8 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 		_itemName =  getText (configFile >> "CfgVehicles" >> _item >> "displayName");
 	};
 
-//Modify display name
-/*
+ //Modify display name
+ /*
 	if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Scopes"))) then {
 		_itemName = format ["SCP %1",_itemName];
 	};
@@ -90,9 +114,9 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	if (_item in (getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Bipods"))) then {
 		_itemName = format ["GRP %1",_itemName];
 	};
-*/
+ */
 
-//////////
+ //////////
 	_display = ("<t size=""0.85""  color=""#ffffff"">" + (str _itemName) +"</t>") + ("<t size=""0.85""  color=""#ffffff"">" + ("$") + (str _price) +"</t>");
 	_traderColors = getArray(missionConfigFile >> "CfgRespectColors" >> "Colors");
 	switch (_quality) do

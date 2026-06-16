@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 //[this, "CarsToBuy", 5] call WMS_fnc_initTraderActions_vehicles;
-private ["_cargo","_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
+private ["_presentation","_cargo","_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
 params[
 	"_traderObject",
 	["_traderType", 'notYet'], //'notyet','weapons','equipement','office','accessories','vehiclesarmed','vehiclesunarmed','airarmed','airunarmed'
@@ -29,9 +29,42 @@ if (_traderType == 'office') exitWith {[_traderObject, _traderType, _count] call
 if (_traderType == 'specopsItems' || _traderType == 'specopsExplo' || _traderType == 'specopsItems_RHS' || _traderType == 'specopsExplo_RHS') exitWith {[_traderObject, _traderType, _count] call WMS_fnc_initTraderActions_Specops;};
 _itemsCategories = getArray(missionConfigFile >> "CfgVehicleCategories" >> _traderType >> "items");
 _itemsSelected = [];
+_presentation = "<t size='1' color='#00a2ff'>John, Vehicles Traders</t>";
 if (_traderType == "vehiclesunarmed" || _traderType == "vehiclesunarmed_RHS" || _traderType == "vehiclesunarmed_RHS_Hatchet" || _traderType == "VehiclesUnarmed_GM") then {
 	_itemsSelected pushBack "C_Quadbike_01_F"; //forced low respect vehicle
+	_presentation = "<t size='1' color='#00a2ff'>Enzo, Vehicles Traders</t>";
 };
+if (_traderType == "vehiclesarmed" || _traderType == "vehiclesarmed_RHS" || _traderType == "vehiclesarmed_RHS_Hatchet" || _traderType == "vehiclesarmed_GM") then {
+	_presentation = "<t size='1' color='#00a2ff'>Gustaf, Armed Vehicles Dealer</t>";
+};
+if (_traderType == "airunarmed" || _traderType == "airunarmed_RHS" || _traderType == "airunarmed_RHS_Hatchet" || _traderType == "airunarmed_GM") then {
+	_presentation = "<t size='1' color='#00a2ff'>Roger, Helicopters and Planes Seller</t>";
+};
+if (_traderType == "airarmed" || _traderType == "airarmed_RHS" || _traderType == "airarmed_RHS_Hatchet" || _traderType == "airarmed_GM") then {
+	_presentation = "<t size='1' color='#00a2ff'>Douglas, Armed Helicopters and Planes</t>";
+};
+if (_traderType == "freakingBoats_RHS" || _traderType == "freakingBoats_RHS") then {
+	_presentation = "<t size='1' color='#00a2ff'>Bubba, Shrimps & Ships</t>";
+};
+[
+	_traderObject,
+	[
+		_presentation,
+		"
+		", 
+		[],
+		5,
+		true,
+		true,
+		"",
+		"(alive _target)",
+		5
+	]
+	] remoteExec [
+		"addAction",
+		0,
+		true
+];
 for "_i" from 1 to _count do {
 	_item = selectRandom _itemsCategories;
 	_itemsCategories deleteAt (_itemsCategories find _item);
@@ -50,14 +83,7 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 	_traderColors = getArray(missionConfigFile >> "CfgRespectColors" >> "Colors");
 	switch (_quality) do
 	{
-	/*case 0: { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		case 1: { _display = ("<t size=""0.9""  color=""#8dfb7e"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		case 2: { _display = ("<t size=""0.9""  color=""#1fd507"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		case 3: { _display = ("<t size=""0.9""  color=""#07d593"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		case 4: { _display = ("<t size=""0.9""  color=""#0797d5"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		case 5: { _display = ("<t size=""0.9""  color=""#8d07d5"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		case 6: { _display = ("<t size=""0.9""  color=""#d5074b"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };
-		default { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (", ") + (str _price) + (" $") +"</t>"); };*/
+	
 		case 0: { _display = ("<t size=""0.9""  color=""#ffffff"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
 		case 1: { _display = ("<t size=""0.9""  color=""#8dfb7e"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };
 		case 2: { _display = ("<t size=""0.9""  color=""#1fd507"">" + _itemName + ", |" + (str _cargo) + "|, " +"</t>") + ("<t size=""0.9""  color=""#ffffff"">" + (str _price) + (" $") +"</t>"); };

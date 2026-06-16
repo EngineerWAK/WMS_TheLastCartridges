@@ -15,10 +15,30 @@ params [
 if !(isServer) ExitWith {Diag_Log format["Nope, %1, %2",_container, position _container]};
 _container enableRopeAttach false;
 
-_objToCheck = missionNameSpace getVariable ["WMS_ObjectsToCheck",[]];
-_objToCheck pushBack _container;
-missionNameSpace setVariable ["WMS_ObjectsToCheck",_objToCheck]; //this will be useful later
-_container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this will be useful later
+_objToCheck = missionNameSpace getVariable ["WMS_sys_ActReactAntiTheft",[]]; //mission plaved object can not call for the var directly
+_objToCheck pushback [netID _container, getposASL _container];
+missionNameSpace setVariable ["WMS_sys_ActReactAntiTheft",_objToCheck]; //this will be useful later
+//_container setVariable ["WMS_SafPosCheckASL",(getPosASL _container)]; //this will be useful later
+
+		[
+			_container,
+			[
+				"<t size='1' color='#ff0000'>Object Protected By WMS_Network AntiTheft</t>",
+				"
+				", 
+				[],
+				5,
+				true,
+				true,
+				"",
+				"(alive _target)",
+				5
+			]
+			] remoteExec [
+				"addAction",
+				0,
+				true
+		];
 ///////////////////////CLAIM STUFF//////////////////////////////////////////
 [
 	_container, [ //"Special Item" is the MAR-10 DMR, because even in arma there is pay to win... and this will create a BIIIIIIG log server side

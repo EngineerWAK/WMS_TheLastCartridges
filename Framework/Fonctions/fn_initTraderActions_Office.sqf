@@ -28,6 +28,25 @@ _quality = 0;
 _priceStr = "";
 
 if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSelected %1", _itemsList]};
+[
+	_traderObject,
+	[
+		"<t size='1' color='#00a2ff'>Michael, Office Trader</t>",
+		"
+		", 
+		[],
+		5,
+		true,
+		true,
+		"",
+		"(alive _target)",
+		5
+	]
+	] remoteExec [
+		"addAction",
+		0,
+		true
+];
 
 {
 	_item = _x;
@@ -83,7 +102,7 @@ if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSele
 		_priceStr = (str _price);
 	};
 
-//////////
+ //////////
 	_display = ("<t size=""0.85""  color=""#ffffff"">" + (str _itemName) +"</t>") + ("<t size=""0.85""  color=""#ffffff"">" + ("$") + _priceStr +"</t>");
 	_traderColors = getArray(missionConfigFile >> "CfgRespectColors" >> "Colors");
 	switch (_quality) do

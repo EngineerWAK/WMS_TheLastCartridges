@@ -2734,6 +2734,26 @@ _compoRefPoint setDir _dirFlag;
 		_object setVariable ["ACE_isRepairFacility", true, true];
 		_object enableRopeAttach false;
 		_object lock true;
+		WMS_sys_ActReactAntiTheft pushback [netID _object, getposASL _object]; 
+		[
+			_object,
+			[
+				"<t size='1' color='#ff0000'>Object Protected By WMS_Network AntiTheft</t>",
+				"
+				", 
+				[],
+				5,
+				true,
+				true,
+				"",
+				"(alive _target)",
+				5
+			]
+			] remoteExec [
+				"addAction",
+				0,
+				true
+		];
 	
 		[ //params ["_target", "_caller", "_actionId", "_arguments"];
 			_object,
@@ -2786,6 +2806,7 @@ _compoRefPoint setDir _dirFlag;
 	_object setVariable ["_territoryObject",true,true];
 	
 	if ((_x select 0) in _weaponSystemList) then {
+		WMS_sys_ActReactAntiTheft pushback [netID _object, getposASL _object]; 
 		_object allowDamage true;
 		//_object enableSimulationGlobal false;
 		_object setVehicleLock "LOCKED";

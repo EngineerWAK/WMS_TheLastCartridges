@@ -11,7 +11,7 @@
 //getText(missionConfigFile >> "CfgSystemVersion" >> "serial")
 class CfgSystemVersion
 {
-	name = "v1.853_2026JUN11_GitHub"; //modified IP computer //added items in fortify list, //claimreward rewards
+	name = "v1.854_2026JUN16_GitHub"; //WMS_sys_ActReactAntiTheft pushback [getposASL _object, netID _object];
 };
 
 class Extended_PreInit_EventHandlers {

@@ -1,5 +1,5 @@
 //[this, "CarsToBuy", 5] call WMS_fnc_initTraderActions_vehicles;
-private ["_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
+private ["_presentation","_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
 params[
 	"_traderObject",
 	["_traderType", 'notYet'], //"SniperRifles" //"CarsToBuy" class from Cfg
@@ -11,6 +11,7 @@ if (false) then {diag_log format ["[INIT_TRADERS_ACTIONS]|WAK|TNA|WMS|_this %1",
 if (_traderType == 'notYet') exitWith {diag_log "[INIT_TRADERS]|WAK|TNA|WMS|Trader not setup yet, exiting the init"};
 _itemsCategories = [];
 _hintMessage = 'Weapon spawned on the ground if you already had one';
+_presentation = "<t size='1' color='#00a2ff'>Donald, Weapon Traders</t>";
 if (_traderType == 'weapons') then {
 	//_traderType = 'weapons'; //' ' and not " "
 	_itemsCategories = getArray(missionConfigFile >> "CfgWeapCategories" >> "SniperRifles" >> "items");
@@ -20,6 +21,7 @@ if (_traderType == 'weapons') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "MachineGun" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "SubMachineGun" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Donald, Weapon Dealer</t>";
 	//no launchers here
 };
 if (_traderType == 'weapons_RHS') then {
@@ -31,6 +33,7 @@ if (_traderType == 'weapons_RHS') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "MachineGun_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "SubMachineGun" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol_RHS" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Donald, Weapon Dealer</t>";
 	//no launchers here
 };
 if (_traderType == 'weapons_RHS_NIA') then {
@@ -42,6 +45,7 @@ if (_traderType == 'weapons_RHS_NIA') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "MachineGun_RHS_NIA" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "SubMachineGun_RHS_NIA" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Pistol_RHS_NIA" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Donald, Weapon Dealer</t>";
 	//no launchers here
 };
 if (_traderType == 'accessories') then {
@@ -51,6 +55,7 @@ if (_traderType == 'accessories') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "LaserLights");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Bipods");
 	//_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Suppressors");
+	_presentation = "<t size='1' color='#00a2ff'>Benjamin, Weapon Accessories</t>";
 	//no launchers here
 };
 if (_traderType == 'accessories_RHS') then {
@@ -60,6 +65,7 @@ if (_traderType == 'accessories_RHS') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "LaserLights");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS" >> "Bipods");
 	//_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Suppressors");
+	_presentation = "<t size='1' color='#00a2ff'>Benjamin, Weapon Accessories</t>";
 	//no launchers here
 };
 if (_traderType == 'accessories_RHS_NIA') then {
@@ -69,6 +75,7 @@ if (_traderType == 'accessories_RHS_NIA') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "LaserLights");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories_RHS_NIA" >> "Bipods");
 	//_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgWeapCategories" >> "Accessories" >> "Suppressors");
+	_presentation = "<t size='1' color='#00a2ff'>Benjamin, Weapon Accessories</t>";
 	//no launchers here
 };
 
@@ -79,6 +86,26 @@ for "_i" from 1 to _count do {
 	_itemsSelected pushBack _item;
 };
 if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSelected %1", _itemsSelected]};
+[
+	_traderObject,
+	[
+		_presentation,
+		"
+		", 
+		[],
+		5,
+		true,
+		true,
+		"",
+		"(alive _target)",
+		5
+	]
+	] remoteExec [
+		"addAction",
+		0,
+		true
+];
+
 {
 	_item = _x;
 	_quality = getNumber(missionConfigFile >> "CfgAllPrices" >> _item >> "quality"); //_Respectlevel 0 to 7

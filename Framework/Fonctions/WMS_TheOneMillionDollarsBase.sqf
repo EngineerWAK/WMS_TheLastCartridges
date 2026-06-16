@@ -119,6 +119,26 @@ _compoRefPoint setDir _dirFlag;
 	if ((_x select 0) in _ammoSources) then {
 		_object setVariable ["ACE_isRepairFacility", true, true];
 		_object lock true;
+		WMS_sys_ActReactAntiTheft pushback [netID _object, getposASL _object];
+		[
+			_object,
+			[
+				"<t size='1' color='#ff0000'>Object Protected By WMS_Network AntiTheft</t>",
+				"
+				", 
+				[],
+				5,
+				true,
+				true,
+				"",
+				"(alive _target)",
+				5
+			]
+			] remoteExec [
+				"addAction",
+				0,
+				true
+		];
 	
 		[ //params ["_target", "_caller", "_actionId", "_arguments"];
 			_object,
@@ -189,6 +209,26 @@ _compoRefPoint setDir _dirFlag;
 		_object setVehicleLock "LOCKED";
 		_weaponSystemObjects pushBack _object;
 		//_object allowDamage true; //30sec uisleep
+		WMS_sys_ActReactAntiTheft pushback [netID _object, getposASL _object]; //need to aply this when they are "activated" as well
+		[
+			_object,
+			[
+				"<t size='1' color='#ff0000'>Object Protected By WMS_Network AntiTheft</t>",
+				"
+				", 
+				[],
+				5,
+				true,
+				true,
+				"",
+				"(alive _target)",
+				5
+			]
+			] remoteExec [
+				"addAction",
+				0,
+				true
+		];
 	};
     _object enableRopeAttach false;
 	} forEach _objects; 

@@ -1,5 +1,5 @@
 //[this, "CarsToBuy", 5] call WMS_fnc_initTraderActions_vehicles;
-private ["_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
+private ["_presentation","_itemsCategories","_itemsSelected","_item","_quality","_levelArray","_respectLevel","_price","_itemName","_display","_traderColors"];
 params[
 	"_traderObject",
 	["_traderType", 'notYet'], //"SniperRifles" //"CarsToBuy" class from Cfg
@@ -10,11 +10,13 @@ params[
 if (false) then {diag_log format ["[INIT_TRADERS_ACTIONS]|WAK|TNA|WMS|_this %1", _this]};
 if (_traderType == 'notYet') exitWith {diag_log "[INIT_TRADERS]|WAK|TNA|WMS|Trader not setup yet, exiting the init"};
 _itemsCategories = [];
+_presentation = "<t size='1' color='#00a2ff'>Frank, Equipment</t>";
 if (_traderType == 'equipement') then {
 	_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "uniform" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "vest" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "helmet" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "backpack" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Frank, Equipment trader</t>";
 	//no launchers here
 };
 if (_traderType == 'equipement_RHS') then {
@@ -23,11 +25,13 @@ if (_traderType == 'equipement_RHS') then {
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "vest_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "helmet_RHS" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "backpack_RHS" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Frank, Equipment trader</t>";
 	//no launchers here
 };
 if (_traderType == 'foodandhealth') then {
 	_itemsCategories = getArray(missionConfigFile >> "CfgItemsCategories" >> "food" >> "items");
 	_itemsCategories = _itemsCategories + getArray(missionConfigFile >> "CfgItemsCategories" >> "health" >> "items");
+	_presentation = "<t size='1' color='#00a2ff'>Toufik, Epicerie de nuit</t>";
 	//no launchers here
 };
 
@@ -39,6 +43,27 @@ for "_i" from 1 to _count do {
 	_itemsSelected pushBack _item;
 };
 if (false) then {diag_log format ["[INIT_TRADERS]|WAK|TNA|WMS|UPDATE: _itemsSelected %1", _itemsSelected]};
+
+[
+	_traderObject,
+	[
+		_presentation,
+		"
+		", 
+		[],
+		5,
+		true,
+		true,
+		"",
+		"(alive _target)",
+		5
+	]
+	] remoteExec [
+		"addAction",
+		0,
+		true
+];
+
 {
 	_item = _x;
 	_quality = getNumber(missionConfigFile >> "CfgAllPrices" >> _item >> "quality"); //_Respectlevel 0 to 7
